@@ -1,0 +1,142 @@
+---
+title: "Downloading the results"
+date: "2021-09-20T00:00:00.000Z"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+---
+
+# Downloading the results
+
+<YFMNotes title="Warning">
+
+You can only download the results from a batch with the **Completed** status.
+
+</YFMNotes>
+
+## Download all results
+
+1. Open your bespoke project and go to the appropriate batch.
+1. Click **Download results** on the right.
+1. Wait until the data export is completed.
+
+## View the results by item
+
+1. Open your bespoke project and go to the appropriate batch. You'll see a list of labeled items.
+1. Select an item and click on it. This opens a block of labeling results in JSON format.
+1. Click **Copy** on the right. This adds the block with labeled data to the clipboard.
+
+## Procedure of acceptance of services
+
+<YFMNotes title="Note">
+
+In bespoke projects, only automatic acceptance is available. You can't reject responses manually.
+
+</YFMNotes>
+
+All Tasks performed during the term specified in the Tasks shall be deemed automatically accepted by the Customer from the moment when every particular Task is completed by the User, and the Services shall be deemed duly provided by Toloka and subject to payment regardless of any other conditions. No discrepancy between results of the Task and the requirement set by Toloka in the Instruction shall constitute a basis for refusing to accept the relevant Services.
+
+The result of labeling is a TSV file with responses. The `CONFIDENCE` field shows the level of confidence in a response. In this case, it shows the probability that the response is correct.
+
+<YFMCut title="Example">
+
+Items were labeled by three performers with different levels of performance quality: the results of the first performer are slightly above average, the second is a good performer, and the third is an excellent performer.
+
+All three performers responded to the first task with **OK**. In this case, we're 100% sure that **OK** is the correct response.
+
+To the second task, the first and third performers responded with **OK**, and the second performer responded with **BAD**. In this case, we'll compare the performers' task completion quality and determine the confidence based on the result.
+
+</YFMCut>
+
+<YFMCut title="How it's calculated">
+
+Terms:
+
+- <Formula withoutContainer={true} content="q[i]"/> is a performer's accuracy.
+- <Formula withoutContainer={true} content="K"/> is a smoothing constant.
+- <Formula withoutContainer={true} content="z[j]"/> is the most popular response.
+- <Formula withoutContainer={true} content="z[x]"/> is the probability that the estimate is correct.
+
+A performer's accuracy <Formula withoutContainer={true} content="q[i]"/> is calculated as follows:
+
+<Formula withoutContainer={true} content="q[i] = \frac{K+correct.golden.sets[i]}{2×K+total.golden.sets[i]}"/>,
+
+where:
+
+<Formula withoutContainer={true} content="K"/> is a smoothing constant (starting from 0.5) if there are not enough responses to control tasks.
+
+If there are several estimates, the most popular response is determined by adding together <Formula withoutContainer={true} content="q[i]$ of the performers who selected each response option. The response with the largest total is considered more correct. Let's call this estimate $z[j]"/>.
+
+[Using Bayes' theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem), we calculate the posterior probability that the estimate <Formula withoutContainer={true} content="z[j]"/> is correct.
+
+A uniform distribution of estimates is assumed a priori. For the <Formula withoutContainer={true} content="z[x]"/> the a priori probability is calculated as
+
+<Formula withoutContainer={true} content="P(z[x]) = \frac{1}{Y}"/>,
+
+where:
+
+<Formula withoutContainer={true} content="Y"/> is the number of response options.
+
+Next, we calculate the probability that the estimate <Formula withoutContainer={true} content="z[j]"/> is correct.
+
+If the performer responded <Formula withoutContainer={true} content="z[j]$, then the probability of this is equal to the performer's accuracy $q[i]"/>. If they responded differently, then the probability of this is:
+
+<Formula withoutContainer={true} content="\frac{1-q[i]}{Y-1}"/>,
+
+where:
+
+<Formula withoutContainer={true} content="(1 - q[i])"/> is the remaining probability.
+
+It ensures that the probability of an error is distributed evenly among the remaining estimates.
+
+We take all performers' responses and, for example, option <Formula withoutContainer={true} content="z[x]$ and calculate the probability that performers will select this response, provided that the correct response is $z[x]"/>:
+
+```go
+func z_prob(x int) : float {
+    d = 1.0
+    for w[i]: workers
+         if answers[w[i]] == z[x]
+            d *= q[i]
+         else
+            d *= (1 - q[i])
+    return d
+}
+```
+
+Next, using Bayes' theorem, we calculate the probability that the response <Formula withoutContainer={true} content="z[j]"/> is correct:
+
+```go
+r = 0
+for z[i]: answer_options
+    r += z_prob(i) * (1 / Y)
+
+eps = z_prob(j) * (1 / Y) / r
+```
+
+</YFMCut>
+
+## Troubleshooting
+
+<YFMCut title="Why can't I download the results?">
+
+The **Download results** button is only available for batches with the **Completed** status. Wait until the labeling is completed and return to the batch after a while.
+
+</YFMCut>
+
+<YFMCut title="How do I find out how long it took to label my data?">
+
+Select the desired batch. The section on the right will show all available statistics.
+
+</YFMCut>
+
+<Button
+  themeColor="light"
+  view="action"
+  size="l"
+  type="link"
+  url="https://toloka.ai/get-started/"
+  target="_blank"
+>
+  Contact support
+</Button>
