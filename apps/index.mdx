@@ -5,11 +5,87 @@ author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
 ogDescription: ""
+docsMenu: [
+  {
+    title: "Test submenu",
+    subItems: [
+      { href: "/apps/add-task", title: "Add task" },
+      { href: "/apps/download-results", title: "Download results" }
+    ]
+  },
+  {
+      href: "/apps/glossary",
+      title: "Glossary",
+  },
+  {
+      href: "/apps/product-search-relevance",
+      title: "Product search relevance",
+  },
+  {
+      href: "/apps/quickstart",
+      title: "Quickstart",
+  },
+  {
+      href: "/apps/support",
+      title: "Support",
+  },
+  {
+      href: "/apps/troubleshooting",
+      title: "Troubleshooting",
+  },
+  {
+      href: "/apps/unwanted",
+      title: "Unwanted",
+  },
+  {
+      href: "/apps/view-progress",
+      title: "View progress",
+  },
+]
 ---
 
-import MainPage from '../sections/MainPage.tsx'
-
-<MainPage/>
+<DocsCards cards={[
+{
+  title: "Getting started",
+  description: "Create your first bespoke project",
+  href: "/en/docs/toloka-apps/concepts/quickstart",
+},
+{
+  title: "Uploading data for labeling",
+  description: "Create a new batch and upload task items to it",
+  href: "/en/docs/toloka-apps/concepts/add-task",
+},
+{
+  title: "Downloading the results",
+  description: "Download a file with the labeling results",
+  href: "/en/docs/toloka-apps/concepts/download-results",
+},
+{
+  title: "API reference",
+  description: "HTTP API method descriptions",
+  href: "/en/docs/toloka-apps/api/ref/index",
+},
+{
+  title: "Authorization in the API",
+  description: "Get a token to work with the API",
+  href: "/en/docs/toloka-apps/api/concepts/authorization",
+},
+{
+  title: "API quick start",
+  description: "Step-by-step instructions for running a sample bespoke project",
+  href: "/en/docs/toloka-apps/api/concepts/quickstart-api",
+},
+{
+  title: "Troubleshooting",
+  description: "Frequently asked questions about the service",
+  href: "/en/docs/toloka-apps/concepts/troubleshooting",
+},
+{
+  title: "Support",
+  description: "If you have any issues, contact us",
+  href: "/en/docs/toloka-apps/concepts/support",
+},
+]} />
 
 ## Toloka global community
 
@@ -17,4 +93,13 @@ Stay informed about updates to the platform and open-source libraries — connec
 
 ## Follow us in social media
 
-[![Toloka on Facebook](../../_images/SocialNetwork/facebook.svg)]({{ toloka-facebook }}) [![Toloka on YouTube](../../_images/SocialNetwork/youtube.svg)]({{ toloka-youtube }}) [![Toloka in Slack](../../_images/SocialNetwork/slack.svg)]({{ toloka-slack }}) [![Toloka in LinkedIn](../../_images/SocialNetwork/linkedin.svg)]({{ toloka-linkedin }}) [![Toloka in Twitter](../../_images/SocialNetwork/twitter.svg)]({{ toloka-twitter }}) [![Toloka on GitHub](../../_images/SocialNetwork/github.svg)]({{ toloka-github }}) [![Toloka on StackOverflow](../../_images/SocialNetwork/StackOverflow.svg)]({{ toloka-stackoverflow }}) [![Toloka Blog](../../_images/SocialNetwork/blog.svg)]({{ toloka-blog }})
+<DocsSocialLinks links={{
+  youTube: 'https://www.youtube.com/channel/UCGvsgFPVyOwuN8aJJbMem9A/videos',
+  facebook: 'https://www.facebook.com/tolokaglobal/',
+  slack: 'https://join.slack.com/t/tolokacommunity/shared_invite/zt-1il4olbgh-2pK2zhDGix46uks0vfUqpQ',
+  linkedIn: 'https://www.linkedin.com/company/toloka/',
+  twitter: 'https://twitter.com/TolokaAI',
+  github: 'https://github.com/toloka',
+  stackOverflow: 'https://stackoverflow.com/questions/tagged/toloka',
+  toloka: 'https://toloka.ai/blog',
+}} />

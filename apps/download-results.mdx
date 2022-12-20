@@ -5,15 +5,52 @@ author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
 ogDescription: ""
+docsMenu: [
+  {
+    title: "Test submenu",
+    subItems: [
+      { href: "/apps/add-task", title: "Add task" },
+      { href: "/apps/download-results", title: "Download results" }
+    ]
+  },
+  {
+      href: "/apps/glossary",
+      title: "Glossary",
+  },
+  {
+      href: "/apps/product-search-relevance",
+      title: "Product search relevance",
+  },
+  {
+      href: "/apps/quickstart",
+      title: "Quickstart",
+  },
+  {
+      href: "/apps/support",
+      title: "Support",
+  },
+  {
+      href: "/apps/troubleshooting",
+      title: "Troubleshooting",
+  },
+  {
+      href: "/apps/unwanted",
+      title: "Unwanted",
+  },
+  {
+      href: "/apps/view-progress",
+      title: "View progress",
+  },
+]
 ---
 
 # Downloading the results
 
-<YFMNotes title="Warning">
+<Note mode="warning" title="Warning">
 
 You can only download the results from a batch with the **Completed** status.
 
-</YFMNotes>
+</Note>
 
 ## Download all results
 
@@ -29,17 +66,17 @@ You can only download the results from a batch with the **Completed** status.
 
 ## Procedure of acceptance of services
 
-<YFMNotes title="Note">
+<Note mode="note" title="Note">
 
 In bespoke projects, only automatic acceptance is available. You can't reject responses manually.
 
-</YFMNotes>
+</Note>
 
 All Tasks performed during the term specified in the Tasks shall be deemed automatically accepted by the Customer from the moment when every particular Task is completed by the User, and the Services shall be deemed duly provided by Toloka and subject to payment regardless of any other conditions. No discrepancy between results of the Task and the requirement set by Toloka in the Instruction shall constitute a basis for refusing to accept the relevant Services.
 
 The result of labeling is a TSV file with responses. The `CONFIDENCE` field shows the level of confidence in a response. In this case, it shows the probability that the response is correct.
 
-<YFMCut title="Example">
+<Cut title="Example">
 
 Items were labeled by three performers with different levels of performance quality: the results of the first performer are slightly above average, the second is a good performer, and the third is an excellent performer.
 
@@ -47,9 +84,9 @@ All three performers responded to the first task with **OK**. In this case, we'r
 
 To the second task, the first and third performers responded with **OK**, and the second performer responded with **BAD**. In this case, we'll compare the performers' task completion quality and determine the confidence based on the result.
 
-</YFMCut>
+</Cut>
 
-<YFMCut title="How it's calculated">
+<Cut title="How it's calculated">
 
 Terms:
 
@@ -114,21 +151,21 @@ for z[i]: answer_options
 eps = z_prob(j) * (1 / Y) / r
 ```
 
-</YFMCut>
+</Cut>
 
 ## Troubleshooting
 
-<YFMCut title="Why can't I download the results?">
+<Cut title="Why can't I download the results?">
 
 The **Download results** button is only available for batches with the **Completed** status. Wait until the labeling is completed and return to the batch after a while.
 
-</YFMCut>
+</Cut>
 
-<YFMCut title="How do I find out how long it took to label my data?">
+<Cut title="How do I find out how long it took to label my data?">
 
 Select the desired batch. The section on the right will show all available statistics.
 
-</YFMCut>
+</Cut>
 
 <Button
   themeColor="light"

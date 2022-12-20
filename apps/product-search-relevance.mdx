@@ -5,6 +5,43 @@ author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
 ogDescription: ""
+docsMenu: [
+  {
+    title: "Test submenu",
+    subItems: [
+      { href: "/apps/add-task", title: "Add task" },
+      { href: "/apps/download-results", title: "Download results" }
+    ]
+  },
+  {
+      href: "/apps/glossary",
+      title: "Glossary",
+  },
+  {
+      href: "/apps/product-search-relevance",
+      title: "Product search relevance",
+  },
+  {
+      href: "/apps/quickstart",
+      title: "Quickstart",
+  },
+  {
+      href: "/apps/support",
+      title: "Support",
+  },
+  {
+      href: "/apps/troubleshooting",
+      title: "Troubleshooting",
+  },
+  {
+      href: "/apps/unwanted",
+      title: "Unwanted",
+  },
+  {
+      href: "/apps/view-progress",
+      title: "View progress",
+  },
+]
 ---
 
 import JsonTab from './product-search-relevance/psr-json-tab.mdx';
@@ -31,13 +68,13 @@ This Bespoke solution helps you solve product search relevance task.
 
 Choose one of available types for your input data. Supported data formats with examples for each type are listed under the cut.
 
-<YFMCut title="Product cards">
+<Cut title="Product cards">
 
-<YFMNotes title="Note">
+<Note mode="note" title="Note">
 
 This feature is disabled by default. [Contact our support team](support.md) to get access to it.
 
-</YFMNotes>
+</Note>
 
 Product cards have advantages compared to other input types:
 
@@ -72,37 +109,37 @@ Data can be provided in JSON format.
 ]
 ```
 
-</YFMCut>
+</Cut>
 
-<YFMCut title="Links">
+<Cut title="Links">
 
 Provide a search query and a link to the product page.
 
 ![Links](./product-search-relevance/interface-screen.png)
 
-<YFMTabs tabs={[
+<Tabs tabs={[
   { title: 'JSON', value: <JsonTab/> },
   { title: 'XLSX', value: <XlsxTab/> },
   { title: 'CSV', value: <CsvTab/> },
   { title: 'TSV', value: <TsvTab/> },
 ]}/>
 
-</YFMCut>
+</Cut>
 
-<YFMCut title="Screenshots">
+<Cut title="Screenshots">
 
 You may use screenshots of pages instead of links to them.
 
 ![Screenshots](./product-search-relevance/interface-screen.png)
 
-<YFMTabs tabs={[
+<Tabs tabs={[
   { title: 'JSON', value: <JsonTab2/> },
   { title: 'XLSX', value: <XlsxTab2/> },
   { title: 'CSV', value: <CsvTab2/> },
   { title: 'TSV', value: <TsvTab2/> },
 ]}/>
 
-</YFMCut>
+</Cut>
 
 ## How to run the solution
 
