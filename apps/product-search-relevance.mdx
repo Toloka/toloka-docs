@@ -7,6 +7,10 @@ tags: ["engineering"]
 ogDescription: ""
 docsMenu: [
   {
+      href: "/example",
+      title: "Example",
+  },
+  {
     title: "Test submenu",
     subItems: [
       { href: "/apps/add-task", title: "Add task" },
@@ -172,12 +176,54 @@ You may [ask to add more features](support.md) to the project:
 
 Base price depends on data volume to label per month.
 
-Item count | Base price per labeled item
----------- | ---------------------------
-Up to 10,000 | $0.25
-10,001 - 100,000 | $0.20
-100,001 - 500,000 | $0.17
-Over 500,000 | [Contact support](support.md) to get special offer.
+<Table
+  header={[
+  { text: "Item count", align: "left" },
+  { text: "Base price per labeled item", align: "left" },
+  ]}
+  body={[
+      [
+        {
+          text: "Up to 10,000",
+          align: "left",
+        },
+        {
+          text: "$0.25",
+          align: "left",
+        },
+      ],
+      [
+        {
+          text: "10,001 - 100,000",
+          align: "left",
+        },
+        {
+          text: "$0.20",
+          align: "left",
+        },
+      ],
+      [
+        {
+          text: "100,001 - 500,000",
+          align: "left",
+        },
+        {
+          text: "$0.17",
+          align: "left",
+        },
+      ],
+      [
+        {
+          text: "Over 500,000",
+          align: "left",
+        },
+        {
+          text: "Contact support to get special offer.",
+          align: "left",
+        },
+      ],
+  ]}
+/>
 
 <Button
   themeColor="light"
