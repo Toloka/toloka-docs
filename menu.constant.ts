@@ -1,5 +1,8 @@
 const defaultMenu = [
   {
+    title: "Test title",
+  },
+  {
     title: "Test submenu",
     subItems: [
       { href: "/apps/add-task", title: "Add task" },
@@ -13,6 +16,9 @@ const defaultMenu = [
   {
     href: "/apps/product-search-relevance",
     title: "Product search relevance",
+  },
+  {
+    title: "Test title 2",
   },
   {
     href: "/apps/quickstart",

@@ -103,96 +103,23 @@ In this section, we explain how it works.
 
 ## Code Example
 
-Dark
-
-<CodeCopy
-  theme="dark"
-  textToCopy={`from sklearn.metrics import accuracy_score \n
-control_task_labels = df_golden['golden_label']
-crowd_labels = df_golden['label']
-accuracy_score(control_task_labels, crowd_labels)`}
-  code={
-    <HighlightCode
-      language="python"
-      code={`from sklearn.metrics import accuracy_score \n
-control_task_labels = df_golden['golden_label']
-crowd_labels = df_golden['label']
-accuracy_score(control_task_labels, crowd_labels) \n# Output: 0.853`}
-    />
-  }
-  buttonPosition="top"
-/>
-
 Light
 
-<CodeCopy
-  theme="light"
-  textToCopy={`from sklearn.metrics import accuracy_score \n
+```python
+from sklearn.metrics import accuracy_score
 control_task_labels = df_golden['golden_label']
 crowd_labels = df_golden['label']
-accuracy_score(control_task_labels, crowd_labels)`}
-  code={
-    <HighlightCode
-      language="python"
-      code={`from sklearn.metrics import accuracy_score \n
-control_task_labels = df_golden['golden_label']
-crowd_labels = df_golden['label']
-accuracy_score(control_task_labels, crowd_labels) \n# Output: 0.853`}
-    />
-  }
-  buttonPosition="top"
-/>
+accuracy_score(control_task_labels, crowd_labels)
+```
 
 **Table example**
 
-<Table
-  header={[
-  { text: "Method", align: "left" },
-  { text: "Status", align: "right" },
-  ]}
-  body={[
-      [
-        {
-          text: "Majority Vote",
-          align: "left",
-        },
-        {
-          text: "✅",
-          align: "right",
-        },
-      ],
-      [
-        {
-          text: "Majority Vote",
-          align: "left",
-        },
-        {
-          text: "✅",
-          align: "right",
-        },
-      ],
-      [
-        {
-          text: "Majority Vote",
-          align: "left",
-        },
-        {
-          text: "✅",
-          align: "right",
-        },
-      ],
-      [
-        {
-          text: "Majority Vote",
-          align: "left",
-        },
-        {
-          text: "✅",
-          align: "right",
-        },
-      ],
-  ]}
-/>
+Item count | Base price per labeled item
+---------- | ---------------------------
+Up to 10,000 | $0.25
+10,001 - 100,000 | $0.20
+100,001 - 500,000 | $0.17
+Over 500,000 | [Contact support](support.md) to get special offer.
 
 ## Info box examples
 
