@@ -16,4 +16,4 @@ export const PauseIcon = () => (
   </svg>
 );
 
-export default null;
+export default PauseIcon;
