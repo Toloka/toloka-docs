@@ -41,5 +41,53 @@
       "href": "/apps/view-progress",
       "title": "View progress"
     }
+  ],
+  "appsMenu": [
+    {
+      "title": "Bespoke solutions"
+    },
+    {
+      "href": "/apps/",
+      "title": "Overview"
+    },
+    {
+      "href": "/apps/unwanted",
+      "title": "What tasks can't be placed in Toloka?"
+    },
+    {
+      "href": "/apps/quickstart",
+      "title": "Getting started"
+    },
+    {
+      "href": "/apps/add-task",
+      "title": "Uploading task items"
+    },
+    {
+      "href": "/apps/view-progress",
+      "title": "Starting and stopping labeling"
+    },
+    {
+      "href": "/apps/download-results",
+      "title": "Downloading the results"
+    },
+    {
+      "href": "/apps/glossary",
+      "title": "Glossary"
+    },
+    {
+      "href": "/apps/troubleshooting",
+      "title": "Troubleshooting"
+    },
+    {
+      "href": "/apps/support",
+      "title": "Support"
+    },
+    {
+      "title": "List of solutions"
+    },
+    {
+      "href": "/apps/product-search-relevance",
+      "title": "Product search relevance"
+    }
   ]
 }
