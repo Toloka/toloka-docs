@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b050b1ba-9719-45a6-886b-a079f9a8b0c1" name="Default Changelist" comment="" />
+    <list default="true" id="b050b1ba-9719-45a6-886b-a079f9a8b0c1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/add-task.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/add-task.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/download-results.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/download-results.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/glossary.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/glossary.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/index.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/index.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/product-search-relevance.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/product-search-relevance.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/quickstart.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/quickstart.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/troubleshooting.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/troubleshooting.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/unwanted.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/unwanted.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/view-progress.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/view-progress.mdx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +38,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v16.18.0/bin/node" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/../toloka-portal-new/node_modules/prettier" />
@@ -36,6 +47,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/apps" />
     </key>
   </component>
@@ -48,6 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1673454938864</updated>
       <workItem from="1673454940232" duration="3676000" />
+      <workItem from="1674202109553" duration="894000" />
     </task>
     <task id="LOCAL-00001" summary="chore: test">
       <created>1673596348459</created>
@@ -72,6 +85,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore: test" />
