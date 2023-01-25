@@ -8,6 +8,9 @@ ogDescription: ""
 docsMenu: "appsMenu"
 ---
 
+import TolokaAppsQueue from './add-task/subcomponents/queue.mdx'
+import TolokaAppsTemplate from './add-task/subcomponents/template.mdx'
+import TolokaAppsUploadData from './add-task/subcomponents/upload-data.mdx'
 import EditIcon from './add-task/subcomponents/edit-icon.tsx';
 
 # Uploading task items
@@ -17,23 +20,45 @@ You can add data to a bespoke project with the **Active** or **Pending** status.
 ## Creating a new batch
 
 1. Open the project.
-2. Click **Create batch**.
-3. Enter a unique name for the batch.
-4. Add task items in one of the following ways:
 
-  - Upload a ready-made TSV file.
-  - Enter the data in text format.
+1. Click **Create batch**.
 
-5. Click **Create batch**.
+1. Enter a unique name for the batch.
+
+1. <TolokaAppsQueue/>
+
+1. <TolokaAppsTemplate/>
+
+1. <TolokaAppsUploadData/>
+
+    - Under the **From a file** tab, attach your file with tasks.
+
+    - Under the **Copy and paste from the file** tab, copy and paste data from your file with tasks.
+
+    - Click **Via API** to use the [API](https://toloka.ai/en/docs/api/).
+
+1. Click **Create batch**.
 
 ## Adding items to an existing batch
 
 1. Open the project and go to the appropriate batch.
-2. Click **Add items** on the right.
-3. Add task items in one of the following ways:
 
-  - Upload a ready-made TSV file.
-  - Enter the data in text format.
+1. Click **Add items** on the right.
+
+1. <TolokaAppsQueue/>
+
+1. <TolokaAppsTemplate/>
+
+1. <TolokaAppsUploadData/>
+
+    - Under the **From a file** tab, attach your file with tasks.
+
+    - Under the **Copy and paste from the file** tab, copy and paste data from your file with tasks.
+
+    - Click **Via API** to use the [API](https://toloka.ai/en/docs/api/).
+
+1. Click **Upload**.
+
 
 ## Renaming an existing batch
 
@@ -46,7 +71,6 @@ You can add data to a bespoke project with the **Active** or **Pending** status.
 ## What's next
 
 Wait until the labeling is done and [download the results](/docs-new/apps/download-results).
-
 
 ## Troubleshooting
 
