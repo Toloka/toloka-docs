@@ -1,6 +1,6 @@
 ---
-title: "Troubleshooting"
-date: "2021-09-20T00:00:00.000Z"
+title: "Troubleshooting | Toloka apps"
+date: "2023-02-03T19:18:59.028150"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,9 +8,11 @@ ogDescription: ""
 docsMenu: "appsMenu"
 ---
 
+import ContactSupport from './subcomponents/contact-support.mdx'
+
 # Troubleshooting
 
-## Bespoke
+## Bespoke {#app-projects}
 
 <Definition title="I didn't find a suitable bespoke solution">
 
@@ -18,7 +20,7 @@ If you can't find a solution that fits your goals, [contact us](/docs-new/apps/s
 
 </Definition>
 
-## Labeling results
+## Labeling results {#results}
 
 <Definition title="Why can't I download the results?">
 
@@ -32,7 +34,7 @@ Select the desired batch. The section on the right will show all available stati
 
 </Definition>
 
-## Uploading data for labeling
+## Uploading data for labeling {#add-items}
 
 <Definition title="What should I add to a batch?">
 
@@ -40,7 +42,7 @@ Batches are datasets that need to be labeled. Add to batches TSV files with IDs 
 
 Example of filling in a TSV file:
 
-```plaintext
+```
 id  image_url
 1   https://yastat.net/s3/tb/static/file-examples/special/street.jpg
 ```
@@ -53,12 +55,4 @@ Yes. You can add task items to projects in the **Active** or **Pending** status.
 
 </Definition>
 
-<Button
-  themeColor="light"
-  view="default"
-  size="l"
-  type="link"
-  url="/docs-new/apps/support"
->
-  Contact support
-</Button>
+<ContactSupport/>

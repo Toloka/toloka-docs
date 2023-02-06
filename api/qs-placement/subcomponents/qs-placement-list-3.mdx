@@ -1,0 +1,53 @@
+Send a request from the command line using the cURL utility:
+
+```bash
+curl -X POST \
+     -H 'Authorization: OAuth <OAuth token>' \
+     -H 'Content-Type: application/JSON' \
+     -d '{
+           "public_name": "Categories of shoes",
+           "public_description": "Look at the picture and determine the category of shoes",
+           "public_instructions": "In this task you will see images of different shoes. You need to determine their category.",
+           "task_spec": {
+             "input_spec": {
+               "image": {
+                 "type": "url",
+                 "required": true,
+                 "hidden": false
+               }
+             },
+             "output_spec": {
+               "result": {
+                 "type": "string",
+                 "required": true,
+                 "hidden": false,
+                 "allowed_values": ["boots","sneakers","other","failed to load"]
+               }
+             },
+             "view_spec": {
+               "lock": {
+                 "core": "1.7.0",
+                 "view.list": "1.0.5",
+                 "view.image": "1.2.0",
+                 "plugin.toloka": "1.1.8",
+                 "field.radio-group": "1.1.10",
+                 "condition.required": "1.1.5"
+               },
+               "type": "tb",
+               "config": "{\"view\": {\"items\": [{\"url\": {\"path\": \"image\", \"type\": \"data.input\"}, \"ratio\": [1, 1], \"type\": \"view.image\"}, {\"data\": {\"path\": \"result\", \"type\": \"data.output\"}, \"validation\": {\"type\": \"condition.required\"}, \"options\": [{\"label\": \"Boots\", \"value\": \"boots\"}, {\"label\": \"Sneakers\", \"value\": \"sneakers\"}, {\"label\": \"Other\", \"value\": \"other\"}, {\"label\": \"Failed to load\", \"value\": \"failed to load\"}], \"type\": \"field.radio-group\"}], \"type\": \"view.list\"}, \"plugins\": [{\"layout\": {\"kind\": \"scroll\", \"taskWidth\": 400}, \"type\": \"plugin.toloka\"}]}",
+               "settings": {
+                 "showSkip": true,
+                 "showTimer": true,
+                 "showTitle": true,
+                 "showFinish": true,
+                 "showSubmit": true,
+                 "showMessage": true,
+                 "showFullscreen": true,
+                 "showInstructions": true
+               }
+             }
+           },
+           "assignments_issuing_type": "AUTOMATED"
+         }' \
+https://sandbox.toloka.dev/api/v1/projects
+```

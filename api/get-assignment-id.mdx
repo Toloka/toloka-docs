@@ -1,0 +1,107 @@
+---
+title: "Get response properties | Toloka API"
+date: "2023-02-06T10:53:22.209534"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import GetAssignmentIdList1 from './get-assignment-id/subcomponents/get-assignment-id-list-1.mdx'
+import GetAssignmentIdList2 from './get-assignment-id/subcomponents/get-assignment-id-list-2.mdx'
+import GetAssignmentIdTable1 from './get-assignment-id/subcomponents/get-assignment-id-table-1.mdx'
+import GetAssignmentIdTable2 from './get-assignment-id/subcomponents/get-assignment-id-table-2.mdx'
+import GetAssignmentIdTable3 from './get-assignment-id/subcomponents/get-assignment-id-table-3.mdx'
+import GetAssignmentIdTable4 from './get-assignment-id/subcomponents/get-assignment-id-table-4.mdx'
+import GetAssignmentIdTable5 from './get-assignment-id/subcomponents/get-assignment-id-table-5.mdx'
+import GetAssignmentIdTable6 from './get-assignment-id/subcomponents/get-assignment-id-table-6.mdx'
+
+# Get response properties
+
+<Announce/>
+
+Gets the properties of a response.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetAssignmentIdList1/> },
+  { title: 'Sandbox', value: <GetAssignmentIdList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**response_id** | ID of the task suite assignment to a Toloker.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Response {#response}
+
+```json
+{
+  "id": "0000082301--5f69bcc046757f5cf86c12ff",
+  "task_suite_id": "0000082301--5f69bc8446757f5cf86c0e24",
+  "pool_id": "533249",
+  "user_id": "b4d8bcc33403cae9eb69991c8bb90bdc",
+  "status": "ACCEPTED",
+  "reward": 0.01,
+  "bonus_ids": "IDs of the rewards given for the task",
+  "tasks": [
+    {
+      "id": "6946cefa-32af-4f62-b530-8d2c71fa2966",
+      "input_values": {
+        "image": "http://images.com/1.png"
+      }
+    }
+  ],
+  "solutions": [
+    {
+      "output_values": {
+        "result": "OK"
+      }
+    }
+  ],
+  "mixed": false,
+  "automerged": false,
+  "created": "2020-09-22T08:58:40.913",
+  "submitted": "2020-09-22T08:58:46.207",
+  "accepted": "2020-09-22T08:58:46.207",
+  "public_comment": "Well done!",
+  "owner": {
+    "id": "ac1e4701364b4ccef8a4fe10a8980cff",
+    "myself": true
+  }
+}
+```
+
+Parameter | Overview
+----- | -----
+**id** | **string**<br/><br/>ID of the task suite assignment to a Toloker.
+**task_suite_id** | **string**<br/><br/>ID of a task suite.
+**pool_id** | **string**<br/><br/>ID of the pool that the task suite belongs to.
+**user_id** | **string**<br/><br/>ID of the Toloker who was assigned the task suite.
+**status** | <GetAssignmentIdTable1/>
+**reward** | **integer**<br/><br/>Payment received by the Toloker.
+**public_comment** | **string**<br/><br/>A comment for the Toloker.<br/><br/>Maximum length: 2048 characters.
+**bonus_ids[]** | **array of strings**<br/><br/>`IDs` of rewards issued for the task.
+**tasks[]** | **array of objects**<br/><br/>[Data for the tasks](/docs-new/api/task-suite).
+**first_declined_solution_attempt[]** | <GetAssignmentIdTable2/>
+**solutions[]** | <GetAssignmentIdTable3/>
+**mixed** | <GetAssignmentIdTable4/>
+**automerged** | <GetAssignmentIdTable5/>
+**created** | **string**<br/><br/>The date and time when the task suite was assigned to a Toloker. The date is specified in UTC in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**submitted** | **string**<br/><br/>The date and time when the task suite was completed by a Toloker. The date is specified in UTC in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**accepted** | **string**<br/><br/>The date and time when the responses for the task suite were accepted by the requester. The date is specified in UTC in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**rejected** | **string**<br/><br/>The date and time when the responses for the task suite were rejected by the requester. The date is specified in UTC in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**skipped** | **string**<br/><br/>The date and time when the task suite was skipped by a Toloker. The date is specified in UTC in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**expired** | **string**<br/><br/>The date and time when the task suite expired. The date is specified in UTC in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**owner.id** | **string**<br/><br/>Requester ID.
+**owner.myself** | <GetAssignmentIdTable6/>

@@ -1,0 +1,166 @@
+---
+title: "Create one or multiple task suites | Toloka API"
+date: "2023-02-06T10:53:22.793862"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import CreateTaskSuiteList1 from './create-task-suite/subcomponents/create-task-suite-list-1.mdx'
+import CreateTaskSuiteList2 from './create-task-suite/subcomponents/create-task-suite-list-2.mdx'
+import CreateTaskSuiteTable1 from './create-task-suite/subcomponents/create-task-suite-table-1.mdx'
+import CreateTaskSuiteTable2 from './create-task-suite/subcomponents/create-task-suite-table-2.mdx'
+import CreateTaskSuiteTable3 from './create-task-suite/subcomponents/create-task-suite-table-3.mdx'
+import CreateTaskSuiteTable4 from './create-task-suite/subcomponents/create-task-suite-table-4.mdx'
+import CreateTaskSuiteTable5 from './create-task-suite/subcomponents/create-task-suite-table-5.mdx'
+import CreateTaskSuiteTable6 from './create-task-suite/subcomponents/create-task-suite-table-6.mdx'
+import CreateTaskSuiteTable7 from './create-task-suite/subcomponents/create-task-suite-table-7.mdx'
+import CreateTaskSuiteTable8 from './create-task-suite/subcomponents/create-task-suite-table-8.mdx'
+import CreateTaskSuiteList3 from './create-task-suite/subcomponents/create-task-suite-list-3.mdx'
+import CreateTaskSuiteList4 from './create-task-suite/subcomponents/create-task-suite-list-4.mdx'
+
+# Create one or multiple task suites
+
+<Announce/>
+
+Creates one or multiple task suites.
+
+<Note mode="restriction" title="Restriction">
+
+You can add a maximum of 100,000 tasks per minute and a maximum of 2,000,000 tasks per day.
+
+</Note>
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <CreateTaskSuiteList1/> },
+  { title: 'Sandbox', value: <CreateTaskSuiteList2/> },
+]}/>
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix. ||
+**Content-Type** | Specifies the data format in the request body.
+
+## Query parameters {#query-params}
+
+Specified in the link after the question mark; separated by `&`.
+
+Parameter | Overview
+----- | -----
+**async_mode** | <CreateTaskSuiteTable1/>
+**allow_defaults** | <CreateTaskSuiteTable2/>
+**skip_invalid_items** | <CreateTaskSuiteTable3/>
+**open_pool** | **boolean**<br/><br/>Open the pool immediately after the operation is completed, if the pool is closed. The default value is `false`.
+**operation_id** | **string**<br/><br/>Operation ID for asynchronously loading one or more task suites (if `async_mode=true`).<br/><br/>We recommend sending the ID in the POST request to avoid accidental errors, such as creating the operation multiple times for the same task suites.<br/><br/>The ID should conform to the [RFC4122 standard](https://tools.ietf.org/html/rfc4122).<br/><br/>You can use this ID in the future to [get information about the operation](/docs-new/api/operations).
+
+## Request body {#body}
+
+```json
+{
+  "id": "63614047-38c3-4ad4-8a86-99c5c651a9b8",
+  "pool_id": "1",
+  "tasks": [
+    {
+      "id": "49a333ea-2728-4c1c-ab1f-8ab1bfe4ee7e",
+      "origin_task_id": "e3da7fe1-828d-4d9c-b49d-42c0eb5fcfde",
+      "input_values": {
+        "image_url": "www.image1.ru"
+      },
+      "known_solutions": [
+        {
+          "correctness_weight": 0.95,
+          "output_values": {
+            "colour": "black"
+          }
+        },
+        {
+          "correctness_weight": 0.7,
+          "output_values": {
+            "colour": "gray"
+          }
+        }
+      ],
+      "message_on_unknown_solution": "The elephant is black"
+    },
+    {
+      "input_values": {
+        "image_url": "www.image2.ru"
+      },
+      "known_solutions": [
+        {
+          "correctness_weight": 1,
+          "output_values": {
+            "colour": "white"
+          }
+        }
+      ],
+      "message_on_unknown_solution": "The elephant is white"
+    }
+  ],
+  "overlap": 5,
+  "infinite_overlap": false,
+  "remaining_overlap": 3,
+  "reserved_for": [],
+  "unavailable_for": [],
+  "issuing_order_override": 3,
+  "mixed": true,
+  "automerged": false,
+  "created": "2016-04-18T12:43:04.988"
+}
+```
+
+Parameter | Overview
+----- | -----
+**pool_id** | **string \| required**<br/><br/>The ID of the pool that tasks are uploaded to.
+**tasks[]** | **array of object \| required**<br/><br/>Data for the tasks.
+**tasks[].input_values** | <CreateTaskSuiteTable4/>
+**overlap** | **integer \| required if**<br/><br/>Required if the parameter is not used when creating a task suite `allow_defaults=true`, and the overlap is not specified in the pool parameters (in the [`defaults.​default_​overlap_for_​new_task_suites`](/docs-new/api/create-pool#default_overlap_for_new_task_suites) key).<br/><br/>Task suite overlap.
+**longitude** | **float \| required if**<br/><br/>Required if tasks are selected on the map. Otherwise, not used.<br/><br/>The longitude of the point on the map for the task suite.
+**latitude** | **float \| required if**<br/><br/>Required if tasks are selected on the map. Otherwise, not used.<br/><br/>The latitude of the point on the map for the task suite.
+**tasks[].known_solutions** | **object**<br/><br/>Responses and hints for control tasks and training tasks.
+**tasks[].known_solutions.output_values** | <CreateTaskSuiteTable5/>
+**tasks[].known_solutions.correctness_weight** | **float**<br/><br/>The weight of a correct response. Allows you to set multiple versions of correct responses and rank them by correctness. For example, if a correct response is weighted 0.5, it counts as half of a mistake for the Toloker. The more correct the response in `correctValues`, the higher its weight.
+**tasks[].message_on_unknown_solution** | **string**<br/><br/>Hint for the task (for training tasks).
+**infinite_overlap** | <CreateTaskSuiteTable6/>
+**reserved_for[]** | **array of strings**<br/><br/>IDs of Tolokers who will have access to the task suites.
+**unavailable_for[]** | **array of strings**<br/><br/>IDs of Tolokers who shouldn't have access to the task suite.
+**issuing_order_override** | **float**<br/><br/>The priority of a task suite among other suites in the pool. Defines the order in which task suites are assigned to Tolokers. The larger the parameter value, the higher the priority.<br/><br/>This parameter can be used if the pool has `issue_task_suites_in_creation_order: true`.<br/><br/>Allowed values: from `-99999.99999` to `99999.99999`.<br/><br/>The default value is `0`.
+**mixed** | <CreateTaskSuiteTable7/>
+
+## Response {#response}
+
+<Cut title="One task suite">
+
+It includes:
+
+- [Task suite data](/docs-new/api/create-task-suite#body) in JSON format.
+- Parameters that are assigned automatically.
+
+Parameter | Overview
+----- | -----
+**id** | **string**<br/><br/>ID of a task suite.
+**tasks[].id** | **string**<br/><br/>Task ID if the task suite is created automatically with the "smart mixing" option ([learn more](https://toloka.ai/en/docs/guide/concepts/task_upload)).
+**tasks[].origin_task_id** | **string**<br/><br/>The ID of a task from another pool from which this task was copied for majority vote verification.
+**remaining_overlap** | **integer**<br/><br/>The remaining overlap for each task. For example, if the task has an overlap of `5` but was completed by two  people, the `remaining_overlap` value is `3`.<br/><br/>If the task is under review or active, the key is `0`.
+**automerged** | <CreateTaskSuiteTable8/>
+**created** | **string**<br/><br/>The UTC date and time when the task suite was created, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+
+</Cut>
+
+<Cut title="Multiple task suites">
+
+The response format depends on the value of [async_mode](#async_mode).
+
+<Tabs tabs={[
+  { title: 'The task suites (async_mode=false)', value: <CreateTaskSuiteList3/> },
+  { title: 'Information about the operation (async_mode=true)', value: <CreateTaskSuiteList4/> },
+]}/>
+
+</Cut>

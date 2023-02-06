@@ -1,0 +1,32 @@
+---
+title: "Overview | Toloka API"
+date: "2023-02-03T19:53:24.901044"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+# Overview
+
+[A training pool](https://toloka.ai/en/docs/glossary#training-task) includes unpaid task suites. The training pool must be linked to the main pool.
+
+After completing the training pool, the Toloker is assigned a skill equal to the percentage of correct responses. If the percentage is higher than or equal to the **Level required** value in the linked pool, the Toloker gets access to the main pool.
+
+## Methods {#methods}
+
+Method | Endpoint | Overview
+----- | ----- | -----
+POST | [/trainings](/docs-new/api/create-training) | Creates a training pool (training).
+PUT | [/trainings/<training_pool_id>](/docs-new/api/edit-training) | Makes changes to a training pool.
+POST | [/trainings/<training_pool_id>/open](/docs-new/api/open-training) | Opens a training pool.
+POST | [/trainings/<training_pool_id>/close](/docs-new/api/close-training) | Closes a training pool.
+POST | [/training/<training_pool_id>/archive](/docs-new/api/archive-training) | Moves a training pool to the archive.
+POST | [/training/<training_pool_id>/clone](/docs-new/api/clone-training) | Creates a duplicate training pool.
+GET | [/trainings](/docs-new/api/get-training-list) | Gets the list of created training pools (including archived pools).
+GET | [/trainings/<training_pool_id>](/docs-new/api/get-training) | Gets the properties of a training pool.
+
+## See also {#see-also}
+
+- [Adding a training](https://toloka.ai/en/docs/guide/concepts/train)

@@ -1,0 +1,83 @@
+---
+title: "Block access to tasks | Toloka API"
+date: "2023-02-03T19:53:28.392622"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import BanCreateList1 from './ban-create/subcomponents/ban-create-list-1.mdx'
+import BanCreateList2 from './ban-create/subcomponents/ban-create-list-2.mdx'
+import BanCreateTable1 from './ban-create/subcomponents/ban-create-table-1.mdx'
+import BanCreateTable2 from './ban-create/subcomponents/ban-create-table-2.mdx'
+
+# Block access to tasks
+
+<Announce/>
+
+Blocks a Toloker from accessing tasks.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <BanCreateList1/> },
+  { title: 'Sandbox', value: <BanCreateList2/> },
+]}/>
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+**Content-Type** | Specifies the data format in the request body.
+
+## Request body {#body}
+
+```json
+{
+  "scope": "PROJECT",
+  "user_id": "f25a5f41-94e8-49bf-977f-3611087a16b3",
+  "project_id": "10",
+  "private_comment": "Many mistakes",
+  "will_expire": "2016-04-10T18:08:07"
+}
+```
+
+Parameter | Overview
+----- | -----
+**scope** | <BanCreateTable1/>
+**user_id** | **string \| required**<br/><br/>Toloker ID.
+**project_id** | **string \| required if**<br/><br/>Required if `scope=PROJECT`.<br/><br/>The ID of the project that is blocked.
+**pool_id** | **string \| required if**<br/><br/>Required if `scope=POOL`.<br/><br/>The ID of the pool that is blocked.
+**private_comment** | **string**<br/><br/>Comments with the reason for blocking access.<br/><br/>Maximum length: 499 characters.
+**will_expire** | **string**<br/><br/>The UTC date and time when access will be restored. It uses ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+
+## Response {#response}
+
+Contains the ban ID and parameters, and the date when access was blocked.
+
+```json
+{
+  "scope": "PROJECT",
+  "user_id": "f25a5f41-94e8-49bf-977f-3611087a16b3",
+  "project_id": "10",
+  "private_comment": "Many mistakes",
+  "will_expire": "2016-04-10T18:08:07",
+  "id": "54",
+  "created": "2016-03-28T18:08:07"
+}
+```
+
+Parameter | Overview
+----- | -----
+**scope** | <BanCreateTable2/>
+**user_id** | **string**<br/><br/>Toloker ID.
+**project_id** | **string**<br/><br/>Required if `scope=PROJECT`.<br/><br/>The ID of the project that is blocked.
+**pool_id** | **string**<br/><br/>Specified if `scope=POOL`.<br/><br/>The ID of the pool that is blocked.
+**private_comment** | **string**<br/><br/>Comments with the reason for blocking access.<br/><br/>Maximum length: 499 characters.
+**will_expire** | **string**<br/><br/>The UTC date and time when access will be restored. It uses ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**created** | **string**<br/><br/>The UTC date and time of the ban, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**id** | **string**<br/><br/>ID of the ban.

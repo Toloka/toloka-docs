@@ -1,0 +1,66 @@
+---
+title: "Get a list of bans | Toloka API"
+date: "2023-02-03T19:53:27.115801"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import BanGetListList1 from './ban-get-list/subcomponents/ban-get-list-list-1.mdx'
+import BanGetListList2 from './ban-get-list/subcomponents/ban-get-list-list-2.mdx'
+import BanGetListTable1 from './ban-get-list/subcomponents/ban-get-list-table-1.mdx'
+import BanGetListTable2 from './ban-get-list/subcomponents/ban-get-list-table-2.mdx'
+import BanGetListList3 from './ban-get-list/subcomponents/ban-get-list-list-3.mdx'
+import BanGetListList4 from './ban-get-list/subcomponents/ban-get-list-list-4.mdx'
+
+# Get a list of bans
+
+<Announce/>
+
+Gets the list of Toloker bans.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <BanGetListList1/> },
+  { title: 'Sandbox', value: <BanGetListList2/> },
+]}/>
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Query parameters {#query-params}
+
+Specified in the link after the question mark; separated by `&`.
+
+Parameter | Overview
+----- | -----
+**scope** | <BanGetListTable1/>
+**user_id** | **string**<br/><br/>Toloker ID.
+**project_id** | **string \| required if**<br/><br/>Required if `scope=PROJECT`.<br/><br/>The ID of the project that is blocked.
+**pool_id** | **string \| required if**<br/><br/>Required if `scope=POOL`.<br/><br/>The ID of the pool that is blocked.
+**sort** | <BanGetListTable2/>
+**Standard query parameters** | [limit](./standard-query-parameters#limit), [id_gt](./standard-query-parameters#id_gt), [id_gte](./standard-query-parameters#id_gte), [id_lt](./standard-query-parameters#id_lt), [id_lte](./standard-query-parameters#id_lte), [created_gt](./standard-query-parameters#created_gt), [created_gte](./standard-query-parameters#created_gte), [created_lt](./standard-query-parameters#created_lt), [created_lte](./standard-query-parameters#created_lte).
+
+## Query example {#request-example}
+
+To get the list of bans in parts (for example, 10 bans at a time), use a combination of parameters in requests:
+
+<Tabs tabs={[
+  { title: 'Production version', value: <BanGetListList3/> },
+  { title: 'Sandbox', value: <BanGetListList4/> },
+]}/>
+
+## Response {#response}
+
+Contains a list of bans in the `items` array:
+
+```json
+{"items" : [{ban parameters 1}, {ban parameters 2}, ... {ban parameters n}], "has_more": true}
+```

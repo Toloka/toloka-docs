@@ -1,0 +1,139 @@
+---
+title: "To send a message | Toloka API"
+date: "2023-02-03T19:53:29.676505"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import MessageSendList1 from './message-send/subcomponents/message-send-list-1.mdx'
+import MessageSendList2 from './message-send/subcomponents/message-send-list-2.mdx'
+import MessageSendList3 from './message-send/subcomponents/message-send-list-3.mdx'
+import MessageSendList4 from './message-send/subcomponents/message-send-list-4.mdx'
+import MessageSendTable1 from './message-send/subcomponents/message-send-table-1.mdx'
+import MessageSendTable2 from './message-send/subcomponents/message-send-table-2.mdx'
+import MessageSendTable3 from './message-send/subcomponents/message-send-table-3.mdx'
+import MessageSendTable4 from './message-send/subcomponents/message-send-table-4.mdx'
+import MessageSendTable5 from './message-send/subcomponents/message-send-table-5.mdx'
+import MessageSendTable6 from './message-send/subcomponents/message-send-table-6.mdx'
+import MessageSendTable7 from './message-send/subcomponents/message-send-table-7.mdx'
+
+# To send a message
+
+<Announce/>
+
+Sends a message to Tolokers.
+
+- [Specify recipients in a list](#spis).
+- [Select Tolokers using a filter](#didi).
+
+The sent message is added to a new [message thread](/docs-new/api/messages).
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <MessageSendList1/> },
+  { title: 'Sandbox', value: <MessageSendList2/> },
+]}/>
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+**Content-Type** | Specifies the data format in the request body.
+
+## Request body {#body}
+
+<Tabs tabs={[
+  { title: 'Message with a list of recipients', value: <MessageSendList3/> },
+  { title: 'Filter message', value: <MessageSendList4/> },
+]}/>
+
+## Response {#response}
+
+In response, you will receive a message as a new thread.
+
+```json
+{
+  "id": "558110f401d292324c0da8bd",
+  "topic": {
+    "EN": "You received a reward!"
+  },
+  "interlocutors_inlined": true,
+  "interlocutors": [
+    {
+      "id": "111bd25f1bb71f37844e2a9355faad67",
+      "role": "REQUESTER",
+      "myself": true
+    },
+    {
+      "id": "2225cfb24c15b7d691818f5ac9d07f70",
+      "role": "USER"
+    }
+  ],
+  "messages_inlined": true,
+  "messages": [
+    {
+      "text": {
+        "EN": "Thank you!"
+      },
+      "from": {
+        "id": "2225cfb24c15b7d691818f5ac9d07f70",
+        "role": "USER"
+        },
+        "created": "2017-01-31T11:02:31"
+    {
+      "text": {
+        "EN": "You received a reward for doing a good job!"
+      },
+      "from": {
+        "id": "111bd25f1bb71f37844e2a9355faad67",
+        "role": "REQUESTER",
+        "myself": true
+      },
+      "created": "2017-01-31T09:38:01"
+    }
+  ],
+  "compose_details": {
+    "recipients_select_type": "DIRECT",
+    "recipients_ids": [
+      "2225cfb24c15b7d691818f5ac9d07f70"
+    ]
+  },
+  "answerable": true,
+  "folders": [
+    "INBOX",
+    "OUTBOX"
+  ],
+  "created": "2017-01-31T09:38:01"
+}
+```
+
+Parameter | Overview
+----- | -----
+**id** | **string**<br/><br/>Message thread ID.
+**topic** | **object**<br/><br/>Message thread title.
+**interlocutors_inlined** | <MessageSendTable1/>
+**interlocutors[]** | **array of objects**<br/><br/>Information about the sender and recipients, sorted by ID.
+**interlocutors.id** | **string**<br/><br/>ID of the sender or recipient.
+**interlocutors.role** | <MessageSendTable2/>
+**interlocutors.myself** | **boolean**<br/><br/>Indicates a sender or recipient with your ID. If this is your ID, it is set to `true`.
+**messages_inlined** | <MessageSendTable3/>
+**messages[]** | **array of objects**<br/><br/>Messages in the thread. Messages are sorted by date of creation (newest first).
+**messages.text** | **object**<br/><br/>Message text.
+**messages.from** | **string**<br/><br/>Information about the sender.
+**messages.from.id** | **string**<br/><br/>The sender's ID.
+**messages.from.role** | <MessageSendTable4/>
+**messages.from.myself** | **boolean**<br/><br/>Marks a sender with your ID. If you are the sender, it is set to `true`.
+**messages.created** | **string**<br/><br/>Date the message was created.
+**compose_details** | **object**<br/><br/>For messages that you sent: details of the POST request for creating the message.
+**compose_details.recipients_select_type** | <MessageSendTable5/>
+**compose_details.recipients_ids** | **object**<br/><br/>The list of IDs of Tolokers who will receive the message.
+**compose_details.recipients_filter** | **object**<br/><br/>[Filter](/docs-new/api/filters) for selecting recipients.
+**answerable** | <MessageSendTable6/>
+**folders**[] | <MessageSendTable7/>
+**created** | **string**<br/><br/>Date the first message in the thread was created.

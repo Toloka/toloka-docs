@@ -1,0 +1,59 @@
+---
+title: "Edit a pool | Toloka API"
+date: "2023-02-03T19:53:32.263538"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import EditPoolList1 from './edit-pool/subcomponents/edit-pool-list-1.mdx'
+import EditPoolList2 from './edit-pool/subcomponents/edit-pool-list-2.mdx'
+
+# Edit a pool
+
+<Announce/>
+
+Makes changes to a pool.
+
+The pool can't be edited if it's open. [Close the pool](/docs-new/api/close-pool-for-update) before editing.
+
+<Note mode="note" title="Note">
+
+Learn about editing a training pool in the section [Edit a training pool](/docs-new/api/edit-training).
+
+</Note>
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <EditPoolList1/> },
+  { title: 'Sandbox', value: <EditPoolList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**pool_id** | Pool ID.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+**Content-Type** | Specifies the data format in the request body.
+
+## Request body {#body}
+
+In the request body, specify **all** the pool [parameters](/docs-new/api/create-pool#pool-param), including those that are updated.
+
+## Response {#response}
+
+Contains updated information about the pool (see the description in the [Create a pool](/docs-new/api/create-pool#response) section).
+
+## See also {#see-also}
+
+- [Editing a pool](https://toloka.ai/en/docs/guide/concepts/pool-edit)

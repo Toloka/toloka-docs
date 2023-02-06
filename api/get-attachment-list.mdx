@@ -1,0 +1,86 @@
+---
+title: "Get the list of files | Toloka API"
+date: "2023-02-03T19:53:26.169776"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import GetAttachmentListList1 from './get-attachment-list/subcomponents/get-attachment-list-list-1.mdx'
+import GetAttachmentListList2 from './get-attachment-list/subcomponents/get-attachment-list-list-2.mdx'
+import GetAttachmentListTable1 from './get-attachment-list/subcomponents/get-attachment-list-table-1.mdx'
+import GetAttachmentListList3 from './get-attachment-list/subcomponents/get-attachment-list-list-3.mdx'
+import GetAttachmentListList4 from './get-attachment-list/subcomponents/get-attachment-list-list-4.mdx'
+import GetAttachmentListList5 from './get-attachment-list/subcomponents/get-attachment-list-list-5.mdx'
+import GetAttachmentListList6 from './get-attachment-list/subcomponents/get-attachment-list-list-6.mdx'
+
+# Get the list of files
+
+<Announce/>
+
+Gets the list of files saved in Toloka.
+
+<Note mode="warning" title="Warning">
+
+Files are downloaded not in the order in which they were uploaded to the server.
+
+</Note>
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetAttachmentListList1/> },
+  { title: 'Sandbox', value: <GetAttachmentListList2/> },
+]}/>
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Query parameters {#query-params}
+
+Specified in the link after the question mark; separated by `&`.
+
+Parameter | Overview
+----- | -----
+**pool_id** | **string**<br/><br/>Pool ID.
+**assignment_id** | **string**<br/><br/>ID of the task suite assignment.
+**name** | **string**<br/><br/>File name.
+**type** | **string**<br/><br/>Attachment type. Currently the key can have only one value — `ASSIGNMENT_ATTACHMENT`.
+**user_id** | **string**<br/><br/>ID of the Toloker who uploaded the file(s).
+**sort** | <GetAttachmentListTable1/>
+**Standard query parameters** | [limit](./standard-query-parameters#limit), [id_gt](./standard-query-parameters#id_gt), [id_gte](./standard-query-parameters#id_gte), [id_lt](./standard-query-parameters#id_lt), [id_lte](./standard-query-parameters#id_lte), [created_gt](./standard-query-parameters#created_gt), [created_gte](./standard-query-parameters#created_gte), [created_lt](./standard-query-parameters#created_lt), [created_lte](./standard-query-parameters#created_lte).
+
+## Query example {#request-example}
+
+You can set up the display of the list of files in parts (for example, 10 files at a time):
+
+1. Show the first 10 files, starting with the one with the lowest ID.
+1. Show the remaining files (10 at a time) in ascending order.
+
+**Show the first 10 files**
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetAttachmentListList3/> },
+  { title: 'Sandbox', value: <GetAttachmentListList4/> },
+]}/>
+
+**Show the remaining tasks sorted by ascending ID**
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetAttachmentListList5/> },
+  { title: 'Sandbox', value: <GetAttachmentListList6/> },
+]}/>
+
+## Response {#response}
+
+[Information about files](/docs-new/api/get-attachment) in the `items` array:
+
+```json
+{"items" : [{file #1}, {file #2}, ... {file #n}], "has_more": false}
+```

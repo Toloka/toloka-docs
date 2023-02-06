@@ -1,0 +1,26 @@
+---
+title: "Remove a proxy server registration | Toloka API"
+date: "2023-02-03T19:53:25.932180"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+# Remove a proxy server registration
+
+To delete a registered requester server, log in as a requester and send an AJAX request from your browser console.
+
+## Request {#request}
+
+```js
+$.ajax({
+    url: '/api/new/requester/proxy/proxy/{id}',
+    method: 'DELETE'
+});
+```
+
+## Response {#response}
+
+If the request is successful, the server returns the `204 No Content` or `404 Not Found` HTTP operation status.

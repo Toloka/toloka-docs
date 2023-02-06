@@ -1,0 +1,77 @@
+---
+title: "Close a pool | Toloka API"
+date: "2023-02-03T19:53:28.337895"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import ClosePoolList1 from './close-pool/subcomponents/close-pool-list-1.mdx'
+import ClosePoolList2 from './close-pool/subcomponents/close-pool-list-2.mdx'
+import ClosePoolTable1 from './close-pool/subcomponents/close-pool-table-1.mdx'
+
+# Close a pool
+
+<Announce/>
+
+Closes a pool.
+
+To stop assigning tasks to Tolokers, close the pool.
+
+When you send requests, an operation is created. To track the progress of the operation, send a request to the `/operations` resource.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <ClosePoolList1/> },
+  { title: 'Sandbox', value: <ClosePoolList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**pool_id** | Pool ID.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Response {#response}
+
+<Note mode="note" title="Note">
+
+If the current pool status is the same as the  requested status, an empty response with status `204` is returned.
+
+</Note>
+
+```json
+{
+  "id": "fadfe3jk-fdafue2-fda32890-fdafdi23",
+  "type": "POOL.CLOSE",
+  "status": "PENDING",
+  "submitted": "2015-22-12T14:18:35",
+  "started" : "2016-04-07T16:06:15.902",
+  "finished" : "2016-04-07T16:06:15.902",
+  "progress" : 100,
+  "parameters": {
+    "pool_id": "21"
+  }
+}
+```
+
+Parameter | Overview
+----- | -----
+**id** | **string**<br/><br/>User ID.
+**type** | **string**<br/><br/>Type of operation: `POOL.CLOSE` — Closing a pool.
+**status** | <ClosePoolTable1/>
+**submitted** | **string**<br/><br/>The UTC date and time the request was sent, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**started** | **string**<br/><br/>The UTC date and time the operation started, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**finished** | **string**<br/><br/>The UTC date and time the operation was completed, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**progress** | **integer**<br/><br/>The percentage of the operation completed.
+**parameters.pool_id** | **string**<br/><br/>Pool ID.

@@ -89,5 +89,581 @@
       "href": "/apps/product-search-relevance",
       "title": "Product search relevance"
     }
+  ],
+  "apiMenu": [
+    {
+      "title": "Toloka API"
+    },
+    {
+      "title": "Overview",
+      "href": "/api/"
+    },
+    {
+      "title": "Accessing the API",
+      "href": "/api/access"
+    },
+    {
+      "title": "Quick start",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/api/quickstart"
+        },
+        {
+          "title": "Posting tasks",
+          "href": "/api/qs-placement"
+        },
+        {
+          "title": "Receiving responses",
+          "href": "/api/qs-results"
+        }
+      ]
+    },
+    {
+      "title": "Reference"
+    },
+    {
+      "title": "Project",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/api/project"
+        },
+        {
+          "title": "Create a project",
+          "subItems": [
+            {
+              "title": "Overview",
+              "href": "/api/create-prj"
+            },
+            {
+              "title": "Configuration for Template Builder",
+              "href": "/api/tb-config"
+            }
+          ]
+        },
+        {
+          "title": "Edit a project",
+          "href": "/api/edit-prj"
+        },
+        {
+          "title": "Get the list of projects",
+          "href": "/api/get-prj-list"
+        },
+        {
+          "title": "Get project properties",
+          "href": "/api/get-prj"
+        },
+        {
+          "title": "Archive a project",
+          "href": "/api/archive-prj"
+        }
+      ]
+    },
+    {
+      "title": "Pools",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/api/pool"
+        },
+        {
+          "title": "Create a pool",
+          "href": "/api/create-pool"
+        },
+        {
+          "title": "Close a pool for editing",
+          "href": "/api/close-pool-for-update"
+        },
+        {
+          "title": "Edit a pool",
+          "href": "/api/edit-pool"
+        },
+        {
+          "title": "Open a pool",
+          "href": "/api/open-pool"
+        },
+        {
+          "title": "Close a pool",
+          "href": "/api/close-pool"
+        },
+        {
+          "title": "Move a pool to the archive",
+          "href": "/api/archive-pool"
+        },
+        {
+          "title": "Clone a pool",
+          "href": "/api/clone-pool"
+        },
+        {
+          "title": "Get the list of pools",
+          "href": "/api/get-pool-list"
+        },
+        {
+          "title": "Get properties of a pool",
+          "href": "/api/get-pool"
+        },
+        {
+          "title": "Change pool priority",
+          "href": "/api/set-priority-pool"
+        }
+      ]
+    },
+    {
+      "title": "Training",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/api/training"
+        },
+        {
+          "title": "Create a training pool",
+          "href": "/api/create-training"
+        },
+        {
+          "title": "Edit a training pool",
+          "href": "/api/edit-training"
+        },
+        {
+          "title": "Open a training",
+          "href": "/api/open-training"
+        },
+        {
+          "title": "Close a training",
+          "href": "/api/close-training"
+        },
+        {
+          "title": "Archive a training pool",
+          "href": "/api/archive-training"
+        },
+        {
+          "title": "Clone a training pool",
+          "href": "/api/clone-training"
+        },
+        {
+          "title": "Get a list of training pools",
+          "href": "/api/get-training-list"
+        },
+        {
+          "title": "Get training properties",
+          "href": "/api/get-training"
+        }
+      ]
+    },
+    {
+      "title": "Subscriptions to events",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/api/webhook-subscriptions"
+        },
+        {
+          "title": "Create a subscription",
+          "href": "/api/put-webhook-subscriptions"
+        },
+        {
+          "title": "Get a subscription",
+          "href": "/api/get-webhook-subscriptions"
+        },
+        {
+          "title": "Get a list of subscriptions",
+          "href": "/api/get-webhook-subscriptions-list"
+        },
+        {
+          "title": "Delete a subscription",
+          "href": "/api/delete-webhook-subscriptions"
+        },
+        {
+          "title": "Notification format",
+          "href": "/api/using-webhook-subscriptions"
+        },
+        {
+          "title": "Send a test notification",
+          "href": "/api/post-webhook-subscriptions"
+        },
+        {
+          "title": "Event authentication",
+          "href": "/api/authentication"
+        }
+      ]
+    },
+    {
+      "title": "Toloker selection",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/api/my-users"
+        },
+        {
+          "title": "Skills",
+          "subItems": [
+            {
+              "title": "Overview",
+              "href": "/api/skill"
+            },
+            {
+              "title": "Create a skill",
+              "href": "/api/create-skill"
+            },
+            {
+              "title": "Edit a skill",
+              "href": "/api/edit-skill"
+            },
+            {
+              "title": "Get the list of skills",
+              "href": "/api/get-skill-list"
+            },
+            {
+              "title": "Get the skill ID",
+              "href": "/api/get-skill"
+            },
+            {
+              "title": "Set the skill value",
+              "href": "/api/set-skill"
+            },
+            {
+              "title": "Get a list of Tolokers who have skills",
+              "href": "/api/get-user-skill-list"
+            },
+            {
+              "title": "Get a Toloker's skill value",
+              "href": "/api/get-user-skill"
+            },
+            {
+              "title": "Remove a skill for a Toloker",
+              "href": "/api/delete-skill"
+            }
+          ]
+        },
+        {
+          "title": "Quality control rules",
+          "subItems": [
+            {
+              "title": "Overview",
+              "href": "/api/quality-control"
+            },
+            {
+              "title": "Control tasks",
+              "href": "/api/goldenset"
+            },
+            {
+              "title": "Majority vote",
+              "href": "/api/mv"
+            },
+            {
+              "title": "Entering captchas",
+              "href": "/api/captcha"
+            },
+            {
+              "title": "Compensation amount",
+              "href": "/api/earn-limit"
+            },
+            {
+              "title": "Skipped assignments",
+              "href": "/api/skipped"
+            },
+            {
+              "title": "Number of tasks completed",
+              "href": "/api/completed"
+            },
+            {
+              "title": "Fast responses",
+              "href": "/api/fast"
+            },
+            {
+              "title": "Rejected tasks",
+              "href": "/api/accept-ban"
+            },
+            {
+              "title": "Processing rejected and accepted assignments",
+              "href": "/api/reassessment"
+            },
+            {
+              "title": "Recompletion of assignments",
+              "href": "/api/restore-task-overlap"
+            }
+          ]
+        },
+        {
+          "title": "Filters",
+          "subItems": [
+            {
+              "title": "Overview",
+              "href": "/api/filters"
+            },
+            {
+              "title": "Filter by profile data",
+              "href": "/api/filter-profile"
+            },
+            {
+              "title": "Filter by computed data",
+              "href": "/api/filter-computed"
+            },
+            {
+              "title": "Filter by skills",
+              "href": "/api/filter-skill"
+            }
+          ]
+        },
+        {
+          "title": "Block access to tasks",
+          "subItems": [
+            {
+              "title": "Overview",
+              "href": "/api/ban"
+            },
+            {
+              "title": "Block access to tasks",
+              "href": "/api/ban-create"
+            },
+            {
+              "title": "Get a list of bans",
+              "href": "/api/ban-get-list"
+            },
+            {
+              "title": "Get information about a ban",
+              "href": "/api/ban-get-info"
+            },
+            {
+              "title": "Unblock access",
+              "href": "/api/ban-delete"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Ways to upload tasks",
+      "href": "/api/upload-tasks"
+    },
+    {
+      "title": "Tasks",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/api/tasks"
+        },
+        {
+          "title": "Create one or multiple tasks",
+          "href": "/api/create-task"
+        },
+        {
+          "title": "Create multiple tasks",
+          "href": "/api/create-tasks-batch"
+        },
+        {
+          "title": "Get the list of tasks",
+          "href": "/api/get-tasks-list"
+        },
+        {
+          "title": "Get a task",
+          "href": "/api/get-task"
+        },
+        {
+          "title": "Edit a task",
+          "href": "/api/edit-task-overlap"
+        },
+        {
+          "title": "Stop assigning a task",
+          "href": "/api/set-min-task-overlap"
+        }
+      ]
+    },
+    {
+      "title": "Task suites",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/api/task-suite"
+        },
+        {
+          "title": "Create one or multiple task suites",
+          "href": "/api/create-task-suite"
+        },
+        {
+          "title": "Create multiple task suites",
+          "href": "/api/create-task-suite-batch"
+        },
+        {
+          "title": "Get the list of task suites",
+          "href": "/api/get-task-suite-list"
+        },
+        {
+          "title": "Get a task suite",
+          "href": "/api/get-task-suite"
+        },
+        {
+          "title": "Change the task suite overlap",
+          "href": "/api/edit-overlap"
+        },
+        {
+          "title": "Change task suite priority",
+          "href": "/api/edit-order"
+        },
+        {
+          "title": "Stop assigning a task suite",
+          "href": "/api/set-min-suite-overlap"
+        }
+      ]
+    },
+    {
+      "title": "Tracking operations",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/api/operations"
+        },
+        {
+          "title": "Get the list of operations",
+          "href": "/api/get-operations-list"
+        },
+        {
+          "title": "Get operation details",
+          "href": "/api/get-operation"
+        },
+        {
+          "title": "Get the operation log",
+          "href": "/api/get-operation-log"
+        }
+      ]
+    },
+    {
+      "title": "Getting responses",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/api/get-response"
+        },
+        {
+          "title": "Get responses",
+          "href": "/api/result"
+        },
+        {
+          "title": "Get response properties",
+          "href": "/api/get-assignment-id"
+        },
+        {
+          "title": "Files in responses",
+          "subItems": [
+            {
+              "title": "Overview",
+              "href": "/api/attachments"
+            },
+            {
+              "title": "Get the list of files",
+              "href": "/api/get-attachment-list"
+            },
+            {
+              "title": "Get file metadata",
+              "href": "/api/get-attachment"
+            },
+            {
+              "title": "Download file",
+              "href": "/api/download-attachment"
+            }
+          ]
+        },
+        {
+          "title": "Aggregated responses",
+          "subItems": [
+            {
+              "title": "Overview",
+              "href": "/api/aggregated-solutions"
+            },
+            {
+              "title": "Aggregate responses in a pool",
+              "href": "/api/aggregate-by-pool"
+            },
+            {
+              "title": "Aggregate responses to a single task",
+              "href": "/api/aggregate-by-task"
+            },
+            {
+              "title": "Get aggregate responses",
+              "href": "/api/get-aggregated-result"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Checking completed tasks",
+      "href": "/api/accept"
+    },
+    {
+      "title": "Rewards",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/api/bonus"
+        },
+        {
+          "title": "Issue rewards",
+          "href": "/api/create-bonus"
+        },
+        {
+          "title": "Get a list of rewards issued",
+          "href": "/api/get-bonus-list"
+        },
+        {
+          "title": "Get reward properties",
+          "href": "/api/get-one-bonus"
+        }
+      ]
+    },
+    {
+      "title": "Messages for Tolokers",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/api/messages"
+        },
+        {
+          "title": "To send a message",
+          "href": "/api/message-send"
+        },
+        {
+          "title": "Get a list of message threads",
+          "href": "/api/get-chain-list"
+        },
+        {
+          "title": "Reply to message thread",
+          "href": "/api/reply-message"
+        },
+        {
+          "title": "Move a message thread",
+          "href": "/api/move-message"
+        }
+      ]
+    },
+    {
+      "title": "Various parameters",
+      "subItems": [
+        {
+          "title": "Get user metadata",
+          "href": "/api/get-user-metadata"
+        },
+        {
+          "title": "Account balance",
+          "href": "/api/balance"
+        },
+        {
+          "title": "Handling errors",
+          "href": "/api/errors"
+        },
+        {
+          "title": "Standard query parameters",
+          "href": "/api/standard-query-parameters"
+        },
+        {
+          "title": "Sorting the list of objects",
+          "href": "/api/sorting"
+        }
+      ]
+    },
+    {
+      "title": "Libraries",
+      "href": "/api/libraries"
+    }
   ]
 }

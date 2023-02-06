@@ -1,0 +1,108 @@
+---
+title: "Get a list of subscriptions | Toloka API"
+date: "2023-02-03T19:53:31.547722"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import GetWebhookSubscriptionsListList1 from './get-webhook-subscriptions-list/subcomponents/get-webhook-subscriptions-list-list-1.mdx'
+import GetWebhookSubscriptionsListList2 from './get-webhook-subscriptions-list/subcomponents/get-webhook-subscriptions-list-list-2.mdx'
+import GetWebhookSubscriptionsListTable1 from './get-webhook-subscriptions-list/subcomponents/get-webhook-subscriptions-list-table-1.mdx'
+import GetWebhookSubscriptionsListTable2 from './get-webhook-subscriptions-list/subcomponents/get-webhook-subscriptions-list-table-2.mdx'
+import GetWebhookSubscriptionsListList3 from './get-webhook-subscriptions-list/subcomponents/get-webhook-subscriptions-list-list-3.mdx'
+import GetWebhookSubscriptionsListList4 from './get-webhook-subscriptions-list/subcomponents/get-webhook-subscriptions-list-list-4.mdx'
+import GetWebhookSubscriptionsListList5 from './get-webhook-subscriptions-list/subcomponents/get-webhook-subscriptions-list-list-5.mdx'
+import GetWebhookSubscriptionsListList6 from './get-webhook-subscriptions-list/subcomponents/get-webhook-subscriptions-list-list-6.mdx'
+import GetWebhookSubscriptionsListTable3 from './get-webhook-subscriptions-list/subcomponents/get-webhook-subscriptions-list-table-3.mdx'
+import GetWebhookSubscriptionsListTable4 from './get-webhook-subscriptions-list/subcomponents/get-webhook-subscriptions-list-table-4.mdx'
+
+# Get a list of subscriptions
+
+<Announce/>
+
+Gets data for multiple active subscriptions.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetWebhookSubscriptionsListList1/> },
+  { title: 'Sandbox', value: <GetWebhookSubscriptionsListList2/> },
+]}/>
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Query parameters {#query-params}
+
+Specified in the link after the question mark; separated by `&`.
+
+Parameter | Overview
+----- | -----
+**event_type** | <GetWebhookSubscriptionsListTable1/>
+**pool_id** | **string**<br/><br/>ID of the pool that subscription information is requested for.
+**sort** | <GetWebhookSubscriptionsListTable2/>
+**Standard query parameters** | [limit](./standard-query-parameters#limit), [id_gt](./standard-query-parameters#id_gt), [id_gte](./standard-query-parameters#id_gte), [id_lt](./standard-query-parameters#id_lt), [id_lte](./standard-query-parameters#id_lte), [created_gt](./standard-query-parameters#created_gt), [created_gte](./standard-query-parameters#created_gte), [created_lt](./standard-query-parameters#created_lt), [created_lte](./standard-query-parameters#created_lte).
+
+## Query example {#request-example}
+
+You can set up the display of the list of subscriptions in parts (for example, 10 subscriptions at a time):
+
+1. Show the first 10 subscriptions, starting with the one with the lowest ID.
+1. Show the remaining subscriptions (10 at a time) in ascending order.
+
+**Show the first 10 subscriptions**
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetWebhookSubscriptionsListList3/> },
+  { title: 'Sandbox', value: <GetWebhookSubscriptionsListList4/> },
+]}/>
+
+**Show the remaining tasks sorted by ascending ID**
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetWebhookSubscriptionsListList5/> },
+  { title: 'Sandbox', value: <GetWebhookSubscriptionsListList6/> },
+]}/>
+
+## Response {#response}
+
+Contains a list of subscriptions with information about each of them in JSON format.
+
+```json
+{
+  "items": [
+    {
+      "webhook_url": "https://awesome-requester.com/toloka-webhook",
+      "event_type": "ASSIGNMENT_CREATED",
+      "pool_id": "121212",
+      "id": "webhook-subscription-1",
+      "created": "2020-02-03T15:00:00"
+    },
+    {
+      "webhook_url": "https://awesome-requester.com/toloka-webhook",
+      "event_type": "POOL_CLOSED",
+      "pool_id": "121212",
+      "id": "webhook-subscription-2",
+      "created": "2020-02-03T15:00:00"
+    }
+  ],
+  "has_more": false
+}
+```
+
+Parameter | Overview
+----- | -----
+**items[]** | **array of objects**<br/><br/>An array of objects with information about the requested subscriptions.
+**webhook_url** | **string**<br/><br/>The URL that notifications will be sent to.
+**event_type** | <GetWebhookSubscriptionsListTable3/>
+**pool_id** | **string**<br/><br/>ID of the pool that the subscription was created for.
+**id** | **string**<br/><br/>ID of the subscription.
+**created** | **string**<br/><br/>The date and time when the subscription was created (UTC). It uses ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**has_more** | <GetWebhookSubscriptionsListTable4/>

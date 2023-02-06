@@ -1,0 +1,44 @@
+---
+title: "Get properties of a pool | Toloka API"
+date: "2023-02-03T19:53:28.846220"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import GetPoolList1 from './get-pool/subcomponents/get-pool-list-1.mdx'
+import GetPoolList2 from './get-pool/subcomponents/get-pool-list-2.mdx'
+
+# Get properties of a pool
+
+<Announce/>
+
+Gets the properties of a pool.
+
+You can get the pool ID from the [list of pools](/docs-new/api/get-pool-list).
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetPoolList1/> },
+  { title: 'Sandbox', value: <GetPoolList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**pool_id** | Pool ID.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Response {#response}
+
+Contains pool parameters (see the description in the [Create a pool](/docs-new/api/create-pool#response) section).

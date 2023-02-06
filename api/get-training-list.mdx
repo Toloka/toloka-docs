@@ -1,0 +1,78 @@
+---
+title: "Get a list of training pools | Toloka API"
+date: "2023-02-03T19:53:29.958681"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import GetTrainingListList1 from './get-training-list/subcomponents/get-training-list-list-1.mdx'
+import GetTrainingListList2 from './get-training-list/subcomponents/get-training-list-list-2.mdx'
+import GetTrainingListTable1 from './get-training-list/subcomponents/get-training-list-table-1.mdx'
+import GetTrainingListTable2 from './get-training-list/subcomponents/get-training-list-table-2.mdx'
+import GetTrainingListList3 from './get-training-list/subcomponents/get-training-list-list-3.mdx'
+import GetTrainingListList4 from './get-training-list/subcomponents/get-training-list-list-4.mdx'
+import GetTrainingListList5 from './get-training-list/subcomponents/get-training-list-list-5.mdx'
+import GetTrainingListList6 from './get-training-list/subcomponents/get-training-list-list-6.mdx'
+
+# Get a list of training pools
+
+<Announce/>
+
+Gets the list of created training pools (including archived pools).
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetTrainingListList1/> },
+  { title: 'Sandbox', value: <GetTrainingListList2/> },
+]}/>
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Query parameters {#query-params}
+
+Specified in the link after the question mark; separated by `&`.
+
+Parameter | Overview
+----- | -----
+**status** | <GetTrainingListTable1/>
+**project_id** | **string**<br/><br/>ID of the project that the training pool is linked to.
+**sort** | <GetTrainingListTable2/>
+**Standard query parameters** | [limit](./standard-query-parameters#limit), [id_gt](./standard-query-parameters#id_gt), [id_gte](./standard-query-parameters#id_gte), [id_lt](./standard-query-parameters#id_lt), [id_lte](./standard-query-parameters#id_lte), [created_gt](./standard-query-parameters#created_gt), [created_gte](./standard-query-parameters#created_gte), [created_lt](./standard-query-parameters#created_lt), [created_lte](./standard-query-parameters#created_lte), [last_started_gt](./standard-query-parameters#last_started_gt), [last_started_gte](./standard-query-parameters#last_started_gte), [last_started_gte](./standard-query-parameters#last_started_gte), [last_started_lt](./standard-query-parameters#last_started_lt), [last_started_lte](./standard-query-parameters#last_started_lte).
+
+## Query example {#request-example}
+
+You can set up the display of the list of pools in parts (for example, 10 pools at a time):
+
+1. Show the first 10 pools, starting with the pool with the lowest ID.
+1. Show the remaining pools (10 at a time) in ascending order.
+
+**Show the first 10 pools**
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetTrainingListList3/> },
+  { title: 'Sandbox', value: <GetTrainingListList4/> },
+]}/>
+
+**Show the remaining tasks sorted by ascending ID**
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetTrainingListList5/> },
+  { title: 'Sandbox', value: <GetTrainingListList6/> },
+]}/>
+
+## Response {#response}
+
+Contains a list of training pools and their properties in the `items` array:
+
+```json
+{"items" : [{parameters_of_training_pool_1}, {parameters_of_training_pool_2}, ... {parameters_of_training_pool__n_}], "has_more": false}
+```

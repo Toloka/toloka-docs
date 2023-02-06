@@ -1,0 +1,51 @@
+---
+title: "Edit a skill | Toloka API"
+date: "2023-02-03T19:53:28.284985"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import EditSkillList1 from './edit-skill/subcomponents/edit-skill-list-1.mdx'
+import EditSkillList2 from './edit-skill/subcomponents/edit-skill-list-2.mdx'
+
+# Edit a skill
+
+<Announce/>
+
+Changes the name, comment, and access to the skill.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <EditSkillList1/> },
+  { title: 'Sandbox', value: <EditSkillList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**id** | Skill ID.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+**Content-Type** | Specifies the data format in the request body.
+
+## Request body {#body}
+
+In the request body, specify **all** [the skill parameters](/docs-new/api/create-skill#body), including those that are updated.
+
+## Response {#response}
+
+Contains updated information about the skill (see the description in the [Create a skill](/docs-new/api/create-skill#response) section).
+
+## See also {#see-also}
+
+- [Editing a skill](https://toloka.ai/en/docs/guide/concepts/nav-edit)

@@ -1,0 +1,51 @@
+---
+title: "Edit proxy server data | Toloka API"
+date: "2023-02-06T14:48:37.014632"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import HttpproxyEditTable1 from './httpproxy-edit/subcomponents/httpproxy-edit-table-1.mdx'
+import HttpproxyEditTable2 from './httpproxy-edit/subcomponents/httpproxy-edit-table-2.mdx'
+import HttpproxyEditTable3 from './httpproxy-edit/subcomponents/httpproxy-edit-table-3.mdx'
+
+# Edit proxy server data
+
+To edit the server data, log in as a requester and send an AJAX request from your browser console.
+
+## Request {#request}
+
+```js
+$.ajax({
+    url: '/api/new/requester/proxy/proxy/{id}',
+    method: 'PATCH',
+    contentType: 'application/json',
+    data: JSON.stringify({
+        "params": {
+            "accessRights": "ASSIGNMENT_PRIVATE",
+            "type": "HTTP",
+            "additionalHeaders": {},
+            "additionalQueryArgs": {},
+            "baseUrl": "example.com/some-path"
+        },
+        "name": "test-proxy"
+    )
+});
+```
+
+Parameter | Overview
+----- | -----
+**id** | **string \| required**<br/><br/>The requester's server ID.
+**accessRights** | <HttpproxyEditTable1/>
+**type** | **string \| required**<br/><br/>Data transfer protocol. Possible value: `HTTP`.
+**baseUrl** | **string \| required**<br/><br/>The requester's server URL.<br/><br/>For example, a server [named](#name) "test-proxy" is hosted at `example.com/some-path`.<br/><br/>In this case, when calling an HTTP method in Toloka at the URL `toloka.dev/api/proxy/test-proxy/test-path`, a request to the requester's server will be sent to the URL `example.com/some-path/test-path`.<br/><br/>If a method call is made within a template, [assignmentId](#assignmentId) will be added to the URL. This ensures that information about the task the request was made within is also passed to the requester's server. Example: `example.com/some-path/test-path?assignmentId=12831298712937213`.
+**name** {#name} | **string \| required**<br/><br/>The name of the requester's server. The name will be inserted in the request URL. Allowed characters in the name: Latin letters, numbers, and dashes ("-").<br/><br/>Must be unique within Toloka.<br/><br/>For example, a server named "test-proxy" can be accessed in Toloka at: `toloka.dev/api/proxy/test-proxy`.
+**additionalHeaders[]** | <HttpproxyEditTable2/>
+**additionalQueryArgs[]** | <HttpproxyEditTable3/>
+
+## Response {#response}
+
+Contains server parameters (both updated and not) in JSON format.

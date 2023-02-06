@@ -1,0 +1,49 @@
+---
+title: "Edit a project | Toloka API"
+date: "2023-02-03T19:53:26.326141"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import EditPrjList1 from './edit-prj/subcomponents/edit-prj-list-1.mdx'
+import EditPrjList2 from './edit-prj/subcomponents/edit-prj-list-2.mdx'
+
+# Edit a project
+
+<Announce/>
+
+Edits a project.
+
+In the request body, specify **all** the parameters for the project being updated. You can get the project ID from the [list of projects](/docs-new/api/get-prj-list).
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <EditPrjList1/> },
+  { title: 'Sandbox', value: <EditPrjList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**project_id** | Project ID.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+**Content-Type** | Specifies the data format in the request body.
+
+## Response {#response}
+
+Contains updated information about the project in JSON format (see the [sample project](/docs-new/api/create-prj#body)).
+
+## See also {#see-also}
+
+- [Editing a project](https://toloka.ai/en/docs/guide/concepts/edit-project)

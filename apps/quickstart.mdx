@@ -1,6 +1,6 @@
 ---
-title: "Getting started"
-date: "2021-09-20T00:00:00.000Z"
+title: "Getting started | Toloka apps"
+date: "2023-02-03T19:18:58.533109"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,16 +8,19 @@ ogDescription: ""
 docsMenu: "appsMenu"
 ---
 
+import IndexAbstractQuickstart from './subcomponents/abstract-quickstart.mdx'
+import ContactSupport from './subcomponents/contact-support.mdx'
+
 # Getting started
 
-Select the problem to solve, fill out an application form for creating a project, and upload your data: the service will configure the project for you, create a task interface, and find performers. All you have to do is run your project and get the labeling results.
+<IndexAbstractQuickstart/>
 
-## Choose a bespoke solution
+## Choose a bespoke solution {#choose-app-project}
 
 1. Open the [page](https://platform.toloka.ai/requester/templates) with examples of tasks that are available in Toloka.
 1. Choose a solution that fits your task.
 
-## Fill out a form
+## Fill out a form {#set-application}
 
 Once you choose a bespoke solution, you need to fill out a form. In the form, you'll be requested any information that is necessary to create a project: its name, instructions, sample tasks, and so on.
 
@@ -31,7 +34,7 @@ A task item is a labeling unit — in other words, data uploaded to a batch. The
 
 </Cut>
 
-## Upload task items
+## Upload task items {#new-batch}
 
 <Note mode="note" title="Note">
 
@@ -53,16 +56,16 @@ Your items are uploaded to a batch. A batch is a set of data for labeling that y
 
     - Enter the data in text format.
 
-    Each line with data is a task item. You can later view each item's status.
+      Each line with data is a task item. You can later view each item's status.
 
 1. Click **Create batch** again. Done! You created a batch.
 
-## Send the data for labeling
+## Send the data for labeling {#section_fr2_gfv_wqb}
 
 1. Wait until the project passes moderation: its status will change to **Active**.
 1. Send the batch for labeling by clicking **Launch**.
 
-## Are there any errors?
+## Are there any errors? {#errors}
 
 If there are errors in the project, its status changes to **Rejected**. No worries:
 
@@ -76,13 +79,15 @@ If you need help with setting up your project, [contact us](/docs-new/apps/suppo
 
 </Note>
 
-## What's next
+## What's next {#whats-next}
 
-[Download the labeling results](/docs-new/apps/download-results).
+- [Download the labeling results](/docs-new/apps/download-results)
 
-[Upload more items to the batch or create a new one](/docs-new/apps/add-task#edit).
+- [Upload more items to the batch or create a new one](/docs-new/apps/add-task)
 
-## Troubleshooting
+- [Rename the batch](/docs-new/apps/add-task#rename)
+
+## Troubleshooting {#troubleshooting}
 
 <Cut title="I didn't find a suitable bespoke solution">
 
@@ -90,12 +95,4 @@ If you can't find a solution that fits your goals, [contact us](/docs-new/apps/s
 
 </Cut>
 
-<Button
-  themeColor="light"
-  view="default"
-  size="l"
-  type="link"
-  url="/docs-new/apps/support"
->
-  Contact support
-</Button>
+<ContactSupport/>

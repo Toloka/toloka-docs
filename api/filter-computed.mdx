@@ -1,0 +1,63 @@
+---
+title: "Filter by computed data | Toloka API"
+date: "2023-02-03T19:53:28.682479"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import FilterComputedTable1 from './filter-computed/subcomponents/filter-computed-table-1.mdx'
+import FilterComputedTable2 from './filter-computed/subcomponents/filter-computed-table-2.mdx'
+import FilterComputedTable3 from './filter-computed/subcomponents/filter-computed-table-3.mdx'
+import FilterComputedTable4 from './filter-computed/subcomponents/filter-computed-table-4.mdx'
+import FilterComputedTable5 from './filter-computed/subcomponents/filter-computed-table-5.mdx'
+import FilterComputedTable6 from './filter-computed/subcomponents/filter-computed-table-6.mdx'
+import FilterComputedTable7 from './filter-computed/subcomponents/filter-computed-table-7.mdx'
+import FilterComputedTable8 from './filter-computed/subcomponents/filter-computed-table-8.mdx'
+
+# Filter by computed data
+
+You can use data received from or computed by Toloka to select Tolokers. For example, a device's technical characteristics or the type of client app.
+
+Define the `filter` object in the pool parameters.
+
+## Sample filter in JSON {#request-example}
+
+This example selects Tolokers with the Windows OS and Yandex Browser.
+
+```json
+{
+  "filter" : {
+    "and" : [ {
+      "operator" : "EQ",
+      "category" : "computed",
+      "key" : "os_family",
+      "value" : "WINDOWS"
+    }, {
+      "operator" : "EQ",
+      "category" : "computed",
+      "key" : "user_agent_family",
+      "value" : "YANDEX_BROWSER"
+    } ]
+  }
+}
+```
+
+## Key and value parameters {#params}
+
+Key parameter | Value description
+----- | -----
+**region_by_phone** | <FilterComputedTable1/>
+**region_by_ip** | <FilterComputedTable2/>
+**device_category** | <FilterComputedTable3/>
+**client_type** | <FilterComputedTable4/>
+**os_family** | <FilterComputedTable5/>
+**user_agent_type** | <FilterComputedTable6/>
+**user_agent_family** | <FilterComputedTable7/>
+**user_agent_version** | <FilterComputedTable8/>
+
+## See also {#see-also}
+
+- [Filters](https://toloka.ai/en/docs/guide/concepts/filters)

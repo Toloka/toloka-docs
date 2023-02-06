@@ -1,0 +1,57 @@
+---
+title: "Sorting the list of objects | Toloka API"
+date: "2023-02-03T19:53:25.811144"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+# Sorting the list of objects
+
+When you request a list of objects using the `GET` method, you can specify the parameters to sort the list by. Sorting is set in the request using the **sort** query parameter.
+
+<Note mode="note" title="Note">
+
+Lists of objects support various sorting options. For more information about the parameters, see the `GET` request description for each object.
+
+</Note>
+
+<Cut title="Toloka objects that can be sorted">
+
+- [Projects](/docs-new/api/get-prj-list)
+- [Pools](/docs-new/api/get-pool-list)
+- [Trainings](/docs-new/api/get-training-list)
+- [Subscriptions to events](/docs-new/api/get-webhook-subscriptions-list)
+- [Skills](/docs-new/api/get-skill-list)
+- [Toloker skills](/docs-new/api/get-user-skill-list)
+- [Task access bans](/docs-new/api/ban-get-list)
+- [Tasks](/docs-new/api/get-tasks-list)
+- [Task suites](/docs-new/api/get-task-suite-list)
+- [Operations](/docs-new/api/get-operations-list)
+- [Responses](/docs-new/api/result)
+- [Files in responses](/docs-new/api/get-attachment-list)
+- [Aggregated responses](/docs-new/api/get-aggregated-result)
+- [Rewards](/docs-new/api/get-bonus-list)
+- [Threads of messages to Tolokers](/docs-new/api/get-chain-list)
+
+</Cut>
+
+## Sorting direction {#direction}
+
+You can sort values in ascending or descending order.
+
+For example, when using `sort=id`, the list is sorted by identifier values in ascending order. To change the sorting direction to descending, add a hyphen before the parameter: `sort=-id`.
+
+## Sorting by multiple parameters {#plurality}
+
+When sorting, you can use one or multiple parameters at once. Simply specify them separated by a comma: `param1,param2`.
+
+<Note mode="note" title="Note">
+
+The order of parameters affects the sorting sequence.
+
+</Note>
+
+For example, when using `sort=param1,param2`, the list is sorted in ascending order by the `param1` values first, and then by the `param2` values. To change the sorting sequence, switch the parameters around: `sort=param2,param1`.

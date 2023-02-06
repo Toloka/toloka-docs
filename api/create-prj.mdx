@@ -1,0 +1,219 @@
+---
+title: "Create a project | Toloka API"
+date: "2023-02-03T19:53:29.473380"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import CreatePrjList1 from './create-prj/subcomponents/create-prj-list-1.mdx'
+import CreatePrjList2 from './create-prj/subcomponents/create-prj-list-2.mdx'
+import CreatePrjTable1 from './create-prj/subcomponents/create-prj-table-1.mdx'
+import CreatePrjTable2 from './create-prj/subcomponents/create-prj-table-2.mdx'
+import CreatePrjTable3 from './create-prj/subcomponents/create-prj-table-3.mdx'
+import CreatePrjTable4 from './create-prj/subcomponents/create-prj-table-4.mdx'
+import CreatePrjTable5 from './create-prj/subcomponents/create-prj-table-5.mdx'
+import CreatePrjTable6 from './create-prj/subcomponents/create-prj-table-6.mdx'
+import CreatePrjTable7 from './create-prj/subcomponents/create-prj-table-7.mdx'
+import CreatePrjTable8 from './create-prj/subcomponents/create-prj-table-8.mdx'
+import CreatePrjTable9 from './create-prj/subcomponents/create-prj-table-9.mdx'
+import CreatePrjTable10 from './create-prj/subcomponents/create-prj-table-10.mdx'
+import CreatePrjTable11 from './create-prj/subcomponents/create-prj-table-11.mdx'
+import CreatePrjTable12 from './create-prj/subcomponents/create-prj-table-12.mdx'
+import CreatePrjTable13 from './create-prj/subcomponents/create-prj-table-13.mdx'
+import CreatePrjTable14 from './create-prj/subcomponents/create-prj-table-14.mdx'
+import CreatePrjTable15 from './create-prj/subcomponents/create-prj-table-15.mdx'
+
+# Create a project
+
+<Announce/>
+
+Creates a project.
+
+<Note mode="restriction" title="Restriction">
+
+You can send a maximum of 20 requests of this kind per minute and a maximum of 100 requests per day.
+
+</Note>
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <CreatePrjList1/> },
+  { title: 'Sandbox', value: <CreatePrjList2/> },
+]}/>
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+**Content-Type** | Specifies the data format in the request body.
+
+## Request body {#body}
+
+```json
+{
+  "public_name": "Image classification",
+  "public_description": "Look at the picture and determine the category of shoes",
+  "public_instructions": "<div> In this task you will see images of different shoes.<br /><br />  You need to determine their category.<br /><br />  To complete the task faster, use the hotkeys 1, 2, 3, and arrows, if you are performing the task on a desktop computer or laptop.<br /><br />  How to complete the task: <ol><li>Look carefully at the image.</li><li>Click the <strong>Rotate</strong> button if you need to turn the picture, it can be on one side or upside down.</li><li>Choose one of the answer options. If the image doesn&#39;t correspond to any of the categories press <strong>Other</strong>.</li><li>Skip the tasks if the image doesn’t load or loads only partly.</li></ol> </div>",
+  "task_spec": {
+    "input_spec": {
+      "image": {
+        "type": "url",
+        "required": true,
+        "hidden": false
+      }
+    },
+    "output_spec": {
+      "result": {
+        "type": "string",
+        "required": true,
+        "hidden": false,
+        "allowed_values": [
+          "boots",
+          "sneakers",
+          "other"
+        ]
+      }
+    },
+    "view_spec": {
+      "type": "tb",
+      "settings": {
+        "showSubmit": true,
+        "showSkip": true,
+        "showFinish": true,
+        "showTimer": true,
+        "showTitle": true,
+        "permissions": [],
+        "showMessage": true,
+        "showReward": true,
+        "showFullscreen": true,
+        "showInstructions": true
+      },
+      "config": {...},
+      "lock": {
+        "core": "1.13.1",
+        "view.list": "1.2.0",
+        "action.set": "1.0.8",
+        "view.image": "1.4.0",
+        "plugin.toloka": "1.1.8",
+        "plugin.hotkeys": "1.3.0",
+        "condition.required": "1.1.6",
+        "field.button-radio-group": "1.3.1"
+      },
+      "localization_Config": {
+        "keys": []
+      }
+    }
+  },
+  "assignments_issuing_type": "AUTOMATED"
+}
+```
+
+Parameter | Overview
+----- | -----
+**public_name** | **string \| required**<br/><br/>Name of the project. It will be shown to Tolokers.
+**public_description** | **string \| required**<br/><br/>Description of the project. It will be shown to Tolokers.
+**task_spec** | **object \| required**<br/><br/>Parameters for input and output data and the task interface.
+**task_spec.input_spec** | **object \| required**<br/><br/>The input data parameters for tasks. The complete list of parameters is shown in the [Input and output data](#in-out) table.
+**task_spec.output_spec** | **object \| required**<br/><br/>Parameters for output data from the input fields. The complete list of parameters is shown in the [Input and output data](#in-out) table.
+**task_spec.view_spec** | **object**<br/><br/>Description of the task interface. The complete list of parameters is shown in the [Task interface](#view-spec-section) table.
+**assignments_issuing_view_config** | **string \| required if**<br/><br/>Required if `assignments_issuing_type=MAP_SELECTOR`.<br/><br/>Settings for displaying field tasks. For a complete list of parameters, see [Settings for displaying field tasks](#assignments-issuing-view-config-section).
+**public_instructions** | **string**<br/><br/>Instructions for completing the task. You can use any HTML markup in the instructions.
+**private_comment** | **string**<br/><br/>Comments that are only visible to the requester.
+**assignments_issuing_type** | <CreatePrjTable1/>
+**assignments_issuing_view_config.map_provider** | <CreatePrjTable2/>
+**assignments_automerge_enabled** | **boolean**<br/><br/>Resolve [merging identical tasks](/docs-new/api/tasks#task-merge) in the project. The default value is `false`.
+**max_active_assignments_count** | **integer**<br/><br/>The number of task suites the Toloker can complete simultaneously ("Active" status).
+**quality_control** | **object**<br/><br/>The quality control rule.
+**quality_control.configs[]** | **array of objects**<br/><br/>[Presets](/docs-new/api/quality-control)
+**localization_config** | **object**<br/><br/>Block of translations to other languages. The complete list of parameters is shown in the [Translations to other languages](#localization-config-section) table.<br/><br/>For more information about translation, see [Translations to other languages](https://toloka.ai/en/docs/guide/concepts/project-languages).
+
+## Input and output data (input_spec and output_spec) {#in-out}
+
+The `input_spec` and `output_spec` parameters contain JSON with the input data properties and response validation parameters. Use them to define the data type (string, integer, URL, and so on) and specify validation parameters (such as the string length).
+
+Parameter | Overview
+----- | -----
+**<ID\>** | <CreatePrjTable3/>
+**type** | <CreatePrjTable4/>
+**required** | **boolean**<br/><br/>Whether the object or input field is required. The default value is `true`.
+**hidden** | **boolean**<br/><br/>Whether to hide field with the input value from the Toloker or not. The default value is `false`.<br/><br/>For output data, always `false`.
+**min_value** | **float**<br/><br/>Minimum value of the number.
+**max_value** | **float**<br/><br/>Maximum value of the number.
+**allowed_values[]** | **array of strings, array of integers, array of floats**<br/><br/>Allowed values.<br/><br/>Setting acceptable values improves the quality of [response aggregation](/docs-new/api/aggregated-solutions).
+**min_length** | **integer**<br/><br/>Minimum length of the string.
+**max_length** | **integer**<br/><br/>Maximum length of the string.
+**current_location** | **string**<br/><br/>Only for output data of the `coordinates` type: populate the field with the Toloker's current coordinates in the field (`true`/`false`). Used in tasks for the mobile app.
+
+## Task interface (view_spec) {#view-spec-section}
+
+Parameter | Overview
+----- | -----
+**markup** | **string**<br/><br/>HTML markup of the task.<br/><br/>For more information, see the [HTML block](https://toloka.ai/en/docs/guide/concepts/spec#html) section.
+**script** | **string**<br/><br/>JavaScript code of the task.<br/><br/>For more information, see the [JavaScript block](https://toloka.ai/en/docs/guide/concepts/spec#js) section.
+**styles** | **string**<br/><br/>CSS styles of the task.<br/><br/>For more information, see the [CSS block](https://toloka.ai/en/docs/guide/concepts/spec#css) section.
+**settings** | **object \| required**<br/><br/>Whether to display standard UI elements in the task.
+**config[]** | **array of objects**<br/><br/>[Configuration for Template Builder](/docs-new/api/tb-config)
+**assets** | <CreatePrjTable5/>
+**assets.script_urls[]** | <CreatePrjTable6/>
+**assets.style_urls[]** | **array of strings**<br/><br/>Links to CSS libraries.
+**type** | <CreatePrjTable7/>
+**localizationConfig** | **object**<br/><br/>Editor configuration.<br/><br/>In the Template Builder, add to this field the keys for the properties of text components that you need to translate into other languages.<br/><br/>For more information, see [Translating the task interface](https://toloka.ai/en/docs/guide/concepts/project-languages#project-languages__interface-translate).
+**localizationConfig.keys** | <CreatePrjTable15/>
+**settings.showTimer** | **boolean**<br/><br/>Show the timer. The default value is `true`.
+**settings.showTitle** | **boolean**<br/><br/>Show the project name in task titles. The default value is `true`.
+**settings.showInstructions** | **boolean**<br/><br/>Show the **Instructions** button. The default value is `true`.
+**settings.showFullscreen** | **boolean**<br/><br/>Show the **Expand to fullscreen** button. The default value is `true`.
+**settings.showSubmit** | **boolean**<br/><br/>Show the **Next** button. The default value is `true`.
+**settings.showSkip** | **boolean**<br/><br/>Show the **Skip** button. The default value is `true`.
+**settings.showFinish** | **boolean**<br/><br/>Show the **Back to main page** button. The default value is `true`.
+**settings.showMessage** | **boolean**<br/><br/>Show the **Message for the requester** button. The default value is `true`.
+**settings.showReward** | **boolean**<br/><br/>Show the price per task suite. The default value is `true`.
+
+## Settings for displaying field tasks (assignments_issuing_view_config) {#assignments-issuing-view-config-section}
+
+Parameter | Overview
+----- | -----
+**title_template** | **string \| required if**<br/><br/>Required if `assignments_issuing_type=MAP_SELECTOR`.<br/><br/>Name of the task. Tolokers will see it in the task preview.
+**description_template** | **string \| required if**<br/><br/>Required if `assignments_issuing_type=MAP_SELECTOR`.<br/><br/>A description of the task. Tolokers will see it in the task preview.
+**map_provider** | <CreatePrjTable8/>
+
+## Translations to other languages (localization_config) {#localization-config-section}
+
+Parameter | Overview
+----- | -----
+**default_language** | **string**<br/><br/>The source language used in the fields [public_name](#public_name), [public_description](#public_description), and [public_instructions](#public_instructions).
+**additional_languages[]** | **array of objects**<br/><br/>Array of target languages.
+**additional_languages[]. language** | **string**<br/><br/>Target language.
+**additional_languages[]. public_name** | <CreatePrjTable9/>
+**additional_languages[]. public_description** | <CreatePrjTable10/>
+**additional_languages[]. public_instructions** | <CreatePrjTable11/>
+**additional_languages[]. tb_view_spec** | **object**<br/><br/>Translating the task interface.
+**additional_languages[]. tb_view_spec.keys[]** | <CreatePrjTable12/>
+
+## Response {#response}
+
+Contains information about the uploaded project in JSON format. The project is automatically assigned an ID.
+
+It includes:
+
+- [Parameters that are used when creating a project](#prj-param).
+- Parameters that are assigned automatically.
+
+Parameter | Overview
+----- | -----
+**owner** | **object**<br/><br/>Parameters of the requester that created the project
+**owner.id** | **string**<br/><br/>Parameters to sort by:
+**owner.myself** | <CreatePrjTable13/>
+**id** | **string**<br/><br/>Project ID (assigned automatically).
+**status** | <CreatePrjTable14/>
+**created** | **string**<br/><br/>The UTC date and time the project was created, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+
+## See also {#see-also}
+
+- [Create a project](https://toloka.ai/en/docs/guide/concepts/project)

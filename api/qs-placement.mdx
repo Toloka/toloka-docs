@@ -1,0 +1,150 @@
+---
+title: "Posting tasks | Toloka API"
+date: "2023-02-03T19:53:31.406572"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import QsPlacementList1 from './qs-placement/subcomponents/qs-placement-list-1.mdx'
+import QsPlacementList2 from './qs-placement/subcomponents/qs-placement-list-2.mdx'
+import QsPlacementList3 from './qs-placement/subcomponents/qs-placement-list-3.mdx'
+import QsPlacementList4 from './qs-placement/subcomponents/qs-placement-list-4.mdx'
+import QsPlacementList5 from './qs-placement/subcomponents/qs-placement-list-5.mdx'
+import QsPlacementList6 from './qs-placement/subcomponents/qs-placement-list-6.mdx'
+import QsPlacementList7 from './qs-placement/subcomponents/qs-placement-list-7.mdx'
+import QsPlacementList8 from './qs-placement/subcomponents/qs-placement-list-8.mdx'
+import QsPlacementList9 from './qs-placement/subcomponents/qs-placement-list-9.mdx'
+import QsPlacementList10 from './qs-placement/subcomponents/qs-placement-list-10.mdx'
+
+# Posting tasks
+
+<Announce/>
+
+## Before you start {#start}
+
+Choose a platform to get an OAuth token:
+
+<Tabs tabs={[
+  { title: 'Sandbox', value: <QsPlacementList1/> },
+  { title: 'Production version', value: <QsPlacementList2/> },
+]}/>
+
+## Create a project {#project}
+
+### Request {#project-request}
+
+Use the `POST /api/v1/projects` method:
+
+<Tabs tabs={[
+  { title: 'cURL', value: <QsPlacementList3/> },
+  { title: 'Postman', value: <QsPlacementList4/> },
+]}/>
+
+The example shows the basic parameters that are necessary to create a simple project. For a more detailed description of all request parameters, see [Create a project](/docs-new/api/create-prj).
+
+### Response {#project-response}
+
+In response to the  request, you will receive a JSON object for the created project. This object contains the project `id`.
+
+```json
+{
+  "id": "12345",
+  "public_name": "Categories of shoes",
+  "public_description": "Look at the picture and determine the category of shoes",
+  ...
+}
+```
+
+<Note mode="note" title="Note">
+
+You'll need the `id` to create pools in the project: specify it in the add pool request.
+
+</Note>
+
+## Add a pool {#pool}
+
+### Request {#pool-post}
+
+In the given code example, substitute the parameter values:
+
+- In the `project_id` parameter, replace `<project id>` with the ID of the project that the pool was created for (the ID received in response to the add project request).
+- In `will_expire`, replace `<close date>` with the UTC date and time in the ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`, specifying when the pool needs to be closed even if some task suites are not completed.
+
+Next, send a POST request to `/api/v1/pools`:
+
+<Tabs tabs={[
+  { title: 'cURL', value: <QsPlacementList5/> },
+  { title: 'Postman', value: <QsPlacementList6/> },
+]}/>
+
+The example shows the basic parameters that are necessary to create a simple pool. For a more detailed description of all request parameters, see [Create a pool](/docs-new/api/create-pool).
+
+### Response {#pool-response}
+
+In response to the  request, you will receive a JSON object for the created pool. This object contains the pool `id`.
+
+```json
+{
+  "id": "9876543",
+  "project_id": "12345",
+  "private_name": "Shoes pool 1",
+  ...
+}
+```
+
+<Note mode="note" title="Note">
+
+You'll need the `id` to add tasks to the pool: specify it in the upload tasks request.
+
+</Note>
+
+## Upload tasks {#task}
+
+### Request {#tasks-post}
+
+In the given code example, substitute the parameter values:
+
+- In `input_values`, replace `<proxy name>`/`<folder name>`/`<file name N>.<type>` with specific values for the input data set in the project's `input_spec` parameter (in this example, these are paths to the images for labeling; place the image files on Yandex Disk and add it as a data source proxy).
+- In the `pool_id` parameter, replace `<pool id>` with the ID of the pool to upload the task to (the ID received in response to the add pool request).
+
+Next, send a POST request to `/api/v1/tasks`:
+
+<Tabs tabs={[
+  { title: 'cURL', value: <QsPlacementList7/> },
+  { title: 'Postman', value: <QsPlacementList8/> },
+]}/>
+
+The example shows the basic parameters that are necessary to upload simple tasks. For a more detailed description of each task parameter, see [Create one or multiple tasks](/docs-new/api/create-task).
+
+## Start the pool {#pool-run}
+
+### Before starting the pool {#pool-run-before}
+
+Before you start the pool, go to the Toloka interface, select the pool, click **Preview**, and check that the tasks are displayed properly.
+
+### Request {#pool-run-request}
+
+In the `<pool_id>` path parameter, insert the ID of the pool to start (the ID received in response to the add pool request) and use the `POST` method:
+
+<Tabs tabs={[
+  { title: 'cURL', value: <QsPlacementList9/> },
+  { title: 'Postman', value: <QsPlacementList10/> },
+]}/>
+
+## Check the tasks {#check}
+
+After starting the pool, make sure all the settings are correct and the tasks are displayed properly. To do this, log in to Toloka under the Toloker's username and open the card with the created tasks.
+
+## What's next {#what-next}
+
+Read the [instructions on how to get results](/docs-new/api/qs-results).
+
+## Learn more {#links-qs-placement}
+
+- [HTTP methods for working with projects](/docs-new/api/project)
+- [HTTP methods for working with pools](/docs-new/api/pool)
+- [HTTP methods for uploading tasks](/docs-new/api/tasks)

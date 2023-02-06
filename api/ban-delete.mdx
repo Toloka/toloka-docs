@@ -1,0 +1,38 @@
+---
+title: "Unblock access | Toloka API"
+date: "2023-02-03T19:53:32.202197"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import BanDeleteList1 from './ban-delete/subcomponents/ban-delete-list-1.mdx'
+import BanDeleteList2 from './ban-delete/subcomponents/ban-delete-list-2.mdx'
+
+# Unblock access
+
+<Announce/>
+
+Removes a ban.
+
+## Request {#query-params}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <BanDeleteList1/> },
+  { title: 'Sandbox', value: <BanDeleteList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**ban_id** | ID of the ban.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.

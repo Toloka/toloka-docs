@@ -1,0 +1,79 @@
+---
+title: "Open a pool | Toloka API"
+date: "2023-02-03T19:53:24.847298"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import OpenPoolList1 from './open-pool/subcomponents/open-pool-list-1.mdx'
+import OpenPoolList2 from './open-pool/subcomponents/open-pool-list-2.mdx'
+import OpenPoolTable1 from './open-pool/subcomponents/open-pool-table-1.mdx'
+
+# Open a pool
+
+<Announce/>
+
+Opens a pool.
+
+Training tasks will be available to Tolokers only if a training pool is open.
+
+An operation is created when you send a request. To track the progress of the operation, send a request to the `/operations` resource.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <OpenPoolList1/> },
+  { title: 'Sandbox', value: <OpenPoolList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**pool_id** | Pool ID.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Response {#response}
+
+<Note mode="note" title="Note">
+
+If the pool is already open, an empty response with status `204` is returned.
+
+If the pool cannot be opened, a response is returned with an error description and the status `409`.
+
+</Note>
+
+```json
+{
+  "id": "fadfe3jk-fdafue2-fda32890-fdafdi23",
+  "type": "POOL.OPEN",
+  "status": "PENDING",
+  "submitted": "2015-22-12T14:18:35",
+  "started" : "2016-04-07T16:06:15.902",
+  "finished" : "2016-04-07T16:06:15.902",
+  "progress" : 100,
+  "parameters": {
+    "pool_id": "21"
+  }
+}
+```
+
+Parameter | Overview
+----- | -----
+**id** | **string**<br/><br/>Operation ID.
+**type** | **string**<br/><br/>Type of operation: `POOL.OPEN` — Opening a pool.
+**status** | <OpenPoolTable1/>
+**submitted** | **string**<br/><br/>The UTC date and time the request was sent, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**started** | **string**<br/><br/>The UTC date and time the operation started, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**finished** | **string**<br/><br/>The UTC date and time the operation was completed, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**progress** | **integer**<br/><br/>The percentage of the operation completed.
+**parameters.pool_id** | **string**<br/><br/>Pool ID.

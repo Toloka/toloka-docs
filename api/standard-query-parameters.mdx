@@ -1,0 +1,74 @@
+---
+title: "Standard query parameters | Toloka API"
+date: "2023-02-03T19:53:31.106266"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+# Standard query parameters
+
+Parameter | Overview
+----- | -----
+**limit** | **integer**<br/><br/>Limit on the number of results to return. By default — 50; maximum — 300.
+**id_gt** | **string**<br/><br/>Objects with an ID greater than the specified value.
+**id_gte** | **string**<br/><br/>Objects with an ID greater than or equal to the specified value.
+**id_lt** | **string**<br/><br/>Objects with an ID less than the specified value.
+**id_lte** | **string**<br/><br/>Objects with an ID less than or equal to the specified value.
+**overlap_gt** | **integer**<br/><br/>Objects with an overlap greater than the specified value.
+**overlap_gte** | **integer**<br/><br/>Objects with an overlap greater than or equal to the specified value.
+**overlap_lt** | **integer**<br/><br/>Objects with an overlap less than the specified value.
+**overlap_lte** | **integer**<br/><br/>Objects with an overlap less than or equal to the specified value.
+**task_id_gt** | **string**<br/><br/>Tasks with an ID greater than the specified value.
+**task_id_gte** | **string**<br/><br/>Tasks with an ID greater than or equal to the specified value.
+**task_id_lt** | **string**<br/><br/>Tasks with an ID less than the specified value.
+**task_id_lte** | **string**<br/><br/>Tasks with an ID less than or equal to the specified value.
+
+## Parameters with a date {#date-parameters}
+
+<Note mode="note" title="Note">
+
+The date is specified in UTC in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+
+</Note>
+
+Parameter | Overview
+----- | -----
+**created_gt** | **string**<br/><br/>Objects issued or created after the specified date.
+**created_gte** | **string**<br/><br/>Objects issued or created on or after the specified date.
+**created_lt** | **string**<br/><br/>Objects issued or created before the specified date.
+**created_lte** | **string**<br/><br/>Objects issued or created on or before the specified date.
+**last_started_gt** | **string**<br/><br/>Objects that were last opened after the specified date.
+**last_started_gte** | **string**<br/><br/>Objects that were last opened on or after the specified date.
+**last_started_lt** | **string**<br/><br/>Objects that were last opened before the specified date.
+**last_started_lte** | **string**<br/><br/>Objects that were last opened on or before the specified date.
+**modified_gt** | **string**<br/><br/>Objects modified after the specified date.
+**modified_gte** | **string**<br/><br/>Objects modified on or after the specified date.
+**modified_lt** | **string**<br/><br/>Objects modified before the specified date.
+**modified_lte** | **string**<br/><br/>Objects modified on or before the specified date.
+**submitted_gt** | **string**<br/><br/>Objects issued or created after the specified date.
+**submitted_gte** | **string**<br/><br/>Objects issued or created on or after the specified date.
+**submitted_lt** | **string**<br/><br/>Objects issued or created before the specified date.
+**submitted_lte** | **string**<br/><br/>Objects issued or created on or before the specified date.
+**finished_gt** | **string**<br/><br/>Objects completed after the specified date.
+**finished_gte** | **string**<br/><br/>Objects completed after or on the specified date.
+**finished_lt** | **string**<br/><br/>Objects completed before the specified date.
+**finished_lte** | **string**<br/><br/>Objects completed on or before the specified date.
+**accepted_gt** | **string**<br/><br/>Objects accepted by the requester after the specified date.
+**accepted_gte** | **string**<br/><br/>Objects accepted by the requester after or on the specified date.
+**accepted_lt** | **string**<br/><br/>Objects accepted by the requester before the specified date.
+**accepted_lte** | **string**<br/><br/>Objects accepted by the requester before or on the specified date.
+**rejected_gt** | **string**<br/><br/>Objects rejected by the requester after the specified date.
+**rejected_gte** | **string**<br/><br/>Objects rejected by the requester after or on the specified date.
+**rejected_lt** | **string**<br/><br/>Objects rejected by the requester before the specified date.
+**rejected_lte** | **string**<br/><br/>Objects rejected by the requester before or on the specified date.
+**skipped_gt** | **string**<br/><br/>Objects skipped after the specified date.
+**skipped_gte** | **string**<br/><br/>Objects skipped after or on the specified date.
+**skipped_lt** | **string**<br/><br/>Objects skipped before the specified date.
+**skipped_lte** | **string**<br/><br/>Objects skipped before or on the specified date.
+**expired_gt** | **string**<br/><br/>Objects that expire after the specified date.
+**expired_gte** | **string**<br/><br/>Objects that expire after or on the specified date.
+**expired_lt** | **string**<br/><br/>Objects that expire before the specified date.
+**expired_lte** | **string**<br/><br/>Objects that expire before or on the specified date.

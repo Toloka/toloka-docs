@@ -1,0 +1,42 @@
+Fill in the fields:
+
+1. Request URL
+
+    ```bash
+    https://sandbox.toloka.dev/api/v1/tasks
+    ```
+
+1. Headers
+
+    ```bash
+    Authorization: OAuth <OAuth token>
+    Content-Type: application/JSON
+    ```
+
+1. Body
+
+    ```json
+    [
+      {
+        "input_values": {
+          "image": "https://sandbox.toloka.dev/api/proxy/<proxy name>/<folder name>/<file name 1>.<type>"
+        },
+        "pool_id": "<pool id>",
+        "overlap": 2
+      },
+      {
+        "input_values": {
+          "image": "https://sandbox.toloka.dev/api/proxy/<proxy name>/<folder name>/<file name 2>.<type>"
+        },
+        "pool_id": "<pool id>",
+        "overlap": 2
+      },
+      {
+        "input_values": {
+          "image": "https://sandbox.toloka.dev/api/proxy/<proxy name>/<folder name>/<file name 3>.<type>"
+        },
+        "pool_id": "<pool id>",
+        "overlap": 2
+      }
+    ]
+    ```

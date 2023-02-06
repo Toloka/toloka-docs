@@ -1,6 +1,6 @@
 ---
-title: "Uploading task items"
-date: "2021-09-20T00:00:00.000Z"
+title: "Uploading task items | Toloka apps"
+date: "2023-02-03T19:18:58.463510"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,16 +8,16 @@ ogDescription: ""
 docsMenu: "appsMenu"
 ---
 
-import TolokaAppsQueue from './add-task/subcomponents/queue.mdx'
-import TolokaAppsTemplate from './add-task/subcomponents/template.mdx'
-import TolokaAppsUploadData from './add-task/subcomponents/upload-data.mdx'
-import EditIcon from './add-task/subcomponents/edit-icon.tsx';
+import TolokaAppsQueue from './subcomponents/queue.mdx'
+import TolokaAppsTemplate from './subcomponents/template.mdx'
+import TolokaAppsUploadData from './subcomponents/upload-data.mdx'
+import ContactSupport from './subcomponents/contact-support.mdx'
 
 # Uploading task items
 
 You can add data to a bespoke project with the **Active** or **Pending** status.
 
-## Creating a new batch
+## Creating a new batch {#new-batch}
 
 1. Open the project.
 
@@ -39,7 +39,7 @@ You can add data to a bespoke project with the **Active** or **Pending** status.
 
 1. Click **Create batch**.
 
-## Adding items to an existing batch
+## Adding items to an existing batch {#edit}
 
 1. Open the project and go to the appropriate batch.
 
@@ -59,20 +59,19 @@ You can add data to a bespoke project with the **Active** or **Pending** status.
 
 1. Click **Upload**.
 
-
-## Renaming an existing batch
+## Renaming an existing batch {#rename}
 
 1. Open the project and go to the appropriate batch.
 
-1. Next to the batch name, click <EditIcon />.
+1. Next to the batch name, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425164853/1675425164853_original_svg.svg" alt="Rename" />.
 
 1. Enter a new batch name and click **Save**.
 
-## What's next
+## What's next {#whats-next}
 
 Wait until the labeling is done and [download the results](/docs-new/apps/download-results).
 
-## Troubleshooting
+## Troubleshooting {#troubleshooting}
 
 <Cut title="What should I add to a batch?">
 
@@ -80,7 +79,7 @@ Batches are datasets that need to be labeled. Add to batches TSV files with IDs 
 
 Example of filling in a TSV file:
 
-```plaintext
+```
 id  image_url
 1   https://yastat.net/s3/tb/static/file-examples/special/street.jpg
 ```
@@ -93,12 +92,4 @@ Yes. You can add task items to projects in the **Active** or **Pending** status.
 
 </Cut>
 
-<Button
-  themeColor="light"
-  view="default"
-  size="l"
-  type="link"
-  url="/docs-new/apps/support"
->
-  Contact support
-</Button>
+<ContactSupport/>

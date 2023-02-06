@@ -1,0 +1,23 @@
+---
+title: "Overview | Toloka API"
+date: "2023-02-03T19:53:24.172769"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+# Overview
+
+Some API requests (opening and closing a pool, archiving a pool or project, loading task suites, issuing rewards) are processed as asynchronous operations that run in the background. Operation details (for example, status and creation time) are passed in JSON format.
+
+You can use the API for tracking operation progress.
+
+## Methods {#methods}
+
+Method | Endpoint | Overview
+----- | ----- | -----
+GET | [/operations](/docs-new/api/get-operations-list) | Gets the list of operations.
+GET | [/operations/<operation_id>](/docs-new/api/get-operation) | Gets operation details.
+GET | [/operations/<operation_id>/log](/docs-new/api/get-operation-log) | Gets the operation log.

@@ -1,0 +1,30 @@
+import CreateTaskTable8 from './create-task-table-8.mdx'
+import CreateTaskTable9 from './create-task-table-9.mdx'
+import CreateTaskTable10 from './create-task-table-10.mdx'
+
+```json
+{
+  "id": "2ed92b7f-75c0-4771-ae2f-3911232d6d4e",
+  "type": "TASK.BATCH_CREATE",
+  "status": "RUNNING",
+  "submitted": "2020-12-23T16:26:20.131",
+  "progress": 0,
+  "parameters": {
+    "open_pool": false,
+    "allow_defaults": false,
+    "skip_invalid_items": false
+  }
+}
+```
+
+Parameter | Overview
+----- | -----
+**id** | **string**<br/><br/>  Operation ID.
+**type** | **string**<br/><br/>  Type of operation: `TASK.BATCH_CREATE` — Creating multiple tasks.
+**status** | <CreateTaskTable8/>
+**submitted** | **string**<br/><br/>  The UTC date and time the request was sent, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**progress** | **integer**<br/><br/>  The percentage of the operation completed.
+**parameters** | **object**<br/><br/>  Operation parameters (depending on the operation type).
+**parameters.open_pool** | **boolean**<br/><br/>  Open the pool immediately after creating the tasks, if the pool is closed. The default value is `false`.
+**parameters.allow_defaults** | <CreateTaskTable9/>
+**parameters.skip_invalid_items** | <CreateTaskTable10/>

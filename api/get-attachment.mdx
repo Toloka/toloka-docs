@@ -1,0 +1,69 @@
+---
+title: "Get file metadata | Toloka API"
+date: "2023-02-03T19:53:25.155308"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import GetAttachmentList1 from './get-attachment/subcomponents/get-attachment-list-1.mdx'
+import GetAttachmentList2 from './get-attachment/subcomponents/get-attachment-list-2.mdx'
+
+# Get file metadata
+
+<Announce/>
+
+Gets the properties of a file attached to a task response.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetAttachmentList1/> },
+  { title: 'Sandbox', value: <GetAttachmentList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**file_id** | File ID.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Response {#response}
+
+Information about a file.
+
+```json
+{
+  "id" : "0983459b-e26f-42f3-a5fd-6e3feee913e7",
+  "attachment_type" : "ASSIGNMENT_ATTACHMENT",
+  "name" : "ExampleAttachment.txt",
+  "details" : {
+    "user_id" : "ae1d5431cfc59e25b4abbbe75666d59b",
+    "assignment_id" : "5241f238-6640-43e4-80bb-3283893cd221",
+    "pool_id" : "154"
+  },
+  "created" : "2016-05-25T16:14:27.748",
+  "media_type" : "application/octet-stream"
+}
+```
+
+Parameter | Overview
+----- | -----
+**id** | **string**<br/><br/>File ID.
+**attachment_type** | **string**<br/><br/>Attachment type. Currently the key can have only one value — `ASSIGNMENT_ATTACHMENT`.
+**name** | **string**<br/><br/>File name.
+**details** | **object**<br/><br/>Infomation about the pool, the task, and the Toloker who uploaded the file.
+**details.user_id** | **string**<br/><br/>ID of the Toloker who uploaded the file.
+**details.assignment_id** | **string**<br/><br/>ID of the task suite assignment to a Toloker.
+**details.pool_id** | **string**<br/><br/>Pool ID.
+**created** | **string**<br/><br/>The date when the file was uploaded to Toloka.
+**media_type** | **string**<br/><br/>MIME type of the data.

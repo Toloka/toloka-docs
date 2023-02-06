@@ -1,0 +1,42 @@
+---
+title: "Delete a subscription | Toloka API"
+date: "2023-02-03T19:53:30.230735"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import DeleteWebhookSubscriptionsList1 from './delete-webhook-subscriptions/subcomponents/delete-webhook-subscriptions-list-1.mdx'
+import DeleteWebhookSubscriptionsList2 from './delete-webhook-subscriptions/subcomponents/delete-webhook-subscriptions-list-2.mdx'
+
+# Delete a subscription
+
+<Announce/>
+
+Deletes a subscription.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <DeleteWebhookSubscriptionsList1/> },
+  { title: 'Sandbox', value: <DeleteWebhookSubscriptionsList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**subscription_id** | ID of the subscription.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Response {#response}
+
+If the request is successful, the server returns the `204 No Content` or `404 Not Found` HTTP operation status.

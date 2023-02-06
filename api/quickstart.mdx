@@ -1,0 +1,47 @@
+---
+title: "Overview | Toloka API"
+date: "2023-02-03T19:53:25.577217"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+# Overview
+
+<Note mode="note" title="Note">
+
+To better understand how Toloka works, first try setting up tasks in the Toloka interface using the [documentation](https://toloka.ai/en/docs/guide/concepts/main-steps) and then proceed to setting them up in the API.
+
+</Note>
+
+For example, create a project with tasks where Tolokers will determine the type of shoes.
+
+<Cut title="Sample result">
+
+<Image width="390px" withBackground imageId="1675427156187" alt="Sample result" />
+
+</Cut>
+
+The sample project described under "Quick start" is for the sandbox. To set up tasks in the Toloka production version, change the [resource URL](/docs-new/api/access#urls) and [OAuth token](/docs-new/api/access#token) in all requests.
+
+## Steps to follow {#algorithm}
+
+1. Post your tasks.
+
+    - [Choose a platform and get a token](./qs-placement#start).
+    - [Create a project](./qs-placement#project) (`POST /api/v1/projects`).
+    - [Add a pool](./qs-placement#pool) (`POST /api/v1/pools`).
+    - [Upload the tasks](./qs-placement#task) (`POST /api/v1/tasks`).
+    - [Start (open) the pool](./qs-placement#pool-run) (`POST /api/v1/pools/<pool_id>/open`).
+    - [Check the tasks from the Toloker's interface](./qs-placement#check).
+
+1. Get the required results after the tasks are completed by the Tolokers.
+
+    - [Get responses](/docs-new/api/qs-results) (`GET /api/v1/assignments?pool_id=<pool_id>`).
+    - [Download attachments](/docs-new/api/get-attachment-list) (`GET /api/v1/attachments`).
+
+## What's next {#what-next}
+
+Read the [instructions on how to post tasks](./qs-placement).
