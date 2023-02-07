@@ -1,0 +1,42 @@
+---
+title: "Download file | Toloka API"
+date: "2023-02-03T19:53:25.971013"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import DownloadAttachmentList1 from './download-attachment/subcomponents/download-attachment-list-1.mdx'
+import DownloadAttachmentList2 from './download-attachment/subcomponents/download-attachment-list-2.mdx'
+
+# Download file
+
+<Announce/>
+
+Downloads a file attached to a task response.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <DownloadAttachmentList1/> },
+  { title: 'Sandbox', value: <DownloadAttachmentList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**file_id** | File ID.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Response {#response}
+
+The file is saved to your computer.

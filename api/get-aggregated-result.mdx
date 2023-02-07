@@ -1,0 +1,81 @@
+---
+title: "Get aggregate responses | Toloka API"
+date: "2023-02-03T19:53:25.449145"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import GetAggregatedResultList1 from './get-aggregated-result/subcomponents/get-aggregated-result-list-1.mdx'
+import GetAggregatedResultList2 from './get-aggregated-result/subcomponents/get-aggregated-result-list-2.mdx'
+import GetAggregatedResultTable1 from './get-aggregated-result/subcomponents/get-aggregated-result-table-1.mdx'
+import GetAggregatedResultList3 from './get-aggregated-result/subcomponents/get-aggregated-result-list-3.mdx'
+import GetAggregatedResultList4 from './get-aggregated-result/subcomponents/get-aggregated-result-list-4.mdx'
+import GetAggregatedResultList5 from './get-aggregated-result/subcomponents/get-aggregated-result-list-5.mdx'
+import GetAggregatedResultList6 from './get-aggregated-result/subcomponents/get-aggregated-result-list-6.mdx'
+
+# Get aggregate responses
+
+<Announce/>
+
+Gets aggregated responses.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetAggregatedResultList1/> },
+  { title: 'Sandbox', value: <GetAggregatedResultList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**operation_id** | Operation ID.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Query parameters {#query-params}
+
+Specified in the link after the question mark; separated by `&`.
+
+Parameter | Overview
+----- | -----
+**sort** | <GetAggregatedResultTable1/>
+**Standard query parameters** | [limit](./standard-query-parameters#limit), [task_id_gt](./standard-query-parameters#task_id_gt), [task_id_gte](./standard-query-parameters#task_id_gte), [task_id_lt](./standard-query-parameters#task_id_lt), [task_id_lte](./standard-query-parameters#task_id_lte).
+
+## Query example {#request-example}
+
+You can set up the display of the list of responses in parts (for example, 10 responses at a time):
+
+1. Show the first 10 responses, starting with the response with the lowest task ID.
+1. Show the remaining responses (10 at a time) in ascending order.
+
+**Show the first 10 responses**
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetAggregatedResultList3/> },
+  { title: 'Sandbox', value: <GetAggregatedResultList4/> },
+]}/>
+
+**Show the remaining tasks sorted by ascending ID**
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetAggregatedResultList5/> },
+  { title: 'Sandbox', value: <GetAggregatedResultList6/> },
+]}/>
+
+## Response {#response}
+
+[Aggregation result](/docs-new/api/aggregate-by-task) in the `items` array.
+
+```json
+{"items" : [{task #1}, {task #2}, ... {task #n}], "has_more": true}
+```

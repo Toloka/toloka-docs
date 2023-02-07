@@ -1,0 +1,81 @@
+---
+title: "Send a test notification | Toloka API"
+date: "2023-02-03T19:53:30.077885"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import PostWebhookSubscriptionsList1 from './post-webhook-subscriptions/subcomponents/post-webhook-subscriptions-list-1.mdx'
+import PostWebhookSubscriptionsList2 from './post-webhook-subscriptions/subcomponents/post-webhook-subscriptions-list-2.mdx'
+import PostWebhookSubscriptionsTable1 from './post-webhook-subscriptions/subcomponents/post-webhook-subscriptions-table-1.mdx'
+
+# Send a test notification
+
+<Announce/>
+
+Sends a test notification to the URL specified in the subscription.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <PostWebhookSubscriptionsList1/> },
+  { title: 'Sandbox', value: <PostWebhookSubscriptionsList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**subscription_id** | ID of the subscription.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Example of the notification body {#body}
+
+```json
+{
+  "uuid": "uuid",
+  "event_time": "2020-02-14T12:22:58",
+  "project_id": "projectId",
+  "pool_id": "poolId",
+  "type": "TEST_EVENT"
+}
+```
+
+Parameter | Overview
+----- | -----
+**uuid** | **string \| required**<br/><br/>Unique event number generated for each new request.
+**event_time** | **string \| required**<br/><br/>Time when the event occurs.
+**project_id** | **string \| required**<br/><br/>ID of the project that the pool was created for.
+**pool_id** | **string \| required**<br/><br/>ID of the pool that the subscription was created for.
+**type** | **string \| required**<br/><br/>Notification type.<br/><br/>Takes the `TEST_EVENT` value indicating a test notification.
+
+## Response {#response}
+
+If the request is successful, the server returns the "200 Ok" or "404 Not Found" HTTP operation status.
+
+```json
+{
+  "success": true,
+  "responseReceivedAt": "2020-02-14T12:22:58",
+  "errorType": "WRONG_STATUS_CODE",
+  "originalStatusCode": 1,
+  "uuids": ["uuid1", ..."uuid5"]
+}
+```
+
+Parameter | Overview
+----- | -----
+**success** | **boolean**<br/><br/>Request execution status.<br/><br/>`True` or `False`.
+**responseReceivedAt** | **string**<br/><br/>The UTC date and time when the subscription was created, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**errorType** | <PostWebhookSubscriptionsTable1/>
+**originalStatusCode** | **int**<br/><br/>Status code of the response from the subscription URL.
+**uuids** | **array of strings**<br/><br/>Array of unique event numbers.

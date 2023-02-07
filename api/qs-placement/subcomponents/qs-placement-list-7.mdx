@@ -1,0 +1,31 @@
+Send a request from the command line using the cURL utility:
+
+```bash
+curl -X POST \
+     -H 'Authorization: OAuth <OAuth token>' \
+     -H 'Content-Type: application/JSON' \
+     -d '[
+           {
+             "input_values": {
+               "image": "https://sandbox.toloka.dev/api/proxy/<proxy name>/<folder name>/<file name 1>.<type>"
+             },
+             "pool_id": "<pool id>",
+             "overlap": 2
+           },
+           {
+             "input_values": {
+               "image": "https://sandbox.toloka.dev/api/proxy/<proxy name>/<folder name>/<file name 2>.<type>"
+             },
+             "pool_id": "<pool id>",
+             "overlap": 2
+           },
+           {
+             "input_values": {
+               "image": "https://sandbox.toloka.dev/api/proxy/<proxy name>/<folder name>/<file name 3>.<type>"
+             },
+             "pool_id": "<pool id>",
+             "overlap": 2
+           }
+         ]' \
+https://sandbox.toloka.dev/api/v1/tasks
+```

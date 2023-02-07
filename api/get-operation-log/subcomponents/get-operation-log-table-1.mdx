@@ -1,0 +1,12 @@
+**string**<br/><br/>Type of operation step. It depends on:
+
+- Type of operation for which the log is requested.
+- Execution result (`success: true/false`).<br/><br/>The `type` values for a successful asynchronous operation:
+
+- `USER_BONUS_PERSIST` — Issuing a reward.
+- `TASK_CREATE` — Creating a task.
+- `TASK_SUITE_CREATE` — Creating a task suite.<br/><br/>The `type` values for a failed asynchronous operation:
+
+- `USER_BONUS_VALIDATE` — Issuing a reward.
+- `TASK_VALIDATE` — Creating a task.
+- `TASK_SUITE_VALIDATE` — Creating a task suite.<br/><br/>The type of operation step determines the `input` and `output` values.

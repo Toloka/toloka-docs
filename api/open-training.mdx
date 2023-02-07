@@ -1,0 +1,79 @@
+---
+title: "Open a training | Toloka API"
+date: "2023-02-03T19:53:30.884582"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import OpenTrainingList1 from './open-training/subcomponents/open-training-list-1.mdx'
+import OpenTrainingList2 from './open-training/subcomponents/open-training-list-2.mdx'
+import OpenTrainingTable1 from './open-training/subcomponents/open-training-table-1.mdx'
+
+# Open a training
+
+<Announce/>
+
+Opens a training pool.
+
+Training tasks will be available to Tolokers only if a training pool is open.
+
+An operation is created when you send a request. To track the progress of the operation, send a request to the `/operations` resource.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <OpenTrainingList1/> },
+  { title: 'Sandbox', value: <OpenTrainingList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**training_id** | Pool ID.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Response {#response}
+
+<Note mode="note" title="Note">
+
+If the current training pool status is the same as the requested status, an empty response with status `204` is returned.
+
+</Note>
+
+```json
+{
+  "id": "52829015-033f-4c3a-a7cc-0d7eff235663",
+  "type": "TRAINING.OPEN",
+  "status": "SUCCESS",
+  "submitted": "2021-02-26T10:13:32.921",
+  "started": "2021-02-26T10:13:32.921",
+  "finished": "2021-02-26T10:13:32.921",
+  "progress": 100,
+  "parameters": {
+    "training_id": "123456"
+  },
+  "details": {}
+}
+```
+
+Parameter | Overview
+----- | -----
+**id** | **string**<br/><br/>User ID.
+**type** | **string**<br/><br/>Type of operation: `TRAINING.OPEN` — Open a training pool.
+**status** | <OpenTrainingTable1/>
+**submitted** | **string**<br/><br/>The UTC date and time the request was sent, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**started** | **string**<br/><br/>The UTC date and time the operation started, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**finished** | **string**<br/><br/>The UTC date and time the operation was completed, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**progress** | **integer**<br/><br/>The percentage of the operation completed.
+**parameters.training_id** | **string**<br/><br/>ID of the training pool.
+**details** | **object**<br/><br/>Details of the operation completion.

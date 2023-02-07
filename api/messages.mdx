@@ -1,0 +1,29 @@
+---
+title: "Overview | Toloka API"
+date: "2023-02-03T19:53:26.234460"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+# Overview
+
+Send messages to Tolokers. You can specify recipients in a [list](/docs-new/api/message-send#spis) or select Tolokers using a [filter](/docs-new/api/message-send#didi).
+
+The sent message is added to a new message thread. Until the first response is received, the message chain is located in the `UNREAD` folder. If the thread contains several addresses and one of them responds, a new message thread will be created.
+
+## Methods {#methods}
+
+Method | Endpoint | Overview
+----- | ----- | -----
+POST | [/message-threads/compose](/docs-new/api/message-send) | Sends a message to Tolokers.
+POST | [/message-threads/<thread_id>/reply](/docs-new/api/reply-message) | Replies to a message thread.
+GET | [/message-threads](/docs-new/api/get-chain-list) | Gets the list of message threads.
+POST | [/message-threads/<thread_id>/add-to-folders](/docs-new/api/move-message) | Adds a message thread to a folder.
+POST | [/message-threads/<thread_id>/remove-from-folders](/docs-new/api/move-message) | Deletes a message thread from a folder.
+
+## See also {#see-also}
+
+- [Communication](https://toloka.ai/en/docs/guide/concepts/messaging)

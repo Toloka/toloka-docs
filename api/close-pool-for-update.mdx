@@ -1,0 +1,81 @@
+---
+title: "Close a pool for editing | Toloka API"
+date: "2023-02-03T19:53:24.736512"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import ClosePoolForUpdateList1 from './close-pool-for-update/subcomponents/close-pool-for-update-list-1.mdx'
+import ClosePoolForUpdateList2 from './close-pool-for-update/subcomponents/close-pool-for-update-list-2.mdx'
+import ClosePoolForUpdateTable1 from './close-pool-for-update/subcomponents/close-pool-for-update-table-1.mdx'
+
+# Close a pool for editing
+
+<Announce/>
+
+Closes a pool for editing.
+
+To make changes to a pool, close it before editing.
+
+<Note mode="note" title="Note">
+
+If you don't open the pool manually after editing, it opens automatically in 15 minutes. In this case, no checks are performed that can block the pool's opening.
+
+</Note>
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <ClosePoolForUpdateList1/> },
+  { title: 'Sandbox', value: <ClosePoolForUpdateList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**pool_id** | Pool ID.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Response {#response}
+
+<Note mode="note" title="Note">
+
+If the current pool status is the same as the  requested status, an empty response with status 204 is returned.
+
+</Note>
+
+```json
+{
+  "id": "019587fd-b536-49f8-b6dc-01ffc25f8594",
+  "type": "POOL.CLOSE",
+  "status": "PENDING",
+  "submitted": "2021-11-24T07:47:50.120",
+  "started" : "2021-11-24T07:47:50.120",
+  "finished" : "2021-11-24T07:47:50.120",
+  "progress" : 100,
+  "parameters": {
+    "pool_id": "21"
+  }
+}
+```
+
+Parameter | Overview
+----- | -----
+**id** | **string**<br/><br/>User ID.
+**type** | **string**<br/><br/>Type of operation: `POOL.CLOSE` — Closing a pool.
+**status** | <ClosePoolForUpdateTable1/>
+**submitted** | **string**<br/><br/>The UTC date and time the request was sent, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**started** | **string**<br/><br/>The UTC date and time the operation started, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**finished** | **string**<br/><br/>The UTC date and time the operation was completed, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**progress** | **integer**<br/><br/>The percentage of the operation completed.
+**parameters.pool_id** | **string**<br/><br/>Pool ID.

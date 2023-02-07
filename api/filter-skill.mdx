@@ -1,0 +1,43 @@
+---
+title: "Filter by skills | Toloka API"
+date: "2023-02-03T19:53:25.892668"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import FilterSkillTable1 from './filter-skill/subcomponents/filter-skill-table-1.mdx'
+
+# Filter by skills
+
+To use a skill value for selecting Tolokers, define the `filter` object in the pool parameters.
+
+To filter Tolokers without a skill set the `"operator": "EQ"` parameter and exclude the `value` parameter.
+
+## Sample filter in JSON {#request-example}
+
+```json
+{
+  "filter" : {
+    "and" : [ {
+      "category": "skill",
+      "key": 55,
+      "operator": "GT",
+      "value": 59.7
+      }
+    ]
+  }
+}
+```
+
+## Key, value parameters {#params}
+
+Key parameter | Value description
+----- | -----
+**integer**<br/><br/>Skill ID. | <FilterSkillTable1/>
+
+## See also {#see-also}
+
+- [Filters](https://toloka.ai/en/docs/guide/concepts/filters)

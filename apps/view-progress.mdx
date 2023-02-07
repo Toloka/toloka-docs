@@ -1,6 +1,6 @@
 ---
-title: "Starting and stopping labeling"
-date: "2021-09-20T00:00:00.000Z"
+title: "Starting and stopping labeling | Toloka apps"
+date: "2023-02-03T19:18:58.975727"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,11 +8,11 @@ ogDescription: ""
 docsMenu: "appsMenu"
 ---
 
-import PauseIcon from './view-progress/subcomponents/pause-icon.tsx';
+import ContactSupport from './subcomponents/contact-support.mdx'
 
 # Starting and stopping labeling
 
-## Start labeling
+## Start labeling {#start-batch}
 
 You can start labeling after uploading task items to a project's batch.
 
@@ -23,7 +23,7 @@ The following project statuses are supported:
 - **Rejected** — [Errors found](/docs-new/apps/quickstart#errors).
 - **Archived** — Archived.
 
-<Note mode="note" title="Info">
+<Note mode="note" title="Note">
 
 Once created, a project needs to pass moderation. It may take up to two hours.
 
@@ -34,14 +34,14 @@ To send a batch of data for labeling:
 1. Wait until the project status changes to **Active**.
 1. Click **Launch**.
 
-## Stop labeling
+## Stop labeling {#stop-batch}
 
 You can stop labeling if it isn't completed.
 
 #### From a project
 
 1. Open the project.
-1. Click <PauseIcon /> on the right, next to the project name.
+1. Click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425164342/1675425164342_original_svg.svg" alt="Pause" /> on the right, next to the project name.
 
 #### From a batch
 
@@ -49,18 +49,10 @@ You can stop labeling if it isn't completed.
 1. Go to the desired batch.
 1. Click **Pause labeling**.
 
-<Note mode="note" title="Info">
+<Note mode="note" title="Note">
 
 Task items in the **Processing** status will continue to be labeled and you'll be charged for them. These tasks are already reserved for performers and are being executed, so it isn't possible to stop their labeling.
 
 </Note>
 
-<Button
-  themeColor="light"
-  view="default"
-  size="l"
-  type="link"
-  url="/docs-new/apps/support"
->
-  Contact support
-</Button>
+<ContactSupport/>

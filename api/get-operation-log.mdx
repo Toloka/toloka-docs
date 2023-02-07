@@ -1,0 +1,147 @@
+---
+title: "Get the operation log | Toloka API"
+date: "2023-02-03T19:53:31.628212"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import GetOperationLogList1 from './get-operation-log/subcomponents/get-operation-log-list-1.mdx'
+import GetOperationLogList2 from './get-operation-log/subcomponents/get-operation-log-list-2.mdx'
+import GetOperationLogTable1 from './get-operation-log/subcomponents/get-operation-log-table-1.mdx'
+import GetOperationLogTable2 from './get-operation-log/subcomponents/get-operation-log-table-2.mdx'
+import GetOperationLogTable3 from './get-operation-log/subcomponents/get-operation-log-table-3.mdx'
+
+# Get the operation log
+
+<Announce/>
+
+Gets the operation log.
+
+You can get logs for asynchronous operations (`async_mode = true`). Such operations run in the background.
+
+Logs are available only for the last month. To get the logs for an earlier period, contact [support](https://toloka.ai/en/docs/guide/troubleshooting/troubleshooting).
+
+You can get the operation log:
+
+- When you create [one or multiple](/docs-new/api/create-task) tasks.
+- When you create [one or multiple](/docs-new/api/create-task-suite) task suites.
+- [When issuing rewards](/docs-new/api/create-bonus) to Tolokers.
+
+If the operation was successful, the log contains `IDs` of the created objects, otherwise it contains the details of validation errors.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetOperationLogList1/> },
+  { title: 'Sandbox', value: <GetOperationLogList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**operation_id** | Operation ID.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Response {#response}
+
+Contains a JSON array describing each step of the operation.
+
+```json
+[
+  {
+    "type": <action type>,
+    "success": <true/false>,
+    "input": {
+      <input values at the operation step>
+    },
+    "output": {
+      <output values at the operation step or error details>
+    }
+  },
+  ...
+]
+```
+
+Parameter | Overview
+----- | -----
+**type** | <GetOperationLogTable1/>
+**success** | <GetOperationLogTable2/>
+**input** | **JSON**<br/><br/>The data in the `input` is copied from the input data passed when creating the operation.
+**output** | <GetOperationLogTable3/>
+
+<Cut title="Example of a log when a reward was issued successfully">
+
+```json
+[
+  {
+    "type": "USER_BONUS_PERSIST",
+    "success": true,
+    "input": {
+      "id": 65,
+      "amount": 1.5,
+      "created": "2021-02-02T12:51:00",
+      "user_id": "ec00d2407f7241258d0faba610110d95",
+      "public_title": {
+        "EN": "Good job!",
+        "RU": "Молодец!"
+      },
+      "public_message": {
+        "EN": "Ten tasks completed",
+        "RU": "Выполнено 10 заданий"
+      },
+      "private_comment": "pool_123456",
+      "without_message": false
+    },
+    "output": {
+      "user_bonus_id": "2128"
+    }
+  }
+]
+```
+
+</Cut>
+
+<Cut title="Example of a log when issuing a reward failed">
+
+```json
+[
+  {
+    "type": "USER_BONUS_VALIDATE",
+    "success": false,
+    "input": {
+      "id": 65,
+      "amount": 1.5,
+      "created": "2021-02-02T12:51:00",
+      "user_id": "ec00d2407f7241258d0faba610110d95",
+      "public_title": {
+        "EN": "Good job!",
+        "RU": "Молодец!"
+      },
+      "public_message": {
+        "EN": "Ten tasks completed",
+        "RU": "Выполнено 10 заданий"
+      },
+      "private_comment": "pool_123456",
+      "without_message": false
+   },
+    "output": {
+      "user_id": {
+        "code": "ENTITY_DOES_NOT_EXIST",
+        "message": "Entity does not exist"
+      }
+    }
+  }
+]
+```
+
+</Cut>

@@ -1,0 +1,78 @@
+---
+title: "Get the list of projects | Toloka API"
+date: "2023-02-03T19:53:31.292933"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import GetPrjListList1 from './get-prj-list/subcomponents/get-prj-list-list-1.mdx'
+import GetPrjListList2 from './get-prj-list/subcomponents/get-prj-list-list-2.mdx'
+import GetPrjListTable1 from './get-prj-list/subcomponents/get-prj-list-table-1.mdx'
+import GetPrjListTable2 from './get-prj-list/subcomponents/get-prj-list-table-2.mdx'
+import GetPrjListList3 from './get-prj-list/subcomponents/get-prj-list-list-3.mdx'
+import GetPrjListList4 from './get-prj-list/subcomponents/get-prj-list-list-4.mdx'
+import GetPrjListList5 from './get-prj-list/subcomponents/get-prj-list-list-5.mdx'
+import GetPrjListList6 from './get-prj-list/subcomponents/get-prj-list-list-6.mdx'
+
+# Get the list of projects
+
+<Announce/>
+
+Gets the list of projects.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetPrjListList1/> },
+  { title: 'Sandbox', value: <GetPrjListList2/> },
+]}/>
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Query parameters {#query-params}
+
+Specified in the link after the question mark; separated by `&`.
+
+Parameter | Overview
+----- | -----
+**status** | <GetPrjListTable1/>
+**sort** | <GetPrjListTable2/>
+**owner** | **string**<br/><br/>Requester ID.
+**Standard query parameters** | [limit](./standard-query-parameters#limit), [id_gt](./standard-query-parameters#id_gt), [id_gte](./standard-query-parameters#id_gte), [id_lt](./standard-query-parameters#id_lt), [id_lte](./standard-query-parameters#id_lte), [created_gt](./standard-query-parameters#created_gt), [created_gte](./standard-query-parameters#created_gte), [created_lt](./standard-query-parameters#created_lt), [created_lte](./standard-query-parameters#created_lte).
+
+## Query example {#request-example}
+
+You can set up the display of the list of projects in parts (for example, 10 projects at a time):
+
+1. Show the first 10 projects, starting with the project with the lowest ID.
+1. Show the remaining projects (10 at a time) in ascending order.
+
+**Show the first 10 projects**
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetPrjListList3/> },
+  { title: 'Sandbox', value: <GetPrjListList4/> },
+]}/>
+
+**Show the remaining tasks sorted by ascending ID**
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetPrjListList5/> },
+  { title: 'Sandbox', value: <GetPrjListList6/> },
+]}/>
+
+## Response {#response}
+
+Contains a list of projects and their properties in the `items` array:
+
+```json
+{"items": [{properties of project 1}, {properties of project 2}, ... {properties of project n}], "has_more": false}
+```

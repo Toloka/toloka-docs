@@ -1,0 +1,89 @@
+---
+title: "Get a list of Tolokers who have skills | Toloka API"
+date: "2023-02-03T19:53:29.006320"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import GetUserSkillListList1 from './get-user-skill-list/subcomponents/get-user-skill-list-list-1.mdx'
+import GetUserSkillListList2 from './get-user-skill-list/subcomponents/get-user-skill-list-list-2.mdx'
+import GetUserSkillListTable1 from './get-user-skill-list/subcomponents/get-user-skill-list-table-1.mdx'
+import GetUserSkillListList3 from './get-user-skill-list/subcomponents/get-user-skill-list-list-3.mdx'
+import GetUserSkillListList4 from './get-user-skill-list/subcomponents/get-user-skill-list-list-4.mdx'
+import GetUserSkillListList5 from './get-user-skill-list/subcomponents/get-user-skill-list-list-5.mdx'
+import GetUserSkillListList6 from './get-user-skill-list/subcomponents/get-user-skill-list-list-6.mdx'
+
+# Get a list of Tolokers who have skills
+
+<Announce/>
+
+Gets a list of Tolokers who have skills. With the [query parameters](#query-params), you can filter the data in the response the following way:
+
+- Get the list of all the Tolokers who have the specific skill using the `skill_id` query parameter:
+
+   ```bash
+   GET https://toloka.dev/api/v1/user-skills?skill_id=<skill_id>
+   ```
+
+- Get the list of all the skills assigned to the specific Toloker using the `user_id` query parameter:
+
+   ```bash
+   GET https://toloka.dev/api/v1/user-skills?user_id=<user_id>
+   ```
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetUserSkillListList1/> },
+  { title: 'Sandbox', value: <GetUserSkillListList2/> },
+]}/>
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Query parameters {#query-params}
+
+Specified in the link after the question mark; separated by `&`.
+
+Parameter | Overview
+----- | -----
+**user_id** | **string**<br/><br/>Toloker ID. It is used to get the list of the skills assigned to the specific Toloker.
+**skill_id** | **string**<br/><br/>Skill ID. It is used to get the list of the Tolokers who have the specific skill.
+**sort** | <GetUserSkillListTable1/>
+**Standard query parameters** | [limit](./standard-query-parameters#limit), [id_gt](./standard-query-parameters#id_gt), [id_gte](./standard-query-parameters#id_gte), [id_lt](./standard-query-parameters#id_lt), [id_lte](./standard-query-parameters#id_lte), [created_gt](./standard-query-parameters#created_gt), [created_gte](./standard-query-parameters#created_gte), [created_lt](./standard-query-parameters#created_lt), [created_lte](./standard-query-parameters#created_lte), [modified_gt](./standard-query-parameters#modified_gt), [modified_gte](./standard-query-parameters#modified_gte), [modified_lt](./standard-query-parameters#modified_lt), [modified_lte](./standard-query-parameters#modified_lte).
+
+## Query example {#request-example}
+
+You can set up the display of the list of skills in parts (for example, 10 skills at a time):
+
+1. Show the first 10 skills, starting with the skill with the lowest ID.
+1. Show the remaining skills (10 at a time) in ascending order.
+
+**Show the first 10 skills**
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetUserSkillListList3/> },
+  { title: 'Sandbox', value: <GetUserSkillListList4/> },
+]}/>
+
+**Show the remaining tasks sorted by ascending ID**
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetUserSkillListList5/> },
+  { title: 'Sandbox', value: <GetUserSkillListList6/> },
+]}/>
+
+## Response {#response}
+
+[Skill properties](/docs-new/api/get-user-skill#response) in the `items` array:
+
+```json
+{"items" : [{<Toloker 1 skill 1 >}, {<Toloker 1 skill 2>}, ... {<Toloker 1 skill n>}, ... {<Toloker n skill 1>}, {<Toloker n skill 2>}, ... {<Toloker n skill n>}], "has_more": false}
+```

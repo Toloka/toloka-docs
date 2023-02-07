@@ -1,0 +1,4 @@
+**boolean**<br/><br/>Setting for the last task suite in the pool, if less than the minimum remaining number of tasks are not completed (`mixer_config.min_real_tasks_count`). Values:
+
+- `true` — Assign an incomplete task suite.
+- `false` — Don't assign tasks. This option can be used if you are adding tasks after the pool is started.<br/><br/>The default value is `true`.<br/><br/>This parameter only applies to general tasks. The number of control and training tasks in the last suite must be complete (`mixer_config.golden_tasks_count`, `mixer_config.training_tasks_count`).

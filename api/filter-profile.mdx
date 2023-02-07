@@ -1,0 +1,65 @@
+---
+title: "Filter by profile data | Toloka API"
+date: "2023-02-03T19:53:27.437293"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import FilterProfileTable1 from './filter-profile/subcomponents/filter-profile-table-1.mdx'
+import FilterProfileTable2 from './filter-profile/subcomponents/filter-profile-table-2.mdx'
+import FilterProfileTable3 from './filter-profile/subcomponents/filter-profile-table-3.mdx'
+import FilterProfileTable4 from './filter-profile/subcomponents/filter-profile-table-4.mdx'
+import FilterProfileTable5 from './filter-profile/subcomponents/filter-profile-table-5.mdx'
+import FilterProfileTable6 from './filter-profile/subcomponents/filter-profile-table-6.mdx'
+import FilterProfileTable7 from './filter-profile/subcomponents/filter-profile-table-7.mdx'
+import FilterProfileTable8 from './filter-profile/subcomponents/filter-profile-table-8.mdx'
+
+# Filter by profile data
+
+To select Tolokers based on profile data, define a `filter` object in the pool parameters.
+
+## Sample filter in JSON {#request-example}
+
+This example selects Tolokers who set their country as US and the city as Washington, D.C. in the profile.
+
+```json
+{
+  "filter" : {
+    "and" : [ {
+      "or" : [ {
+        "category" : "profile",
+        "key" : "country",
+        "operator" : "EQ",
+        "value" : "US"
+      } ]
+    }, {
+      "or" : [ {
+        "category" : "profile",
+        "key" : "city",
+        "value" : 87,
+        "operator" : "IN"
+      } ]
+    } ]
+  }
+}
+```
+
+## Key and value parameters {#params}
+
+Key parameter | Value description
+----- | -----
+**gender** | <FilterProfileTable1/>
+**country** | <FilterProfileTable2/>
+**citizenship** | <FilterProfileTable3/>
+**education** | <FilterProfileTable4/>
+**adult_allowed** | <FilterProfileTable5/>
+**date_of_birth** | <FilterProfileTable6/>
+**city** | <FilterProfileTable7/>
+**languages** | <FilterProfileTable8/>
+
+## See also {#see-also}
+
+- [Filters](https://toloka.ai/en/docs/guide/concepts/filters)

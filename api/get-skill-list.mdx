@@ -1,0 +1,76 @@
+---
+title: "Get the list of skills | Toloka API"
+date: "2023-02-03T19:53:28.898375"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import GetSkillListList1 from './get-skill-list/subcomponents/get-skill-list-list-1.mdx'
+import GetSkillListList2 from './get-skill-list/subcomponents/get-skill-list-list-2.mdx'
+import GetSkillListTable1 from './get-skill-list/subcomponents/get-skill-list-table-1.mdx'
+import GetSkillListList3 from './get-skill-list/subcomponents/get-skill-list-list-3.mdx'
+import GetSkillListList4 from './get-skill-list/subcomponents/get-skill-list-list-4.mdx'
+import GetSkillListList5 from './get-skill-list/subcomponents/get-skill-list-list-5.mdx'
+import GetSkillListList6 from './get-skill-list/subcomponents/get-skill-list-list-6.mdx'
+
+# Get the list of skills
+
+<Announce/>
+
+Gets the list of created skills.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetSkillListList1/> },
+  { title: 'Sandbox', value: <GetSkillListList2/> },
+]}/>
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Query parameters {#query-params}
+
+Specified in the link after the question mark; separated by `&`.
+
+Parameter | Overview
+----- | -----
+**name** | **string**<br/><br/>Skill name.
+**sort** | <GetSkillListTable1/>
+**Standard query parameters** | [limit](./standard-query-parameters#limit), [id_gt](./standard-query-parameters#id_gt), [id_gte](./standard-query-parameters#id_gte), [id_lt](./standard-query-parameters#id_lt), [id_lte](./standard-query-parameters#id_lte), [created_gt](./standard-query-parameters#created_gt), [created_gte](./standard-query-parameters#created_gte), [created_lt](./standard-query-parameters#created_lt), [created_lte](./standard-query-parameters#created_lte)
+
+## Query example {#request-example}
+
+You can set up the display of the list of skills in parts (for example, 10 skills at a time):
+
+1. Show the first 10 skills, starting with the skill with the lowest ID.
+1. Show the remaining skills (10 at a time) in ascending order.
+
+**Show the first 10 skills**
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetSkillListList3/> },
+  { title: 'Sandbox', value: <GetSkillListList4/> },
+]}/>
+
+**Show the remaining tasks sorted by ascending ID**
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetSkillListList5/> },
+  { title: 'Sandbox', value: <GetSkillListList6/> },
+]}/>
+
+## Response {#response}
+
+[Information about skills](/docs-new/api/get-skill) in the `items` array:
+
+```json
+{"items": [{skill 1}, {skill 2}, ... {skill n}], "has_more": false}
+```

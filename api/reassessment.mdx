@@ -1,0 +1,96 @@
+---
+title: "Processing rejected and accepted assignments | Toloka API"
+date: "2023-02-03T19:53:24.374984"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import ReassessmentTable1 from './reassessment/subcomponents/reassessment-table-1.mdx'
+import ReassessmentTable2 from './reassessment/subcomponents/reassessment-table-2.mdx'
+import ReassessmentTable3 from './reassessment/subcomponents/reassessment-table-3.mdx'
+import ReassessmentTable4 from './reassessment/subcomponents/reassessment-table-4.mdx'
+import ReassessmentTable5 from './reassessment/subcomponents/reassessment-table-5.mdx'
+import ReassessmentTable6 from './reassessment/subcomponents/reassessment-table-6.mdx'
+import ReassessmentTable7 from './reassessment/subcomponents/reassessment-table-7.mdx'
+
+# Processing rejected and accepted assignments
+
+## Overview {#about}
+
+You can use this rule to:
+
+- Resend rejected task suites for recompletion to other Tolokers.
+
+    If you rejected a task suite, you may want it to be completed by a different Toloker instead of the one whose response you rejected. To do this, you can increase the [overlap](https://toloka.ai/en/docs/glossary#overlap) for this task suite only. This is especially helpful if you have the overlap value set to 1.
+
+- Save money on re-completing task suites that you have already accepted.
+
+    If you reviewed and accepted a task suite, it may not make sense for other Tolokers to complete it. To avoid this, you can reduce the overlap only for accepted task suites.
+
+## Request body {#body}
+
+Re-assign task suites that didn't pass manual review.
+
+```json
+{
+  "configs": [{
+    "collector_config": {
+      "type": "ASSIGNMENTS_ASSESSMENT"
+    },
+    "rules": [{
+      "conditions": [{
+          "key": "rejected_assignments_count",
+          "operator": "GTE",
+          "value": "1"
+        },
+        {
+          "key": "assessment_event",
+          "operator": "EQ",
+          "value": "REJECT"
+        }
+      ],
+      "action": {
+        "type": "CHANGE_OVERLAP",
+        "parameters": {
+          "delta": 1,
+          "open_pool": true,
+        }
+      }
+    }]
+  }]
+}
+```
+
+Parameter | Overview
+----- | -----
+**configs[]** | **array of objects \| required**<br/><br/>Array of quality control settings.
+**configs.collector_config** | **object \| required**<br/><br/>Parameters for collecting statistics (for example, the number of tasks skipped in the pool).
+**configs.collector_config.type** | <ReassessmentTable1/>
+**configs.collector_config. parameters.history_size** | **integer \| required**<br/><br/>The maximum number of the Toloker's recent responses in the project to use for calculating the percentage of correct responses.<br/><br/>If this field is omitted, the calculation is based on all the Toloker's responses in the pool.
+**configs.rules.conditions** | **object \| required**<br/><br/>Conditions (for example, 10 task suites skipped in a row). Multiple conditions are combined with the "OR" operator.
+**configs.rules.conditions.key** | <ReassessmentTable2/>
+**configs.rules.conditions. operator** | <ReassessmentTable3/>
+**configs.rules.conditions. value** | **string \| required**<br/><br/>The number of task suites with a specific status.
+**configs.rules.action** | **object \| required**<br/><br/>The action to perform if conditions are met (for example, block access to the project).
+**configs.rules.action.type** | **string \| required**<br/><br/>`CHANGE_OVERLAP` — Change the overlap. For example, to re-assign a task suite to other Tolokers or cancel the recompletion of accepted task suites.
+**configs.rules.action. parameters** | **object \| required**<br/><br/>Action parameters.
+**configs.rules.action. parameters.scope** | <ReassessmentTable4/>
+**configs.collector_config. parameters** | **object \| required if**<br/><br/>Required if `configs.collector_config.type=``GOLDEN_SET`, `MAJORITY_VOTE`, `CAPTCHA`, `ASSIGNMENT_SUBMIT_TIME`.<br/><br/>Parameters for collecting data (depends on the quality control rule specified in the `type` key).
+**configs.rules.action. parameters.skill_id** | **string \| required if**<br/><br/>Required if `type=SET_SKILL_FROM_OUTPUT_FIELD`.<br/><br/>ID of the skill to update as tasks are completed.
+**configs.rules.action. parameters.from_field** | <ReassessmentTable5/>
+**configs.rules.action. parameters.skill_value** | **integer \| required if**<br/><br/>Required if `type=SET_SKILL_FROM_OUTPUT_FIELD`.<br/><br/>A fixed value to assign to the skill (a number from 0 to 100).
+**configs.rules.action. parameters.delta** | **integer \| required if**<br/><br/>Required if `type=CHANGE_OVERLAP`.<br/><br/>The value determines the amount to change the overlap by.
+**configs.rules.action. parameters.public_comment** | **string \| required if**<br/><br/>Required if `type=REJECT_ALL_ASSIGNMENTS`.<br/><br/>Comments (the reason for rejecting responses). Available to the requester and the Toloker.
+**configs.rules.conditions.key** | **string**<br/><br/>Changing the task suite acceptance status.
+**configs.rules.conditions. value** | **string**<br/><br/>The value can be `ACCEPT`, `ACCEPT_AFTER_REJECT`, or `REJECT` (task suites get accepted, accepted after rejection, or rejected, respectively).
+**configs.rules.action. parameters.duration_unit** | <ReassessmentTable6/>
+**configs.rules.action. parameters.duration** | **integer**<br/><br/>Ban duration.
+**configs.rules. action.parameters. private_comment** | **string**<br/><br/>Comments (the reason for blocking access). Visible only to the requester.
+**configs.rules.action. parameters.open_pool** | <ReassessmentTable7/>
+
+## See also {#see-also}
+
+- [Processing rejected and accepted assignments](https://toloka.ai/en/docs/guide/concepts/reassessment-after-accepting)

@@ -1,0 +1,45 @@
+---
+title: "Get a list of message threads | Toloka API"
+date: "2023-02-03T19:53:26.826864"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import GetChainListList1 from './get-chain-list/subcomponents/get-chain-list-list-1.mdx'
+import GetChainListList2 from './get-chain-list/subcomponents/get-chain-list-list-2.mdx'
+import GetChainListTable1 from './get-chain-list/subcomponents/get-chain-list-table-1.mdx'
+import GetChainListTable2 from './get-chain-list/subcomponents/get-chain-list-table-2.mdx'
+
+# Get a list of message threads
+
+<Announce/>
+
+Gets the list of message threads.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetChainListList1/> },
+  { title: 'Sandbox', value: <GetChainListList2/> },
+]}/>
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Query parameters {#query-params}
+
+Specified in the link after the question mark; separated by `&`.
+
+Parameter | Overview
+----- | -----
+**folder** | <GetChainListTable1/>
+**folder_ne** | **string**<br/><br/>Folders to not search for the thread: You can specify multiple comma-separated values.
+**sort** | <GetChainListTable2/>
+**Standard query parameters** | [limit](./standard-query-parameters#limit), [id_gt](./standard-query-parameters#id_gt), [id_gte](./standard-query-parameters#id_gte), [id_lt](./standard-query-parameters#id_lt), [id_lte](./standard-query-parameters#id_lte), [created_gt](./standard-query-parameters#created_gt), [created_gte](./standard-query-parameters#created_gte), [created_lt](./standard-query-parameters#created_lt), [created_lte](./standard-query-parameters#created_lte).

@@ -1,0 +1,64 @@
+---
+title: "Get a Toloker's skill value | Toloka API"
+date: "2023-02-03T19:53:30.939792"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import GetUserSkillList1 from './get-user-skill/subcomponents/get-user-skill-list-1.mdx'
+import GetUserSkillList2 from './get-user-skill/subcomponents/get-user-skill-list-2.mdx'
+
+# Get a Toloker's skill value
+
+<Announce/>
+
+Gets a Toloker's skill value.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetUserSkillList1/> },
+  { title: 'Sandbox', value: <GetUserSkillList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**id** | The ID of a Toloker's skill that is assigned to the "skill-Toloker" pair. You can find this ID using the [Get a list of Tolokers who have skills](/docs-new/api/get-user-skill-list) request.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Response {#response}
+
+Contains skill properties in JSON format.
+
+```json
+{
+  "id": "43",
+  "skill_id": "32",
+  "user_id": "566ec2b0ff0deeaae5f9d500",
+  "value": 60,
+  "exact_value": 59.7,
+  "created": "2021-06-17T09:30:11.681",
+  "modified": "2021-05-19T10:52:22.130"
+}
+```
+
+Parameter | Overview
+----- | -----
+**id** | **string**<br/><br/>ID of the Toloker's skill, assigned to the "skill-Toloker" pair.
+**skill_id** | **string**<br/><br/>Skill ID.
+**user_id** | **string**<br/><br/>Toloker ID.
+**value** | **integer**<br/><br/>The integer value of that skill (`exact_value`, rounded to the nearest integer). Minimum — 0, maximum — 100.
+**exact_value** | **float**<br/><br/>Fractional value of the skill. Minimum — 0, maximum — 100.
+**created** | **string**<br/><br/>The date and time in UTC when the Toloker was first assigned the skill with the specified value. It uses ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**modified** | **string**<br/><br/>The date and time in UTC when the Toloker's skill level changed. It uses ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.

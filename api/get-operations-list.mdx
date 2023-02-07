@@ -1,0 +1,54 @@
+---
+title: "Get the list of operations | Toloka API"
+date: "2023-02-03T19:53:25.504078"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import GetOperationsListList1 from './get-operations-list/subcomponents/get-operations-list-list-1.mdx'
+import GetOperationsListList2 from './get-operations-list/subcomponents/get-operations-list-list-2.mdx'
+import GetOperationsListTable1 from './get-operations-list/subcomponents/get-operations-list-table-1.mdx'
+import GetOperationsListTable2 from './get-operations-list/subcomponents/get-operations-list-table-2.mdx'
+import GetOperationsListTable3 from './get-operations-list/subcomponents/get-operations-list-table-3.mdx'
+
+# Get the list of operations
+
+<Announce/>
+
+Gets the list of operations.
+
+## Request {#query}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <GetOperationsListList1/> },
+  { title: 'Sandbox', value: <GetOperationsListList2/> },
+]}/>
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Query parameters {#query-params}
+
+Specified in the link after the question mark; separated by `&`.
+
+Parameter | Overview
+----- | -----
+**type** | <GetOperationsListTable1/>
+**status** | <GetOperationsListTable2/>
+**sort** | <GetOperationsListTable3/>
+**Standard query parameters** | [limit](./standard-query-parameters#limit), [id_gt](./standard-query-parameters#id_gt), [id_gte](./standard-query-parameters#id_gte), [id_lt](./standard-query-parameters#id_lt), [id_lte](./standard-query-parameters#id_lte), [submitted_gt](./standard-query-parameters#submitted_gt), [submitted_gte](./standard-query-parameters#submitted_gte), [submitted_lt](./standard-query-parameters#submitted_lt), [submitted_lte](./standard-query-parameters#submitted_lte), [finished_gt](./standard-query-parameters#finished_gt), [finished_gte](./standard-query-parameters#finished_gte), [finished_lt](./standard-query-parameters#finished_lt), [finished_lte](./standard-query-parameters#finished_lte).
+
+## Response {#response}
+
+Contains a list of operations in the `items` array:
+
+```json
+{"items": [{operation details 1}, {operation details 2}, ... {operation details n}], "has_more": false}
+```

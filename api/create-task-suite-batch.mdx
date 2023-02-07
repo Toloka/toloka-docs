@@ -1,0 +1,65 @@
+---
+title: "Create multiple task suites | Toloka API"
+date: "2023-02-03T19:53:26.769110"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import CreateTaskSuiteBatchList1 from './create-task-suite-batch/subcomponents/create-task-suite-batch-list-1.mdx'
+import CreateTaskSuiteBatchList2 from './create-task-suite-batch/subcomponents/create-task-suite-batch-list-2.mdx'
+import CreateTaskSuiteBatchTable1 from './create-task-suite-batch/subcomponents/create-task-suite-batch-table-1.mdx'
+import CreateTaskSuiteBatchTable2 from './create-task-suite-batch/subcomponents/create-task-suite-batch-table-2.mdx'
+import CreateTaskSuiteBatchTable3 from './create-task-suite-batch/subcomponents/create-task-suite-batch-table-3.mdx'
+import CreateTaskSuiteBatchList3 from './create-task-suite-batch/subcomponents/create-task-suite-batch-list-3.mdx'
+import CreateTaskSuiteBatchList4 from './create-task-suite-batch/subcomponents/create-task-suite-batch-list-4.mdx'
+
+# Create multiple task suites
+
+<Announce/>
+
+Creates multiple task suites.
+
+<Note mode="restriction" title="Restriction">
+
+You can add a maximum of 100,000 tasks per minute and a maximum of 2,000,000 tasks per day.
+
+</Note>
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <CreateTaskSuiteBatchList1/> },
+  { title: 'Sandbox', value: <CreateTaskSuiteBatchList2/> },
+]}/>
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix. ||
+**Content-Type** | Specifies the data format in the request body.
+
+## Query parameters {#query-params}
+
+Specified in the link after the question mark; separated by `&`.
+
+Parameter | Overview
+----- | -----
+**async_mode** | <CreateTaskSuiteBatchTable1/>
+**allow_defaults** | <CreateTaskSuiteBatchTable2/>
+**skip_invalid_items** | <CreateTaskSuiteBatchTable3/>
+**open_pool** | **boolean**<br/><br/>Open the pool immediately after the operation is completed, if the pool is closed. The default value is `false`.
+**operation_id** | **string**<br/><br/>Operation ID for asynchronously loading one or more task suites (if `async_mode=true`).<br/><br/>We recommend sending the ID in the POST request to avoid accidental errors, such as creating the operation multiple times for the same task suites.<br/><br/>The ID should conform to the [RFC4122 standard](https://tools.ietf.org/html/rfc4122).<br/><br/>You can use this ID in the future to [get information about the operation](/docs-new/api/operations).
+
+## Response {#response}
+
+The response format depends on the value of [async_mode](#async_mode).
+
+<Tabs tabs={[
+  { title: 'The task suites (async_mode=false)', value: <CreateTaskSuiteBatchList3/> },
+  { title: 'Information about the operation (async_mode=true)', value: <CreateTaskSuiteBatchList4/> },
+]}/>

@@ -1,0 +1,73 @@
+---
+title: "Clone a training pool | Toloka API"
+date: "2023-02-03T19:53:28.736262"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import CloneTrainingList1 from './clone-training/subcomponents/clone-training-list-1.mdx'
+import CloneTrainingList2 from './clone-training/subcomponents/clone-training-list-2.mdx'
+import CloneTrainingTable1 from './clone-training/subcomponents/clone-training-table-1.mdx'
+
+# Clone a training pool
+
+<Announce/>
+
+Creates a duplicate training pool.
+
+An empty training pool will be created with the same parameters.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <CloneTrainingList1/> },
+  { title: 'Sandbox', value: <CloneTrainingList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**training_id** | Pool ID.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Response {#response}
+
+```json
+{
+  "id": "7ea08f99-5e24-47b4-b61f-c177a868d801",
+  "type": "TRAINING.CLONE",
+  "status": "SUCCESS",
+  "submitted": "2021-02-26T10:13:32.921",
+  "started": "2021-02-26T10:13:32.921",
+  "finished": "2021-02-26T10:13:32.921",
+  "progress": 100,
+  "parameters": {
+    "training_id": "123456"
+  },
+  "details": {
+    "training_id": "123457"
+  }
+}
+```
+
+Parameter | Overview
+----- | -----
+**id** | **string**<br/><br/>User ID.
+**type** | **string**<br/><br/>Type of operation: `TRAINING.CLONE` — Clone a training pool.
+**status** | <CloneTrainingTable1/>
+**submitted** | **string**<br/><br/>The UTC date and time the request was sent, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**started** | **string**<br/><br/>The UTC date and time the operation started, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**finished** | **string**<br/><br/>The UTC date and time the operation was completed, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**progress** | **integer**<br/><br/>The percentage of the operation completed.
+**parameters.training_id** | **string**<br/><br/>ID of the source training pool.
+**details.training_id** | **string**<br/><br/>ID of the new training pool.

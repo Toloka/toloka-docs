@@ -1,0 +1,69 @@
+---
+title: "Change pool priority | Toloka API"
+date: "2023-02-03T19:53:31.465355"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import SetPriorityPoolList1 from './set-priority-pool/subcomponents/set-priority-pool-list-1.mdx'
+import SetPriorityPoolList2 from './set-priority-pool/subcomponents/set-priority-pool-list-2.mdx'
+
+# Change pool priority
+
+<Announce/>
+
+Changes the priority of a pool.
+
+If you have multiple pools and want Tolokers to be offered one pool before another, change the pool priority. You don't need to stop the pool for that, it must have the "open" or "closed" status.
+
+Priority is a number on a scale from 0 to 100. The larger the number, the faster the pool will be labeled compared to your other pools.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <SetPriorityPoolList1/> },
+  { title: 'Sandbox', value: <SetPriorityPoolList2/> },
+]}/>
+
+## Path parameters {#path-params}
+
+Parameter | Overview
+----- | -----
+**pool_id** | Pool ID.
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+**Content-Type** | Specifies the data format in the request body.
+
+## Request body {#body}
+
+```json
+{
+  "priority": <from 0 to 100>
+}
+```
+
+Parameter | Overview
+----- | -----
+**Priority** | **integer**<br/><br/>The priority of the pool in relation to other pools in the project with the same task price and set of filters. Users are assigned tasks with a higher priority first.<br/><br/>Possible values: from `0` to `100`.<br/><br/>By default the value is `0`.
+
+## Response {#response}
+
+<Note mode="note" title="Note">
+
+If the pool is archived, an empty response with status 409 is returned.
+
+</Note>
+
+Contains updated information about the pool (see the description in the [Create a pool](/docs-new/api/create-pool#response) section).
+
+## See also {#see-also}
+
+- [Editing a pool](https://toloka.ai/en/docs/guide/concepts/pool-edit)

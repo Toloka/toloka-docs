@@ -1,0 +1,56 @@
+---
+title: "Register a proxy server | Toloka API"
+date: "2023-02-06T14:48:34.870281"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import HttpproxyRegistrationTable1 from './httpproxy-registration/subcomponents/httpproxy-registration-table-1.mdx'
+import HttpproxyRegistrationTable2 from './httpproxy-registration/subcomponents/httpproxy-registration-table-2.mdx'
+import HttpproxyRegistrationTable3 from './httpproxy-registration/subcomponents/httpproxy-registration-table-3.mdx'
+
+# Register a proxy server
+
+To register a new proxy server, log in as a requester and send an AJAX request from your browser console.
+
+## Request {#request}
+
+```js
+$.ajax({
+    url: '/api/new/requester/proxy/proxy',
+    method: 'POST',
+    contentType: 'application/json',
+    data: JSON.stringify({
+        "params": {
+            "accessRights": "ASSIGNMENT_PRIVATE",
+            "type": "HTTP",
+            "additionalHeaders": {},
+            "additionalQueryArgs": {},
+            "baseUrl": "example.com/some-path"
+        },
+        "name": "test-proxy"
+    )
+});
+```
+
+Parameter | Overview
+----- | -----
+**accessRights** | <HttpproxyRegistrationTable1/>
+**type** | **string \| required**<br/><br/>Data transfer protocol. Possible value: `HTTP`.
+**baseUrl** | **string \| required**<br/><br/>The requester's server URL.<br/><br/>For example, a server [named](#name) "test-proxy" is hosted at `example.com/some-path`.<br/><br/>In this case, when calling an HTTP method in Toloka at the URL `toloka.dev/api/proxy/test-proxy/test-path`, a request to the requester's server will be sent to the URL `example.com/some-path/test-path`.<br/><br/>If a method call is made within a template, [assignmentId](#assignmentId) will be added to the URL. This ensures that information about the task the request was made within is also passed to the requester's server. Example: `example.com/some-path/test-path?assignmentId=12831298712937213`.
+**name** {#name} | **string \| required**<br/><br/>The name of the requester's server. The name will be inserted in the request URL. Allowed characters in the name: Latin letters, numbers, and dashes ("-").<br/><br/>Must be unique within Toloka.<br/><br/>For example, a server named "test-proxy" can be accessed in Toloka at: `toloka.dev/api/proxy/test-proxy`.
+**additionalHeaders[]** | <HttpproxyRegistrationTable2/>
+**additionalQueryArgs[]** | <HttpproxyRegistrationTable3/>
+
+<Note mode="note" title="Note">
+
+To get the full URL for accessing data on the created server, use the `getProxyUrl(path)` method (see the [Task class](https://toloka.ai/en/docs/guide/concepts/js/task) section).
+
+</Note>
+
+## Response {#response}
+
+Contains the `id` and parameters in JSON format passed during server registration.

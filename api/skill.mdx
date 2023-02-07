@@ -1,0 +1,30 @@
+---
+title: "Overview | Toloka API"
+date: "2023-02-03T19:53:24.264648"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+# Overview
+
+A skill is an assessment of some aspect of a Toloker's responses (a number from 0 to 100). You can set up skill calculation in a [quality control rule](/docs-new/api/quality-control), or manually set the skill level for a Toloker. You can use skills to [select Tolokers](/docs-new/api/filter-skill) who perform pool tasks.
+
+## Methods {#methods}
+
+Method | Endpoint | Overview
+----- | ----- | -----
+POST | [/skills](/docs-new/api/create-skill) | Creates a skill.
+PUT | [/skills/<id\>](/docs-new/api/edit-skill) | Changes the name, comment, and access to the skill.
+PUT | [/user-skills](/docs-new/api/set-skill) | Sets the skill value.
+GET | [/user-skills](/docs-new/api/get-user-skill-list) | Gets а list of Tolokers who have skills.
+GET | [/user-skills/<id\>](/docs-new/api/get-user-skill) | Gets a Toloker's skill value.
+GET | [/skills](/docs-new/api/get-skill-list) | Gets the list of created skills.
+GET | [/skills/<id\>](/docs-new/api/get-skill) | Gets the properties of a skill.
+DELETE | [/user-skills/<id\>](/docs-new/api/delete-skill) | Removes a skill for a Toloker.
+
+## Learn more {#links}
+
+- [More information about skills](https://toloka.ai/en/docs/guide/concepts/nav)

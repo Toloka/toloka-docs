@@ -1,0 +1,52 @@
+---
+title: "Account balance | Toloka API"
+date: "2023-02-03T19:53:32.478960"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import BalanceList1 from './balance/subcomponents/balance-list-1.mdx'
+import BalanceList2 from './balance/subcomponents/balance-list-2.mdx'
+
+# Account balance
+
+<Announce/>
+
+Gets information about the account balance.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <BalanceList1/> },
+  { title: 'Sandbox', value: <BalanceList2/> },
+]}/>
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+
+## Response {#response}
+
+Contains information about the requester and the account balance:
+
+```json
+{
+  "balance": 121.30,
+  "id": "566ec2b0ff0deeaae5f9d500",
+  "public_name": {
+    "EN": "Ya.Shield"
+  }
+}
+```
+
+Parameter | Overview
+----- | -----
+**balance** | **float**<br/><br/>Account balance in US dollars.
+**id** | **string**<br/><br/>Requester ID.
+**public_name** | **object**<br/><br/>The requester's name in Toloka.

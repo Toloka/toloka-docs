@@ -1,0 +1,85 @@
+---
+title: "Aggregate responses in a pool | Toloka API"
+date: "2023-02-03T19:53:29.244210"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import AggregateByPoolList1 from './aggregate-by-pool/subcomponents/aggregate-by-pool-list-1.mdx'
+import AggregateByPoolList2 from './aggregate-by-pool/subcomponents/aggregate-by-pool-list-2.mdx'
+import AggregateByPoolTable1 from './aggregate-by-pool/subcomponents/aggregate-by-pool-table-1.mdx'
+import AggregateByPoolTable2 from './aggregate-by-pool/subcomponents/aggregate-by-pool-table-2.mdx'
+import AggregateByPoolTable3 from './aggregate-by-pool/subcomponents/aggregate-by-pool-table-3.mdx'
+
+# Aggregate responses in a pool
+
+<Announce/>
+
+Starts aggregating responses to all completed tasks in the pool.
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <AggregateByPoolList1/> },
+  { title: 'Sandbox', value: <AggregateByPoolList2/> },
+]}/>
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix. ||
+**Content-Type** | Specifies the data format in the request body.
+
+## Request body {#body}
+
+```json
+{
+  "pool_id": "283",
+  "type": "WEIGHTED_DYNAMIC_OVERLAP",
+  "answer_weight_skill_id": "1289",
+  "fields": [
+    {
+      "name": "result"
+    }
+  ]
+}
+```
+
+Parameter | Overview
+----- | -----
+**pool_id** | **string**<br/><br/>Pool ID.
+**type** | <AggregateByPoolTable1/>
+**answer_weight_skill_id** | **string**<br/><br/>A skill that determines the weight of the Toloker's response.<br/><br/>Required if the `WEIGHTED_DYNAMIC_OVERLAP` aggregation type is selected.
+**fields** | **object**<br/><br/>[Output data fields](https://toloka.ai/en/docs/guide/concepts/result-aggregation) to use for aggregating responses. For best results, each of these fields must have a limited number of response options.<br/><br/>If the `DAWID_SKENE` aggregation type is selected, you can only specify one value.
+**fields.name** | **string**<br/><br/>The output data field name.
+
+## Response {#response}
+
+Contains operation details: Check the [operation status](/docs-new/api/operations). When it is completed [get the aggregation results](/docs-new/api/get-aggregated-result).
+
+```json
+{
+  "id": "fadfe3jk-fdafue2-fda32890-fdafdi23",
+  "type": "SOLUTION.AGGREGATE",
+  "status": "PEDNDING",
+  "submitted": "2018-22-10T14:18:35",
+  "progress" : 0,
+  "parameters": {
+    "pool_id": "283"
+  }
+}
+```
+
+Parameter | Overview
+----- | -----
+**id** | **string**<br/><br/>Operation ID.
+**type** | <AggregateByPoolTable2/>
+**status** | <AggregateByPoolTable3/>
+**submitted** | **string**<br/><br/>The UTC date and time the request was sent, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**progress** | **integer**<br/><br/>The percentage of the operation completed.
+**parameters** | **object**<br/><br/>Parameters of the operation in the request.

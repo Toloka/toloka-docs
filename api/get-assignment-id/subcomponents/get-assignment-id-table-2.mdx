@@ -1,0 +1,17 @@
+**array of objects**
+
+For training tasks. The Toloker's first responses in the training task (only if these were the wrong answers). If the Toloker answered correctly on the first try, the `first_declined_solution_attempt` array is omitted.
+
+Arrays with the responses (`output_values`) are arranged in the same order as the task data in the `tasks` array.
+
+```json
+{
+  "output_values": {
+    "<field 1>": <response>,
+    "<field 2>": <response>
+...
+    "<field N>": <response>
+  },
+...
+}
+```

@@ -1,0 +1,120 @@
+---
+title: "Create a training pool | Toloka API"
+date: "2023-02-03T19:53:28.045063"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import Announce from './subcomponents/announce.mdx'
+import CreateTrainingList1 from './create-training/subcomponents/create-training-list-1.mdx'
+import CreateTrainingList2 from './create-training/subcomponents/create-training-list-2.mdx'
+import CreateTrainingTable1 from './create-training/subcomponents/create-training-table-1.mdx'
+import CreateTrainingTable2 from './create-training/subcomponents/create-training-table-2.mdx'
+import CreateTrainingTable3 from './create-training/subcomponents/create-training-table-3.mdx'
+import CreateTrainingTable4 from './create-training/subcomponents/create-training-table-4.mdx'
+
+# Create a training pool
+
+<Announce/>
+
+Creates a training pool (training).
+
+The pool is automatically assigned an ID.
+
+<Note mode="restriction" title="Restriction">
+
+You can send a maximum of 20 requests of this kind per minute and 100 requests per day.
+
+</Note>
+
+<Note mode="note" title="Note">
+
+Learn about creating a main pool in [Create a pool](/docs-new/api/create-pool).
+
+</Note>
+
+## Request {#request}
+
+<Tabs tabs={[
+  { title: 'Production version', value: <CreateTrainingList1/> },
+  { title: 'Sandbox', value: <CreateTrainingList2/> },
+]}/>
+
+## Headers {#headers}
+
+Title | Overview
+----- | -----
+**Authorization** | A token for account authorization. Add OAuth as a prefix.
+**Content-Type** | Specifies the data format in the request body.
+
+## Request body {#body}
+
+```json
+{
+  "project_id": "654321",
+  "private_name": "Selection for a labeling task",
+  "inherited_instructions": false,
+  "public_instructions": "Unpaid selection for a project: 10 tasks, 90% threshold.",
+  "may_contain_adult_content": false,
+  "assignment_max_duration_seconds": 600,
+  "mix_tasks_in_creation_order": true,
+  "shuffle_tasks_in_task_suite": true,
+  "training_tasks_in_task_suite_count": 10,
+  "task_suites_required_to_pass": 1,
+  "retry_training_after_days": 7
+}
+```
+
+Parameter | Overview
+----- | -----
+**project_id** | **string \| required**<br/><br/>ID of the project that the training pool was created for.
+**private_name** | **string \| required**<br/><br/>Name of the training pool (only visible to the requester).
+**inherited_instructions** | **boolean \| required**<br/><br/>Indicates whether to use the project instructions. To provide separate instructions for the training, enter it in `public_instructions`.<br/><br/>The default value is `false`.
+**may_contain_adult_content** | **boolean \| required**<br/><br/>Whether the tasks contain adult content.
+**training_tasks_in_tasksuite_count** | **integer \| required**<br/><br/>Number of training tasks per suite.
+**task_suites_required_to_pass** | **integer**<br/><br/>Number of task suites the Toloker needs to complete to get a skill and access the general tasks.
+**public_instructions** | **string**<br/><br/>Instructions for completing a training task. You can use any HTML markup.
+**assignment_max_duration_seconds** | **integer**<br/><br/>The time allowed for completing a task suite, in seconds. We recommend allowing no more than 60 seconds per task suite (including the time for loading the page and submitting responses).
+**mix_tasks_in_creation_order** | <CreateTrainingTable1/>
+**shuffle_tasks_in_task_suite** | <CreateTrainingTable2/>
+**retry_training_after_days** | **integer**<br/><br/>Number of days until retry becomes available.
+
+## Response {#response}
+
+Contains information about the created training pool.
+
+```json
+{
+  "id": "123456",
+  "project_id": "654321",
+  "private_name": "Selection for a labeling task",
+  "inherited_instructions": false,
+  "public_instructions": "Unpaid selection for a project: 10 tasks, 90% threshold.",
+  "may_contain_adult_content": false,
+  "assignment_max_duration_seconds": 600,
+  "mix_tasks_in_creation_order": true,
+  "shuffle_tasks_in_task_suite": true,
+  "training_tasks_in_task_suite_count": 10,
+  "task_suites_required_to_pass": 1,
+  "retry_training_after_days": 7,
+  "owner": {
+    "id": "ec00d2407f7241258d0faba610110d95",
+    "myself": true
+  },
+  "status": "CLOSED",
+  "created": "2021-02-24T18:12:57.962"
+}
+```
+
+Besides [parameters that are set when creating a training pool,](#training-param) it includes parameters that are assigned to the pool automatically:
+
+Parameter | Overview
+----- | -----
+**id** | **string**<br/><br/>ID of the training pool.
+**owner.id** | **string**<br/><br/>Requester ID.
+**owner.myself** | <CreateTrainingTable3/>
+**status** | <CreateTrainingTable4/>
+**created** | **string**<br/><br/>The UTC date and time when the training pool was created, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
