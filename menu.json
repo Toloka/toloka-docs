@@ -665,5 +665,768 @@
       "title": "Libraries",
       "href": "/api/libraries"
     }
+  ],
+  "ckitMenu": [
+    {
+      "title": "Crowd-Kit"
+    },
+    {
+      "title": "Overview",
+      "href": "/crowd-kit/"
+    },
+    {
+      "title": "Reference"
+    },
+    {
+      "title": "Aggregation",
+      "subItems": [
+        {
+          "title": "Classification",
+          "subItems": [
+            {
+              "title": "DawidSkene",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.dawid_skene.DawidSkene"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.dawid_skene.DawidSkene.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.dawid_skene.DawidSkene.fit_predict"
+                },
+                {
+                  "title": "fit_predict_proba",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.dawid_skene.DawidSkene.fit_predict_proba"
+                }
+              ]
+            },
+            {
+              "title": "OneCoinDawidSkene",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.dawid_skene.OneCoinDawidSkene"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.dawid_skene.OneCoinDawidSkene.fit"
+                }
+              ]
+            },
+            {
+              "title": "GLAD",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.glad.GLAD"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.glad.GLAD.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.glad.GLAD.fit_predict"
+                },
+                {
+                  "title": "fit_predict_proba",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.glad.GLAD.fit_predict_proba"
+                }
+              ]
+            },
+            {
+              "title": "GoldMajorityVote",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.gold_majority_vote.GoldMajorityVote"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.gold_majority_vote.GoldMajorityVote.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.gold_majority_vote.GoldMajorityVote.fit_predict"
+                },
+                {
+                  "title": "fit_predict_proba",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.gold_majority_vote.GoldMajorityVote.fit_predict_proba"
+                },
+                {
+                  "title": "predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.gold_majority_vote.GoldMajorityVote.predict"
+                },
+                {
+                  "title": "predict_proba",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.gold_majority_vote.GoldMajorityVote.predict_proba"
+                }
+              ]
+            },
+            {
+              "title": "KOS",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.kos.KOS"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.kos.KOS.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.kos.KOS.fit_predict"
+                }
+              ]
+            },
+            {
+              "title": "MMSR",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.m_msr.MMSR"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.m_msr.MMSR.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.m_msr.MMSR.fit_predict"
+                },
+                {
+                  "title": "fit_predict_score",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.m_msr.MMSR.fit_predict_score"
+                },
+                {
+                  "title": "predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.m_msr.MMSR.predict"
+                },
+                {
+                  "title": "predict_score",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.m_msr.MMSR.predict_score"
+                }
+              ]
+            },
+            {
+              "title": "MACE",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.mace.MACE"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.mace.MACE.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.mace.MACE.fit_predict"
+                },
+                {
+                  "title": "fit_predict_proba",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.mace.MACE.fit_predict_proba"
+                }
+              ]
+            },
+            {
+              "title": "MajorityVote",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.majority_vote.MajorityVote"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.majority_vote.MajorityVote.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.majority_vote.MajorityVote.fit_predict"
+                },
+                {
+                  "title": "fit_predict_proba",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.majority_vote.MajorityVote.fit_predict_proba"
+                }
+              ]
+            },
+            {
+              "title": "Wawa",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.wawa.Wawa"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.wawa.Wawa.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.wawa.Wawa.fit_predict"
+                },
+                {
+                  "title": "fit_predict_proba",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.wawa.Wawa.fit_predict_proba"
+                },
+                {
+                  "title": "predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.wawa.Wawa.predict"
+                },
+                {
+                  "title": "predict_proba",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.wawa.Wawa.predict_proba"
+                }
+              ]
+            },
+            {
+              "title": "ZeroBasedSkill",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill.fit_predict"
+                },
+                {
+                  "title": "fit_predict_proba",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill.fit_predict_proba"
+                },
+                {
+                  "title": "predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill.predict"
+                },
+                {
+                  "title": "predict_proba",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill.predict_proba"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Embeddings",
+          "subItems": [
+            {
+              "title": "ClosestToAverage",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.embeddings.closest_to_average.ClosestToAverage"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.embeddings.closest_to_average.ClosestToAverage.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.embeddings.closest_to_average.ClosestToAverage.fit_predict"
+                },
+                {
+                  "title": "fit_predict_scores",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.embeddings.closest_to_average.ClosestToAverage.fit_predict_scores"
+                }
+              ]
+            },
+            {
+              "title": "HRRASA",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.embeddings.hrrasa.HRRASA"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.embeddings.hrrasa.HRRASA.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.embeddings.hrrasa.HRRASA.fit_predict"
+                },
+                {
+                  "title": "fit_predict_scores",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.embeddings.hrrasa.HRRASA.fit_predict_scores"
+                }
+              ]
+            },
+            {
+              "title": "RASA",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.embeddings.rasa.RASA"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.embeddings.rasa.RASA.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.embeddings.rasa.RASA.fit_predict"
+                },
+                {
+                  "title": "fit_predict_scores",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.embeddings.rasa.RASA.fit_predict_scores"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Image segmentation",
+          "subItems": [
+            {
+              "title": "SegmentationEM",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.image_segmentation.segmentation_em.SegmentationEM"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.image_segmentation.segmentation_em.SegmentationEM.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.image_segmentation.segmentation_em.SegmentationEM.fit_predict"
+                }
+              ]
+            },
+            {
+              "title": "SegmentationMajorityVote",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.image_segmentation.segmentation_majority_vote.SegmentationMajorityVote"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.image_segmentation.segmentation_majority_vote.SegmentationMajorityVote.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.image_segmentation.segmentation_majority_vote.SegmentationMajorityVote.fit_predict"
+                }
+              ]
+            },
+            {
+              "title": "SegmentationRASA",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.image_segmentation.segmentation_rasa.SegmentationRASA"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.image_segmentation.segmentation_rasa.SegmentationRASA.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.image_segmentation.segmentation_rasa.SegmentationRASA.fit_predict"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Multilabel",
+          "subItems": [
+            {
+              "title": "BinaryRelevance",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.multilabel.binary_relevance.BinaryRelevance"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.multilabel.binary_relevance.BinaryRelevance.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.multilabel.binary_relevance.BinaryRelevance.fit_predict"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Pairwise",
+          "subItems": [
+            {
+              "title": "BradleyTerry",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.pairwise.bradley_terry.BradleyTerry"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.pairwise.bradley_terry.BradleyTerry.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.pairwise.bradley_terry.BradleyTerry.fit_predict"
+                }
+              ]
+            },
+            {
+              "title": "NoisyBradleyTerry",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.pairwise.noisy_bt.NoisyBradleyTerry"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.pairwise.noisy_bt.NoisyBradleyTerry.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.pairwise.noisy_bt.NoisyBradleyTerry.fit_predict"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Texts",
+          "subItems": [
+            {
+              "title": "ROVER",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.texts.rover.ROVER"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.texts.rover.ROVER.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.texts.rover.ROVER.fit_predict"
+                }
+              ]
+            },
+            {
+              "title": "TextHRRASA",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.texts.text_hrrasa.TextHRRASA"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.texts.text_hrrasa.TextHRRASA.fit_predict"
+                },
+                {
+                  "title": "fit_predict_scores",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.texts.text_hrrasa.TextHRRASA.fit_predict_scores"
+                }
+              ]
+            },
+            {
+              "title": "TextRASA",
+              "subItems": [
+                {
+                  "title": "Overview",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.texts.text_rasa.TextRASA"
+                },
+                {
+                  "title": "fit",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.texts.text_rasa.TextRASA.fit"
+                },
+                {
+                  "title": "fit_predict",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.texts.text_rasa.TextRASA.fit_predict"
+                },
+                {
+                  "title": "fit_predict_scores",
+                  "href": "/crowd-kit/reference/crowdkit.aggregation.texts.text_rasa.TextRASA.fit_predict_scores"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "utils",
+          "subItems": [
+            {
+              "title": "get_accuracy",
+              "href": "/crowd-kit/reference/crowdkit.aggregation.utils.get_accuracy"
+            },
+            {
+              "title": "get_most_probable_labels",
+              "href": "/crowd-kit/reference/crowdkit.aggregation.utils.get_most_probable_labels"
+            },
+            {
+              "title": "manage_data",
+              "href": "/crowd-kit/reference/crowdkit.aggregation.utils.manage_data"
+            },
+            {
+              "title": "normalize_rows",
+              "href": "/crowd-kit/reference/crowdkit.aggregation.utils.normalize_rows"
+            },
+            {
+              "title": "add_skills_to_data",
+              "href": "/crowd-kit/reference/crowdkit.aggregation.utils.add_skills_to_data"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Datasets",
+      "subItems": [
+        {
+          "title": "get_datasets_list",
+          "href": "/crowd-kit/reference/crowdkit.datasets.load_dataset.get_datasets_list"
+        },
+        {
+          "title": "load_dataset",
+          "href": "/crowd-kit/reference/crowdkit.datasets.load_dataset.load_dataset"
+        }
+      ]
+    },
+    {
+      "title": "Learning",
+      "subItems": [
+        {
+          "title": "CoNAL",
+          "subItems": [
+            {
+              "title": "Overview",
+              "href": "/crowd-kit/reference/crowdkit.learning.conal.CoNAL"
+            },
+            {
+              "title": "forward",
+              "href": "/crowd-kit/reference/crowdkit.learning.conal.CoNAL.forward"
+            },
+            {
+              "title": "simple_common_module",
+              "href": "/crowd-kit/reference/crowdkit.learning.conal.CoNAL.simple_common_module"
+            }
+          ]
+        },
+        {
+          "title": "CrowdLayer",
+          "subItems": [
+            {
+              "title": "Overview",
+              "href": "/crowd-kit/reference/crowdkit.learning.crowd_layer.CrowdLayer"
+            },
+            {
+              "title": "forward",
+              "href": "/crowd-kit/reference/crowdkit.learning.crowd_layer.CrowdLayer.forward"
+            }
+          ]
+        },
+        {
+          "title": "TextSummarization",
+          "subItems": [
+            {
+              "title": "Overview",
+              "href": "/crowd-kit/reference/crowdkit.learning.text_summarization.TextSummarization"
+            },
+            {
+              "title": "fit_predict",
+              "href": "/crowd-kit/reference/crowdkit.learning.text_summarization.TextSummarization.fit_predict"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Metrics",
+      "subItems": [
+        {
+          "title": "Data",
+          "subItems": [
+            {
+              "title": "alpha_krippendorff",
+              "href": "/crowd-kit/reference/crowdkit.metrics.data._classification.alpha_krippendorff"
+            },
+            {
+              "title": "consistency",
+              "href": "/crowd-kit/reference/crowdkit.metrics.data._classification.consistency"
+            },
+            {
+              "title": "uncertainty",
+              "href": "/crowd-kit/reference/crowdkit.metrics.data._classification.uncertainty"
+            }
+          ]
+        },
+        {
+          "title": "Workers",
+          "subItems": [
+            {
+              "title": "accuracy_on_aggregates",
+              "href": "/crowd-kit/reference/crowdkit.metrics.workers.accuracy_on_aggregates.accuracy_on_aggregates"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Postprocessing",
+      "subItems": [
+        {
+          "title": "entropy_threshold",
+          "href": "/crowd-kit/reference/crowdkit.postprocessing.entropy_threshold.entropy_threshold"
+        }
+      ]
+    }
+  ],
+  "appsApiMenu": [
+    {
+      "title": "Apps API"
+    },
+    {
+      "title": "Accessing the API",
+      "href": "/apps-api/authorization"
+    },
+    {
+      "title": "API quick start",
+      "href": "/apps-api/quickstart-api"
+    },
+    {
+      "title": "Stream processing of task items",
+      "href": "/apps-api/streaming-items"
+    },
+    {
+      "title": "Reference"
+    },
+    {
+      "title": "New API reference",
+      "href": "https://toloka.ai/docs/api/apps-reference/"
+    },
+    {
+      "title": "Overview",
+      "href": "/apps-api/ref/"
+    },
+    {
+      "title": "app-project",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/apps-api/ref/app-project"
+        },
+        {
+          "href": "/apps-api/ref/app-project/app-projects-get",
+          "title": "Get projects"
+        },
+        {
+          "href": "/apps-api/ref/app-project/app-projects-post",
+          "title": "Create project"
+        },
+        {
+          "href": "/apps-api/ref/app-project/app-projectsapp_project_id-get",
+          "title": "Get project by ID"
+        },
+        {
+          "href": "/apps-api/ref/app-project/app-projectsapp_project_idarchive-post",
+          "title": "Archive project"
+        },
+        {
+          "href": "/apps-api/ref/app-project/app-projectsapp_project_idunarchive-post",
+          "title": "Unarchive project"
+        }
+      ]
+    },
+    {
+      "title": "app",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/apps-api/ref/app"
+        },
+        {
+          "href": "/apps-api/ref/app/apps-get",
+          "title": "Get project templates"
+        },
+        {
+          "href": "/apps-api/ref/app/appsapp_id-get",
+          "title": "Get project template by ID"
+        }
+      ]
+    },
+    {
+      "title": "item",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/apps-api/ref/item"
+        },
+        {
+          "href": "/apps-api/ref/item/app-projectsapp_project_iditemsitem_id-get",
+          "title": "Get item by ID"
+        },
+        {
+          "href": "/apps-api/ref/item/app-projectsapp_project_iditems-get",
+          "title": "Get project items"
+        },
+        {
+          "href": "/apps-api/ref/item/app-projectsapp_project_iditems-post",
+          "title": "Add new item"
+        },
+        {
+          "href": "/apps-api/ref/item/app-projectsapp_project_iditemsbulk-post",
+          "title": "Add items in bulk"
+        }
+      ]
+    },
+    {
+      "title": "batch",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/apps-api/ref/batch"
+        },
+        {
+          "href": "/apps-api/ref/batch/app-projectsapp_project_idbatches-get",
+          "title": "Get project batches"
+        },
+        {
+          "href": "/apps-api/ref/batch/app-projectsapp_project_idbatches-post",
+          "title": "Create batch with items"
+        },
+        {
+          "href": "/apps-api/ref/batch/app-projectsapp_project_idbatchessync-post",
+          "title": "Start sync batch processing"
+        },
+        {
+          "href": "/apps-api/ref/batch/app-projectsapp_project_idbatchesbatch_id-get",
+          "title": "Get batch by ID"
+        },
+        {
+          "href": "/apps-api/ref/batch/app-projectsapp_project_idbatchesbatch_id-patch",
+          "title": "Update batch"
+        },
+        {
+          "href": "/apps-api/ref/batch/app-projectsapp_project_idbatchesbatch_idstart-post",
+          "title": "Start batch processing"
+        },
+        {
+          "href": "/apps-api/ref/batch/app-projectsapp_project_idbatchesbatch_idstop-post",
+          "title": "Stop batch processing"
+        },
+        {
+          "href": "/apps-api/ref/batch/app-projectsapp_project_idbatchesbatch_idresume-post",
+          "title": "Resume batch processing"
+        }
+      ]
+    }
   ]
 }

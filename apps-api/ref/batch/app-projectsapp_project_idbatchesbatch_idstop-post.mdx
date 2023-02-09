@@ -1,0 +1,44 @@
+---
+title: "Stop batch processing | Toloka apps API"
+date: "2023-02-06T18:34:34.426319"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "appsApiMenu"
+---
+
+import AppProjectsappProjectIdbatchesbatchIdstopPostTable1 from './app-projectsapp-project-idbatchesbatch-idstop-post/subcomponents/app-projectsapp-project-idbatchesbatch-idstop-post-table-1.mdx'
+
+# Stop batch processing
+
+## Description
+
+Stops processing the batch with the ID specified in the request. Processing can be stopped only for the batch with the `PROCESSING` status.
+
+<Note mode="tip" title="Tip">
+
+**Try our [new API reference](https://toloka.ai/docs/api/apps-reference/#post-/app-projects/-app_project_id-/batches/-batch_id-/stop):** more parameter details, request/response examples, and code samples in various programming languages.
+
+</Note>
+
+## Request
+
+method | url
+----- | -----
+post | <AppProjectsappProjectIdbatchesbatchIdstopPostTable1/>
+
+### Parameters
+
+name | type | required | description
+----- | ----- | ----- | -----
+app_project_id | path | true | Project ID.
+batch_id | path | true | Batch ID.
+
+## Responses
+
+### 200
+
+#### Description
+
+OK

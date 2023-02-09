@@ -1,0 +1,225 @@
+---
+title: "Get project items | Toloka apps API"
+date: "2023-02-06T18:34:34.790099"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "appsApiMenu"
+---
+
+import AppProjectsappProjectIditemsGetTable1 from './app-projectsapp-project-iditems-get/subcomponents/app-projectsapp-project-iditems-get-table-1.mdx'
+import AppProjectsappProjectIditemsGetTable2 from './app-projectsapp-project-iditems-get/subcomponents/app-projectsapp-project-iditems-get-table-2.mdx'
+
+# Get project items
+
+## Description
+
+Returns all the task items of the project with the ID specified in the request.
+
+<Note mode="tip" title="Tip">
+
+**Try our [new API reference](https://toloka.ai/docs/api/apps-reference/#get-/app-projects/-app_project_id-/items):** more parameter details, request/response examples, and code samples in various programming languages.
+
+</Note>
+
+## Request
+
+method | url
+----- | -----
+get | <AppProjectsappProjectIditemsGetTable1/>
+
+### Parameters
+
+name | type | required | description
+----- | ----- | ----- | -----
+app_project_id | path | true | Project ID.
+after_id | query | false | ID of the task item used for cursor pagination.
+batch_id | query | false | Batch ID.
+status | query | false | Item status.
+id_gt | query | false | Items with an ID greater than the specified value.
+id_gte | query | false | Items with an ID greater than or equal to the specified value.
+id_lt | query | false | Items with an ID smaller than the specified value.
+id_lte | query | false | Items with an ID smaller than or equal to the specified value.
+created_gt | query | false | Items created after the specified date. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss].
+created_gte | query | false | Items created after or on the specified date. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss].
+created_lt | query | false | Items created before the specified date. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss].
+created_lte | query | false | Items created on or before the specified date. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss].
+finished_gt | query | false | Items labeled after the specified date. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss].
+finished_gte | query | false | Items labeled after or on the specified date. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss].
+finished_lt | query | false | Items labeled before the specified date. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss].
+finished_lte | query | false | Items labeled before or on the specified date. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss].
+sort | query | undefined | <AppProjectsappProjectIditemsGetTable2/>
+limit | query | false | The number of items on the page is set to 100 by default. The maximum value is 1000.
+
+## Responses
+
+### 200
+
+#### Description
+
+OK
+
+<Cut title="application/json">
+
+```json
+{
+    "schema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "description": "Response to the request for the list of task items.",
+            "properties": {
+                "has_more": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "content": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "description": "A task item with data.",
+                        "required": [
+                            "app_project_id",
+                            "input_data"
+                        ],
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "Item ID."
+                            },
+                            "app_project_id": {
+                                "type": "string",
+                                "description": "ID of the project that includes the batch with this task item."
+                            },
+                            "batch_id": {
+                                "type": "string",
+                                "description": "ID of the batch that includes this task item."
+                            },
+                            "status": {
+                                "type": "string",
+                                "description": "Processing status. NEW - new, PROCESSING - being processed, COMPLETED - processing completed, ERROR - processing error, CANCELLED - processing canceled, ARCHIVE - item archived, NO_MONEY - not enough money for processing, STOPPED - processing stopped by the client.",
+                                "enum": [
+                                    "NEW",
+                                    "PROCESSING",
+                                    "COMPLETED",
+                                    "ERROR",
+                                    "CANCELLED",
+                                    "ARCHIVE",
+                                    "NO_MONEY",
+                                    "STOPPED"
+                                ]
+                            },
+                            "input_data": {
+                                "type": "object",
+                                "description": "Task item data following the project template schema."
+                            },
+                            "output_data": {
+                                "type": "object",
+                                "description": "Result of processing."
+                            },
+                            "errors": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "required": [
+                                        "code",
+                                        "message"
+                                    ],
+                                    "properties": {
+                                        "code": {
+                                            "type": "string",
+                                            "description": "String error code.",
+                                            "example": "DOES_NOT_EXIST"
+                                        },
+                                        "message": {
+                                            "type": "string",
+                                            "description": "Detailed description of the error.",
+                                            "example": "The object doesn't exist"
+                                        },
+                                        "payload": {
+                                            "type": "object",
+                                            "description": "Additional information about the error. May have a different structure for different errors.",
+                                            "nullable": true,
+                                            "example": {
+                                                "instruction_class": "dog",
+                                                "instruction_field": "example"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "format": "date-time",
+                                "description": "Date and time when the task item was created. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss]."
+                            },
+                            "started_at": {
+                                "type": "string",
+                                "format": "date-time",
+                                "description": "Date and time when task item processing started. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss]."
+                            },
+                            "finished_at": {
+                                "type": "string",
+                                "format": "date-time",
+                                "description": "Date and time when task item processing was completed. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss]."
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+</Cut>
+
+### 404
+
+#### Description
+
+Items not found.
+
+<Cut title="application/json">
+
+```json
+{
+    "schema": {
+        "type": "object",
+        "required": [
+            "request_id",
+            "code",
+            "message"
+        ],
+        "properties": {
+            "request_id": {
+                "type": "string",
+                "example": "337d68d1-974d-42b1-a2d0-6234f6373eed",
+                "description": "Internal ID of the HTTP request where the error occurred. It needs to be specified when contacting support."
+            },
+            "code": {
+                "type": "string",
+                "description": "String error code.",
+                "example": "DOES_NOT_EXIST"
+            },
+            "message": {
+                "type": "string",
+                "description": "Detailed description of the error.",
+                "example": "The object doesn't exist"
+            },
+            "payload": {
+                "type": "object",
+                "description": "Additional information about the error. May have a different structure for different errors.",
+                "nullable": true,
+                "example": {
+                    "instruction_class": "dog",
+                    "instruction_field": "example"
+                }
+            }
+        }
+    }
+}
+```
+
+</Cut>
