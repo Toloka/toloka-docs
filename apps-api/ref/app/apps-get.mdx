@@ -1,0 +1,110 @@
+---
+title: "Get project templates | Toloka apps API"
+date: "2023-02-06T18:34:33.905194"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "appsApiMenu"
+---
+
+import AppsGetTable1 from './apps-get/subcomponents/apps-get-table-1.mdx'
+import AppsGetTable2 from './apps-get/subcomponents/apps-get-table-2.mdx'
+
+# Get project templates
+
+## Description
+
+Returns the list of all the available project templates.
+
+<Note mode="tip" title="Tip">
+
+**Try our [new API reference](https://toloka.ai/docs/api/apps-reference/#get-/apps):** more parameter details, request/response examples, and code samples in various programming languages.
+
+</Note>
+
+## Request
+
+method | url
+----- | -----
+get | <AppsGetTable1/>
+
+### Parameters
+
+name | type | required | description
+----- | ----- | ----- | -----
+after_id | query | false | The parameter is used for cursor pagination and indicates the first ID that's used when generating a list of objects. It accounts for filters and sorting.
+id_gt | query | false | Only with an ID greater than the specified value.
+id_gte | query | false | Only with an ID greater than or equal to the specified value.
+id_lt | query | false | Only with an ID smaller than the specified value.
+id_lte | query | false | Only with an ID smaller than or equal to the specified value.
+sort | query | false | <AppsGetTable2/>
+limit | query | false | The number of objects on the page is set to 100 by default. The maximum value is 1000.
+lang | query | false | ISO 639 language code.
+
+## Responses
+
+### 200
+
+#### Description
+
+OK
+
+<Cut title="application/json">
+
+```json
+{
+    "schema": {
+        "type": "array",
+        "items": {
+            "type": "object",
+            "description": "Response to the request for the list of project templates (Apps).",
+            "properties": {
+                "has_more": {
+                    "type": "boolean",
+                    "default": false
+                },
+                "content": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "description": "Bespoke solution.",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "Project template ID."
+                            },
+                            "name": {
+                                "type": "string",
+                                "description": "Template name."
+                            },
+                            "image": {
+                                "type": "string",
+                                "description": "Image."
+                            },
+                            "description": {
+                                "type": "string",
+                                "description": "Template description."
+                            },
+                            "default_item_price": {
+                                "type": "number",
+                                "format": "double",
+                                "description": "Default processing cost per task item."
+                            },
+                            "examples": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "description": "Information about possible use cases for bespoke solutions."
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+</Cut>

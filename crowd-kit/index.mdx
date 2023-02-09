@@ -1,0 +1,143 @@
+---
+title: "Crowd-Kit | Crowd-Kit"
+date: "2023-02-06T17:36:09.114276"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "ckitMenu"
+---
+
+import GlobalCommunity from '../subcomponents/global-community.mdx'
+import SocialMedia from '../subcomponents/social-media.mdx'
+
+# Crowd-Kit
+
+_Computational quality control for crowdsourcing_
+
+**Crowd-Kit** is a powerful Python library that implements commonly-used aggregation methods for crowdsourced annotation and offers the relevant metrics and datasets. We strive to implement functionality that simplifies working with crowdsourced data.
+
+Currently, Crowd-Kit contains:
+
+* implementations of commonly-used aggregation methods for categorical, pairwise, textual, and segmentation responses;
+* metrics of uncertainty, consistency, and agreement with aggregate;
+* loaders for popular crowdsourced datasets.
+
+## Installing
+
+To install Crowd-Kit, run the following command:
+
+```bash
+pip install crowd-kit
+```
+
+If you also want to use the `learning` subpackage, type
+
+```bash
+pip instal crowd-kit[learning]
+```
+
+If you are interested in contributing to Crowd-Kit, use [Pipenv](https://pipenv.pypa.io/en/latest/) to install the library with its dependencies:
+
+```bash
+pipenv install --dev
+```
+
+We use [pytest](https://docs.pytest.org/en/7.1.x/) for testing.
+
+## Getting started
+
+This example shows how to use Crowd-Kit for categorical aggregation using the classical Dawid-Skene algorithm.
+
+First, let us do all the necessary imports.
+
+````python
+from crowdkit.aggregation import DawidSkene
+from crowdkit.datasets import load_dataset
+import pandas as pd
+````
+
+Then, you need to read your annotations into Pandas DataFrame with columns `task`, `worker`, `label`. Alternatively, you can download an example dataset:
+
+````python
+df = pd.read_csv('results.csv')  # should contain columns: task, worker, label
+# df, ground_truth = load_dataset('relevance-2')  # or download an example dataset
+````
+
+Then, you can aggregate the workers' responses using the `fit_predict` method from the **scikit-learn** library:
+
+````python
+aggregated_labels = DawidSkene(n_iter=100).fit_predict(df)
+````
+
+[More usage examples](https://github.com/Toloka/crowd-kit/tree/main/examples)
+
+## Implemented aggregation methods
+
+Below is the list of currently implemented methods, including the already available (✅) and in progress (🟡).
+
+### Categorical responses
+
+| Method | Status |
+| ------------- | :-------------: |
+| [Majority Vote](/docs-new/crowd-kit/reference/crowdkit.aggregation.classification.majority_vote.MajorityVote) | ✅ |
+| [One-coin Dawid-Skene](/docs-new/crowd-kit/reference/crowdkit.aggregation.classification.dawid_skene.OneCoinDawidSkene) | ✅ |
+| [Dawid-Skene](/docs-new/crowd-kit/reference/crowdkit.aggregation.classification.dawid_skene.DawidSkene) | ✅ |
+| [Gold Majority Vote](/docs-new/crowd-kit/reference/crowdkit.aggregation.classification.gold_majority_vote.GoldMajorityVote) | ✅ |
+| [M-MSR](/docs-new/crowd-kit/reference/crowdkit.aggregation.classification.m_msr.MMSR) | ✅ |
+| [Wawa](/docs-new/crowd-kit/reference/crowdkit.aggregation.classification.wawa.Wawa) | ✅ |
+| [Zero-Based Skill](/docs-new/crowd-kit/reference/crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill) | ✅ |
+| [GLAD](/docs-new/crowd-kit/reference/crowdkit.aggregation.classification.glad.GLAD) | ✅ |
+| [KOS](/docs-new/crowd-kit/reference/crowdkit.aggregation.classification.kos.KOS) | ✅ |
+| [MACE](/docs-new/crowd-kit/reference/crowdkit.aggregation.classification.mace.MACE) | ✅ |
+| BCC | 🟡 |
+
+### Multi-label responses
+
+|Method|Status|
+|-|:-:|
+|[Binary Relevance](/docs-new/crowd-kit/reference/crowdkit.aggregation.multilabel.binary_relevance.BinaryRelevance)|✅|
+
+### Textual responses
+
+| Method | Status |
+| ------------- | :-------------: |
+| [RASA](/docs-new/crowd-kit/reference/crowdkit.aggregation.embeddings.rasa.RASA) | ✅ |
+| [HRRASA](/docs-new/crowd-kit/reference/crowdkit.aggregation.embeddings.hrrasa.HRRASA) | ✅ |
+| [ROVER](/docs-new/crowd-kit/reference/crowdkit.aggregation.texts.rover.ROVER) | ✅ |
+
+### Image segmentation
+
+| Method | Status |
+| ------------------ | :------------------: |
+| [Segmentation MV](/docs-new/crowd-kit/reference/crowdkit.aggregation.image_segmentation.segmentation_majority_vote.SegmentationMajorityVote) | ✅ |
+| [Segmentation RASA](/docs-new/crowd-kit/reference/crowdkit.aggregation.image_segmentation.segmentation_rasa.SegmentationRASA) | ✅ |
+| [Segmentation EM](/docs-new/crowd-kit/reference/crowdkit.aggregation.image_segmentation.segmentation_em.SegmentationEM) | ✅ |
+
+### Pairwise comparisons
+
+| Method | Status |
+| -------------- | :---------------------: |
+| [Bradley-Terry](/docs-new/crowd-kit/reference/crowdkit.aggregation.pairwise.bradley_terry.BradleyTerry) | ✅ |
+| [Noisy Bradley-Terry](/docs-new/crowd-kit/reference/crowdkit.aggregation.pairwise.noisy_bt.NoisyBradleyTerry) | ✅ |
+
+### Learning from crowds
+
+|Method|Status|
+|-|:-:|
+|[CrowdLayer](/docs-new/crowd-kit/reference/crowdkit.learning.crowd_layer.CrowdLayer)|✅|
+|[CoNAL](/docs-new/crowd-kit/reference/crowdkit.learning.conal.CoNAL)|✅|
+|[TextSummarization](/docs-new/crowd-kit/reference/crowdkit.learning.text_summarization.TextSummarization)|✅|
+
+## Questions and bug reports
+
+* To report a bug, post an issue on the [Toloka/bugreport](https://github.com/Toloka/crowd-kit/issues) page.
+* To find answers to common questions or start a new discussion, join our English-speaking [Slack community](https://join.slack.com/t/tolokacommunity/shared_invite/zt-1il4olbgh-2pK2zhDGix46uks0vfUqpQ).
+
+## Source code
+
+* [Crowd-Kit on GitHub](https://github.com/Toloka/crowd-kit)
+
+<GlobalCommunity/>
+
+<SocialMedia/>

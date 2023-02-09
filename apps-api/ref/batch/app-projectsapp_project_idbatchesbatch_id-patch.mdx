@@ -1,0 +1,224 @@
+---
+title: "Update batch | Toloka apps API"
+date: "2023-02-06T18:34:34.349595"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "appsApiMenu"
+---
+
+import AppProjectsappProjectIdbatchesbatchIdPatchTable1 from './app-projectsapp-project-idbatchesbatch-id-patch/subcomponents/app-projectsapp-project-idbatchesbatch-id-patch-table-1.mdx'
+
+# Update batch
+
+## Description
+
+Modifies the name and priority of the batch with the ID specified in the request.
+
+For `priority_order`, `ONE` is the highest value, batch items which have this value will be sent for labeling first in the queue. The default value is `FIVE`. If you don't specify `name` or `priority_order` parameter values, they will not change.
+
+<Note mode="tip" title="Tip">
+
+**Try our [new API reference](https://toloka.ai/docs/api/apps-reference/#patch-/app-projects/-app_project_id-/batches/-batch_id-):** more parameter details, request/response examples, and code samples in various programming languages.
+
+</Note>
+
+## Request
+
+method | url
+----- | -----
+patch | <AppProjectsappProjectIdbatchesbatchIdPatchTable1/>
+
+### Parameters
+
+name | type | required | description
+----- | ----- | ----- | -----
+app_project_id | path | true | Project ID.
+batch_id | path | true | Batch ID.
+
+## Responses
+
+### 200
+
+#### Description
+
+OK
+
+<Cut title="application/json">
+
+```json
+{
+    "schema": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "string",
+                "description": "Batch ID."
+            },
+            "app_project_id": {
+                "type": "string",
+                "description": "Project ID."
+            },
+            "status": {
+                "type": "string",
+                "description": "The state of the batch, calculated based on the states of items comprising it.",
+                "enum": [
+                    "NEW",
+                    "PROCESSING",
+                    "COMPLETED",
+                    "ERROR",
+                    "CANCELLED",
+                    "NO_MONEY",
+                    "ARCHIVE",
+                    "LOADING",
+                    "STOPPING",
+                    "STOPPED"
+                ]
+            },
+            "name": {
+                "type": "string",
+                "description": "Batch name."
+            },
+            "item_count": {
+                "type": "integer",
+                "description": "Number of items in the batch."
+            },
+            "item_price": {
+                "type": "number",
+                "format": "double",
+                "description": "The cost of processing per task item in a batch."
+            },
+            "cost": {
+                "type": "number",
+                "format": "double",
+                "description": "The cost of processing per batch."
+            },
+            "cost_of_processed": {
+                "type": "number",
+                "format": "double",
+                "description": "Cost of already processed task items."
+            },
+            "created_at": {
+                "type": "string",
+                "format": "date-time",
+                "description": "Date and time when the batch was created. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss]."
+            },
+            "started_at": {
+                "type": "string",
+                "format": "date-time",
+                "description": "Date and time when batch processing started. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss]."
+            },
+            "finished_at": {
+                "type": "string",
+                "format": "date-time",
+                "description": "Date and time when batch processing was completed. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss]."
+            },
+            "read_only": {
+                "type": "boolean"
+            },
+            "last_items_import": {
+                "type": "object",
+                "description": "Meta-information on asynchronous loading operation (possible via UI).",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "records_count": {
+                        "type": "integer",
+                        "description": "Number of items in the loading operation."
+                    },
+                    "records_processed": {
+                        "type": "integer",
+                        "description": "Number of successfully loaded items in the loading operation."
+                    },
+                    "errors": {
+                        "type": "object",
+                        "description": "Errors during the loading operation."
+                    }
+                }
+            },
+            "confidence_avg": {
+                "type": "number",
+                "format": "double",
+                "description": "Average labeling quality."
+            },
+            "items_processed_count": {
+                "type": "integer",
+                "description": "Number of labeled items."
+            },
+            "eta": {
+                "type": "string",
+                "format": "date-time",
+                "description": "Expected date and time when batch processing will be completed. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss]."
+            },
+            "items_per_state": {
+                "type": "object",
+                "description": "Statistics on the number of items in each state."
+            },
+            "priority_order": {
+                "type": "string",
+                "description": "Batch priority. `ONE` is the highest value, batch items with this `priority_order` value will be sent for labeling first in the queue. The default value is `FIVE`.",
+                "enum": [
+                    "ONE",
+                    "TWO",
+                    "THREE",
+                    "FOUR",
+                    "FIVE"
+                ]
+            }
+        }
+    }
+}
+```
+
+</Cut>
+
+### 404
+
+#### Description
+
+Batch {batch_id} not found.
+
+<Cut title="application/json">
+
+```json
+{
+    "schema": {
+        "type": "object",
+        "required": [
+            "request_id",
+            "code",
+            "message"
+        ],
+        "properties": {
+            "request_id": {
+                "type": "string",
+                "example": "337d68d1-974d-42b1-a2d0-6234f6373eed",
+                "description": "Internal ID of the HTTP request where the error occurred. It needs to be specified when contacting support."
+            },
+            "code": {
+                "type": "string",
+                "description": "String error code.",
+                "example": "DOES_NOT_EXIST"
+            },
+            "message": {
+                "type": "string",
+                "description": "Detailed description of the error.",
+                "example": "The object doesn't exist"
+            },
+            "payload": {
+                "type": "object",
+                "description": "Additional information about the error. May have a different structure for different errors.",
+                "nullable": true,
+                "example": {
+                    "instruction_class": "dog",
+                    "instruction_field": "example"
+                }
+            }
+        }
+    }
+}
+```
+
+</Cut>

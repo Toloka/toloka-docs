@@ -1,0 +1,44 @@
+---
+title: "Resume batch processing | Toloka apps API"
+date: "2023-02-06T18:34:34.637120"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "appsApiMenu"
+---
+
+import AppProjectsappProjectIdbatchesbatchIdresumePostTable1 from './app-projectsapp-project-idbatchesbatch-idresume-post/subcomponents/app-projectsapp-project-idbatchesbatch-idresume-post-table-1.mdx'
+
+# Resume batch processing
+
+## Description
+
+Resumes processing the batch with the ID specified in the request. Processing can be resumed only for the batch with the `STOPPING` or `STOPPED` status.
+
+<Note mode="tip" title="Tip">
+
+**Try our [new API reference](https://toloka.ai/docs/api/apps-reference/#post-/app-projects/-app_project_id-/batches/-batch_id-/resume):** more parameter details, request/response examples, and code samples in various programming languages.
+
+</Note>
+
+## Request
+
+method | url
+----- | -----
+post | <AppProjectsappProjectIdbatchesbatchIdresumePostTable1/>
+
+### Parameters
+
+name | type | required | description
+----- | ----- | ----- | -----
+app_project_id | path | true | Project ID.
+batch_id | path | true | Batch ID.
+
+## Responses
+
+### 200
+
+#### Description
+
+OK

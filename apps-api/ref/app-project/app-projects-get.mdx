@@ -1,0 +1,177 @@
+---
+title: "Get projects | Toloka apps API"
+date: "2023-02-06T18:34:34.074073"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "appsApiMenu"
+---
+
+import AppProjectsGetTable1 from './app-projects-get/subcomponents/app-projects-get-table-1.mdx'
+import AppProjectsGetTable2 from './app-projects-get/subcomponents/app-projects-get-table-2.mdx'
+
+# Get projects
+
+## Description
+
+Returns the list of all the currently available projects. You can also filter this list using the query parameters.
+
+<Note mode="tip" title="Tip">
+
+**Try our [new API reference](https://toloka.ai/docs/api/apps-reference/#get-/app-projects):** more parameter details, request/response examples, and code samples in various programming languages.
+
+</Note>
+
+## Request
+
+method | url
+----- | -----
+get | <AppProjectsGetTable1/>
+
+### Parameters
+
+name | type | required | description
+----- | ----- | ----- | -----
+app_id | query | false | ID of the bespoke solution that the projects belong to.
+parent_app_project_id | query | false | ID of the project used for cloning. This is specified only if you have created a new project by cloning another project. You can clone projects in the web version of Toloka.
+status | query | false | Project status.
+after_id | query | false | ID of the project used for cursor pagination.
+id_gt | query | false | Projects with an ID greater than the specified value.
+id_gte | query | false | Projects with an ID greater than or equal to the specified value.
+id_lt | query | false | Projects with an ID less than the specified value.
+id_lte | query | false | Projects with an ID less than or equal to the specified value.
+name_gt | query | false | Projects with a name lexicographically greater than the specified value.
+name_gte | query | false | Projects with a name lexicographically greater than or equal to the specified value.
+name_lt | query | false | Projects with a name lexicographically smaller than the specified value.
+name_lte | query | false | Projects with a name lexicographically smaller than or equal to the specified value.
+created_gt | query | false | Projects created after the specified date. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss].
+created_gte | query | false | Projects created after or on the specified date. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss].
+created_lt | query | false | Projects created before the specified date. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss].
+created_lte | query | false | Projects created before or on the specified date. The date and time is specified in UTC in ISO 8601 format: YYYY-MM-DDThh:mm:ss[.sss].
+sort | query | false | <AppProjectsGetTable2/>
+limit | query | false | The number of objects on the page is set to 100 by default. The maximum value is 5000.
+scope | query | false | Projects created by a specified range of requesters: MY - Only by me; COMPANY - By anyone from the company; REQUESTER_LIST - By requesters with the specified IDs.
+requester_ids | query | false | List of requester IDs separated by a comma, for scope = REQUESTER_LIST.
+
+## Responses
+
+### 200
+
+#### Description
+
+OK
+
+<Cut title="application/json">
+
+```json
+{
+    "schema": {
+        "type": "object",
+        "description": "Response to the request for the list of projects.",
+        "properties": {
+            "has_more": {
+                "type": "boolean",
+                "default": false
+            },
+            "items": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "description": "Project.",
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "example": "1"
+                        },
+                        "app_id": {
+                            "type": "string",
+                            "example": "20"
+                        },
+                        "parent_app_project_id": {
+                            "type": "string",
+                            "description": "2"
+                        },
+                        "status": {
+                            "type": "string",
+                            "enum": [
+                                "CREATING",
+                                "READY",
+                                "ARCHIVED",
+                                "ERROR"
+                            ],
+                            "description": "Project statuses for asynchronous creation."
+                        },
+                        "created": {
+                            "type": "string",
+                            "format": "date-time"
+                        },
+                        "name": {
+                            "type": "string",
+                            "example": "My app-project"
+                        },
+                        "item_price": {
+                            "type": "number",
+                            "format": "double",
+                            "example": 0.05
+                        },
+                        "parameters": {
+                            "type": "object"
+                        },
+                        "errors": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "required": [
+                                    "code",
+                                    "message"
+                                ],
+                                "properties": {
+                                    "code": {
+                                        "type": "string",
+                                        "description": "String error code.",
+                                        "example": "DOES_NOT_EXIST"
+                                    },
+                                    "message": {
+                                        "type": "string",
+                                        "description": "Detailed description of the error.",
+                                        "example": "The object doesn't exist"
+                                    },
+                                    "payload": {
+                                        "type": "object",
+                                        "description": "Additional information about the error. May have a different structure for different errors.",
+                                        "nullable": true,
+                                        "example": {
+                                            "instruction_class": "dog",
+                                            "instruction_field": "example"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "read_only": {
+                            "type": "boolean"
+                        },
+                        "app": {
+                            "type": "object",
+                            "description": "Brief information about the project template.",
+                            "properties": {
+                                "id": {
+                                    "type": "string",
+                                    "description": "Template ID."
+                                },
+                                "name": {
+                                    "type": "string",
+                                    "description": "Template name."
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+</Cut>
