@@ -1,0 +1,80 @@
+---
+title: "Reject responses from Tolokers | Toloka-Kit"
+date: "2023-02-07T15:41:31.641406"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import RejectAssignment from './subcomponents/reject_assignment.mdx'
+
+# Reject responses from Tolokers
+
+_Reject Toloker responses with the IDs specified in the request._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Reject Toloker response {#step-three}
+
+[Find out](/docs-new/toloka-kit/recipes/get-responses) the ID of the Toloker response that your want to reject and use the [reject_assignment()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.reject_assignment) method to reject the response and leave a comment.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      rejected_assignment = toloka_client.<Term term="reject_assignment"><RejectAssignment/></Term>('0001d38f5b--61c8be2074fdb82592f97887', 'The answer is not clear')
+    </HighlightChildren>
+  }
+  textToCopy={`rejected_assignment = toloka_client.reject_assignment('0001d38f5b--61c8be2074fdb82592f97887', 'The answer is not clear')`}
+/>
+
+The Toloker response will be marked as rejected with the `The answer is not clear` comment added to it.
+
+### 4. Print Toloker response status and public comment {#step-four}
+
+The `reject_assignment()` request will return the [Assignment](/docs-new/toloka-kit/reference/toloka.client.assignment.Assignment) class object. You can use its attributes to print the information you need.
+
+```python
+print(rejected_assignment.status, rejected_assignment.public_comment)
+```
+
+You should get an output with the updated Toloker response status and public comment which looks like this.
+
+```bash
+Status.REJECTED The answer is not clear
+```
+
+## Complete code: Reject responses from Tolokers {#complete-code}
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+rejected_assignment = toloka_client.reject_assignment('0001d38f5b--61c8be2074fdb82592f97887', 'The answer is not clear')
+print(rejected_assignment.status, rejected_assignment.public_comment)
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[reject_assignment()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.reject_assignment) method_
+
+</Note>
+
+## See also {#see-also}
+
+- [How does Toloka work?](https://toloka.ai/en/docs/guide/concepts/overview)
+- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [Toloka-Kit: Assignment class](/docs-new/toloka-kit/reference/toloka.client.assignment.Assignment)
+- [Toloka API: Update response](https://toloka.ai/docs/api/api-reference/#patch-/assignments/-id-)

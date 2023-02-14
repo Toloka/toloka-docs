@@ -1,0 +1,28 @@
+---
+title: "action.play-pause | Template Builder"
+date: "2023-02-10T09:15:34.956336"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+# action.play-pause
+
+This component controls audio or video playback. It stops playback in progress or starts if it is stopped.
+
+For example, this component will allow you to play two videos simultaneously.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/AiIEBqw-3YbMBH">View example</Button>
+
+You can also stop or start playback for some event ([plugin.trigger](/docs-new/template-builder/reference/plugin.trigger)) or by pressing the hotkey ([plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys)).
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/ip43S-aL3tz9c7">View example</Button>
+
+## Component properties {#properties}
+
+**Name** | **Type** | **Description**
+----- | ----- | -----
+`type`<span style="color: red">\*</span> | "action.play-pause" | Set component type.
+`view` | _ref_ | Points to the component that plays audio or video.

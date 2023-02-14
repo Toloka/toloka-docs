@@ -1,0 +1,62 @@
+---
+title: "Troubleshooting | Template Builder"
+date: "2023-02-10T09:15:35.709816"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import JsonGuideEscapingJson from '../subcomponents/quickstart/id-json-guide/escaping-json.mdx'
+import ContactSupport from '../subcomponents/contact-support.mdx'
+import TroubleshootingTable1 from './troubleshooting/subcomponents/troubleshooting-table-1.mdx'
+import TroubleshootingTable2 from './troubleshooting/subcomponents/troubleshooting-table-2.mdx'
+
+# Troubleshooting
+
+## Video and audio {#media}
+
+<Cut title="Video or audio is not playing">
+
+Errors may occur when playing back the linked media files. The preview window shows the error causes. The table below describes how to troubleshoot errors.
+
+**Error message**|**Cause and fix**
+----- | -----
+Playback was interrupted|**Cause:** Getting and downloading the media file has been interrupted by a Toloker.<br/><br/>**How to fix:** Refresh the page.
+Can't download video/audio due to network problems|**Cause:** The media file can't be downloaded because the network connection is down or unstable.<br/><br/>**How to fix:** Check the network connection and refresh the page.
+The format is not supported by your device|**Cause:** An attempt to decode the media file has failed.<br/><br/>This might happen if the media file format mismatches the device codec or the file is damaged.<br/><br/><TroubleshootingTable2/>
+Video/audio file download failure or non-video file hosted at the URL| <TroubleshootingTable1/>
+
+</Cut>
+
+## Shortcuts {#hotkey}
+
+<Cut title="A shortcut is not displayed">
+
+To display a shortcut in the interface, set the shortcut to the same [action](/docs-new/template-builder/reference/actions) that is performed when the button is clicked.
+
+Assign an action to the component if you haven't yet:
+
+- [action.set](/docs-new/template-builder/reference/action.set) for radio buttons.
+- [action.toggle](/docs-new/template-builder/reference/action.toggle) for checkboxes.
+- [action.play-pause](/docs-new/template-builder/reference/action.play-pause) for playback control.
+- [action.open-close](/docs-new/template-builder/reference/action.open-close) to zoom in on images.
+
+You can see the full list of actions in [List of actions](/docs-new/template-builder/reference/actions).
+
+Keep in mind the following:
+
+- The data types for actions must be the same. For example, in the following case the shortcut works but is not displayed: clicking on the button saves the `“true”` string to the results, and the Boolean value `true` is defined for the shortcut.
+- If multiple actions are triggered when the button is clicked ([action.bulk](/docs-new/template-builder/reference/action.bulk)), the sequence of these actions for the shortcut must be the same.
+- If you use a conditional operator to select an action, such as [helper.if](/docs-new/template-builder/reference/helper.if), the same conditional operator (**helper.if**) must be called under the same rules when the shortcut key is pressed.
+
+</Cut>
+
+## Escaping
+
+#### How to add quotation marks and slashes in JSON
+
+<JsonGuideEscapingJson/>
+
+<ContactSupport/>

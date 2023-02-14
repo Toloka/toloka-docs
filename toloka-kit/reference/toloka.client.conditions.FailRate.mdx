@@ -1,0 +1,25 @@
+---
+title: "FailRate | Toloka-Kit"
+date: "2023-02-07T15:42:17.139140"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# FailRate
+`toloka.client.conditions.FailRate` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/conditions.py#L167)
+
+```python
+FailRate(
+    self,
+    operator: CompareOperator,
+    value: Optional[float] = None
+)
+```
+
+Deprecated. The percentage of unsolved captchas.
+
+`FailRate` is used with collectors:
+- [Captcha](/docs-new/toloka-kit/reference/toloka.client.collectors.Captcha)

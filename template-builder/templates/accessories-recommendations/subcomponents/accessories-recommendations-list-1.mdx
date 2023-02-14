@@ -1,0 +1,40 @@
+If there are several possible answers, use the [field.checkbox-group](/docs-new/template-builder/reference/field.checkbox-group) component.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+"type": "field.checkbox-group",
+"label": "Select the statements that apply to both products:",
+"options": [
+  {
+    "label": "Product category is “Candy and chocolate”.",
+    "value": "1"
+  },
+  {
+    "label": "The type of chocolate is “Milk”.",
+    "value": "2"
+  },
+  {
+    "label": "The flavor is “Chocolate and caramel”.",
+    "value": "3"
+  },
+  {
+    "label": "The form is “Chocolate bar”.",
+    "value": "4"
+  }
+],
+"data": {
+  "type": "data.output",
+  "path": ""
+},
+"validation": {
+  "type": "condition.required",
+  "hint": "Select one or more options"
+}
+  }
+  ```
+
+  </Cut>
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/swfEubVh3ttCg3">View example</Button>

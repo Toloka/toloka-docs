@@ -1,0 +1,140 @@
+---
+title: "Creating specifications | Template Builder"
+date: "2023-02-10T09:15:36.426111"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactSupport from '../subcomponents/contact-support.mdx'
+import CreateSpecsList1 from './create-specs/subcomponents/create-specs-list-1.mdx'
+import CreateSpecsList2 from './create-specs/subcomponents/create-specs-list-2.mdx'
+import CreateSpecsList3 from './create-specs/subcomponents/create-specs-list-3.mdx'
+import CreateSpecsList4 from './create-specs/subcomponents/create-specs-list-4.mdx'
+import CreateSpecsList5 from './create-specs/subcomponents/create-specs-list-5.mdx'
+import CreateSpecsList6 from './create-specs/subcomponents/create-specs-list-6.mdx'
+import CreateSpecsList7 from './create-specs/subcomponents/create-specs-list-7.mdx'
+import CreateSpecsList8 from './create-specs/subcomponents/create-specs-list-8.mdx'
+import CreateSpecsList9 from './create-specs/subcomponents/create-specs-list-9.mdx'
+import CreateSpecsList10 from './create-specs/subcomponents/create-specs-list-10.mdx'
+import CreateSpecsList11 from './create-specs/subcomponents/create-specs-list-11.mdx'
+import CreateSpecsList12 from './create-specs/subcomponents/create-specs-list-12.mdx'
+import CreateSpecsList13 from './create-specs/subcomponents/create-specs-list-13.mdx'
+import CreateSpecsList14 from './create-specs/subcomponents/create-specs-list-14.mdx'
+import CreateSpecsTable1 from './create-specs/subcomponents/create-specs-table-1.mdx'
+import CreateSpecsTable2 from './create-specs/subcomponents/create-specs-table-2.mdx'
+
+# Creating specifications
+
+Project settings in Toloka must include specifications for the [input and output data](https://toloka.ai/en/docs/glossary#input-output-data). If you use Template Builder in the Toloka interface, the specification is created automatically by default.
+
+<Note mode="restriction" title="Alert">
+
+Specifications are currently created in test mode. After saving the project, check the input and output data specifications. If you have any problems, please contact [support](/docs-new/template-builder/support).
+
+</Note>
+
+## Specification setting modes {#create_specs__data-spec-mode}
+
+You can configure the specification automatically or manually. You can change the way the specification is configured using the **Define data specification manually** option. This option is disabled by default.
+
+<Tabs tabs={[
+  { title: 'Option disabled', value: <CreateSpecsList1/> },
+  { title: 'Option enabled', value: <CreateSpecsList2/> },
+]}/>
+
+## Filling in input data {#input-data-create}
+
+If automatic generation of specifications is enabled, the input data fields are created from the configuration code. Provide a detailed example to get a ready-to-use specification. If you have optional fields, include them also.
+
+**Examples:**
+
+<Tabs tabs={[
+  { title: 'String', value: <CreateSpecsList3/> },
+  { title: 'true/false', value: <CreateSpecsList4/> },
+  { title: 'Number', value: <CreateSpecsList5/> },
+  { title: 'JSON', value: <CreateSpecsList6/> },
+  { title: 'Array', value: <CreateSpecsList7/> },
+]}/>
+
+<Note mode="note" title="Note">
+
+By default, all the input data fields are marked as required in the specification. To make the field optional, specify the `default` property in the [data.input](/docs-new/template-builder/operations/work-with-data) configuration component.
+
+</Note>
+
+## Filling in output data {#output-data-create}
+
+If automatic generation of specifications is enabled, the output data fields are created from the configuration code. It takes into account the components that use `data.output` as well as the values supported by it.
+
+**Examples:**
+
+<Tabs tabs={[
+  { title: 'true/false', value: <CreateSpecsList8/> },
+  { title: 'String', value: <CreateSpecsList9/> },
+  { title: 'Number', value: <CreateSpecsList10/> },
+  { title: 'JSON', value: <CreateSpecsList11/> },
+  { title: 'Array', value: <CreateSpecsList12/> },
+]}/>
+
+<Note mode="note" title="Note">
+
+If there are different types of values in the output, the **JSON** type will be included in the specification.
+
+</Note>
+
+## How to edit the specification {#manual-setting}
+
+<Note mode="note" title="Note">
+
+Specification editing is available only when the **Define data specification manually** option is enabled.
+
+</Note>
+
+There are two ways to edit the specification in project settings: using either regular mode or JSON mode. JSON mode gives you more options — you can hide input data and use regular expressions to validate output data.
+
+<Tabs tabs={[
+  { title: 'Regular mode', value: <CreateSpecsList13/> },
+  { title: 'JSON mode', value: <CreateSpecsList14/> },
+]}/>
+
+<Cut title="Explanations for configuring fields">
+
+**Parameter**|**Parameter in JSON**|**Overview**
+----- | ----- | -----
+**Name**|`id`|Field ID. Only Latin letters, numbers, hyphens, and underscores are allowed.
+**Type**|`type`| <CreateSpecsTable1/>
+**Required**|`required`|Whether the field must be filled when uploading the tasks for the input data.<br/><br/>Whether the Toloker's response is required in the output data.<br/><br/>By default, fields are optional — `false`.
+**Hidden**|`hidden`| <CreateSpecsTable2/>
+**Array**|`array_<type>`|Array of objects of the same type. Used, for example, for multiple photos uploaded by a Toloker.<br/><br/>In JSON mode, there is a separate data type for the array. For example: `"type": "array_file"`.
+**Min size**|`min_size`|Minimum number of items in the array.
+**Max size**|`max_size`|Maximum number of items in the array.
+**Allowed values**|`allowed_values`|Allowed values for string, integer, float and boolean data types.
+**Min length**|`min_length`|Minimum length of the string.
+**Max length**|`max_length`|Maximum length of the string.
+**Min value**|`min_value`|Minimum values for float and integer numbers.
+**Max value**|`max_value`|Maximum values for float and integer numbers.
+**Current location**|`current_location`|Saving the Toloker's current coordinates (`true`/`false`). Only for the `coordinates` data type. Used in tasks for the mobile app.<br/><br/>The default value is `false`.
+**Pattern**|`pattern`|Regular expression that the string must match. You can configure this parameter in JSON mode.
+
+</Cut>
+
+## Recommendations {#recomendations}
+
+- If you edit a required field, the changes apply only to new task [pools](https://toloka.ai/en/docs/glossary#pool). For example, if you need to fix an error in a project, [clone the pool](https://toloka.ai/en/docs/guide/concepts/pool-main) or [create a new one](https://toloka.ai/en/docs/guide/concepts/pool-main). Existing task pools will continue using the previous version of the project.
+
+- In the output, use value validation and don't forget to mark the field as required if a Toloker has to fill it in.
+- Hidden fields are intended only for requesters and are not available in the task interface. The values of hidden fields can't be used either in the JS code or in the template constructor.
+
+    Let's say you pass product data (like articles or batch numbers) that Tolokers don't need in order to complete the task. Or you are moderating comments and you need the authors' personal data in the results for further data processing, but Tolokers shouldn't have access to personal data.
+
+    To create a hidden field, add it to the specification yourself and then add the `"hidden": true` parameter to this field in JSON mode. You should do this in Toloka when configuring your project. The hidden field remains when the specification is re-generated using the Template Builder.
+
+## What's next {#what-next}
+
+- [See examples of data read and write](/docs-new/template-builder/operations/input-output-data).
+- [Learn how to clear the entered data](/docs-new/template-builder/operations/clear-data).
+
+<ContactSupport/>

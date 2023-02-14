@@ -1,0 +1,92 @@
+---
+title: "Reply to message thread | Toloka-Kit"
+date: "2023-02-07T15:40:38.784285"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import MessageThreadReply from './subcomponents/MessageThreadReply.mdx'
+import ReplyMessageThread from './subcomponents/reply_message_thread.mdx'
+
+# Reply to message thread
+
+_Send a reply to a message thread in Toloka._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Send reply to thread {#step-three}
+
+[Find out](/docs-new/toloka-kit/recipes/get-message-threads) the ID of the message thread you want to reply to. Then compose a reply using the [MessageThreadReply](/docs-new/toloka-kit/reference/toloka.client.message_thread.MessageThreadReply) class object for that.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      {`message_reply = toloka.message_thread.`}<Term term="MessageThreadReply"><MessageThreadReply/></Term>{`(text={'EN': 'Thank you!'})
+response_to_thread = toloka_client.`}<Term term="reply_message_thread"><ReplyMessageThread/></Term>{`(
+    message_thread_id='63c15cfd757a4a1adad1d633',
+    reply=message_reply
+)`}
+    </HighlightChildren>
+  }
+  textToCopy={`message_reply = toloka.message_thread.MessageThreadReply(text={'EN': 'Thank you!'})
+response_to_thread = toloka_client.reply_message_thread(
+    message_thread_id='63c15cfd757a4a1adad1d633',
+    reply=message_reply
+)`}
+/>
+
+### 4. Display sent reply info {#step-four}
+
+The `reply_message_thread()` request will return the [MessageThread](/docs-new/toloka-kit/reference/toloka.client.message_thread.MessageThread) class object. You can use its attributes to print the information you need.
+
+```python
+print(response_to_thread.id, response_to_thread.created)
+```
+
+You should get an output with the message ID and creation time which looks like this.
+
+```bash
+63c15cfd757a4a1adad1d633 2023-01-13 13:36:13.894000+00:00
+```
+
+## Complete code: Reply to message thread {#complete-code}
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+message_reply = toloka.message_thread.MessageThreadReply(text={'EN': 'Thank you!'})
+response_to_thread = toloka_client.reply_message_thread(
+    message_thread_id='63c15cfd757a4a1adad1d633',
+    reply=message_reply
+)
+print(response_to_thread.id, response_to_thread.created)
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[MessageThreadReply](/docs-new/toloka-kit/reference/toloka.client.message_thread.MessageThreadReply) class_
+- _[reply_message_thread()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.reply_message_thread) method_
+
+</Note>
+
+## See also {#see-also}
+
+- [How does Toloka work?](https://toloka.ai/en/docs/guide/concepts/overview)
+- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [Toloka-Kit: MessageThread class](/docs-new/toloka-kit/reference/toloka.client.message_thread.MessageThread)
+- [Toloka API: Reply to message thread](https://toloka.ai/docs/api/api-reference/#post-/message-threads/-id-/reply)

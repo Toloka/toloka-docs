@@ -1,0 +1,32 @@
+---
+title: "RuleConfig | Toloka-Kit"
+date: "2023-02-07T15:41:57.546301"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# RuleConfig
+`toloka.client.quality_control.QualityControl.QualityControlConfig.RuleConfig` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/quality_control.py#L122)
+
+```python
+RuleConfig(
+    self,
+    *,
+    action: Optional[RuleAction] = None,
+    conditions: Optional[List[RuleCondition]] = None
+)
+```
+
+Conditions and action if conditions are met
+
+The values for the conditions are taken from the collector.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`action`|**Optional\[[RuleAction](/docs-new/toloka-kit/reference/toloka.client.actions.RuleAction)\]**|<p>Action if conditions are met (for example, close access to the project).</p>
+`conditions`|**Optional\[List\[[RuleCondition](/docs-new/toloka-kit/reference/toloka.client.conditions.RuleCondition)\]\]**|<p>Conditions (for example, skipping 10 sets of tasks in a row).</p>

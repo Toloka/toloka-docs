@@ -1,0 +1,79 @@
+---
+title: "Change task overlap | Toloka-Kit"
+date: "2023-02-07T15:40:38.478129"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import PatchTask from './subcomponents/patch_task.mdx'
+
+# Change task overlap
+
+_Increase the overlap of a task when you need more Tolokers to complete it._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Change task overlap {#step-three}
+
+[Find out](/docs-new/toloka-kit/recipes/get-tasks) the ID of the task which you want to modify. Then change the task overlap calling the `patch_task()` method.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      task = toloka_client.<Term term="patch_task"><PatchTask/></Term>('00022da5a7--6388b40547c84000494cdc5a', overlap=5)
+    </HighlightChildren>
+  }
+  textToCopy={`task = toloka_client.patch_task('00022da5a7--6388b40547c84000494cdc5a', overlap=5)`}
+/>
+
+### 4. Display resulting task overlap {#step-four}
+
+The `patch_task()` request will return the [Task](/docs-new/toloka-kit/reference/toloka.client.task.Task) class object. You can use its attributes to print the information you need.
+
+```python
+print(task.id, task.overlap)
+```
+
+You should get an output with the task ID and modified overlap which looks like this.
+
+```bash
+00022da5a7--6388b40547c84000494cdc5a 5
+```
+
+## Complete code: Change task overlap {#complete-code}
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+task = toloka_client.patch_task('00022da5a7--6388b40547c84000494cdc5a', overlap=5)
+print(task.id, task.overlap)
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[patch_task()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.patch_task) method_
+
+</Note>
+
+## See also {#see-also}
+
+- [How does Toloka work?](https://toloka.ai/en/docs/guide/concepts/overview)
+- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [Get list of tasks](/docs-new/toloka-kit/recipes/get-tasks)
+- [Toloka-Kit: Task class](/docs-new/toloka-kit/reference/toloka.client.task.Task)
+- [Toloka API: Edit task](https://toloka.ai/docs/api/api-reference/#patch-/tasks/-id-)

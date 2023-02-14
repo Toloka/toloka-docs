@@ -1,0 +1,232 @@
+---
+title: "Project 3. Are the bounding boxes correct? | Toloka tutorials"
+date: "2023-02-14T11:23:05.497729"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tutorialsMenu"
+---
+
+import TolokaRequesterPoolType from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx'
+import TolokaRequesterPoolName from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
+import TolokaRequesterPoolDescription from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
+import TolokaRequesterSourceAudienceSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/audience-settings.mdx'
+import TutorialsLanguageFilter from './subcomponents/language-filter.mdx'
+import TutorialsShockingContent from './subcomponents/shocking-content-filter.mdx'
+import TutorialsPlatformFilter from './subcomponents/platform-filter.mdx'
+import TolokaRequesterSourcePriceSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/price-settings.mdx'
+import TutorialsQualityControl from './subcomponents/quality-control.mdx'
+import TutorialsTimePerTaskSuite from './subcomponents/time-per-task-suite.mdx'
+import TutorialsUploadTasks from './subcomponents/upload-tasks.mdx'
+import ContactSupport from '../guide/subcomponents/contact-support.mdx'
+import ImageSegmentationProject3List1 from './image-segmentation-project3/subcomponents/image-segmentation-project3-list-1.mdx'
+import ImageSegmentationProject3List2 from './image-segmentation-project3/subcomponents/image-segmentation-project3-list-2.mdx'
+import ImageSegmentationProject3List3 from './image-segmentation-project3/subcomponents/image-segmentation-project3-list-3.mdx'
+import ImageSegmentationProject3List4 from './image-segmentation-project3/subcomponents/image-segmentation-project3-list-4.mdx'
+
+# Project 3. Are the bounding boxes correct?
+
+In this [project](https://toloka.ai/en/docs/glossary#project), Tolokers will determine if traffic signs were selected correctly on the images in [project 1](/docs-new/tutorials/image-segmentation-project1), and submit the responses in [project 2](/docs-new/tutorials/image-segmentation-project2).
+
+## Create a project {#create-project}
+
+#### In the interface:
+
+1. Choose a preset:
+
+    1. Click **Create project**.
+    1. Select the **Object recognition & detection** preset.
+    1. Click **Choose this preset**.
+
+1. Provide general information:
+
+    1. In the **Name for Tolokers** field, enter `Are the traffic signs outlined correctly?`.
+    1. In the **Description for Tolokers** field, enter `Look at the image and decide whether the traffic signs are outlined correctly or not`.
+    1. Optionally add a **Private comment**.
+
+1. Edit the task interface. The output data format depends on the interface editor, so choose the same editor as in [Project 2](/docs-new/tutorials/image-segmentation-project2#interface-tb-html).
+
+   <Tabs tabs={[
+      { title: 'Template Builder', value: <ImageSegmentationProject3List1/> },
+      { title: 'HTML/CSS/JS editor', value: <ImageSegmentationProject3List4/> },
+    ]}/>
+
+1. Save the changes.
+
+1. Write instructions for Tolokers:
+
+    **Instructions:**
+
+    ```plaintext
+    Look at the image and answer the question: **Are all traffic signs outlined correctly?**
+    If there are, click **Yes**.
+    If there isn't, click **No**.
+    For example, road signs are outlined correctly, so the correct answer is **Yes**.
+    ```
+
+    <Note mode="tip" title="Tip">
+
+    If you want to add a task examples in the instruction, complete it yourself in the preview mode. Take screenshots, upload them to photo hosting or cloud storage and insert image links in the instructions by clicking the <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425175297/1675425175297_original_svg.svg" alt="" /> button on the toolbar.
+
+    </Note>
+
+1. Click **Create project**.
+
+## Create a pool {#create_pool}
+
+1. Open the project page titled **Are the traffic signs outlined correctly?**.
+
+1. Click **Add a pool** on the project page.
+
+1. <TolokaRequesterPoolType/>
+
+1. <TolokaRequesterPoolName/>
+
+1. <TolokaRequesterPoolDescription/>
+
+1. Click **Create**.
+
+1. <TolokaRequesterSourceAudienceSettings/>
+
+    1. <TutorialsLanguageFilter/>
+
+    1. <TutorialsShockingContent/>
+
+    1. <TutorialsPlatformFilter/>
+
+    1. Add another filter. Click **Add filter**.
+
+    1. Find the **Skills** block in the list and select the **My skills** skill.
+
+    1. In the **Skills** field, select **Area selection**.
+
+    1. In the **?** field specify `=`.
+
+    1. Leave the **Missing** field blank.
+
+1. (optional) In the **Speed/quality balance** section, specify the desired quality level. Improving quality may reduce the speed of task completion because the pool will be available to fewer Tolokers. Learn more in the [Speed/quality balance](https://toloka.ai/en/docs/guide/concepts/adjust) section.
+
+1. <TolokaRequesterSourcePriceSettings/>
+
+    1. In **Price per task suite, $**, set the amount of money to pay per task suite done by one Toloker. For example, `0.01`.
+
+    1. Enter `3` in the **Overlap** field.
+
+1. <TutorialsQualityControl/>
+
+    1. Click **Add a quality control rule**.
+
+    1. Find the **Rules** block in the list and choose **Majority vote**.
+
+    1. In the **Accept as majority** field, soecify `2`.
+
+    1. Set the rule: if **number of responses** **≥ 10** and **correct responses (%)** **< 50**, then **ban** the Toloker **on project** for **10 days**. Specify the reason **Doesn't match the majority**.
+
+        <Note mode="note" title="Note">
+
+        The rule takes effect when the number of responses for the task is equal to the [overlap](https://toloka.ai/en/docs/glossary#overlap).
+
+        </Note>
+
+    Learn more in [Quality control](https://toloka.ai/en/docs/guide/concepts/control).
+
+1. At the **Add optional pool settings** step:
+
+    1. <TutorialsTimePerTaskSuite/>
+
+        The time should be long enough to read the instructions and wait for task data to load. For example, `600` seconds.
+
+    1. Turn on the **Keep task order** option.
+
+1. <TutorialsUploadTasks/>
+
+    1. Prepare a [file](https://toloka.ai/en/docs/glossary#tsv) with tasks.
+
+        1. In the text or spreadsheet editor, open the file that you received after aggregating the results in [project 2](/docs-new/tutorials/image-segmentation-project2).
+
+        1. Leave the `INPUT:image` column unchanged.
+
+        1. Change the `OUTPUT:result` column name to `INPUT:selection`.
+
+        1. Rename the `ASSIGNMENT:assignment_id` column to `INPUT:assignment_id`.
+
+        1. Delete the `ACCEPT:verdict:` and `ACCEPT:comment:` columns:
+
+        1. Add input data, for example:
+        ```
+        [{""type"":""rectangle"",""data"":{""p1"":{""x"":0.2421,""y"":0.98871},""p2"":{""x"":0.93663,""y"":0.8776}}}]
+        ```
+        and save the file.
+
+        <Note mode="tip" title="Tip">
+
+        You can prepare the file in **Notepad**. To transfer data to **Microsoft Excel**, use **Text Import Wizard** and disable the **Text qualifier** option.
+
+        </Note>
+
+    1. Upload the file to the **Are the traffic signs outlined correctly?** pool:
+
+        1. Open the **Are the traffic signs outlined correctly?** pool.
+
+        1. Click **Upload**.
+
+        1. Click **Drop file here or select**, and upload the file you’ve just made.
+
+        1. Click **Continue**.
+
+        1. Choose **Set manually**.
+
+        1. In the **Tasks per suite** field, specify `10`.
+
+        1. Click **Combine tasks into suites**.
+
+        1. On the pool page, click **Preview**. Make sure that the task displays images with the selected objects.
+
+            <Note mode="tip" title="Tip">
+
+            If there are no outlined objects, make sure that quotes are properly used in the **INPUT:selection** column in the file. Make sure that the [interface parameters](#task-interface) are set correctly.
+
+            </Note>
+
+1. Click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425184616/1675425184616_original_svg.svg" alt="" /> to start the pool.
+
+## Download the reviewed results {#get_results}
+
+1. Next to the **Download results** button, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425179291/1675425179291_original_svg.svg" alt="Drop-down button" />.
+
+1. Choose **Dawid-Skene aggregation model** from the list. Learn more about [Result aggregation based on the Dawid-Skene model](https://toloka.ai/en/docs/guide/concepts/result-aggregation#dawid-skene).
+
+1. In the window that opens, click **Yes**.
+
+1. At the top of the page, click **View the list of operations**.
+
+    <Note mode="note" title="Note">
+
+    To track the progress, refresh the page from time to time. Aggregation takes from 5 to 20 minutes. You can start designing another project meanwhile.
+
+    </Note>
+
+1. When the operation is complete, download the results file. To do this, click **Download** in the **Files** column.
+
+1. Use the results file in [project 2](/docs-new/tutorials/image-segmentation-project2).
+
+## Check the completed tasks {#check_results}
+
+Since the [manual review](/docs-new/tutorials/image-segmentation-project2) option is enabled in the pool settings for **project 2**, you should check the Tolokers' responses within the time limit set in the **Review period** field.
+
+You can check the results in two ways:
+
+- In the results file.
+- In the pool interface.
+
+<Tabs tabs={[
+  { title: 'Review assignments in the results file', value: <ImageSegmentationProject3List2/> },
+  { title: 'Review assignments in the pool interface', value: <ImageSegmentationProject3List3/> },
+]}/>
+
+## What's next {#what-next}
+
+- Learn more about [decomposition](https://toloka.ai/en/docs/guide/concepts/solution-architecture).
+
+<ContactSupport/>

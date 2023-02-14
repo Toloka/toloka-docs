@@ -1,0 +1,78 @@
+---
+title: "Get pool details | Toloka-Kit"
+date: "2023-02-07T15:40:39.172060"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import GetPool from './subcomponents/get_pool.mdx'
+
+# Get pool details
+
+_Get the detailed information about the pool with the ID specified in the request._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Get pool information {#step-three}
+
+[Find out](/docs-new/toloka-kit/recipes/get-pools) the ID of the pool for which you want to get the detailed information. Then get this info calling the `get_pool()` method.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      pool = toloka_client.<Term term="get_pool"><GetPool/></Term>('36545959')
+    </HighlightChildren>
+  }
+  textToCopy={`pool = toloka_client.get_pool('36545959')`}
+/>
+
+### 4. Print pool private name, status, and last close reason {#step-four}
+
+The `get_pool()` request will return the [Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
+
+```python
+print(pool.private_name, pool.status, pool.last_close_reason)
+```
+
+You should get an output with the pool private name, status, and last close reason which looks like this.
+
+```bash
+Image classification Status.CLOSED CloseReason.NOT_ENOUGH_BALANCE
+```
+
+## Complete code: Get pool details {#complete-code}
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+pool = toloka_client.get_pool('36545959')
+print(pool.private_name, pool.status, pool.last_close_reason)
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_pool()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_pool) method_
+
+</Note>
+
+## See also {#see-also}
+
+- [How does Toloka work?](https://toloka.ai/en/docs/guide/concepts/overview)
+- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [Toloka-Kit: Pool class](/docs-new/toloka-kit/reference/toloka.client.pool.Pool)
+- [Toloka API: Get pool by ID](https://toloka.ai/docs/api/api-reference/#get-/pools/-id-)

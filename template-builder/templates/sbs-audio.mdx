@@ -1,0 +1,318 @@
+---
+title: "Audio comparison (Side-by-side) | Template Builder"
+date: "2023-02-10T09:15:30.758248"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TolokaTbSourceAddMedia from '../subcomponents/toloka-tb-source/id-toloka-tb-source/add-media.mdx'
+import ContactSupport from '../subcomponents/contact-support.mdx'
+
+# Audio comparison (Side-by-side)
+
+For this type of project, you can use the **Audio comparison (Side-by-side)** preset.
+
+Take a look at the example: there are two audio tracks and buttons to choose an answer. Note that validation, keyboard shortcuts, and task layout are already configured in this example.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/V14Zje0m3ttD3C">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [view.audio](/docs-new/template-builder/reference/view.audio): An audio player.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.audio",
+    "url": {
+      "type": "data.input",
+      "path": "url_1"
+    },
+    "label": "Audio 1",
+      "validation": {
+      "type": "condition.played",
+      "hint": "Listen to the audio recording"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [layout.columns](/docs-new/template-builder/reference/layout.columns): Arranges audio tracks side by side.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "layout.columns",
+    "items": []
+  }
+  ```
+
+  </Cut>
+
+- [condition.played](/docs-new/template-builder/reference/condition.played): Checks if a Toloker has started listening to the audio.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "condition.played",
+    "hint": "Listen to the audio recording"
+  }
+  ```
+
+  </Cut>
+
+- [field.button-radio-group](/docs-new/template-builder/reference/field.button-radio-group): Buttons for answer options.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.button-radio-group",
+    "label": "Whose voice sounds more natural?",
+    "options": [],
+    "validation": {
+      "type": "condition.required",
+      "hint": "Choose an answer."
+    },
+    "data": {
+      "type": "data.output",
+      "path": "result"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [condition.required](/docs-new/template-builder/reference/condition.required): Checks if at least one option is selected.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "condition.required",
+    "hint": "Choose an answer."
+  }
+  ```
+
+  </Cut>
+
+- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task layout.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "plugin.toloka",
+    "layout": {
+      "kind": "scroll",
+      "taskWidth": 800
+    }
+  }
+  ```
+
+  </Cut>
+
+- [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys): [Keyboard shortcuts](/docs-new/template-builder/best-practices/hotkeys).
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "1": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "audio_1"
+    },
+    "2": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "audio_2"
+    },
+    "3": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "error"
+    },
+    "type": "plugin.hotkeys"
+  }
+  ```
+
+  </Cut>
+
+</Cut>
+
+<TolokaTbSourceAddMedia/>
+
+## What else can be configured {#add-more}
+
+- To [check](/docs-new/template-builder/best-practices/conditions) whether a Toloker listened to the whole audio, replace the [condition.played](/docs-new/template-builder/reference/condition.played) component with [condition.played-fully](/docs-new/template-builder/reference/condition.played-fully).
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "condition.played-fully",
+    "hint": "Listen to the audio recording"
+  }
+  ```
+
+  </Cut>
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/xaSehV5e3ttD4D">View example</Button>
+
+- To put a short audio track on repeat, change the properties of the [view.audio](/docs-new/template-builder/reference/view.audio) component by adding `loop: true`.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.audio",
+    "url": {
+      "type": "data.input",
+      "path": "url_1"
+    },
+    "label": "Audio 1",
+    "loop": true,
+    "validation": {
+      "type": "condition.played",
+      "hint": "Listen to the audio recording"
+    }
+  }
+  ```
+
+  </Cut>
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/aL05xvSn3ttD5U">View example</Button>
+
+- Add [shortcuts](/docs-new/template-builder/best-practices/hotkeys) for playing and pausing audio tracks using the [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys) plugin.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "q": {
+      "type": "action.play-pause",
+      "view": {
+        "$ref": "view.items.0.items.0"
+      }
+    },
+    "w": {
+      "type": "action.play-pause",
+      "view": {
+        "$ref": "view.items.0.items.1"
+      }
+    },
+    "type": "plugin.hotkeys"
+  }
+  ```
+
+  </Cut>
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/ehmAXiGf3ttD79">View example</Button>
+
+If this preset doesn't meet your needs, see other examples in this section.
+
+## Add a response field {#add-text-area}
+
+If you need comments from the Toloker, add a text field using [field.textarea](/docs-new/template-builder/reference/field.textarea). In this example, additional validation is set up that requires you to enter text if one of two audio tracks is selected.
+
+<Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.textarea",
+    "label": "Please explain why you chose it.",
+    "data": {
+      "type": "data.output",
+      "path": "text"
+    },
+    "validation": {
+      "type": "condition.required",
+      "hint": "Enter text."
+    }
+  }
+  ```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/yit42ss13ttD8V">View example</Button>
+
+## Arrange audio tracks vertically {#top-bottom}
+
+Audio tracks can be arranged in a single column, top to bottom. This interface is better suited for comparing more than two audio recordings.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/9HX4RtLe3ttDA5">View example</Button>
+
+## Add a source text {#add-original-text}
+
+You can add a field with a source text using the [view.text](/docs-new/template-builder/reference/view.text) component. For example, this might be useful if you want to find out which of the audio recordings best matches the description.
+
+<Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.text",
+    "content": "A joyful, inspiring melody.",
+    "label": "Overview"
+  }
+  ```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/Gl-0Kp3R3ttDBT">View example</Button>
+
+## Add a layout {#add-color}
+
+To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs-new/template-builder/reference/view.alert). In this example, the source text is highlighted with a blue border, and the buttons are highlighted with a yellow one.
+
+<Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.alert",
+    "theme": "info",
+    "content": {
+      "type": "view.text",
+      "content": "A joyful, inspiring melody."
+    }
+  },
+  {
+    "type": "view.alert",
+    "theme": "warning",
+    "content": {
+      "type": "field.button-radio-group",
+      "label": "Which audio recording best fits the description?",
+      "options": [],
+      "validation": {
+        "type": "condition.required",
+        "hint": "Choose an answer."
+      },
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      }
+    }
+  }
+  ```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/SvLzFXWw3ttDCc">View example</Button>
+
+<ContactSupport/>

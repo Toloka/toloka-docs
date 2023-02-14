@@ -1,0 +1,55 @@
+1. Create a template based on the [Checking the selected area](https://ya.cc/t/Z9GC6HzT3ttEf6) example that uses [Component for image labeling](/docs-new/template-builder/reference/field.image-annotation).
+
+1. To see the input and output data fields, click **Show specifications** in the **Data specification** section.
+
+    Input data fields used in the project:
+
+    - `image` — image address;
+
+    - `result` — an array with the selected area coordinates;
+
+    - `assignment_id` — task ID.
+
+    The Toloker's response will be recorded in the `verdict` output data field.
+
+1. Turn on the **Define data specification manually** option.
+
+1. Click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425185879/1675425185879_original_svg.svg" alt="" /> to switch graphic mode to JSON format.
+
+1. Remove the template code from the **Input data** field and enter the following code:
+
+    ```json
+    {
+        "image": {
+            "type": "url",
+            "hidden": false,
+            "required": true
+        },
+        "result": {
+            "type": "array_json",
+            "hidden": false,
+            "required": false
+        },
+        "assignment_id": {
+            "type": "string",
+            "hidden": true,
+            "required": true
+        }
+    }
+    ```
+
+1. Remove the template code from the **Output data** field and enter the following code:
+
+    ```json
+    {
+        "verdict": {
+            "type": "string",
+            "hidden": false,
+            "required": true,
+            "allowed_values": [
+                "OK",
+                "BAD"
+            ]
+        }
+    }
+    ```

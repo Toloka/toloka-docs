@@ -1,0 +1,70 @@
+---
+title: "Download attachments | Toloka-Kit"
+date: "2023-02-07T15:40:36.916334"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import DownloadAttachment from './subcomponents/download_attachment.mdx'
+
+# Download attachments
+
+_Download the files attached to the Toloker responses._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Download attachment {#step-three}
+
+[Find out](/docs-new/toloka-kit/recipes/get-attachments) the ID and the extension of the file attached to the Toloker response which you want to download. Then download this file calling the `download_attachment()` method.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      # Use the standard 'with open()' Python method with the 'wb' (write + binary) parameters specified
+      <br/>with open(attachment_id + '.jpg', 'wb') as attachment_file:
+      <br/>    toloka_client.<Term term="download_attachment"><DownloadAttachment/></Term>('fr.5867be74-249b-4264-9ed0-aa5d4c201846', out=attachment_file)
+    </HighlightChildren>
+  }
+  textToCopy={`# Use the standard 'with open()' Python method with the 'wb' (write + binary) parameters specified
+with open(attachment_id + '.jpg', 'wb') as attachment_file:
+    toloka_client.download_attachment('fr.5867be74-249b-4264-9ed0-aa5d4c201846', out=attachment_file)`}
+/>
+
+The attachment will be saved to the specified `out` destination.
+
+## Complete code: Download attachments {#complete-code}
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+with open(attachment_id + '.jpg', 'wb') as attachment_file:
+    toloka_client.download_attachment('fr.5867be74-249b-4264-9ed0-aa5d4c201846', out=attachment_file)
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[download_attachment()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.download_attachment) method_
+
+</Note>
+
+## See also {#see-also}
+
+- [How does Toloka work?](https://toloka.ai/en/docs/guide/concepts/overview)
+- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [Get list of files in responses](/docs-new/toloka-kit/recipes/get-attachments)
+- [Toloka API: Download file](https://toloka.ai/docs/api/api-reference/#get-/attachments/-id-/download)

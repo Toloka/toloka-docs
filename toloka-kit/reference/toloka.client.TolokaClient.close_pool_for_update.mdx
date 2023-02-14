@@ -1,0 +1,41 @@
+---
+title: "close_pool_for_update | Toloka-Kit"
+date: "2023-02-07T15:42:05.938820"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# close_pool_for_update
+`toloka.client.TolokaClient.close_pool_for_update` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/__init__.py#L1379)
+
+```python
+close_pool_for_update(self, pool_id: str)
+```
+
+Closes a pool that is to be updated.
+
+To make changes to a pool, close it before updating parameters.
+If you don't open the pool after updating, it opens automatically in 15 minutes.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`pool_id`|**str**|<p>The ID of the pool to be closed.</p>
+
+* **Returns:**
+
+  The pool with updated status.
+
+* **Return type:**
+
+  [Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool)
+
+**Examples:**
+
+```python
+toloka_client.close_pool_for_update(pool_id='1')
+```

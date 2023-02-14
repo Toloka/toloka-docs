@@ -1,45 +1,1552 @@
 {
   "defaultMenu": [
     {
-      "title": "Test title"
+      "title": "Introduction"
     },
     {
-      "title": "Test submenu",
+      "title": "Getting started",
       "subItems": [
-        { "href": "/apps/add-task", "title": "Add task" },
-        { "href": "/apps/download-results", "title": "Download results" }
+        {
+          "title": "How does Toloka work?",
+          "href": "https://toloka.ai/en/docs/guide/concepts/overview"
+        },
+        {
+          "title": "Registration",
+          "href": "https://toloka.ai/en/docs/guide/concepts/access"
+        },
+        {
+          "title": "Your first project",
+          "href": "https://toloka.ai/en/docs/guide/concepts/first-project"
+        },
+        {
+          "title": "Data security",
+          "href": "https://toloka.ai/en/docs/guide/concepts/data-security"
+        }
       ]
     },
     {
-      "href": "/apps/glossary",
-      "title": "Glossary"
+      "title": "Important tips",
+      "subItems": [
+        {
+          "title": "What tasks can't be placed in Toloka?",
+          "href": "https://toloka.ai/en/docs/guide/concepts/unwanted"
+        },
+        {
+          "title": "Common mistakes made by requesters",
+          "href": "https://toloka.ai/en/docs/guide/concepts/frequent-customer-errors"
+        },
+        {
+          "title": "How to save your budget",
+          "href": "https://toloka.ai/en/docs/guide/concepts/save-money"
+        },
+        {
+          "title": "Sandbox",
+          "href": "https://toloka.ai/en/docs/guide/concepts/sandbox"
+        }
+      ]
     },
     {
-      "href": "/apps/product-search-relevance",
-      "title": "Product search relevance"
+      "title": "Useful recommendations",
+      "subItems": [
+        {
+          "title": "Data storage",
+          "subItems": [
+            {
+              "title": "Where to store files",
+              "href": "https://toloka.ai/en/docs/guide/concepts/cloud-storage"
+            },
+            {
+              "title": "Amazon S3",
+              "href": "https://toloka.ai/en/docs/guide/concepts/amazon-cloud-storage"
+            },
+            {
+              "title": "Azure Blob Storage",
+              "href": "https://toloka.ai/en/docs/guide/concepts/azure-cloud-storage"
+            },
+            {
+              "title": "Google Cloud Storage",
+              "href": "https://toloka.ai/en/docs/guide/concepts/google-cloud-storage"
+            },
+            {
+              "title": "Yandex Object Storage",
+              "href": "https://toloka.ai/en/docs/guide/concepts/use-object-storage"
+            }
+          ]
+        },
+        {
+          "title": "Tips for designing tasks",
+          "href": "https://toloka.ai/en/docs/guide/faq"
+        },
+        {
+          "title": "Using exams",
+          "href": "https://toloka.ai/en/docs/guide/concepts/how-to-use-exams"
+        },
+        {
+          "title": "Using A/B experiments",
+          "href": "https://toloka.ai/en/docs/guide/concepts/ab-experiment"
+        }
+      ]
     },
     {
-      "title": "Test title 2"
+      "title": "Working with Toloka"
     },
     {
-      "href": "/apps/quickstart",
-      "title": "Quickstart"
+      "title": "Projects",
+      "subItems": [
+        {
+          "title": "Steps to follow",
+          "href": "https://toloka.ai/en/docs/guide/concepts/main-steps"
+        },
+        {
+          "title": "Decomposition of the task",
+          "href": "https://toloka.ai/en/docs/guide/concepts/solution-architecture"
+        },
+        {
+          "title": "Create a project",
+          "href": "https://toloka.ai/en/docs/guide/concepts/project"
+        },
+        {
+          "title": "Editing a project",
+          "href": "https://toloka.ai/en/docs/guide/concepts/edit-project"
+        },
+        {
+          "title": "Writing instructions",
+          "href": "https://toloka.ai/en/docs/guide/concepts/instruction"
+        },
+        {
+          "title": "Input and output data",
+          "href": "https://toloka.ai/en/docs/guide/concepts/incoming"
+        },
+        {
+          "title": "Setting up quality control",
+          "href": "https://toloka.ai/en/docs/guide/concepts/project-qa"
+        },
+        {
+          "title": "Translations",
+          "href": "https://toloka.ai/en/docs/guide/concepts/project-languages"
+        },
+        {
+          "title": "Returning to a previous version of a project",
+          "href": "https://toloka.ai/en/docs/guide/concepts/project-back-to-version"
+        },
+        {
+          "title": "Interim statistics",
+          "href": "https://toloka.ai/en/docs/guide/concepts/project-interim-statistics"
+        }
+      ]
     },
     {
-      "href": "/apps/support",
-      "title": "Support"
+      "title": "Pools",
+      "subItems": [
+        {
+          "title": "General information",
+          "subItems": [
+            {
+              "title": "Creating a pool",
+              "href": "https://toloka.ai/en/docs/guide/concepts/pool-main"
+            },
+            {
+              "title": "Editing a pool",
+              "href": "https://toloka.ai/en/docs/guide/concepts/pool-edit"
+            }
+          ]
+        },
+        {
+          "title": "Audience selection",
+          "subItems": [
+            {
+              "title": "Filters",
+              "href": "https://toloka.ai/en/docs/guide/concepts/filters"
+            }
+          ]
+        },
+        {
+          "title": "Pricing",
+          "subItems": [
+            {
+              "title": "Setting up pricing",
+              "href": "https://toloka.ai/en/docs/guide/concepts/dynamic-pricing"
+            }
+          ]
+        },
+        {
+          "title": "Quality control",
+          "subItems": [
+            {
+              "title": "Overview",
+              "href": "https://toloka.ai/en/docs/guide/concepts/quality-control-overview"
+            },
+            {
+              "title": "Setting up quality control",
+              "href": "https://toloka.ai/en/docs/guide/concepts/qa-pool-settings"
+            },
+            {
+              "title": "Quality control rules",
+              "subItems": [
+                {
+                  "title": "How to check Tolokers: quality control rules",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/check-performers"
+                },
+                {
+                  "title": "List of rules",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/control"
+                },
+                {
+                  "title": "\u201cRemember values\u201d parameter",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/remember-values"
+                },
+                {
+                  "title": "Control tasks",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/goldenset"
+                },
+                {
+                  "title": "Majority vote",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/mvote"
+                },
+                {
+                  "title": "Fast responses",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/quick-answers"
+                },
+                {
+                  "title": "Captcha",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/captcha"
+                },
+                {
+                  "title": "Skipped assignments",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/skipped-assignments"
+                },
+                {
+                  "title": "Earnings",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/income"
+                },
+                {
+                  "title": "Submitted responses",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/submitted-answers"
+                },
+                {
+                  "title": "Results of assignment review",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/reviewing-assignments"
+                },
+                {
+                  "title": "Recompletion of assignments from banned users",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/restore-task-overlap"
+                },
+                {
+                  "title": "Processing rejected and accepted assignments",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/reassessment-after-accepting"
+                }
+              ]
+            },
+            {
+              "title": "Overlap settings",
+              "subItems": [
+                {
+                  "title": "What is overlap?",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/overlap-faq"
+                },
+                {
+                  "title": "Dynamic overlap",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/dynamic-overlap"
+                },
+                {
+                  "title": "Selective majority vote check",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/selective-mvote"
+                }
+              ]
+            },
+            {
+              "title": "Speed/quality balance",
+              "href": "https://toloka.ai/en/docs/guide/concepts/adjust"
+            }
+          ]
+        },
+        {
+          "title": "Additional settings",
+          "subItems": [
+            {
+              "title": "Manual review",
+              "href": "https://toloka.ai/en/docs/guide/concepts/offline-accept"
+            },
+            {
+              "title": "Archiving a pool",
+              "href": "https://toloka.ai/en/docs/guide/concepts/pool-archive"
+            },
+            {
+              "title": "Interim statistics",
+              "href": "https://toloka.ai/en/docs/guide/concepts/pool-interim-statistic"
+            }
+          ]
+        },
+        {
+          "title": "Starting and stopping a pool",
+          "href": "https://toloka.ai/en/docs/guide/concepts/pool-run-and-stop"
+        },
+        {
+          "title": "Adding a training (optional)",
+          "href": "https://toloka.ai/en/docs/guide/concepts/train"
+        }
+      ]
     },
     {
-      "href": "/apps/troubleshooting",
-      "title": "Troubleshooting"
+      "title": "Tasks",
+      "subItems": [
+        {
+          "title": "Steps to follow",
+          "href": "https://toloka.ai/en/docs/guide/concepts/pool"
+        },
+        {
+          "title": "Creating a file with tasks",
+          "href": "https://toloka.ai/en/docs/guide/concepts/pool_csv"
+        },
+        {
+          "title": "Uploading tasks to a pool",
+          "subItems": [
+            {
+              "title": "How to upload tasks",
+              "href": "https://toloka.ai/en/docs/guide/concepts/task_upload"
+            },
+            {
+              "title": "Ways to group tasks in suites",
+              "href": "https://toloka.ai/en/docs/guide/concepts/distribute-tasks-by-pages"
+            }
+          ]
+        },
+        {
+          "title": "Checking project",
+          "href": "https://toloka.ai/en/docs/guide/concepts/self-labeling"
+        },
+        {
+          "title": "Task markup",
+          "subItems": [
+            {
+              "title": "Overview",
+              "href": "https://toloka.ai/en/docs/guide/concepts/task_markup"
+            },
+            {
+              "title": "How to edit tasks by yourself",
+              "href": "https://toloka.ai/en/docs/guide/concepts/task-markup-by-yourself"
+            }
+          ]
+        }
+      ]
     },
     {
-      "href": "/apps/unwanted",
-      "title": "Unwanted"
+      "title": "Results",
+      "subItems": [
+        {
+          "title": "Receiving responses",
+          "href": "https://toloka.ai/en/docs/guide/concepts/result-of-eval"
+        },
+        {
+          "title": "Reviewing Tolokers' responses",
+          "href": "https://toloka.ai/en/docs/guide/concepts/accept"
+        },
+        {
+          "title": "Aggregation of results",
+          "href": "https://toloka.ai/en/docs/guide/concepts/result-aggregation"
+        }
+      ]
     },
     {
-      "href": "/apps/view-progress",
-      "title": "View progress"
+      "title": "Project analysis",
+      "subItems": [
+        {
+          "title": "Project rating",
+          "href": "https://toloka.ai/en/docs/guide/concepts/project_rating_stat"
+        },
+        {
+          "title": "Project statistics",
+          "href": "https://toloka.ai/en/docs/guide/concepts/project-statistic"
+        },
+        {
+          "title": "Pool statistics",
+          "href": "https://toloka.ai/en/docs/guide/concepts/pool_statistic-pool"
+        },
+        {
+          "title": "Efficiency indicators",
+          "subItems": [
+            {
+              "title": "Overview",
+              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/"
+            },
+            {
+              "title": "Bans",
+              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/ban-rate"
+            },
+            {
+              "title": "Communication issues",
+              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/communication"
+            },
+            {
+              "title": "Control tasks",
+              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/control-tasks-share"
+            },
+            {
+              "title": "Control task balance",
+              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/control-tasks-balance"
+            },
+            {
+              "title": "Project availability",
+              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/available-performers"
+            },
+            {
+              "title": "Quality of instructions",
+              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/instruction-quality"
+            },
+            {
+              "title": "Quality of interface",
+              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/interface-quality"
+            },
+            {
+              "title": "Rejected tasks",
+              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/rejected-tasks"
+            },
+            {
+              "title": "Submission rate",
+              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/submitting-tasks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Toloka settings",
+      "subItems": [
+        {
+          "title": "Users",
+          "subItems": [
+            {
+              "title": "Viewing Tolokers",
+              "href": "https://toloka.ai/en/docs/guide/concepts/users"
+            },
+            {
+              "title": "Rewards",
+              "href": "https://toloka.ai/en/docs/guide/concepts/bonus"
+            },
+            {
+              "title": "Communication",
+              "href": "https://toloka.ai/en/docs/guide/concepts/messaging"
+            },
+            {
+              "title": "Ban",
+              "href": "https://toloka.ai/en/docs/guide/concepts/ban"
+            }
+          ]
+        },
+        {
+          "title": "Skills",
+          "subItems": [
+            {
+              "title": "How do I use skills?",
+              "href": "https://toloka.ai/en/docs/guide/concepts/nav"
+            },
+            {
+              "title": "Global skills",
+              "href": "https://toloka.ai/en/docs/guide/concepts/nav-cross-project"
+            },
+            {
+              "title": "Creating a skill",
+              "href": "https://toloka.ai/en/docs/guide/concepts/nav-create"
+            },
+            {
+              "title": "Assigning the skill",
+              "href": "https://toloka.ai/en/docs/guide/concepts/nav-assign"
+            },
+            {
+              "title": "Using the skill",
+              "href": "https://toloka.ai/en/docs/guide/concepts/nav-use"
+            },
+            {
+              "title": "Editing a skill",
+              "href": "https://toloka.ai/en/docs/guide/concepts/nav-edit"
+            },
+            {
+              "title": "Removing a skill",
+              "href": "https://toloka.ai/en/docs/guide/concepts/nav-delete"
+            },
+            {
+              "title": "History of skill changes",
+              "href": "https://toloka.ai/en/docs/guide/concepts/nav-history"
+            }
+          ]
+        },
+        {
+          "title": "Profile",
+          "subItems": [
+            {
+              "title": "Editing the profile",
+              "href": "https://toloka.ai/en/docs/guide/concepts/edit-profile"
+            },
+            {
+              "title": "Notifications",
+              "href": "https://toloka.ai/en/docs/guide/concepts/notifications"
+            },
+            {
+              "title": "Finance",
+              "subItems": [
+                {
+                  "title": "About account management",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/budget"
+                },
+                {
+                  "title": "Topping up your account",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/refill"
+                },
+                {
+                  "title": "Promo codes",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/promocodes"
+                },
+                {
+                  "title": "Refund",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/refund"
+                },
+                {
+                  "title": "Payment documents",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/documents"
+                }
+              ]
+            },
+            {
+              "title": "Shared access to the requester's account",
+              "href": "https://toloka.ai/en/docs/guide/concepts/multiple-access"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Task interface"
+    },
+    {
+      "title": "Template Builder",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/template-builder"
+        },
+        {
+          "title": "Quick start",
+          "href": "/template-builder/quickstart"
+        },
+        {
+          "title": "Visual editor",
+          "href": "/template-builder/visual-editor"
+        },
+        {
+          "title": "Presets",
+          "subItems": [
+            {
+              "title": "List",
+              "href": "/template-builder/templates"
+            },
+            {
+              "title": "Images",
+              "subItems": [
+                {
+                  "title": "Image classification",
+                  "href": "/template-builder/templates/image-classification"
+                },
+                {
+                  "title": "Image comparison (Side-by-side)",
+                  "href": "/template-builder/templates/sbs-image"
+                },
+                {
+                  "title": "Product search relevance",
+                  "href": "/template-builder/templates/product-search-relevance"
+                },
+                {
+                  "title": "Object recognition & detection",
+                  "href": "/template-builder/templates/object-recognition"
+                },
+                {
+                  "title": "Text recognition from an image (OCR)",
+                  "href": "/template-builder/templates/text-recognition"
+                },
+                {
+                  "title": "Accessories recommendations",
+                  "href": "/template-builder/templates/accessories-recommendations"
+                }
+              ]
+            },
+            {
+              "title": "Video",
+              "subItems": [
+                {
+                  "title": "Video classification",
+                  "href": "/template-builder/templates/video-moderation"
+                },
+                {
+                  "title": "Video comparison (Side-by-side)",
+                  "href": "/template-builder/templates/sbs-video"
+                }
+              ]
+            },
+            {
+              "title": "Texts",
+              "subItems": [
+                {
+                  "title": "Copywriting",
+                  "href": "/template-builder/templates/copywriting"
+                },
+                {
+                  "title": "Text comparison (Side-by-side)",
+                  "href": "/template-builder/templates/sbs-text"
+                },
+                {
+                  "title": "Text classification",
+                  "href": "/template-builder/templates/text-classification"
+                },
+                {
+                  "title": "Sentiment analysis & Content moderation",
+                  "href": "/template-builder/templates/content-moderation"
+                }
+              ]
+            },
+            {
+              "title": "Audio",
+              "subItems": [
+                {
+                  "title": "Audio transcription",
+                  "href": "/template-builder/templates/audio-transcript"
+                },
+                {
+                  "title": "Audio comparison (Side-by-side)",
+                  "href": "/template-builder/templates/sbs-audio"
+                }
+              ]
+            },
+            {
+              "title": "Field tasks",
+              "subItems": [
+                {
+                  "title": "Collecting offline data",
+                  "href": "/template-builder/templates/spatial-crowdsourcing"
+                }
+              ]
+            },
+            {
+              "title": "Data enrichment",
+              "subItems": [
+                {
+                  "title": "Searching for product characteristics",
+                  "href": "/template-builder/templates/data-search"
+                }
+              ]
+            },
+            {
+              "title": "Surveys",
+              "subItems": [
+                {
+                  "title": "Survey",
+                  "href": "/template-builder/templates/survey"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Instructions",
+          "subItems": [
+            {
+              "title": "List of instructions",
+              "href": "/template-builder/operations/all"
+            },
+            {
+              "title": "Input and output data",
+              "subItems": [
+                {
+                  "title": "Working with data",
+                  "href": "/template-builder/operations/work-with-data"
+                },
+                {
+                  "title": "Read and write",
+                  "href": "/template-builder/operations/input-output-data"
+                },
+                {
+                  "title": "Creating specifications",
+                  "href": "/template-builder/operations/create-specs"
+                },
+                {
+                  "title": "Clearing the entered values",
+                  "href": "/template-builder/operations/clear-data"
+                }
+              ]
+            },
+            {
+              "title": "Audio and video",
+              "subItems": [
+                {
+                  "title": "Playing back audio",
+                  "href": "/template-builder/operations/play-audio"
+                },
+                {
+                  "title": "Inserting videos",
+                  "href": "/template-builder/operations/insert-videos"
+                },
+                {
+                  "title": "Comparing video clips",
+                  "href": "/template-builder/operations/sbs-video"
+                }
+              ]
+            },
+            {
+              "title": "Working with text and numbers",
+              "subItems": [
+                {
+                  "title": "Components for working with text",
+                  "href": "/template-builder/operations/components-for-texts"
+                },
+                {
+                  "title": "Text formatting",
+                  "href": "/template-builder/operations/text-formatting"
+                },
+                {
+                  "title": "Number input field",
+                  "href": "/template-builder/operations/components-for-numbers"
+                }
+              ]
+            },
+            {
+              "title": "Working with pictures",
+              "subItems": [
+                {
+                  "title": "Inserting images",
+                  "href": "/template-builder/operations/insert-images"
+                },
+                {
+                  "title": "Object selection in an image",
+                  "href": "/template-builder/operations/select-areas"
+                }
+              ]
+            },
+            {
+              "title": "Display settings",
+              "subItems": [
+                {
+                  "title": "Task display",
+                  "href": "/template-builder/operations/set-plugin-toloka"
+                },
+                {
+                  "title": "Writing direction",
+                  "href": "/template-builder/operations/rtl-ltr"
+                }
+              ]
+            },
+            {
+              "title": "Inserting links",
+              "href": "/template-builder/operations/internet-search"
+            }
+          ]
+        },
+        {
+          "title": "Tips and recommendations",
+          "subItems": [
+            {
+              "title": "Configure keyboard shortcuts",
+              "href": "/template-builder/best-practices/hotkeys"
+            },
+            {
+              "title": "Reviewing assignments automatically",
+              "href": "/template-builder/best-practices/conditions"
+            },
+            {
+              "title": "Show hints",
+              "href": "/template-builder/best-practices/show-hints"
+            },
+            {
+              "title": "Reuse code",
+              "href": "/template-builder/best-practices/reuse"
+            }
+          ]
+        },
+        {
+          "title": "Component reference guide",
+          "subItems": [
+            {
+              "title": "List of components",
+              "href": "/template-builder/reference"
+            },
+            {
+              "title": "Layouts",
+              "subItems": [
+                {
+                  "title": "List of layouts",
+                  "href": "/template-builder/reference/layouts"
+                },
+                {
+                  "title": "layout.bars",
+                  "href": "/template-builder/reference/layout.bars"
+                },
+                {
+                  "title": "layout.columns",
+                  "href": "/template-builder/reference/layout.columns"
+                },
+                {
+                  "title": "layout.compare",
+                  "href": "/template-builder/reference/layout.compare"
+                },
+                {
+                  "title": "layout.side-by-side",
+                  "href": "/template-builder/reference/layout.side-by-side"
+                },
+                {
+                  "title": "layout.sidebar",
+                  "href": "/template-builder/reference/layout.sidebar"
+                }
+              ]
+            },
+            {
+              "title": "Views",
+              "subItems": [
+                {
+                  "title": "List of views",
+                  "href": "/template-builder/reference/views"
+                },
+                {
+                  "title": "view.action-button",
+                  "href": "/template-builder/reference/view.action-button"
+                },
+                {
+                  "title": "view.alert",
+                  "href": "/template-builder/reference/view.alert"
+                },
+                {
+                  "title": "view.audio",
+                  "href": "/template-builder/reference/view.audio"
+                },
+                {
+                  "title": "view.collapse",
+                  "href": "/template-builder/reference/view.collapse"
+                },
+                {
+                  "title": "view.device-frame",
+                  "href": "/template-builder/reference/view.device-frame"
+                },
+                {
+                  "title": "view.divider",
+                  "href": "/template-builder/reference/view.divider"
+                },
+                {
+                  "title": "view.group",
+                  "href": "/template-builder/reference/view.group"
+                },
+                {
+                  "title": "view.iframe",
+                  "href": "/template-builder/reference/view.iframe"
+                },
+                {
+                  "title": "view.image",
+                  "href": "/template-builder/reference/view.image"
+                },
+                {
+                  "title": "view.labeled-list",
+                  "href": "/template-builder/reference/view.labeled-list"
+                },
+                {
+                  "title": "view.link",
+                  "href": "/template-builder/reference/view.link"
+                },
+                {
+                  "title": "view.link-group",
+                  "href": "/template-builder/reference/view.link-group"
+                },
+                {
+                  "title": "view.list",
+                  "href": "/template-builder/reference/view.list"
+                },
+                {
+                  "title": "view.map",
+                  "href": "/template-builder/reference/view.map"
+                },
+                {
+                  "title": "view.markdown",
+                  "href": "/template-builder/reference/view.markdown"
+                },
+                {
+                  "title": "view.text",
+                  "href": "/template-builder/reference/view.text"
+                },
+                {
+                  "title": "view.video",
+                  "href": "/template-builder/reference/view.video"
+                }
+              ]
+            },
+            {
+              "title": "Fields",
+              "subItems": [
+                {
+                  "title": "List of fields",
+                  "href": "/template-builder/reference/fields"
+                },
+                {
+                  "title": "field.audio",
+                  "href": "/template-builder/reference/field.audio"
+                },
+                {
+                  "title": "field.button-radio",
+                  "href": "/template-builder/reference/field.button-radio"
+                },
+                {
+                  "title": "field.button-radio-group",
+                  "href": "/template-builder/reference/field.button-radio-group"
+                },
+                {
+                  "title": "field.checkbox",
+                  "href": "/template-builder/reference/field.checkbox"
+                },
+                {
+                  "title": "field.checkbox-group",
+                  "href": "/template-builder/reference/field.checkbox-group"
+                },
+                {
+                  "title": "field.date",
+                  "href": "/template-builder/reference/field.date"
+                },
+                {
+                  "title": "field.email",
+                  "href": "/template-builder/reference/field.email"
+                },
+                {
+                  "title": "field.file",
+                  "href": "/template-builder/reference/field.file"
+                },
+                {
+                  "title": "field.image-annotation",
+                  "href": "/template-builder/reference/field.image-annotation"
+                },
+                {
+                  "title": "field.list",
+                  "href": "/template-builder/reference/field.list"
+                },
+                {
+                  "title": "field.map",
+                  "href": "/template-builder/reference/field.map"
+                },
+                {
+                  "title": "field.media-file",
+                  "href": "/template-builder/reference/field.media-file"
+                },
+                {
+                  "title": "field.number",
+                  "href": "/template-builder/reference/field.number"
+                },
+                {
+                  "title": "field.phone-number",
+                  "href": "/template-builder/reference/field.phone-number"
+                },
+                {
+                  "title": "field.quiz",
+                  "href": "/template-builder/reference/field.quiz"
+                },
+                {
+                  "title": "field.radio-group",
+                  "href": "/template-builder/reference/field.radio-group"
+                },
+                {
+                  "title": "field.select",
+                  "href": "/template-builder/reference/field.select"
+                },
+                {
+                  "title": "field.text",
+                  "href": "/template-builder/reference/field.text"
+                },
+                {
+                  "title": "field.text-annotation",
+                  "href": "/template-builder/reference/field.text-annotation"
+                },
+                {
+                  "title": "field.textarea",
+                  "href": "/template-builder/reference/field.textarea"
+                }
+              ]
+            },
+            {
+              "title": "Conditions",
+              "subItems": [
+                {
+                  "title": "List of conditions",
+                  "href": "/template-builder/reference/conditions"
+                },
+                {
+                  "title": "condition.all",
+                  "href": "/template-builder/reference/condition.all"
+                },
+                {
+                  "title": "condition.any",
+                  "href": "/template-builder/reference/condition.any"
+                },
+                {
+                  "title": "condition.empty",
+                  "href": "/template-builder/reference/condition.empty"
+                },
+                {
+                  "title": "condition.equals",
+                  "href": "/template-builder/reference/condition.equals"
+                },
+                {
+                  "title": "condition.link-opened",
+                  "href": "/template-builder/reference/condition.link-opened"
+                },
+                {
+                  "title": "condition.not",
+                  "href": "/template-builder/reference/condition.not"
+                },
+                {
+                  "title": "condition.played",
+                  "href": "/template-builder/reference/condition.played"
+                },
+                {
+                  "title": "condition.played-fully",
+                  "href": "/template-builder/reference/condition.played-fully"
+                },
+                {
+                  "title": "condition.required",
+                  "href": "/template-builder/reference/condition.required"
+                },
+                {
+                  "title": "condition.same-domain",
+                  "href": "/template-builder/reference/condition.same-domain"
+                },
+                {
+                  "title": "condition.schema",
+                  "href": "/template-builder/reference/condition.schema"
+                },
+                {
+                  "title": "condition.sub-array",
+                  "href": "/template-builder/reference/condition.sub-array"
+                },
+                {
+                  "title": "condition.distance",
+                  "href": "/template-builder/reference/condition.distance"
+                }
+              ]
+            },
+            {
+              "title": "Helpers",
+              "subItems": [
+                {
+                  "title": "List of helpers",
+                  "href": "/template-builder/reference/helpers"
+                },
+                {
+                  "title": "helper.concat-arrays",
+                  "href": "/template-builder/reference/helper.concat-arrays"
+                },
+                {
+                  "title": "helper.entries2object",
+                  "href": "/template-builder/reference/helper.entries2object"
+                },
+                {
+                  "title": "helper.if",
+                  "href": "/template-builder/reference/helper.if"
+                },
+                {
+                  "title": "helper.join",
+                  "href": "/template-builder/reference/helper.join"
+                },
+                {
+                  "title": "helper.object2entries",
+                  "href": "/template-builder/reference/helper.object2entries"
+                },
+                {
+                  "title": "helper.replace",
+                  "href": "/template-builder/reference/helper.replace"
+                },
+                {
+                  "title": "helper.search-query",
+                  "href": "/template-builder/reference/helper.search-query"
+                },
+                {
+                  "title": "helper.switch",
+                  "href": "/template-builder/reference/helper.switch"
+                },
+                {
+                  "title": "helper.text-transform",
+                  "href": "/template-builder/reference/helper.text-transform"
+                },
+                {
+                  "title": "helper.transform",
+                  "href": "/template-builder/reference/helper.transform"
+                },
+                {
+                  "title": "helper.translate",
+                  "href": "/template-builder/reference/helper.translate"
+                },
+                {
+                  "title": "helper.proxy",
+                  "href": "/template-builder/reference/helper.proxy"
+                }
+              ]
+            },
+            {
+              "title": "Plugins",
+              "subItems": [
+                {
+                  "title": "List of plugins",
+                  "href": "/template-builder/reference/plugins"
+                },
+                {
+                  "title": "plugin.field.image-annotation.hotkeys",
+                  "href": "/template-builder/reference/plugin.field.image-annotation.hotkeys"
+                },
+                {
+                  "title": "plugin.field.text-annotation.hotkeys",
+                  "href": "/template-builder/reference/plugin.field.text-annotation.hotkeys"
+                },
+                {
+                  "title": "plugin.hotkeys",
+                  "href": "/template-builder/reference/plugin.hotkeys"
+                },
+                {
+                  "title": "plugin.toloka",
+                  "href": "/template-builder/reference/plugin.toloka"
+                },
+                {
+                  "title": "plugin.trigger",
+                  "href": "/template-builder/reference/plugin.trigger"
+                }
+              ]
+            },
+            {
+              "title": "Data sources",
+              "subItems": [
+                {
+                  "title": "List of data sources",
+                  "href": "/template-builder/reference/datas"
+                },
+                {
+                  "title": "data.location",
+                  "href": "/template-builder/reference/data.location"
+                }
+              ]
+            },
+            {
+              "title": "Actions",
+              "subItems": [
+                {
+                  "title": "List of actions",
+                  "href": "/template-builder/reference/actions"
+                },
+                {
+                  "title": "action.bulk",
+                  "href": "/template-builder/reference/action.bulk"
+                },
+                {
+                  "title": "action.notify",
+                  "href": "/template-builder/reference/action.notify"
+                },
+                {
+                  "title": "action.open-close",
+                  "href": "/template-builder/reference/action.open-close"
+                },
+                {
+                  "title": "action.open-link",
+                  "href": "/template-builder/reference/action.open-link"
+                },
+                {
+                  "title": "action.play-pause",
+                  "href": "/template-builder/reference/action.play-pause"
+                },
+                {
+                  "title": "action.rotate",
+                  "href": "/template-builder/reference/action.rotate"
+                },
+                {
+                  "title": "action.set",
+                  "href": "/template-builder/reference/action.set"
+                },
+                {
+                  "title": "action.toggle",
+                  "href": "/template-builder/reference/action.toggle"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Troubleshooting",
+          "href": "/template-builder/troubleshooting/troubleshooting"
+        },
+        {
+          "title": "Support",
+          "href": "/template-builder/support"
+        }
+      ]
+    },
+    {
+      "title": "HTML/CSS/JS editor",
+      "subItems": [
+        {
+          "title": "Task interface",
+          "href": "https://toloka.ai/en/docs/guide/concepts/spec"
+        },
+        {
+          "title": "Adapt a task for mobile devices",
+          "href": "https://toloka.ai/en/docs/guide/concepts/mobile"
+        },
+        {
+          "title": "HTML",
+          "subItems": [
+            {
+              "title": "List of components",
+              "href": "https://toloka.ai/en/docs/guide/concepts/t-components"
+            },
+            {
+              "title": "Handlebars",
+              "subItems": [
+                {
+                  "title": "Expressions and helpers",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/handlebars"
+                },
+                {
+                  "title": "Additional helpers",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/helpers"
+                }
+              ]
+            },
+            {
+              "title": "Components for solving common problems",
+              "subItems": [
+                {
+                  "title": "String input field",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/string"
+                },
+                {
+                  "title": "Text input field",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/text"
+                },
+                {
+                  "title": "String input with suggest list",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/suggest"
+                },
+                {
+                  "title": "Radio button",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/radiobuttons"
+                },
+                {
+                  "title": "Checkbox",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/checkboxes"
+                },
+                {
+                  "title": "Drop-down list",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/list"
+                },
+                {
+                  "title": "Button for file upload",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/upload-file"
+                },
+                {
+                  "title": "Button for image file upload",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/upload-picture"
+                },
+                {
+                  "title": "Button for recording and uploading a video file",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/upload-video"
+                },
+                {
+                  "title": "Button for recording and uploading an audio file",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/upload-audio"
+                },
+                {
+                  "title": "Button with click validation",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/button-link"
+                },
+                {
+                  "title": "Image with area selection",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/image-annotation"
+                },
+                {
+                  "title": "Text segmentation editor",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/segmentation-editor"
+                },
+                {
+                  "title": "Image",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/img"
+                },
+                {
+                  "title": "Button",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/button"
+                },
+                {
+                  "title": "Iframe",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/iframe"
+                },
+                {
+                  "title": "Text formatted in HTML",
+                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "JS",
+          "subItems": [
+            {
+              "title": "How to use JavaScript extensions",
+              "href": "https://toloka.ai/en/docs/guide/concepts/spec-advanced"
+            },
+            {
+              "title": "Assignment class",
+              "href": "https://toloka.ai/en/docs/guide/concepts/js/assignment"
+            },
+            {
+              "title": "TaskSuite class",
+              "href": "https://toloka.ai/en/docs/guide/concepts/js/tasksuite"
+            },
+            {
+              "title": "Task class",
+              "href": "https://toloka.ai/en/docs/guide/concepts/js/task"
+            },
+            {
+              "title": "Services for specific purposes",
+              "href": "https://toloka.ai/en/docs/guide/concepts/js/services"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Help and support"
+    },
+    {
+      "title": "Frequently asked questions",
+      "href": "https://toloka.ai/en/docs/guide/faq"
+    },
+    {
+      "title": "Troubleshooting",
+      "href": "https://toloka.ai/en/docs/guide/troubleshooting/troubleshooting"
+    },
+    {
+      "title": "Support",
+      "href": "https://toloka.ai/en/docs/guide/troubleshooting/support"
+    },
+    {
+      "title": "Glossary",
+      "href": "https://toloka.ai/en/docs/glossary"
+    }
+  ],
+  "tutorialsMenu": [
+    {
+      "title": "Tutorials"
+    },
+    {
+      "title": "List of examples",
+      "href": "/tutorials/usecases"
+    },
+    {
+      "title": "Images",
+      "subItems": [
+        {
+          "title": "Image classification",
+          "href": "/tutorials/image-classification"
+        },
+        {
+          "title": "Image comparison (Side-by-side)",
+          "href": "/tutorials/side-by-side"
+        },
+        {
+          "title": "Object recognition & detection",
+          "href": "/tutorials/selection"
+        },
+        {
+          "title": "Object recognition and area selection (example with decomposition)",
+          "subItems": [
+            {
+              "title": "Overview",
+              "href": "/tutorials/image-segmentation-overview"
+            },
+            {
+              "title": "Project 1. Does the image contain a specific object?",
+              "href": "/tutorials/image-segmentation-project1"
+            },
+            {
+              "title": "Project 2. Select an object in the image",
+              "href": "/tutorials/image-segmentation-project2"
+            },
+            {
+              "title": "Project 3. Are the bounding boxes correct?",
+              "href": "/tutorials/image-segmentation-project3"
+            },
+            {
+              "title": "Appendix: Complete code for all projects",
+              "href": "/tutorials/image-segmentation-appendix"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Video",
+      "subItems": [
+        {
+          "title": "Video classification",
+          "href": "/tutorials/video-moderation"
+        }
+      ]
+    },
+    {
+      "title": "Audio",
+      "subItems": [
+        {
+          "title": "Audio transcription",
+          "href": "/tutorials/transcript-audio"
+        },
+        {
+          "title": "Audio classification",
+          "href": "/tutorials/audio-classification"
+        },
+        {
+          "title": "Voice recording",
+          "href": "/tutorials/record-audio"
+        }
+      ]
+    },
+    {
+      "title": "Texts",
+      "subItems": [
+        {
+          "title": "Sentiment analysis and content moderation",
+          "href": "/tutorials/content-moderation"
+        }
+      ]
+    },
+    {
+      "title": "Data enrichment",
+      "subItems": [
+        {
+          "title": "Searching for product characteristics",
+          "href": "/tutorials/internet-search"
+        },
+        {
+          "title": "Product photo search (example with decomposition)",
+          "subItems": [
+            {
+              "title": "Overview",
+              "href": "/tutorials/data-collection"
+            },
+            {
+              "title": "Project 1. Does the photo contain a certain object?",
+              "href": "/tutorials/contain_item"
+            },
+            {
+              "title": "Project 2. Find a similar item in an online store",
+              "href": "/tutorials/find_an_item_in_store"
+            },
+            {
+              "title": "Project 3. Does the item found look similar to the original?",
+              "href": "/tutorials/item_look_similar"
+            },
+            {
+              "title": "Project 4. Which of the found items is most similar to the original?",
+              "href": "/tutorials/item_more_similar"
+            },
+            {
+              "title": "Appendix: Complete code for all projects",
+              "href": "/tutorials/appendix-expanded-code"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Surveys",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/tutorials/questionnaire-overview"
+        },
+        {
+          "title": "Survey with Toloka template",
+          "href": "/tutorials/questionnaire-toloka"
+        },
+        {
+          "title": "Survey on third-party platform",
+          "href": "/tutorials/questionnaire-other"
+        },
+        {
+          "title": "Survey based on Qualtrics",
+          "href": "/tutorials/questionnaire-qualtrics"
+        }
+      ]
+    },
+    {
+      "title": "Field tasks",
+      "subItems": [
+        {
+          "title": "Collecting offline data",
+          "href": "/tutorials/walk"
+        },
+        {
+          "title": "Price monitoring",
+          "href": "/tutorials/price-tag"
+        },
+        {
+          "title": "Product monitoring",
+          "href": "/tutorials/audit-of-planogram-of-product-placement-in-store"
+        },
+        {
+          "title": "Data collection: Organizations",
+          "href": "/tutorials/monitoring-objects-in-organizations"
+        },
+        {
+          "title": "Monitoring field objects",
+          "href": "/tutorials/monitoring"
+        },
+        {
+          "title": "Customization examples",
+          "subItems": [
+            {
+              "title": "Overview",
+              "href": "/tutorials/advanced-features"
+            },
+            {
+              "title": "Add a button",
+              "href": "/tutorials/advanced-features-button"
+            },
+            {
+              "title": "Attaching files",
+              "href": "/tutorials/advanced-features-attach"
+            },
+            {
+              "title": "Add description fields",
+              "href": "/tutorials/advanced-features-input-data"
+            },
+            {
+              "title": "Add a picture",
+              "href": "/tutorials/advanced-features-show-pic"
+            },
+            {
+              "title": "Add a text field",
+              "href": "/tutorials/advanced-features-input-string"
+            },
+            {
+              "title": "Add response options",
+              "href": "/tutorials/advanced-features-input-selector"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Help and support"
+    },
+    {
+      "title": "Frequently asked questions",
+      "href": "https://toloka.ai/en/docs/guide/faq"
+    },
+    {
+      "title": "Troubleshooting",
+      "href": "https://toloka.ai/en/docs/guide/troubleshooting/troubleshooting"
+    },
+    {
+      "title": "Support",
+      "href": "https://toloka.ai/en/docs/guide/troubleshooting/support"
+    },
+    {
+      "title": "Glossary",
+      "href": "https://toloka.ai/en/docs/glossary"
     }
   ],
   "appsMenu": [
@@ -1425,6 +2932,3327 @@
         {
           "href": "/apps-api/ref/batch/app-projectsapp_project_idbatchesbatch_idresume-post",
           "title": "Resume batch processing"
+        }
+      ]
+    }
+  ],
+  "tkitMenu": [
+    {
+      "title": "Toloka-Kit"
+    },
+    {
+      "title": "Overview",
+      "href": "/toloka-kit/"
+    },
+    {
+      "title": "Getting OAuth token",
+      "href": "/toloka-kit/registration"
+    },
+    {
+      "title": "Quick start",
+      "href": "/toloka-kit/quick-start"
+    },
+    {
+      "title": "Recipes",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/toloka-kit/recipes"
+        },
+        {
+          "title": "Projects",
+          "subItems": [
+            {
+              "title": "Create project",
+              "href": "/toloka-kit/recipes/create-project"
+            },
+            {
+              "title": "Get list of projects",
+              "href": "/toloka-kit/recipes/get-projects"
+            },
+            {
+              "title": "Get project details",
+              "href": "/toloka-kit/recipes/get-project-by-id"
+            },
+            {
+              "title": "Edit project",
+              "href": "/toloka-kit/recipes/edit-project"
+            },
+            {
+              "title": "Archive project",
+              "href": "/toloka-kit/recipes/archive-project"
+            }
+          ]
+        },
+        {
+          "title": "Pools",
+          "subItems": [
+            {
+              "title": "Create pool",
+              "href": "/toloka-kit/recipes/create-pool"
+            },
+            {
+              "title": "Get list of pools",
+              "href": "/toloka-kit/recipes/get-pools"
+            },
+            {
+              "title": "Get pool details",
+              "href": "/toloka-kit/recipes/get-pool-by-id"
+            },
+            {
+              "title": "Open pool",
+              "href": "/toloka-kit/recipes/open-pool"
+            },
+            {
+              "title": "Close pool",
+              "href": "/toloka-kit/recipes/close-pool"
+            },
+            {
+              "title": "Archive pool",
+              "href": "/toloka-kit/recipes/archive-pool"
+            },
+            {
+              "title": "Clone pool",
+              "href": "/toloka-kit/recipes/clone-pool"
+            },
+            {
+              "title": "Change pool priority",
+              "href": "/toloka-kit/recipes/change-pool-priority"
+            },
+            {
+              "title": "Toloker selection",
+              "subItems": [
+                {
+                  "title": "Set overlap",
+                  "href": "/toloka-kit/recipes/set-overlap"
+                },
+                {
+                  "title": "Filter Tolokers",
+                  "href": "/toloka-kit/recipes/filter-tolokers"
+                },
+                {
+                  "title": "Use quality control rules",
+                  "href": "/toloka-kit/recipes/use-quality-control-rules"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Skills",
+          "subItems": [
+            {
+              "title": "Get skills",
+              "href": "/toloka-kit/recipes/get-skills"
+            },
+            {
+              "title": "Create skill",
+              "href": "/toloka-kit/recipes/create-skill"
+            },
+            {
+              "title": "Assign skill to Toloker",
+              "href": "/toloka-kit/recipes/assign-skill"
+            },
+            {
+              "title": "Edit skill",
+              "href": "/toloka-kit/recipes/edit-skill"
+            },
+            {
+              "title": "List Tolokers with skills",
+              "href": "/toloka-kit/recipes/get-user-skills"
+            },
+            {
+              "title": "Remove skill from Toloker",
+              "href": "/toloka-kit/recipes/delete-user-skill"
+            }
+          ]
+        },
+        {
+          "title": "Tasks and task suites",
+          "subItems": [
+            {
+              "title": "Group tasks in task suites",
+              "href": "/toloka-kit/recipes/create-task-suite"
+            },
+            {
+              "title": "Upload tasks",
+              "href": "/toloka-kit/recipes/upload-tasks"
+            },
+            {
+              "title": "Get list of tasks",
+              "href": "/toloka-kit/recipes/get-tasks"
+            },
+            {
+              "title": "Get task details",
+              "href": "/toloka-kit/recipes/get-task-by-id"
+            },
+            {
+              "title": "Change task overlap",
+              "href": "/toloka-kit/recipes/change-task-overlap"
+            }
+          ]
+        },
+        {
+          "title": "Responses",
+          "subItems": [
+            {
+              "title": "Get list of responses",
+              "href": "/toloka-kit/recipes/get-responses"
+            },
+            {
+              "title": "Accept responses",
+              "href": "/toloka-kit/recipes/accept-responses"
+            },
+            {
+              "title": "Reject responses",
+              "href": "/toloka-kit/recipes/reject-responses"
+            },
+            {
+              "title": "Aggregate responses in pool",
+              "href": "/toloka-kit/recipes/aggregate-responses"
+            },
+            {
+              "title": "Get list of files in responses",
+              "href": "/toloka-kit/recipes/get-attachments"
+            },
+            {
+              "title": "Download attachments",
+              "href": "/toloka-kit/recipes/download-attachment"
+            }
+          ]
+        },
+        {
+          "title": "Rewards",
+          "subItems": [
+            {
+              "title": "Issue rewards to Tolokers",
+              "href": "/toloka-kit/recipes/assign-reward"
+            },
+            {
+              "title": "Get list of all rewards issued",
+              "href": "/toloka-kit/recipes/get-rewards"
+            },
+            {
+              "title": "Get reward details",
+              "href": "/toloka-kit/recipes/get-reward-by-id"
+            }
+          ]
+        },
+        {
+          "title": "Messages",
+          "subItems": [
+            {
+              "title": "Send messages",
+              "href": "/toloka-kit/recipes/send-messages"
+            },
+            {
+              "title": "Get list of message threads",
+              "href": "/toloka-kit/recipes/get-message-threads"
+            },
+            {
+              "title": "Reply to thread",
+              "href": "/toloka-kit/recipes/reply-to-message-thread"
+            }
+          ]
+        },
+        {
+          "title": "Sample project recipe",
+          "href": "/toloka-kit/recipes/learn-basics"
+        },
+        {
+          "title": "More usage examples",
+          "href": "/toloka-kit/recipes/use-cases"
+        }
+      ]
+    },
+    {
+      "title": "Reference"
+    },
+    {
+      "title": "toloka.client",
+      "subItems": [
+        {
+          "title": "TolokaClient",
+          "href": "/toloka-kit/reference/toloka.client.TolokaClient"
+        },
+        {
+          "title": "TolokaClient methods",
+          "subItems": [
+            {
+              "title": "aggregation",
+              "subItems": [
+                {
+                  "title": "aggregate_solutions_by_pool",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.aggregate_solutions_by_pool"
+                },
+                {
+                  "title": "aggregate_solutions_by_task",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.aggregate_solutions_by_task"
+                },
+                {
+                  "title": "find_aggregated_solutions",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_aggregated_solutions"
+                },
+                {
+                  "title": "get_aggregated_solutions",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_aggregated_solutions"
+                }
+              ]
+            },
+            {
+              "title": "analytics",
+              "subItems": [
+                {
+                  "title": "get_analytics",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_analytics"
+                }
+              ]
+            },
+            {
+              "title": "app",
+              "subItems": [
+                {
+                  "title": "archive_app_project",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.archive_app_project"
+                },
+                {
+                  "title": "create_app_batch",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.create_app_batch"
+                },
+                {
+                  "title": "patch_app_batch",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.patch_app_batch"
+                },
+                {
+                  "title": "create_app_item",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.create_app_item"
+                },
+                {
+                  "title": "create_app_items",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.create_app_items"
+                },
+                {
+                  "title": "create_app_project",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.create_app_project"
+                },
+                {
+                  "title": "find_app_batches",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_app_batches"
+                },
+                {
+                  "title": "find_app_items",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_app_items"
+                },
+                {
+                  "title": "find_app_projects",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_app_projects"
+                },
+                {
+                  "title": "find_apps",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_apps"
+                },
+                {
+                  "title": "get_app",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_app"
+                },
+                {
+                  "title": "get_app_batch",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_app_batch"
+                },
+                {
+                  "title": "get_app_batches",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_app_batches"
+                },
+                {
+                  "title": "get_app_item",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_app_item"
+                },
+                {
+                  "title": "get_app_items",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_app_items"
+                },
+                {
+                  "title": "get_app_project",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_app_project"
+                },
+                {
+                  "title": "get_app_projects",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_app_projects"
+                },
+                {
+                  "title": "get_apps",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_apps"
+                },
+                {
+                  "title": "start_app_batch",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.start_app_batch"
+                },
+                {
+                  "title": "stop_app_batch",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.stop_app_batch"
+                },
+                {
+                  "title": "resume_app_batch",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.resume_app_batch"
+                },
+                {
+                  "title": "unarchive_app_project",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.unarchive_app_project"
+                }
+              ]
+            },
+            {
+              "title": "assignments",
+              "subItems": [
+                {
+                  "title": "accept_assignment",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.accept_assignment"
+                },
+                {
+                  "title": "find_assignments",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_assignments"
+                },
+                {
+                  "title": "get_assignment",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_assignment"
+                },
+                {
+                  "title": "get_assignments",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_assignments"
+                },
+                {
+                  "title": "get_assignments_df [pandas]",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_assignments_df"
+                },
+                {
+                  "title": "patch_assignment",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.patch_assignment"
+                },
+                {
+                  "title": "reject_assignment",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.reject_assignment"
+                }
+              ]
+            },
+            {
+              "title": "attachments",
+              "subItems": [
+                {
+                  "title": "find_attachments",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_attachments"
+                },
+                {
+                  "title": "get_attachment",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_attachment"
+                },
+                {
+                  "title": "get_attachments",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_attachments"
+                },
+                {
+                  "title": "download_attachment",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.download_attachment"
+                }
+              ]
+            },
+            {
+              "title": "messages",
+              "subItems": [
+                {
+                  "title": "add_message_thread_to_folders",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.add_message_thread_to_folders"
+                },
+                {
+                  "title": "compose_message_thread",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.compose_message_thread"
+                },
+                {
+                  "title": "find_message_threads",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_message_threads"
+                },
+                {
+                  "title": "get_message_threads",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_message_threads"
+                },
+                {
+                  "title": "reply_message_thread",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.reply_message_thread"
+                },
+                {
+                  "title": "remove_message_thread_from_folders",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.remove_message_thread_from_folders"
+                }
+              ]
+            },
+            {
+              "title": "operations",
+              "subItems": [
+                {
+                  "title": "get_operation",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_operation"
+                },
+                {
+                  "title": "find_operations",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_operations"
+                },
+                {
+                  "title": "get_operations",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_operations"
+                },
+                {
+                  "title": "get_operation_log",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_operation_log"
+                },
+                {
+                  "title": "wait_operation",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.wait_operation"
+                }
+              ]
+            },
+            {
+              "title": "pools",
+              "subItems": [
+                {
+                  "title": "archive_pool",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.archive_pool"
+                },
+                {
+                  "title": "archive_pool_async",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.archive_pool_async"
+                },
+                {
+                  "title": "clone_pool",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.clone_pool"
+                },
+                {
+                  "title": "clone_pool_async",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.clone_pool_async"
+                },
+                {
+                  "title": "close_pool",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.close_pool"
+                },
+                {
+                  "title": "close_pool_async",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.close_pool_async"
+                },
+                {
+                  "title": "close_pool_for_update",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.close_pool_for_update"
+                },
+                {
+                  "title": "close_pool_for_update_async",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.close_pool_for_update_async"
+                },
+                {
+                  "title": "create_pool",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.create_pool"
+                },
+                {
+                  "title": "find_pools",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_pools"
+                },
+                {
+                  "title": "get_pool",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_pool"
+                },
+                {
+                  "title": "get_pools",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_pools"
+                },
+                {
+                  "title": "open_pool",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.open_pool"
+                },
+                {
+                  "title": "open_pool_async",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.open_pool_async"
+                },
+                {
+                  "title": "patch_pool",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.patch_pool"
+                },
+                {
+                  "title": "update_pool",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.update_pool"
+                }
+              ]
+            },
+            {
+              "title": "projects",
+              "subItems": [
+                {
+                  "title": "archive_project",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.archive_project"
+                },
+                {
+                  "title": "archive_project_async",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.archive_project_async"
+                },
+                {
+                  "title": "create_project",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.create_project"
+                },
+                {
+                  "title": "clone_project",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.clone_project"
+                },
+                {
+                  "title": "find_projects",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_projects"
+                },
+                {
+                  "title": "get_project",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_project"
+                },
+                {
+                  "title": "get_projects",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_projects"
+                },
+                {
+                  "title": "update_project",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.update_project"
+                }
+              ]
+            },
+            {
+              "title": "requester",
+              "subItems": [
+                {
+                  "title": "get_requester",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_requester"
+                }
+              ]
+            },
+            {
+              "title": "skills",
+              "subItems": [
+                {
+                  "title": "create_skill",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.create_skill"
+                },
+                {
+                  "title": "find_skills",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_skills"
+                },
+                {
+                  "title": "get_skill",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_skill"
+                },
+                {
+                  "title": "get_skills",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_skills"
+                },
+                {
+                  "title": "update_skill",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.update_skill"
+                }
+              ]
+            },
+            {
+              "title": "tasks",
+              "subItems": [
+                {
+                  "title": "create_task",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.create_task"
+                },
+                {
+                  "title": "create_tasks",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.create_tasks"
+                },
+                {
+                  "title": "create_tasks_async",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.create_tasks_async"
+                },
+                {
+                  "title": "find_tasks",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_tasks"
+                },
+                {
+                  "title": "get_task",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_task"
+                },
+                {
+                  "title": "get_tasks",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_tasks"
+                },
+                {
+                  "title": "patch_task",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.patch_task"
+                },
+                {
+                  "title": "patch_task_overlap_or_min",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.patch_task_overlap_or_min"
+                }
+              ]
+            },
+            {
+              "title": "task suites",
+              "subItems": [
+                {
+                  "title": "create_task_suite",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.create_task_suite"
+                },
+                {
+                  "title": "create_task_suites",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.create_task_suites"
+                },
+                {
+                  "title": "create_task_suites_async",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.create_task_suites_async"
+                },
+                {
+                  "title": "find_task_suites",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_task_suites"
+                },
+                {
+                  "title": "get_task_suite",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_task_suite"
+                },
+                {
+                  "title": "get_task_suites",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_task_suites"
+                },
+                {
+                  "title": "patch_task_suite",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.patch_task_suite"
+                },
+                {
+                  "title": "patch_task_suite_overlap_or_min",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.patch_task_suite_overlap_or_min"
+                }
+              ]
+            },
+            {
+              "title": "training",
+              "subItems": [
+                {
+                  "title": "archive_training",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.archive_training"
+                },
+                {
+                  "title": "archive_training_async",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.archive_training_async"
+                },
+                {
+                  "title": "clone_training",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.clone_training"
+                },
+                {
+                  "title": "clone_training_async",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.clone_training_async"
+                },
+                {
+                  "title": "close_training",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.close_training"
+                },
+                {
+                  "title": "close_training_async",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.close_training_async"
+                },
+                {
+                  "title": "create_training",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.create_training"
+                },
+                {
+                  "title": "find_trainings",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_trainings"
+                },
+                {
+                  "title": "get_training",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_training"
+                },
+                {
+                  "title": "get_trainings",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_trainings"
+                },
+                {
+                  "title": "open_training",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.open_training"
+                },
+                {
+                  "title": "open_training_async",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.open_training_async"
+                },
+                {
+                  "title": "update_training",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.update_training"
+                }
+              ]
+            },
+            {
+              "title": "user bonus",
+              "subItems": [
+                {
+                  "title": "create_user_bonus",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.create_user_bonus"
+                },
+                {
+                  "title": "create_user_bonuses",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.create_user_bonuses"
+                },
+                {
+                  "title": "create_user_bonuses_async",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.create_user_bonuses_async"
+                },
+                {
+                  "title": "find_user_bonuses",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_user_bonuses"
+                },
+                {
+                  "title": "get_user_bonus",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_user_bonus"
+                },
+                {
+                  "title": "get_user_bonuses",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_user_bonuses"
+                }
+              ]
+            },
+            {
+              "title": "user restrictions",
+              "subItems": [
+                {
+                  "title": "delete_user_restriction",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.delete_user_restriction"
+                },
+                {
+                  "title": "find_user_restrictions",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_user_restrictions"
+                },
+                {
+                  "title": "get_user_restriction",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_user_restriction"
+                },
+                {
+                  "title": "get_user_restrictions",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_user_restrictions"
+                },
+                {
+                  "title": "set_user_restriction",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.set_user_restriction"
+                }
+              ]
+            },
+            {
+              "title": "user skills",
+              "subItems": [
+                {
+                  "title": "delete_user_skill",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.delete_user_skill"
+                },
+                {
+                  "title": "find_user_skills",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_user_skills"
+                },
+                {
+                  "title": "get_user_skill",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_user_skill"
+                },
+                {
+                  "title": "get_user_skills",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_user_skills"
+                },
+                {
+                  "title": "get_user",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_user"
+                },
+                {
+                  "title": "set_user_skill",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.set_user_skill"
+                }
+              ]
+            },
+            {
+              "title": "webhook subscription",
+              "subItems": [
+                {
+                  "title": "delete_webhook_subscription",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.delete_webhook_subscription"
+                },
+                {
+                  "title": "find_webhook_subscriptions",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.find_webhook_subscriptions"
+                },
+                {
+                  "title": "get_webhook_subscription",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_webhook_subscription"
+                },
+                {
+                  "title": "get_webhook_subscriptions",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.get_webhook_subscriptions"
+                },
+                {
+                  "title": "upsert_webhook_subscriptions",
+                  "href": "/toloka-kit/reference/toloka.client.TolokaClient.upsert_webhook_subscriptions"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "actions",
+          "subItems": [
+            {
+              "title": "Restriction",
+              "href": "/toloka-kit/reference/toloka.client.actions.Restriction"
+            },
+            {
+              "title": "RestrictionV2",
+              "href": "/toloka-kit/reference/toloka.client.actions.RestrictionV2"
+            },
+            {
+              "title": "ChangeOverlap",
+              "href": "/toloka-kit/reference/toloka.client.actions.ChangeOverlap"
+            },
+            {
+              "title": "SetSkill",
+              "href": "/toloka-kit/reference/toloka.client.actions.SetSkill"
+            },
+            {
+              "title": "SetSkillFromOutputField",
+              "href": "/toloka-kit/reference/toloka.client.actions.SetSkillFromOutputField"
+            },
+            {
+              "title": "ApproveAllAssignments",
+              "href": "/toloka-kit/reference/toloka.client.actions.ApproveAllAssignments"
+            },
+            {
+              "title": "RejectAllAssignments",
+              "href": "/toloka-kit/reference/toloka.client.actions.RejectAllAssignments"
+            }
+          ]
+        },
+        {
+          "title": "aggregation",
+          "subItems": [
+            {
+              "title": "AggregatedSolution",
+              "href": "/toloka-kit/reference/toloka.client.aggregation.AggregatedSolution"
+            },
+            {
+              "title": "PoolAggregatedSolutionRequest",
+              "href": "/toloka-kit/reference/toloka.client.aggregation.PoolAggregatedSolutionRequest"
+            },
+            {
+              "title": "TaskAggregatedSolutionRequest",
+              "href": "/toloka-kit/reference/toloka.client.aggregation.TaskAggregatedSolutionRequest"
+            },
+            {
+              "title": "WeightedDynamicOverlapTaskAggregatedSolutionRequest",
+              "href": "/toloka-kit/reference/toloka.client.aggregation.WeightedDynamicOverlapTaskAggregatedSolutionRequest"
+            }
+          ]
+        },
+        {
+          "title": "analytics_request",
+          "subItems": [
+            {
+              "title": "ActiveWorkersByFilterCountPoolAnalytics",
+              "href": "/toloka-kit/reference/toloka.client.analytics_request.ActiveWorkersByFilterCountPoolAnalytics"
+            },
+            {
+              "title": "ApprovedAssignmentsCountPoolAnalytics",
+              "href": "/toloka-kit/reference/toloka.client.analytics_request.ApprovedAssignmentsCountPoolAnalytics"
+            },
+            {
+              "title": "AvgSubmitAssignmentMillisPoolAnalytics",
+              "href": "/toloka-kit/reference/toloka.client.analytics_request.AvgSubmitAssignmentMillisPoolAnalytics"
+            },
+            {
+              "title": "CompletionPercentagePoolAnalytics",
+              "href": "/toloka-kit/reference/toloka.client.analytics_request.CompletionPercentagePoolAnalytics"
+            },
+            {
+              "title": "EstimatedAssignmentsCountPoolAnalytics",
+              "href": "/toloka-kit/reference/toloka.client.analytics_request.EstimatedAssignmentsCountPoolAnalytics"
+            },
+            {
+              "title": "RealTasksCountPoolAnalytics",
+              "href": "/toloka-kit/reference/toloka.client.analytics_request.RealTasksCountPoolAnalytics"
+            },
+            {
+              "title": "RejectedAssignmentsCountPoolAnalytics",
+              "href": "/toloka-kit/reference/toloka.client.analytics_request.RejectedAssignmentsCountPoolAnalytics"
+            },
+            {
+              "title": "SkippedAssignmentsCountPoolAnalytics",
+              "href": "/toloka-kit/reference/toloka.client.analytics_request.SkippedAssignmentsCountPoolAnalytics"
+            },
+            {
+              "title": "SpentBudgetPoolAnalytics",
+              "href": "/toloka-kit/reference/toloka.client.analytics_request.SpentBudgetPoolAnalytics"
+            },
+            {
+              "title": "SubmittedAssignmentsCountPoolAnalytics",
+              "href": "/toloka-kit/reference/toloka.client.analytics_request.SubmittedAssignmentsCountPoolAnalytics"
+            },
+            {
+              "title": "UniqueSubmittersCountPoolAnalytics",
+              "href": "/toloka-kit/reference/toloka.client.analytics_request.UniqueSubmittersCountPoolAnalytics"
+            },
+            {
+              "title": "UniqueWorkersCountPoolAnalytics",
+              "href": "/toloka-kit/reference/toloka.client.analytics_request.UniqueWorkersCountPoolAnalytics"
+            }
+          ]
+        },
+        {
+          "title": "app",
+          "subItems": [
+            {
+              "title": "App",
+              "href": "/toloka-kit/reference/toloka.client.app.App"
+            },
+            {
+              "title": "AppBatch",
+              "href": "/toloka-kit/reference/toloka.client.app.AppBatch"
+            },
+            {
+              "title": "AppBatchCreateRequest",
+              "href": "/toloka-kit/reference/toloka.client.app.AppBatchCreateRequest"
+            },
+            {
+              "title": "AppItem",
+              "href": "/toloka-kit/reference/toloka.client.app.AppItem"
+            },
+            {
+              "title": "AppItemsCreateRequest",
+              "href": "/toloka-kit/reference/toloka.client.app.AppItemsCreateRequest"
+            },
+            {
+              "title": "AppProject",
+              "href": "/toloka-kit/reference/toloka.client.app.AppProject"
+            }
+          ]
+        },
+        {
+          "title": "assignment",
+          "subItems": [
+            {
+              "title": "Assignment",
+              "href": "/toloka-kit/reference/toloka.client.assignment.Assignment"
+            },
+            {
+              "title": "AssignmentPatch",
+              "href": "/toloka-kit/reference/toloka.client.assignment.AssignmentPatch"
+            },
+            {
+              "title": "GetAssignmentsTsvParameters",
+              "href": "/toloka-kit/reference/toloka.client.assignment.GetAssignmentsTsvParameters"
+            }
+          ]
+        },
+        {
+          "title": "attachment",
+          "subItems": [
+            {
+              "title": "AssignmentAttachment",
+              "href": "/toloka-kit/reference/toloka.client.attachment.AssignmentAttachment"
+            }
+          ]
+        },
+        {
+          "title": "batch_create_results",
+          "subItems": [
+            {
+              "title": "TaskBatchCreateResult",
+              "href": "/toloka-kit/reference/toloka.client.batch_create_results.TaskBatchCreateResult"
+            },
+            {
+              "title": "TaskSuiteBatchCreateResult",
+              "href": "/toloka-kit/reference/toloka.client.batch_create_results.TaskSuiteBatchCreateResult"
+            },
+            {
+              "title": "UserBonusBatchCreateResult",
+              "href": "/toloka-kit/reference/toloka.client.batch_create_results.UserBonusBatchCreateResult"
+            },
+            {
+              "title": "WebhookSubscriptionBatchCreateResult",
+              "href": "/toloka-kit/reference/toloka.client.batch_create_results.WebhookSubscriptionBatchCreateResult"
+            }
+          ]
+        },
+        {
+          "title": "clone_results",
+          "subItems": [
+            {
+              "title": "CloneResults",
+              "href": "/toloka-kit/reference/toloka.client.clone_results.CloneResults"
+            }
+          ]
+        },
+        {
+          "title": "collectors",
+          "subItems": [
+            {
+              "title": "AcceptanceRate",
+              "href": "/toloka-kit/reference/toloka.client.collectors.AcceptanceRate"
+            },
+            {
+              "title": "AnswerCount",
+              "href": "/toloka-kit/reference/toloka.client.collectors.AnswerCount"
+            },
+            {
+              "title": "AssignmentsAssessment",
+              "href": "/toloka-kit/reference/toloka.client.collectors.AssignmentsAssessment"
+            },
+            {
+              "title": "AssignmentSubmitTime",
+              "href": "/toloka-kit/reference/toloka.client.collectors.AssignmentSubmitTime"
+            },
+            {
+              "title": "Captcha",
+              "href": "/toloka-kit/reference/toloka.client.collectors.Captcha"
+            },
+            {
+              "title": "GoldenSet",
+              "href": "/toloka-kit/reference/toloka.client.collectors.GoldenSet"
+            },
+            {
+              "title": "Income",
+              "href": "/toloka-kit/reference/toloka.client.collectors.Income"
+            },
+            {
+              "title": "MajorityVote",
+              "href": "/toloka-kit/reference/toloka.client.collectors.MajorityVote"
+            },
+            {
+              "title": "SkippedInRowAssignments",
+              "href": "/toloka-kit/reference/toloka.client.collectors.SkippedInRowAssignments"
+            },
+            {
+              "title": "Training",
+              "href": "/toloka-kit/reference/toloka.client.collectors.Training"
+            },
+            {
+              "title": "UsersAssessment",
+              "href": "/toloka-kit/reference/toloka.client.collectors.UsersAssessment"
+            }
+          ]
+        },
+        {
+          "title": "conditions",
+          "subItems": [
+            {
+              "title": "AcceptedAssignmentsRate",
+              "href": "/toloka-kit/reference/toloka.client.conditions.AcceptedAssignmentsRate"
+            },
+            {
+              "title": "AcceptedAssignmentsCount",
+              "href": "/toloka-kit/reference/toloka.client.conditions.AcceptedAssignmentsCount"
+            },
+            {
+              "title": "AssessmentEvent",
+              "href": "/toloka-kit/reference/toloka.client.conditions.AssessmentEvent"
+            },
+            {
+              "title": "AssignmentsAcceptedCount",
+              "href": "/toloka-kit/reference/toloka.client.conditions.AssignmentsAcceptedCount"
+            },
+            {
+              "title": "CorrectAnswersRate",
+              "href": "/toloka-kit/reference/toloka.client.conditions.CorrectAnswersRate"
+            },
+            {
+              "title": "FailRate",
+              "href": "/toloka-kit/reference/toloka.client.conditions.FailRate"
+            },
+            {
+              "title": "FastSubmittedCount",
+              "href": "/toloka-kit/reference/toloka.client.conditions.FastSubmittedCount"
+            },
+            {
+              "title": "GoldenSetAnswersCount",
+              "href": "/toloka-kit/reference/toloka.client.conditions.GoldenSetAnswersCount"
+            },
+            {
+              "title": "GoldenSetCorrectAnswersRate",
+              "href": "/toloka-kit/reference/toloka.client.conditions.GoldenSetCorrectAnswersRate"
+            },
+            {
+              "title": "GoldenSetIncorrectAnswersRate",
+              "href": "/toloka-kit/reference/toloka.client.conditions.GoldenSetIncorrectAnswersRate"
+            },
+            {
+              "title": "IncomeSumForLast24Hours",
+              "href": "/toloka-kit/reference/toloka.client.conditions.IncomeSumForLast24Hours"
+            },
+            {
+              "title": "IncorrectAnswersRate",
+              "href": "/toloka-kit/reference/toloka.client.conditions.IncorrectAnswersRate"
+            },
+            {
+              "title": "NextAssignmentAvailable",
+              "href": "/toloka-kit/reference/toloka.client.conditions.NextAssignmentAvailable"
+            },
+            {
+              "title": "PendingAssignmentsCount",
+              "href": "/toloka-kit/reference/toloka.client.conditions.PendingAssignmentsCount"
+            },
+            {
+              "title": "PoolAccessRevokedReason",
+              "href": "/toloka-kit/reference/toloka.client.conditions.PoolAccessRevokedReason"
+            },
+            {
+              "title": "RejectedAssignmentsCount",
+              "href": "/toloka-kit/reference/toloka.client.conditions.RejectedAssignmentsCount"
+            },
+            {
+              "title": "RejectedAssignmentsRate",
+              "href": "/toloka-kit/reference/toloka.client.conditions.RejectedAssignmentsRate"
+            },
+            {
+              "title": "SkillId",
+              "href": "/toloka-kit/reference/toloka.client.conditions.SkillId"
+            },
+            {
+              "title": "SkippedInRowCount",
+              "href": "/toloka-kit/reference/toloka.client.conditions.SkippedInRowCount"
+            },
+            {
+              "title": "StoredResultsCount",
+              "href": "/toloka-kit/reference/toloka.client.conditions.StoredResultsCount"
+            },
+            {
+              "title": "SubmittedAssignmentsCount",
+              "href": "/toloka-kit/reference/toloka.client.conditions.SubmittedAssignmentsCount"
+            },
+            {
+              "title": "SuccessRate",
+              "href": "/toloka-kit/reference/toloka.client.conditions.SuccessRate"
+            },
+            {
+              "title": "TotalAnswersCount",
+              "href": "/toloka-kit/reference/toloka.client.conditions.TotalAnswersCount"
+            },
+            {
+              "title": "TotalAssignmentsCount",
+              "href": "/toloka-kit/reference/toloka.client.conditions.TotalAssignmentsCount"
+            },
+            {
+              "title": "TotalSubmittedCount",
+              "href": "/toloka-kit/reference/toloka.client.conditions.TotalSubmittedCount"
+            }
+          ]
+        },
+        {
+          "title": "error_codes",
+          "subItems": [
+            {
+              "title": "CommonErrorCodes",
+              "href": "/toloka-kit/reference/toloka.client.error_codes.CommonErrorCodes"
+            },
+            {
+              "title": "InternalErrorCodes",
+              "href": "/toloka-kit/reference/toloka.client.error_codes.InternalErrorCodes"
+            },
+            {
+              "title": "ValidationErrorCodes",
+              "href": "/toloka-kit/reference/toloka.client.error_codes.ValidationErrorCodes"
+            }
+          ]
+        },
+        {
+          "title": "exceptions",
+          "subItems": [
+            {
+              "title": "AccessDeniedApiError",
+              "href": "/toloka-kit/reference/toloka.client.exceptions.AccessDeniedApiError"
+            },
+            {
+              "title": "AuthenticationApiError",
+              "href": "/toloka-kit/reference/toloka.client.exceptions.AuthenticationApiError"
+            },
+            {
+              "title": "ConflictStateApiError",
+              "href": "/toloka-kit/reference/toloka.client.exceptions.ConflictStateApiError"
+            },
+            {
+              "title": "DoesNotExistApiError",
+              "href": "/toloka-kit/reference/toloka.client.exceptions.DoesNotExistApiError"
+            },
+            {
+              "title": "FailedOperation",
+              "href": "/toloka-kit/reference/toloka.client.exceptions.FailedOperation"
+            },
+            {
+              "title": "IncorrectActionsApiError",
+              "href": "/toloka-kit/reference/toloka.client.exceptions.IncorrectActionsApiError"
+            },
+            {
+              "title": "InternalApiError",
+              "href": "/toloka-kit/reference/toloka.client.exceptions.InternalApiError"
+            },
+            {
+              "title": "RemoteServiceUnavailableApiError",
+              "href": "/toloka-kit/reference/toloka.client.exceptions.RemoteServiceUnavailableApiError"
+            },
+            {
+              "title": "TooManyRequestsApiError",
+              "href": "/toloka-kit/reference/toloka.client.exceptions.TooManyRequestsApiError"
+            },
+            {
+              "title": "ValidationApiError",
+              "href": "/toloka-kit/reference/toloka.client.exceptions.ValidationApiError"
+            }
+          ]
+        },
+        {
+          "title": "filter",
+          "subItems": [
+            {
+              "title": "AdultAllowed",
+              "href": "/toloka-kit/reference/toloka.client.filter.AdultAllowed"
+            },
+            {
+              "title": "Citizenship",
+              "href": "/toloka-kit/reference/toloka.client.filter.Citizenship"
+            },
+            {
+              "title": "City",
+              "href": "/toloka-kit/reference/toloka.client.filter.City"
+            },
+            {
+              "title": "ClientType",
+              "href": "/toloka-kit/reference/toloka.client.filter.ClientType"
+            },
+            {
+              "title": "Computed",
+              "href": "/toloka-kit/reference/toloka.client.filter.Computed"
+            },
+            {
+              "title": "Country",
+              "href": "/toloka-kit/reference/toloka.client.filter.Country"
+            },
+            {
+              "title": "DateOfBirth",
+              "href": "/toloka-kit/reference/toloka.client.filter.DateOfBirth"
+            },
+            {
+              "title": "DeviceCategory",
+              "href": "/toloka-kit/reference/toloka.client.filter.DeviceCategory"
+            },
+            {
+              "title": "Education",
+              "href": "/toloka-kit/reference/toloka.client.filter.Education"
+            },
+            {
+              "title": "Gender",
+              "href": "/toloka-kit/reference/toloka.client.filter.Gender"
+            },
+            {
+              "title": "Languages",
+              "href": "/toloka-kit/reference/toloka.client.filter.Languages"
+            },
+            {
+              "title": "OSFamily",
+              "href": "/toloka-kit/reference/toloka.client.filter.OSFamily"
+            },
+            {
+              "title": "OSVersion",
+              "href": "/toloka-kit/reference/toloka.client.filter.OSVersion"
+            },
+            {
+              "title": "OSVersionBugfix",
+              "href": "/toloka-kit/reference/toloka.client.filter.OSVersionBugfix"
+            },
+            {
+              "title": "OSVersionMajor",
+              "href": "/toloka-kit/reference/toloka.client.filter.OSVersionMajor"
+            },
+            {
+              "title": "OSVersionMinor",
+              "href": "/toloka-kit/reference/toloka.client.filter.OSVersionMinor"
+            },
+            {
+              "title": "Profile",
+              "href": "/toloka-kit/reference/toloka.client.filter.Profile"
+            },
+            {
+              "title": "RegionByIp",
+              "href": "/toloka-kit/reference/toloka.client.filter.RegionByIp"
+            },
+            {
+              "title": "RegionByPhone",
+              "href": "/toloka-kit/reference/toloka.client.filter.RegionByPhone"
+            },
+            {
+              "title": "Skill",
+              "href": "/toloka-kit/reference/toloka.client.filter.Skill"
+            },
+            {
+              "title": "UserAgentFamily",
+              "href": "/toloka-kit/reference/toloka.client.filter.UserAgentFamily"
+            },
+            {
+              "title": "UserAgentFamily.UserAgentFamily",
+              "href": "/toloka-kit/reference/toloka.client.filter.UserAgentFamily.UserAgentFamily"
+            },
+            {
+              "title": "UserAgentType",
+              "href": "/toloka-kit/reference/toloka.client.filter.UserAgentType"
+            },
+            {
+              "title": "UserAgentVersion",
+              "href": "/toloka-kit/reference/toloka.client.filter.UserAgentVersion"
+            },
+            {
+              "title": "UserAgentVersionBugfix",
+              "href": "/toloka-kit/reference/toloka.client.filter.UserAgentVersionBugfix"
+            },
+            {
+              "title": "UserAgentVersionMajor",
+              "href": "/toloka-kit/reference/toloka.client.filter.UserAgentVersionMajor"
+            },
+            {
+              "title": "UserAgentVersionMinor",
+              "href": "/toloka-kit/reference/toloka.client.filter.UserAgentVersionMinor"
+            }
+          ]
+        },
+        {
+          "title": "message_thread",
+          "subItems": [
+            {
+              "title": "MessageThread",
+              "href": "/toloka-kit/reference/toloka.client.message_thread.MessageThread"
+            },
+            {
+              "title": "Interlocutor",
+              "href": "/toloka-kit/reference/toloka.client.message_thread.Interlocutor"
+            },
+            {
+              "title": "MessageThreadCompose",
+              "href": "/toloka-kit/reference/toloka.client.message_thread.MessageThreadCompose"
+            },
+            {
+              "title": "MessageThreadFolders",
+              "href": "/toloka-kit/reference/toloka.client.message_thread.MessageThreadFolders"
+            },
+            {
+              "title": "MessageThreadReply",
+              "href": "/toloka-kit/reference/toloka.client.message_thread.MessageThreadReply"
+            }
+          ]
+        },
+        {
+          "title": "operations",
+          "subItems": [
+            {
+              "title": "AggregatedSolutionOperation",
+              "href": "/toloka-kit/reference/toloka.client.operations.AggregatedSolutionOperation"
+            },
+            {
+              "title": "AnalyticsOperation",
+              "href": "/toloka-kit/reference/toloka.client.operations.AnalyticsOperation"
+            },
+            {
+              "title": "PoolArchiveOperation",
+              "href": "/toloka-kit/reference/toloka.client.operations.PoolArchiveOperation"
+            },
+            {
+              "title": "PoolCloneOperation",
+              "href": "/toloka-kit/reference/toloka.client.operations.PoolCloneOperation"
+            },
+            {
+              "title": "PoolCloseOperation",
+              "href": "/toloka-kit/reference/toloka.client.operations.PoolCloseOperation"
+            },
+            {
+              "title": "PoolOpenOperation",
+              "href": "/toloka-kit/reference/toloka.client.operations.PoolOpenOperation"
+            },
+            {
+              "title": "ProjectArchiveOperation",
+              "href": "/toloka-kit/reference/toloka.client.operations.ProjectArchiveOperation"
+            },
+            {
+              "title": "TasksCreateOperation",
+              "href": "/toloka-kit/reference/toloka.client.operations.TasksCreateOperation"
+            },
+            {
+              "title": "TaskSuiteCreateBatchOperation",
+              "href": "/toloka-kit/reference/toloka.client.operations.TaskSuiteCreateBatchOperation"
+            },
+            {
+              "title": "TrainingArchiveOperation",
+              "href": "/toloka-kit/reference/toloka.client.operations.TrainingArchiveOperation"
+            },
+            {
+              "title": "TrainingCloneOperation",
+              "href": "/toloka-kit/reference/toloka.client.operations.TrainingCloneOperation"
+            },
+            {
+              "title": "TrainingCloseOperation",
+              "href": "/toloka-kit/reference/toloka.client.operations.TrainingCloseOperation"
+            },
+            {
+              "title": "TrainingOpenOperation",
+              "href": "/toloka-kit/reference/toloka.client.operations.TrainingOpenOperation"
+            },
+            {
+              "title": "UserBonusCreateBatchOperation",
+              "href": "/toloka-kit/reference/toloka.client.operations.UserBonusCreateBatchOperation"
+            }
+          ]
+        },
+        {
+          "title": "operation_log",
+          "subItems": [
+            {
+              "title": "OperationLogItem",
+              "href": "/toloka-kit/reference/toloka.client.operation_log.OperationLogItem"
+            }
+          ]
+        },
+        {
+          "title": "owner",
+          "subItems": [
+            {
+              "title": "Owner",
+              "href": "/toloka-kit/reference/toloka.client.owner.Owner"
+            }
+          ]
+        },
+        {
+          "title": "pool",
+          "subItems": [
+            {
+              "title": "Pool",
+              "href": "/toloka-kit/reference/toloka.client.pool.Pool"
+            },
+            {
+              "title": "PoolPatchRequest",
+              "href": "/toloka-kit/reference/toloka.client.pool.PoolPatchRequest"
+            },
+            {
+              "title": "dynamic_overlap_config",
+              "subItems": [
+                {
+                  "title": "DynamicOverlapConfig",
+                  "href": "/toloka-kit/reference/toloka.client.pool.dynamic_overlap_config.DynamicOverlapConfig"
+                },
+                {
+                  "title": "DynamicPricingConfig",
+                  "href": "/toloka-kit/reference/toloka.client.pool.dynamic_pricing_config.DynamicPricingConfig"
+                }
+              ]
+            },
+            {
+              "title": "mixer_config",
+              "subItems": [
+                {
+                  "title": "MixerConfig",
+                  "href": "/toloka-kit/reference/toloka.client.pool.mixer_config.MixerConfig"
+                }
+              ]
+            },
+            {
+              "title": "speed_qualitty_balance_config",
+              "subItems": [
+                {
+                  "title": "TopPercentageByQuality",
+                  "href": "/toloka-kit/reference/toloka.client.pool.speed_quality_balance_config.TopPercentageByQuality"
+                },
+                {
+                  "title": "BestConcurrentUsersByQuality",
+                  "href": "/toloka-kit/reference/toloka.client.pool.speed_quality_balance_config.BestConcurrentUsersByQuality"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "primitives",
+          "subItems": [
+            {
+              "title": "base",
+              "subItems": [
+                {
+                  "title": "autocast_to_enum",
+                  "href": "/toloka-kit/reference/toloka.client.primitives.base.autocast_to_enum"
+                },
+                {
+                  "title": "BaseParameters",
+                  "href": "/toloka-kit/reference/toloka.client.primitives.base.BaseParameters"
+                },
+                {
+                  "title": "BaseTolokaObject",
+                  "href": "/toloka-kit/reference/toloka.client.primitives.base.BaseTolokaObject"
+                }
+              ]
+            },
+            {
+              "title": "infinite_overlap",
+              "subItems": [
+                {
+                  "title": "InfiniteOverlapParametersMixin",
+                  "href": "/toloka-kit/reference/toloka.client.primitives.infinite_overlap.InfiniteOverlapParametersMixin"
+                }
+              ]
+            },
+            {
+              "title": "retry",
+              "subItems": [
+                {
+                  "title": "TolokaRetry",
+                  "href": "/toloka-kit/reference/toloka.client.primitives.retry.TolokaRetry"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "project",
+          "subItems": [
+            {
+              "title": "Project",
+              "href": "/toloka-kit/reference/toloka.client.project.Project"
+            },
+            {
+              "title": "localization",
+              "subItems": [
+                {
+                  "title": "AdditionalLanguage",
+                  "href": "/toloka-kit/reference/toloka.client.project.localization.AdditionalLanguage"
+                },
+                {
+                  "title": "LocalizationConfig",
+                  "href": "/toloka-kit/reference/toloka.client.project.localization.LocalizationConfig"
+                }
+              ]
+            },
+            {
+              "title": "field_spec",
+              "subItems": [
+                {
+                  "title": "ArrayBooleanSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.field_spec.ArrayBooleanSpec"
+                },
+                {
+                  "title": "ArrayCoordinatesSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.field_spec.ArrayCoordinatesSpec"
+                },
+                {
+                  "title": "ArrayFileSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.field_spec.ArrayFileSpec"
+                },
+                {
+                  "title": "ArrayFloatSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.field_spec.ArrayFloatSpec"
+                },
+                {
+                  "title": "ArrayIntegerSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.field_spec.ArrayIntegerSpec"
+                },
+                {
+                  "title": "ArrayStringSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.field_spec.ArrayStringSpec"
+                },
+                {
+                  "title": "ArrayUrlSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.field_spec.ArrayUrlSpec"
+                },
+                {
+                  "title": "BooleanSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.field_spec.BooleanSpec"
+                },
+                {
+                  "title": "CoordinatesSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.field_spec.CoordinatesSpec"
+                },
+                {
+                  "title": "FieldType",
+                  "href": "/toloka-kit/reference/toloka.client.project.field_spec.FieldType"
+                },
+                {
+                  "title": "FileSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.field_spec.FileSpec"
+                },
+                {
+                  "title": "FloatSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.field_spec.FloatSpec"
+                },
+                {
+                  "title": "IntegerSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.field_spec.IntegerSpec"
+                },
+                {
+                  "title": "JsonSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.field_spec.JsonSpec"
+                },
+                {
+                  "title": "StringSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.field_spec.StringSpec"
+                },
+                {
+                  "title": "UrlSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.field_spec.UrlSpec"
+                }
+              ]
+            },
+            {
+              "title": "task_spec",
+              "subItems": [
+                {
+                  "title": "TaskSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.task_spec.TaskSpec"
+                }
+              ]
+            },
+            {
+              "title": "view_spec",
+              "subItems": [
+                {
+                  "title": "ClassicViewSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.view_spec.ClassicViewSpec"
+                },
+                {
+                  "title": "TemplateBuilderViewSpec",
+                  "href": "/toloka-kit/reference/toloka.client.project.view_spec.TemplateBuilderViewSpec"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "quality_control",
+          "subItems": [
+            {
+              "title": "QualityControl",
+              "href": "/toloka-kit/reference/toloka.client.quality_control.QualityControl"
+            }
+          ]
+        },
+        {
+          "title": "requester",
+          "subItems": [
+            {
+              "title": "Requester",
+              "href": "/toloka-kit/reference/toloka.client.requester.Requester"
+            }
+          ]
+        },
+        {
+          "title": "search_requests",
+          "subItems": [
+            {
+              "title": "AggregatedSolutionSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.AggregatedSolutionSortItems"
+            },
+            {
+              "title": "AppBatchSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.AppBatchSortItems"
+            },
+            {
+              "title": "AppItemSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.AppItemSortItems"
+            },
+            {
+              "title": "AppProjectSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.AppProjectSortItems"
+            },
+            {
+              "title": "AppSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.AppSortItems"
+            },
+            {
+              "title": "AssignmentSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.AssignmentSortItems"
+            },
+            {
+              "title": "AttachmentSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.AttachmentSortItems"
+            },
+            {
+              "title": "MessageThreadSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.MessageThreadSortItems"
+            },
+            {
+              "title": "PoolSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.PoolSortItems"
+            },
+            {
+              "title": "ProjectSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.ProjectSortItems"
+            },
+            {
+              "title": "SkillSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.SkillSortItems"
+            },
+            {
+              "title": "TaskSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.TaskSortItems"
+            },
+            {
+              "title": "TaskSuiteSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.TaskSuiteSortItems"
+            },
+            {
+              "title": "TrainingSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.TrainingSortItems"
+            },
+            {
+              "title": "UserBonusSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.UserBonusSortItems"
+            },
+            {
+              "title": "UserRestrictionSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.UserRestrictionSortItems"
+            },
+            {
+              "title": "UserSkillSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.UserSkillSortItems"
+            },
+            {
+              "title": "WebhookSubscriptionSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.WebhookSubscriptionSortItems"
+            },
+            {
+              "title": "OperationSortItems",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.OperationSortItems"
+            },
+            {
+              "title": "AggregatedSolutionSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.AggregatedSolutionSearchRequest"
+            },
+            {
+              "title": "AppBatchSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.AppBatchSearchRequest"
+            },
+            {
+              "title": "AppItemSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.AppItemSearchRequest"
+            },
+            {
+              "title": "AppProjectSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.AppProjectSearchRequest"
+            },
+            {
+              "title": "AppSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.AppSearchRequest"
+            },
+            {
+              "title": "AssignmentSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.AssignmentSearchRequest"
+            },
+            {
+              "title": "AttachmentSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.AttachmentSearchRequest"
+            },
+            {
+              "title": "MessageThreadSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.MessageThreadSearchRequest"
+            },
+            {
+              "title": "ProjectSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.ProjectSearchRequest"
+            },
+            {
+              "title": "PoolSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.PoolSearchRequest"
+            },
+            {
+              "title": "SkillSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.SkillSearchRequest"
+            },
+            {
+              "title": "TaskSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.TaskSearchRequest"
+            },
+            {
+              "title": "TaskSuiteSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.TaskSuiteSearchRequest"
+            },
+            {
+              "title": "TrainingSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.TrainingSearchRequest"
+            },
+            {
+              "title": "UserBonusSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.UserBonusSearchRequest"
+            },
+            {
+              "title": "UserRestrictionSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.UserRestrictionSearchRequest"
+            },
+            {
+              "title": "UserSkillSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.UserSkillSearchRequest"
+            },
+            {
+              "title": "WebhookSubscriptionSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.WebhookSubscriptionSearchRequest"
+            },
+            {
+              "title": "OperationSearchRequest",
+              "href": "/toloka-kit/reference/toloka.client.search_requests.OperationSearchRequest"
+            }
+          ]
+        },
+        {
+          "title": "search_results",
+          "subItems": [
+            {
+              "title": "AggregatedSolutionSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.AggregatedSolutionSearchResult"
+            },
+            {
+              "title": "AppBatchSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.AppBatchSearchResult"
+            },
+            {
+              "title": "AppItemSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.AppItemSearchResult"
+            },
+            {
+              "title": "AppProjectSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.AppProjectSearchResult"
+            },
+            {
+              "title": "AppSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.AppSearchResult"
+            },
+            {
+              "title": "AssignmentSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.AssignmentSearchResult"
+            },
+            {
+              "title": "AttachmentSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.AttachmentSearchResult"
+            },
+            {
+              "title": "MessageThreadSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.MessageThreadSearchResult"
+            },
+            {
+              "title": "PoolSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.PoolSearchResult"
+            },
+            {
+              "title": "ProjectSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.ProjectSearchResult"
+            },
+            {
+              "title": "SkillSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.SkillSearchResult"
+            },
+            {
+              "title": "TaskSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.TaskSearchResult"
+            },
+            {
+              "title": "TaskSuiteSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.TaskSuiteSearchResult"
+            },
+            {
+              "title": "TrainingSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.TrainingSearchResult"
+            },
+            {
+              "title": "UserBonusSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.UserBonusSearchResult"
+            },
+            {
+              "title": "UserRestrictionSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.UserRestrictionSearchResult"
+            },
+            {
+              "title": "UserSkillSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.UserSkillSearchResult"
+            },
+            {
+              "title": "WebhookSubscriptionSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.WebhookSubscriptionSearchResult"
+            },
+            {
+              "title": "OperationSearchResult",
+              "href": "/toloka-kit/reference/toloka.client.search_results.OperationSearchResult"
+            }
+          ]
+        },
+        {
+          "title": "skill",
+          "subItems": [
+            {
+              "title": "Skill",
+              "href": "/toloka-kit/reference/toloka.client.skill.Skill"
+            }
+          ]
+        },
+        {
+          "title": "solution",
+          "subItems": [
+            {
+              "title": "Solution",
+              "href": "/toloka-kit/reference/toloka.client.solution.Solution"
+            }
+          ]
+        },
+        {
+          "title": "task",
+          "subItems": [
+            {
+              "title": "Task",
+              "href": "/toloka-kit/reference/toloka.client.task.Task"
+            },
+            {
+              "title": "CreateTaskParameters",
+              "href": "/toloka-kit/reference/toloka.client.task.CreateTaskParameters"
+            },
+            {
+              "title": "CreateTaskAsyncParameters",
+              "href": "/toloka-kit/reference/toloka.client.task.CreateTaskAsyncParameters"
+            },
+            {
+              "title": "CreateTasksParameters",
+              "href": "/toloka-kit/reference/toloka.client.task.CreateTasksParameters"
+            },
+            {
+              "title": "TaskOverlapPatch",
+              "href": "/toloka-kit/reference/toloka.client.task.TaskOverlapPatch"
+            },
+            {
+              "title": "TaskPatch",
+              "href": "/toloka-kit/reference/toloka.client.task.TaskPatch"
+            }
+          ]
+        },
+        {
+          "title": "task_distribution_function",
+          "subItems": [
+            {
+              "title": "TaskDistributionFunction",
+              "href": "/toloka-kit/reference/toloka.client.task_distribution_function.TaskDistributionFunction"
+            }
+          ]
+        },
+        {
+          "title": "task_suite",
+          "subItems": [
+            {
+              "title": "TaskSuite",
+              "href": "/toloka-kit/reference/toloka.client.task_suite.TaskSuite"
+            },
+            {
+              "title": "TaskSuiteCreateRequestParameters",
+              "href": "/toloka-kit/reference/toloka.client.task_suite.TaskSuiteCreateRequestParameters"
+            },
+            {
+              "title": "TaskSuiteOverlapPatch",
+              "href": "/toloka-kit/reference/toloka.client.task_suite.TaskSuiteOverlapPatch"
+            },
+            {
+              "title": "TaskSuitePatch",
+              "href": "/toloka-kit/reference/toloka.client.task_suite.TaskSuitePatch"
+            }
+          ]
+        },
+        {
+          "title": "template_builder",
+          "subItems": [
+            {
+              "title": "get_input_and_output",
+              "href": "/toloka-kit/reference/toloka.client.project.template_builder.get_input_and_output"
+            },
+            {
+              "title": "TemplateBuilder",
+              "href": "/toloka-kit/reference/toloka.client.project.template_builder.TemplateBuilder"
+            },
+            {
+              "title": "actions",
+              "subItems": [
+                {
+                  "title": "BulkActionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.actions.BulkActionV1"
+                },
+                {
+                  "title": "NotifyActionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.actions.NotifyActionV1"
+                },
+                {
+                  "title": "OpenCloseActionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.actions.OpenCloseActionV1"
+                },
+                {
+                  "title": "OpenLinkActionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.actions.OpenLinkActionV1"
+                },
+                {
+                  "title": "PlayPauseActionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.actions.PlayPauseActionV1"
+                },
+                {
+                  "title": "RotateActionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.actions.RotateActionV1"
+                },
+                {
+                  "title": "SetActionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.actions.SetActionV1"
+                },
+                {
+                  "title": "ToggleActionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.actions.ToggleActionV1"
+                }
+              ]
+            },
+            {
+              "title": "base",
+              "subItems": [
+                {
+                  "title": "RefComponent",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.base.RefComponent"
+                },
+                {
+                  "title": "UnknownComponent",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.base.UnknownComponent"
+                }
+              ]
+            },
+            {
+              "title": "conditions",
+              "subItems": [
+                {
+                  "title": "AllConditionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.conditions.AllConditionV1"
+                },
+                {
+                  "title": "AnyConditionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.conditions.AnyConditionV1"
+                },
+                {
+                  "title": "DistanceConditionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.conditions.DistanceConditionV1"
+                },
+                {
+                  "title": "EmptyConditionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.conditions.EmptyConditionV1"
+                },
+                {
+                  "title": "EqualsConditionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.conditions.EqualsConditionV1"
+                },
+                {
+                  "title": "LinkOpenedConditionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.conditions.LinkOpenedConditionV1"
+                },
+                {
+                  "title": "NotConditionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.conditions.NotConditionV1"
+                },
+                {
+                  "title": "PlayedConditionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.conditions.PlayedConditionV1"
+                },
+                {
+                  "title": "PlayedFullyConditionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.conditions.PlayedFullyConditionV1"
+                },
+                {
+                  "title": "RequiredConditionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.conditions.RequiredConditionV1"
+                },
+                {
+                  "title": "SameDomainConditionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.conditions.SameDomainConditionV1"
+                },
+                {
+                  "title": "SchemaConditionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.conditions.SchemaConditionV1"
+                },
+                {
+                  "title": "SubArrayConditionV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.conditions.SubArrayConditionV1"
+                }
+              ]
+            },
+            {
+              "title": "data",
+              "subItems": [
+                {
+                  "title": "InputData",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.data.InputData"
+                },
+                {
+                  "title": "InternalData",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.data.InternalData"
+                },
+                {
+                  "title": "LocalData",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.data.LocalData"
+                },
+                {
+                  "title": "LocationData",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.data.LocationData"
+                },
+                {
+                  "title": "OutputData",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.data.OutputData"
+                },
+                {
+                  "title": "RelativeData",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.data.RelativeData"
+                }
+              ]
+            },
+            {
+              "title": "fields",
+              "subItems": [
+                {
+                  "title": "AudioFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.AudioFieldV1"
+                },
+                {
+                  "title": "ButtonRadioFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.ButtonRadioFieldV1"
+                },
+                {
+                  "title": "ButtonRadioGroupFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.ButtonRadioGroupFieldV1"
+                },
+                {
+                  "title": "CheckboxFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.CheckboxFieldV1"
+                },
+                {
+                  "title": "CheckboxGroupFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.CheckboxGroupFieldV1"
+                },
+                {
+                  "title": "DateFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.DateFieldV1"
+                },
+                {
+                  "title": "EmailFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.EmailFieldV1"
+                },
+                {
+                  "title": "FileFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.FileFieldV1"
+                },
+                {
+                  "title": "ImageAnnotationFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.ImageAnnotationFieldV1"
+                },
+                {
+                  "title": "ListFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.ListFieldV1"
+                },
+                {
+                  "title": "MediaFileFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.MediaFileFieldV1"
+                },
+                {
+                  "title": "NumberFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.NumberFieldV1"
+                },
+                {
+                  "title": "PhoneNumberFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.PhoneNumberFieldV1"
+                },
+                {
+                  "title": "RadioGroupFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.RadioGroupFieldV1"
+                },
+                {
+                  "title": "SelectFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.SelectFieldV1"
+                },
+                {
+                  "title": "TextAnnotationFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.TextAnnotationFieldV1"
+                },
+                {
+                  "title": "TextareaFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.TextareaFieldV1"
+                },
+                {
+                  "title": "TextFieldV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.fields.TextFieldV1"
+                }
+              ]
+            },
+            {
+              "title": "helpers",
+              "subItems": [
+                {
+                  "title": "ConcatArraysHelperV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.helpers.ConcatArraysHelperV1"
+                },
+                {
+                  "title": "Entries2ObjectHelperV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.helpers.Entries2ObjectHelperV1"
+                },
+                {
+                  "title": "IfHelperV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.helpers.IfHelperV1"
+                },
+                {
+                  "title": "JoinHelperV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.helpers.JoinHelperV1"
+                },
+                {
+                  "title": "Object2EntriesHelperV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.helpers.Object2EntriesHelperV1"
+                },
+                {
+                  "title": "ReplaceHelperV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.helpers.ReplaceHelperV1"
+                },
+                {
+                  "title": "SearchQueryHelperV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.helpers.SearchQueryHelperV1"
+                },
+                {
+                  "title": "SwitchHelperV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.helpers.SwitchHelperV1"
+                },
+                {
+                  "title": "TextTransformHelperV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.helpers.TextTransformHelperV1"
+                },
+                {
+                  "title": "TransformHelperV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.helpers.TransformHelperV1"
+                },
+                {
+                  "title": "TranslateHelperV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.helpers.TranslateHelperV1"
+                },
+                {
+                  "title": "YandexDiskProxyHelperV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.helpers.YandexDiskProxyHelperV1"
+                }
+              ]
+            },
+            {
+              "title": "layouts",
+              "subItems": [
+                {
+                  "title": "BarsLayoutV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.layouts.BarsLayoutV1"
+                },
+                {
+                  "title": "ColumnsLayoutV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.layouts.ColumnsLayoutV1"
+                },
+                {
+                  "title": "CompareLayoutV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.layouts.CompareLayoutV1"
+                },
+                {
+                  "title": "SidebarLayoutV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.layouts.SidebarLayoutV1"
+                },
+                {
+                  "title": "SideBySideLayoutV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.layouts.SideBySideLayoutV1"
+                }
+              ]
+            },
+            {
+              "title": "plugins",
+              "subItems": [
+                {
+                  "title": "HotkeysPluginV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.plugins.HotkeysPluginV1"
+                },
+                {
+                  "title": "ImageAnnotationHotkeysPluginV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.plugins.ImageAnnotationHotkeysPluginV1"
+                },
+                {
+                  "title": "TextAnnotationHotkeysPluginV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.plugins.TextAnnotationHotkeysPluginV1"
+                },
+                {
+                  "title": "TolokaPluginV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.plugins.TolokaPluginV1"
+                },
+                {
+                  "title": "TriggerPluginV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.plugins.TriggerPluginV1"
+                }
+              ]
+            },
+            {
+              "title": "views",
+              "subItems": [
+                {
+                  "title": "ActionButtonViewV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.view.ActionButtonViewV1"
+                },
+                {
+                  "title": "AlertViewV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.view.AlertViewV1"
+                },
+                {
+                  "title": "AudioViewV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.view.AudioViewV1"
+                },
+                {
+                  "title": "CollapseViewV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.view.CollapseViewV1"
+                },
+                {
+                  "title": "DeviceFrameViewV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.view.DeviceFrameViewV1"
+                },
+                {
+                  "title": "DividerViewV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.view.DividerViewV1"
+                },
+                {
+                  "title": "GroupViewV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.view.GroupViewV1"
+                },
+                {
+                  "title": "IframeViewV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.view.IframeViewV1"
+                },
+                {
+                  "title": "ImageViewV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.view.ImageViewV1"
+                },
+                {
+                  "title": "LabeledListViewV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.view.LabeledListViewV1"
+                },
+                {
+                  "title": "LinkViewV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.view.LinkViewV1"
+                },
+                {
+                  "title": "LinkGroupViewV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.view.LinkGroupViewV1"
+                },
+                {
+                  "title": "ListViewV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.view.ListViewV1"
+                },
+                {
+                  "title": "MapViewV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.view.MapViewV1"
+                },
+                {
+                  "title": "MarkdownViewV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.view.MarkdownViewV1"
+                },
+                {
+                  "title": "TextViewV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.view.TextViewV1"
+                },
+                {
+                  "title": "VideoViewV1",
+                  "href": "/toloka-kit/reference/toloka.client.project.template_builder.view.VideoViewV1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "training",
+          "subItems": [
+            {
+              "title": "Training",
+              "href": "/toloka-kit/reference/toloka.client.training.Training"
+            }
+          ]
+        },
+        {
+          "title": "user",
+          "subItems": [
+            {
+              "title": "User",
+              "href": "/toloka-kit/reference/toloka.client.user.User"
+            }
+          ]
+        },
+        {
+          "title": "user_bonus",
+          "subItems": [
+            {
+              "title": "UserBonus",
+              "href": "/toloka-kit/reference/toloka.client.user_bonus.UserBonus"
+            },
+            {
+              "title": "UserBonusCreateRequestParameters",
+              "href": "/toloka-kit/reference/toloka.client.user_bonus.UserBonusCreateRequestParameters"
+            }
+          ]
+        },
+        {
+          "title": "user_restriction",
+          "subItems": [
+            {
+              "title": "AllProjectsUserRestriction",
+              "href": "/toloka-kit/reference/toloka.client.user_restriction.AllProjectsUserRestriction"
+            },
+            {
+              "title": "DurationUnit",
+              "href": "/toloka-kit/reference/toloka.client.user_restriction.DurationUnit"
+            },
+            {
+              "title": "PoolUserRestriction",
+              "href": "/toloka-kit/reference/toloka.client.user_restriction.PoolUserRestriction"
+            },
+            {
+              "title": "ProjectUserRestriction",
+              "href": "/toloka-kit/reference/toloka.client.user_restriction.ProjectUserRestriction"
+            },
+            {
+              "title": "SystemUserRestriction",
+              "href": "/toloka-kit/reference/toloka.client.user_restriction.SystemUserRestriction"
+            }
+          ]
+        },
+        {
+          "title": "user_skill",
+          "subItems": [
+            {
+              "title": "UserSkill",
+              "href": "/toloka-kit/reference/toloka.client.user_skill.UserSkill"
+            },
+            {
+              "title": "SetUserSkillRequest",
+              "href": "/toloka-kit/reference/toloka.client.user_skill.SetUserSkillRequest"
+            }
+          ]
+        },
+        {
+          "title": "webhook_subscription",
+          "subItems": [
+            {
+              "title": "WebhookSubscription",
+              "href": "/toloka-kit/reference/toloka.client.webhook_subscription.WebhookSubscription"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "toloka.async_client",
+      "subItems": [
+        {
+          "title": "AsyncTolokaClient",
+          "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient"
+        },
+        {
+          "title": "AsyncTolokaClient methods",
+          "subItems": [
+            {
+              "title": "aggregation",
+              "subItems": [
+                {
+                  "title": "aggregate_solutions_by_pool",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.aggregate_solutions_by_pool"
+                },
+                {
+                  "title": "aggregate_solutions_by_task",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.aggregate_solutions_by_task"
+                },
+                {
+                  "title": "find_aggregated_solutions",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_aggregated_solutions"
+                },
+                {
+                  "title": "get_aggregated_solutions",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_aggregated_solutions"
+                }
+              ]
+            },
+            {
+              "title": "analytics",
+              "subItems": [
+                {
+                  "title": "get_analytics",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_analytics"
+                }
+              ]
+            },
+            {
+              "title": "app",
+              "subItems": [
+                {
+                  "title": "archive_app_project",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.archive_app_project"
+                },
+                {
+                  "title": "create_app_batch",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_app_batch"
+                },
+                {
+                  "title": "patch_app_batch",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.patch_app_batch"
+                },
+                {
+                  "title": "create_app_item",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_app_item"
+                },
+                {
+                  "title": "create_app_items",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_app_items"
+                },
+                {
+                  "title": "create_app_project",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_app_project"
+                },
+                {
+                  "title": "find_app_batches",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_app_batches"
+                },
+                {
+                  "title": "find_app_items",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_app_items"
+                },
+                {
+                  "title": "find_app_projects",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_app_projects"
+                },
+                {
+                  "title": "find_apps",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_apps"
+                },
+                {
+                  "title": "get_app",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_app"
+                },
+                {
+                  "title": "get_app_batch",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_app_batch"
+                },
+                {
+                  "title": "get_app_batches",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_app_batches"
+                },
+                {
+                  "title": "get_app_item",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_app_item"
+                },
+                {
+                  "title": "get_app_items",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_app_items"
+                },
+                {
+                  "title": "get_app_project",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_app_project"
+                },
+                {
+                  "title": "get_app_projects",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_app_projects"
+                },
+                {
+                  "title": "get_apps",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_apps"
+                },
+                {
+                  "title": "start_app_batch",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.start_app_batch"
+                },
+                {
+                  "title": "stop_app_batch",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.stop_app_batch"
+                },
+                {
+                  "title": "resume_app_batch",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.resume_app_batch"
+                },
+                {
+                  "title": "unarchive_app_project",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.unarchive_app_project"
+                }
+              ]
+            },
+            {
+              "title": "assignments",
+              "subItems": [
+                {
+                  "title": "accept_assignment",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.accept_assignment"
+                },
+                {
+                  "title": "find_assignments",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_assignments"
+                },
+                {
+                  "title": "get_assignment",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_assignment"
+                },
+                {
+                  "title": "get_assignments",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_assignments"
+                },
+                {
+                  "title": "get_assignments_df [pandas]",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_assignments_df"
+                },
+                {
+                  "title": "patch_assignment",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.patch_assignment"
+                },
+                {
+                  "title": "reject_assignment",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.reject_assignment"
+                }
+              ]
+            },
+            {
+              "title": "attachments",
+              "subItems": [
+                {
+                  "title": "find_attachments",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_attachments"
+                },
+                {
+                  "title": "get_attachment",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_attachment"
+                },
+                {
+                  "title": "get_attachments",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_attachments"
+                },
+                {
+                  "title": "download_attachment",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.download_attachment"
+                }
+              ]
+            },
+            {
+              "title": "messages",
+              "subItems": [
+                {
+                  "title": "add_message_thread_to_folders",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.add_message_thread_to_folders"
+                },
+                {
+                  "title": "compose_message_thread",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.compose_message_thread"
+                },
+                {
+                  "title": "find_message_threads",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_message_threads"
+                },
+                {
+                  "title": "get_message_threads",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_message_threads"
+                },
+                {
+                  "title": "reply_message_thread",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.reply_message_thread"
+                },
+                {
+                  "title": "remove_message_thread_from_folders",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.remove_message_thread_from_folders"
+                }
+              ]
+            },
+            {
+              "title": "operations",
+              "subItems": [
+                {
+                  "title": "get_operation",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_operation"
+                },
+                {
+                  "title": "find_operations",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_operations"
+                },
+                {
+                  "title": "get_operations",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_operations"
+                },
+                {
+                  "title": "get_operation_log",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_operation_log"
+                },
+                {
+                  "title": "wait_operation",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.wait_operation"
+                }
+              ]
+            },
+            {
+              "title": "pools",
+              "subItems": [
+                {
+                  "title": "archive_pool",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.archive_pool"
+                },
+                {
+                  "title": "archive_pool_async",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.archive_pool_async"
+                },
+                {
+                  "title": "clone_pool",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.clone_pool"
+                },
+                {
+                  "title": "clone_pool_async",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.clone_pool_async"
+                },
+                {
+                  "title": "close_pool",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.close_pool"
+                },
+                {
+                  "title": "close_pool_async",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.close_pool_async"
+                },
+                {
+                  "title": "close_pool_for_update",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.close_pool_for_update"
+                },
+                {
+                  "title": "close_pool_for_update_async",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.close_pool_for_update_async"
+                },
+                {
+                  "title": "create_pool",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_pool"
+                },
+                {
+                  "title": "find_pools",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_pools"
+                },
+                {
+                  "title": "get_pool",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_pool"
+                },
+                {
+                  "title": "get_pools",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_pools"
+                },
+                {
+                  "title": "open_pool",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.open_pool"
+                },
+                {
+                  "title": "open_pool_async",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.open_pool_async"
+                },
+                {
+                  "title": "patch_pool",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.patch_pool"
+                },
+                {
+                  "title": "update_pool",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.update_pool"
+                }
+              ]
+            },
+            {
+              "title": "projects",
+              "subItems": [
+                {
+                  "title": "archive_project",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.archive_project"
+                },
+                {
+                  "title": "archive_project_async",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.archive_project_async"
+                },
+                {
+                  "title": "create_project",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_project"
+                },
+                {
+                  "title": "clone_project",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.clone_project"
+                },
+                {
+                  "title": "find_projects",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_projects"
+                },
+                {
+                  "title": "get_project",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_project"
+                },
+                {
+                  "title": "get_projects",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_projects"
+                },
+                {
+                  "title": "update_project",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.update_project"
+                }
+              ]
+            },
+            {
+              "title": "requester",
+              "subItems": [
+                {
+                  "title": "get_requester",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_requester"
+                }
+              ]
+            },
+            {
+              "title": "skills",
+              "subItems": [
+                {
+                  "title": "create_skill",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_skill"
+                },
+                {
+                  "title": "find_skills",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_skills"
+                },
+                {
+                  "title": "get_skill",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_skill"
+                },
+                {
+                  "title": "get_skills",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_skills"
+                },
+                {
+                  "title": "update_skill",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.update_skill"
+                }
+              ]
+            },
+            {
+              "title": "tasks",
+              "subItems": [
+                {
+                  "title": "create_task",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_task"
+                },
+                {
+                  "title": "create_tasks",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_tasks"
+                },
+                {
+                  "title": "create_tasks_async",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_tasks_async"
+                },
+                {
+                  "title": "find_tasks",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_tasks"
+                },
+                {
+                  "title": "get_task",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_task"
+                },
+                {
+                  "title": "get_tasks",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_tasks"
+                },
+                {
+                  "title": "patch_task",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.patch_task"
+                },
+                {
+                  "title": "patch_task_overlap_or_min",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.patch_task_overlap_or_min"
+                }
+              ]
+            },
+            {
+              "title": "task suites",
+              "subItems": [
+                {
+                  "title": "create_task_suite",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_task_suite"
+                },
+                {
+                  "title": "create_task_suites",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_task_suites"
+                },
+                {
+                  "title": "create_task_suites_async",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_task_suites_async"
+                },
+                {
+                  "title": "find_task_suites",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_task_suites"
+                },
+                {
+                  "title": "get_task_suite",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_task_suite"
+                },
+                {
+                  "title": "get_task_suites",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_task_suites"
+                },
+                {
+                  "title": "patch_task_suite",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.patch_task_suite"
+                },
+                {
+                  "title": "patch_task_suite_overlap_or_min",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.patch_task_suite_overlap_or_min"
+                }
+              ]
+            },
+            {
+              "title": "training",
+              "subItems": [
+                {
+                  "title": "archive_training",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.archive_training"
+                },
+                {
+                  "title": "archive_training_async",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.archive_training_async"
+                },
+                {
+                  "title": "clone_training",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.clone_training"
+                },
+                {
+                  "title": "clone_training_async",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.clone_training_async"
+                },
+                {
+                  "title": "close_training",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.close_training"
+                },
+                {
+                  "title": "close_training_async",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.close_training_async"
+                },
+                {
+                  "title": "create_training",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_training"
+                },
+                {
+                  "title": "find_trainings",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_trainings"
+                },
+                {
+                  "title": "get_training",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_training"
+                },
+                {
+                  "title": "get_trainings",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_trainings"
+                },
+                {
+                  "title": "open_training",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.open_training"
+                },
+                {
+                  "title": "open_training_async",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.open_training_async"
+                },
+                {
+                  "title": "update_training",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.update_training"
+                }
+              ]
+            },
+            {
+              "title": "user bonus",
+              "subItems": [
+                {
+                  "title": "create_user_bonus",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_user_bonus"
+                },
+                {
+                  "title": "create_user_bonuses",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_user_bonuses"
+                },
+                {
+                  "title": "create_user_bonuses_async",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_user_bonuses_async"
+                },
+                {
+                  "title": "find_user_bonuses",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_user_bonuses"
+                },
+                {
+                  "title": "get_user_bonus",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_user_bonus"
+                },
+                {
+                  "title": "get_user_bonuses",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_user_bonuses"
+                }
+              ]
+            },
+            {
+              "title": "user restrictions",
+              "subItems": [
+                {
+                  "title": "delete_user_restriction",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.delete_user_restriction"
+                },
+                {
+                  "title": "find_user_restrictions",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_user_restrictions"
+                },
+                {
+                  "title": "get_user_restriction",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_user_restriction"
+                },
+                {
+                  "title": "get_user_restrictions",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_user_restrictions"
+                },
+                {
+                  "title": "set_user_restriction",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.set_user_restriction"
+                }
+              ]
+            },
+            {
+              "title": "user skills",
+              "subItems": [
+                {
+                  "title": "delete_user_skill",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.delete_user_skill"
+                },
+                {
+                  "title": "find_user_skills",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_user_skills"
+                },
+                {
+                  "title": "get_user_skill",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_user_skill"
+                },
+                {
+                  "title": "get_user_skills",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_user_skills"
+                },
+                {
+                  "title": "get_user",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_user"
+                },
+                {
+                  "title": "set_user_skill",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.set_user_skill"
+                }
+              ]
+            },
+            {
+              "title": "webhook subscription",
+              "subItems": [
+                {
+                  "title": "delete_webhook_subscription",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.delete_webhook_subscription"
+                },
+                {
+                  "title": "find_webhook_subscriptions",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_webhook_subscriptions"
+                },
+                {
+                  "title": "get_webhook_subscription",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_webhook_subscription"
+                },
+                {
+                  "title": "get_webhook_subscriptions",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_webhook_subscriptions"
+                },
+                {
+                  "title": "upsert_webhook_subscriptions",
+                  "href": "/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.upsert_webhook_subscriptions"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "toloka.autoquality [autoquality]",
+      "subItems": [
+        {
+          "title": "optimizer",
+          "subItems": [
+            {
+              "title": "AutoQuality",
+              "href": "/toloka-kit/reference/toloka.autoquality.optimizer.AutoQuality"
+            }
+          ]
+        },
+        {
+          "title": "scoring",
+          "subItems": [
+            {
+              "title": "default_calc_ranks",
+              "href": "/toloka-kit/reference/toloka.autoquality.scoring.default_calc_ranks"
+            },
+            {
+              "title": "default_calc_scores",
+              "href": "/toloka-kit/reference/toloka.autoquality.scoring.default_calc_scores"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "toloka.metrics",
+      "subItems": [
+        {
+          "title": "collector",
+          "subItems": [
+            {
+              "title": "MetricCollector",
+              "href": "/toloka-kit/reference/toloka.metrics.collector.MetricCollector"
+            },
+            {
+              "title": "MetricCollector.run",
+              "href": "/toloka-kit/reference/toloka.metrics.collector.MetricCollector.run"
+            }
+          ]
+        },
+        {
+          "title": "jupyter_dashboard [jupyter-metrics]",
+          "subItems": [
+            {
+              "title": "Chart",
+              "href": "/toloka-kit/reference/toloka.metrics.jupyter_dashboard.Chart"
+            },
+            {
+              "title": "DashBoard",
+              "href": "/toloka-kit/reference/toloka.metrics.jupyter_dashboard.DashBoard"
+            }
+          ]
+        },
+        {
+          "title": "metrics",
+          "subItems": [
+            {
+              "title": "bind_client",
+              "href": "/toloka-kit/reference/toloka.metrics.metrics.bind_client"
+            },
+            {
+              "title": "Balance",
+              "href": "/toloka-kit/reference/toloka.metrics.metrics.Balance"
+            },
+            {
+              "title": "NewMessageThreads",
+              "href": "/toloka-kit/reference/toloka.metrics.metrics.NewMessageThreads"
+            },
+            {
+              "title": "NewUserBonuses",
+              "href": "/toloka-kit/reference/toloka.metrics.metrics.NewUserBonuses"
+            },
+            {
+              "title": "NewUserSkills",
+              "href": "/toloka-kit/reference/toloka.metrics.metrics.NewUserSkills"
+            }
+          ]
+        },
+        {
+          "title": "pool_metrics",
+          "subItems": [
+            {
+              "title": "AssignmentEventsInPool",
+              "href": "/toloka-kit/reference/toloka.metrics.pool_metrics.AssignmentEventsInPool"
+            },
+            {
+              "title": "AssignmentsInPool",
+              "href": "/toloka-kit/reference/toloka.metrics.pool_metrics.AssignmentsInPool"
+            },
+            {
+              "title": "BansInPool",
+              "href": "/toloka-kit/reference/toloka.metrics.pool_metrics.BansInPool"
+            },
+            {
+              "title": "PoolCompletedPercentage",
+              "href": "/toloka-kit/reference/toloka.metrics.pool_metrics.PoolCompletedPercentage"
+            },
+            {
+              "title": "SpentBudgetOnPool",
+              "href": "/toloka-kit/reference/toloka.metrics.pool_metrics.SpentBudgetOnPool"
+            },
+            {
+              "title": "TasksInPool",
+              "href": "/toloka-kit/reference/toloka.metrics.pool_metrics.TasksInPool"
+            },
+            {
+              "title": "WorkersByFilterOnPool",
+              "href": "/toloka-kit/reference/toloka.metrics.pool_metrics.WorkersByFilterOnPool"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "toloka.streaming",
+      "subItems": [
+        {
+          "title": "cursor",
+          "subItems": [
+            {
+              "title": "AssignmentCursor",
+              "href": "/toloka-kit/reference/toloka.streaming.cursor.AssignmentCursor"
+            },
+            {
+              "title": "MessageThreadCursor",
+              "href": "/toloka-kit/reference/toloka.streaming.cursor.MessageThreadCursor"
+            },
+            {
+              "title": "TaskCursor",
+              "href": "/toloka-kit/reference/toloka.streaming.cursor.TaskCursor"
+            },
+            {
+              "title": "UserBonusCursor",
+              "href": "/toloka-kit/reference/toloka.streaming.cursor.UserBonusCursor"
+            },
+            {
+              "title": "UserRestrictionCursor",
+              "href": "/toloka-kit/reference/toloka.streaming.cursor.UserRestrictionCursor"
+            },
+            {
+              "title": "UserSkillCursor",
+              "href": "/toloka-kit/reference/toloka.streaming.cursor.UserSkillCursor"
+            }
+          ]
+        },
+        {
+          "title": "event",
+          "subItems": [
+            {
+              "title": "AssignmentEvent",
+              "href": "/toloka-kit/reference/toloka.streaming.event.AssignmentEvent"
+            },
+            {
+              "title": "MessageThreadEvent",
+              "href": "/toloka-kit/reference/toloka.streaming.event.MessageThreadEvent"
+            },
+            {
+              "title": "TaskEvent",
+              "href": "/toloka-kit/reference/toloka.streaming.event.TaskEvent"
+            },
+            {
+              "title": "UserBonusEvent",
+              "href": "/toloka-kit/reference/toloka.streaming.event.UserBonusEvent"
+            },
+            {
+              "title": "UserRestrictionEvent",
+              "href": "/toloka-kit/reference/toloka.streaming.event.UserRestrictionEvent"
+            },
+            {
+              "title": "UserSkillEvent",
+              "href": "/toloka-kit/reference/toloka.streaming.event.UserSkillEvent"
+            }
+          ]
+        },
+        {
+          "title": "observer",
+          "subItems": [
+            {
+              "title": "AssignmentsObserver",
+              "href": "/toloka-kit/reference/toloka.streaming.observer.AssignmentsObserver"
+            },
+            {
+              "title": "PoolStatusObserver",
+              "href": "/toloka-kit/reference/toloka.streaming.observer.PoolStatusObserver"
+            }
+          ]
+        },
+        {
+          "title": "pipeline",
+          "subItems": [
+            {
+              "title": "Pipeline",
+              "href": "/toloka-kit/reference/toloka.streaming.pipeline.Pipeline"
+            }
+          ]
         }
       ]
     }

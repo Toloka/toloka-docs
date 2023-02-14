@@ -1,0 +1,35 @@
+---
+title: "ensure_async | Toloka-Kit"
+date: "2023-02-07T15:42:13.629725"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# ensure_async
+`toloka.util.async_utils.ensure_async` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/util/async_utils.py#L76)
+
+```python
+ensure_async(func: Callable)
+```
+
+Ensure given callable is async.
+
+Note, that it doesn't provide concurrency by itself!
+It just allow to treat sync and async callables in the same way.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`func`|**Callable**|<p>Any callable: synchronous or asynchronous.</p>
+
+* **Returns:**
+
+  Wrapper that return awaitable object at call.
+
+* **Return type:**
+
+  Callable\[..., Awaitable\]

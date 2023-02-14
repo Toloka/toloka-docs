@@ -1,0 +1,32 @@
+import TroubleshootingCut1 from './troubleshooting-cut-1.mdx'
+import TroubleshootingCut2 from './troubleshooting-cut-2.mdx'
+
+**Possible causes and fixes:**
+
+- **Cause:** There is no media file at the link.
+
+    **How to fix:** Make sure that you provided a correct media file link.
+
+- **Cause:** The media file format is not supported. File format support depends on the Toloker's browser, OS, and device.
+
+    **How to fix:** Try using files in one of the specified formats.
+
+    <Cut title="Video formats">
+
+    <TroubleshootingCut1/>
+
+    </Cut>
+
+    <Cut title="Audio formats">
+
+    <TroubleshootingCut2/>
+
+    </Cut>
+
+- **Cause:** The server that hosts the media file fails to send it to the task suite. It returns an empty output or the "Access denied" message, because the downloaded file is detected at an unknown domain.
+
+    **How to fix:** Refine the settings of your server or change the domain that sends the request for the media file download.
+
+- **Cause:** The server failed or network connection was interrupted.
+
+    **How to fix:** Check the server access and network connection, and try to download the media file again.

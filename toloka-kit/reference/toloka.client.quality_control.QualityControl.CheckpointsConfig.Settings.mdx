@@ -1,0 +1,30 @@
+---
+title: "Settings | Toloka-Kit"
+date: "2023-02-07T15:41:39.848054"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# Settings
+`toloka.client.quality_control.QualityControl.CheckpointsConfig.Settings` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/quality_control.py#L93)
+
+```python
+Settings(
+    self,
+    *,
+    target_overlap: Optional[int] = None,
+    task_distribution_function: Optional[TaskDistributionFunction] = None
+)
+```
+
+Setting for checkpoints
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`target_overlap`|**Optional\[int\]**|<p>Overlap in tasks with majority opinion verification.</p>
+`task_distribution_function`|**Optional\[[TaskDistributionFunction](/docs-new/toloka-kit/reference/toloka.client.task_distribution_function.TaskDistributionFunction)\]**|<p>Distribution of tasks with majority opinion verification.</p>

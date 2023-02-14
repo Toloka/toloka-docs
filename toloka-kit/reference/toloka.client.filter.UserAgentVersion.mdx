@@ -1,0 +1,32 @@
+---
+title: "UserAgentVersion | Toloka-Kit"
+date: "2023-02-07T15:41:33.709576"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# UserAgentVersion
+`toloka.client.filter.UserAgentVersion` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/filter.py#L697)
+
+```python
+UserAgentVersion(
+    self,
+    operator: CompareOperator,
+    value: Optional[float] = None
+)
+```
+
+Filtering Tolokers by a browser version.
+
+The version consists of major and minor version numbers.
+The version is represented as a single floating point number in conditions.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`operator`|**[CompareOperator](/docs-new/toloka-kit/reference/toloka.client.primitives.operators.CompareOperator)**|<p>An operator used in a condition. Allowed set of operators depends on the filter.</p>
+`value`|**Optional\[float\]**|<p>The version of the browser.</p>

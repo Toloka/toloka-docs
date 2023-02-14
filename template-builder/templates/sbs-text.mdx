@@ -1,0 +1,209 @@
+---
+title: "Text comparison (Side-by-side) | Template Builder"
+date: "2023-02-10T09:15:30.456938"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactSupport from '../subcomponents/contact-support.mdx'
+
+# Text comparison (Side-by-side)
+
+For this type of project, you can use the **Product matching** preset.
+
+This preset allows you to compare two product names and determine whether they belong to different products or the same.
+
+Take a look at the example: there are two text boxes and radio buttons to choose an answer. Note that validation, keyboard shortcuts, and task layout are already configured in this example.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/VJLQqpaa3ttDLT">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [view.text](/docs-new/template-builder/reference/view.text): The texts that you want to compare.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.text",
+    "content": {
+      "type": "data.input",
+      "path": "text_1"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [layout.columns](/docs-new/template-builder/reference/layout.columns): Arranges texts side by side.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "layout.columns",
+    "items": []
+  }
+  ```
+
+  </Cut>
+
+- [field.radio-group](/docs-new/template-builder/reference/field.radio-group): Buttons for answer options.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.radio-group",
+    "label": "Are the product names the same or different?",
+    "options": [],
+    "validation": {
+      "type": "condition.required"
+    },
+    "data": {
+      "type": "data.output",
+      "path": "result"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [condition.required](/docs-new/template-builder/reference/condition.required): Checks if at least one option is selected.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "condition.required"
+  }
+  ```
+
+  </Cut>
+
+- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task layout.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "plugin.toloka",
+    "layout": {
+      "kind": "scroll",
+      "taskWidth": 800
+    }
+  }
+  ```
+
+  </Cut>
+
+- [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys): [Keyboard shortcuts](/docs-new/template-builder/best-practices/hotkeys).
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "1": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "equal"
+    },
+    "2": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "different"
+    },
+    "type": "plugin.hotkeys"
+  }
+  ```
+
+  </Cut>
+
+</Cut>
+
+## What else can be configured {#add-more}
+
+- To add a detailed description to the task, use the [view.text](/docs-new/template-builder/reference/view.text) component.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.text",
+    "content": "Look at the texts and tell if they are the same or different."
+  }
+  ```
+
+  </Cut>
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/7QbNavYu3ttDMv">View example</Button>
+
+- To let Tolokers leave comments about the task or their response, add a text field using [field.textarea](/docs-new/template-builder/reference/field.textarea).
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.textarea",
+    "label": "Comments",
+    "placeholder": "Enter text",
+    "data": {
+      "type": "data.output",
+      "path": "comment"
+    }
+  }
+  ```
+
+  </Cut>
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/5rZCBcs33ttDPF">View example</Button>
+
+If this preset doesn't meet your needs, see other examples in this section.
+
+## Add a layout {#add-color}
+
+To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs-new/template-builder/reference/view.alert). In this example, the source text is highlighted with a blue border, and the buttons are highlighted with a yellow one.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.alert",
+    "theme": "info",
+    "content": {
+      "type": "view.text",
+      "content": "Look at the texts and tell if they are the same or different."
+    }
+  },
+  {
+    "type": "view.alert",
+    "theme": "warning",
+    "content": {
+      "type": "field.radio-group",
+      "label": "Are the product names the same or different?",
+      "options": [],
+      "validation": {
+        "type": "condition.required"
+      },
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      }
+    }
+  }
+  ```
+
+  </Cut>
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/dfyAF6qL3ttDQQ">View example</Button>
+
+<ContactSupport/>

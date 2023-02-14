@@ -1,0 +1,296 @@
+---
+title: "Recipes for Toloka-Kit common tasks | Toloka-Kit"
+date: "2023-02-07T15:40:39.448964"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# Recipes for Toloka-Kit common tasks
+
+Before you can start using Toloka-Kit, you need to [register with Toloka](https://toloka.ai/en/docs/guide/concepts/access), [get an OAuth token](/docs-new/toloka-kit/registration), and [install the Toloka-Kit](/docs-new/toloka-kit/quick-start) Python library. After that, you can create projects, pools, upload tasks, and get results.
+
+Use the list of recipes below to find out how to start working with Toloka-Kit.
+
+## Projects
+
+<DocsRecipeCards cards={[
+  {
+    title: 'Create project',
+    description: 'Create a minimal working project using Toloka-Kit',
+    steps: '6 steps',
+    link: '/docs-new/toloka-kit/recipes/create-project'
+  },
+  {
+    title: 'Get list of projects',
+    description: 'Get all the projects with a certain status created after a specified date',
+    steps: '3 steps',
+    link: '/docs-new/toloka-kit/recipes/get-projects'
+  },
+  {
+    title: 'Get project details',
+    description: 'Get the detailed information about the project with the ID specified in the request',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/get-project-by-id'
+  },
+  {
+    title: 'Edit project',
+    description: 'Change the project public description using Toloka-Kit',
+    steps: '6 steps',
+    link: '/docs-new/toloka-kit/recipes/edit-project'
+  },
+  {
+    title: 'Archive project',
+    description: 'Move the project which you no longer use into archive',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/archive-project'
+  },
+]} />
+
+## Pools
+
+<DocsRecipeCards cards={[
+  {
+    title: 'Create pool',
+    description: 'Create a pool in a project in Toloka',
+    steps: '5 steps',
+    link: '/docs-new/toloka-kit/recipes/create-pool'
+  },
+  {
+    title: 'Get list of pools',
+    description: 'Get the list of the pools with the \'CLOSED\' status in your project',
+    steps: '3 steps',
+    link: '/docs-new/toloka-kit/recipes/get-pools'
+  },
+  {
+    title: 'Get pool details',
+    description: 'Get the detailed information about the pool with the ID specified in the request',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/get-pool-by-id'
+  },
+  {
+    title: 'Open pool',
+    description: 'Open a closed pool in Toloka',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/open-pool'
+  },
+  {
+    title: 'Close pool',
+    description: 'Close an opened pool in Toloka',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/close-pool'
+  },
+  {
+    title: 'Archive pool',
+    description: 'Move the pool which you no longer use into archive',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/archive-pool'
+  },
+  {
+    title: 'Clone pool',
+    description: 'Create a copy of an existing pool preserving the main parameters',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/clone-pool'
+  },
+  {
+    title: 'Change pool priority',
+    description: 'Change the priority of the pool and offer it to Tolokers before other pools',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/change-pool-priority'
+  },
+]} />
+
+### Toloker selection
+
+<DocsRecipeCards cards={[
+  {
+    title: 'Set overlap',
+    description: 'Set overlap for tasks at pool, task suite, and task levels',
+    steps: '6 steps',
+    link: '/docs-new/toloka-kit/recipes/set-overlap'
+  },
+  {
+    title: 'Filter Tolokers',
+    description: 'Use pool filters to specify the Toloker groups you want to pick your tasks',
+    steps: '5 steps',
+    link: '/docs-new/toloka-kit/recipes/filter-tolokers'
+  },
+  {
+    title: 'Use quality control rules',
+    description: 'Use quality control rules to restrict access to the tasks for the Tolokers who try and breach them',
+    steps: '9 steps',
+    link: '/docs-new/toloka-kit/recipes/use-quality-control-rules'
+  },
+]} />
+
+## Skills
+
+<DocsRecipeCards cards={[
+  {
+    title: 'Get skills',
+    description: 'Get all the skills available in your Toloka account',
+    steps: '3 steps',
+    link: '/docs-new/toloka-kit/recipes/get-skills'
+  },
+  {
+    title: 'Create skill',
+    description: 'Create a skill that you can assign to Tolokers',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/create-skill'
+  },
+  {
+    title: 'Assign skill to Toloker',
+    description: 'Assign an existing skill to Tolokers an set its level',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/assign-skill'
+  },
+  {
+    title: 'Edit skill',
+    description: 'Modify an existing skill',
+    steps: '6 steps',
+    link: '/docs-new/toloka-kit/recipes/edit-skill'
+  },
+  {
+    title: 'List Tolokers with skills',
+    description: 'Get all the skills assigned to the Toloker with the ID specified in the request',
+    steps: '3 steps',
+    link: '/docs-new/toloka-kit/recipes/get-user-skills'
+  },
+  {
+    title: 'Remove skill from Toloker',
+    description: 'Remove the skill from the Toloker using the ID of the "skill-Toloker" pair',
+    steps: '3 steps',
+    link: '/docs-new/toloka-kit/recipes/delete-user-skill'
+  },
+]} />
+
+## Tasks and task suites
+
+<DocsRecipeCards cards={[
+  {
+    title: 'Group tasks in task suites',
+    description: 'Create tasks and group them into task suites',
+    steps: '6 steps',
+    link: '/docs-new/toloka-kit/recipes/create-task-suite'
+  },
+  {
+    title: 'Upload tasks',
+    description: 'Create and upload control and general tasks to the pool',
+    steps: '6 steps',
+    link: '/docs-new/toloka-kit/recipes/upload-tasks'
+  },
+  {
+    title: 'Get list of tasks',
+    description: 'Get all the tasks in the pool with the ID specified in the request',
+    steps: '3 steps',
+    link: '/docs-new/toloka-kit/recipes/get-tasks'
+  },
+  {
+    title: 'Get task details',
+    description: 'Get the detailed information about the task with the ID specified in the request',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/get-task-by-id'
+  },
+  {
+    title: 'Change task overlap',
+    description: 'Increase the overlap of a task when you need more Tolokers to complete it',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/change-task-overlap'
+  },
+]} />
+
+## Responses
+
+<DocsRecipeCards cards={[
+  {
+    title: 'Get list of responses',
+    description: 'Get all the Toloker responses present in the pool with the ID specified in the request',
+    steps: '3 steps',
+    link: '/docs-new/toloka-kit/recipes/get-responses'
+  },
+  {
+    title: 'Aggregate responses in pool',
+    description: 'Aggregate the responses from Tolokers for all completed tasks in a pool',
+    steps: '5 steps',
+    link: '/docs-new/toloka-kit/recipes/aggregate-responses'
+  },
+  {
+    title: 'Accept responses from Tolokers',
+    description: 'Accept Toloker responses with the IDs specified in the request',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/accept-responses'
+  },
+  {
+    title: 'Reject responses from Tolokers',
+    description: 'Reject Toloker responses with the IDs specified in the request',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/reject-responses'
+  },
+  {
+    title: 'Get list of files in responses',
+    description: 'List all the files attached to the Toloker responses in a pool',
+    steps: '3 steps',
+    link: '/docs-new/toloka-kit/recipes/get-attachments'
+  },
+  {
+    title: 'Download attachments',
+    description: 'Download the files attached to the Toloker responses',
+    steps: '3 steps',
+    link: '/docs-new/toloka-kit/recipes/download-attachment'
+  },
+]} />
+
+## Rewards
+
+<DocsRecipeCards cards={[
+  {
+    title: 'Issue rewards to Tolokers',
+    description: 'Additionally reward Tolokers who completed their tasks better than others',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/assign-reward'
+  },
+  {
+    title: 'Get list of all rewards issued',
+    description: 'Get all the rewards you issued in Toloka',
+    steps: '3 steps',
+    link: '/docs-new/toloka-kit/recipes/get-rewards'
+  },
+  {
+    title: 'Get reward details',
+    description: 'Get the detailed information about the reward with the ID specified in the request',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/get-reward-by-id'
+  },
+]} />
+
+## Messages
+
+<DocsRecipeCards cards={[
+  {
+    title: 'Send messages',
+    description: 'Compose and send messages to single or multiple recipients in Toloka',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/send-messages'
+  },
+  {
+    title: 'Get list of message threads',
+    description: 'Get the list of all the message threads present in a specific folder in your account',
+    steps: '3 steps',
+    link: '/docs-new/toloka-kit/recipes/get-message-threads'
+  },
+  {
+    title: 'Reply to message thread',
+    description: 'Send a reply to a message thread in Toloka',
+    steps: '4 steps',
+    link: '/docs-new/toloka-kit/recipes/reply-to-message-thread'
+  },
+]} />
+
+## Advanced Toloka-Kit user?
+
+If you feel rather confident as a Toloka-Kit user and want to try a more complex scenario, refer to the following pages:
+
+- [your first complete project](/docs-new/toloka-kit/recipes/learn-basics)
+- [more usage examples](/docs-new/toloka-kit/recipes/use-cases)

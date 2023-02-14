@@ -1,0 +1,63 @@
+---
+title: "MajorityVote | Toloka-Kit"
+date: "2023-02-07T15:42:08.421195"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# MajorityVote
+`toloka.client.collectors.MajorityVote` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/collectors.py#L401)
+
+```python
+MajorityVote(
+    self,
+    *,
+    uuid: Optional[UUID] = None,
+    answer_threshold: Optional[int] = None,
+    history_size: Optional[int] = None
+)
+```
+
+Counts correct responses determined by the majority vote method.
+
+A response chosen by the majority is considered to be correct, and other responses are considered to be incorrect.
+Depending on the percentage of correct responses, you can either increase a Toloker's skill value, or to block the Toloker.
+
+The collector can be used with conditions:
+* [TotalAnswersCount](/docs-new/toloka-kit/reference/toloka.client.conditions.TotalAnswersCount) — The number of completed tasks by the Toloker.
+* [CorrectAnswersRate](/docs-new/toloka-kit/reference/toloka.client.conditions.CorrectAnswersRate) — The percentage of correct responses.
+* [IncorrectAnswersRate](/docs-new/toloka-kit/reference/toloka.client.conditions.IncorrectAnswersRate) — The percentage of incorrect responses.
+
+The collector can be used with actions:
+* [RestrictionV2](/docs-new/toloka-kit/reference/toloka.client.actions.RestrictionV2) blocks access to projects or pools.
+* [ApproveAllAssignments](/docs-new/toloka-kit/reference/toloka.client.actions.ApproveAllAssignments) accepts all Toloker's assignments.
+* [RejectAllAssignments](/docs-new/toloka-kit/reference/toloka.client.actions.RejectAllAssignments) rejects all Toloker's assignments.
+* [SetSkill](/docs-new/toloka-kit/reference/toloka.client.actions.SetSkill) sets Toloker's skill value.
+* [SetSkillFromOutputField](/docs-new/toloka-kit/reference/toloka.client.actions.SetSkillFromOutputField) sets Toloker's skill value using an output field.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`uuid`|**Optional\[UUID\]**|<p>The ID of a collector. Note that when you clone a pool, both pools start using the same collector, because it is not cloned. Usually, it is not an intended behavior. For example, in this case one collector gathers history size from both pools.</p>
+`answer_threshold`|**Optional\[int\]**|<p>The number of Tolokers considered the majority.</p>
+`history_size`|**Optional\[int\]**|<p>The maximum number of recent Toloker&#x27;s responses to calculate the statistics. If it is omitted, calculation is based on all collected responses.</p>
+
+**Examples:**
+
+The example shows how to reject all Toloker's responses if they significantly differ from the majority. The rule is applied after collecting at least 10 responses.
+
+```python
+new_pool = toloka.pool.Pool(....)
+new_pool.quality_control.add_action(
+    collector=toloka.collectors.MajorityVote(answer_threshold=2),
+    conditions=[
+        toloka.conditions.TotalAnswersCount > 9,
+        toloka.conditions.CorrectAnswersRate < 60,
+    ],
+    action=toloka.actions.RejectAllAssignments(public_comment='Too low quality')
+)
+```

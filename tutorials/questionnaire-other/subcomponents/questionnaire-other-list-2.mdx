@@ -1,0 +1,99 @@
+import TolokaRequesterPoolName from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
+import TolokaRequesterPoolDescription from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
+import TolokaRequesterSourceAudienceSettings from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/audience-settings.mdx'
+import TutorialsTimePerTaskSuite from '../../subcomponents/time-per-task-suite.mdx'
+import TolokaRequesterSourcePriceSettings from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/price-settings.mdx'
+import TolokaRequesterSourceSetPrice from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/set-price.mdx'
+import TutorialsDoubleCheck from '../../subcomponents/double-check.mdx'
+import TolokaRequesterSourceStepEnabled from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/step-enabled.mdx'
+import TolokaRequesterSourcePoolIsReady from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-is-ready.mdx'
+import TutorialsQualityControl from '../../subcomponents/quality-control.mdx'
+import TutorialsNaAcceptance from '../../subcomponents/na-acceptance.mdx'
+
+1. If there are no pools in the project, click **Create new pool from scratch** on the **Pools** tab. Otherwise, click **Add a pool → From scratch** at the right side of the project page.
+
+1. <TolokaRequesterPoolName/>
+
+1. <TolokaRequesterPoolDescription/>
+
+1. <TolokaRequesterSourceAudienceSettings/>
+
+    1. Clear **My tasks may contain shocking or pornographic content** if your project has none of those.
+
+    1. Select Tolokers who knows the language of your survey:
+
+        <Image withBackground imageId="1675426106633" alt="Create a pool. Languages filter" />
+
+        Additionally, you can select Tolokers based on their location, age, gender, and other parameters. Use the **Add filter** button and configure the filters you need.
+
+    1. Tasks in pools will automatically be available in the web version of Toloka and the mobile app. If you want to change the default settings and limit the visibility of the task for any of the versions, add the **Client** filter and select the desired value: **Toloka web version** or **Toloka for mobile**.
+
+    1. Filter out Tolokers who have already taken one survey. It helps prevent the situation when a Toloker completes your survey several times.
+
+        1. Click the **Add skill** button. Enter the skill name and description, and leave the skill not public.
+
+            <Image width="405px" withBackground imageId="1675426094448" alt="Create a pool. Add skill" />
+
+        1. Click **Add filter → My skills** and select your skill from the previous step. Configure the filter to recruit Tolokers without the skill.
+
+            <Image withBackground imageId="1675426146784" alt="Create a pool. My skills" />
+
+        You will add a rule that assigns this skill to Tolokers who have already taken one survey later.
+
+1. <TutorialsQualityControl/>
+
+    1. Click the **Review task responses manually** toggle, and specify the number of days for checking the task in the **Review period in days** field (for example, 7).
+
+        <TutorialsNaAcceptance/>
+
+    1. To filter out Tolokers who complete tasks too fast, edit the pre-configured **Fast responses** rule. Specify the following values:
+
+        <Image withBackground imageId="1675426080892" alt="Create a pool. Fast responses rule" />
+
+        These settings mean that a Toloker who completes a task suite in less than 15 seconds will be blocked and won’t be able to access your tasks anymore.
+
+        A task suite is a page with a number of tasks. In survey projects, a task suite must contain only one task (one survey).
+
+        <Note mode="tip" title="Tip">
+
+        To determine the **Minimum time per task suite** value, complete your survey and record the time.
+
+        </Note>
+
+    1. Delete the pre-configured **Majority vote** rule.
+
+    1. To get the required number of responses, add the **Processing rejected and accepted assignments** rule. Enter the following values:
+
+        <Image withBackground imageId="1675426149859" alt="Create a pool. Processing rejected and accepted assignments rule" />
+
+        This means that if you reject a Toloker’s response during the review, a new survey task will be sent to another Toloker.
+
+    1. Add the rule which assigns a skill after one submitted survey. As you’ve set the filter to select Tolokers without this skill in step 3.4, the rule allows you to filter out Tolokers who have already completed your survey.
+
+        <Image withBackground imageId="1675426134076" alt="Create a pool. Submitted responses rule" />
+
+    1. To automatically accept tasks from those who entered a completion code correctly, use the **Control tasks** rule:
+
+        <Image withBackground imageId="1675426128548" alt="Create a pool. Control tasks rule" />
+
+        The rule will work if you specify the correct completion code in the file with tasks. You will do that later in this tutorial.
+
+1. <TutorialsTimePerTaskSuite/>
+
+    <Note mode="warning" title="Warning">
+
+    Time per task suite should be long enough to read the instructions, wait for the task data to load, give the answers on the third-party website, and copy and paste the completion code. Otherwise, Tolokers won’t be able to submit your tasks.
+
+    </Note>
+
+1. <TolokaRequesterSourcePriceSettings/>
+
+    <TolokaRequesterSourceSetPrice/>
+
+1. [Upload](#upload) your task data.
+
+1. <TutorialsDoubleCheck/>
+
+    <TolokaRequesterSourceStepEnabled/>
+
+<TolokaRequesterSourcePoolIsReady/>

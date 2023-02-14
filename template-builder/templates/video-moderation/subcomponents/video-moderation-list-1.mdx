@@ -1,0 +1,32 @@
+If there are several possible answers to the question, use the [field.checkbox-group](/docs-new/template-builder/reference/field.checkbox-group) component.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+"type": "field.checkbox-group",
+"label": "Rate the video quality:",
+"options": [
+  {
+    "label": "The video is in color",
+    "value": "1"
+  },
+  {
+    "label": "The video is in focus",
+    "value": "2"
+  }
+],
+"validation": {
+  "type": "condition.required",
+  "hint": "Select one or more options"
+},
+"data": {
+  "type": "data.output",
+  "path": ""
+}
+  }
+  ```
+
+  </Cut>
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/N6a7FF643ttDyi">View example</Button>

@@ -1,0 +1,29 @@
+---
+title: "City | Toloka-Kit"
+date: "2023-02-07T15:41:40.401686"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# City
+`toloka.client.filter.City` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/filter.py#L355)
+
+```python
+City(
+    self,
+    operator: InclusionOperator,
+    value: int
+)
+```
+
+Filtering Tolokers by a city specified in their profiles.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`operator`|**[InclusionOperator](/docs-new/toloka-kit/reference/toloka.client.primitives.operators.InclusionOperator)**|<p>An operator used in a condition. Allowed set of operators depends on the filter.</p>
+`value`|**int**|<p>The [ID](https://toloka.ai/en/docs/api/concepts/regions) of the city.</p>

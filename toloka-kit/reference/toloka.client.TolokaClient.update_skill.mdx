@@ -1,0 +1,43 @@
+---
+title: "update_skill | Toloka-Kit"
+date: "2023-02-07T15:41:34.420324"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# update_skill
+`toloka.client.TolokaClient.update_skill` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/__init__.py#L2161)
+
+```python
+update_skill(
+    self,
+    skill_id: str,
+    skill: Skill
+)
+```
+
+Makes changes to the skill
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`skill_id`|**str**|<p>ID of the training that will be changed.</p>
+`skill`|**[Skill](/docs-new/toloka-kit/reference/toloka.client.skill.Skill)**|<p>A skill object with all the fields: those that will be updated and those that will not.</p>
+
+* **Returns:**
+
+  Modified skill object with all fields.
+
+* **Return type:**
+
+  [Skill](/docs-new/toloka-kit/reference/toloka.client.skill.Skill)
+
+**Examples:**
+
+```python
+toloka_client.update_skill(skill_id=old_skill_id, skill=new_skill_object)
+```

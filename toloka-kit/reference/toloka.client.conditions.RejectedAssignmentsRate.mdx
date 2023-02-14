@@ -1,0 +1,28 @@
+---
+title: "RejectedAssignmentsRate | Toloka-Kit"
+date: "2023-02-07T15:41:44.444674"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# RejectedAssignmentsRate
+`toloka.client.conditions.RejectedAssignmentsRate` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/conditions.py#L284)
+
+```python
+RejectedAssignmentsRate(
+    self,
+    operator: CompareOperator,
+    value: Optional[float] = None
+)
+```
+
+A percentage of rejected assignments submitted by a Toloker.
+
+`RejectedAssignmentsRate` is used with collectors:
+- [AcceptanceRate](/docs-new/toloka-kit/reference/toloka.client.collectors.AcceptanceRate)
+
+See also:
+- [RejectedAssignmentsCount](/docs-new/toloka-kit/reference/toloka.client.conditions.RejectedAssignmentsCount) — The number of rejected assignments of a task suite.

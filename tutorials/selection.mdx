@@ -1,0 +1,362 @@
+---
+title: "Object recognition & detection | Toloka tutorials"
+date: "2023-02-14T11:23:04.806412"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tutorialsMenu"
+---
+
+import TutorialsRegister from './subcomponents/register.mdx'
+import TutorialsTopUpTutorial from './subcomponents/top-up-tutorial.mdx'
+import TolokaRequesterSourceUsePreset from '../subcomponents/toloka-requester-source/id-toloka-requester-source/use-preset.mdx'
+import TutorialsCreateProjectButton from './subcomponents/create-project-button.mdx'
+import TutorialsChoosePresetImage from './subcomponents/choose-preset-image.mdx'
+import TutorialsWhoAreTolokers from './subcomponents/who-are-tolokers.mdx'
+import TutorialsAddNameDescription from './subcomponents/add-name-description.mdx'
+import TolokaRequesterSourceTbOrHtml from '../subcomponents/toloka-requester-source/id-toloka-requester-source/tb-or-html.mdx'
+import TolokaRequesterSourceSpecificationDefinition from '../subcomponents/toloka-requester-source/id-toloka-requester-source/specification-definition.mdx'
+import TolokaRequesterSourceClickShowSpecifications from '../subcomponents/toloka-requester-source/id-toloka-requester-source/click-show-specifications.mdx'
+import TolokaRequesterSourceSpecificationMatch from '../subcomponents/toloka-requester-source/id-toloka-requester-source/specification-match.mdx'
+import TolokaRequesterSourceInstructions from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instructions.mdx'
+import TolokaRequesterSourceInstructionCheck from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instruction-check.mdx'
+import TolokaRequesterSourceInstructionNote from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instruction-note.mdx'
+import TutorialsCreateProjectImage from './subcomponents/create-project-image.mdx'
+import TolokaRequesterSourceWhatIsPool from '../subcomponents/toloka-requester-source/id-toloka-requester-source/what-is-pool.mdx'
+import TolokaRequesterPoolType from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx'
+import TolokaRequesterPoolName from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
+import TolokaRequesterPoolDescription from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
+import TolokaRequesterSourceAudienceSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/audience-settings.mdx'
+import TolokaRequesterSourceFilters from '../subcomponents/toloka-requester-source/id-toloka-requester-source/filters.mdx'
+import TutorialsSpeedFilterImage from './subcomponents/speed-filter-image.mdx'
+import TutorialsQualityControl from './subcomponents/quality-control.mdx'
+import TutorialsNaAcceptance from './subcomponents/na-acceptance.mdx'
+import TutorialsTimePerTaskSuite from './subcomponents/time-per-task-suite.mdx'
+import TolokaRequesterSourcePriceSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/price-settings.mdx'
+import TolokaRequesterSourceOverlapSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/overlap-settings.mdx'
+import TutorialsUploadTasks from './subcomponents/upload-tasks.mdx'
+import TolokaRequesterSourceDownloadTemplate from '../subcomponents/toloka-requester-source/id-toloka-requester-source/download-template.mdx'
+import MediaFiles from '../subcomponents/toloka-requester-source/id-toloka-requester-source/media-files.mdx'
+import TolokaRequesterSourceTaskSuits from '../subcomponents/toloka-requester-source/id-toloka-requester-source/task-suits.mdx'
+import TutorialsDoubleCheck from './subcomponents/double-check.mdx'
+import TolokaRequesterSourceStepEnabled from '../subcomponents/toloka-requester-source/id-toloka-requester-source/step-enabled.mdx'
+import TolokaRequesterSourcePoolIsReady from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-is-ready.mdx'
+import TolokaRequesterSourceStartButton from '../subcomponents/toloka-requester-source/id-toloka-requester-source/start-button.mdx'
+import FaqNeedConvert from '../subcomponents/faq/project-settings/need-convert.mdx'
+import FaqInputDataLabelingImage from '../subcomponents/faq/questions-about-templates/input-data-labeling-image.mdx'
+import ContactSupport from '../guide/subcomponents/contact-support.mdx'
+
+import SelectionList1 from './selection/subcomponents/selection-list-1.mdx'
+
+# Object recognition & detection
+
+In this tutorial, you will learn how to run object recognition in Toloka. We will use a project preset designed specifically for this type of data labeling.
+
+Object recognition is a type of data labeling task with an image and an editor for selecting an image area.
+
+Tolokers look at the image and select the objects that you need to detect. After you collect all the labeled images, you can apply your dataset for computer vision training.
+
+## Prerequisites {#prerequisites}
+
+Before you begin:
+
+- <TutorialsRegister/>
+
+- <TutorialsTopUpTutorial/>
+
+## Choose a preset {#preset}
+
+<TolokaRequesterSourceUsePreset/>
+
+1. Follow [this link](https://platform.toloka.ai/requester/templates?choosedCard=qQAB9dMM7LRSyJRjj0P3), or create a project manually:
+
+    1. <TutorialsCreateProjectButton/>
+
+        <TutorialsChoosePresetImage/>
+
+    1. Select the **Object recognition & detection** preset.
+
+1. Click **Choose this preset** in the pop-up tab.
+
+## Create a project {#project}
+
+<TutorialsWhoAreTolokers/>
+
+1. <TutorialsAddNameDescription/>
+
+    - **Name to show Tolokers**: In 2–5 words, state the general idea of the project.
+
+    - **Description for Tolokers**: In a couple of sentences, explain what you expect Tolokers to do. This is just an overview. You will write instructions later.
+
+    <Image withBackground imageId="1675425755091" alt="Create a project. Step 1" />
+
+1. In the **Task interface** section, set up what your tasks will look like. This preset has a task template with validation, keyboard shortcuts, and task layout pre-configured.
+
+    <TolokaRequesterSourceTbOrHtml/>
+
+    1. Using the **Visual editor**, set up your task in the **Config** section:
+
+        - **Paste link to a sample image**: This image is only used to display the task interface preview on the right.
+
+        - **Choose the shape for outlining objects in photos**: All tasks in a project use the same shape.
+
+        <Image withBackground imageId="1675425769941" alt="Create a project. Visual editor" />
+
+    1. Select the **I want to outline multiple types of objects** checkbox if you need to detect more than one category of objects in an image. Replace the samples with your types:
+
+        - **Object name for Tolokers**: This is the label that Tolokers will see. Make sure it is clear and correct.
+
+        - **Name in labeling results**: This is the value you will see in the file with the labeling results.
+
+    1. <TolokaRequesterSourceSpecificationDefinition/>
+
+        <TolokaRequesterSourceClickShowSpecifications/>
+
+        - **Input data**: Parameters in the file with raw task data.
+
+        - **Output data**: Parameters in the file with labeling results.
+
+        <TolokaRequesterSourceSpecificationMatch/>
+
+1. <TolokaRequesterSourceInstructions/>
+
+    In this type of project, Tolokers will select objects in images with the shape you’ve specified in the **Config** section.
+
+    <Image withBackground imageId="1675425758507" alt="Create a project. Selection instructions" />
+
+    <TolokaRequesterSourceInstructionCheck/>
+
+    <TolokaRequesterSourceInstructionNote/>
+
+1. To save your data and continue, click **Create a project**.
+
+    <TutorialsCreateProjectImage/>
+
+## Create a pool {#pool}
+
+<TolokaRequesterSourceWhatIsPool/>
+
+1. Click **Add a pool** on the project page.
+
+1. <TolokaRequesterPoolType/>
+
+1. <TolokaRequesterPoolName/>
+
+1. <TolokaRequesterPoolDescription/>
+
+1. Click **Create**.
+
+1. <TolokaRequesterSourceAudienceSettings/>
+
+    1. Clear **My tasks may contain shocking or pornographic content** if your project has none of those.
+
+    1. <TolokaRequesterSourceFilters/>
+
+        For example, add the **Languages** filter:
+
+        <Image withBackground imageId="1675425752838" alt="Create a pool. Step 3.2" />
+
+    1. Tasks in pools will automatically be available in the web version of Toloka and the mobile app. If you want to change the default settings and limit the visibility of the task for any of the versions, add the **Client** filter and select the desired value: **Toloka web version** or **Toloka for mobile**.
+
+    1. Use the **Speed/quality balance** slider to change the number of Tolokers who can see your tasks. Move the slider to the right to exclude Tolokers with lower ratings from participating in your project.
+
+        <TutorialsSpeedFilterImage/>
+
+1. <TutorialsQualityControl/>
+
+    1. Click the **Review task responses manually** toggle, and specify the number of days for checking the task in the **Review period in days** field.
+
+        <TutorialsNaAcceptance/>
+
+    1. Keep the pre-configured **Fast responses** rule as is. This rule filters out Tolokers who complete tasks too fast. The default settings mean that Tolokers are banned from the project for 1 day if they complete tasks in 4 out of 5 task suites in less than 15 seconds.
+
+    1. Delete the pre-configured **Majority vote** rule.
+
+    1. Click **Add a quality control rule → Results of assignment review**, and enter the following values:
+
+        <Image withBackground imageId="1675425749459" alt="Create a pool. Selection results rule" />
+
+        This means that if 35% or more of a Toloker's responses are rejected, the Toloker is banned and can't access your tasks for 15 days. The rule takes effect after 3 responses of the Toloker are reviewed.
+
+1. <TutorialsTimePerTaskSuite/>
+
+    It should be long enough to read the instructions and wait for task data to download (for example, 1,200 seconds).
+
+1. <TolokaRequesterSourcePriceSettings/>
+
+    1. In **Price per task suite**, set the amount of money to pay per task suite done by one Toloker. A task suite is a page with a number of tasks. It can contain one or several tasks.
+
+        If the tasks are simple, you can add 8–10 tasks per suite.
+
+    1. <TolokaRequesterSourceOverlapSettings/>
+
+        For image area selection tasks, it is usually 1. This means that each task will have 1 response.
+
+1. <TutorialsUploadTasks/>
+
+    1. Attach a prepared dataset or media files.
+
+        <Tabs tabs={[
+          { title: 'A prepared dataset', value: <SelectionList1/> },
+          { title: 'Media files', value: <MediaFiles/> },
+        ]}/>
+
+    1. Click **Continue**.
+
+    1. <TolokaRequesterSourceTaskSuits/>
+
+        - **General tasks**: These are tasks for Tolokers to label.
+
+        - **Control tasks**: These are tasks with predefined answers used to control the quality of responses. You don’t need control tasks in area selection projects.
+
+        - **Training tasks**: These are tasks with predefined answers and explanations for Tolokers. Normally you use training tasks in separate training pools. You don’t have to include them.
+
+        For example, you can add 8 general tasks per suite:
+
+        <Image withBackground imageId="1675425766644" alt="Create a pool. Step 3" />
+
+    1. Click **Combine tasks into suites**.
+
+1. <TutorialsDoubleCheck/>
+
+    <TolokaRequesterSourceStepEnabled/>
+
+<TolokaRequesterSourcePoolIsReady/>
+
+## Start labeling {#labeling}
+
+1. Make sure you have [topped up your account](https://toloka.ai/en/docs/guide/concepts/refill).
+
+1. <TolokaRequesterSourceStartButton/>
+
+    <Image withBackground imageId="1675425747514" alt="Start labeling. Step 2" />
+
+1. In the pop-up panel, review the budget and click **Launch**.
+
+## See the results {#results}
+
+Track the labeling progress on the pool page. You can start the review when the first results are received.
+
+After the specified time period, all responses are automatically accepted, regardless of their quality.
+
+1. Go to the pool, and click **Review assignments**.
+
+    <Image withBackground imageId="1675425742598" alt="See results. Step 1" />
+
+1. Choose an assignment.
+
+1. Check the responses, and click **Accept** or **Decline**. For rejected responses, enter a comment to specify the reason.
+
+    <Note mode="note" title="Note">
+
+    To learn about other ways of review, see the [Reviewing Tolokers' responses](https://toloka.ai/en/docs/guide/concepts/accept) section.
+
+    </Note>
+
+1. After checking all the assignments, click **Download results**.
+
+    <Image withBackground imageId="1675425745263" alt="See results. Step 4" />
+
+    You will get the TSV file with the labeling results. The point coordinates in the file are presented in JSON.
+
+## Troubleshooting {#troubleshooting}
+
+<FaqNeedConvert/>
+
+<Cut title="How do I mark up triangles so that they close automatically when the third point is selected?">
+
+Use the **X** shortcut for closing areas.
+
+You can customize the shortcuts using the properties of the [plugin.field.image-annotation.hotkeys](/docs-new/template-builder/reference/plugin.field.image-annotation.hotkeys) component.
+
+</Cut>
+
+<Cut title="How do I create a task for selecting objects in images?">
+
+We recommend that you break down your object selection project into three projects in Toloka:
+
+1. Sorting images containing an object.
+
+    1. [Create a task](/docs-new/tutorials/image-classification) using the **Image classification** preset.
+
+    1. Sort the images containing the object you are looking for.
+
+    1. Show the image to the Toloker and ask if the object is in the image. Response options: Yes/No.
+
+1. Selecting objects in images.
+
+    1. Select the object in the images you obtained after the previous project. You already have such a project. Run the task with manual review.
+
+    1. Use the quality control rules: fast responses, manual review, and post-review re-assessment. [Description of rules with examples](https://toloka.ai/en/docs/guide/concepts/control).
+
+1. Reviewing object selection assignments.
+
+    1. Create a task using the **Object recognition & detection** preset.
+
+    1. Hide the editor and ask whether the object is selected correctly. Response options: Yes/No.
+
+    1. In the input data, pass the images and coordinates of the labeled objects from the previous task.
+
+    Now you can run the resulting pool with an overlap of 3–5 or with dynamic overlap. After that, you can aggregate the results and then upload the data for review to Project 2.
+
+    To prevent the users who worked on the second project from doing the review, assign a skill to them. Use this skill as a filter in the pools of the third project.
+
+</Cut>
+
+<Cut title="I have a task for area selection in an image. What should the Toloker do if there is no selectable object in the image?">
+
+Main options:
+
+- Select an arbitrary area in the image (for example, put a square in the upper-right corner). In this case, the project instructions for reviewers should also reflect this.
+
+- Ask the Toloker to skip the task and report it in a personal message. Messages are reviewed by the requester. If the object is truly missing, the task is deleted from the pool by resetting the overlap.
+
+- Add an additional **No object** checkbox to the task interface. Make sure that your interface checks that either the object is selected or the checkbox is enabled. In this case, add information about the checkbox value in the review task interface.
+
+</Cut>
+
+<Cut title="How much would 2000 images with a large number of different types of selectable objects cost? How do I create a task for this amount of work?">
+
+In the case of crowdsourcing, it's better to break down this task. The simpler the task, the cheaper it is and the better the quality of the final result. The cost of labeling a single class of objects in photos might be about $0.01.
+
+Base your task on the **Object recognition & detection** preset. See the step-by-step guide for creating this type of project in the [tutorial](/docs-new/tutorials/selection).
+
+</Cut>
+
+<Cut title="How do I implement selection of 3 different areas in an image? Select the name, image, and price in the product page screenshot.">
+
+In the **Config** section on the project settings page, use the **Visual editor** and select the **I want to outline multiple types of objects** checkbox. Replace the samples with your categories.
+
+</Cut>
+
+<FaqInputDataLabelingImage/>
+
+<Cut title="How do I use control and training tasks in the standard template with an area selection editor?">
+
+In the standard template with an area selection editor, you can't use the control tasks, because in order for the assignment to be accepted by the system as correct, the object selected by the user must exactly match the control object. This is almost impossible. Therefore, you can leave the `GOLDEN` field empty in the task file or simply delete all the columns except `INPUT`.
+
+You can't also use [training](https://toloka.ai/en/docs/glossary#training-pool) and the main pool with the **Training** type in an area selection project due to the same reason.
+
+Such tasks are usually run with manual review: the Toloker submits an assignment, and then the assignment is rejected or accepted after the review.
+
+For pre-selection of users, you can use “examination tasks”. Review the assignments and assign skills based on the percentage of accepted assignments. For this purpose, add the **Results of assignment review** rule to the pool. To make sure that only the good Tolokers are admitted to the main pool, put a skill-based filter to the pool.
+
+</Cut>
+
+## See also {#see-also}
+
+- [Crowdsourcing concepts: Instructions](https://toloka.ai/knowledgebase/instruction/)
+- [Crowdsourcing concepts: Quality control](https://toloka.ai/knowledgebase/quality-control/)
+- [Crowdsourcing concepts: Pricing](https://toloka.ai/knowledgebase/pricing/)
+- [Template Builder: Object recognition](/docs-new/template-builder/templates/object-recognition)
+
+## For developers {#for-developers}
+
+- [Toloka-Kit: Object recognition](https://github.com/Toloka/toloka-kit/blob/main/examples/1.computer_vision/object_detection/object_detection.ipynb)
+
+## Datasets and reference {#datasets}
+
+- [Sample dataset file with tasks](https://tlk.s3.yandex.net/toloka-kit/knowledge-base/road_signs.tsv)
+
+<ContactSupport/>

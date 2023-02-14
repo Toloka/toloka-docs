@@ -1,0 +1,36 @@
+---
+title: "BaseTask | Toloka-Kit"
+date: "2023-02-07T15:41:58.589317"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# BaseTask
+`toloka.client.task.BaseTask` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/task.py#L21)
+
+```python
+BaseTask(
+    self,
+    *,
+    input_values: Optional[Dict[str, Any]] = None,
+    known_solutions: Optional[List[KnownSolution]] = None,
+    message_on_unknown_solution: Optional[str] = None,
+    id: Optional[str] = None,
+    origin_task_id: Optional[str] = None
+)
+```
+
+A base class for tasks.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`input_values`|**Optional\[Dict\[str, Any\]\]**|<p>A dictionary with input data for a task. Input field names are keys in the dictionary.</p>
+`known_solutions`|**Optional\[List\[[KnownSolution](/docs-new/toloka-kit/reference/toloka.client.task.BaseTask.KnownSolution)\]\]**|<p>A list of all responses considered correct. It is used with control and training tasks. If there are several output fields, then you must specify all their correct combinations.</p>
+`message_on_unknown_solution`|**Optional\[str\]**|<p>A hint used in training tasks.</p>
+`id`|**Optional\[str\]**|<p>The ID of a task.</p>
+`origin_task_id`|**Optional\[str\]**|<p>The ID of a parent task. This parameter is set if the task was created by copying.</p>

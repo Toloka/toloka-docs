@@ -1,0 +1,55 @@
+---
+title: "Components for working with text | Template Builder"
+date: "2023-02-10T09:15:36.093459"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactSupport from '../subcomponents/contact-support.mdx'
+import ComponentsForTextsList1 from './components-for-texts/subcomponents/components-for-texts-list-1.mdx'
+import ComponentsForTextsList2 from './components-for-texts/subcomponents/components-for-texts-list-2.mdx'
+
+# Components for working with text
+
+In this section, we will tell you how to [display text](#insert-text) and [add a text entry field](#field-text). We'll also tell you which components you can use to [change text](#text-transform).
+
+## Display text {#insert-text}
+
+Use the [view.text](/docs-new/template-builder/reference/view.text) component to display text in the task interface. In the `content` property, insert the required text or specify a component with the [data.*](/docs-new/template-builder/operations/work-with-data) type that returns the text.
+
+<Tabs tabs={[
+  { title: 'From input data', value: <ComponentsForTextsList1/> },
+  { title: 'From output data', value: <ComponentsForTextsList2/> },
+]}/>
+
+If you want to insert formatted text, see the instructions and samples in the [Text formatting](/docs-new/template-builder/operations/text-formatting) section.
+
+## Add a text entry field {#field-text}
+
+To add a text entry field, use the [field.text](/docs-new/template-builder/reference/field.text) component for single-line text and [field.textarea](/docs-new/template-builder/reference/field.textarea) component for multi-line text.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/NuwVOMK_3ttBAz">View example</Button>
+
+## Change text {#text-transform}
+
+To change the text, such as all uppercase letters or insert a variable value, use the following components:
+
+- [helper.text-transform](/docs-new/template-builder/reference/helper.text-transform): Changes the text case. To transform the text, use the `transformation` property with the appropriate value:
+    - `uppercase`: Convert all letters to uppercase.
+    - `lowercase`: Convert all letters to lowercase.
+    - `capitalize`: Convert the first letter of the text to uppercase and all the subsequent letters to lowercase.
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/JVwFEJc13ttBEk">View example</Button>
+
+- [helper.replace](/docs-new/template-builder/reference/helper.replace): Lets you replace some parts of the string with other strings. To do this, use the `find` property for the replaced text and the `replace` property for the replacing text.
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/qcfsK8i_3x5ZwU">View example</Button>
+
+- [helper.join](/docs-new/template-builder/reference/helper.join): Joins multiple strings into one string, separating them with spaces or commas.
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/_h--eV2Y3ttBMm">View example</Button>
+
+<ContactSupport/>

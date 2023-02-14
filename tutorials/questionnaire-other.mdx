@@ -1,0 +1,296 @@
+---
+title: "Survey on third-party platform | Toloka tutorials"
+date: "2023-02-14T11:23:09.625682"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tutorialsMenu"
+---
+
+import OtherSurveySolutions from './subcomponents/other-survey-solutions.mdx'
+import TutorialsRegister from './subcomponents/register.mdx'
+import TutorialsTopUpTutorial from './subcomponents/top-up-tutorial.mdx'
+import TolokaRequesterSourceUsePreset from '../subcomponents/toloka-requester-source/id-toloka-requester-source/use-preset.mdx'
+import TutorialsCreateProjectButton from './subcomponents/create-project-button.mdx'
+import TutorialsChoosePresetImage from './subcomponents/choose-preset-image.mdx'
+import TutorialsWhoAreTolokers from './subcomponents/who-are-tolokers.mdx'
+import TutorialsAddNameDescription from './subcomponents/add-name-description.mdx'
+import TolokaRequesterSourceTbOrHtml from '../subcomponents/toloka-requester-source/id-toloka-requester-source/tb-or-html.mdx'
+import TolokaRequesterSourceInstructions from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instructions.mdx'
+import TolokaRequesterSourceInstructionCheck from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instruction-check.mdx'
+import TutorialsCreateProjectImage from './subcomponents/create-project-image.mdx'
+import TolokaRequesterSourceWhatIsPool from '../subcomponents/toloka-requester-source/id-toloka-requester-source/what-is-pool.mdx'
+import TolokaRequesterSourceDownloadTemplate from '../subcomponents/toloka-requester-source/id-toloka-requester-source/download-template.mdx'
+import TolokaRequesterSourceStartButton from '../subcomponents/toloka-requester-source/id-toloka-requester-source/start-button.mdx'
+import ContactSupport from '../guide/subcomponents/contact-support.mdx'
+
+import QuestionnaireOtherList1 from './questionnaire-other/subcomponents/questionnaire-other-list-1.mdx'
+import QuestionnaireOtherList2 from './questionnaire-other/subcomponents/questionnaire-other-list-2.mdx'
+import QuestionnaireOtherList3 from './questionnaire-other/subcomponents/questionnaire-other-list-3.mdx'
+import QuestionnaireOtherList4 from './questionnaire-other/subcomponents/questionnaire-other-list-4.mdx'
+import QuestionnaireOtherList5 from './questionnaire-other/subcomponents/questionnaire-other-list-5.mdx'
+import QuestionnaireOtherList6 from './questionnaire-other/subcomponents/questionnaire-other-list-6.mdx'
+import QuestionnaireOtherNote from './questionnaire-other/subcomponents/questionnaire-other-note.mdx'
+
+# Survey on third-party platform
+
+In this tutorial, you will learn how to use Toloka to run a survey created on a third-party platform.
+
+You may need a third-party platform, when:
+
+- Your survey form is too long and complicated to be created in Toloka.
+
+- You are already conducting the survey using other channels to reach out to respondents, and would like to aggregate all the results in one place.
+
+In Toloka, you can place a link to your survey in the task interface. To enable a Toloker to confirm survey completion, show a code to each respondent who takes the survey on the third-party platform. The respondent will need to copy the code and paste it to the task in Toloka. You will see this code in the results file and will be able to check if it is correct.
+
+<OtherSurveySolutions/>
+
+## Prerequisites {#prerequisites}
+
+Before you begin:
+
+- <TutorialsRegister/>
+
+- <TutorialsTopUpTutorial/>
+
+- See the [What tasks can't be placed in Toloka?](https://toloka.ai/en/docs/guide/concepts/unwanted#requirements-for-survey) section. Remember that both Tolokers and requesters are anonymous.
+
+    - You should not collect personal data: a full name, contacts, or any other information that can be used to identify a Toloker. To determine whether a Toloker belongs to your target audience, you can ask for their city, date of birth, and age category.
+
+    - To communicate with Tolokers, use private messages in Toloka only.
+
+## Choose a preset {#preset}
+
+<TolokaRequesterSourceUsePreset/>
+
+1. Follow [this link](https://platform.toloka.ai/requester/templates?choosedCard=zrOz1vqLM52i562Ed0A5), or create a project manually:
+
+    1. <TutorialsCreateProjectButton/>
+
+        <TutorialsChoosePresetImage/>
+
+    1. Select the **Survey on third-party platform** preset.
+
+1. Click **Choose this preset** in the pop-up tab.
+
+## Create a project {#project}
+
+<TutorialsWhoAreTolokers/>
+
+1. <TutorialsAddNameDescription/>
+
+    - **Name to show Tolokers**: In 2–5 words, state the general idea of the project.
+
+    - **Description for Tolokers**: In a couple of sentences, explain what you expect Tolokers to do. This is just an overview. You will write instructions later.
+
+    <Image withBackground imageId="1675426112341" alt="Create a project. Step 1" />
+
+1. In the **Task interface** section, set up what your tasks will look like. This preset has a task template with validation and task layout pre-configured.
+
+    <TolokaRequesterSourceTbOrHtml/>
+
+    1. In the **Config** section, you can edit the pre-configured code. For example, to change the description, replace the sample text with your value in the `label` property.
+
+        <Image withBackground imageId="1675426151793" alt="Create a project. Config question description" />
+
+        <Note mode="note" title="Note">
+
+        To learn about other properties of the **Config** section, their possible values and the impact on the task interface, see the [Template Builder Help](/docs-new/template-builder/templates/survey).
+
+        </Note>
+
+    1. In the **Input data example** section, you can see a sample link.
+
+        <Image withBackground imageId="1675426084193" alt="Create a project. Input example external" />
+
+        It is only an example used to display the task interface preview on the right. You will add a link to your survey later while uploading a task file.
+
+    1. Click **Data specification → Show specifications**. In the following sections, you will see the parameters which match the task interface you set up in **Template Builder**:
+
+        - **Input data**: A parameter for a link to your survey.
+
+        - **Output data**: Parameters for completion codes entered by Tolokers and for their comments if they have problems with getting a code.
+
+        <Note mode="note" title="Note">
+
+        You can also display a survey form in an [iframe](https://ya.cc/t/kZoRrfTk3ttAFF) if a third-party platform allows it. To learn more about the `view.iframe` component, see the [Template Builder Help](/docs-new/template-builder/reference/view.iframe).
+
+        </Note>
+
+1. <TolokaRequesterSourceInstructions/>
+
+    <TolokaRequesterSourceInstructionCheck/>
+
+    <Note mode="note" title="Note">
+
+    Do not add a link to your external survey form to the instructions. Specify the link only in the file with tasks. See the [section below](#upload) to learn how you can do that.
+
+    </Note>
+
+1. To save your data and continue, click **Create a project**.
+
+    <TutorialsCreateProjectImage/>
+
+## Create a pool {#pool}
+
+<TolokaRequesterSourceWhatIsPool/>
+
+You can create a pool using one of the ways:
+
+- From a preset — a new pool with settings for survey:
+
+    - Load one static link to the survey. To learn more, see the [Upload data](#upload) section.
+
+    - Don't add correct completion codes to the file with tasks.
+
+    - Indicate an [overlap](https://toloka.ai/en/docs/glossary#overlap) equal to the required number of Tolokers.
+
+    - Use [manual review](https://toloka.ai/en/docs/guide/concepts/offline-accept).
+
+    <Note mode="note" title="Note">
+
+    In this case, you need to adjust the overlap, the price of the survey, and the audience settings (including the skill by which the platform will exclude the Tolokers who have already completed the survey once). To learn more about pool settings, see the section below about creating a pool from scratch.
+
+    </Note>
+
+- From scratch — a new pool with default settings.
+
+<Tabs tabs={[
+  { title: 'Create a pool from the preset', value: <QuestionnaireOtherList1/> },
+  { title: 'Create a pool from scratch', value: <QuestionnaireOtherList2/> },
+]}/>
+
+## Upload data {#upload}
+
+1. Go to the **Prepare and upload data** step if you're creating a pool or click the **Upload** button on the pool page.
+
+1. Create the tasks for Tolokers:
+
+    1. <TolokaRequesterSourceDownloadTemplate/>
+
+    1. Open the downloaded file. It must have one parameter which name equals `INPUT:survey_link`, and the values are links.
+
+        1. Replace the sample links with your data. You can:
+
+            - Specify one static link to your survey.
+
+                In this case, the overlap you’ve set in step 6.2 of [creating the pool](#pool) should be equal to the number of respondents you need.
+
+            - Provide many survey links to give each of them to one Toloker.
+
+                In this case, the number of links in the file should be equal to the number of respondents you need. The overlap should be set to 1.
+
+                You can use different survey links if it’s necessary to generate different codes for each Toloker. It’s also possible to specify the same link many times.
+
+                <Note mode="note" title="Note">
+
+                <QuestionnaireOtherNote/>
+
+                </Note>
+
+                For example, the XLSX file should look as follows:
+
+                <Tabs tabs={[
+                  { title: 'One link (overlap > 1)', value: <QuestionnaireOtherList3/> },
+                  { title: 'Many links (overlap = 1)', value: <QuestionnaireOtherList5/> },
+                ]}/>
+
+        1. If you know the correct completion codes beforehand, add the `GOLDEN:code` parameter to the file and specify its values:
+
+            <Tabs tabs={[
+              { title: 'One link (overlap > 1)', value: <QuestionnaireOtherList4/> },
+              { title: 'Many links (overlap = 1)', value: <QuestionnaireOtherList6/> },
+            ]}/>
+
+            In this case, you can automatically accept tasks from those who entered a completion code correctly. Use the **Control tasks** rule from step 4.6 of [creating the pool](#pool).
+
+    1. Click **Drop file here or select**, and upload the file you’ve just made.
+
+    1. Click **Continue**.
+
+    1. Tasks are shown to Tolokers in suites. A suite is a single page with multiple tasks.
+
+        Go to the **Set manually** tab. Set one task per suite, that is a Toloker will see only one task with your survey on the page:
+
+        <Image width="570px" withBackground imageId="1675426116886" alt="Upload data. Tasks per suite" />
+
+    1. Click **Combine tasks into suites**.
+
+## Start labeling {#labeling}
+
+1. Make sure you have [topped up your account](https://toloka.ai/en/docs/guide/concepts/refill).
+
+1. Go to the pool page and click the **Preview** button to check your task.
+
+    1. Follow the link to your survey to make sure that it works.
+
+    1. Enter the code and submit the task.
+
+    If the page reloaded successfully, your task works correctly.
+
+1. <TolokaRequesterSourceStartButton/>
+
+    <Image withBackground imageId="1675426124143" alt="Start labeling" />
+
+1. In the pop-up panel, review the budget and click **Launch**.
+
+## See the results {#results}
+
+Track the progress of responses collection on the pool page. You can start the review when the first results are received.
+
+If you’ve set the **Control tasks** rule in step 4.6 of [creating the pool](#pool), most of the tasks may be already accepted.
+
+Review the rest of the tasks during the time period specified in the **Review period in days** field in step 4.1. After that period, all responses are automatically accepted, regardless of whether completion codes are correct or not.
+
+1. Go to the pool, and click **Review assignments**.
+
+    <Image withBackground imageId="1675426078675" alt="See the results. Review assignments" />
+
+1. Choose an assignment.
+
+1. Check the completion code, and click **Accept** or **Decline**. For rejected responses, enter a comment to specify the reason.
+
+    To learn about other ways of review, see the [Reviewing Tolokers’ responses](https://toloka.ai/en/docs/guide/concepts/accept) section.
+
+    <Note mode="note" title="Note">
+
+    - Do not rush to reject responses that have not passed automatic completion via codes. Some codes will be incorrect indeed, but often Tolokers add extra spaces accidentally or leave comments in a text field which is intended for a code.
+
+    - If there were technical problems (for example, a Toloker had filled an external survey form, but didn’t have time to submit a task in Toloka), you still can pay the Toloker. To do this, use the [rewarding system](https://toloka.ai/en/docs/guide/concepts/bonus).
+
+    </Note>
+
+## Helpful tips {#tips}
+
+- You can use questions with known answers to check that Tolokers pay attention. In that case, even if a Toloker answers incorrectly, it’s better to still provide them a special completion code, different from the correct one. When you see that special code in the results, you can reject the assignment. The Toloker won’t be dissatisfied that you didn't allow them to finish the task.
+
+- You can conduct a survey in two stages. For example, it can be useful when the general filters of the **Audience** section are not enough to select Tolokers you need. Use skills:
+
+    - In the first survey, [assign the skill](https://toloka.ai/en/docs/guide/concepts/nav-assign) to the relevant Tolokers.
+
+    - In the second survey, specify the skill in the **Audience** section to make the survey available to the relevant Tolokers from the first stage.
+
+    You can notify Tolokers about the second survey using [messages](https://toloka.ai/en/docs/guide/concepts/messaging) to those of them who have the necessary skill.
+
+- Sometimes a survey may follow different scenarios depending on answers given to the previous questions. In this case, make sure that all scenarios have a completion code in the end.
+
+- Check the **Messages** tab regularly to get Tolokers’ reports on problems with your survey.
+
+## See also {#see-also}
+
+- [Crowdsourcing concepts: Instructions](https://toloka.ai/knowledgebase/instruction/)
+- [Crowdsourcing concepts: Quality control](https://toloka.ai/knowledgebase/quality-control/)
+- [Crowdsourcing concepts: Pricing](https://toloka.ai/knowledgebase/pricing/)
+- [Template Builder: Survey](/docs-new/template-builder/templates/survey)
+
+## For developers {#for-developers}
+
+- [Toloka-Kit: Survey](https://github.com/Toloka/toloka-kit/blob/main/examples/7.survey/simplest_survey/simplest_survey.ipynb)
+
+## Datasets and reference {#datasets}
+
+- [Sample dataset file with tasks](https://labs-images-testing.s3.yandex.net/presets/sidepanel/29_surveyThirdPartyPlatform/EN/sample-files.zip)
+
+<ContactSupport/>

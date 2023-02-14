@@ -1,0 +1,29 @@
+---
+title: "OSVersionMinor | Toloka-Kit"
+date: "2023-02-07T15:42:08.557510"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# OSVersionMinor
+`toloka.client.filter.OSVersionMinor` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/filter.py#L611)
+
+```python
+OSVersionMinor(
+    self,
+    operator: CompareOperator,
+    value: int
+)
+```
+
+Filtering Tolokers by an OS minor version.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`operator`|**[CompareOperator](/docs-new/toloka-kit/reference/toloka.client.primitives.operators.CompareOperator)**|<p>An operator used in a condition. Allowed set of operators depends on the filter.</p>
+`value`|**int**|<p>The minor version of the OS.</p>

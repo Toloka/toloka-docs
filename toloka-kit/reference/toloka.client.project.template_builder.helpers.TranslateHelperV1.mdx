@@ -1,0 +1,41 @@
+---
+title: "TranslateHelperV1 | Toloka-Kit"
+date: "2023-02-07T15:41:51.862809"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# TranslateHelperV1
+`toloka.client.project.template_builder.helpers.TranslateHelperV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/project/template_builder/helpers.py#L267)
+
+```python
+TranslateHelperV1(
+    self,
+    key: Optional[Union[BaseComponent, str]] = None,
+    *,
+    version: Optional[str] = '1.0.0'
+)
+```
+
+Component for translating interface elements to other languages.
+
+In the properties that should be displayed in different languages, add:
+
+```json
+{
+  "type": "helper.translate",
+  "key": "<key name>"
+}
+```
+
+Adding the key property displays a field for entering the key text. Enter the text in the source language. In the
+"Translations" step, add translations for the keys in the desired languages.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`key`|**Optional\[Union\[[BaseComponent](/docs-new/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), str\]\]**|<p>The key for a text property that you will translate to other languages.</p>

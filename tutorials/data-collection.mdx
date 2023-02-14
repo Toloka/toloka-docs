@@ -1,0 +1,76 @@
+---
+title: "Business information (example with decomposition) | Toloka tutorials"
+date: "2023-02-14T11:23:10.508084"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tutorialsMenu"
+---
+
+import FaqControlProduct from '../subcomponents/faq/project-settings/control-product.mdx'
+import ContactSupport from '../guide/subcomponents/contact-support.mdx'
+
+# Business information (example with decomposition)
+
+<Note mode="tip" title="Tip">
+
+Run the project in the [Sandbox](https://sandbox.toloka.yandex.com/for-requesters) first. This helps you avoid making mistakes and spending money on a task that isn't working right.
+
+</Note>
+
+This is an example of taking a task for collecting relevant data and decomposing it into multiple projects. Decomposition can improve the quality of results and reduce the cost of performing complex tasks.
+
+_Collecting relevant data_ is a task to search for matching data. Let's say you have photos of clothes and shoes and you need to find similar shoes in an online store. But you don't know if there are shoes in all the photos and want to filter them first. Next, you need to find similar shoes in the online store. You also want to check the Tolokers' responses yourself afterwards. To get the final result, you need to compare the found shoes with the original image and decide which pair is most similar.
+
+You can use the projects described below either together to set up a unified process or separately (for example, only to identify objects in photos).
+
+- [Project 1](/docs-new/tutorials/contain_item): Use this project if not all images contain the object you are looking for and you want to filter them.
+
+- [Project 2](/docs-new/tutorials/find_an_item_in_store): In this project, Tolokers will search in an online store for shoes that are similar to the ones shown. Use the results from project 1 as source images.
+
+- [Project 3](/docs-new/tutorials/item_look_similar): In this project, Tolokers will compare the shoes from the original image (in project 1) with the shoes found in project 2.
+
+- [Project 4](/docs-new/tutorials/item_more_similar): In this project, Tolokers will compare the found shoes with the original image and decide which pair is most similar.
+
+<img style="max-width:100%" src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425186344/1675425186344_original_svg.svg" alt="" />
+
+<Note mode="note" title="Note">
+
+See the complete code for all projects in the [Appendix](/docs-new/tutorials/appendix-expanded-code).
+
+</Note>
+
+Each project consists of the following basic steps:
+
+1. **Create a project**. In the project, you describe the [input and output data](https://toloka.ai/en/docs/glossary#input-output-data), [task interface](https://toloka.ai/en/docs/glossary#task-interface), and [instructions](https://toloka.ai/en/docs/glossary#instructions) for completing a task.
+
+1. **Create a [task pool](https://toloka.ai/en/docs/glossary#pool) in the project**. In the pool, you set up [quality control](https://toloka.ai/en/docs/glossary#quality-control) and [filters](https://toloka.ai/en/docs/glossary#filters) for Tolokers.
+
+1. **Upload a [file](https://tlk.s3.yandex.net/wsdm2020/dataset_1.tsv) with tasks to the pool**.
+
+1. **Start the pool**.
+
+1. **Obtain and aggregate the results**.
+
+Find out how to top up your account in the [Topping up your account](https://toloka.ai/en/docs/guide/concepts/refill) section.
+
+Learn more about how to [set up pricing](https://toloka.ai/en/docs/guide/concepts/dynamic-pricing#section_wb1_lhl_vlb).
+
+## What's next {#what-next}
+
+- Create [Project 1](/docs-new/tutorials/contain_item) to filter images.
+- Create [Project 2](/docs-new/tutorials/find_an_item_in_store) to search for similar images.
+- Create [Project 3](/docs-new/tutorials/item_look_similar) to compare the original image with the results from Project 2.
+- Create [Project 4](/docs-new/tutorials/item_more_similar) to compare matching images.
+- Learn more about [decomposition](https://toloka.ai/en/docs/guide/concepts/solution-architecture).
+
+## See also {#see-also}
+
+- [Crowdsourcing concepts: Decomposition](https://toloka.ai/knowledgebase/decomposition/)
+
+## Frequently asked questions {#problem-solution}
+
+<FaqControlProduct/>
+
+<ContactSupport/>

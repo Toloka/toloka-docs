@@ -1,0 +1,38 @@
+---
+title: "get_task_suite | Toloka-Kit"
+date: "2023-02-07T15:41:39.293451"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# get_task_suite
+`toloka.client.TolokaClient.get_task_suite` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/__init__.py#L2623)
+
+```python
+get_task_suite(self, task_suite_id: str)
+```
+
+Reads one task suite.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`task_suite_id`|**str**|<p>ID of the task suite.</p>
+
+* **Returns:**
+
+  The task suite.
+
+* **Return type:**
+
+  [TaskSuite](/docs-new/toloka-kit/reference/toloka.client.task_suite.TaskSuite)
+
+**Examples:**
+
+```python
+toloka_client.get_task_suite(task_suite_id='1')
+```

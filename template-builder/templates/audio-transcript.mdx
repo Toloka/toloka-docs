@@ -1,0 +1,67 @@
+---
+title: "Audio transcription | Template Builder"
+date: "2023-02-10T09:15:30.529679"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TolokaTbSourceAddMedia from '../subcomponents/toloka-tb-source/id-toloka-tb-source/add-media.mdx'
+import ContactSupport from '../subcomponents/contact-support.mdx'
+import AudioTranscriptList1 from './audio-transcript/subcomponents/audio-transcript-list-1.mdx'
+import AudioTranscriptList2 from './audio-transcript/subcomponents/audio-transcript-list-2.mdx'
+
+# Audio transcription
+
+For this type of project, you can use the **Transcribing audio recordings** preset. It has pre-configured validation, task layout, and shortcuts.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/YrCIIps93ttEPe">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [view.audio](/docs-new/template-builder/reference/view.audio): An audio player.
+- [condition.played-fully](/docs-new/template-builder/reference/condition.played): Checks if a Toloker listened to the entire audio track.
+- [field.button-radio-group](/docs-new/template-builder/reference/field.button-radio-group): Buttons for answer options.
+- [field.textarea](/docs-new/template-builder/reference/field.textarea): Text input field.
+- [condition.required](/docs-new/template-builder/reference/condition.required): Checks if the text field is filled in.
+- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task layout.
+- [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys): [Keyboard shortcuts](/docs-new/template-builder/best-practices/hotkeys).
+
+</Cut>
+
+<TolokaTbSourceAddMedia/>
+
+## What else can be configured {#add-more}
+
+- If you want to [check](/docs-new/template-builder/best-practices/conditions) whether the audio has been started, replace the [condition.played-fully](/docs-new/template-builder/reference/condition.played-fully) component with [condition.played](/docs-new/template-builder/reference/condition.played).
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/fpVaBRrf3ttEQS">View example</Button>
+
+- To put a short audio track on repeat, change the properties of the [view.audio](/docs-new/template-builder/reference/view.audio) component by adding `loop: true`.
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/13Djihdu3ttERD">View example</Button>
+
+If this preset doesn't meet your needs, see other examples in this section.
+
+## Other options for buttons {#options}
+
+Choose whether a Toloker can select only one or multiple answer options:
+
+<Tabs tabs={[
+  { title: 'Multiple options (checkboxes)', value: <AudioTranscriptList1/> },
+  { title: 'One option (a radio button)', value: <AudioTranscriptList2/> },
+]}/>
+
+## Add pre-recognized text {#text}
+
+  You can add text from input data to audio transcription tasks. For example, this is useful if an audio recording was recognized automatically, and now you need Tolokers to correct errors in the text. To do this, use the [view.text](/docs-new/template-builder/reference/view.text) component and refer to the number of the element in the input data array in the `content` property.
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/m8wGfgo73ttETg">View example</Button>
+
+## See also {#see-also}
+
+- [Tutorials: Audio transcription](https://toloka.ai/en/docs/guide/tutorials/transcript-audio)
+
+<ContactSupport/>

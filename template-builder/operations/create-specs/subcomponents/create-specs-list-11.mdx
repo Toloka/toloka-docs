@@ -1,0 +1,21 @@
+In this example, the specification will contain the `results` field with the **JSON** type. The `results` field will have the JSON object `{ "verdict": true }` or `{ "verdict": false }`.
+
+  ```json
+  {
+"type": "field.radio-group",
+"options": [
+  {
+    "label": "Yes",
+    "value": true
+  },
+  {
+    "label": "No",
+    "value": false
+  }
+],
+"data": {
+  "type": "data.output",
+  "path": "results.verdict"
+}
+  }
+  ```

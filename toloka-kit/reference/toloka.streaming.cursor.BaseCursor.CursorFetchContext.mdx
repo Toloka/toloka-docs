@@ -1,0 +1,20 @@
+---
+title: "CursorFetchContext | Toloka-Kit"
+date: "2023-02-07T15:41:32.199329"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# CursorFetchContext
+`toloka.streaming.cursor.BaseCursor.CursorFetchContext` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/streaming/cursor.py#L84)
+
+```python
+CursorFetchContext(self, cursor: BaseCursor)
+```
+
+Context manager to return from `BaseCursor.try_fetch_all method`.
+
+Commit cursor state only if no error occured.

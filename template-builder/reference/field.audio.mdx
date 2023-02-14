@@ -1,0 +1,28 @@
+---
+title: "field.audio | Template Builder"
+date: "2023-02-10T09:15:35.387397"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FieldAudioTable1 from './field.audio/subcomponents/field.audio-table-1.mdx'
+
+# field.audio
+
+Component for recording audio. Works in the [Toloka app for mobile devices](https://toloka.ai/tolokers/docs/mobile/?lang=en). In a browser, this component opens a window for uploading an audio file.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/W77mHJnc3tyyrm">View example</Button>
+
+## Component properties {#properties}
+
+**Name** | **Type** | **Description**
+----- | ----- | -----
+`type`<span style="color: red">\*</span> | "field.audio" | Set component type.
+`data`<span style="color: red">\*</span> | _writable_ | Data with values that will be processed or changed.
+`label` | _string_ | Label above the component.
+`hint` | _string_ | Hint text.
+`multiple` | _boolean_ | <FieldAudioTable1/>
+`validation` | _condition_ | Validation based on condition.

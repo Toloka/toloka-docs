@@ -1,0 +1,33 @@
+---
+title: "WebhookSubscriptionSortItems | Toloka-Kit"
+date: "2023-02-07T15:41:42.123084"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# WebhookSubscriptionSortItems
+`toloka.client.search_requests.WebhookSubscriptionSortItems`
+
+```python
+WebhookSubscriptionSortItems(self, items=None)
+```
+
+Keys for sorting event subscriptions in search results.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`items`|**Optional\[List\[[SortItem](/docs-new/toloka-kit/reference/toloka.client.search_requests.WebhookSubscriptionSortItems.SortItem)\]\]**|<p>A list of sorting keys. Supported values:</p> <ul> <li>`&#x27;id&#x27;` — A subscription ID.</li> <li>`&#x27;created&#x27;` — The creation date of a subscription.</li> </ul>
+
+**Examples:**
+
+The example shows how to find event subscriptions sorted by creation date in descending order. Subscriptions with equal creation dates are sorted by IDs in ascending order.
+
+```python
+sort = toloka.client.search_requests.WebhookSubscriptionSortItems(['-created', 'id'])
+result = toloka_client.find_webhook_subscriptions(event_type=some_event_type, pool_id=my_pretty_pool_id, sort=sort, limit=10)
+```

@@ -1,0 +1,30 @@
+---
+title: "view.alert | Template Builder"
+date: "2023-02-10T09:15:35.438111"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ViewAlertTable1 from './view.alert/subcomponents/view.alert-table-1.mdx'
+
+# view.alert
+
+The component creates a color block to highlight important information.
+
+You can use both plain text and other visual components inside it.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/lBobocfj3tyyJo">View example</Button>
+
+## Component properties {#properties}
+
+**Name** | **Type** | **Description**
+----- | ----- | -----
+`type`<span style="color: red">\*</span> | "view.alert" | Set component type.
+`label` | _string_ | Label above the component.
+`content` | _view_ | Content of the block with important information.
+`hint` | _string_ | Hint text.
+`theme` | _string_ | <ViewAlertTable1/>
+`validation` | _condition_ | Validation based on condition.

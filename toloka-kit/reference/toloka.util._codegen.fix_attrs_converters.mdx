@@ -1,0 +1,23 @@
+---
+title: "fix_attrs_converters | Toloka-Kit"
+date: "2023-02-07T15:42:01.706968"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# fix_attrs_converters
+`toloka.util._codegen.fix_attrs_converters` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/util/_codegen.py#L343)
+
+```python
+fix_attrs_converters(cls)
+```
+
+Due to [https://github.com/Toloka/toloka-kit/issues/37](https://github.com/Toloka/toloka-kit/issues/37)
+
+we have to support attrs>=20.3.0.
+This version lacks a feature that uses converters' annotations in class's __init__
+(see [https://github.com/python-attrs/attrs/pull/710](https://github.com/python-attrs/attrs/pull/710))).
+This decorator brings this feature to older attrs versions.

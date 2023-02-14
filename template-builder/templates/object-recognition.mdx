@@ -1,0 +1,190 @@
+---
+title: "Object recognition & detection | Template Builder"
+date: "2023-02-10T09:15:30.833561"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TolokaTbSourceAddMedia from '../subcomponents/toloka-tb-source/id-toloka-tb-source/add-media.mdx'
+import ContactSupport from '../subcomponents/contact-support.mdx'
+
+# Object recognition & detection
+
+For this type of project, you can use the **Object recognition & detection** preset.
+
+This preset is designed to outline objects in images for training computer vision to detect them.
+
+Take a look at the example: the labeling interface includes an image with bounding boxes, polygons, or key points. Note that validation, keyboard shortcuts, and task layout are already configured in this example.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/ajl1SJ1d3ttCsE">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [field.image-annotation](/docs-new/template-builder/reference/field.image-annotation): Lets you select areas using points, rectangles, and polygons.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.image-annotation",
+    "image": {
+      "type": "data.input",
+      "path": "image"
+    },
+    "fullHeight": true,
+    "data": {
+      "type": "data.output",
+      "path": "result"
+    },
+    "validation": {
+      "type": "condition.required",
+      "hint": "Please select an area"
+    }
+  }
+  ```
+  </Cut>
+
+- [condition.required](/docs-new/template-builder/reference/condition.required): Checks if at least one area is selected.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "condition.required",
+    "hint": "Please select an area"
+  }
+  ```
+
+  </Cut>
+
+- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task layout.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "plugin.toloka",
+    "layout": {
+      "kind": "pager"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [plugin.field.image-annotation.hotkeys](/docs-new/template-builder/reference/plugin.field.image-annotation.hotkeys): Sets hotkeys to select area types and selection modes and to confirm or cancel area creation.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "plugin.field.image-annotation.hotkeys",
+    "labels": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "modes": {
+      "select": "q",
+      "point": "w",
+      "rectangle": "e",
+      "polygon": "r"
+    },
+    "confirm": "a",
+    "cancel": "s"
+  }
+  ```
+
+  </Cut>
+
+</Cut>
+
+<TolokaTbSourceAddMedia/>
+
+If this preset doesn't meet your needs, see other examples in this section.
+
+## Add a description {#add-description}
+
+To add a detailed description to the task, use the `label` property of the [field.image-annotation](/docs-new/template-builder/reference/field.image-annotation) component.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "field.image-annotation",
+  "image": {
+    "type": "data.input",
+    "path": "image"
+  },
+  "fullHeight": true,
+  "label": "Look at the picture and outine the road signs",
+  "data": {
+    "type": "data.output",
+    "path": "result"
+  },
+  "validation": {
+    "type": "condition.required",
+    "hint": "Please select an area"
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/J3wI38wh3ttCtn">View example</Button>
+
+## Add a response field {#add-text-area}
+
+To let Tolokers leave comments about the task or their response, add a text field using [field.textarea](/docs-new/template-builder/reference/field.textarea). You can place it in the [view.list](/docs-new/template-builder/reference/view.list) along with the `field.image-annotation` component.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "field.textarea",
+  "label": "Comments",
+  "placeholder": "Enter text",
+  "data": {
+    "type": "data.output",
+    "path": "comment"
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/PWIhgNqi3ttCvX">View example</Button>
+
+## Add a layout {#add-layout}
+
+To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs-new/template-builder/reference/view.alert). You can place it in the [view.list](/docs-new/template-builder/reference/view.list) along with the `field.image-annotation` component.
+
+In this example, the text is highlighted with a yellow border.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "view.alert",
+  "theme": "warning",
+  "content": {
+    "type": "view.text",
+    "content": "Look at the picture and outline the road signs"
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/CD_JTa4r3ttCx9">View example</Button>
+
+## See also {#see-also}
+
+- [Tutorials: Object recognition & detection](https://toloka.ai/en/docs/guide/tutorials/selection)
+
+<ContactSupport/>

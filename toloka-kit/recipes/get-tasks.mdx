@@ -1,0 +1,76 @@
+---
+title: "Get list of tasks | Toloka-Kit"
+date: "2023-02-07T15:40:39.612264"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import GetTasks from './subcomponents/get_tasks.mdx'
+
+# Get list of tasks
+
+_Get all the tasks in the pool with the ID specified in the request._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Print task IDs, creation date, and overlap {#step-three}
+
+[Find out](/docs-new/toloka-kit/recipes/get-pools) the ID of the pool you want to view the tasks in. Then, iterate through all the tasks in the pool calling the `get_tasks()` method.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      for task in toloka_client.<Term term="get_tasks"><GetTasks/></Term>(pool_id='1227652'):
+      <br/>    print(task.id, task.created.date(), task.overlap)
+    </HighlightChildren>
+  }
+  textToCopy={`for task in toloka_client.get_tasks(pool_id='1227652'):
+    print(task.id, task.created.date(), task.overlap)`}
+/>
+
+You should get an output with the skill IDs, names, and private comments which looks like this.
+
+```bash
+00022da5a7--6388b40547c84000494cdc58 2022-12-01 3
+00022da5a7--6388b40547c84000494cdc59 2022-12-01 3
+00022da5a7--6388b40547c84000494cdc5a 2022-12-01 5
+00022da5a7--6388b40547c84000494cdc5b 2022-12-01 3
+00022da5a7--6388b40547c84000494cdc60 2022-12-01 3
+00022da5a7--6388b40547c84000494cdc6b 2022-12-01 3
+```
+
+## Complete code: Get list of tasks {#complete-code}
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+for task in toloka_client.get_tasks(pool_id='1227652'):
+    print(task.id, task.created.date(), task.overlap)
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_tasks()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_tasks) method_
+
+</Note>
+
+## See also {#see-also}
+
+- [How does Toloka work?](https://toloka.ai/en/docs/guide/concepts/overview)
+- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [Toloka API: Get list of tasks](https://toloka.ai/docs/api/api-reference/#get-/tasks)

@@ -1,0 +1,30 @@
+---
+title: "TaskBatchCreateResult | Toloka-Kit"
+date: "2023-02-07T15:42:10.046459"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# TaskBatchCreateResult
+`toloka.client.batch_create_results.TaskBatchCreateResult`
+
+```python
+TaskBatchCreateResult(
+    self,
+    *,
+    items: Optional[Dict[str, Task]] = None,
+    validation_errors: Optional[Dict[str, Dict[str, FieldValidationError]]] = None
+)
+```
+
+The results of the tasks creation operation.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`items`|**Optional\[Dict\[str, [Task](/docs-new/toloka-kit/reference/toloka.client.task.Task)\]\]**|<p>A list of created tasks.</p>
+`validation_errors`|**Optional\[Dict\[str, Dict\[str, [FieldValidationError](/docs-new/toloka-kit/reference/toloka.client.batch_create_results.FieldValidationError)\]\]\]**|<p>A list with validation errors in input tasks. The list is filled if the request parameter `skip_invalid_items` is `True`.</p>

@@ -1,0 +1,30 @@
+---
+title: "SpecClassIdentificationError | Toloka-Kit"
+date: "2023-02-07T15:41:54.642805"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# SpecClassIdentificationError
+`toloka.client.exceptions.SpecClassIdentificationError` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/exceptions.py#L27)
+
+```python
+SpecClassIdentificationError(
+    self,
+    *,
+    spec_field: Optional[str] = None,
+    spec_enum: Optional[str] = None
+)
+```
+
+Raised when cannot find spec_сlass for spec_field value.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`spec_field`|**Optional\[str\]**|<p>value that defines spec_class type</p>
+`spec_enum`|**Optional\[str\]**|<p>enum class containing spec_class possible types</p>

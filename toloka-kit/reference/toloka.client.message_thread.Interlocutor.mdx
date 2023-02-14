@@ -1,0 +1,32 @@
+---
+title: "Interlocutor | Toloka-Kit"
+date: "2023-02-07T15:41:43.250615"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# Interlocutor
+`toloka.client.message_thread.Interlocutor` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/message_thread.py#L47)
+
+```python
+Interlocutor(
+    self,
+    *,
+    id: Optional[str] = None,
+    role: Union[InterlocutorRole, str, None] = None,
+    myself: Optional[bool] = None
+)
+```
+
+Information about the sender or recipient.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`id`|**Optional\[str\]**|<p>ID of the sender or recipient.</p>
+`role`|**Optional\[[InterlocutorRole](/docs-new/toloka-kit/reference/toloka.client.message_thread.Interlocutor.InterlocutorRole)\]**|<p>Role of the sender or recipient in Toloka.</p>
+`myself`|**Optional\[bool\]**|<p>Marks a sender or recipient with your ID. If the ID belongs to you, the value is `True`.</p>

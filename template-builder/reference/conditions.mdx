@@ -1,0 +1,29 @@
+---
+title: "List of conditions | Template Builder"
+date: "2023-02-10T09:15:31.225758"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+# List of conditions
+
+Use the components named `conditions.*` to match an expression against a condition. For example, you can check whether [a text field is filled in](/docs-new/template-builder/reference/condition.required).
+
+| Component                                           | Description                                                                                                                                                                                                                         |
+| --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [condition.all](/docs-new/template-builder/reference/condition.all)                   | Checks that **all** child conditions are met. If any of the conditions is not met, the component returns 'false'.                                                                                                                   |
+| [condition.any](/docs-new/template-builder/reference/condition.any)                   | Checks that **at least one** of the child conditions is met. If none of the conditions is met, the component returns `false`.                                                                                                       |
+| [condition.empty](/docs-new/template-builder/reference/condition.empty)               | Checks that the data didn't get a value. If it did, returns `false`. This is useful if you need to check the optional template data (`data.*`) or make sure that a Toloker didn't interact with the data entry fields (`fields.*`). |
+| [condition.equals](/docs-new/template-builder/reference/condition.equals)             | Checks whether the original value is equal to the specified value.                                                                                                                                                                  |
+| [condition.link-opened](/docs-new/template-builder/reference/condition.link-opened)   | Checks that a Toloker clicked the link.                                                                                                                                                                                             |
+| [condition.not](/docs-new/template-builder/reference/condition.not)                   | Returns the inverse of the specified condition.                                                                                                                                                                                     |
+| [condition.played](/docs-new/template-builder/reference/condition.played)             | Checks whether playback has started.                                                                                                                                                                                                |
+| [condition.played-fully](/docs-new/template-builder/reference/condition.played-fully) | Checks that playback is complete.                                                                                                                                                                                                   |
+| [condition.required](/docs-new/template-builder/reference/condition.required)         | Checks that the data is filled in.                                                                                                                                                                                                  |
+| [condition.same-domain](/docs-new/template-builder/reference/condition.same-domain)   | Checks if the link that you entered belongs to a specific site. If it does, returns `true`, otherwise, `false`.                                                                                                                     |
+| [condition.schema](/docs-new/template-builder/reference/condition.schema)             | Allows validating data using [JSON Schema](https://json-schema.org/learn/getting-started-step-by-step.html). This is a special format for describing data in JSON format.                                                           |
+| [condition.sub-array](/docs-new/template-builder/reference/condition.sub-array)       | Checks whether the array is a subarray of another element.                                                                                                                                                                          |
+| [condition.distance](/docs-new/template-builder/reference/condition.distance)         | This component checks whether the sent coordinates match the ones that you specified.                                                                                                                                               |

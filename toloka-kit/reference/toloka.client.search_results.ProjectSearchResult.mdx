@@ -1,0 +1,30 @@
+---
+title: "ProjectSearchResult | Toloka-Kit"
+date: "2023-02-07T15:42:16.004279"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# ProjectSearchResult
+`toloka.client.search_results.ProjectSearchResult`
+
+```python
+ProjectSearchResult(
+    self,
+    *,
+    items: Optional[List[Project]] = None,
+    has_more: Optional[bool] = None
+)
+```
+
+The result of searching projects.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`items`|**Optional\[List\[[Project](/docs-new/toloka-kit/reference/toloka.client.project.Project)\]\]**|<p>A list with found projects.</p>
+`has_more`|**Optional\[bool\]**|<p>A flag showing whether there are more matching projects.</p> <ul> <li>`True` — There are more matching projects, not included in `items` due to the limit set in the search request.</li> <li>`False` — `items` contains all matching projects.</li> </ul>

@@ -1,0 +1,37 @@
+---
+title: "Writing direction settings | Template Builder"
+date: "2023-02-10T09:15:37.007413"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactSupport from '../subcomponents/contact-support.mdx'
+
+# Writing direction settings
+
+To set the writing direction for content in blocks, use the `rtl` setting.
+
+```json
+{
+  "type": "view.text",
+  "content": "cats",
+  "rtl": {
+    "mode": "ltr"
+  }
+}
+```
+
+The direction of writing is set in the `mode` property:
+
+- `ltr` — left to right.
+
+- `rtl` — right to left.
+
+The setting is available in the following blocks: `view.text`, `field.button-radio-group`, `field.text`, and `field.textarea`.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/tq6fCNm_3ttFBW">View example</Button>
+
+<ContactSupport/>

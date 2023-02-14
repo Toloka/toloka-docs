@@ -1,0 +1,31 @@
+---
+title: "action.set | Template Builder"
+date: "2023-02-10T09:15:32.373957"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+# action.set
+
+Sets the value from `payload` in the data in the `data` property.
+
+[Learn more about working with data](/docs-new/template-builder/operations/work-with-data).
+
+For example, let's say you want to add shortcuts for the [field.radio-group](/docs-new/template-builder/reference/field.radio-group) option. You need the shortcut to perform the same action as the selected option, which is to set the specified value in the data. To set this action, use `action.set`.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/4YfJWA7y3tz3LC">View example</Button>
+
+As another example, you can use this component to count the number of clicks on an option and write the value in the output data. When the page is refreshed, set the value to 0.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/IN4-Mm2I3tz3Rt">View example</Button>
+
+## Component properties {#properties}
+
+**Name** | **Type** | **Description**
+----- | ----- | -----
+`type`<span style="color: red">\*</span> | "action.set" | Set component type.
+`data` | _writable_ | Data with values that will be processed or changed.
+`payload` | _any_ | The value to write to the data.

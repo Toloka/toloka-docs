@@ -1,0 +1,49 @@
+---
+title: "MessageThreadCursor | Toloka-Kit"
+date: "2023-02-07T15:41:53.563530"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# MessageThreadCursor
+`toloka.streaming.cursor.MessageThreadCursor` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/streaming/cursor.py#L403)
+
+```python
+MessageThreadCursor(
+    self,
+    toloka_client: Union[TolokaClient, AsyncTolokaClient],
+    folder: Union[str, Folder, List[Union[str, Folder]], None] = None,
+    folder_ne: Union[str, Folder, List[Union[str, Folder]], None] = None,
+    id_lt: Optional[str] = None,
+    id_lte: Optional[str] = None,
+    id_gt: Optional[str] = None,
+    id_gte: Optional[str] = None,
+    created_lt: Optional[datetime] = None,
+    created_lte: Optional[datetime] = None,
+    created_gt: Optional[datetime] = None,
+    created_gte: Optional[datetime] = None
+)
+```
+
+Iterator over messages by create time.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`toloka_client`|**Union\[[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient), [AsyncTolokaClient](/docs-new/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient)\]**|<p>TolokaClient object that is being used to search messages.</p>
+`request`|**[MessageThreadSearchRequest](/docs-new/toloka-kit/reference/toloka.client.search_requests.MessageThreadSearchRequest)**|<p>Base request to search messages.</p>
+
+**Examples:**
+
+Iterate over all messages.
+
+```python
+it = MessageThreadCursor(toloka_client=toloka_client)
+all_messages = list(it)
+# ... new messages could appear ...
+new_messages = list(it)  # Contains only new messages, appeared since the previous call.
+```

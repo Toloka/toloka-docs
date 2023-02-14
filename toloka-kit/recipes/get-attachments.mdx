@@ -1,0 +1,74 @@
+---
+title: "Get list of files in responses | Toloka-Kit"
+date: "2023-02-07T15:40:37.189628"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import GetAttachments from './subcomponents/get_attachments.mdx'
+
+# Get list of files in responses
+
+_List all the files attached to the Toloker responses in a pool._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. List attachments {#step-three}
+
+[Find out](/docs-new/toloka-kit/recipes/get-pools) the ID of the pools for which you want to get all the files attached to the Toloker responses. Then iterate through all the attachments calling the `get_attachments()` method.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      for attachment in toloka_client.<Term term="get_attachments"><GetAttachments/></Term>(pool_id='1085757'):
+      <br/>    print(attachment.id, attachment.name)
+    </HighlightChildren>
+  }
+  textToCopy={`for attachment in toloka_client.get_attachments(pool_id='1085757'):
+    print(attachment.id, attachment.name)`}
+/>
+
+You should get an output that contains the IDs of the attachments and file names. It will look like this.
+
+```bash
+fr.5867be74-249b-4264-9ed0-aa5d4c201846 gx6864-almost-blue-1.jpg
+fr.c548ebeb-dd92-4b2b-8113-4a69af1471ba nike_104090949.png
+fr.cd9cdda5-4af6-4be9-b351-678b2b4e189f 37540601-sneaker-search.jpg
+```
+
+## Complete code: Get list of files in responses {#complete-code}
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+for attachment in toloka_client.get_attachments(pool_id='1085757'):
+    print(attachment.id, attachment.name)
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_attachments()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_attachments) method_
+
+</Note>
+
+## See also {#see-also}
+
+- [How does Toloka work?](https://toloka.ai/en/docs/guide/concepts/overview)
+- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [Get list of pools](/docs-new/toloka-kit/recipes/get-pools)
+- [Toloka API: Get list of files](https://toloka.ai/docs/api/api-reference/#get-/attachments)

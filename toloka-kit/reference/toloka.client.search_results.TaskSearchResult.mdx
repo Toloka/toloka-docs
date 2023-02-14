@@ -1,0 +1,30 @@
+---
+title: "TaskSearchResult | Toloka-Kit"
+date: "2023-02-07T15:41:58.474269"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# TaskSearchResult
+`toloka.client.search_results.TaskSearchResult`
+
+```python
+TaskSearchResult(
+    self,
+    *,
+    items: Optional[List[Task]] = None,
+    has_more: Optional[bool] = None
+)
+```
+
+The result of searching tasks.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`items`|**Optional\[List\[[Task](/docs-new/toloka-kit/reference/toloka.client.task.Task)\]\]**|<p>A list with found tasks.</p>
+`has_more`|**Optional\[bool\]**|<p>A flag showing whether there are more matching tasks.</p> <ul> <li>`True` — There are more matching tasks, not included in `items` due to the limit set in the search request.</li> <li>`False` — `items` contains all matching tasks.</li> </ul>

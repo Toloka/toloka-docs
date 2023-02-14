@@ -1,0 +1,21 @@
+In this example, the specification will contain the `verdict` field with the **number** type and acceptable values `0` and `1`.
+
+  ```json
+  {
+"type": "field.radio-group",
+"options": [
+  {
+    "label": "Yes",
+    "value": 1
+  },
+  {
+    "label": "No",
+    "value": 0
+  }
+],
+"data": {
+  "type": "data.output",
+  "path": "verdict"
+}
+  }
+  ```

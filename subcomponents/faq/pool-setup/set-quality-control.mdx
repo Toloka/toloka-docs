@@ -1,0 +1,15 @@
+<Cut title="How do I set quality control in a pool correctly?">
+
+The settings for [quality control](https://toloka.ai/en/docs/glossary#quality-control) rules depend on the type of tasks. General recommendations:
+
+- Always use one or more ways to control quality of answers.
+
+- Counting [fast responses](https://toloka.ai/en/docs/guide/concepts/quick-answers) makes sense for most tasks.
+
+- If the Toloker has to choose between options (for example, by selecting checkboxes), check the answers using [majority vote](https://toloka.ai/en/docs/guide/concepts/mvote) or [control tasks](https://toloka.ai/en/docs/guide/concepts/goldenset).
+
+- If the Toloker has to provide a response as a text or link or upload a photo, the best way to control quality is by [reviewing assignments](https://toloka.ai/en/docs/guide/concepts/accept). You can outsource task acceptance to Tolokers. Create a task with a question (for example, “Is this phrase translated correctly?”) and possible responses (for example, “yes”/“no”). Set up [overlap](https://toloka.ai/en/docs/guide/concepts/dynamic-overlap) and [majority vote](https://toloka.ai/en/docs/guide/concepts/mvote) check.
+
+- If a task is more like an opinion poll (for example, choosing nice pictures from a set), [majority vote](https://toloka.ai/en/docs/glossary#majority-vote) is not a good way to control quality. Make [control tasks](https://toloka.ai/en/docs/glossary#control-task) with artificial examples where the choice is evident.
+
+</Cut>

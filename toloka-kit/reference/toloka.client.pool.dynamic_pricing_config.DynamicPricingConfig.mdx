@@ -1,0 +1,34 @@
+---
+title: "DynamicPricingConfig | Toloka-Kit"
+date: "2023-02-07T15:42:06.676685"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# DynamicPricingConfig
+`toloka.client.pool.dynamic_pricing_config.DynamicPricingConfig` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/pool/dynamic_pricing_config.py#L9)
+
+```python
+DynamicPricingConfig(
+    self,
+    type: Union[Type, str, None] = None,
+    skill_id: Optional[str] = None,
+    intervals: Optional[List[Interval]] = None
+)
+```
+
+The dynamic pricing settings.
+
+A price per task suite can be variable depending on a Toloker's skill.
+If a Toloker is not covered by dynamic pricing settings then the default price is used. It is set in the `reward_per_assignment` pool parameter.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`type`|**Optional\[[Type](/docs-new/toloka-kit/reference/toloka.client.pool.dynamic_pricing_config.DynamicPricingConfig.Type)\]**|<p>The dynamic pricing type. Only `SKILL` type is supported now.</p>
+`skill_id`|**Optional\[str\]**|<p>The ID of the skill that dynamic pricing is based on.</p>
+`intervals`|**Optional\[List\[[Interval](/docs-new/toloka-kit/reference/toloka.client.pool.dynamic_pricing_config.DynamicPricingConfig.Interval)\]\]**|<p>A list of skill intervals and prices. The intervals must not overlap.</p>

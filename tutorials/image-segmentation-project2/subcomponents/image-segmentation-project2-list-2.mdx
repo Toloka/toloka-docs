@@ -1,0 +1,37 @@
+1. In **Task interface**, leave the **HTML** block unchanged.
+
+1. Edit the **CSS** block:
+
+    1. Set up the area selection tools. This template uses [Editor for image area selection](https://toloka.ai/en/docs/guide/concepts/t-components/image-annotation). It features rectangle and polygon tools (by default).
+
+        To set up rectangle selection, replace the code in the **CSS** block with the following:
+
+        ```css
+        .image-annotation-editor__shape-polygon {
+            display: none;
+        }
+        ```
+
+    1. Enter the code to adjust the interface height to the image size:
+
+        ```css
+        .image-annotation-editor__annotation-layer {
+            height: max-content;
+        }
+        ```
+
+    1. **(optional)** You can ask Tolokers to enter an annotation for the selected area or select one from a list. To do this, add an interface element in the **JS** block. For example, a text field or drop-down list.
+
+        Learn more about [annotation](https://toloka.ai/en/docs/guide/concepts/t-components/image-annotation#annotation).
+
+1. Click the <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425176321/1675425176321_original_svg.svg" alt="" /> **Preview task** button to view the task.
+
+    <Note mode="note" title="Note">
+
+    The project preview shows one task with standard data. You can define the number of tasks to show on the page later.
+
+    </Note>
+
+1. In the window that opens, check if the task options work correctly. In the lower-right corner, click **Submit**.
+
+1. Exit preview mode. In the lower-left corner, click **Exit**. If there were errors when testing, check the code blocks that you entered.

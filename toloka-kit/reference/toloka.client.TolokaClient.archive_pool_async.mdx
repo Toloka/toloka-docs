@@ -1,0 +1,44 @@
+---
+title: "archive_pool_async | Toloka-Kit"
+date: "2023-02-07T15:42:17.788468"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# archive_pool_async
+`toloka.client.TolokaClient.archive_pool_async` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/__init__.py#L1305)
+
+```python
+archive_pool_async(self, pool_id: str)
+```
+
+Archives a pool. Sends an asynchronous request to Toloka.
+
+Only closed pools can be archived.
+
+You can't open archived pools, but you can [clone](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.clone_pool) them if needed.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`pool_id`|**str**|<p>The ID of the pool to be archived.</p>
+
+* **Returns:**
+
+  An object to track the progress of the operation. If the pool is already archived then `None` is returned.
+
+* **Return type:**
+
+  Optional\[[PoolArchiveOperation](/docs-new/toloka-kit/reference/toloka.client.operations.PoolArchiveOperation)\]
+
+**Examples:**
+
+```python
+closed_pool = next(toloka_client.get_pools(status='CLOSED'))
+archive_op = toloka_client.archive_pool_async(pool_id=closed_pool.id)
+toloka_client.wait_operation(archive_op)
+```

@@ -1,0 +1,136 @@
+---
+title: "Inserting links | Template Builder"
+date: "2023-02-10T09:15:36.643665"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactSupport from '../subcomponents/contact-support.mdx'
+
+# Inserting links
+
+In this section, you will learn how to add a link or a search engine query and how to check whether a Toloker has clicked on them. Links can be opened when a certain event occurs. You can also group links together and set shortcuts for them to allow Tolokers to work faster.
+
+## Insert a normal link {#view-link}
+
+If you want to insert a link without additional formatting, use the [view.link](/docs-new/template-builder/reference/view.link) component. The link is underlined and changes color after clicking on it.
+
+```json
+{
+  "type": "view.link",
+  "content": "Link text",
+  "url": "url"
+}
+```
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/CmLK2rOB3vw46E">View example</Button>
+
+## Create a search query {#helper-search-query}
+
+For some tasks, you may need to create a link that opens the entered query in the search engine you selected. To do this, use the [helper.search-query](/docs-new/template-builder/reference/helper.search-query) component. You can see the list of available search engines in the `engine` property.
+
+```json
+{
+  "type": "view.link",
+  "content": "Link text",
+  "url": {
+    "type": "helper.search-query",
+    "query": "search query",
+    "engine": "google"
+  }
+}
+```
+
+<Note mode="tip" title="Tip">
+
+If you need to insert links to several search engines with the same query, then you can take out `query` in the input data, and refer to them in the code via `"path": "query"` in order not to duplicate the request.
+
+</Note>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/Vv1wqNP13vw4gc">View example</Button>
+
+If the search engine you need is not available in the `engine` property, leave this field empty and enter the search query in `query` using the [helper.join](/docs-new/template-builder/reference/helper.join) component.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/sQLrwr193ttF3h">View example</Button>
+
+## Group links together {#view-link-group}
+
+To group multiple links together, use the [view.link-group](/docs-new/template-builder/reference/view.link-group) component. Links will be underlined. For emphasis, you can add a border around one of the links and remove the underline. To do this, set the `theme` property to `primary` for this link.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/l6Y5VpjQ3vvKhM">View example</Button>
+
+## Create a button link {#action-open-link}
+
+You can create a link in the form of a button using the [action.open-link](/docs-new/template-builder/reference/action.open-link) component. The button is added using the [view.action-button](/docs-new/template-builder/reference/view.action-button) component. In the `payload` property, specify the address or the [helper.search-query](/docs-new/template-builder/reference/helper.search-query) component with the search query.
+
+```json
+{
+  "type": "view.action-button",
+  "label": "Text on the button",
+  "action": {
+    "type": "action.open-link",
+    "payload": "url"
+  }
+}
+```
+
+<Note mode="tip" title="Tip">
+
+To make sure the button looks nice and doesn't stretch to the entire screen width, set [view.action-button](/docs-new/template-builder/reference/view.action-button) as an element of the `items` array for the [view.list](/docs-new/template-builder/reference/view.list) component.
+
+</Note>
+
+When adding multiple buttons, you can arrange them horizontally (instead of vertically) in the `direction` property.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/hX0vfOLQ3vw5Xd">View example</Button>
+
+To assign a [shortcut](/docs-new/template-builder/best-practices/hotkeys) to a button, use the [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys) component.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/XYwqil9X3xP6Jt">View example</Button>
+
+## Check if the link was clicked on {#condition-link-opened}
+
+To check if the Toloker clicked on the link, use the [condition.link-opened](/docs-new/template-builder/reference/condition.link-opened) component by specifying it in the `validation` property.
+
+Remember that the condition only works if a Toloker clicks the link in the interface. If the link is opened via the address bar, the condition doesn't work.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/6JZC_mNn3vw6Dp">View example</Button>
+
+## Add keyboard shortcuts {#hotkeys}
+
+You can add keyboard shortcuts for links. Shortcuts allow Tolokers to open links by pressing a keyboard key, which helps them work faster.
+
+To add a shortcut, use the [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys) plugin. Select a key and assign it to open the link, using the [action.open-link](/docs-new/template-builder/reference/action.open-link) component.
+
+```json
+{
+  "type": "plugin.hotkeys",
+  "y": {
+    "type": "action.open-link",
+    "payload": "url"
+  }
+}
+```
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/LNClzO8H3vw76R">View example</Button>
+
+Learn more about shortcuts in [Configure keyboard shortcuts](/docs-new/template-builder/best-practices/hotkeys).
+
+## Use event-driven links {#plugin-trigger}
+
+You can set a link to open when a certain event occurs. For example, when a Toloker chooses an option, this can open a specific search query. To do this, use the [plugin.trigger](/docs-new/template-builder/reference/plugin.trigger) plugin.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/ALiH0zIV3ttF8Z">View example</Button>
+
+## Reuse the code {#vars}
+
+Just like any piece of the code, the code for opening the link and its address can be reused using the `{"$ref": "path.to.element"}` structure. This is useful when adding keyboard shortcuts. To avoid duplicating the code for the link display and for [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys), just enter the code once in `vars`.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/UwBOfm8d3vw7uu">View example</Button>
+
+Learn more about reusing the code in [Reuse code](/docs-new/template-builder/best-practices/reuse).
+
+<ContactSupport/>

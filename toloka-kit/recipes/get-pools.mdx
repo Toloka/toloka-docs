@@ -1,0 +1,73 @@
+---
+title: "Get list of pools | Toloka-Kit"
+date: "2023-02-07T15:40:37.026737"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import GetPools from './subcomponents/get_pools.mdx'
+
+# Get list of pools
+
+_Get the list of the pools with the `CLOSED` status in your project._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. List pools {#step-three}
+
+[Find out](/docs-new/toloka-kit/recipes/get-projects) the ID of the project for which you want to get all the pools with the `CLOSED` status. Then iterate through all the pools calling the `get_pools()` method.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      for pool in toloka_client.<Term term="get_pools"><GetPools/></Term>(project_id='118252', status='CLOSED'):
+      <br/>    print(pool.id, pool.status, pool.private_name)
+    </HighlightChildren>
+  }
+  textToCopy={`for pool in toloka_client.get_pools(project_id='118252', status='CLOSED'):
+    print(pool.id, pool.status, pool.private_name)`}
+/>
+
+You should get an output that contains the IDs of the pools, their statuses, and private names. It will look like this.
+
+```bash
+36502086 Status.CLOSED Pool 1
+36756115 Status.CLOSED Pool 2
+```
+
+## Complete code: Get list of pools {#complete-code}
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+for pool in toloka_client.get_pools(project_id='118252', status='CLOSED'):
+    print(pool.id, pool.status, pool.private_name)
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_pools()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_pools) method_
+
+</Note>
+
+## See also {#see-also}
+
+- [How does Toloka work?](https://toloka.ai/en/docs/guide/concepts/overview)
+- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [Get list of projects](/docs-new/toloka-kit/recipes/get-projects)
+- [Toloka API: Get list of pools](https://toloka.ai/docs/api/api-reference/#get-/pools)

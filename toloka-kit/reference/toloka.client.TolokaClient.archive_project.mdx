@@ -1,0 +1,41 @@
+---
+title: "archive_project | Toloka-Kit"
+date: "2023-02-07T15:41:52.532073"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# archive_project
+`toloka.client.TolokaClient.archive_project` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/__init__.py#L1030)
+
+```python
+archive_project(self, project_id: str)
+```
+
+Sends project to archive
+
+Use it when you have no need this project anymore. To perform the operation, all pools in the project must be archived.
+The archived project is not deleted. You can access it when you will need it.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`project_id`|**str**|<p>ID of project that will be archived.</p>
+
+* **Returns:**
+
+  Object with updated status.
+
+* **Return type:**
+
+  [Project](/docs-new/toloka-kit/reference/toloka.client.project.Project)
+
+**Examples:**
+
+```python
+toloka_client.archive_project(project_id='1')
+```
