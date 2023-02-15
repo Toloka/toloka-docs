@@ -1,0 +1,273 @@
+---
+title: "Submitting the form | Tolokers documentation"
+date: "2023-02-15T11:48:14.891618"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tolokersMenu"
+---
+
+import SelfEmployedWaitForModerate from './subcomponents/self-employed/about/id-self-employed/wait-for-moderate.mdx'
+
+# Submitting the form
+
+1. Prepare the following documents:
+   - Your passport with a photo or scan of the pages with your photo and residency information.
+   - SNILS (social security number): we need the number.
+   - INN (Taxpayer ID): we need the number and a supporting document. It could be:
+      - A scan of the front side.
+      - A photo of the front side.
+      - A screenshot from the government services site (GosuslugI) that shows your full name, date of birth, and INN number.
+
+1. Open the **My profile** tab.
+1. Click {% if platform == "web" %}**Fill out the form**{% elsif platform == "android" %}**Fill out the form**{% elsif platform == "ios"%} **Fill out the form**{% endif %}.
+
+   If you don't see this button in your profile, most likely you have registered only recently and you haven't done enough paid tasks. The form automatically opens to users when they earn $1. You can wait a little for access to open automatically or [contact support](/docs-new/tolokers/troubleshooting/troubleshooting#self-employed) so that we grant access to the form to you personally.
+
+1. Fill out the form and attach the photos of your documents.
+
+   <Cut title="How do I enter an address?">
+
+   Select your region:
+
+   <Cut title="Moscow">
+
+   Enter `Moscow` in the **** field.
+
+   If you live in Moscow, specify the street, building number, apartment number, and postal code.
+
+   <Cut title="Example">
+
+   **** Moscow
+   **** Veshnih Vod str.
+   **** 8
+   **** 1
+   **** 282
+   **** 129338
+
+   </Cut>
+
+   If you live in the town of Zelenograd, Shcherbinka, Moskovsky, or Troitsk, enter the town and then the street, house number, and postal code.
+
+   <Cut title="Example">
+
+   **** Moscow
+   {% if platform == "web" %}****{% elsif platform == "android" %}****{% elsif platform == "ios" %}****{% endif %} Troitsk
+   **** Oktyabrsky Ave.
+   **** 13
+   **** 103
+   **** 142190
+
+   </Cut>
+
+   If you live in a village or settlement within Moscow (except New Moscow), select it as a locality.
+
+   <Cut title="Example">
+
+   **** Moscow
+   **** Rublevo
+   **** Sovetskaya str.
+   **** 11
+   **** 3
+   **** 121500
+
+   </Cut>
+
+   If you live in New Moscow - Novomoskovsky, or Troitsky administrative district (except the towns of Troitsk and Shcherbinka), specify the settlement as a district and then select a locality.
+
+   <Cut title="Example">
+
+   **** Moscow city
+   **** Moskovsky s.
+   **** Rumyantsevo v.
+   **** Verkhnyaya str.
+   **** 1
+   **** 53
+   **** 108811
+
+   </Cut>
+
+   </Cut>
+
+   <Cut title="Saint Petersburg">
+
+   Enter `Saint Petersburg` in the **** field.
+
+   If you live in Saint Petersburg, specify the street, house number, and postal code.
+
+   <Cut title="Example">
+
+   **** St. Petersburg
+   **** 3-Ya Liniya 1-Y Poloviny str.
+   **** 69
+   **** 3
+   **** 197341
+
+   </Cut>
+
+   If you live in the town of Zelenogorsk, Kolpino, Krasnoye Selo, Kronstadt, Lomonosov, Pavlovsk, Peterhof, Pushkin, or Sestroretsk, enter the town and then the street, house number, and postal code.
+
+   <Cut title="Example">
+
+   **** St. Petersburg
+   {% if platform == "web" %}****{% elsif platform == "android" %}****{% elsif platform == "ios" %}**{{ mobile_ios.city }}**{% endif %} Krasnoe Selo
+   **** Lenin Ave.
+   **** 61
+   **** 1
+   **** 32
+   **** 198320
+
+   </Cut>
+
+   If you live in a village or settlement within Saint Petersburg, specify it as a locality.
+
+   <Cut title="Example">
+
+   **** St. Petersburg
+   **** Shushary
+   **** Pushkinskaya Str.
+   **** 10
+   **** 1
+   **** 97
+   **** 196626
+
+   </Cut>
+
+   </Cut>
+
+   <Cut title="Sevastopol">
+
+   Enter `Sevastopol` in the **** field.
+
+   If you live in Sevastopol (including Balaklava), specify the street, house number, and postal code.
+
+   <Cut title="Example">
+
+   **** Sevastopol
+   **** Spusk Vodopyanova.
+   **** 3
+   **** 299002
+
+   </Cut>
+
+   If you live in Inkerman, specify the city and then the street, house number, and postal code.
+
+   <Cut title="Example">
+
+   **** Sevastopol
+   {% if platform == "web" %}****{% elsif platform == "android" %}****{% elsif platform== "ios" %}****{% endif %} Inkerman
+   **** Karyernaya str.
+   **** 42
+   **** 198320
+
+   </Cut>
+
+   If you live in a village or settlement within Sevastopol, specify it as a locality.
+
+   <Cut title="Example">
+
+   **** Sevastopol
+   **** Kacha
+   **** Aviatorov str.
+   **** 22
+   **** 42
+   **** 299804
+
+   </Cut>
+
+   </Cut>
+
+   <Cut title="Other regions">
+
+   In the  field, specify a subject of the Russian Federation: republic, krai, oblast (region), or district. The way to fill in other fields depends on a specific address.
+
+   If you live in a regional, republican, or territorial center or a town/city of [regional](https://ru.wikipedia.org/wiki/Категории_городов_(Россия)#Города_областного_значения_(подчинения)), [republican](https://ru.wikipedia.org/wiki/Категории_городов_(Россия)#Города_республиканского_значения_(подчинения)), [territorial](https://ru.wikipedia.org/wiki/Категории_городов_(Россия)#Города_краевого_значения_(подчинения)), or [district](https://ru.wikipedia.org/wiki/Категории_городов_(Россия)#Города_окружного_значения_(подчинения)) significance, select your city/town and street and then enter the house number and postal code.
+
+   <Cut title="Example of an administrative center">
+
+   **** Primorsky Krai.
+   {% if platform == "web" %}****{% elsif platform == "android" %}****{% elsif platform == "ios" %}****{% endif %} Vladivostok city
+   **** Fontannaya Str.
+   **** 47
+   **** 15
+   **** 690091
+
+   </Cut>
+
+   <Cut title="Example of a city of republican significance">
+
+   **** Tatarstan Rep.
+   {% if platform == "web" %}**{{ ui_core.profile_editor__address__label__city }}**{% elsif platform == "android" %}****{% elsif platform == "ios" %}****{% endif %} Naberezhnye Chelny
+   ****Romantikov Boul.
+   **** 47
+   **** 39
+   **** 423810
+
+   </Cut>
+
+   Otherwise, select a district and specify your city/town or locality, and then enter the street, house number, and postal code.
+
+   <Cut title="Example of a city">
+
+   **** Tver region
+   **** Konakovo dist.
+   {% if platform == "web" %}****{% elsif platform == "android" %}****{% elsif platform == "ios" %}****{% endif %} Konakovo
+   **** Energetikov str.
+   **** 7
+   **** 53
+   **** 171250
+
+   </Cut>
+
+   <Cut title="Example of a locality">
+
+   ****Krasnodar Krai.
+   **** Kurgan dist.
+   **** Vozdvizhenskaya stanitsa.
+   **** Gogol str.
+   **** 48
+   **** 352405
+
+   </Cut>
+
+   If you live in a village within a town, select a town and then a locality.
+
+   <Cut title="Example">
+
+   **** Kaliningrad region
+   {% if platform == "web" %}****{% elsif platform == "android" %}****{% elsif platform== "ios" %}****{% endif %} Kaliningrad
+   **** Pribrezhny
+   **** Stroitelnaya str.
+   **** 9A
+   **** 4
+   **** 236020
+
+   </Cut>
+
+   </Cut>
+
+   </Cut>
+
+   <Cut title="Where can I find out the postal code?">
+
+   Try to find your postal code by entering your address on [Yandex](https://yandex.ru/search/?lr=213&text=индекс%20по%20адресу) or the [Russian Post website](https://www.pochta.ru/post-index).
+
+   </Cut>
+
+   <Cut title="How to enter the SNILS (social security number)">
+
+   Enter your SNILS in the format `XXX-XXX-XXX XX`. Insert a space before the last two digits.
+
+   </Cut>
+
+1. Click **Submit data** and confirm sending the data for moderation.
+
+## What's next {#concept_rjw_pgp_bmb}
+
+- <SelfEmployedWaitForModerate/>
+
+- [Confirm the status of self-employed](/docs-new/tolokers/accept-status).
+- You can submit the form to Toloka and register in the [My Taxes](https://npd.nalog.ru/app/) system at the same time. You don't need to wait until you get self-employed status.
+
+<Button themeColor="light" view="default" size="l" type="link" url="../troubleshooting/troubleshooting#self-employed">Contact support</Button>

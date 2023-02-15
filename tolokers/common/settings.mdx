@@ -1,0 +1,112 @@
+---
+title: "Required settings | Tolokers documentation"
+date: "2023-02-15T11:47:58.039619"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tolokersMenu"
+---
+
+# Required settings
+
+- Choose the [internet usage mode](#internet).
+
+- Turn on {% if platform == "android" %}[push notifications](#notifications-android){% elsif platform == "ios" %}[push notifications](#notifications-ios){% endif %} to instantly learn about events.
+
+{% if platform == "android" %}
+- Download a [region map](#map) if you are planning to complete field tasks while offline.
+   {% endif %}
+
+- {% if platform == "android" %}Turn on [geotags in the camera settings](#camera){% elsif platform == "ios" %}[Turn on geo location display](#camera-ios){% endif %} if you plan to complete field tasks.
+
+{% if platform == "android" %}
+- Install the [app to add multiple photos](#google).
+   {% endif %}
+
+## Internet {#internet}
+
+Choose the internet usage mode depending on the tasks you are planning to complete:
+1. {% if platform == "android" %}Open the menu by tapping <Image withBackground imageId="1676448834501" alt="" /> at the top left of the screen.{% elsif platform == "ios" %} Open the **More → Settings**.{% endif %}
+   {% if platform == "android" %} page.
+1. Select **Settings**.
+   {% endif %}
+1. Set the type of internet connection depending on the task type:
+   #### Field tasks
+
+   You can complete field tasks without permanent internet connection. You only need the internet to choose and reserve tasks and send responses.
+
+   - Wi-Fi only — Turn on **Submit over Wi-Fi only**.
+
+   This option saves cellular data. Your responses are stored on your device and are submitted as soon as Wi-Fi is available.
+
+   <Note mode="note" title="Note">
+
+   You need to make sure your responses are submitted before the task time expires.
+
+   </Note>
+
+   - Wi-Fi or mobile network — Turn off **Submit over Wi-Fi only**.
+
+   This option means you can send responses immediately after you complete tasks, as soon as you are connected to the internet.
+
+   #### Non-field tasks
+
+   Non-field tasks require a constant internet connection.
+
+   - Wi-Fi only — Turn on **Submit over Wi-Fi only**.
+
+   - Wi-Fi or mobile network — Turn off **Submit over Wi-Fi only**.
+
+{% if platfrom == "android" %}
+## Notifications {#notifications-android}
+
+Choose which notifications you want to receive and how you want to receive them:
+
+1. Open the menu by tapping <Image withBackground imageId="1676448834501" alt="" /> at the top left of the screen.
+1. Select **Settings**.
+1. Go to the **Notification settings** block.
+1. Turn on the notification and tap **Save**.
+   {% endif %}
+   {% if platform == "ios" %}
+## Notifications {#notifications-ios}
+
+Choose which notifications you want to receive and how you want to receive them:
+1. Tap **More → Notification settings**.
+1. Choose a notification and enable the desired option.
+   {% endif%}
+
+{% if platform == "android" %}
+## Area map {#map}
+
+To use the map without an internet connection, download a map of the area to your device.
+1. Open the menu by tapping <Image withBackground imageId="1676448834501" alt="" /> on the left.
+1. Select **Settings**.
+1. Turn on the **Download offline maps** option.
+1. Select Camera app on your device.
+1. Tap <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1676449125416/1676449125416_original_svg.svg" alt="" /> to open the settings.
+1. Enable **GPS location info**.
+
+   <Note mode="note" title="Note">
+
+   Allow access to your location as the system prompts you to.
+
+   </Note>
+
+If photos in responses are sent too slowly, choose a lower resolution in the camera settings, but not less than 3 megapixels.
+{% endif %}
+{% if platform == "ios" %}
+## Camera {#camera-ios}
+
+Many field tasks require you to photograph something (for example, a store's sign). All photos must contain the location information. Otherwise, the requester will reject your response. To save your location in photos:
+1. Go to the device **Settings**.
+1. Go to the **Geolocation services** block and allow geolocation access for the **Camera** app.
+   {% endif %}
+   {% if platform == "android" %}
+## Gallery {#google}
+
+In some field tasks, you need to attach several photos at once (for example, the front of a building and the sign). If **Gallery** doesn't support choosing multiple photos, install the  app.
+
+{% endif %}
+
+<Button themeColor="light" view="default" size="l" type="link" url="/docs-new/tolokers/troubleshooting/troubleshooting#not_working_properly">Contact support</Button>

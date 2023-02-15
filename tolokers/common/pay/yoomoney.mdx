@@ -1,0 +1,173 @@
+---
+title: "YooMoney | Tolokers documentation"
+date: "2023-02-15T11:48:11.692863"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tolokersMenu"
+---
+
+import PopupInfoYoomoneyConditions from './subcomponents/pay/popup-info/id-popup-info/yoomoney-conditions.mdx'
+import Check from './subcomponents/pay/about/check.mdx'
+import YoomoneyList1 from './yoomoney/subcomponents/yoomoney-list-1.mdx'
+
+# YooMoney
+
+#### Benefits of YooMoney
+
+YooMoney is a payment system that Toloka annotators can use to withdraw money. In YooMoney, you can easily create a wallet and identify it.
+
+<Note mode="restriction" title="Alert">
+
+Money withdrawal via YooMoney is only available for citizens of the Russian Federation who have confirmed their [self-employed](/docs-new/tolokers/self-employed/about) status and who have added Toloka as a partner in the My Taxes system.
+
+</Note>
+
+#### Terms
+
+{% if platform == "web" %}
+<PopupInfoYoomoneyConditions/>
+{% endif %}
+
+{% if platform == "ios" or platform == "android"  %}
+# |
+|| Area of operation | Russia ||
+|| Fee |
+
+<Cut title="From 0.1 to 3.1%">
+
+#### Fees
+
+- From Toloka — 0.1% of the amount.
+- To a bank account — 3% of the amount + 15 rubles.
+- To cards — 3% of the amount + 45 rubles.
+
+Learn more on the [YooMoney website]()
+
+</Cut>
+
+||
+|| Minimum withdrawal amount |
+
+<Cut title="From $0.02 to $1">
+
+$0.02 for one withdrawal a week. Subsequent withdrawals within a week — $1.
+
+</Cut>
+
+||
+|| Withdrawal method |
+- Transfer it to a [bank card](https://yoomoney.ru/page?id=536232), [bank account](https://yoomoney.ru/page?id=536236), or e-wallet ([WebMoney](https://yoomoney.ru/page?id=536240#to-eps__wm), [Qiwi](https://yoomoney.ru/page?id=536240#to-eps__qiwi)).
+- Withdraw it via [faster payment systems](https://yoomoney.ru/page?id=536244).
+- Use it for online purchases and to pay [bills](https://yoomoney.ru/page?id=535908#charges__bills) and [fines](https://yoomoney.ru/page?id=535908#charges__fines).
+- Sign up for a [plastic](https://yoomoney.ru/page?id=536272) or [virtual](https://yoomoney.ru/page?id=536280) MasterCard card to make purchases or withdraw money.
+- [Contactless payments](https://yoomoney.ru/page?id=536060).||
+   |#
+   {% endif %}
+
+## How to connect YooMoney {#how-to-use}
+
+<Note mode="warning" title="Warning">
+
+To withdraw money from Toloka, you need to have an [identified](#identification-wallet) YooMoney wallet.
+
+</Note>
+
+### Step 1. Registration {#register}
+
+1. Open the [YooMoney](https://yoomoney.ru/?lang=en) website.
+1. Click **Create a wallet**.
+1. Enter your phone number and click **Get an SMS code**. Enter the code from the SMS.
+1. Enter your email and click **Get an email with the code**. Enter the code from the email.
+1. Come up with a strong password and confirm it. Click **Done**.
+1. Great, now you're registered in YooMoney.
+
+### Step 2. Complete identification {#identification-wallet}
+
+1. Open the [YooMoney](https://yoomoney.ru/?lang=en) website and log in to your account.
+1. Click on your profile picture in the upper-right corner.
+
+   Go to the [identification](https://yoomoney.ru/id?lang=en) page → click **Complete identification**.
+
+1. Select the [identification method](https://yoomoney.ru/id/methods?lang=en):
+   - Online via SberID or MTS.
+   - Offline in the company's office of your choice.
+   - By sending certified documents by mail.
+
+   <Note mode="note" title="Note">
+
+   The fastest way to complete identification is with SberID or MTS. It takes just a few minutes.
+
+   </Note>
+
+1. Complete identification using the method you selected.
+
+   <Tabs tabs={[
+  { title: '', value: <YoomoneyList1/> },
+]}/>
+
+1. Wait for the confirmation of successful identification.
+
+1. Done! Your wallet is identified.
+
+### Step 3. Link a bank card {#add-card}
+
+Link your bank card to withdraw money to it:
+
+1. Open the [YooMoney](https://yoomoney.ru/?lang=en) website and log in to your account.
+1. Click on your profile picture in the upper-right corner. Select **Cards → Link a card of another bank**.
+1. Fill in the data and click **Continue**. 1 ruble will be deposited to your wallet with a fee of 0.01 rubles.
+1. Enter the confirmation code from the SMS.
+1. Done! You've linked the card.
+
+## How to withdraw money from Toloka {#how-to-withdraw}
+
+<Note mode="warning" title="Warning">
+
+There are three types of wallets:
+- Anonymous — issued automatically after registration.
+- Registered — issued to the citizens of the Russian Federation after filling out an online form.
+- Identified — issued after the confirmation of full passport data. This is the only type of wallet you can use to withdraw money from Toloka.
+   Before withdrawal, make sure that your wallet is [identified](#identification-wallet).
+
+</Note>
+
+{% if platform == "ios" %}
+1. Open the {{ mobile_ios.profile.profile }} page.
+   {% else %}
+1. Open the [My money](https://toloka.yandex.com/profile/money) tab.
+   {% endif%}
+1. Click **Withdraw** next to the YooMoney box.
+1. Link your YooMoney wallet:
+   - Confirm that you entered your first and last name as shown in your passport.
+   - Enter your wallet number starting with 41001.
+      The wallet is linked once. After you do this, you'll be able to withdraw money in the {% if platform == 'web'%} **My money**{%elsif platform == 'android' %}**My money** {% elsif platform == 'ios' %} **My money** {% endif %} tab.
+1. Enter the required amount and click .
+1. An SMS with a code will be sent to your number. Enter it and click **Confirm**.
+1. The money will be transferred to your wallet. It usually takes a few hours or days, but sometimes longer. The maximum transfer time is 30 days. Check the status in the **Actions history** block.
+
+<Check/>
+
+## How to withdraw money from YooMoney {#withdraw-from-yoomoney}
+
+<Note mode="note" title="Note">
+
+Before withdrawing money, read about the [limits and fees](https://yoomoney.ru/page?id=536224).
+
+</Note>
+
+1. Open the [YooMoney](https://yoomoney.ru/?lang=en) website and log in to your account.
+1. Click on your profile picture in the upper-right corner → **Withdraw**.
+1. Select where you want to transfer the money to:
+   - To a bank card.
+   - To another payment system.
+   - To a personal bank account.
+   - To an individual entrepreneur's or corporate account.
+
+1. Enter the required amount and click **Continue**.
+1. Review your request. Sometimes you may need to add some data. Click **Pay**.
+1. Enter the code from the SMS.
+1. Done! The payment is sent.
+
+<Button themeColor="light" view="default" size="l" type="link" url="../troubleshooting/troubleshooting#money_withdrawal">Contact support</Button>

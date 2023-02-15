@@ -1,0 +1,214 @@
+---
+title: "Withdrawal methods | Tolokers documentation"
+date: "2023-02-15T11:48:09.747677"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tolokersMenu"
+---
+
+import AboutTable1 from './about/subcomponents/about-table-1.mdx'
+import AboutTable2 from './about/subcomponents/about-table-2.mdx'
+import AboutTable3 from './about/subcomponents/about-table-3.mdx'
+import AboutTable4 from './about/subcomponents/about-table-4.mdx'
+import AboutTable5 from './about/subcomponents/about-table-5.mdx'
+import AboutTable6 from './about/subcomponents/about-table-6.mdx'
+import AboutTable7 from './about/subcomponents/about-table-7.mdx'
+import AboutTable8 from './about/subcomponents/about-table-8.mdx'
+import AboutTable9 from './about/subcomponents/about-table-9.mdx'
+import AboutTable10 from './about/subcomponents/about-table-10.mdx'
+import AboutTable11 from './about/subcomponents/about-table-11.mdx'
+import AboutTable12 from './about/subcomponents/about-table-12.mdx'
+import AboutTable13 from './about/subcomponents/about-table-13.mdx'
+import AboutTable14 from './about/subcomponents/about-table-14.mdx'
+import AboutTable15 from './about/subcomponents/about-table-15.mdx'
+import AboutTable16 from './about/subcomponents/about-table-16.mdx'
+
+# Withdrawal methods
+
+## How to withdraw money from Toloka {#how-to-withdraw}
+
+<Note mode="restriction" title="Alert">
+
+Enter your real first and last name in your account settings. Otherwise, you won't be able to withdraw money. The user's first and last name in the payment system must match their first and last name in Toloka. Otherwise, your account may be blocked.
+
+</Note>
+
+To withdraw funds from your [Toloka](http://toloka.yandex.com/) account:
+
+{% if platform == "web" or platform == "android" %}
+1. Open the [My money](https://toloka.yandex.com/profile/money) page.
+   {% elsif platform == "ios" %}
+1. Open the **Profile** page.
+   {% endif %}
+
+1. Select a payment system and click **Withdraw**.
+
+You can cancel the withdrawal request. To do this, click **Cancel request** in the **Actions history** block. If there is no button, you won't be able to cancel the transaction even through Toloka technical support.
+
+It usually takes a few hours or days, but sometimes longer. The maximum transfer time is 30 days. Check the status in the **Actions history** block.
+
+<Note mode="restriction" title="Alert">
+
+You won't be able to submit a request if you just registered or recently changed your phone number. If this is the case, your account is undergoing verification. It takes 1 day if you just registered, and 7 days if you changed your phone number.
+
+</Note>
+
+## How to choose a withdrawal method {#how-to-choose}
+
+Toloka lets you withdraw money using: PayPal, Payoneer{% if locale == "ru-com"%}, YooMoney, QIWI, or the Faster Payments System (FPS){% endif %}.
+
+You can add only one account of each type.
+
+<Note mode="warning" title="Warning">
+
+Citizens of the Russian Federation who have confirmed their self-employed status and added Toloka as a partner in the My Taxes system can only withdraw money to YooMoney and FPS.
+
+</Note>
+
+{% if platform == "web" %}
+Withdrawal method | Area of operation | Total fee | Minimum withdrawal amount | Where to transfer money next
+----- | ----- | ----- | ----- | -----
+[PayPal](/docs-new/tolokers/paypal) | <AboutTable1/>| <AboutTable2/>| <AboutTable3/>| <AboutTable4/>
+[Payoneer](/docs-new/tolokers/payoneer) | <AboutTable5/>| <AboutTable6/>| $20 | <AboutTable7/>
+[QIWI](Qiwi-wallet) | <AboutTable8/>| <AboutTable9/>| <AboutTable10/>|
+- Cash from QIWI card.
+- To bank card.
+- To an account in any bank.
+- To any wallet.
+- Cash in QIWI offices: Saint Petersburg and Kazan.<br/><br/>Learn more on the [QIWI](https://p2p.qiwi.com/) website.<br/><br/>
+[FPS](/docs-new/tolokers/sbp) | Russia | 0.11% | <AboutTable11/>| <AboutTable12/>
+{% endif %}
+
+{% if platform == "android" or platform == "ios" %}
+
+<Cut title="PayPal">
+
+##### Benefits
+
+PayPal is a fast and secure payment system.
+
+##### Terms
+
+Area of operation |
+
+<Cut title="Only certain countries">
+
+#### Regions where PayPal transfer is not allowed
+
+Iran
+Crimea
+Cuba
+Russia
+North Korea
+Syria
+Sudan
+Turkey
+Uzbekistan
+Ukraine
+
+The full list can be found on the website of the [U.S. Department of the Treasury](https://www.treasury.gov/resource-center/sanctions/Programs/Pages/Programs.aspx).
+
+</Cut>
+
+----- | -----
+Fee | <AboutTable13/>
+Minimum withdrawal amount | <AboutTable14/>
+Withdrawal method | The terms for withdrawing money to a bank account depend on the currency. Read more in the [PayPal Help Center](https://www.paypal.com/us/smarthelp/article/faq1189).
+
+</Cut>
+
+<Cut title="Payoneer">
+
+#### Benefits
+
+Payoneer is a secure, fast, and low-cost payment system.
+
+It allows users to:
+
+- Send and receive money.
+- Pay for goods and services.
+- Send payment requests.
+- Open multiple accounts in different currencies within the same account.
+
+#### Terms
+
+Area of operation |
+
+<Cut title="Almost everywhere">
+
+Works with restrictions in Russia.
+
+Available in more than 200 countries. For more information, contact the [Payoneer Support Center](https://payoneer.custhelp.com/app/home).
+
+</Cut>
+
+----- | -----
+Total fee | <AboutTable15/>
+Minimum withdrawal amount from Toloka | $20
+Where to transfer money next | <AboutTable16/>
+
+</Cut>
+
+<Note mode="restriction" title="Alert">
+
+Money withdrawal via the FPS is only available for citizens of the Russian Federation who confirmed their [self-employed](/docs-new/tolokers/self-employed/about.dita) status and added Toloka as a partner in the My Taxes system.
+
+</Note>
+
+||
+|#
+
+</Cut>
+
+</Cut>
+
+{% endif %}
+
+{% endif %}
+
+<Note mode="warning" title="Warning">
+
+Don't request withdrawal until you are sure that your account is confirmed in the payment system. Otherwise, your request may be rejected, and you will have to submit it again.
+
+</Note>
+
+## Withdrawal features {#common}
+
+<Cut title="For citizens of Uzbekistan">
+
+You can also withdraw funds from Toloka using [Payoneer](/docs-new/tolokers/payoneer). Here are some details you need to consider:
+
+You can receive payments in EUR or USD. Direct UZS withdrawal is unavailable.
+
+#### Foreign currency account
+
+- You need to open an account in EUR or USD. You can get a bank card and withdraw USD or UZS.
+- When withdrawing money from a foreign currency account, some banks may charge a fee.
+- Some banks request information about the source of the money transferred from Payoneer to a foreign currency account.
+
+#### Payoneer Mastercard
+
+- You can use this card to withdraw money at any ATM. The fee is approximately 3% (depending on the bank). You can withdraw UZS at ATMs.
+- The card will not be available immediately after registration, but you can apply for it after you have accumulated a certain amount on your account. Check the details in the [Payonner Support Center](https://payoneer-ru.custhelp.com/app/answers/topics/c/3698/session/L3RpbWUvMTYxMTIxMjU3Ny9nZW4vMTYxMTIxMjU3Ny9zaWQvZlVLbEl1ZE5UWlhYUlZLNmdmMCU3RUhwUFkxZEJFTUZjUG5FeTlSMlpoMUhNdTF4SlE4djBRRGIzQlhfWnhCWjFabEduWXZCVURwTlVPT3pzVEFTbjNoY005UmV4MFhzX1d6Vk54ZzZZMHhjSW5NejV5M3NiTXByMkElMjElMjE%3D).
+- The card is issued free of charge, but there is a service fee of $3 a month or $30 annually.
+- Delivery is free, but it can take a long time. Express delivery via DHL costs $40 and takes 3-5 days.
+
+All information is provided for informational purposes. The rates, terms, and fees may vary. Check up-to-date information in the [Payoneer Support Center](https://payoneer.custhelp.com/app/home).
+
+</Cut>
+
+<Note mode="note" title="Note">
+
+Payment and money withdrawal are regulated by the [User Agreement](https://toloka.ai/tolokers/legal/user-agreement/).
+
+The terms of payment systems are for information only.
+
+The payment system can change prices, conditions and its availability in the user's country on a unilateral basis. Users can find out about the changes on the payment system site.
+
+Toloka is not responsible for such changes or for publishing them here within a certain timeframe.
+
+</Note>
+
+<Button themeColor="light" view="default" size="l" type="link" url="../troubleshooting/troubleshooting#money_withdrawal">Contact support</Button>

@@ -1,0 +1,87 @@
+<Cut title="I can't get an SMS with the confirmation code.">
+
+Follow the recommendations in Help for [Yandex ID](https://yandex.com/support/passport/troubleshooting/phone-problems.html#phone-problems__no-code). If this doesn't help, write to the [support service](https://yandex.com/support/passport/troubleshooting/nosms-form.html).
+
+</Cut>
+
+<Cut title="I can't register because my phone number is already linked to another account">
+
+Your phone number can only be linked to one [Toloka](http://toloka.yandex.com/) account at a time. Most likely, you already registered in the system under a different username. Recall the username you registered with and use it to log in. If you don't remember your username, use [Restoring access](https://passport.yandex.com/passport?mode=restore).
+
+According to the [User Agreement](https://toloka.ai/tolokers/legal/user-agreement/):
+- The user may have only one account in Toloka.
+- Re-registration is prohibited.
+- The user must have a unique phone number.
+
+</Cut>
+
+<Cut title="How do I change the phone number in my account?">
+
+Go to [Yandex ID](https://passport.yandex.com/profile/phones) and change your main number. After changing your phone number, you won't be able to withdraw money for a week.
+
+<Note mode="note" title="Note">
+
+If you don't have access to the old number, it takes a month to change it. For more information about changing your phone number, see the [Yandex ID Help](https://yandex.com/support/passport/authorization/phone.html#change).
+
+</Note>
+
+</Cut>
+
+<Cut title="Where to find your username in the web version of Toloka?">
+
+In the web version of Toloka, your username is shown in the upper-right corner, next to the avatar. If your name or nickname is displayed next to the avatar, click on the avatar. The username will be shown in the window that opens.
+
+</Cut>
+
+{% if platform == "android" or platform == "ios" %}
+
+<Cut title="Where do I view my username in the mobile app?">
+
+{% if platform == "android" %}
+
+Open the menu by tapping <img src="1676449125006" alt="" /> at the top of the screen. Your username is at the top next to the avatar.
+
+Tap <Image withBackground imageId="1676448845247" alt="" />. You'll see your username in the **Profile** section.
+
+{% elsif platform == "ios" %}
+
+Open your **Profile**. Your username is under your name.
+
+{% endif %}
+
+</Cut>
+
+{% endif %}
+
+<Cut title="I don't remember my username or password">
+
+If you don't remember your username or password, go to the [Restore access](https://passport.yandex.com/passport?mode=restore) page.
+
+Learn more about {% if platform == "web" %}[logging in to Toloka](/docs-new/tolokers/register){% elsif platform == "android" or platform == "ios" %}[logging in to Toloka](/docs-new/tolokers/auth#registered){% endif %}.
+
+</Cut>
+
+<Cut title="Repeated registration in Toloka">
+
+According to the [User Agreement](https://toloka.ai/tolokers/legal/user-agreement/):
+- You can only have one account.
+- You can't restore a deleted account.
+- You can't register in [Toloka](http://toloka.yandex.com/) a second time.
+
+</Cut>
+
+{% if platform == "web" %}
+
+<Cut title="Other questions">
+
+[Fill out the form](/docs-new/tolokers/troubleshooting/support)
+
+<Note mode="note" title="Note">
+
+Please don't send duplicate requests or ask for a faster response. The support service reviews all incoming requests. You will receive a reply within a few days.
+
+</Note>
+
+</Cut>
+
+{% endif %}
