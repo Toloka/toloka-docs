@@ -1,0 +1,124 @@
+---
+title: "Payoneer | Tolokers documentation"
+date: "2023-02-15T11:48:13.287212"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tolokersMenu"
+---
+
+import PopupInfoPayoneerConditions from './subcomponents/pay/popup-info/id-popup-info/payoneer-conditions.mdx'
+import Check from './subcomponents/pay/about/check.mdx'
+import PayoneerTable1 from './payoneer/subcomponents/payoneer-table-1.mdx'
+import PayoneerTable2 from './payoneer/subcomponents/payoneer-table-2.mdx'
+
+# Payoneer
+
+<Note mode="restriction" title="Alert">
+
+Starting on December 16, 2022, funds withdrawal to Payoneer is unavailable for users from Russia.
+
+</Note>
+
+#### Benefits of Payoneer
+
+Payoneer is a secure, fast, and low-cost payment system.
+
+It allows users to:
+
+- Send and receive money.
+- Pay for goods and services.
+- Send payment requests.
+- Open multiple accounts in different currencies within the same account.
+
+#### Terms
+
+{% if platform == "web" %}
+
+<PopupInfoPayoneerConditions/>
+
+{% endif %}
+
+Area of operation |
+
+<Cut title="Almost everywhere">
+
+Works with restrictions in Russia.
+
+Available in more than 200 countries. For more information, contact the [Payoneer Support Center](https://payoneer.custhelp.com/app/home).
+
+</Cut>
+
+----- | -----
+Total fee | <PayoneerTable1/>
+Minimum withdrawal amount from Toloka | $20
+Where to transfer money next | <PayoneerTable2/>
+
+## How to connect Payoneer {#how-to-use}
+
+To withdraw money from Toloka to Payoneer, you need to register in the system.
+
+1. Go to the [Payoneer](https://www.payoneer.com/) official website and click {% if locale=="ru-com" %}**Зарегистрироваться**{% elsif locale=="en-com" %}**Register**{% endif %}.
+1. Answer a short survey on how you intend to use **Payoneer**.
+
+    <Cut title="Example">
+
+    {% if locale=="ru-com" %}<Image withBackground imageId="1676449030298" alt="" />{% elsif locale=="en-com" %}<Image withBackground imageId="1676449030298" alt="" />{% endif %}
+
+    </Cut>
+
+1. On the next page, click **Register**.
+1. Fill in your personal data. Click **Next**.
+1. Enter your contact details. To confirm your phone number, click **Send code** and enter the code from the SMS.
+1. Come up with a password and fill in your personal data as shown in your passport.
+1. Enter your local bank account details.
+1. Done! You have registered in Payoneer. After registration is completed, you'll get a confirmation email.
+
+## How to withdraw money from Toloka {#withdraw-from-toloka}
+
+{% if platform == "ios" %}
+1. Open the **Profile** page.
+   {% elsif platform == "android" or platform == "web" %}
+1. Open the [My money](https://toloka.yandex.com/profile/money) page.{% endif %}
+1. Find the **Payoneer** payment system and click **Link my account**.
+1. The wallet is linked once. After you do this, you'll be able to withdraw money in the {% if platform== "web" %}**My money**{% elsif platform == "android" %}**My money**{% elsif platform == "ios" %}**My money**{% endif %} tab.
+1. Enter the required amount and click **Withdraw**.
+1. An SMS with a code will be sent to your number. Enter it and click {% if platform == "web" %}**Confirm**{% elsif platform == "ios" or platform == "android" %}**Confirm**{% endif %}.
+1. The money will be transferred to your Payoneer account. It usually takes a few hours or days, but sometimes longer. The maximum transfer time is 30 days. Check the status in the **Actions history** block.
+
+<Check/>
+
+## How to withdraw money from Payoneer {#withdraw-from-payoneer}
+
+<Cut title="How do I withdraw money to a bank account">
+
+1. Go to **Withdraw → To Bank Account**.
+1. Select the relevant currency balance: dollars or euros.
+1. Enter your bank account details if you haven't done so already. If the account is already linked, select it from the list.
+1. Enter the amount and click **Review**.
+1. Check the details and click **Withdraw**.
+1. After the request is processed, you will receive a notification email specifying the amount of time the transfer will take.
+
+</Cut>
+
+<Cut title="How to withdraw money to a Payoneer Mastercard">
+
+You can withdraw money at ATMs all over the world. To do this, request a Payoneer Mastercard under .
+
+<Note mode="warning" title="Warning">
+
+Payoneer does not issue cards to customers with a postal or residential address in the Russian Federation.
+
+</Note>
+
+- You can order the card after you reach a certain payment amount.
+- The card is issued free of charge, but there is a service fee.
+- You can order a card for each of the currencies you use.
+- The money is automatically transferred from the Payoneer account to the card every hour, provided that the amount of funds on it doesn't exceed the set limit.
+
+Learn more about the card in the [Payoneer Support Center](https://payoneer-ru.custhelp.com/app/answers/topics/c/3698/session/L3RpbWUvMTYxMTIxMjU3Ny9nZW4vMTYxMTIxMjU3Ny9zaWQvZlVLbEl1ZE5UWlhYUlZLNmdmMCU3RUhwUFkxZEJFTUZjUG5FeTlSMlpoMUhNdTF4SlE4djBRRGIzQlhfWnhCWjFabEduWXZCVURwTlVPT3pzVEFTbjNoY005UmV4MFhzX1d6Vk54ZzZZMHhjSW5NejV5M3NiTXByMkElMjElMjE%3D).
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="../troubleshooting/troubleshooting#money_withdrawal">Contact support</Button>

@@ -1,0 +1,135 @@
+{
+  "defaultMenu": [
+    {
+      "title": "Registration and logging in",
+      "href": "register",
+      "when": "platform == \"web\""
+    },
+    {
+      "title": "About",
+      "href": "about",
+      "when": "platform == \"android\" or platform == \"ios\""
+    },
+    {
+      "title": "Registration and logging in",
+      "href": "auth",
+      "when": "platform == \"android\" or platform == \"ios\""
+    },
+    {
+      "title": "Required settings",
+      "href": "settings",
+      "when": "platform == \"android\" or platform == \"ios\""
+    },
+    {
+      "title": "Task list",
+      "href": "task-select",
+      "when": "platform == \"web\""
+    },
+    {
+      "title": "Entering captchas",
+      "href": "captcha",
+      "when": "platform == \"web\" or platform == \"ios\" or platform == \"android\""
+    },
+    {
+      "title": "Choosing a task",
+      "href": "task-select",
+      "when": "platform == \"ios\" or platform == \"android\""
+    },
+    {
+      "title": "How to be a successful Toloker",
+      "href": "tasks"
+    },
+    {
+      "title": "Tasks under review",
+      "href": "priemka"
+    },
+    {
+      "title": "Profile",
+      "href": "profile"
+    },
+    {
+      "title": "Messages",
+      "href": "messages"
+    },
+    {
+      "title": "Skills",
+      "href": "skills"
+    },
+    {
+      "title": "Awards",
+      "href": "achievements"
+    },
+    {
+      "title": "Goals",
+      "href": "goals",
+      "when": "platform == \"android\" or platform == \"ios\""
+    },
+    {
+      "title": "Rewards for friends",
+      "subItems": [
+        {
+          "title": "How to invite people",
+          "href": "referal"
+        },
+        {
+          "title": "Current reward rules",
+          "href": "referal-rules"
+        },
+        {
+          "title": "Previous reward rules",
+          "href": "referal-archive"
+        }
+      ]
+    },
+    {
+      "title": "Withdrawing money",
+      "subItems": [
+        {
+          "title": "Withdrawal methods",
+          "href": "pay/about"
+        },
+        {
+          "title": "PayPal",
+          "href": "pay/paypal"
+        },
+        {
+          "title": "Payoneer",
+          "href": "pay/payoneer"
+        },
+        {
+          "title": "QIWI",
+          "href": "pay/Qiwi-wallet"
+        }
+      ]
+    },
+    {
+      "title": "Troubleshooting",
+      "href": "troubleshooting/troubleshooting"
+    },
+    {
+      "title": "Support",
+      "href": "troubleshooting/support"
+    },
+    {
+      "title": "UHRS - Public FAQ",
+      "href": "uhrs-faq"
+    },
+    {
+      "title": "Restoring access",
+      "href": "troubleshooting/unblock",
+      "hidden": true,
+      "when": "platform == \"web\""
+    },
+    {
+      "title": "Restoring access",
+      "href": "troubleshooting/unblock-nodoc",
+      "hidden": true,
+      "when": "platform == \"web\""
+    },
+    {
+      "title": "Notes",
+      "href": "notes",
+      "hidden": true
+    }
+  ]
+}

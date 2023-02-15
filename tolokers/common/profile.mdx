@@ -1,0 +1,122 @@
+---
+title: "Profile | Tolokers documentation"
+date: "2023-02-15T11:47:56.439872"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tolokersMenu"
+---
+
+import FaqProfile from './subcomponents/profile/profile-faq/profile.mdx'
+import ProfileList1 from './profile/subcomponents/profile-list-1.mdx'
+import ProfileList2 from './profile/subcomponents/profile-list-2.mdx'
+
+# Profile
+
+Your profile must contain your real first and last name. Otherwise, you won't be able to [withdraw funds](/docs-new/tolokers/pay/about) from [Toloka](http://toloka.yandex.com/) to your payment system. If you entered a different name when registering, edit the profile.
+
+[Edit a profile](#edit)
+[Add a profile picture](#avatar)
+[Delete an account](#delete)
+{% if platform == "web" %}[Turn on notifications](#notifications){% endif %}
+
+## Edit a profile {#edit}
+
+{% if platform == "web" %} Go to the **Profile** and click the **Edit** link on the left.
+{% elsif platform == "ios" %} Open the **Profile** page and click **Edit**.
+{% elsif platform == "android" %} Open **Settings**, go to the **Profile** section, and click **Edit**.
+{% endif %}
+
+<Note mode="note" title="Note">
+
+If the selected language has already been confirmed by the test, you can't replace it with another one or delete it.
+
+</Note>
+
+## Change username {#login}
+
+Toloka is linked to your Yandex ID account, so you can't change your username.
+
+## Add a profile picture {#avatar}
+
+Go to [Managing your Yandex ID](https://passport.yandex.com/profile) and click **Add a photo**.
+
+{% if platform == "web" %}
+## Turn on notifications {#notifications}
+
+Open the Notifications page and choose which notifications you want to receive and how you want to receive them.
+
+If notifications are disabled in your browser, enable them for `toloka.yandex.com`.
+   1. Click **Add**.
+
+- Chrome
+
+   1. Click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1676449125825/1676449125825_original_svg.svg" alt="" /> on the top right and then **Settings**.
+   1. At the bottom of the **Settings** page, click the **Advanced** button.
+   1. In the **Privacy and security** section, click the **Content settings** button.
+   1. Choose **Notifications**.
+   1. Next to **Allow**, click **Add**.
+   1. Enter `toloka.yandex.com`.
+   1. Choose **Add**.
+
+- Opera
+
+   1. Open the menu and choose **Settings**.
+   1. Choose **Sites** in the list on the left.
+   1. In the **Notifications** section, click the **Managing exceptions** button.
+   1. Enter `toloka.yandex.com`.
+   1. Choose **Allow**.
+   1. Click the **Save** button.
+
+- Firefox
+
+   1. Click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1676449125006/1676449125006_original_svg.svg" alt="" /> on the top right and then **Settings**.
+   1. Choose **Privacy and protection** in the list on the left.
+   1. In the **Permissions** section, click the **Parameters** button next to **Notifications**.
+   1. Next to the `toloka.yandex.com` address, choose the **Allow** status.
+   1. Click the **Save** button.
+
+- Edge
+
+   1. Click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1676449129896/1676449129896_original_svg.svg" alt="" /> on the top right and then **Parameters**.
+   1. At the bottom of the **Settings** page, click the **View advanced settings** button.
+   1. In the **Website permissions** section, click the **Manage** button.
+   1. Choose Toloka `toloka.yandex.com`.
+   1. Turn on notifications.
+
+{% endlist %}
+
+You will now receive notifications from the platform.
+{% endif %}
+
+## Log out of your account {#log-out}
+
+{% if platform == "web" %}
+Click your username in the upper-right corner. Then click **Log out**.
+{% elsif platform== "android" %}
+Click **<Image withBackground imageId="1676448834501" alt="" /> → Settings**. At the bottom of the list, choose **Log out**.
+{% elsif platform== "ios" %}
+Open the **More → Settings** page. At the bottom of the list, choose **Log out**.
+{% endif %}
+
+## Delete an account {#delete}
+
+<Tabs tabs={[
+  { title: 'What happens if you delete your account', value: <ProfileList1/> },
+  { title: 'How to delete your account', value: <ProfileList2/> },
+]}/>
+
+<Note mode="warning" title="Warning">
+
+According to the [User Agreement](https://toloka.ai/tolokers/legal/user-agreement/):
+- You can't restore a deleted account.
+- You won't be able to register in Toloka again.
+
+</Note>
+
+## FAQ {#faq}
+
+<FaqProfile/>
+
+<Button themeColor="light" view="default" size="l" type="link" url="/docs-new/tolokers/troubleshooting/troubleshooting#not_working_properly">Contact support</Button>
