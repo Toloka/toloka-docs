@@ -1,0 +1,25 @@
+---
+title: "condition.required | Template Builder"
+date: "2023-02-10T09:15:34.248380"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+# condition.required
+
+Checks that the field which must contain the data is present in the response. This way you can get a Toloker to answer all the required questions.
+
+If used inside the `validation` property, you can omit the `data` property and the same property will be used from the parent component [field](/docs-new/template-builder/reference/fields) (the one that contains the `condition.required` component).
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/td7VbsVy3tweoh">View example</Button>
+
+## Component properties {#properties}
+
+**Name** | **Type** | **Description**
+----- | ----- | -----
+`type`<span style="color: red">\*</span> | "condition.required" | Set component type.
+`data` | _any_ | Data to be filled in. If the property is not specified, the data of the parent component (the one that contains `condition.required`) is used.
+`hint` | _string_ | Validation error message that a Toloker will see

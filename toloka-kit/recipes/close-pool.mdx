@@ -1,0 +1,81 @@
+---
+title: "Close pool | Toloka-Kit"
+date: "2023-02-07T15:40:39.283543"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import ClosePool from './subcomponents/close_pool.mdx'
+
+# Close pool
+
+_Close an opened pool in Toloka._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Close pool {#step-three}
+
+[Find out](/docs-new/toloka-kit/recipes/get-pools) the ID of the pool you want to close. Then call the `close_pool()` method.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      closed_pool = toloka_client.<Term term="close_pool"><ClosePool/></Term>('1443858')
+    </HighlightChildren>
+  }
+  textToCopy={`closed_pool = toloka_client.close_pool('1443858')`}
+/>
+
+### 4. Print pool ID and status {#step-four}
+
+The `close_pool()` request will return the [Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
+
+```python
+print(closed_pool.id, closed_pool.status)
+```
+
+You should get an output with the pool ID and the updated status which looks like this.
+
+```bash
+1443858 Status.CLOSED
+```
+
+## Complete code: Close pool {#complete-code}
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+closed_pool = toloka_client.close_pool('1443858')
+print(closed_pool.id, closed_pool.status)
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[close_pool()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.close_pool) method_
+
+</Note>
+
+## See also {#see-also}
+
+- [How does Toloka work?](https://toloka.ai/en/docs/guide/concepts/overview)
+- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [Get list of pools](/docs-new/toloka-kit/recipes/get-pools)
+- [Toloka-Kit: Pool class](/docs-new/toloka-kit/reference/toloka.client.pool.Pool)
+- [Toloka API: Close pool](https://toloka.ai/docs/api/api-reference/#post-/pools/-id-/close)
+
+[*close_pool]: [close_pool()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.close_pool) method

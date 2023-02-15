@@ -1,0 +1,42 @@
+---
+title: "clone_pool_async | Toloka-Kit"
+date: "2023-02-07T15:41:56.175413"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# clone_pool_async
+`toloka.client.TolokaClient.clone_pool_async` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/__init__.py#L1452)
+
+```python
+clone_pool_async(self, pool_id: str)
+```
+
+Clones an existing pool. Sends an asynchronous request to Toloka.
+
+An empty pool with the same parameters is created.
+The new pool is attached to the same project.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`pool_id`|**str**|<p>The ID of the pool to be cloned.</p>
+
+* **Returns:**
+
+  An object to track the progress of the operation.
+
+* **Return type:**
+
+  [PoolCloneOperation](/docs-new/toloka-kit/reference/toloka.client.operations.PoolCloneOperation)
+
+**Examples:**
+
+```python
+clone_op = toloka_client.clone_pool_async(pool_id='1')
+toloka_client.wait_operation(clone_op)
+```

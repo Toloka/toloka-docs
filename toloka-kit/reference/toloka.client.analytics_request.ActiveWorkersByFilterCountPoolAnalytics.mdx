@@ -1,0 +1,30 @@
+---
+title: "ActiveWorkersByFilterCountPoolAnalytics | Toloka-Kit"
+date: "2023-02-07T15:41:57.055526"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# ActiveWorkersByFilterCountPoolAnalytics
+`toloka.client.analytics_request.ActiveWorkersByFilterCountPoolAnalytics` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/analytics_request.py#L147)
+
+```python
+ActiveWorkersByFilterCountPoolAnalytics(
+    self,
+    *,
+    subject_id: str,
+    interval_hours: int
+)
+```
+
+The number of active Tolokers matching the pool filters for the last hours
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`subject_id`|**str**|<p>ID of the object you want to get analytics about.</p>
+`interval_hours`|**int**|<p>The number of hours to take into account when collecting statistics.</p>

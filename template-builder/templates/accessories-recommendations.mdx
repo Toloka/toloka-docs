@@ -1,0 +1,288 @@
+---
+title: "Accessories recommendations | Template Builder"
+date: "2023-02-10T09:15:30.606077"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TolokaTbSourceAddMedia from '../subcomponents/toloka-tb-source/id-toloka-tb-source/add-media.mdx'
+import ContactSupport from '../subcomponents/contact-support.mdx'
+import AccessoriesRecommendationsList1 from './accessories-recommendations/subcomponents/accessories-recommendations-list-1.mdx'
+import AccessoriesRecommendationsList2 from './accessories-recommendations/subcomponents/accessories-recommendations-list-2.mdx'
+
+# Accessories recommendations
+
+For this type of project, you can use the **Accessories recommendations** preset.
+
+This preset is designed to identify products that go together to train your store's recommendation system.
+
+Take a look at the example: the labeling interface includes two images and several radio buttons. Note that validation, keyboard shortcuts, and task layout are already configured in this Template Builder sample code.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/T69IKTGm3ttCb6">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [view.list](/docs-new/template-builder/reference/view.list): Displays data in a list.
+
+- [view.text](/docs-new/template-builder/reference/view.text): Adds a block with text.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.text",
+    "label": "Is the second item a good recommendation for the first one?"
+  }
+  ```
+
+  </Cut>
+
+- [view.image](/docs-new/template-builder/reference/view.image): Displays an image.
+
+  The [layout.columns](/docs-new/template-builder/reference/layout.columns) component places two images next to each other.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "layout.columns",
+    "items": [
+      {
+        "type": "view.image",
+        "label": {
+          "type": "data.input",
+          "path": "title_1"
+        },
+        "url": {
+          "type": "data.input",
+          "path": "image_1"
+        }
+      },
+      {
+        "type": "view.image",
+        "label": {
+          "type": "data.input",
+          "path": "title_2"
+        },
+        "url": {
+          "type": "data.input",
+          "path": "image_2"
+        }
+      }
+    ]
+  }
+  ```
+
+  </Cut>
+
+- [field.button-radio-group](/docs-new/template-builder/reference/field.button-radio-group): Adds buttons for selecting an answer option.
+
+  The [condition.required](/docs-new/template-builder/reference/condition.required) component inside the `validation` property checks if at least one option is selected.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.button-radio-group",
+    "options": [
+      {
+        "label": "Good recommendation",
+        "value": "ok"
+      },
+      {
+        "label": "Bad recommendation",
+        "value": "bad"
+      }
+    ],
+    "data": {
+      "type": "data.output",
+      "path": "result"
+    },
+    "validation": {
+      "type": "condition.required",
+      "hint": "Please choose an option"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys): Adds [keyboard shortcuts](/docs-new/template-builder/best-practices/hotkeys).
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "plugin.hotkeys",
+    "1": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "ok"
+    },
+    "2": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "bad"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task layout.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "plugin.toloka",
+    "layout": {
+      "kind": "pager"
+    }
+  }
+  ```
+
+  </Cut>
+
+</Cut>
+
+<TolokaTbSourceAddMedia/>
+
+If this preset doesn't meet your needs, see other examples in this section.
+
+## Add a response field {#add-text-area}
+
+To let Tolokers leave comments about the task or their response, add a text field using [field.textarea](/docs-new/template-builder/reference/field.textarea).
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "field.textarea",
+  "label": "Comments",
+  "placeholder": "Enter text",
+  "data": {
+    "type": "data.output",
+    "path": "comment"
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/BwwhqS_j3ttCd3">View example</Button>
+
+## Add a layout {#add-layout}
+
+To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs-new/template-builder/reference/view.alert). You can place it in the [view.list](/docs-new/template-builder/reference/view.list) along with the other components.
+
+In this example, the description is highlighted with a blue border, and the buttons are highlighted with a yellow one.
+
+<Cut title="Show code">
+
+```json
+  {
+    "type": "view.alert",
+    "theme": "info",
+    "content": {
+      "type": "view.text",
+      "content": "Is the second item a good recommendation for the first one?"
+    }
+  },
+  {
+    "type": "view.alert",
+    "theme": "warning",
+    "content":{
+      "type": "field.button-radio-group",
+      "options": [
+        {
+          "label": "Good recommendation",
+          "value": "ok"
+        },
+        {
+          "label": "Bad recommendation",
+          "value": "bad"
+        }
+      ],
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      }
+      "validation": {
+      "type": "condition.required",
+      "hint": "Please choose an option"
+      }
+    }
+  }
+  ```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/gJi3meiN3ttCeM">View example</Button>
+
+## Other options for buttons {#add-variants}
+
+Decide whether a Toloker can select only one or multiple answer options.
+
+<Tabs tabs={[
+  { title: 'Multiple options (checkboxes)', value: <AccessoriesRecommendationsList1/> },
+  { title: 'One option (a radio button)', value: <AccessoriesRecommendationsList2/> },
+]}/>
+
+## Add clarifying questions to one of the options {#add-addition}
+
+The [helper.if](/docs-new/template-builder/reference/helper.if) component displays an interface element after a specific response is selected. In this example, a Toloker can answer the question about recommendation only if both images loaded.
+
+  <Cut title="Show code">
+
+```json
+  {
+    "type": "helper.if",
+    "condition": {
+      "type": "condition.equals",
+      "data": {
+        "type": "data.output",
+        "path": "loaded"
+      },
+      "to": "yes"
+    },
+    "then": {
+      "type": "field.button-radio-group",
+      "options": [
+        {
+          "label": "Good recommendation",
+          "value": "ok"
+        },
+        {
+          "label": "Bad recommendation",
+          "value": "bad"
+        }
+     ],
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "validation": {
+        "type": "condition.required",
+        "hint": "Please choose an option"
+      }
+    }
+  }
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/GwLZZIth3ttCj2">View example</Button>
+
+If you need to check sequentially more than two conditions, use the [helper.switch](/docs-new/template-builder/reference/helper.switch) component.
+
+<ContactSupport/>

@@ -1,0 +1,36 @@
+---
+title: "QualityControlConfig | Toloka-Kit"
+date: "2023-02-07T15:42:08.342942"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# QualityControlConfig
+`toloka.client.quality_control.QualityControl.QualityControlConfig` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/quality_control.py#L108)
+
+```python
+QualityControlConfig(
+    self,
+    *,
+    rules: Optional[List[RuleConfig]] = None,
+    collector_config: Optional[CollectorConfig] = None
+)
+```
+
+Quality control block
+
+Quality control blocks help regulate access to a project or pool: you can filter out Tolokers who give incorrect answers
+in control tasks, skip many tasks in a row, and so on.
+
+The block consists of two parts: condition and the action to be performed when the condition is met.
+There may be several conditions, then they are combined using logical And.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`rules`|**Optional\[List\[[RuleConfig](/docs-new/toloka-kit/reference/toloka.client.quality_control.QualityControl.QualityControlConfig.RuleConfig)\]\]**|<p>Conditions and action if conditions are met.</p>
+`collector_config`|**Optional\[[CollectorConfig](/docs-new/toloka-kit/reference/toloka.client.collectors.CollectorConfig)\]**|<p>Parameters for collecting statistics (for example, the number of task skips in the pool).</p>

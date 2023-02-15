@@ -1,0 +1,34 @@
+---
+title: "AppItemImport | Toloka-Kit"
+date: "2023-02-07T15:42:07.120456"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# AppItemImport
+`toloka.client.app.AppItemImport` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/app/__init__.py#L184)
+
+```python
+AppItemImport(
+    self,
+    *,
+    id: Optional[str] = None,
+    records_count: Optional[int] = None,
+    records_processed: Optional[int] = None,
+    errors: Optional[Dict] = None
+)
+```
+
+Meta-information on asynchronous loading operation (possible via UI).
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`id`|**Optional\[str\]**|
+`records_count`|**Optional\[int\]**|<p>Number of items in the loading operation.</p>
+`records_processed`|**Optional\[int\]**|<p>Number of successfully loaded items in the loading operation.</p>
+`errors`|**Optional\[Dict\]**|<p>Errors during the loading operation.</p>

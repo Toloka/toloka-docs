@@ -1,0 +1,79 @@
+---
+title: "Open pool | Toloka-Kit"
+date: "2023-02-07T15:40:34.124684"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import OpenPool from './subcomponents/open_pool.mdx'
+
+# Open pool
+
+_Open a closed pool in Toloka._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Open pool {#step-three}
+
+[Find out](/docs-new/toloka-kit/recipes/get-pools) the ID of the pool you want to open. Then call the `open_pool()` method.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      opened_pool = toloka_client.<Term term="open_pool"><OpenPool/></Term>('1442472')
+    </HighlightChildren>
+  }
+  textToCopy={`opened_pool = toloka_client.open_pool('1442472')`}
+/>
+
+### 4. Print pool ID and status {#step-four}
+
+The `open_pool()` request will return the [Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
+
+```python
+print(opened_pool.id, opened_pool.status)
+```
+
+You should get an output with the pool ID and the updated status which looks like this.
+
+```bash
+1442472 Status.OPEN
+```
+
+## Complete code: Open pool {#complete-code}
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+opened_pool = toloka_client.open_pool('1442472')
+print(opened_pool.id, opened_pool.status)
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[open_pool()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.open_pool) method_
+
+</Note>
+
+## See also {#see-also}
+
+- [How does Toloka work?](https://toloka.ai/en/docs/guide/concepts/overview)
+- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [Get list of pools](/docs-new/toloka-kit/recipes/get-pools)
+- [Toloka-Kit: Pool class](/docs-new/toloka-kit/reference/toloka.client.pool.Pool)
+- [Toloka API: Open pool](https://toloka.ai/docs/api/api-reference/#post-/pools/-id-/open)

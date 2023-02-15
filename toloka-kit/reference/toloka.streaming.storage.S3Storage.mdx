@@ -1,0 +1,74 @@
+---
+title: "S3Storage | Toloka-Kit"
+date: "2023-02-07T15:42:11.956576"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# S3Storage
+`toloka.streaming.storage.S3Storage` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/streaming/storage.py#L158)
+
+```python
+S3Storage(
+    self,
+    bucket: BucketType,
+    *,
+    locker: Optional[BaseLocker] = None
+)
+```
+
+Storage that save to AWS S3 using given boto3 client.
+
+<Note mode="warning" title="Warning">
+
+Requires toloka-kit[s3] extras. Install it with the following command:
+
+```shell
+pip install toloka-kit[s3]
+```
+
+</Note>
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`bucket`|**[BucketType](/docs-new/toloka-kit/reference/toloka.streaming.storage.BucketType)**|<p>Boto3 bucket object.</p>
+`locker`|**Optional\[[BaseLocker](/docs-new/toloka-kit/reference/toloka.streaming.locker.BaseLocker)\]**|<p>Optional locker object. By default, no locker is used.</p>
+
+**Examples:**
+
+Create new instance.
+
+```python
+!pip install toloka-kit[s3]
+import boto3
+import os
+session = boto3.Session(
+```
+...     aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY')
+... )
+```python
+resource = session.resource('s3', region_name=os.getenv('AWS_DEFAULT_REGION', 'us-east-2'))
+bucket = resource.Bucket('my-bucket')
+storage = S3Storage(bucket)
+```
+
+Use with pipelines.
+
+```python
+storage = S3Storage(bucket=bucket, locker=ZooKeeperLocker(kazoo_client, '/lock-dir'))
+pipeline = Pipeline(storage=storage)
+...
+await pipeline.run()  # Will load from storage at the start and save after each iteration.
+```
+## Methods Summary
+
+| Method | Description |
+| :------| :-----------|
+[cleanup](/docs-new/toloka-kit/reference/toloka.streaming.storage.S3Storage.cleanup)| None
+[load](/docs-new/toloka-kit/reference/toloka.streaming.storage.S3Storage.load)| None
+[save](/docs-new/toloka-kit/reference/toloka.streaming.storage.S3Storage.save)| None

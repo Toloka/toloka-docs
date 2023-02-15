@@ -1,0 +1,394 @@
+---
+title: "Text classification | Template Builder"
+date: "2023-02-10T09:15:29.847896"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TolokaTbSourceAddMedia from '../subcomponents/toloka-tb-source/id-toloka-tb-source/add-media.mdx'
+import ContactSupport from '../subcomponents/contact-support.mdx'
+import TextClassificationList1 from './text-classification/subcomponents/text-classification-list-1.mdx'
+import TextClassificationList2 from './text-classification/subcomponents/text-classification-list-2.mdx'
+
+# Text classification
+
+For this type of project, you can use the **Clickbait or not?** preset.
+
+This preset helps you classify any kind of text for training classifiers and NLP models.
+
+Take a look at the example: the labeling interface includes a text block, and radio buttons for categories. Note that validation, keyboard shortcuts, and task layout are already configured in this Template Builder sample code.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/t_qYMu7W3ttDbe">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [view.text](/docs-new/template-builder/reference/view.text): The text that you want to classify.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.text",
+    "label": "Headline",
+    "content": {
+      "type": "data.input",
+      "path": "headline"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [field.button-radio-group](/docs-new/template-builder/reference/field.button-radio-group): Adds buttons for selecting an answer option.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.button-radio-group",
+    "validation": {
+      "type": "condition.required"
+    },
+    "label": "Is this headline clickbait?",
+    "options": [
+      {
+        "label": "Clickbait",
+        "value": "yes"
+      },
+      {
+        "value": "no",
+        "label": "Not clickbait"
+      }
+    ],
+    "data": {
+      "type": "data.output",
+      "path": "result"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [condition.required](/docs-new/template-builder/reference/condition.required): Checks if at least one option is selected.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "condition.required",
+    "hint": "Select an option"
+  }
+  ```
+
+  </Cut>
+
+- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task layout.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "plugin.toloka",
+    "layout": {
+      "kind": "scroll",
+      "taskWidth": 500
+    }
+  }
+  ```
+
+  </Cut>
+
+- [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys): [Keyboard shortcuts](/docs-new/template-builder/best-practices/hotkeys).
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "1": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "yes"
+    },
+    "2": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "no"
+    },
+    "type": "plugin.hotkeys"
+  }
+  ```
+
+  </Cut>
+
+</Cut>
+
+<TolokaTbSourceAddMedia/>
+
+If this template doesn't meet your needs, see other examples in the **Text** section.
+
+## Add a description {#add-description}
+
+To add a detailed description to the task, use the [view.text](/docs-new/template-builder/reference/view.text) component.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "view.text",
+  "content": "Read the headline and tell if it is clickbait."
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/CWaULGco3ttDcv">View example</Button>
+
+## Add a response field {#add-text-area}
+
+To let Tolokers leave comments about the task or their response, add a text field using [field.textarea](/docs-new/template-builder/reference/field.textarea).
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "field.textarea",
+  "label": "Comments",
+  "placeholder": "Enter text",
+  "data": {
+    "type": "data.output",
+    "path": "comment"
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/ZkRWkjQr3ttDeN">View example</Button>
+
+## Add a layout {#add-layout}
+
+To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs-new/template-builder/reference/view.alert). In this example, the description is highlighted with a blue border, and the buttons are highlighted with a yellow one.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "view.alert",
+  "theme": "info",
+  "content": {
+    "type": "view.text",
+    "content": "Look at the text and tell if it is clickbait."
+  }
+},
+{
+  "type": "view.text",
+  "label": "Headline",
+  "content": {
+    "type": "data.input",
+    "path": "headline"
+  }
+},
+{
+  "type": "view.alert",
+  "theme": "warning",
+  "content": {
+    "type": "field.button-radio-group",
+    "validation": {
+      "type": "condition.required",
+      "hint": "Select an option"
+    },
+    "label": "Is this headline clickbait?",
+    "options": [
+      {
+        "label": "Clickbait",
+        "value": "yes"
+      },
+      {
+        "label": "Not clickbait",
+        "value": "no"
+      }
+    ],
+    "data": {
+      "type": "data.output",
+      "path": "result"
+    }
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/wH3XbAFE3ttDfc">View example</Button>
+
+## Other options for buttons {#mult-ans-options}
+
+Decide whether a Toloker can select only one or multiple answer options:
+
+<Tabs tabs={[
+  { title: 'Multiple options (checkboxes)', value: <TextClassificationList1/> },
+  { title: 'One option (a radio button)', value: <TextClassificationList2/> },
+]}/>
+
+## Add conditions {#dependencies}
+
+The [helper.if](/docs-new/template-builder/reference/helper.if) component displays an interface element after a specific response is selected.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "helper.if",
+  "condition": {
+    "type": "condition.equals",
+    "data": {
+      "type": "data.output",
+      "path": "first-q"
+    },
+    "to": "no"
+  },
+  "then": {
+    "type": "field.checkbox-group",
+    "label": "2. Why don't you like it?",
+    "options": [
+      {
+        "label": "It's clickbate",
+        "value": "clickbate"
+      },
+      {
+        "label": "It's too long",
+        "value": "long"
+      },
+      {
+        "label": "It's grammarly incorrect",
+        "value": "bad-grammar"
+      },
+      {
+        "label": "Other",
+        "value": "other"
+      }
+    ],
+    "data": {
+      "type": "data.output",
+      "path": "input_data"
+    },
+    "validation": {
+      "type": "condition.required",
+      "hint": "Select an option"
+    }
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/ODo7Fc_r3ttDiK">View example</Button>
+
+## Text and search query comparison {#search}
+
+#### Does the text match the search query
+
+Add a button that opens the search results and generate a search query link using the [helper.search-query](/docs-new/template-builder/reference/helper.search-query) component. To make sure that a Toloker clicked on the link and checked its contents, configure validation, as in the example.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "condition.link-opened",
+  "hint": "Follow the link",
+  "url": {
+    "type": "helper.search-query",
+    "query": {
+      "type": "data.input",
+      "path": "link"
+    },
+    "engine": "bing"
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/rIjOJa7c3ttDjH">View example</Button>
+
+#### Side-by-side text and web page comparison
+
+You can display the web page in the built-in window using the [view.iframe](/docs-new/template-builder/reference/view.iframe) component. Place the text next to it using [layout.side-by-side](/docs-new/template-builder/reference/layout.side-by-side).
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "view.iframe",
+  "maxWidth": 400,
+  "fullHeight": true,
+  "url": {
+    "type": "helper.search-query",
+    "query": {
+      "type": "data.input",
+      "path": "link"
+    },
+    "engine": "bing"
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/FDrNN4qp3ttDk9">View example</Button>
+
+#### Side-by-side text and mobile web page comparison
+
+This is a more complex example that compares the text with the results of a search query. The following components are added:
+
+- [view.iframe](/docs-new/template-builder/reference/view.iframe): Displays the web page in an embedded window.
+- [view.device-frame](/docs-new/template-builder/reference/view.device-frame): Wraps the window in a smartphone frame.
+- [layout.side-by-side](/docs-new/template-builder/reference/layout.side-by-side): Places the text and the search results window next to each other.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "layout.side-by-side",
+  "items": [
+    {
+      "type": "view.text",
+      "content": {
+        "type": "data.input",
+        "path": "text"
+      }
+    },
+    {
+      "type": "view.device-frame",
+      "maxWidth": 400,
+      "content": {
+        "type": "view.iframe",
+        "maxWidth": 400,
+        "fullHeight": true,
+        "url": {
+          "type": "helper.search-query",
+          "query": {
+            "type": "data.input",
+            "path": "link"
+          },
+          "engine": "bing"
+        }
+      }
+    }
+  ]
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/3JMlulLI3ttDmK">View example</Button>
+
+<ContactSupport/>

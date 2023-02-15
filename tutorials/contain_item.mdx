@@ -1,0 +1,198 @@
+---
+title: "Project 1. Does the photo contain a certain object? | Toloka tutorials"
+date: "2023-02-14T11:23:08.255955"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tutorialsMenu"
+---
+
+import TolokaRequesterPoolType from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx'
+import TolokaRequesterPoolName from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
+import TolokaRequesterPoolDescription from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
+import TolokaRequesterSourceAudienceSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/audience-settings.mdx'
+import TutorialsLanguageFilter from './subcomponents/language-filter.mdx'
+import TutorialsShockingContent from './subcomponents/shocking-content-filter.mdx'
+import TutorialsPlatformFilter from './subcomponents/platform-filter.mdx'
+import TolokaRequesterSourcePriceSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/price-settings.mdx'
+import TolokaRequesterSourceOverlapSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/overlap-settings.mdx'
+import TutorialsQualityControl from './subcomponents/quality-control.mdx'
+import TutorialsTimePerTaskSuite from './subcomponents/time-per-task-suite.mdx'
+import TutorialsUploadTasks from './subcomponents/upload-tasks.mdx'
+import TolokaRequesterSourceAddControlTasks from '../subcomponents/toloka-requester-source/id-toloka-requester-source/add-control-tasks.mdx'
+import TutorialsDoubleCheck from './subcomponents/double-check.mdx'
+import TolokaRequesterSourceStepEnabled from '../subcomponents/toloka-requester-source/id-toloka-requester-source/step-enabled.mdx'
+import ContactSupport from '../guide/subcomponents/contact-support.mdx'
+import ContainItemList1 from './contain_item/subcomponents/contain_item-list-1.mdx'
+import ContainItemList2 from './contain_item/subcomponents/contain_item-list-2.mdx'
+
+# Project 1. Does the photo contain a certain object?
+
+In this [project](https://toloka.ai/en/docs/glossary#project), you will ask Tolokers if there are shoes in the photo.
+
+## Create a project {#create_project}
+
+To create a project, open [Toloka for requesters](https://platform.toloka.ai/for-requesters/).
+
+#### In the interface:
+
+1. Choose a template:
+
+    1. Click **Create project**.
+
+    1. Select the **Image classification** template.
+
+1. Provide general information:
+
+    1. In the **Name for Tolokers** field, enter `Are there shoes in the photo?`.
+
+    1. In the **Description for Tolokers** field, enter `Look at the picture and answer if there are shoes in it.`.
+
+    1. Optionally add a **Private comment**.
+
+    1. Save the changes.
+
+1. Edit the task interface in the editor you selected:
+
+    <Tabs tabs={[
+      { title: 'Template Builder', value: <ContainItemList1/> },
+      { title: 'HTML/CSS/JS editor', value: <ContainItemList2/> },
+    ]}/>
+
+1. Save the changes.
+
+1. In the **Instructions for Tolokers** field, enter the [instructions](https://toloka.ai/en/docs/glossary#instructions) and add an image.
+
+    1. **Instructions:**
+
+        ```plaintext
+        Look at the picture and determine if there are **shoes** in the picture.
+        If there are, click **Yes**.
+        If there aren't, click **No**.
+        For example, there are shoes in the photo, so the correct answer is **Yes**.
+        ```
+
+    1. To add an image, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425175297/1675425175297_original_svg.svg" alt="" /> and provide a link to the image you want to use as an example.
+
+    1. Save the changes.
+
+1. To go back to the **Projects** page, click **Finish editing**.
+
+Learn more about working with the project in the [Project](https://toloka.ai/en/docs/guide/concepts/project) section.
+
+## Create a pool {#create_pool}
+
+To create a [pool](https://toloka.ai/en/docs/glossary#pool):
+
+1. Open the page of the project titled **Are there shoes in the photo?**.
+
+1. Click **Add a pool** on the project page.
+
+1. <TolokaRequesterPoolType/>
+
+1. <TolokaRequesterPoolName/>
+
+1. <TolokaRequesterPoolDescription/>
+
+1. Click **Create**.
+
+1. <TolokaRequesterSourceAudienceSettings/>
+
+    1. <TutorialsLanguageFilter/>
+
+    1. <TutorialsShockingContent/>
+
+    1. <TutorialsPlatformFilter/>
+
+1. (optional) In the **Speed/quality balance** section, specify the desired quality level. Improving quality may reduce the speed of task completion because the pool will be available to fewer Tolokers. Learn more in the [Speed/quality balance](https://toloka.ai/en/docs/guide/concepts/adjust) section.
+
+1. <TolokaRequesterSourcePriceSettings/>
+
+    1. In **Price per task suite, $**, set the amount of money to pay per task suite done by one Toloker. For example, `0.01`.
+
+    1. <TolokaRequesterSourceOverlapSettings/>
+
+1. <TutorialsQualityControl/>
+
+    1. Click **Add a quality control rule**.
+
+    1. Find the **Rules** block in the list and choose **Control tasks**.
+
+    1. Set a rule for control tasks: If the **number of responses** to control questions **is greater than or equal to 3** and the **percentage of correct responses** to control questions **is less than 60**, then **restrict the Toloker's access** to the **project for 10 days**. Specify the **Control task** as a reason.
+
+        <Image withBackground imageId="1675426046741" alt="" />
+
+        Learn more in [Quality control](https://toloka.ai/en/docs/guide/concepts/control).
+
+1. <TutorialsTimePerTaskSuite/>
+
+    The time should be long enough to read the instructions and wait for task data to load. For example, `600` seconds.
+
+1. <TutorialsUploadTasks/>
+
+    1. Prepare your own task file. Check out the example in [the demo file](https://download.cdn.yandex.net/from/yandex.ru/support/ru/toloka-requester/files/dataset-shoes.tsv). In the Toloka interface under the pool name, there are links to **file** templates for regular, control, and training tasks.
+
+    1. Click **Drop file here or select**, and upload the file you’ve just made.
+
+    1. Click **Continue**.
+
+    1. Choose **Smart mixing**.
+
+    1. In the **General tasks** field, specify `9`.
+
+    1. In the **Training tasks** field, specify `0`.
+
+    1. In the **Control tasks** field, specify `1`.
+
+    1. Click **Combine tasks into suites**.
+
+1. <TolokaRequesterSourceAddControlTasks/>
+
+    1. In the left column, turn on the **result** option.
+
+    1. Choose the correct answer to the question.
+
+    1. Click **Save and go to next**.
+
+    1. Click **Are there shoes in the photo?** to exit the [task markup](https://toloka.ai/en/docs/glossary#task-markup) mode.
+
+        <Note mode="note" title="Note">
+
+        In small pools, [control tasks](https://toloka.ai/en/docs/glossary#control-task) should be 10-20% of all tasks. Include different versions of correct responses in equal amounts. See the distribution of responses on the **Edit tasks** page, **Control tasks** tab.
+
+        </Note>
+
+1. <TutorialsDoubleCheck/>
+
+    <TolokaRequesterSourceStepEnabled/>
+
+1. Click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425184616/1675425184616_original_svg.svg" alt="" /> to start the pool.
+
+## Get the results {#get_results}
+
+To get the results:
+
+1. Next to the **Download results** button, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425179291/1675425179291_original_svg.svg" alt="Drop-down button" />.
+
+1. Choose the **Dawid-Skene aggregation model**. Learn more about [Result aggregation based on the Dawid-Skene model](https://toloka.ai/en/docs/guide/concepts/result-aggregation).
+
+1. In the window that opens, click **Yes**.
+
+1. At the top of the page, click **View operations list**.
+
+    <Note mode="note" title="Note">
+
+    To track the progress, refresh the page from time to time. Aggregation takes from 5 to 20 minutes. You can start designing another project meanwhile.
+
+    </Note>
+
+1. When the operation is complete, download the file with the results. To do this, click **Download** in the **Files** column.
+
+1. Use the file with the results in [project 2](/docs-new/tutorials/find_an_item_in_store).
+
+## What's next {#what-next}
+
+- Create [Project 2](/docs-new/tutorials/find_an_item_in_store) to search for similar items in an online store.
+
+<ContactSupport/>

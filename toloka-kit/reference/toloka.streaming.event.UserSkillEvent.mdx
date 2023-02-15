@@ -1,0 +1,32 @@
+---
+title: "UserSkillEvent | Toloka-Kit"
+date: "2023-02-07T15:42:14.159330"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# UserSkillEvent
+`toloka.streaming.event.UserSkillEvent` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/streaming/event.py#L75)
+
+```python
+UserSkillEvent(
+    self,
+    *,
+    event_time: Optional[datetime] = None,
+    event_type: Union[Type, str, None] = None,
+    user_skill: Optional[UserSkill] = None
+)
+```
+
+UserSkill-related event.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`event_time`|**Optional\[datetime\]**|<p>Event datetime.</p>
+`event_type`|**Optional\[[Type](/docs-new/toloka-kit/reference/toloka.streaming.event.UserSkillEvent.Type)\]**|<p>One of the folllowing event types:</p> <ul> <li>CREATED</li> <li>MODIFIED</li> </ul>
+`user_skill`|**Optional\[[UserSkill](/docs-new/toloka-kit/reference/toloka.client.user_skill.UserSkill)\]**|<p>UserSkill object itself.</p>

@@ -1,0 +1,21 @@
+---
+title: "autocast_to_enum | Toloka-Kit"
+date: "2023-02-07T15:41:53.721645"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# autocast_to_enum
+`toloka.client.primitives.base.autocast_to_enum` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/primitives/base.py#L339)
+
+```python
+autocast_to_enum(func: Callable)
+```
+
+Function decorator that performs str -> Enum conversion when decorated function is called
+
+This decorator modifies function so that every argument annotated with any subclass of Enum type (including Enum
+itself) can be passed a value of str (or any )

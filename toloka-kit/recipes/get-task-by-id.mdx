@@ -1,0 +1,78 @@
+---
+title: "Get task details | Toloka-Kit"
+date: "2023-02-07T15:40:34.063869"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import GetTask from './subcomponents/get_task.mdx'
+
+# Get task details
+
+_Get the detailed information about the task with the ID specified in the request._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Get task information {#step-three}
+
+[Find out](/docs-new/toloka-kit/recipes/get-tasks) the ID of the task for which you want to get the detailed information. Then get this info calling the `get_task()` method.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      task = toloka_client.<Term term="get_task"><GetTask/></Term>('000012bb84--62d80429f20bf20e50f36a27')
+    </HighlightChildren>
+  }
+  textToCopy={`task = toloka_client.get_task('000012bb84--62d80429f20bf20e50f36a27')`}
+/>
+
+### 4. Print task ID, overlap, and creation date {#step-four}
+
+The `get_task()` request will return the [Task](/docs-new/toloka-kit/reference/toloka.client.task.Task) class object. You can use its attributes to print the information you need.
+
+```python
+print(task.id, task.overlap, task.created.date())
+```
+
+You should get an output with the task ID, overlap, and creation date which looks like this.
+
+```bash
+00022da5a7--6388b40547c84000494cdc58 3 2022-12-01
+```
+
+## Complete code: Get task details {#complete-code}
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+task = toloka_client.get_task('000012bb84--62d80429f20bf20e50f36a27')
+print(task.id, task.overlap, task.created.date())
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_task()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_task) method_
+
+</Note>
+
+## See also {#see-also}
+
+- [How does Toloka work?](https://toloka.ai/en/docs/guide/concepts/overview)
+- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [Toloka-Kit: Task class](/docs-new/toloka-kit/reference/toloka.client.task.Task)
+- [Toloka API: Get task by ID](https://toloka.ai/docs/api/api-reference/#get-/tasks/-id-)

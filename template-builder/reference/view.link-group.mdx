@@ -1,0 +1,33 @@
+---
+title: "view.link-group | Template Builder"
+date: "2023-02-10T09:15:32.596227"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+# view.link-group
+
+Puts links into groups.
+
+The most important link in a group can be highlighted with a border: set the `theme` property to `primary` for this link.
+
+This only groups links, unlike [view.group](/docs-new/template-builder/reference/view.group).
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/2IwCYi-S3xPSL9">View example</Button>
+
+## Component properties {#properties}
+
+**Name** | **Type** | **Description**
+----- | ----- | -----
+`type`<span style="color: red">\*</span> | "view.link-group" | Set component type.
+`label` | _string_ | Label above the component.
+`hint` | _string_ | Hint text.
+`links`<span style="color: red">\*</span> | _array_ | Array of links that make up a group.
+`links[]` | _object_ | Link parameters.
+`links[].content`<span style="color: red">\*</span> | _string_ | Link text displayed to a Toloker. Unviewed links are blue and underlined, and clicked links are purple.
+`links[].theme` | _string_ | Defines the appearance of the link. If you specify `"theme": "primary"`, it's a button, otherwise it's a text link.
+`links[].url`<span style="color: red">\*</span> | _string_ | Link address. Inserts a link with the search query when [helper. search-query](/docs-new/template-builder/reference/helper.search-query) is used.
+`validation` | _condition_ | Validation based on condition.

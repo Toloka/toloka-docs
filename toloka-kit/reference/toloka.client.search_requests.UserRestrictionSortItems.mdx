@@ -1,0 +1,33 @@
+---
+title: "UserRestrictionSortItems | Toloka-Kit"
+date: "2023-02-07T15:41:44.607515"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# UserRestrictionSortItems
+`toloka.client.search_requests.UserRestrictionSortItems`
+
+```python
+UserRestrictionSortItems(self, items=None)
+```
+
+Keys for sorting Toloker restrictions in search results.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`items`|**Optional\[List\[[SortItem](/docs-new/toloka-kit/reference/toloka.client.search_requests.UserRestrictionSortItems.SortItem)\]\]**|<p>A list of sorting keys. Supported values:</p> <ul> <li>`&#x27;id&#x27;` — The ID of a restriction.</li> <li>`&#x27;created&#x27;` — The restriction creation date.</li> </ul>
+
+**Examples:**
+
+The example shows how to find Toloker restrictions sorted by creation date in descending order. Restrictions with equal creation dates are sorted by IDs in ascending order.
+
+```python
+sort = toloka.client.search_requests.UserRestrictionSortItems(['-created', 'id'])
+result = toloka_client.find_user_restrictions(pool_id=my_pretty_pool_id, sort=sort, limit=10)
+```

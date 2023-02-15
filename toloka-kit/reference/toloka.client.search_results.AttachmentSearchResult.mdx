@@ -1,0 +1,30 @@
+---
+title: "AttachmentSearchResult | Toloka-Kit"
+date: "2023-02-07T15:41:34.802800"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# AttachmentSearchResult
+`toloka.client.search_results.AttachmentSearchResult`
+
+```python
+AttachmentSearchResult(
+    self,
+    *,
+    items: Optional[List[Attachment]] = None,
+    has_more: Optional[bool] = None
+)
+```
+
+The result of searching attachments.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`items`|**Optional\[List\[[Attachment](/docs-new/toloka-kit/reference/toloka.client.attachment.Attachment)\]\]**|<p>A list with found attachments.</p>
+`has_more`|**Optional\[bool\]**|<p>A flag showing whether there are more matching attachments.</p> <ul> <li>`True` — There are more matching attachments, not included in `items` due to the limit set in the search request.</li> <li>`False` — `items` contains all matching attachments.</li> </ul>

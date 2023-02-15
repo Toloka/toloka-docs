@@ -1,0 +1,37 @@
+---
+title: "field.button-radio-group | Template Builder"
+date: "2023-02-10T09:15:31.706800"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FieldButtonRadioGroupTable1 from './field.button-radio-group/subcomponents/field.button-radio-group-table-1.mdx'
+
+# field.button-radio-group
+
+Adds buttons for selecting an answer option. This is useful if there are several options. You can add just one button, but it's easier to use [field.button-radio](/docs-new/template-builder/reference/field.button-radio) for that.
+
+The button size depends on the length of the text.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/jBYQsbgj3twiqX">View example</Button>
+
+## Component properties {#properties}
+
+**Name** | **Type** | **Description**
+----- | ----- | -----
+`type`<span style="color: red">\*</span> | "field.button-radio-group" | Set component type.
+`data`<span style="color: red">\*</span> | _writable_ | Data with values that will be processed or changed.
+`label` | _string_ | Label above the component.
+`disabled` | _boolean_ | This property prevents clicking the button. If the value is `true`, the button is not active (a Toloker will not be able to click it).
+`hint` | _string_ | Hint text.
+`options`<span style="color: red">\*</span> | _array_ | An array of buttons.
+`options[]` | _object_ | A button.
+`options[].hint` | _string_ | Additional information.
+`options[].label`<span style="color: red">\*</span> | _string_ | The text on the button.
+`options[].value`<span style="color: red">\*</span> | _any_ | Returned value.
+`rtl` | _object_ | In some languages, like Arabic or Hebrew, text is written from right to left. Use this property to set up the correct display mode for the component.<br/><br/><Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/tq6fCNm_3ttFBW">View example</Button><br/><br/>[Learn more about RTL languages](https://www.w3.org/International/questions/qa-scripts).
+`rtl.mode` | _string_ | <FieldButtonRadioGroupTable1/>
+`validation` | _condition_ | Validation based on condition.

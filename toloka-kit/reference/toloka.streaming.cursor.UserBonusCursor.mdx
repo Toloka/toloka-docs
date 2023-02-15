@@ -1,0 +1,50 @@
+---
+title: "UserBonusCursor | Toloka-Kit"
+date: "2023-02-07T15:41:57.673985"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# UserBonusCursor
+`toloka.streaming.cursor.UserBonusCursor` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/streaming/cursor.py#L297)
+
+```python
+UserBonusCursor(
+    self,
+    toloka_client: Union[TolokaClient, AsyncTolokaClient],
+    user_id: Optional[str] = None,
+    assignment_id: Optional[str] = None,
+    private_comment: Optional[str] = None,
+    id_lt: Optional[str] = None,
+    id_lte: Optional[str] = None,
+    id_gt: Optional[str] = None,
+    id_gte: Optional[str] = None,
+    created_lt: Optional[datetime] = None,
+    created_lte: Optional[datetime] = None,
+    created_gt: Optional[datetime] = None,
+    created_gte: Optional[datetime] = None
+)
+```
+
+Iterator over `UserBonus` instances by create time.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`toloka_client`|**Union\[[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient), [AsyncTolokaClient](/docs-new/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient)\]**|<p>TolokaClient object that is being used to search `UserBonus` instances.</p>
+`request`|**[UserBonusSearchRequest](/docs-new/toloka-kit/reference/toloka.client.search_requests.UserBonusSearchRequest)**|<p>Base request to search `UserBonus` instances by.</p>
+
+**Examples:**
+
+Iterate over `UserBonus` instances.
+
+```python
+it = UserBonusCursor(toloka_client=toloka_client)
+current_bonuses = list(it)
+# ... new `UserBonus` instances could appear ...
+new_bonuses = list(it)  # Contains only new `UserBonus` instances, appeared since the previous call.
+```

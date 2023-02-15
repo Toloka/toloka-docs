@@ -1,0 +1,34 @@
+---
+title: "Requester | Toloka-Kit"
+date: "2023-02-07T15:42:08.876938"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# Requester
+`toloka.client.requester.Requester` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/requester.py#L9)
+
+```python
+Requester(
+    self,
+    *,
+    id: Optional[str] = None,
+    balance: Optional[Decimal] = None,
+    public_name: Optional[Dict[str, str]] = None,
+    company: Optional[Company] = None
+)
+```
+
+Contains information about the customer and the account balance
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`id`|**Optional\[str\]**|<p>Requester ID.</p>
+`balance`|**Optional\[Decimal\]**|<p>Account balance in dollars.</p>
+`public_name`|**Optional\[Dict\[str, str\]\]**|<p>The requester&#x27;s name in Toloka.</p>
+`company`|**Optional\[[Company](/docs-new/toloka-kit/reference/toloka.client.requester.Requester.Company)\]**|

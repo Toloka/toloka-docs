@@ -1,0 +1,33 @@
+---
+title: "add_action | Toloka-Kit"
+date: "2023-02-07T15:42:11.306246"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# add_action
+`toloka.client.quality_control.QualityControl.add_action` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/quality_control.py#L143)
+
+```python
+add_action(
+    self,
+    collector: CollectorConfig,
+    action: RuleAction,
+    conditions: List[RuleCondition]
+)
+```
+
+Adds new QualityControlConfig to QualityControl object. Usually in pool.
+
+See example in QualityControl class.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`collector`|**[CollectorConfig](/docs-new/toloka-kit/reference/toloka.client.collectors.CollectorConfig)**|<p>Parameters for collecting statistics (for example, the number of task skips in the pool).</p>
+`action`|**[RuleAction](/docs-new/toloka-kit/reference/toloka.client.actions.RuleAction)**|<p>Action if conditions are met (for example, close access to the project).</p>
+`conditions`|**List\[[RuleCondition](/docs-new/toloka-kit/reference/toloka.client.conditions.RuleCondition)\]**|<p>Conditions (for example, skipping 10 sets of tasks in a row).</p>

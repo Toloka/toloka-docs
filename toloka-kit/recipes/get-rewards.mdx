@@ -1,0 +1,72 @@
+---
+title: "Get list of all rewards issued | Toloka-Kit"
+date: "2023-02-07T15:40:39.662217"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import GetUserBonuses from './subcomponents/get_user_bonuses.mdx'
+
+# Get list of all rewards issued
+
+_Get all the rewards you issued in Toloka._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Print reward IDs, public titles, and amount {#step-three}
+
+Iterate through all the rewards calling the `get_user_bonuses()` method.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      for bonus in toloka_client.<Term term="get_user_bonuses"><GetUserBonuses/></Term>():
+      <br/>    print(bonus.id, bonus.public_title.get('EN'), bonus.amount)
+    </HighlightChildren>
+  }
+  textToCopy={`for bonus in toloka_client.get_user_bonuses():
+    print(bonus.id, bonus.public_title.get('EN'), bonus.amount)`}
+/>
+
+You should get an output with the reward IDs, public titles, and amount which looks like this.
+
+```bash
+3139 Perfect job! 0.500
+3258 Completed much faster than others 1.000
+```
+
+## Complete code: Get list of all rewards issued {#complete-code}
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+for bonus in toloka_client.get_user_bonuses():
+    print(bonus.id, bonus.public_title.get('EN'), bonus.amount)
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_user_bonuses()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_user_bonuses) method_
+
+</Note>
+
+## See also {#see-also}
+
+- [How does Toloka work?](https://toloka.ai/en/docs/guide/concepts/overview)
+- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [Toloka API: Get list of rewards](https://toloka.ai/docs/api/api-reference/#get-/user-bonuses)

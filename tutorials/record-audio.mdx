@@ -1,0 +1,304 @@
+---
+title: "Voice recording | Toloka tutorials"
+date: "2023-02-14T11:23:07.443732"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tutorialsMenu"
+---
+
+import TutorialsRegister from './subcomponents/register.mdx'
+import TutorialsTopUpTutorial from './subcomponents/top-up-tutorial.mdx'
+import TolokaRequesterSourceUsePreset from '../subcomponents/toloka-requester-source/id-toloka-requester-source/use-preset.mdx'
+import TutorialsCreateProjectButton from './subcomponents/create-project-button.mdx'
+import TutorialsChoosePresetImage from './subcomponents/choose-preset-image.mdx'
+import TutorialsWhoAreTolokers from './subcomponents/who-are-tolokers.mdx'
+import TutorialsAddNameDescription from './subcomponents/add-name-description.mdx'
+import TolokaRequesterSourceTbOrHtml from '../subcomponents/toloka-requester-source/id-toloka-requester-source/tb-or-html.mdx'
+import TolokaRequesterSourceSpecificationDefinition from '../subcomponents/toloka-requester-source/id-toloka-requester-source/specification-definition.mdx'
+import TolokaRequesterSourceClickShowSpecifications from '../subcomponents/toloka-requester-source/id-toloka-requester-source/click-show-specifications.mdx'
+import TolokaRequesterSourceSpecificationMatch from '../subcomponents/toloka-requester-source/id-toloka-requester-source/specification-match.mdx'
+import TolokaRequesterSourceInstructions from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instructions.mdx'
+import TolokaRequesterSourceInstructionCheck from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instruction-check.mdx'
+import TolokaRequesterSourceInstructionNote from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instruction-note.mdx'
+import TutorialsCreateProjectImage from './subcomponents/create-project-image.mdx'
+import TolokaRequesterSourceWhatIsPool from '../subcomponents/toloka-requester-source/id-toloka-requester-source/what-is-pool.mdx'
+import TolokaRequesterPoolType from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx'
+import TolokaRequesterPoolName from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
+import TolokaRequesterPoolDescription from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
+import TolokaRequesterSourceAudienceSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/audience-settings.mdx'
+import TolokaRequesterSourceFilters from '../subcomponents/toloka-requester-source/id-toloka-requester-source/filters.mdx'
+import TutorialsSpeedFilterImage from './subcomponents/speed-filter-image.mdx'
+import TutorialsQualityControl from './subcomponents/quality-control.mdx'
+import TutorialsNaAcceptance from './subcomponents/na-acceptance.mdx'
+import TolokaRequesterSourcePriceSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/price-settings.mdx'
+import TolokaRequesterSourceOverlapSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/overlap-settings.mdx'
+import TutorialsTimePerTaskSuite from './subcomponents/time-per-task-suite.mdx'
+import TutorialsUploadTasks from './subcomponents/upload-tasks.mdx'
+import TolokaRequesterSourceDownloadTemplate from '../subcomponents/toloka-requester-source/id-toloka-requester-source/download-template.mdx'
+import TolokaRequesterSourceTaskSuits from '../subcomponents/toloka-requester-source/id-toloka-requester-source/task-suits.mdx'
+import TutorialsDoubleCheck from './subcomponents/double-check.mdx'
+import TolokaRequesterSourceStepEnabled from '../subcomponents/toloka-requester-source/id-toloka-requester-source/step-enabled.mdx'
+import TolokaRequesterSourcePoolIsReady from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-is-ready.mdx'
+import TolokaRequesterSourceStartButton from '../subcomponents/toloka-requester-source/id-toloka-requester-source/start-button.mdx'
+import ContactSupport from '../guide/subcomponents/contact-support.mdx'
+
+# Voice recording
+
+In this tutorial, you will learn how to run voice recording in Toloka. We will use a project preset designed specifically for this type of data labeling.
+
+Voice recording is a type of data labeling task with the text block to read and the voice recorder button. Using the Toloka mobile app, Tolokers should tap the button and read the text aloud. After getting the results, you can listen to the recordings and download them.
+
+<Note mode="note" title="Note">
+
+You may need additional projects for your task, such as dataset pre-check or checking Tolokers' responses. Learn more about this in [Decomposition of the task](https://toloka.ai/en/docs/guide/concepts/solution-architecture).
+
+</Note>
+
+## Prerequisites {#prerequisites}
+
+Before you begin:
+
+- <TutorialsRegister/>
+
+- <TutorialsTopUpTutorial/>
+
+## Choose a preset {#preset}
+
+<TolokaRequesterSourceUsePreset/>
+
+1. Follow [this link](https://platform.toloka.ai/requester/templates?choosedCard=xNndbVZQR3KCgabyAQyY), or create a project manually:
+
+    1. <TutorialsCreateProjectButton/>
+
+        <TutorialsChoosePresetImage/>
+
+    1. Select the **Voice recording** preset.
+
+1. Click **Choose this preset** in the pop-up tab.
+
+## Create a project {#project}
+
+<TutorialsWhoAreTolokers/>
+
+1. <TutorialsAddNameDescription/>
+
+    - **Name to show Tolokers**: In 2–5 words, state the general idea of the project.
+
+    - **Description for Tolokers**: In a couple of sentences, explain what you expect Tolokers to do. This is just an overview. You will write instructions later.
+
+    <Image withBackground imageId="1675426317683" alt="Create a project. Step 1" />
+
+1. In the **Task interface** section, set up what your tasks will look like. This preset has a task template with layout and validation pre-configured.
+
+    <TolokaRequesterSourceTbOrHtml/>
+
+    1. In the **Config** section, you can edit the code to change the appearance and layout of the task elements. For a trial pool, keep the code as is.
+
+        To learn about the properties of the **Config** section, their possible values and the impact on the task interface, see the [Template Builder Help](/docs-new/template-builder/reference/).
+
+    1. In the **Input data example** section, you can change the sample text. This text is only used to display the task interface preview on the right.
+
+        <Image withBackground imageId="1675426320081" alt="Create a project. Input data example" />
+
+    1. <TolokaRequesterSourceSpecificationDefinition/>
+
+        <TolokaRequesterSourceClickShowSpecifications/>
+
+        - **Input data**: Parameters in the file with raw task data.
+
+        - **Output data**: Parameters in the file with labeling results.
+
+        <TolokaRequesterSourceSpecificationMatch/>
+
+1. <TolokaRequesterSourceInstructions/>
+
+    <TolokaRequesterSourceInstructionCheck/>
+
+    <TolokaRequesterSourceInstructionNote/>
+
+1. To save your data and continue, click **Create a project**.
+
+    <TutorialsCreateProjectImage/>
+
+## Create a pool {#pool}
+
+<TolokaRequesterSourceWhatIsPool/>
+
+1. Click **Add a pool** on the project page.
+
+1. <TolokaRequesterPoolType/>
+
+1. <TolokaRequesterPoolName/>
+
+1. <TolokaRequesterPoolDescription/>
+
+1. Click **Create**.
+
+1. <TolokaRequesterSourceAudienceSettings/>
+
+    1. Clear **My tasks may contain shocking or pornographic content** if your project has none of those.
+
+    1. <TolokaRequesterSourceFilters/>
+
+        1. For example, add the **Languages** filter:
+
+            <Image withBackground imageId="1675426305038" alt="Create a pool. Languages filter" />
+
+        1. It is best to launch voice recording tasks in the Toloka mobile app so that Tolokers can record audio directly in a task using the device's built-in voice recorder. Add the **Client** filter and select **Toloka for mobile**.
+
+    1. Use the **Speed/quality balance** slider to change the number of Tolokers who can see your tasks. Move the slider to the right to exclude Tolokers with lower ratings from participating in your project.
+
+        <TutorialsSpeedFilterImage/>
+
+1. <TutorialsQualityControl/>
+
+    1. Click the **Review task responses manually** toggle, and specify the number of days for checking the task in the **Review period in days** field (for example, 21).
+
+        <TutorialsNaAcceptance/>
+
+    1. The **Voice recording** preset has the pre-configured quality control rules:
+
+        - In most cases, you can keep the **Fast responses** rule as is. It filters out Tolokers who complete tasks too fast. The default settings mean that Tolokers are banned from the project for 1 day if they complete tasks in 4 out of 5 task suites in less than 15 seconds.
+
+        - Delete the pre-configured **Majority vote** rule.
+
+    1. For a trial pool, the settings you’ve just made are enough. You can get better results if you set the additional quality control rules.
+
+        <Cut title="The additional quality control rules">
+
+        1. Add the **Results of assignment review** quality control rule and enter the following values:
+
+            <Image withBackground imageId="1675426309333" alt="Create a pool. Results of assignment review" />
+
+            This means that if 35% or more of a Toloker's responses are rejected, the Toloker is banned and can't access your tasks for 15 days. The rule takes effect after 3 responses of the Toloker are reviewed.
+
+        1. Add the [Processing rejected and accepted assignments](https://toloka.ai/en/docs/guide/concepts/reassessment-after-accepting) rule:
+
+            <Image withBackground imageId="1675426312356" alt="Create a pool. Processing rejected and accepted assignments" />
+
+            This means that if you reject assignments during the review, they'll be sent for re-completion to another Toloker.
+
+        </Cut>
+
+1. <TolokaRequesterSourcePriceSettings/>
+
+    1. In **Price per task suite**, set the amount of money to pay per task suite done by one Toloker.
+
+        A task suite is a page with a number of tasks. It can contain one or several tasks. If the tasks are simple, you can add 8–10 tasks per suite.
+
+    1. <TolokaRequesterSourceOverlapSettings/>
+
+        The value depends on how many recordings of the same phrase you want to collect. If one is enough, set `1`.
+
+    1. At the bottom of the **Price** section, you see **Price per 1 task**. This is the amount of money paid per task.
+
+1. <TutorialsTimePerTaskSuite/>
+
+    This time should be enough to read the instructions and load the task (for example, 1,200 seconds).
+
+1. <TutorialsUploadTasks/>
+
+    1. Create the tasks for Tolokers:
+
+        1. <TolokaRequesterSourceDownloadTemplate/>
+
+            For this type of project, the file with tasks must have one parameter. Its name equals `INPUT:text`, and the values are texts.
+
+            ```plaintext
+            INPUT:text
+            Does white chocolate have cocoa?
+            How many rings are there in the Olympic Games symbol?
+            What is the capital of Australia?
+            ```
+
+        1. Open the downloaded file, and replace the sample values with your texts.
+
+        1. Click **Drop file here or select**, and upload the file you’ve just made.
+
+        1. Click **Continue**.
+
+    1. <TolokaRequesterSourceTaskSuits/>
+
+        - **General tasks**: These are tasks for Tolokers to label.
+
+        - **Control tasks**: These are tasks with predefined answers used to control the quality of responses. For this project, you don’t need control tasks.
+
+        - **Training tasks**: These are tasks with predefined answers and explanations for Tolokers. Normally you use training tasks in separate training pools. You don’t have to include them.
+
+        For example, you can add 5 general tasks per suite:
+
+        <Image withBackground imageId="1675426322904" alt="Upload data. Tasks per suite" />
+
+    1. Click **Combine tasks into suites**.
+
+1. <TutorialsDoubleCheck/>
+
+    <TolokaRequesterSourceStepEnabled/>
+
+<TolokaRequesterSourcePoolIsReady/>
+
+## Start labeling {#labeling}
+
+1. Make sure you have [topped up your account](https://toloka.ai/en/docs/guide/concepts/refill).
+
+1. <TolokaRequesterSourceStartButton/>
+
+    <Image withBackground imageId="1675426314711" alt="Start labeling. Step 2" />
+
+1. In the pop-up panel, review the budget and click **Launch**.
+
+## See the results {#results}
+
+Track the labeling progress on the pool page. You can start the review when the first results are received.
+
+After the time period specified in step 4.1 of [creating the pool](#pool), all responses are automatically accepted, regardless of their quality.
+
+1. Go to the pool, and click **Review assignments**.
+
+    <Image withBackground imageId="1675426303140" alt="See the results. Step 1" />
+
+1. Choose an assignment.
+
+1. Check the responses, and click **Accept** or **Decline**. For rejected responses, enter a comment to specify the reason.
+
+    <Note mode="note" title="Note">
+
+    To learn about other ways of review, see the [Reviewing Tolokers' responses](https://toloka.ai/en/docs/guide/concepts/accept) section.
+
+    </Note>
+
+1. After checking all the assignments, click **Download results**.
+
+    <Image withBackground imageId="1675426315839" alt="See the results. Download results" />
+
+    You will get the TSV file with the labeling results.
+
+1. To download the recordings, click the arrow next to the **Download results** button. Choose **Download attachments** from the drop-down menu.
+
+    <Image withBackground imageId="1675426307373" alt="See the results. Download attachments" />
+
+## Troubleshooting {#troubleshooting}
+
+<Cut title="How do I show two different versions of the text to Tolokers?">
+
+If you pass texts to the input data, you can upload 2 different tasks to the pool: pass Text 1 in the `INPUT: <input field name>` field of Task 1. In Task 2, use this field to pass Text 2.
+
+If the text is specified in the task interface, then clone the project. To limit a Toloker to doing only one task in your project, use the [Submitted responses](https://toloka.ai/en/docs/guide/concepts/submitted-answers) rule. You can assign a skill or ban the Toloker after they submit one response.
+
+</Cut>
+
+<Cut title="How do I make an image expand to its maximum size on click?">
+
+The `popup` property of the component [view.image](/docs-new/template-builder/reference/view.image) specifies whether opening a full-size image with a click is allowed. By default, it is `true` (allowed).
+
+</Cut>
+
+## See also {#see-also}
+
+- [Crowdsourcing concepts: Instructions](https://toloka.ai/knowledgebase/instruction/)
+- [Crowdsourcing concepts: Quality control](https://toloka.ai/knowledgebase/quality-control/)
+- [Crowdsourcing concepts: Pricing](https://toloka.ai/knowledgebase/pricing/)
+
+<ContactSupport/>

@@ -1,0 +1,113 @@
+---
+title: "Configure keyboard shortcuts | Template Builder"
+date: "2023-02-10T09:15:29.384553"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+# Configure keyboard shortcuts
+
+Add keyboard shortcuts for the frequently used interface elements. This will help Tolokers because keyboard combinations are somewhat faster than mouse clicks.
+
+In [Toloka](https://toloka.ai/), shortcuts are particularly helpful because Tolokers will do your tasks faster and you can pay less for them. If your project has a low score for “Interface usability“, adding shortcuts will help improve the rating.
+
+## Shortcut features {#hotkeys-features}
+
+Shortcuts are digits or letters shown next to buttons. Shortcuts help Tolokers do an action by pressing a key.
+
+<Image width="106px" withBackground imageId="1675425350149" alt="image" />
+
+A shortcut is always added to a button if they do the same thing.
+
+Keyboard shortcuts are independent of the interface. They work even if they are not displayed, like if you set up a shortcut without setting up a button.
+
+Some components provide additional ways for setting up shortcuts. For example, the [field.image-annotation](/docs-new/template-builder/reference/field.image-annotation) component has its own [plugin](/docs-new/template-builder/reference/plugin.field.image-annotation.hotkeys).
+
+## How to configure shortcuts {#set-hotkeys}
+
+Use a separate plugin to configure shortcuts: [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys). Use this plugin to assign keys to actions. Plugins are added to the `plugins` array in the configuration root.
+
+```json
+{
+  "type": "plugin.hotkeys",
+    "p": {
+     "type": "action.play-pause",
+     "view": {
+       "$ref": "view.items.0"
+    }
+  }
+}
+```
+
+In this example, pressing **P** triggers the [action.play-pause](/docs-new/template-builder/reference/action.play-pause) action. It starts or pauses playback in the player. The player is specified in the `view` property by using the [$ref](/docs-new/template-builder/best-practices/reuse) structure, which links to another place in the configuration.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/Xgp6T_QW3ttAao">View example</Button>
+
+<Note mode="tip" title="Tip">
+
+Mind the keyboard layout when setting up shortcuts: if you choose a character that looks similar in the Cyrillic and Latin layouts, it might confuse Tolokers.
+
+</Note>
+
+## Radio buttons and checkboxes {#radio-check}
+
+Use the [action.set](/docs-new/template-builder/reference/action.set) component to set up shortcuts for radio buttons. For checkboxes, use [action.toggle](/docs-new/template-builder/reference/action.toggle). Assign shortcuts to actions that your radio buttons or checkboxes do.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/I1QHLeKP3ttEqg">View example</Button>
+
+## Reusing shortcuts {#reuse}
+
+You can [reuse](/docs-new/template-builder/best-practices/reuse) shortcuts just like any other code fragments. To do this, use the structure `{ "$ref": "path.to.element" }`. Reuse is helpful when you need to insert the same shortcuts in multiple places in your code.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/xeczgrzA3ttEr8">View example</Button>
+
+<Note mode="tip" title="Tip">
+
+Put your reused code into `vars` so that you don't have to change the path in the `$ref` property when you change the configuration.
+
+</Note>
+
+## Multiple actions {#bulk-actions}
+
+For a Toloker to trigger multiple actions by pressing a button, add the [action.bulk](/docs-new/template-builder/reference/action.bulk) component. For example, you can use it to show multiple notifications.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/8zMd_Hrb3ttErs">View example</Button>
+
+## Conditions in shortcuts {#if-switch}
+
+If you use a condition ([helper.if](/docs-new/template-builder/reference/helper.if) or [helper.switch](/docs-new/template-builder/reference/helper.switch)), also add it to the shortcut to ensure consistency.
+
+If you set up a shortcut without a condition, the shortcut will still work, but won't be visualized. This might cause errors.
+
+Here is an example of an error. In this example, if Tolokers respond **Yes**, they see another question. But they can use a keyboard shortcut to respond to it, even if it's not shown in the interface.
+
+View example with error in the sandbox.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/wP7fHpwv3ttEsa">View example</Button>
+
+View corrected example in the sandbox.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/j-2Nt8983ttEtB">View example</Button>
+
+## Troubleshooting {#troubleshooting}
+
+To display a shortcut in the interface, set the shortcut to the same [action](/docs-new/template-builder/reference/actions) that is performed when the button is clicked.
+
+Assign an action to the component if you haven't yet:
+- [action.set](/docs-new/template-builder/reference/action.set) for radio buttons.
+- [action.toggle](/docs-new/template-builder/reference/action.toggle) for checkboxes.
+- [action.play-pause](/docs-new/template-builder/reference/action.play-pause) for playback control.
+- [action.open-close](/docs-new/template-builder/reference/action.open-close) to zoom in on images.
+
+You can see the full list of actions in [List of actions](/docs-new/template-builder/reference/actions).
+
+Keep in mind the following:
+
+- The data types for actions must be the same. For example, in the following case the shortcut works but is not displayed: clicking on the button saves the `“true”` string to the results, and the Boolean value `true` is defined for the shortcut.
+- If multiple actions are triggered when the button is clicked ([action.bulk](/docs-new/template-builder/reference/action.bulk)), the sequence of these actions for the shortcut must be the same.
+- If you use a conditional operator to select an action, such as [helper.if](/docs-new/template-builder/reference/helper.if), the same conditional operator (**helper.if**) must be called under the same rules when the shortcut key is pressed.
+
+<Button themeColor="light" view="default" size="l" type="link" url="/docs-new/template-builder/support">Contact support</Button>

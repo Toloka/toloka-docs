@@ -1,0 +1,29 @@
+---
+title: "Country | Toloka-Kit"
+date: "2023-02-07T15:42:12.269624"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# Country
+`toloka.client.filter.Country` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/filter.py#L270)
+
+```python
+Country(
+    self,
+    operator: IdentityOperator,
+    value: str
+)
+```
+
+Filtering Tolokers by a country of residence specified in their profiles.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`operator`|**[IdentityOperator](/docs-new/toloka-kit/reference/toloka.client.primitives.operators.IdentityOperator)**|<p>An operator used in a condition. Allowed set of operators depends on the filter.</p>
+`value`|**str**|<p>A two-letter code of the country taken from the [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) standard.</p>

@@ -1,0 +1,94 @@
+---
+title: "Reviewing assignments automatically | Template Builder"
+date: "2023-02-10T09:15:29.211993"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+# Reviewing assignments automatically
+
+Define clear conditions for your task to ensure that you get the desired output. The conditions check that a Toloker did the required actions.
+
+In [Toloka](https://toloka.ai/), you can use conditions to automate the manual review process. For example, a Toloker can't submit an assignment before they meet your required conditions.
+
+## Review features {#features}
+
+- What can be reviewed:
+    - Output data in [fields.*](/docs-new/template-builder/reference/fields);
+    - Input data in [views.*](/docs-new/template-builder/reference/views) and [layouts.*](/docs-new/template-builder/reference/layouts).
+
+- Where to specify conditions:
+    - In the `validation` property of the parent component.
+    - In the `condition` property of [plugin.trigger](/docs-new/template-builder/reference/plugin.trigger).
+
+- A link to the reviewed data is specified in the `data` property.
+- Some components don't have the `data` property, and you can only access them from the `validation` property of the parent component (for example, [condition.played](/docs-new/template-builder/reference/condition.played) and [condition.played-fully](/docs-new/template-builder/reference/condition.played-fully)).
+
+## Making a field required {#condition-required}
+
+To check that the data is filled in, add the [condition.required](/docs-new/template-builder/reference/condition.required) component.
+
+In this example, a Toloker must fill in the text field, otherwise the “Submit” button won't work. The [condition.empty](/docs-new/template-builder/reference/condition.empty) component works the opposite way: it checks if the data is empty and returns `false` if the data has a value.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/VaKRkzm-3ttEim">View example</Button>
+
+## Comparing values {#condition-equals-or-not}
+
+#### Checking that values are equal
+
+To check that the preset value and output value are equal, use the component [condition.equals](/docs-new/template-builder/reference/condition.equals).
+
+In this example, if a Toloker responds “No”, a text entry field appears.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/jlpDLfIe3ttEjY">View example</Button>
+
+#### Checking that values are not equal
+
+To return the values that don't meet the specified conditions, list them in the `condition` property of the [condition.not](/docs-new/template-builder/reference/condition.not) component.
+
+In this example, if the `condition.equals` condition is met and returns `true`, `condition.not` returns `false` and hides the text entry field.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/EQrcJAhh3ttEkP">View example</Button>
+
+#### When there are multiple correct responses
+
+To check that an array in `data` is a subarray for `parent`, add the component [condition.sub-array](/docs-new/template-builder/reference/condition.sub-array).
+
+In this example, the component checks that the values `animal` and `human` are part of the `objects` array. If the responses “Human” and “Animal” are selected, the `helper.if` logical component displays the question: “Do the human and animal interact?”.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/hKrpY1DO3xEBoC">View example</Button>
+
+## Checking multiple conditions {#multiple-conditions}
+
+#### Meeting all conditions
+
+To check that multiple conditions are met, list them in the `condition` property of the [condition.all](/docs-new/template-builder/reference/condition.all) component.
+
+In this example, a Toloker has to do two actions: to fill in the text field and to click the link in the interface. The “Submit” button won't work until both conditions are met.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/UVTRP1wl3vw9ij">View example</Button>
+
+#### Meeting at least one of the conditions
+
+To check that at least one of the conditions is met, list the conditions in the `condition` property of the [condition.any](/docs-new/template-builder/reference/condition.any) component.
+
+In this example, a Toloker has to perform at least one of the two actions: to select “Nothing is written there” or to fill in the “What is written on the image?” field. The “Submit” button won't work until one of the conditions is met.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/UGnbki-73xPDHm">View example</Button>
+
+## Checking conditions for specific components {#component}
+
+Some conditions work only with certain [components](https://toloka.ai/en/docs/glossary#component). For example, [condition.link-opened](/docs-new/template-builder/reference/condition.link-opened) works only with `view.link`.
+
+In this example, a Toloker has to click the link in the interface, otherwise the “Submit” button won't work.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/DNok6Tun3ttEpZ">View example</Button>
+
+## Can't find the desired component? {#schema}
+
+In the [list of conditions](/docs-new/template-builder/reference/conditions), you can see all the available components with the name `conditions.*`. If you can't find the desired component in the list or want to use a preset [configuration](https://toloka.ai/en/docs/glossary#configuration), define a review in the [JSON Schema](https://json-schema.org/learn/getting-started-step-by-step.html) format using [condition.schema](/docs-new/template-builder/reference/condition.schema).
+
+<Button themeColor="light" view="default" size="l" type="link" url="/docs-new/template-builder/support">Contact support</Button>

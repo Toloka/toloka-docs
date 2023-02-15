@@ -1,0 +1,303 @@
+---
+title: "Searching for product characteristics | Toloka tutorials"
+date: "2023-02-14T11:23:06.078620"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tutorialsMenu"
+---
+
+import TutorialsRegister from './subcomponents/register.mdx'
+import TutorialsTopUpTutorial from './subcomponents/top-up-tutorial.mdx'
+import TolokaRequesterSourceUsePreset from '../subcomponents/toloka-requester-source/id-toloka-requester-source/use-preset.mdx'
+import TutorialsCreateProjectButton from './subcomponents/create-project-button.mdx'
+import TutorialsChoosePresetImage from './subcomponents/choose-preset-image.mdx'
+import TutorialsWhoAreTolokers from './subcomponents/who-are-tolokers.mdx'
+import TutorialsAddNameDescription from './subcomponents/add-name-description.mdx'
+import TolokaRequesterSourceTbOrHtml from '../subcomponents/toloka-requester-source/id-toloka-requester-source/tb-or-html.mdx'
+import TolokaRequesterSourceSpecificationDefinition from '../subcomponents/toloka-requester-source/id-toloka-requester-source/specification-definition.mdx'
+import TolokaRequesterSourceClickShowSpecifications from '../subcomponents/toloka-requester-source/id-toloka-requester-source/click-show-specifications.mdx'
+import TolokaRequesterSourceSpecificationMatch from '../subcomponents/toloka-requester-source/id-toloka-requester-source/specification-match.mdx'
+import TolokaRequesterSourceInstructions from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instructions.mdx'
+import TolokaRequesterSourceInstructionCheck from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instruction-check.mdx'
+import TolokaRequesterSourceInstructionNote from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instruction-note.mdx'
+import TutorialsCreateProjectImage from './subcomponents/create-project-image.mdx'
+import TolokaRequesterSourceWhatIsPool from '../subcomponents/toloka-requester-source/id-toloka-requester-source/what-is-pool.mdx'
+import TolokaRequesterPoolType from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx'
+import TolokaRequesterPoolName from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
+import TolokaRequesterPoolDescription from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
+import TolokaRequesterSourceAudienceSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/audience-settings.mdx'
+import TolokaRequesterSourceFilters from '../subcomponents/toloka-requester-source/id-toloka-requester-source/filters.mdx'
+import TutorialsSpeedFilterImage from './subcomponents/speed-filter-image.mdx'
+import TutorialsQualityControl from './subcomponents/quality-control.mdx'
+import TolokaRequesterSourcePriceSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/price-settings.mdx'
+import TolokaRequesterSourceOverlapSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/overlap-settings.mdx'
+import TutorialsTimePerTaskSuite from './subcomponents/time-per-task-suite.mdx'
+import TutorialsUploadTasks from './subcomponents/upload-tasks.mdx'
+import TolokaRequesterSourceDownloadTemplate from '../subcomponents/toloka-requester-source/id-toloka-requester-source/download-template.mdx'
+import TolokaRequesterSourceTaskSuits from '../subcomponents/toloka-requester-source/id-toloka-requester-source/task-suits.mdx'
+import TolokaRequesterSourceAddControlTasks from '../subcomponents/toloka-requester-source/id-toloka-requester-source/add-control-tasks.mdx'
+import TolokaRequesterSourceControlPercent from '../subcomponents/toloka-requester-source/id-toloka-requester-source/control-percent.mdx'
+import TutorialsDoubleCheck from './subcomponents/double-check.mdx'
+import TolokaRequesterSourceStepEnabled from '../subcomponents/toloka-requester-source/id-toloka-requester-source/step-enabled.mdx'
+import TolokaRequesterSourcePoolIsReady from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-is-ready.mdx'
+import TolokaRequesterSourceStartButton from '../subcomponents/toloka-requester-source/id-toloka-requester-source/start-button.mdx'
+import TolokaRequesterSourceLabelingProgress from '../subcomponents/toloka-requester-source/id-toloka-requester-source/labeling-progress.mdx'
+import ContactSupport from '../guide/subcomponents/contact-support.mdx'
+
+# Searching for product characteristics
+
+In this tutorial, you will learn how to run searching for product characteristics in Toloka. We will use a project preset designed specifically for this type of data labeling.
+
+Searching for product characteristics is a type of data labeling task with a text specifying what is required to find, and an input area for collected information.
+
+Tolokers read what and where they should find, search for the required data, and enter it to the task interface.
+
+Use this preset for the following purposes:
+
+- Searching for an item, such as a product or service, by its description.
+
+- Searching for information on a specific website, such as cities where products can be delivered on a store's website.
+
+- Searching for information about an item online, such as a company's contact information.
+
+## Prerequisites {#prerequisites}
+
+Before you begin:
+
+- <TutorialsRegister/>
+
+- <TutorialsTopUpTutorial/>
+
+## Choose a preset {#preset}
+
+<TolokaRequesterSourceUsePreset/>
+
+1. Follow [this link](https://platform.toloka.ai/requester/templates?choosedCard=axZaOYyyyQ1F0RZkJ0Zy), or create a project manually:
+
+    1. <TutorialsCreateProjectButton/>
+
+        <TutorialsChoosePresetImage/>
+
+    1. Select the **Mining business contacts** preset.
+
+1. Click **Choose this preset** in the pop-up tab.
+
+## Create a project {#project}
+
+<TutorialsWhoAreTolokers/>
+
+1. <TutorialsAddNameDescription/>
+
+    - **Name to show Tolokers**: In 2–5 words, state the general idea of the project.
+
+    - **Description for Tolokers**: In a couple of sentences, explain what you expect Tolokers to do. This is just an overview. You will write instructions later.
+
+    <Image withBackground imageId="1675425667509" alt="Create a project. Step 1" />
+
+1. In the **Task interface** section, set up what your tasks will look like.
+
+    <TolokaRequesterSourceTbOrHtml/>
+
+    1. In the **Config** section, you can edit the code to change the appearance and layout of the task elements. For example, to configure the field label which specifies the object Tolokers should find information about, replace the sample text with your value in the `label` property.
+
+        <Image withBackground imageId="1675425633484" alt="Create a project. Config text" />
+
+    1. To configure the sources where Tolokers should search for information, edit the `view.link-group` component.
+
+        - The first `url` component contains the `"path": "site"` property. The `site` is a parameter for a link where Tolokers should seek information. You will specify the list of these links in the file with tasks later in this tutorial.
+
+        - The second and third `url` components contain the links to the search queries. You can change the [search engines](/docs-new/template-builder/reference/helper.search-query) Tolokers will use in your tasks.
+
+            <Image withBackground imageId="1675425621050" alt="Create a project. Config links" />
+
+            <Note mode="note" title="Note">
+
+            To learn about other properties of the **Config** section, their possible values and the impact on the task interface, see the [Template Builder Help](/docs-new/template-builder/templates/data-search).
+
+            </Note>
+
+    1. <TolokaRequesterSourceSpecificationDefinition/>
+
+        <TolokaRequesterSourceClickShowSpecifications/>
+
+        - **Input data**: Parameters in the file with raw task data.
+
+        - **Output data**: Parameters in the file with labeling results.
+
+        <TolokaRequesterSourceSpecificationMatch/>
+
+1. <TolokaRequesterSourceInstructions/>
+
+    <TolokaRequesterSourceInstructionCheck/>
+
+    <TolokaRequesterSourceInstructionNote/>
+
+1. To save your data and continue, click **Create a project**.
+
+    <TutorialsCreateProjectImage/>
+
+## Create a pool {#pool}
+
+<TolokaRequesterSourceWhatIsPool/>
+
+1. Click **Add a pool** on the project page.
+
+1. <TolokaRequesterPoolType/>
+
+1. <TolokaRequesterPoolName/>
+
+1. <TolokaRequesterPoolDescription/>
+
+1. Click **Create**.
+
+1. <TolokaRequesterSourceAudienceSettings/>
+
+    1. Clear **My tasks may contain shocking or pornographic content** if your project has none of those.
+
+    1. <TolokaRequesterSourceFilters/>
+
+        <Image withBackground imageId="1675425628819" alt="Create a pool. Languages filter" />
+
+    1. Use the **Speed/quality balance** slider to change the number of Tolokers who can see your tasks. Move the slider to the right to exclude Tolokers with lower ratings from participating in your project.
+
+        <TutorialsSpeedFilterImage/>
+
+    1. Click the **Add skill** button. Enter the skill name and description, and leave the skill not public.
+
+        <Image width="458px" withBackground imageId="1675425655660" alt="Create a pool. Add skill" />
+
+    1. Click **Add filter → My skills** and select your skill from the previous step. Configure the filter to recruit Tolokers without the skill or those whose skill value is 65 and higher.
+
+        <Image withBackground imageId="1675425626160" alt="Create a pool. My skills filter" />
+
+        Later in this tutorial, you will add a rule that assigns this skill to Tolokers according to how accurate their responses are.
+
+1. <TutorialsQualityControl/>
+
+    1. To filter out Tolokers who complete tasks too fast, edit the pre-configured **Fast responses** rule. Specify the following values:
+
+        <Image withBackground imageId="1675425639584" alt="Create a pool. Fast responses rule" />
+
+        These settings mean that a Toloker who completes a task suite in less than 10 seconds will be suspended and won't be able to access tasks of the project for 1 day.
+
+        A task suite is a page with a number of tasks. It can contain one or several tasks. If the tasks are simple, you can add 4–6 tasks per suite.
+
+    1. Delete the pre-configured **Majority vote** rule.
+
+    1. Click **Add a quality control rule → Control tasks**, and enter the following values:
+
+        <Image withBackground imageId="1675425637126" alt="Create a pool. Control tasks rule" />
+
+        This means that a Toloker who gives 3 or more responses to the control tasks will be assigned the skill you’ve created before. The skill value is equal to the percent of correct responses. As you’ve set the filter to select Tolokers whose skill value is 65 or more in step 3.5, the rule allows you to filter out Tolokers who have shown poor results.
+
+1. <TolokaRequesterSourcePriceSettings/>
+
+    1. In **Price per task suite, $**, set the amount of money to pay per task suite done by one Toloker. A task suite is a page with a number of tasks. It can contain one or several tasks.
+
+    1. <TolokaRequesterSourceOverlapSettings/>
+
+        The default value (`3`) means that each task will have 3 responses.
+
+1. <TutorialsTimePerTaskSuite/>
+
+    This time should be enough to read the instructions, load the task, search information online, and respond (for example, 600 seconds).
+
+1. <TutorialsUploadTasks/>
+
+    1. Create the tasks for Tolokers:
+
+        1. <TolokaRequesterSourceDownloadTemplate/>
+
+            For this type of project, the file with tasks must have two parameters:
+
+            - `INPUT:name`: The names of the objects you ask Tolokers to find information about.
+
+            - `INPUT:site`: The links where you ask Tolokers to search data.
+
+            ```plaintext
+            INPUT:name	INPUT:site
+            Restauracja Basniowa	https://basniowa.rybnik.pl/
+            Ristorante Pizzeria Zia Caterina	https://www.ristorantepizzeriaziacaterina.it/
+            De Vijf Sinnen	http://www.devijfsinnen.nl/
+            ```
+
+        1. Open the downloaded file, and replace the sample data with your information.
+
+        1. Click **Drop file here or select**, and upload the file you’ve just made.
+
+        1. Click **Continue**.
+
+    1. <TolokaRequesterSourceTaskSuits/>
+
+        - **General tasks**: These are tasks for Tolokers to label.
+
+        - **Control tasks**: These are tasks with predefined answers used to control the quality of responses. You will create them in the next step.
+
+        - **Training tasks**: These are tasks with predefined answers and explanations for Tolokers. Normally you use training tasks in separate training pools. You don’t have to include them.
+
+            For example, you can add 2 general tasks and 1 control task per suite:
+
+            <Image withBackground imageId="1675425642452" alt="Upload data. Tasks per suite" />
+
+    1. Click **Combine tasks into suites**.
+
+1. <TolokaRequesterSourceAddControlTasks/>
+
+    1. Select the **email** and **phone** checkboxes, and enter the correct answer for a task. Then, click the **Save and go to next** button. Add several control tasks this way.
+
+        <TolokaRequesterSourceControlPercent/>
+
+1. <TutorialsDoubleCheck/>
+
+    <TolokaRequesterSourceStepEnabled/>
+
+<TolokaRequesterSourcePoolIsReady/>
+
+## Start labeling {#labeling}
+
+1. Make sure you have [topped up your account](https://toloka.ai/en/docs/guide/concepts/refill).
+
+1. <TolokaRequesterSourceStartButton/>
+
+    <Image withBackground imageId="1675425665389" alt="Start labeling" />
+
+1. In the pop-up panel, review the budget and click **Launch**.
+
+## See the results {#results}
+
+1. <TolokaRequesterSourceLabelingProgress/>
+
+    <Image withBackground imageId="1675425660781" alt="See the results. Step 1" />
+
+1. Click the arrow next to the **Download results** button and choose **Run Dawid-Skene model** from the drop-down menu. Click **Yes** in the pop-up window.
+
+    <Image withBackground imageId="1675425647945" alt="See the results. Step 2" />
+
+1. Open the same drop-down menu again, and click **View aggregations list**.
+
+1. Wait until the aggregation is complete, and click **Download**. You will get the TSV file with the labeling results:
+
+    - **INPUT**: The data you uploaded for labeling.
+
+    - **OUTPUT**: The results of labeling (information found by Tolokers).
+
+    - **CONFIDENCE**: The response significance according to the [Dawid-Skene model](https://toloka.ai/en/docs/guide/concepts/result-aggregation#dawid-skene).
+
+## See also {#see-also}
+
+- [Crowdsourcing concepts: Instructions](https://toloka.ai/knowledgebase/instruction/)
+- [Crowdsourcing concepts: Quality control](https://toloka.ai/knowledgebase/quality-control/)
+- [Crowdsourcing concepts: Pricing](https://toloka.ai/knowledgebase/pricing/)
+- [Template Builder: Search for information online](/docs-new/template-builder/templates/data-search)
+
+## For developers {#for-developers}
+
+- [Toloka-Kit: Search relevance](https://github.com/Toloka/toloka-kit/blob/main/examples/8.search_relevance/search_relevance.ipynb)
+
+## Datasets and reference {#datasets}
+
+- [Sample dataset files with tasks](https://labs-images-testing.s3.yandex.net/presets/sidepanel/19_search/EN/sample-files.zip)
+
+<ContactSupport/>

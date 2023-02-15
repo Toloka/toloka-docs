@@ -1,0 +1,41 @@
+---
+title: "close_pool | Toloka-Kit"
+date: "2023-02-07T15:41:35.624822"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# close_pool
+`toloka.client.TolokaClient.close_pool` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/__init__.py#L1331)
+
+```python
+close_pool(self, pool_id: str)
+```
+
+Closes a pool.
+
+If all tasks in a pool are completed, then the pool is closed automatically.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`pool_id`|**str**|<p>The ID of the pool to be closed.</p>
+
+* **Returns:**
+
+  The pool with updated status.
+
+* **Return type:**
+
+  [Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool)
+
+**Examples:**
+
+```python
+open_pool = next(toloka_client.get_pools(status='OPEN'))
+toloka_client.close_pool(pool_id=open_pool.id)
+```

@@ -1,0 +1,102 @@
+---
+title: "Object selection in an image | Template Builder"
+date: "2023-02-10T09:15:36.910591"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactSupport from '../subcomponents/contact-support.mdx'
+import SelectAreasList1 from './select-areas/subcomponents/select-areas-list-1.mdx'
+import SelectAreasList2 from './select-areas/subcomponents/select-areas-list-2.mdx'
+import SelectAreasList3 from './select-areas/subcomponents/select-areas-list-3.mdx'
+import SelectAreasList4 from './select-areas/subcomponents/select-areas-list-4.mdx'
+import SelectAreasList5 from './select-areas/subcomponents/select-areas-list-5.mdx'
+import SelectAreasList6 from './select-areas/subcomponents/select-areas-list-6.mdx'
+
+# Object selection in an image
+
+This section describes how to add the area selection editor to an image and speed up task completion with shortcuts. If you just need to insert a picture, read the [Inserting images](/docs-new/template-builder/operations/insert-images) section.
+
+## Add the area selection editor {#add-select}
+
+To allow Tolokers to select areas in pictures, use the [field.image-annotation](/docs-new/template-builder/reference/field.image-annotation) component.
+
+```json
+{
+  "view": {
+    "type": "field.image-annotation",
+    "data": {
+      "type": "data.output",
+      "path": "path"
+    },
+    "image": "url"
+  }
+}
+```
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/HdPqNHC53ttFBy">View example</Button>
+
+## Configure labeling modes {#shapes}
+
+The component offers three labeling modes: rectangle, polygon, and point markup. All three modes are available by default. You can choose to use just one or two of them.
+
+<Tabs tabs={[
+  { title: 'Rectangles', value: <SelectAreasList1/> },
+  { title: 'Polygons', value: <SelectAreasList2/> },
+  { title: 'Points', value: <SelectAreasList3/> },
+]}/>
+
+## Classify areas {#labels}
+
+You can allow Tolokers to select objects by type. For example, you may want all cars selected in the picture to be labeled as one type, and all road signs as another.
+
+```json
+{
+  "labels": [{
+      "label": "Option 1",
+      "value": "value1"
+    },
+    {
+      "label": "Option 2",
+      "value": "value2"
+    }
+  ]
+}
+```
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/wdxrrKs53ttFEX">View example</Button>
+
+For each new object of the `labels` property, a button is added to the editor that allows Tolokers to select the corresponding area type. Different values of the `value` property let Tolokers label areas with different colors.
+
+## Add keyboard shortcuts {#hotkeys}
+
+To help Tolokers work faster, you can add keyboard shortcuts using the [plugin.field.image-annotation.hotkeys](/docs-new/template-builder/reference/plugin.field.image-annotation.hotkeys) component. Shortcuts can be assigned to the up and down arrows (`up`,`down`), numbers, and Latin letters.
+
+If you install the shortcut plugin without assigning keys, they are assigned automatically.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/sn4WScBK3ttFEp">View example</Button>
+
+You can change them as described below. If you don't need some of the shortcuts, leave their value fields empty.
+
+<Tabs tabs={[
+  { title: 'Select area types', value: <SelectAreasList4/> },
+  { title: 'Select labeling modes', value: <SelectAreasList5/> },
+  { title: 'Confirm or cancel area creation', value: <SelectAreasList6/> },
+]}/>
+
+## Create a task {#create-task}
+
+To create a template for area selection tasks, use the following components:
+
+- [field.image-annotation](/docs-new/template-builder/reference/field.image-annotation): To add the area selection editor.
+- [plugin.field.image-annotation.hotkeys](/docs-new/template-builder/reference/plugin.field.image-annotation.hotkeys): To add keyboard shortcuts.
+- [view.text](/docs-new/template-builder/reference/view.text): To add a description to the task.
+- [condition.required](/docs-new/template-builder/reference/condition.required): To make sure that a Toloker selected at least one area.
+- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): To customize the task layout.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/24FTx6RS3ttFHQ">View example</Button>
+
+<ContactSupport/>

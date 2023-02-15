@@ -1,0 +1,329 @@
+---
+title: "Collecting offline data | Toloka tutorials"
+date: "2023-02-14T11:23:05.138272"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tutorialsMenu"
+---
+
+import TutorialsRegister from './subcomponents/register.mdx'
+import TutorialsTopUpTutorial from './subcomponents/top-up-tutorial.mdx'
+import TolokaRequesterSourceUsePreset from '../subcomponents/toloka-requester-source/id-toloka-requester-source/use-preset.mdx'
+import TutorialsCreateProjectButton from './subcomponents/create-project-button.mdx'
+import TutorialsChoosePresetImage from './subcomponents/choose-preset-image.mdx'
+import TutorialsWhoAreTolokers from './subcomponents/who-are-tolokers.mdx'
+import TutorialsAddNameDescription from './subcomponents/add-name-description.mdx'
+import TolokaRequesterSourceTbOrHtml from '../subcomponents/toloka-requester-source/id-toloka-requester-source/tb-or-html.mdx'
+import TolokaRequesterSourceSpecificationDefinition from '../subcomponents/toloka-requester-source/id-toloka-requester-source/specification-definition.mdx'
+import TolokaRequesterSourceClickShowSpecifications from '../subcomponents/toloka-requester-source/id-toloka-requester-source/click-show-specifications.mdx'
+import TolokaRequesterSourceSpecificationMatch from '../subcomponents/toloka-requester-source/id-toloka-requester-source/specification-match.mdx'
+import TolokaRequesterSourceInstructions from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instructions.mdx'
+import TolokaRequesterSourceInstructionCheck from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instruction-check.mdx'
+import TolokaRequesterSourceInstructionNote from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instruction-note.mdx'
+import TutorialsCreateProjectImage from './subcomponents/create-project-image.mdx'
+import TolokaRequesterSourceWhatIsPool from '../subcomponents/toloka-requester-source/id-toloka-requester-source/what-is-pool.mdx'
+import TolokaRequesterPoolType from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx'
+import TolokaRequesterPoolName from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
+import TolokaRequesterPoolDescription from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
+import TolokaRequesterSourceAudienceSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/audience-settings.mdx'
+import TolokaRequesterSourceFilters from '../subcomponents/toloka-requester-source/id-toloka-requester-source/filters.mdx'
+import TutorialsSpeedFilterImage from './subcomponents/speed-filter-image.mdx'
+import TutorialsQualityControl from './subcomponents/quality-control.mdx'
+import TutorialsNaAcceptance from './subcomponents/na-acceptance.mdx'
+import TutorialsTimePerTaskSuite from './subcomponents/time-per-task-suite.mdx'
+import TolokaRequesterSourcePriceSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/price-settings.mdx'
+import TolokaRequesterSourceOverlapSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/overlap-settings.mdx'
+import TutorialsUploadTasks from './subcomponents/upload-tasks.mdx'
+import TolokaRequesterSourceTaskSuits from '../subcomponents/toloka-requester-source/id-toloka-requester-source/task-suits.mdx'
+import TutorialsDoubleCheck from './subcomponents/double-check.mdx'
+import TolokaRequesterSourceStepEnabled from '../subcomponents/toloka-requester-source/id-toloka-requester-source/step-enabled.mdx'
+import TolokaRequesterSourcePoolIsReady from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-is-ready.mdx'
+import TolokaRequesterSourceStartButton from '../subcomponents/toloka-requester-source/id-toloka-requester-source/start-button.mdx'
+import ContactSupport from '../guide/subcomponents/contact-support.mdx'
+
+# Collecting offline data
+
+In this tutorial, you will learn how to run offline data collection in Toloka. We will use a project preset designed specifically for this type of data labeling.
+
+Offline data collection is intended for field tasks in the Toloka mobile app. A Toloker selects a point on the map, goes to the location, takes photos, and writes a comment.
+
+<Note mode="note" title="Note">
+
+You may need additional projects for your task, such as dataset pre-check or checking Tolokers' responses. Learn more about this in [Decomposition of the task](https://toloka.ai/en/docs/guide/concepts/solution-architecture).
+
+</Note>
+
+## Prerequisites {#prerequisites}
+
+Before you begin:
+
+- <TutorialsRegister/>
+
+- <TutorialsTopUpTutorial/>
+
+## Choose a preset {#preset}
+
+<TolokaRequesterSourceUsePreset/>
+
+1. Follow [this link](https://platform.toloka.ai/requester/templates?choosedCard=gM8zE48P2WLh7qa9qn4j), or create a project manually:
+
+    1. <TutorialsCreateProjectButton/>
+
+        <TutorialsChoosePresetImage/>
+
+    1. Select the **Spatial Crowdsourcing** preset.
+
+1. Click **Choose this preset** in the pop-up tab.
+
+## Create a project {#project}
+
+<TutorialsWhoAreTolokers/>
+
+1. <TutorialsAddNameDescription/>
+
+    - **Name to show Tolokers**: In 2–5 words, state the general idea of the project.
+
+    - **Description for Tolokers**: In a couple of sentences, explain what you expect Tolokers to do. This is just an overview. You will write instructions later.
+
+    <Image withBackground imageId="1675425705530" alt="Create a project. Step 1" />
+
+1. In the **Task interface** section, set up what your tasks will look like.
+
+    <TolokaRequesterSourceTbOrHtml/>
+
+    1. Copy the code of the [example](https://ya.cc/t/Fz_--ktr3ttAX9) and paste it to the **Config** section of your project. This code has validation and task layout pre-configured.
+
+        <Image withBackground imageId="1675425721249" alt="Create a project. Config section" />
+
+    1. You can edit the code. For example, to configure the text above the **Take photo** section, replace the sample text with your value in the `label` property.
+
+        <Image withBackground imageId="1675425733522" alt="Create a project. Config text" />
+
+    1. The Toloker will be able to submit the response when they are within 50 meters of the specified location. To change this condition, replace the value of the `max` property with the desired distance:
+
+        <Image width="560px" withBackground imageId="1675425711513" alt="Create a project. Config distance" />
+
+        <Note mode="note" title="Note">
+
+        To learn about other properties of the **Config** section, their possible values and the impact on the task interface, see the [Template Builder Help](/docs-new/template-builder/reference/).
+
+        </Note>
+
+    1. <TolokaRequesterSourceSpecificationDefinition/>
+
+        <TolokaRequesterSourceClickShowSpecifications/>
+
+        - **Input data**: Parameters in the file with raw task data.
+
+        - **Output data**: Parameters in the file with labeling results.
+
+        <TolokaRequesterSourceSpecificationMatch/>
+
+    1. In the **Settings for displaying field tasks** section, configure the settings which affect the task display on the map.
+
+        - The **Title format** and **Short description format** are used to help a Toloker distinguish one task from another when they select a task on the map. These fields contain links to the input data fields to show the name of the point and its coordinates. You can leave these fields unchanged.
+
+        - The **Map provider for tasks** field sets which map a Toloker will use when performing your tasks.
+
+1. <TolokaRequesterSourceInstructions/>
+
+    <TolokaRequesterSourceInstructionCheck/>
+
+    Field task instructions should be easy to read on a mobile phone screen.
+
+    <TolokaRequesterSourceInstructionNote/>
+
+1. To save your data and continue, click **Create a project**.
+
+    <TutorialsCreateProjectImage/>
+
+## Create a pool {#pool}
+
+<TolokaRequesterSourceWhatIsPool/>
+
+1. Click **Add a pool** on the project page.
+
+1. <TolokaRequesterPoolType/>
+
+1. <TolokaRequesterPoolName/>
+
+1. <TolokaRequesterPoolDescription/>
+
+1. Click **Create**.
+
+1. <TolokaRequesterSourceAudienceSettings/>
+
+    1. Clear **My tasks may contain shocking or pornographic content** if your project has none of those.
+
+    1. <TolokaRequesterSourceFilters/>
+
+        <Image withBackground imageId="1675425714909" alt="Create a pool. Languages filter" />
+
+    1. Tasks in pools are available in the web version of Toloka and the mobile app by default. Make your tasks available in the mobile app only: add the **Client** filter and select the **Toloka for mobile** option.
+
+    1. Use the **Speed/quality balance** slider to change the number of Tolokers who can see your tasks. Move the slider to the right to exclude Tolokers with lower ratings from participating in your project.
+
+        <TutorialsSpeedFilterImage/>
+
+1. <TutorialsQualityControl/>
+
+    1. Click the **Review task responses manually** toggle, and specify the number of days for checking the task in the **Review period in days** field (for example, 21).
+
+        <TutorialsNaAcceptance/>
+
+    1. Click **Add a quality control rule → Results of assignment review**, and enter the following values:
+
+        <Image withBackground imageId="1675425736966" alt="Create a pool. Results of assignment review rule" />
+
+        This means that if 35% or more of a Toloker's responses are rejected, the Toloker is banned and can't access your tasks for 15 days. The rule takes effect after 3 responses of the Toloker are reviewed.
+
+    1. Add the **Processing rejected and accepted assignments** rule. When the overlap value is **1**, you should resend assignments to the pool for other Tolokers to redo them.
+
+        <Image withBackground imageId="1675425717056" alt="Create a pool. Processing rejected and accepted assignments rule" />
+
+        This means that if you reject assignments during the review, they’ll be sent for re-completion to another Toloker.
+
+1. <TutorialsTimePerTaskSuite/>
+
+    It should be long enough to get to the place, find the specified point and upload the photos. For field tasks, this time is usually 86,400 seconds (24 hours).
+
+1. <TolokaRequesterSourcePriceSettings/>
+
+    1. In **Price per task suite**, set the amount of money to pay per task suite done by one Toloker. A task suite is a page with a number of tasks.
+
+        For this type of project, a task suite must contain only one task. You will set the number of tasks per suite later in this tutorial.
+
+    1. <TolokaRequesterSourceOverlapSettings/>
+
+        For field tasks, it is usually 1. This means that each task will have 1 response.
+
+1. <TutorialsUploadTasks/>
+
+    1. Create the tasks for Tolokers:
+
+        1. To download a template, click one of the buttons:
+
+            - **Template in XLSX**
+
+            - **Template in TSV**
+
+            - **Template in JSON**
+
+            For this type of project, the file with tasks must four parameters:
+
+            - `INPUT:name`: A string with the name of the object.
+
+            - `INPUT:position`: The coordinates of the place where the Toloker should go.
+
+            - `AI:latitude`, `AI:longitude`: The latitude and longitude from the `INPUT:position` parameter presented separately. The values of `INPUT:position`, `AI:latitude` and `AI:longitude` should have the same accuracy, that is have the same number of digits after the decimal separator.
+
+            ```plaintext
+            INPUT:name	INPUT:position	AI:latitude	AI:longitude
+            Name 1	53.947516,27.669428	53.947516	27.669428
+            Name 2	53.947517,27.669429	53.947517	27.669429
+            Name 3	53.947518,27.669428	53.947518	27.669428
+            ```
+
+        1. Open the downloaded file, and replace the sample values with your data. You can use a service like Google Maps to get the coordinates.
+
+        1. Click **Drop file here or select**, and upload the file you’ve just made.
+
+        1. Click **Continue**.
+
+    1. <TolokaRequesterSourceTaskSuits/>
+
+        1. Go to the **Set manually** tab.
+
+        1. In this type of project, the task suite must contain only one task:
+
+            <Image width="570px" withBackground imageId="1675425740039" alt="Upload data. Tasks in suite" />
+
+    1. Click **Combine tasks into suites**.
+
+1. <TutorialsDoubleCheck/>
+
+    <TolokaRequesterSourceStepEnabled/>
+
+<TolokaRequesterSourcePoolIsReady/>
+
+## Start labeling {#labeling}
+
+1. Make sure you have [topped up your account](https://toloka.ai/en/docs/guide/concepts/refill).
+
+1. <TolokaRequesterSourceStartButton/>
+
+    <Image withBackground imageId="1675425709465" alt="Start labeling" />
+
+1. In the pop-up panel, review the budget and click **Launch**.
+
+## See the results {#results}
+
+Track the labeling progress on the pool page. You can start the review when the first results are received.
+
+After the specified time period, all responses are automatically accepted, regardless of their quality.
+
+1. Go to the pool, and click **Review assignments**.
+
+    <Image withBackground imageId="1675425707615" alt="See the results. Review assignments" />
+
+1. Choose an assignment.
+
+1. Check the responses, and click **Accept** or **Decline**. For rejected responses, enter a comment to specify the reason.
+
+    <Note mode="note" title="Note">
+
+    To learn about other ways of review, see the [Reviewing Tolokers' responses](https://toloka.ai/en/docs/guide/concepts/accept) section.
+
+    </Note>
+
+1. After checking all the assignments, click **Download results**.
+
+    <Image withBackground imageId="1675425718934" alt="See the results. Download results" />
+
+    You will get the TSV file with the labeling results.
+
+1. To download the files Tolokers attached to the tasks, go to the pool page and click the arrow next to the **Download results** button. Choose **Download attachments** from the drop-down menu.
+
+    <Image width="484px" withBackground imageId="1675425729369" alt="See the results. Download attachments" />
+
+## Troubleshooting {#troubleshooting}
+
+<Cut title="Can I limit the source of the photo to camera-only in a field task so that the Toloker can't upload a photo from anywhere else?">
+
+The `accept` property of the `field.media-file` component adds different buttons for four types of uploads. To prohibit using any sources except of the camera, use the `"photo": true` property only, like it is done in the .
+
+If you allow Tolokers to use the mobile device gallery, you can prohibit adding images without geotags to limit uploading photos taken from the Internet. To do that, specify the `"requiredCoordinates": true` property.
+
+To learn more about setting up the `field.media-file` component, see the [Template Builder Help](/docs-new/template-builder/reference/field.media-file).
+
+</Cut>
+
+<Cut title="How do I check the task display in the mobile Toloka app?">
+
+To check the task's look-and-feel on the mobile phone screen, you can use the following buttons:
+
+- **Preview task** on the project settings page.
+
+- **Preview** on the pool settings page.
+
+You can also use the mobile version of the sandbox. [Write to support](../troubleshooting/support#support-work-toloka) to get access to it.
+
+</Cut>
+
+## See also {#see-also}
+
+- [Crowdsourcing concepts: Instructions](https://toloka.ai/knowledgebase/instruction/)
+- [Crowdsourcing concepts: Quality control](https://toloka.ai/knowledgebase/quality-control/)
+- [Crowdsourcing concepts: Pricing](https://toloka.ai/knowledgebase/pricing/)
+
+## For developers {#for-developers}
+
+- [Toloka-Kit: Spatial crowdsourcing example](https://github.com/Toloka/toloka-kit/blob/main/examples/2.spatial_crowdsourcing/0.simplest_example/spatial_crowdsourcing.ipynb)
+
+## Datasets and reference {#datasets}
+
+- [Sample dataset file with tasks](https://tlk.s3.yandex.net/dataset/moscow_metro_entrance_2020_en.tsv)
+
+<ContactSupport/>

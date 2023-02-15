@@ -1,0 +1,36 @@
+---
+title: "view.link | Template Builder"
+date: "2023-02-10T09:15:33.711316"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+# view.link
+
+Universal way to add a link.
+
+This link changes color when clicked.
+
+We recommend using this component if you need to insert a link without additional formatting.
+
+If you want to insert a button that will open the link, use the [view.action-button](/docs-new/template-builder/reference/view.action-button) and [action.open-link](/docs-new/template-builder/reference/action.open-link) components.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/NaCxphQV3xPEYn">View example</Button>
+
+To insert a link with a search query, use [helper.search-query](/docs-new/template-builder/reference/helper.search-query).
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/W5KExwg_3vwB57">View example</Button>
+
+## Component properties {#properties}
+
+**Name** | **Type** | **Description**
+----- | ----- | -----
+`type`<span style="color: red">\*</span> | "view.link" | Set component type.
+`label` | _string_ | Label above the component.
+`content` | _string_ | Link text displayed to a Toloker.
+`hint` | _string_ | Hint text.
+`url`<span style="color: red">\*</span> | _string_ | Link URL.
+`validation` | _condition_ | Validation based on condition.

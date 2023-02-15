@@ -1,0 +1,73 @@
+---
+title: "Get list of responses | Toloka-Kit"
+date: "2023-02-07T15:41:31.591020"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import GetAssignments from './subcomponents/get_assignments.mdx'
+
+# Get list of responses
+
+_Get all the Toloker responses present in the pool with the ID specified in the request._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Print responses IDs and statuses {#step-three}
+
+Iterate through all the Toloker responses present in the pool with the ID specified in the request calling the `get_assignments()` method.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      for assignment in toloka_client.<Term term="get_assignments"><GetAssignments/></Term>(pool_id='1085757'):
+      <br/>    print(assignment.id, assignment.status)
+    </HighlightChildren>
+  }
+  textToCopy={`for assignment in toloka_client.get_assignments(pool_id='1085757'):
+    print(assignment.id, assignment.status)`}
+/>
+
+You should get an output with the response IDs and statuses which looks like this.
+
+```bash
+000015fccc--63bfc4c358d7a46c32a7b233 Status.ACCEPTED
+000015fccc--63bfc4e0ed43982367a5ad46 Status.REJECTED
+000015fccc--63bfc4ea99e537000bac4015 Status.SUBMITTED
+```
+
+## Complete code: Get list of responses {#complete-code}
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+for assignment in toloka_client.get_assignments(pool_id='1085757'):
+    print(assignment.id, assignment.status)
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_assignments()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_assignments) method_
+
+</Note>
+
+## See also {#see-also}
+
+- [How does Toloka work?](https://toloka.ai/en/docs/guide/concepts/overview)
+- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [Toloka API: Get list of responses](https://toloka.ai/docs/api/api-reference/#get-/assignments)

@@ -1,0 +1,344 @@
+---
+title: "Sentiment analysis & Content moderation | Template Builder"
+date: "2023-02-10T09:15:30.393231"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactSupport from '../subcomponents/contact-support.mdx'
+
+# Sentiment analysis & Content moderation
+
+For this type of project, you can use the **Sentiment analysis & Content moderation** preset.
+
+This preset helps you classify text content by specified categories.
+
+Take a look at the example: the labeling interface includes a text and radio buttons. When the **Yes, there are** option is selected, an additional question with checkboxes appears. Note that validation, keyboard shortcuts, and task layout are already configured in this Template Builder sample code.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/JHPP6j1c3ttCmb">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [view.list](/docs-new/template-builder/reference/view.list): Displays data in a list.
+
+- [view.text](/docs-new/template-builder/reference/view.text): Adds the text that you want to check.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.text",
+    "content": {
+      "type": "data.input",
+      "path": "comment"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [view.alert](/docs-new/template-builder/reference/view.alert): Highlights important information to enhance Toloker's experience. In this example, the text content is highlighted with a blue border.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.alert",
+    "theme": "info",
+    "content": {
+      "type": "view.text",
+      "content": {
+        "type": "data.input",
+        "path": "comment"
+      }
+    }
+  }
+  ```
+
+  </Cut>
+
+- [view.markdown](/docs-new/template-builder/reference/view.markdown): Displays a text in Markdown.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.markdown",
+    "content": "**Are there any infringements of publication guidelines in the text?**"
+  }
+  ```
+
+  </Cut>
+
+  Note that the `view.markdown` component is resource-intensive and might overload weak Toloker devices. Do not use this component to display plain text. If you need to display text without formatting, use the [view.text](/docs-new/template-builder/reference/view.text) component.
+
+- [field.radio-group](/docs-new/template-builder/reference/field.radio-group): Adds radio buttons for selecting an answer option.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.radio-group",
+    "options": [
+      {
+        "label": "No, there are not",
+        "value": "no"
+      },
+      {
+        "label": "Yes, there are",
+        "value": "yes"
+      }
+    ],
+    "data": {
+      "type": "data.output",
+      "path": "is_infringements"
+    },
+    "validation": {
+      "type": "condition.required",
+      "hint": "Choose one of the options"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [field.checkbox-group](/docs-new/template-builder/reference/field.checkbox-group): Adds checkboxes for selecting one or more answer option from the given list of choices.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.checkbox-group",
+    "label": "Which ones?",
+    "options": [
+      {
+        "label": "Advertising or spam",
+        "value": "advertising"
+      },
+      {
+        "label": "Nonsense",
+        "value": "nonsense"
+      },
+      {
+        "label": "Insult",
+        "value": "insult"
+      },
+      {
+        "label": "Violation of the law",
+        "value": "law_violation"
+      },
+      {
+        "label": "Profanity",
+        "value": "profanity"
+      }
+    ],
+    "data": {
+      "type": "data.output",
+      "path": ""
+    },
+    "validation": {
+      "type": "condition.required",
+      "hint": "Select one or more infringements"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [condition.required](/docs-new/template-builder/reference/condition.required): Checks if at least one option is selected.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "condition.required",
+    "hint": "Choose one of the options"
+  }
+  ```
+
+  </Cut>
+
+- [helper.if](/docs-new/template-builder/reference/helper.if): Displays an interface element after a specific response is selected.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "helper.if",
+    "condition": {
+      "type": "condition.equals",
+      "data": {
+        "type": "data.output",
+        "path": "is_infringements"
+      },
+      "to": "yes"
+    },
+    "then": {
+      "type": "field.checkbox-group",
+      "label": "Which ones?",
+      "options": [
+        {
+          "label": "Advertising or spam",
+          "value": "advertising"
+        },
+        {
+          "label": "Nonsense",
+          "value": "nonsense"
+        },
+        {
+          "label": "Insult",
+          "value": "insult"
+        },
+        {
+          "label": "Violation of the law",
+          "value": "law_violation"
+        },
+        {
+          "label": "Profanity",
+          "value": "profanity"
+        }
+      ],
+      "data": {
+        "type": "data.output",
+        "path": ""
+      },
+      "validation": {
+        "type": "condition.required",
+        "hint": "Select one or more infringements"
+      }
+    }
+  }
+  ```
+
+  </Cut>
+
+- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task layout.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "plugin.toloka",
+    "layout": {
+      "kind": "scroll",
+      "taskWidth": 500
+    }
+  }
+  ```
+
+  </Cut>
+
+- [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys): Adds [keyboard shortcuts](/docs-new/template-builder/best-practices/hotkeys).
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "1": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "is_infringements"
+      },
+      "payload": "no"
+    },
+    "2": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "is_infringements"
+      },
+      "payload": "yes"
+    },
+    "w": {
+      "type": "action.toggle",
+      "data": {
+        "type": "data.output",
+        "path": "advertising"
+      }
+    },
+    "a": {
+      "type": "action.toggle",
+      "data": {
+        "type": "data.output",
+        "path": "nonsense"
+      }
+    },
+    "s": {
+      "type": "action.toggle",
+      "data": {
+        "type": "data.output",
+        "path": "insult"
+      }
+    },
+    "d": {
+      "type": "action.toggle",
+      "data": {
+        "type": "data.output",
+        "path": "law_violation"
+      }
+    },
+    "f": {
+      "type": "action.toggle",
+      "data": {
+        "type": "data.output",
+        "path": "profanity"
+      }
+    },
+    "type": "plugin.hotkeys"
+  }
+  ```
+
+  </Cut>
+
+</Cut>
+
+If this template doesn't meet your needs, see other examples in the **Text** section.
+
+## Add a description {#add-description}
+
+To add a detailed description to the task, use the [view.text](/docs-new/template-builder/reference/view.text) component.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "view.text",
+  "content": "Decide whether comments follow the publication guidelines."
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/egPvc7yT3ttCok">View example</Button>
+
+## Add a response field {#add-text-area}
+
+If you want that Tolokers give an extended response, add a text field using the [field.textarea](/docs-new/template-builder/reference/field.textarea) component.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "field.textarea",
+  "label": "Comments",
+  "placeholder": "Enter text",
+  "data": {
+    "type": "data.output",
+    "path": "comment"
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/pPSkmH_U3ttCqT">View example</Button>
+
+## See also {#see-also}
+
+- [Tutorials: Sentiment analysis and content moderation](https://toloka.ai/en/docs/guide/tutorials/content-moderation)
+
+<ContactSupport/>

@@ -1,0 +1,32 @@
+---
+title: "TaskSpec | Toloka-Kit"
+date: "2023-02-07T15:41:55.654369"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# TaskSpec
+`toloka.client.project.task_spec.TaskSpec` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/project/task_spec.py#L8)
+
+```python
+TaskSpec(
+    self,
+    *,
+    input_spec: Optional[Dict[str, FieldSpec]] = None,
+    output_spec: Optional[Dict[str, FieldSpec]] = None,
+    view_spec: Optional[ViewSpec] = None
+)
+```
+
+Parameters for input and output data and the task interface.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`input_spec`|**Optional\[Dict\[str, [FieldSpec](/docs-new/toloka-kit/reference/toloka.client.project.field_spec.FieldSpec)\]\]**|<p>The input data parameters for tasks. The complete list of parameters is shown in the Input and output data table.</p>
+`output_spec`|**Optional\[Dict\[str, [FieldSpec](/docs-new/toloka-kit/reference/toloka.client.project.field_spec.FieldSpec)\]\]**|<p>Parameters for output data from the input fields. The complete list of parameters is shown in the Input and output data table.</p>
+`view_spec`|**Optional\[[ViewSpec](/docs-new/toloka-kit/reference/toloka.client.project.view_spec.ViewSpec)\]**|<p>Description of the task interface.</p>

@@ -1,0 +1,40 @@
+---
+title: "layout.columns | Template Builder"
+date: "2023-02-11T15:45:43.141176"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import LayoutColumnsTable1 from './layout.columns/subcomponents/layout.columns-table-1.mdx'
+
+# layout.columns
+
+A component for placing content in columns.
+
+Use it to customize the display of content: set the column width and adjust the vertical alignment of content.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/W-APYFlT3xtrzV">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [view.list](/docs-new/template-builder/reference/view.list): Displays data in a list.
+- [view.text](/docs-new/template-builder/reference/view.text): Adds a block with text.
+
+</Cut>
+
+## Component properties {#properties}
+
+**Name** | **Type** | **Description**
+----- | ----- | -----
+`type`<span style="color: red">\*</span> | "layout.columns" | Set component type.
+`fullHeight` | _boolean_ | Switches the component to column mode at full height and with individual scrolling. Otherwise, the height is determined by the height of the column that is filled in the most.
+`items`<span style="color: red">\*</span> | _array_ | Columns to divide the interface into.
+`items[]` | _view_ | Column content.
+`minWidth` | _number_ | The minimum width of the component; if it is narrower, columns are output sequentially, one by one.
+`ratio` | _array_ | An array of values that specify the relative width of columns. For example, if you have 3 columns, the value `[1,2,1]` divides the space into 4 parts and the column in the middle is twice as large as the other columns.<br/><br/>If the number of columns exceeds the number of values in the `ratio` property, the values are repeated. For example, if you have 4 columns and the `ratio` is set to `[1,2]`, the result is the same as for `[1,2,1,2]`.<br/><br/>If the number of columns is less than the number of values in the `ratio` property, extra values are simply ignored.
+`ratio[]` | _number_ | Relative column width.
+`validation` | _condition_ | Validation based on condition.
+`verticalAlign` | _string_ | <LayoutColumnsTable1/>

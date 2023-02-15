@@ -1,0 +1,25 @@
+---
+title: "action.bulk | Template Builder"
+date: "2023-02-10T09:15:35.487831"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+# action.bulk
+
+Use this component to call multiple actions at the same time, like to show more than one notification when a button is clicked.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/jH6BvDpE3twfMn">View example</Button>
+
+Actions are invoked in the order in which they are listed. This means that if two actions write a value to the same variable, the variable will always have the second value.
+
+## Component properties {#properties}
+
+**Name** | **Type** | **Description**
+----- | ----- | -----
+`type`<span style="color: red">\*</span> | "action.bulk" | Set component type.
+`payload` | _array_ | An array of actions that you want to call.
+`payload[]` | _action_ | Action.

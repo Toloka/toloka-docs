@@ -1,0 +1,34 @@
+1. In the **Task interface**, edit the **HTML** block.
+
+    - After the image line, add the question:
+
+    ```html
+    <div>Are there <b>shoes</b> in the picture?<div>
+    ```
+
+    - Change the labels on the response options: **Good** → **Yes**, **Bad** → **No**:
+
+    ```html
+    {{img src=image width="100%" height="400px"}} <div>Are there <b>shoes</b> in the picture?<div>
+    {{field type="radio" name="result" value="OK" label="Yes" hotkey="1"}}
+    {{field type="radio" name="result" value="BAD" label="No" hotkey="2"}}
+    {{field type="radio" name="result" value="404" label="Loading error" hotkey="3"}}
+    ```
+
+1. Leave the **JS**, **CSS**, and **Data specification** blocks unchanged.
+
+    Learn more about the **Specification** parameters in [Input and output data](https://toloka.ai/en/docs/guide/concepts/incoming).
+
+1. Click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425176321/1675425176321_original_svg.svg" alt="" /> to see the Toloker's view of the task.
+
+    <Note mode="note" title="Note">
+
+    The project preview shows one task with standard data. You can define the number of tasks to show on the page later.
+
+    </Note>
+
+1. In the window that opens, check if the task options work correctly. In the lower-right corner, click **Submit**.
+
+1. Exit preview mode.
+
+    In the lower-left corner, click **Exit**. If there were errors when testing, check the code blocks that you entered.

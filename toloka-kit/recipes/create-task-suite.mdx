@@ -1,0 +1,141 @@
+---
+title: "Group tasks in task suites | Toloka-Kit"
+date: "2023-02-07T15:40:39.120044"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import Task from './subcomponents/Task.mdx'
+import TaskSuite from './subcomponents/TaskSuite.mdx'
+import CreateTaskSuite from './subcomponents/create_task_suite.mdx'
+
+# Group tasks in task suites
+
+_Create tasks and group them into task suites._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Create tasks {#step-three}
+
+First, create one or several tasks. In this example, we create three simple tasks with the following settings:
+
+- specify `input_values` as links to images
+
+You can choose your own values for tasks. Refer to the [Task](/docs-new/toloka-kit/reference/toloka.client.task.Task) class page for more details.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      {`tasks = [`}
+      {``}
+      {`    toloka.task.`}<Term term="Task"><Task/></Term>{`(input_values={'image': 'https://example.com/image_1.png'}),`}
+      {``}
+      {`    toloka.task.`}<Term term="Task"><Task/></Term>{`(input_values={'image': 'https://example.com/image_2.png'}),`}
+      {``}
+      {`    toloka.task.`}<Term term="Task"><Task/></Term>{`(input_values={'image': 'https://example.com/image_3.png'})`}
+      {``}
+{`]`}
+    </HighlightChildren>
+  }
+  textToCopy={`tasks = [
+    toloka.task.Task(input_values={'image': 'https://example.com/image_1.png'}),
+    toloka.task.Task(input_values={'image': 'https://example.com/image_2.png'}),
+    toloka.task.Task(input_values={'image': 'https://example.com/image_3.png'})
+]`}
+/>
+
+<Note mode="restriction" title="Important">
+
+All the code manipulations at steps 3–4 occur in your device memory. The data will only be sent to the server after calling the `create_task_suite()` method at [step 5](#step-five).
+
+</Note>
+
+### 4. Create task suite object {#step-four}
+
+Specify the ID of the pool where the task suite will be created, tasks included into the task suite, and overlap.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      new_task_suite = toloka.task_suite.<Term term="TaskSuite"><TaskSuite/></Term>(pool_id='1442472', tasks=tasks, overlap=3)
+    </HighlightChildren>
+  }
+  textToCopy={`new_task_suite = toloka.task_suite.TaskSuite(pool_id='1442472', tasks=tasks, overlap=3)`}
+/>
+
+### 5. Create task suite on platform {#step-five}
+
+This actually creates a task suite in Toloka.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      new_task_suite = toloka_client.<Term term="create_task_suite"><CreateTaskSuite/></Term>(new_task_suite)
+    </HighlightChildren>
+  }
+  textToCopy={`new_task_suite = toloka_client.create_task_suite(new_task_suite)`}
+/>
+
+### 6. Print created task suite ID {#step-six}
+
+The `create_task_suite()` request will return the [TaskSuite](/docs-new/toloka-kit/reference/toloka.client.task_suite.TaskSuite) class object. You can use its attributes to print the information you need.
+
+```python
+print(new_task_suite.id)
+```
+
+You should get an output with the created task suite ID which looks like this.
+
+```bash
+00001602a8--63c18a66ed43982367a7acc8
+```
+
+## Complete code: Group tasks in task suites {#complete-code}
+
+```python
+import toloka.client as toloka
+from toloka.client.task import Task
+from toloka.client.task_suite import TaskSuite
+
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+tasks = [
+    toloka.task.Task(input_values={'image': 'https://example.com/image_1.png'}),
+    toloka.task.Task(input_values={'image': 'https://example.com/image_2.png'}),
+    toloka.task.Task(input_values={'image': 'https://example.com/image_3.png'})
+]
+new_task_suite = toloka.task_suite.TaskSuite(pool_id='1442472', tasks=tasks, overlap=3)
+new_task_suite = toloka_client.create_task_suite(new_task_suite)
+print(new_task_suite.id)
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[Task](/docs-new/toloka-kit/reference/toloka.client.task.Task) class_
+- _[TaskSuite](/docs-new/toloka-kit/reference/toloka.client.task_suite.TaskSuite) class_
+- _[create_task_suite()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.create_task_suite) method_
+
+</Note>
+
+## See also {#see-also}
+
+- [How does Toloka work?](https://toloka.ai/en/docs/guide/concepts/overview)
+- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [Toloka API: Create single/multiple task suites](https://toloka.ai/docs/api/api-reference/#post-/task-suites)

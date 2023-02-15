@@ -1,0 +1,49 @@
+---
+title: "condition.schema | Template Builder"
+date: "2023-02-10T09:15:34.101137"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ConditionSchemaTable1 from './condition.schema/subcomponents/condition.schema-table-1.mdx'
+
+# condition.schema
+
+Allows validating data using [JSON Schema](https://json-schema.org/learn/getting-started-step-by-step.html). This is a special format for describing data in JSON format.
+
+For example, you can describe the data type, the minimum and maximum values, and specify that all values must be unique.
+
+This component is useful in the following cases:
+
+- If [available components](/docs-new/template-builder/reference) don't provide everything you need to configure validation.
+- If you already have a prepared JSON Schema configuration for the check and you want to use it.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/CRZHc49y3xNssY">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [view.list](/docs-new/template-builder/reference/view.list): Displays data in a list.
+- [view.labeled-list](/docs-new/template-builder/reference/view.labeled-list): Displays components as a list with labels placed on the left.
+- [view.text](/docs-new/template-builder/reference/view.text): Displays a text.
+- [view.link](/docs-new/template-builder/reference/view.link): Displays a link.
+- [field.button-radio-group](/docs-new/template-builder/reference/field.button-radio-group): Adds buttons for selecting an answer option.
+- [field.text](/docs-new/template-builder/reference/field.text): Adds a field for entering a short text.
+- [view.iframe](/docs-new/template-builder/reference/view.iframe): Displays the web page at the URL in an iframe window.
+
+</Cut>
+
+## Component properties {#properties}
+
+**Name** | **Type** | **Description**
+----- | ----- | -----
+`type`<span style="color: red">\*</span> | "condition.schema" | Set component type.
+`data` | _any_ | Data that should be checked.
+`hint` | _string_ | Validation error message that a Toloker will see.
+`schema` | _JSON Schema draft 7_ | The schema for validating data.
+`schema.maxLength` | _integer_ | Maximum number of symbols.
+`schema.minLength` | _integer_ | Minimum number of symbols.
+`schema.pattern` | _string_ | A pattern in the form of a regular expression.
+`schema.type` | _string_ | <ConditionSchemaTable1/>

@@ -1,0 +1,29 @@
+---
+title: "RegionByIp | Toloka-Kit"
+date: "2023-02-07T15:41:49.771368"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# RegionByIp
+`toloka.client.filter.RegionByIp` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/filter.py#L496)
+
+```python
+RegionByIp(
+    self,
+    operator: InclusionOperator,
+    value: int
+)
+```
+
+Filtering Tolokers by a region which is determined by their IP address.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`operator`|**[InclusionOperator](/docs-new/toloka-kit/reference/toloka.client.primitives.operators.InclusionOperator)**|<p>An operator used in a condition. Allowed set of operators depends on the filter.</p>
+`value`|**int**|<p>The ID from the [list of regions](https://toloka.ai/en/docs/api/concepts/regions).</p>

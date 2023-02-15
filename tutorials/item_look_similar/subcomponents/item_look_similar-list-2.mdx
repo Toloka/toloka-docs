@@ -1,0 +1,84 @@
+1. In the **Task Interface**, delete the template code from the **HTML** block and paste the following code:
+
+    ```html
+    {{img src=image height="400px"}}
+    {{iframe src= found_link height="600px"}}
+    <p>Check that the uploaded image matches the product in the store.</p>
+    {{button label="Check the product"  href=found_link action=true}}
+    <p>Are <b>these shoes</b> similar to each other?</p>
+    <p>The shoes must be similar in color, material, length, and style.</p>
+    {{field type="radio" name="result" value="Yes" label="Yes"}}
+    {{field type="radio" name="result" value="No" label="No"}}
+    ```
+
+1. Leave the **JS** block unchanged.
+
+1. In the **css** block, insert the following code that is responsible for setting the proportional image size:
+
+    ```css
+    .task {
+        display: block;
+    }
+    .img {
+        float: left;
+        width: 50%;
+    }
+    .iframe {
+        float: left;
+        width: 50%;
+    }
+    ```
+
+1. Edit the [input and output data](https://toloka.ai/en/docs/glossary#input-output-data) in the **Data specification** block.
+
+    1. Click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425185879/1675425185879_original_svg.svg" alt="" /> to switch graphic mode to JSON format.
+
+    1. In the **Input data** field, enter:
+
+        ```json
+        {
+            "image": {
+                "type": "url",
+                "hidden": false,
+                "required": true
+            },
+            "found_link": {
+                "type": "url",
+                "hidden": false,
+                "required": true
+            },
+            "assignment_id": {
+                "type": "string",
+                "hidden": true,
+                "required": true
+            }
+        }
+        ```
+
+    1. In the **Output data** field, enter:
+
+        ```json
+        {
+            "result": {
+                "type": "string",
+                "hidden": false,
+                "required": true
+            }
+        }
+        ```
+
+        Learn more about the **Specification** parameters in [Input and output data](https://toloka.ai/en/docs/guide/concepts/incoming).
+
+    1. Click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425176321/1675425176321_original_svg.svg" alt="" /> to see the Toloker's view of the task.
+
+        <Note mode="note" title="Note">
+
+        The project preview shows one task with standard data. You can define the number of tasks to show on the page later.
+
+        </Note>
+
+    1. In the window that opens, check if the task options work correctly. In the lower-right corner, click **Submit**.
+
+    1. Exit preview mode.
+
+        In the lower-left corner, click **Exit**. If there were errors when testing, check the code blocks that you entered.

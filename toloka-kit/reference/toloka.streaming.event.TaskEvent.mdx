@@ -1,0 +1,30 @@
+---
+title: "TaskEvent | Toloka-Kit"
+date: "2023-02-07T15:41:43.159839"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# TaskEvent
+`toloka.streaming.event.TaskEvent` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/streaming/event.py#L55)
+
+```python
+TaskEvent(
+    self,
+    *,
+    event_time: Optional[datetime] = None,
+    task: Optional[Task] = None
+)
+```
+
+Task-related event.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`event_time`|**Optional\[datetime\]**|<p>Event datetime.</p>
+`task`|**Optional\[[Task](/docs-new/toloka-kit/reference/toloka.client.task.Task)\]**|<p>Task object itself.</p>

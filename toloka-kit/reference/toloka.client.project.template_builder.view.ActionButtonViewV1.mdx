@@ -1,0 +1,37 @@
+---
+title: "ActionButtonViewV1 | Toloka-Kit"
+date: "2023-02-07T15:41:33.033247"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# ActionButtonViewV1
+`toloka.client.project.template_builder.view.ActionButtonViewV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/project/template_builder/view.py#L64)
+
+```python
+ActionButtonViewV1(
+    self,
+    action: Optional[BaseComponent] = None,
+    *,
+    hint: Optional[Any] = None,
+    label: Optional[Any] = None,
+    validation: Optional[BaseComponent] = None,
+    version: Optional[str] = '1.0.0'
+)
+```
+
+Button that calls an action.
+
+When clicking the button, an action specified in the action property is called.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`action`|**Optional\[[BaseComponent](/docs-new/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>Action called when clicking the button.</p>
+`hint`|**Optional\[Any\]**|<p>Hint text.</p>
+`label`|**Optional\[Any\]**|<p>Button text.</p>
+`validation`|**Optional\[[BaseComponent](/docs-new/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>Validation based on condition.</p>

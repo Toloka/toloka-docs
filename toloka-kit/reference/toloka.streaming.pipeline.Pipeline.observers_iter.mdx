@@ -1,0 +1,27 @@
+---
+title: "observers_iter | Toloka-Kit"
+date: "2023-02-07T15:41:46.559307"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# observers_iter
+`toloka.streaming.pipeline.Pipeline.observers_iter` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/streaming/pipeline.py#L210)
+
+```python
+observers_iter(self)
+```
+
+Iterate over registered observers.
+
+* **Returns:**
+
+  An iterator over all registered observers except deleted ones.
+Might contain observers scheduled for deletion and not deleted yet.
+
+* **Return type:**
+
+  Iterator\[[BaseObserver](/docs-new/toloka-kit/reference/toloka.streaming.observer.BaseObserver)\]

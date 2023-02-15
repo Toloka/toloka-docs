@@ -1,0 +1,62 @@
+1. The task interface describes how the elements should be arranged in the task.
+    The template has pre-configured validation. The Toloker won't be able to submit a response without selecting one of the options.
+
+    For more information, see the Template Builder Help:
+
+    - [Setting up conditions](/docs-new/template-builder/best-practices/conditions).
+
+    - [Image classification](/docs-new/template-builder/templates/image-classification) template.
+
+1. On the **Configuration** panel, replace lines 19 to 28 in the code:
+
+    ```json
+    "label": "What is the cat's mood?",
+    "options": [
+        {
+            "label": "Good",
+            "value": "ok"
+        },
+        {
+            "label": "Bad",
+            "value": "bad"
+        },
+    ```
+
+    with the following:
+
+    ```json
+    "label": "Are there shoes in the image?",
+    "options": [
+        {
+            "label": "Yes",
+            "value": "ok"
+        },
+        {
+            "label": "No",
+            "value": "bad"
+        },
+    ```
+
+1. Click **Show specifications** to see the input and output data fields.
+
+    Input data fields are created from the code on the **Example of input data** tab.
+
+    The output data fields depend on the components that use `data.output` and values supported by it.
+
+    Learn more about [input and output data fields](/docs-new/template-builder/operations/create-specs) in the Template Builder Help.
+
+    - Input data field: `image` — A link to an image.
+
+        Change the data type to string to add links to your files.
+
+    - Output data field: `result` — string for saving the Toloker's response.
+
+    <Cut title="What are input and output data?">
+
+    **Input data** is types of objects that are passed to the Toloker for completing the task. For example, this could be a text, an image, or geographic coordinates.
+
+    **Output data** is types of objects that you receive after the task is completed. For example, this could be one of several response options, typed text, or an uploaded file.
+
+    If you add interface elements to the task template, the corresponding fields in the **Data specification** block will be created automatically.
+
+    </Cut>

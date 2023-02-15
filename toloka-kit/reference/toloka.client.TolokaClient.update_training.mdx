@@ -1,0 +1,47 @@
+---
+title: "update_training | Toloka-Kit"
+date: "2023-02-07T15:41:56.213791"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# update_training
+`toloka.client.TolokaClient.update_training` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/__init__.py#L2024)
+
+```python
+update_training(
+    self,
+    training_id: str,
+    training: Training
+)
+```
+
+Updates parameters of a training in Toloka.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`training_id`|**str**|<p>The ID of the training to be updated.</p>
+`training`|**[Training](/docs-new/toloka-kit/reference/toloka.client.training.Training)**|<p>A training object with new parameter values.</p>
+
+* **Returns:**
+
+  The updated training.
+
+* **Return type:**
+
+  [Training](/docs-new/toloka-kit/reference/toloka.client.training.Training)
+
+**Examples:**
+
+The example shows how to set new time limit in a training.
+
+```python
+updated_training = toloka_client.get_training(training_id='1')
+updated_training.assignment_max_duration_seconds = 600
+toloka_client.update_training(training_id=updated_training.id, training=updated_training)
+```

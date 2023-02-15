@@ -1,0 +1,37 @@
+---
+title: "Inserting videos | Template Builder"
+date: "2023-02-10T09:15:36.197097"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TolokaTbSourceAddMedia from '../subcomponents/toloka-tb-source/id-toloka-tb-source/add-media.mdx'
+import ContactSupport from '../subcomponents/contact-support.mdx'
+import InsertVideosList1 from './insert-videos/subcomponents/insert-videos-list-1.mdx'
+import InsertVideosList2 from './insert-videos/subcomponents/insert-videos-list-2.mdx'
+
+# Inserting videos
+
+This section describes how [to insert a video](#insert-videos) and [make sure the Toloker viewed it](#condition.played).
+
+## Inserting videos {#insert-video}
+
+To add a video file to the task interface, use the [view.video](/docs-new/template-builder/reference/view.video) component. In the `url` property, specify a direct link to the file or component that returns the link. To use the link from the input data, use the [data.input](/docs-new/template-builder/operations/work-with-data) component.
+
+If you want to add several videos to a page, see the examples in [Comparing video clips](/docs-new/template-builder/operations/sbs-video).
+
+<TolokaTbSourceAddMedia/>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/YyYVeNK13ttBxM">View example</Button>
+
+## Make sure that the Toloker watched the video {#condition.played}
+
+<Tabs tabs={[
+  { title: 'Started watching', value: <InsertVideosList1/> },
+  { title: 'Viewed completely', value: <InsertVideosList2/> },
+]}/>
+
+<ContactSupport/>

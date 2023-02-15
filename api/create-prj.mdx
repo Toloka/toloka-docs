@@ -1,6 +1,6 @@
 ---
 title: "Create a project | Toloka API"
-date: "2023-02-03T19:53:29.473380"
+date: "2023-02-11T15:17:03.290384"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -25,7 +25,6 @@ import CreatePrjTable11 from './create-prj/subcomponents/create-prj-table-11.mdx
 import CreatePrjTable12 from './create-prj/subcomponents/create-prj-table-12.mdx'
 import CreatePrjTable13 from './create-prj/subcomponents/create-prj-table-13.mdx'
 import CreatePrjTable14 from './create-prj/subcomponents/create-prj-table-14.mdx'
-import CreatePrjTable15 from './create-prj/subcomponents/create-prj-table-15.mdx'
 
 # Create a project
 
@@ -126,7 +125,6 @@ Parameter | Overview
 **public_instructions** | **string**<br/><br/>Instructions for completing the task. You can use any HTML markup in the instructions.
 **private_comment** | **string**<br/><br/>Comments that are only visible to the requester.
 **assignments_issuing_type** | <CreatePrjTable1/>
-**assignments_issuing_view_config.map_provider** | <CreatePrjTable2/>
 **assignments_automerge_enabled** | **boolean**<br/><br/>Resolve [merging identical tasks](/docs-new/api/tasks#task-merge) in the project. The default value is `false`.
 **max_active_assignments_count** | **integer**<br/><br/>The number of task suites the Toloker can complete simultaneously ("Active" status).
 **quality_control** | **object**<br/><br/>The quality control rule.
@@ -139,8 +137,8 @@ The `input_spec` and `output_spec` parameters contain JSON with the input data p
 
 Parameter | Overview
 ----- | -----
-**<ID\>** | <CreatePrjTable3/>
-**type** | <CreatePrjTable4/>
+**<ID\>** | <CreatePrjTable2/>
+**type** | <CreatePrjTable3/>
 **required** | **boolean**<br/><br/>Whether the object or input field is required. The default value is `true`.
 **hidden** | **boolean**<br/><br/>Whether to hide field with the input value from the Toloker or not. The default value is `false`.<br/><br/>For output data, always `false`.
 **min_value** | **float**<br/><br/>Minimum value of the number.
@@ -157,22 +155,22 @@ Parameter | Overview
 **markup** | **string**<br/><br/>HTML markup of the task.<br/><br/>For more information, see the [HTML block](https://toloka.ai/en/docs/guide/concepts/spec#html) section.
 **script** | **string**<br/><br/>JavaScript code of the task.<br/><br/>For more information, see the [JavaScript block](https://toloka.ai/en/docs/guide/concepts/spec#js) section.
 **styles** | **string**<br/><br/>CSS styles of the task.<br/><br/>For more information, see the [CSS block](https://toloka.ai/en/docs/guide/concepts/spec#css) section.
-**settings** | **object \| required**<br/><br/>Whether to display standard UI elements in the task.
+**settings** | **object \| required**<br/><br/>Whether to display common interface elements in the task.
 **config[]** | **array of objects**<br/><br/>[Configuration for Template Builder](/docs-new/api/tb-config)
-**assets** | <CreatePrjTable5/>
-**assets.script_urls[]** | <CreatePrjTable6/>
+**assets** | <CreatePrjTable4/>
+**assets.script_urls[]** | <CreatePrjTable5/>
 **assets.style_urls[]** | **array of strings**<br/><br/>Links to CSS libraries.
-**type** | <CreatePrjTable7/>
+**type** | <CreatePrjTable6/>
 **localizationConfig** | **object**<br/><br/>Editor configuration.<br/><br/>In the Template Builder, add to this field the keys for the properties of text components that you need to translate into other languages.<br/><br/>For more information, see [Translating the task interface](https://toloka.ai/en/docs/guide/concepts/project-languages#project-languages__interface-translate).
-**localizationConfig.keys** | <CreatePrjTable15/>
-**settings.showTimer** | **boolean**<br/><br/>Show the timer. The default value is `true`.
+**localizationConfig.keys** | <CreatePrjTable7/>
+**settings.showTimer** | **boolean**<br/><br/>Show the remaining time. The default value is `true`.
 **settings.showTitle** | **boolean**<br/><br/>Show the project name in task titles. The default value is `true`.
 **settings.showInstructions** | **boolean**<br/><br/>Show the **Instructions** button. The default value is `true`.
-**settings.showFullscreen** | **boolean**<br/><br/>Show the **Expand to fullscreen** button. The default value is `true`.
-**settings.showSubmit** | **boolean**<br/><br/>Show the **Next** button. The default value is `true`.
+**settings.showFullscreen** | **boolean**<br/><br/>Show the **Fullscreen** button. The default value is `true`.
+**settings.showSubmit** | **boolean**<br/><br/>Show the **Submit** button. The default value is `true`.
 **settings.showSkip** | **boolean**<br/><br/>Show the **Skip** button. The default value is `true`.
-**settings.showFinish** | **boolean**<br/><br/>Show the **Back to main page** button. The default value is `true`.
-**settings.showMessage** | **boolean**<br/><br/>Show the **Message for the requester** button. The default value is `true`.
+**settings.showFinish** | **boolean**<br/><br/>Show the **Exit** button. The default value is `true`.
+**settings.showMessage** | **boolean**<br/><br/>Show the **Contact requester** button. The default value is `true`.
 **settings.showReward** | **boolean**<br/><br/>Show the price per task suite. The default value is `true`.
 
 ## Settings for displaying field tasks (assignments_issuing_view_config) {#assignments-issuing-view-config-section}

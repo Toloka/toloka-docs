@@ -1,0 +1,40 @@
+If there are several possible answers to the question, use [field.checkbox-group](/docs-new/template-builder/reference/field.checkbox-group) checkboxes.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+"type": "field.checkbox-group",
+"label": "This headline is:",
+"options": [
+  {
+    "label": "Clickbate",
+    "value": "clickbate"
+  },
+  {
+    "label": "Too long",
+    "value": "long"
+  },
+  {
+    "label": "Gramatically incorrect",
+    "value": "bad-grammar"
+  },
+  {
+    "label": "None of this",
+    "value": "none"
+  }
+],
+"data": {
+  "type": "data.output",
+  "path": "input_data"
+},
+"validation": {
+  "type": "condition.required",
+  "hint": "Select at least one option"
+}
+  }
+  ```
+
+  </Cut>
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/q8RpfYS93ttDgm">View example</Button>

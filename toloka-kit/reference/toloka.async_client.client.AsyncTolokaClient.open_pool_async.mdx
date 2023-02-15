@@ -1,0 +1,43 @@
+---
+title: "open_pool_async | Toloka-Kit"
+date: "2023-02-07T15:41:44.976207"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# open_pool_async
+`toloka.async_client.client.AsyncTolokaClient.open_pool_async` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/async_client/client.py#L0)
+
+```python
+async open_pool_async(self, pool_id: str)
+```
+
+Opens a pool. Sends an asynchronous request to Toloka.
+
+After opening the pool, tasks can be assigned to Tolokers.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`pool_id`|**str**|<p>The ID of the pool.</p>
+
+* **Returns:**
+
+  An object to track the progress of the operation. If the pool is already opened then `None` is returned.
+
+* **Return type:**
+
+  Optional\[[PoolOpenOperation](/docs-new/toloka-kit/reference/toloka.client.operations.PoolOpenOperation)\]
+
+**Examples:**
+
+Opening a pool.
+
+```python
+open_op = toloka_client.open_pool(pool_id='1')
+toloka_client.wait_operation(open_op)
+```

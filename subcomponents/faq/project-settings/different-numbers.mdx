@@ -1,0 +1,10 @@
+<Cut title="How do I use different numbers of response options for different questions?">
+
+Use [concatenation](https://toloka.ai/en/docs/guide/concepts/t-components/helpers#concat), for example:
+
+```html
+{{field type="checkbox" name=(concat "result." @index ) label=(concat "checkbox –
+          " @index) size="L"}}
+```
+
+</Cut>

@@ -1,0 +1,26 @@
+---
+title: "plugin.toloka | Template Builder"
+date: "2023-02-10T09:15:34.492454"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import PluginTolokaTable1 from './plugin.toloka/subcomponents/plugin.toloka-table-1.mdx'
+
+# plugin.toloka
+
+A plugin with extra settings for tasks in Toloka.
+
+## Component properties {#properties}
+
+**Name** | **Type** | **Description**
+----- | ----- | -----
+`type`<span style="color: red">\*</span> | "plugin.toloka" | Set component type.
+`layout`<span style="color: red">\*</span> | _object_ | Settings for the task appearance in Toloka. [Learn more](/docs-new/template-builder/operations/set-plugin-toloka)
+`layout.kind`<span style="color: red">\*</span> | _string_ | <PluginTolokaTable1/>
+`layout.taskWidth` | _number_ | Width of the block with the task. By default, the task is displayed at full width.
+`notifications` | _array_ | An array of notifications. Notifications are displayed at the top of the page.
+`notifications[]` | _view_ | Notification parameters.

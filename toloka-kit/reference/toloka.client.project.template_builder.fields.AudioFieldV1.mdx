@@ -1,0 +1,39 @@
+---
+title: "AudioFieldV1 | Toloka-Kit"
+date: "2023-02-07T15:41:36.584023"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# AudioFieldV1
+`toloka.client.project.template_builder.fields.AudioFieldV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/project/template_builder/fields.py#L72)
+
+```python
+AudioFieldV1(
+    self,
+    data: Optional[BaseComponent] = None,
+    *,
+    multiple: Optional[Any] = None,
+    hint: Optional[Any] = None,
+    label: Optional[Any] = None,
+    validation: Optional[BaseComponent] = None,
+    version: Optional[str] = '1.0.0'
+)
+```
+
+Component for recording audio.
+
+Works in the mobile app. In a browser, this component opens a window for uploading an audio file.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`data`|**Optional\[[BaseComponent](/docs-new/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>Data with values that will be processed or changed.</p>
+`multiple`|**Optional\[Any\]**|<p>Determines whether multiple audio files can be recorded (or uploaded):</p> <ul> <li>`False` (default) — forbidden.</li> <li>`True` — allowed.</li> </ul>
+`hint`|**Optional\[Any\]**|<p>Hint text.</p>
+`label`|**Optional\[Any\]**|<p>Label above the component.</p>
+`validation`|**Optional\[[BaseComponent](/docs-new/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>Validation based on condition.</p>

@@ -1,0 +1,27 @@
+---
+title: "condition.link-opened | Template Builder"
+date: "2023-02-10T09:15:32.813309"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+# condition.link-opened
+
+Checks that a Toloker clicked the link.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/ult2m5XH3xPQFX">View example</Button>
+
+**Important:** To trigger the condition, the Toloker must follow the link from the Toloka interface — you must give Tolokers this option. The condition will not work if the Toloker opens the link from the browser address bar.
+
+This condition can be used in the [view.link](/docs-new/template-builder/reference/view.link) component and also anywhere you can use _(conditions)_.
+
+## Component properties {#properties}
+
+**Name** | **Type** | **Description**
+----- | ----- | -----
+`type`<span style="color: red">\*</span> | "condition.link-opened" | Set component type.
+`hint` | _string_ | Validation error message that a Toloker will see
+`url` | _string_ | The link that must be clicked.

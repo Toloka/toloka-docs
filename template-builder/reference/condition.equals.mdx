@@ -1,0 +1,29 @@
+---
+title: "condition.equals | Template Builder"
+date: "2023-02-10T09:15:31.063327"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ConditionEqualsTable1 from './condition.equals/subcomponents/condition.equals-table-1.mdx'
+import ConditionEqualsTable2 from './condition.equals/subcomponents/condition.equals-table-2.mdx'
+
+# condition.equals
+
+Checks whether the original value is equal to the specified value. If it matches, it returns `true`, otherwise it returns `false`.
+
+When substituting values, you can refer to `data.*` or another element using `$ref`. You can also use [helpers](/docs-new/template-builder/reference/helpers) and [conditions](/docs-new/template-builder/reference/conditions) to get the value.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/2RjfdQbt3tz7xo">View example</Button>
+
+## Component properties {#properties}
+
+**Name** | **Type** | **Description**
+----- | ----- | -----
+`type`<span style="color: red">\*</span> | "condition.equals" | Set component type.
+`data` | _any_ | <ConditionEqualsTable1/>
+`hint` | _string_ | Validation error message that a Toloker will see
+`to`<span style="color: red">\*</span> | _any_ | <ConditionEqualsTable2/>

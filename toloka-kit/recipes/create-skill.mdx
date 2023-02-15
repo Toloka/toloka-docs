@@ -1,0 +1,106 @@
+---
+title: "Create skill | Toloka-Kit"
+date: "2023-02-07T15:41:31.742209"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import CreateSkill from './subcomponents/create_skill.mdx'
+
+# Create skill
+
+_Create a skill that you can assign to Tolokers._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Create skill {#step-three}
+
+Create a skill specifying:
+
+- the skill public visibility
+- the skill short name for you to distinguish it from other skills
+- the skill name visible to Tolokers in the selected languages
+- the skill description for other Tolokers in the selected languages
+
+You can choose your own values or have your own set of the skill parameters. Refer to the [Skill](/docs-new/toloka-kit/reference/toloka.client.skill.Skill) class page for more details.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      new_skill = toloka_client.<Term term="create_skill"><CreateSkill/></Term>(
+      <br/>    hidden=False,
+      <br/>    name='Programmer',
+      {"    public_name={'EN': 'Programmer'},"}
+      {"    public_requester_description={"}
+      {"        'EN': 'You are an expert in programming languages'"}
+      {"    }"}
+      )
+    </HighlightChildren>
+  }
+  textToCopy={`
+new_skill = toloka_client.create_skill(
+    hidden=False,
+    name='Programmer',
+    public_name={'EN': 'Programmer'},
+    public_requester_description={
+        'EN': 'You are an expert in programming languages'
+    }
+)`}
+/>
+
+### 4. Print created skill ID {#step-four}
+
+The `create_skill()` request will return the [Skill](/docs-new/toloka-kit/reference/toloka.client.skill.Skill) class object. You can use its attributes to print the information you need.
+
+```python
+print(new_skill.id)
+```
+
+You should get an output with the created skill ID which looks like this.
+
+```bash
+12648
+```
+
+## Complete code: Create skill {#complete-code}
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+new_skill = toloka_client.create_skill(
+    hidden=False,
+    name='Programmer',
+    public_name={'EN': 'Programmer'},
+    public_requester_description={
+        'EN': 'You are an expert in programming languages'
+    }
+)
+print(new_skill.id)
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[create_skill()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.create_skill) method_
+
+</Note>
+
+## See also {#see-also}
+
+- [How does Toloka work?](https://toloka.ai/en/docs/guide/concepts/overview)
+- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [Toloka API: Create skill](https://toloka.ai/docs/api/api-reference/#post-/skills)

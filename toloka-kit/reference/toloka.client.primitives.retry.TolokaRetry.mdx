@@ -1,0 +1,36 @@
+---
+title: "TolokaRetry | Toloka-Kit"
+date: "2023-02-07T15:41:51.413429"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# TolokaRetry
+`toloka.client.primitives.retry.TolokaRetry` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/primitives/retry.py#L27)
+
+```python
+TolokaRetry(
+    self,
+    *args,
+    retry_quotas: Union[List[str], str, None] = 'MIN',
+    **kwargs
+)
+```
+
+Retry toloka quotas. By default only minutes quotas.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`retry_quotas`|**Union\[List\[str\], str, None\]**|<p>List of quotas that will be retried. None or empty list for not retrying quotas. You can specify quotas:</p> <ul> <li>MIN - Retry minutes quotas.</li> <li>HOUR - Retry hourly quotas. This is means that the program just sleeps for an hour! Be careful.</li> <li>DAY - Retry daily quotas. We strongly not recommended retrying these quotas.</li> </ul>
+## Methods Summary
+
+| Method | Description |
+| :------| :-----------|
+[get_retry_after](/docs-new/toloka-kit/reference/toloka.client.primitives.retry.TolokaRetry.get_retry_after)| None
+[increment](/docs-new/toloka-kit/reference/toloka.client.primitives.retry.TolokaRetry.increment)| None
+[new](/docs-new/toloka-kit/reference/toloka.client.primitives.retry.TolokaRetry.new)| None

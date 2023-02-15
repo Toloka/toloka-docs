@@ -1,0 +1,33 @@
+---
+title: "TaskSortItems | Toloka-Kit"
+date: "2023-02-07T15:42:16.148046"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# TaskSortItems
+`toloka.client.search_requests.TaskSortItems`
+
+```python
+TaskSortItems(self, items=None)
+```
+
+Keys for sorting tasks in search results.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`items`|**Optional\[List\[[SortItem](/docs-new/toloka-kit/reference/toloka.client.search_requests.TaskSortItems.SortItem)\]\]**|<p>A list of sorting keys. Supported values:</p> <ul> <li>`&#x27;id&#x27;` — The ID of a task.</li> <li>`&#x27;created&#x27;` — The creation date of a task.</li> </ul>
+
+**Examples:**
+
+The example shows how to find tasks sorted by creation dates in descending order. Tasks with equal creation dates are sorted by IDs in ascending order.
+
+```python
+sort = toloka.client.search_requests.TaskSortItems(['-created', 'id'])
+result = toloka_client.find_tasks(pool_id=my_pool_id, sort=sort, limit=10)
+```

@@ -1,0 +1,34 @@
+---
+title: "Accept | Toloka-Kit"
+date: "2023-02-07T15:41:59.487697"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# Accept
+`toloka.client.project.template_builder.fields.MediaFileFieldV1.Accept` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/project/template_builder/fields.py#L367)
+
+```python
+Accept(
+    self,
+    *,
+    file_system: Optional[Union[BaseComponent, bool]] = None,
+    gallery: Optional[Union[BaseComponent, bool]] = None,
+    photo: Optional[Union[BaseComponent, bool]] = None,
+    video: Optional[Union[BaseComponent, bool]] = None
+)
+```
+
+Adds different buttons for four types of uploads.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`file_system`|**Optional\[Union\[[BaseComponent](/docs-new/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), bool\]\]**|<p>Adds a button for uploading files from the file manager.</p>
+`gallery`|**Optional\[Union\[[BaseComponent](/docs-new/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), bool\]\]**|<p>Adds a button for uploading files from the gallery.</p>
+`photo`|**Optional\[Union\[[BaseComponent](/docs-new/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), bool\]\]**|<p>Adds a button for uploading images.</p>
+`video`|**Optional\[Union\[[BaseComponent](/docs-new/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), bool\]\]**|<p>Adds a button for uploading videos.</p>

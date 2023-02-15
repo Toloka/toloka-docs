@@ -1,0 +1,54 @@
+---
+title: "Chart | Toloka-Kit"
+date: "2023-02-07T15:41:49.252440"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# Chart
+`toloka.metrics.jupyter_dashboard.Chart` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/metrics/jupyter_dashboard.py#L54)
+
+```python
+Chart(
+    self,
+    name: Optional[str],
+    metrics: List[BaseMetric],
+    loop=None
+)
+```
+
+One chart on the dashboard. Could include several metrics.
+
+If you want to draw really cool chart that displays several metrics in the same coordinates.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`name`|**Optional\[str\]**|<p>The header for this chart. Could be None, Chart create name from the first metric.</p>
+`metrics`|**List\[[BaseMetric](/docs-new/toloka-kit/reference/toloka.metrics.metrics.BaseMetric)\]**|<p>List of metrics, that will be displayed on this chart (in the same coordinates).</p>
+
+**Examples:**
+
+How to display all submitted and accepted answers from some pool and its checking pool, in one chart.
+
+```python
+Chart(
+    'Answers count',
+    [
+```
+            metrics.AssignmentsInPool('456', submitted_name='submitted in 456', accepted_name='accepted in 456', toloka_client=client2),
+        ]
+```python
+)
+```
+## Methods Summary
+
+| Method | Description |
+| :------| :-----------|
+[create_async_tasks](/docs-new/toloka-kit/reference/toloka.metrics.jupyter_dashboard.Chart.create_async_tasks)| None
+[create_figure](/docs-new/toloka-kit/reference/toloka.metrics.jupyter_dashboard.Chart.create_figure)| Create figure for this chart. Called at each step.
+[update_metrics](/docs-new/toloka-kit/reference/toloka.metrics.jupyter_dashboard.Chart.update_metrics)| Gathers all metrics, and stores them in lines.

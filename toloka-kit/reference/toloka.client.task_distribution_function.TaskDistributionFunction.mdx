@@ -1,0 +1,39 @@
+---
+title: "TaskDistributionFunction | Toloka-Kit"
+date: "2023-02-07T15:41:32.855738"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# TaskDistributionFunction
+`toloka.client.task_distribution_function.TaskDistributionFunction` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/task_distribution_function.py#L9)
+
+```python
+TaskDistributionFunction(
+    self,
+    *,
+    scope: Union[Scope, str, None] = None,
+    distribution: Union[Distribution, str, None] = None,
+    window_days: Optional[int] = None,
+    intervals: Optional[List[Interval]] = None
+)
+```
+
+Issue of tasks with uneven frequency
+
+Can be used for:
+- Distribution of tasks with majority opinion verification.
+- Issuing control tasks with uneven frequency. Allows you to change the frequency of verification as the Toloker completes tasks.
+- Issuing training tasks with uneven frequency. Allows you to change the frequency of training tasks as the Toloker completes tasks.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`scope`|**Optional\[[Scope](/docs-new/toloka-kit/reference/toloka.client.task_distribution_function.TaskDistributionFunction.Scope)\]**|<p>How to count tasks completed by the Toloker:</p> <ul> <li>POOL - Count completed pool tasks.</li> <li>PROJECT - Count completed project tasks.</li> </ul>
+`distribution`|**Optional\[[Distribution](/docs-new/toloka-kit/reference/toloka.client.task_distribution_function.TaskDistributionFunction.Distribution)\]**|<p>Distribution of tasks within an interval. Parameter has only one possible: value - UNIFORM.</p>
+`window_days`|**Optional\[int\]**|<p>Period in which completed tasks are counted (number of days).</p>
+`intervals`|**Optional\[List\[[Interval](/docs-new/toloka-kit/reference/toloka.client.task_distribution_function.TaskDistributionFunction.Interval)\]\]**|<p>Interval borders and number of tasks in an interval.</p>

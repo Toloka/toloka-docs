@@ -1,0 +1,46 @@
+The [field.button-radio-group](/docs-new/template-builder/reference/field.button-radio-group) component is displayed as solid buttons. It's better to use these buttons if the question has 2–4 short answer options.
+
+  If there are more answer options, or they are long, it's better to use [field.radio-group](/docs-new/template-builder/reference/field.radio-group), as in the example.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+"type": "field.radio-group",
+"label": "This headline is:",
+"options": [
+  {
+    "label": "Clickbate",
+    "value": "clickbate"
+  },
+  {
+    "label": "Too long",
+    "value": "long"
+  },
+  {
+    "label": "Grammatically incorrect",
+    "value": "bad-grammar"
+  },
+  {
+    "label": "None of this",
+    "value": "none"
+  },
+  {
+    "label": "The text hasn't loaded",
+    "value": "404"
+  }
+],
+"data": {
+  "type": "data.output",
+  "path": "input_data"
+},
+"validation": {
+  "type": "condition.required",
+  "hint": "Select an option"
+}
+  }
+  ```
+
+  </Cut>
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/dkl2xM1t3ttDhV">View example</Button>

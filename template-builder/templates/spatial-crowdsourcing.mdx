@@ -1,0 +1,213 @@
+---
+title: "Collecting offline data | Template Builder"
+date: "2023-02-10T09:15:30.672355"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactSupport from '../subcomponents/contact-support.mdx'
+
+# Collecting offline data
+
+For this type of project, you can use the **Spatial Crowdsourcing** preset.
+
+This preset is used for field tasks in the Toloka mobile app. The Toloker selects a point on the map, goes to the location, takes photos, and writes a comment.
+
+The preset uses [HTML/JS/CSS editor](https://toloka.ai/en/docs/guide/concepts/spec) by default. This section describes how to use the Template Builder for the same purpose. In the **Task interface** section of your project, select **Template builder** and paste the code of the following example to the **Config** section.
+
+Take a look at the example: the interface includes a text block, a button for sending the coordinates of the Toloker's device, a button for uploading photos, and a comment field. Note that validation and task layout are already configured in this Template Builder sample code.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/Fz_--ktr3ttAX9">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [view.list](/docs-new/template-builder/reference/view.list): Displays data in a list.
+
+- [view.text](/docs-new/template-builder/reference/view.text): Adds a block with text.
+
+  If you need formatted text, use the [view.markdown](/docs-new/template-builder/reference/view.markdown) component.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.text",
+    "label": "Store name:",
+    "content": {
+      "type": "data.input",
+      "path": "name"
+    }
+  }
+  ```
+  </Cut>
+
+- [view.divider](/docs-new/template-builder/reference/view.divider): Displays a horizontal delimiter.
+
+- [view.action-button](/docs-new/template-builder/reference/view.action-button): Adds a button that calls an action.
+
+  In this example, clicking the button calls [@yandex-toloka/data.location](/docs-new/template-builder/reference/data.location) which sends the coordinates of the Toloker's device.
+
+  The [@yandex-toloka/condition.distance](/docs-new/template-builder/reference/condition.distance) component compares the Toloker's coordinates with the business location that you specified. The Toloker can submit the response if the difference is less than 50 meters. To change this condition, replace the value of the `max` property with the desired distance.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.action-button",
+    "label": "Share your coordinates",
+    "action": {
+      "type": "action.set",
+      "payload": {
+        "type": "@yandex-toloka/data.location"
+      },
+      "data": {
+        "type": "data.output",
+        "path": "worker_coordinates"
+      }
+    },
+    "validation": {
+      "type": "condition.all",
+      "conditions": [
+        {
+          "type": "condition.required",
+          "hint": "Click to share your coordinates",
+          "data": {
+            "type": "data.output",
+            "path": "worker_coordinates"
+          }
+        },
+        {
+          "type": "@yandex-toloka/condition.distance",
+          "hint": "you are too far away from the location.",
+          "from": {
+            "type": "@yandex-toloka/data.location"
+          },
+          "to": {
+            "type": "data.input",
+            "path": "position"
+          },
+          "max": 50
+        }
+      ]
+    }
+  }
+  ```
+  </Cut>
+
+- [field.media-file](/docs-new/template-builder/reference/field.media-file): Adds a button for uploading photos.
+
+  Use the [conditions.required](/docs-new/template-builder/reference/conditions) component inside the `validation` property to check that a Toloker uploaded photos.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.media-file",
+    "label": "Find a local business",
+    "accept": {
+      "photo": true
+    },
+    "multiple": true,
+      "data": {
+        "type": "data.output",
+        "path": "photo"
+      },
+    "validation": {
+      "type": "condition.required",
+      "hint": "Attach photos of the organization."
+    }
+  }
+  ```
+
+  </Cut>
+
+- [field.textarea](/docs-new/template-builder/reference/field.textarea): Adds a box for entering multi-line text.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.textarea",
+    "label": "Comments",
+    "placeholder": "If your photos don't contain all the necessary information, add details here.",
+    "data": {
+      "type": "data.output",
+      "path": "comment"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task layout.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "plugin.toloka",
+    "layout": {
+      "kind": "scroll",
+      "taskWidth": 600
+    }
+  }
+  ```
+
+  </Cut>
+
+</Cut>
+
+If this template doesn't meet your needs, see other examples in the **Field tasks** section.
+
+## Add a description {#add-description}
+
+To add a detailed description to the task, use one more [view.text](/docs-new/template-builder/reference/view.text) component. To start a new line, use `\n`.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "view.text",
+  "content": "Find the following store, and take and upload photos of it. \nIf your photos don't contain all the necessary information, add a comment."
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/Hntp83Qy3ttDYy">View example</Button>
+
+## Add a layout {#add-layout}
+
+To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs-new/template-builder/reference/view.alert). You can place it in the [view.list](/docs-new/template-builder/reference/view.list) along with the other components.
+
+In this example, the text is highlighted with a blue border.
+
+<Cut title="Show code">
+
+```json
+  {
+    "type": "view.alert",
+    "theme": "info",
+    "content": {
+      "type": "view.text",
+      "label": "Find a local business in your city:",
+      "content": {
+        "type": "data.input",
+        "path":"name"
+      }
+    }
+  }
+  ```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/obCzNwRZ3ttDa2">View example</Button>
+
+## See also {#see-also}
+
+- [Tutorials: Collecting offline data](https://toloka.ai/en/docs/guide/tutorials/walk)
+
+<ContactSupport/>

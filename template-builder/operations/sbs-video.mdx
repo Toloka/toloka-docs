@@ -1,0 +1,66 @@
+---
+title: "Comparing video clips | Template Builder"
+date: "2023-02-10T09:15:36.326420"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TolokaTbSourceAddMedia from '../subcomponents/toloka-tb-source/id-toloka-tb-source/add-media.mdx'
+import ContactSupport from '../subcomponents/contact-support.mdx'
+
+# Comparing video clips
+
+This section describes how to [compare two videos](#video-side-by-side), how to make them [start and pause simultaneously](#same-time-video), and how to put [multiple videos on a page](#compare-more-video).
+
+<TolokaTbSourceAddMedia/>
+
+## Two videos side-by-side {#video-side-by-side}
+
+To place two videos next to each other, you can use the [layout.side-by-side](/docs-new/template-builder/reference/layout.side-by-side) component. Add components with video ([view.video](/docs-new/template-builder/reference/view.video)) to the `items` property, and fields for responses to the `controls` property.
+
+<Note mode="note" title="Note">
+
+Unlike other components, [layout.side-by-side](/docs-new/template-builder/reference/layout.side-by-side) has options allowing you to hide or display any of the elements in `items`.
+
+</Note>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/pu9bV4003ttCMs">View example</Button>
+
+Instead of [layout.side-by-side](/docs-new/template-builder/reference/layout.side-by-side), you can use other components, for example:
+- [view.list](/docs-new/template-builder/reference/view.list): A list of any elements, vertical or horizontal.
+- [layout.columns](/docs-new/template-builder/reference/layout.columns): A set of horizontal columns that you can put the videos in. As opposed to [view.list](/docs-new/template-builder/reference/view.list), this component provides more options for column width setup.
+
+## Parallel playback of two videos {#same-time-video}
+
+You can sync playback and pause for both videos.
+
+To do this, add a button ([view.action-button](/docs-new/template-builder/reference/view.action-button)) that will trigger the [action.play-pause](/docs-new/template-builder/reference/action.play-pause) action for both videos. To call two actions using one button (for each video), use the [action.bulk](/docs-new/template-builder/reference/action.bulk) component.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/-9UsIJDN3ttCPr">View example</Button>
+
+You can also trigger playback using a hotkey. The button's shortcut will be shown on the button label.
+
+Use [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys) for this. To assign a shortcut to the button, do the same thing with the shortcut.
+
+<Note mode="tip" title="Tip">
+
+To call the same action from different parts of the code, put it in a separate variable inside `vars`. Then reference this variable using the `$ref` structure. For more information, see [Reuse code](/docs-new/template-builder/best-practices/reuse).
+
+</Note>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/YErQ-Pd93ttCRm">View example</Button>
+
+## Compare multiple videos {#compare-more-video}
+
+In the examples below, you can add as many video components as you like using the `items` property.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/ROoWiLNY3ttCSc">View example</Button>
+
+If you want to add multiple videos that a Toloker doesn't have to view at the same time, position them vertically using the [view.list](/docs-new/template-builder/reference/view.list) component. To make sure that the response selection buttons don't get lost, use the [layout.sidebar](/docs-new/template-builder/reference/layout.sidebar) component.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/ycaNgDNe3ttCUM">View example</Button>
+
+<ContactSupport/>

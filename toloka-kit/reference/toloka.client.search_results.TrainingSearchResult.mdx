@@ -1,0 +1,30 @@
+---
+title: "TrainingSearchResult | Toloka-Kit"
+date: "2023-02-07T15:41:33.580171"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# TrainingSearchResult
+`toloka.client.search_results.TrainingSearchResult`
+
+```python
+TrainingSearchResult(
+    self,
+    *,
+    items: Optional[List[Training]] = None,
+    has_more: Optional[bool] = None
+)
+```
+
+The result of searching training pools.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`items`|**Optional\[List\[[Training](/docs-new/toloka-kit/reference/toloka.client.training.Training)\]\]**|<p>A list with found training pools.</p>
+`has_more`|**Optional\[bool\]**|<p>A flag showing whether there are more matching training pools.</p> <ul> <li>`True` — There are more matching training pools, not included in `items` due to the limit set in the search request.</li> <li>`False` — `items` contains all matching training pools.</li> </ul>

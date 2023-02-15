@@ -1,0 +1,506 @@
+---
+title: "Video classification | Template Builder"
+date: "2023-02-10T09:15:30.100216"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TolokaTbSourceAddMedia from '../subcomponents/toloka-tb-source/id-toloka-tb-source/add-media.mdx'
+import ContactSupport from '../subcomponents/contact-support.mdx'
+import VideoModerationList1 from './video-moderation/subcomponents/video-moderation-list-1.mdx'
+import VideoModerationList2 from './video-moderation/subcomponents/video-moderation-list-2.mdx'
+import VideoModerationList3 from './video-moderation/subcomponents/video-moderation-list-3.mdx'
+import VideoModerationList4 from './video-moderation/subcomponents/video-moderation-list-4.mdx'
+
+# Video classification
+
+For this type of project, you can use the **Hand gesture classification** preset.
+
+This preset helps you classify video content by specified categories. You can use it for content rating and moderation, detecting noise and other imperfections in the video, or training computer vision.
+
+Take a look at the example: the labeling interface includes a video player, and several buttons for categories. Note that validation, keyboard shortcuts, and task layout are already configured in this Template Builder sample code.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/ocsyNc3j3ttDuP">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [view.list](/docs-new/template-builder/reference/view.list): Displays data in a list.
+
+- [view.video](/docs-new/template-builder/reference/view.video): Adds a video player.
+
+  The [condition.played](/docs-new/template-builder/reference/condition.played) component inside the `validation` property checks that a Toloker started watching the video.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.video",
+    "ratio": [
+      1,
+      1
+    ]
+    "url": {
+      "type": "data.input",
+      "path": "video"
+    }
+    "validation": {
+      "type": "condition.played",
+    }
+  }
+  ```
+
+  </Cut>
+
+- [field.button-radio-group](/docs-new/template-builder/reference/field.button-radio-group): Adds buttons for selecting an answer option.
+
+  The [condition.required](/docs-new/template-builder/reference/condition.required) component inside the `validation` property checks if at least one option is selected.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.button-radio-group",
+    "label": "What number is being shown?",
+    "options": [
+      {
+        "label": "One",
+        "value": "one"
+      },
+      {
+        "label": "Two",
+        "value": "two"
+      },
+      {
+        "label": "Three",
+        "value": "three"
+      },
+      {
+        "label": "Four",
+        "value": "four"
+      },
+      {
+        "label": "Five",
+        "value": "five"
+      },
+      {
+        "label": "Failed to load",
+        "value": "_404"
+      }
+    ],
+    "data": {
+      "type": "data.output",
+      "path": "result"
+    },
+    "validation": {
+      "type": "condition.required"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task layout.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "plugin.toloka",
+    "layout": {
+      "kind": "scroll",
+      "taskWidth": 600
+    }
+  }
+  ```
+
+  </Cut>
+
+- [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys): Adds [keyboard shortcuts](/docs-new/template-builder/best-practices/hotkeys).
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "1": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "one"
+    },
+    "2": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "two"
+    },
+    "3": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "three"
+    },
+    "4": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "four"
+    },
+    "5": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "five"
+    },
+    "6": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "_404"
+    },
+    "type": "plugin.hotkeys"
+  }
+  ```
+
+  </Cut>
+
+</Cut>
+
+<TolokaTbSourceAddMedia/>
+
+If this preset doesn't meet your needs, see other examples in this section.
+
+## Check that the video is fully viewed
+
+If you want to be sure that a Toloker watched the whole video, replace the [condition.played](/docs-new/template-builder/reference/condition.played) component with [condition.played-fully](/docs-new/template-builder/reference/condition.played-fully).
+
+<Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.video",
+    "validation": {
+      "type": "condition.played-fully",
+      "hint": "you need to watch the video to the end"
+    },
+    "url": {
+      "type": "data.input",
+      "path": "video"
+    }
+  }
+  ```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/Djq9UxCi3ttDv2">View example</Button>
+
+## Add a description {#add-description}
+
+To add a detailed description to the task, use the [view.text](/docs-new/template-builder/reference/view.text) component.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "view.text",
+  "content": "Watch the video and rate its quality."
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/GbUWi5Mo3ttDvz">View example</Button>
+
+## Add a response field {#add-text-area}
+
+To let Tolokers leave comments about the task or their response, add a text field using [field.textarea](/docs-new/template-builder/reference/field.textarea).
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "field.textarea",
+  "label": "Comments",
+  "placeholder": "Enter text",
+  "data": {
+    "type": "data.output",
+    "path": "comment"
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/Sgr_lsd73ttDwk">View example</Button>
+
+## Add a layout {#add-layout}
+
+To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs-new/template-builder/reference/view.alert). You can place it in the [view.list](/docs-new/template-builder/reference/view.list) along with the other components.
+
+In this example, the description is highlighted with a blue border, and the buttons are highlighted with a yellow one.
+
+<Cut title="Show code">
+
+```json
+  {
+    "type": "view.alert",
+    "theme": "info",
+    "content": {
+      "type": "view.text",
+      "content": "Watch the video and rate its quality."
+    }
+  },
+  {
+    "type": "view.alert",
+    "theme": "warning",
+    "content":{
+      "type": "field.button-radio-group",
+      "label": "rate the video quality",
+      "options": [
+        {
+          "label": "Good",
+          "value": "ok"
+        },
+        {
+          "label": "Bad",
+          "value": "bad"
+        },
+        {
+          "label": "Failed to load",
+          "value": "error"
+        }
+      ],
+      "validation": {
+      "type": "condition.required",
+      "hint": "choose one of the options"
+      },
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      }
+    }
+  }
+  ```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/nRY8qyZ93ttDxm">View example</Button>
+
+## Other options for buttons {#add-variants}
+
+Decide whether a Toloker can select only one or multiple answer options.
+
+<Tabs tabs={[
+  { title: 'Multiple options (checkboxes)', value: <VideoModerationList1/> },
+  { title: 'One option (a radio button)', value: <VideoModerationList2/> },
+]}/>
+
+## Add clarifying questions to one of the options {#add-addition}
+
+The [helper.if](/docs-new/template-builder/reference/helper.if) component displays an interface element after a specific response is selected. In this example, a Toloker can only select correct statements about the video if it is loaded.
+
+  <Cut title="Show code">
+
+```json
+  {
+    "type": "helper.if",
+    "condition": {
+      "type": "condition.equals",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "to": "yes"
+    },
+    "then": {
+      "type": "field.checkbox-group",
+      "label": "What's in this video?",
+      "options": [
+        {
+          "label": "Planet Earth",
+          "value": "earth"
+        },
+        {
+          "label": "A planet rotating",
+          "value": "turn"
+        },
+        {
+          "label": "A blue planet",
+          "value": "blue"
+        }
+      ],
+      "data": {
+        "type": "data.output",
+        "path": ""
+      },
+      "validation": {
+        "type": "condition.required",
+        "hint": "Select one or more options"
+      }
+    }
+  }
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/9ywPoPF53ttDzz">View example</Button>
+
+If you need to check sequentially more than two conditions, use the [helper.switch](/docs-new/template-builder/reference/helper.switch) component.
+
+## Video and search query comparison {#search}
+
+#### Does the video match the search query
+
+Add a button that opens the search results and generate a search query link using the [helper.search-query](/docs-new/template-builder/reference/helper.search-query) component. To make sure that a Toloker clicked on the link and checked its contents, configure validation, as in the example.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "condition.link-opened",
+  "hint": "Follow the link",
+  "url": {
+    "type": "helper.search-query",
+    "query": {
+      "type": "data.input",
+      "path": "link"
+    },
+    "engine": "bing"
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/u1WUKQIF3ttE3H">View example</Button>
+
+#### Side-by-side video and web page comparison
+
+You can display the web page in the built-in window using the [view.iframe](/docs-new/template-builder/reference/view.iframe) component. Place the video next to it using [layout.side-by-side](/docs-new/template-builder/reference/layout.side-by-side).
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "view.iframe",
+  "maxWidth": 400,
+  "fullHeight": true,
+  "url": {
+    "type": "helper.search-query",
+    "query": {
+      "type": "data.input",
+      "path": "link"
+    },
+    "engine": "bing"
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/sneMynFM3ttE4d">View example</Button>
+
+#### Side-by-side video and mobile web page comparison
+
+This is a more complex example that compares the video with the results of a search query. The following components are added:
+
+- [view.iframe](/docs-new/template-builder/reference/view.iframe): Displays the web page in an embedded window.
+- [view.device-frame](/docs-new/template-builder/reference/view.device-frame): Wraps the window in a smartphone frame.
+- [layout.side-by-side](/docs-new/template-builder/reference/layout.side-by-side): Places the video and the search results window next to each other.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "layout.side-by-side",
+  "items": [
+    {
+      "type": "view.video",
+      "content": {
+        "type": "data.input",
+        "path": "video"
+      }
+    },
+    {
+      "type": "view.device-frame",
+      "maxWidth": 400,
+      "content": {
+        "type": "view.iframe",
+        "maxWidth": 400,
+        "fullHeight": true,
+        "url": {
+          "type": "helper.search-query",
+          "query": {
+            "type": "data.input",
+            "path": "link"
+          },
+          "engine": "bing"
+        }
+      }
+    }
+  ]
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/j-pKuRhl3ttE5y">View example</Button>
+
+## Compare the video with another type of data {#compare-video-and-other}
+
+- Add an image using the [view.image](/docs-new/template-builder/reference/view.image) component. Place the video next to the image using the [layout.columns](/docs-new/template-builder/reference/layout.columns) component.
+
+  <Cut title="Show code">
+
+  ```json
+    {
+      "type": "layout.columns",
+      "items": [
+        {
+          "type": "view.video",
+          "url": {
+            "type": "data.input",
+            "path": "video"
+          }
+        },
+        {
+          "type": "view.image",
+          "url": {
+            "type": "data.input",
+            "path": "image"
+          }
+        }
+      ]
+    }
+  ```
+
+  </Cut>
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/BLaJlPMg3ttE75">View example</Button>
+
+- Place the video next to the text or audio using the [view.list](/docs-new/template-builder/reference/view.list) component.
+
+  <Tabs tabs={[
+  { title: 'Compare the video with text', value: <VideoModerationList3/> },
+  { title: 'Compare audio tracks', value: <VideoModerationList4/> },
+]}/>
+
+## See also {#see-also}
+
+- [Tutorials: Video classification](https://toloka.ai/en/docs/guide/tutorials/video-moderation)
+
+<ContactSupport/>

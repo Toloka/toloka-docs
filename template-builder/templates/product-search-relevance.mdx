@@ -1,0 +1,223 @@
+---
+title: "Product search relevance | Template Builder"
+date: "2023-02-10T09:15:30.328927"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TolokaTbSourceAddMedia from '../subcomponents/toloka-tb-source/id-toloka-tb-source/add-media.mdx'
+import ContactSupport from '../subcomponents/contact-support.mdx'
+
+# Product search relevance
+
+For this type of project, you can use the **Product search relevance** preset.
+
+This preset helps you improve ecommerce search page results by rating how relevant products are to specific search queries.
+
+Take a look at the example: the labeling interface includes an image, a box for the search query, and radio buttons for evaluating relevance. Note that validation and task layout are already configured in this example.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/UdToWZS43ttCyi">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [layout.sidebar](/docs-new/template-builder/reference/layout.sidebar): Lets you place the main content block and an adjacent panel with controls on a page.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "layout.sidebar",
+    "minWidth": 400,
+    "content": {
+      "type": "view.list",
+      "size": "m",
+      "direction": "vertical",
+      "items": []
+    },
+    "controls": {
+      "type": "view.list",
+      "direction": "vertical",
+      "items": []
+    }
+  }
+  ```
+
+  </Cut>
+
+- [view.image](/docs-new/template-builder/reference/view.image): Displays an image.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.image",
+    "maxWidth": 350,
+    "url": {
+      "type": "data.input",
+      "path": "imagepath"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [view.markdown](/docs-new/template-builder/reference/view.markdown): A block for displaying text in Markdown.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.markdown",
+    "label": "Product title:",
+    "content": {
+      "type": "data.input",
+      "path": "title"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [view.alert](/docs-new/template-builder/reference/view.alert): The component creates a color block to highlight important information. You can use both plain text and other visual components inside it.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.alert",
+    "theme": "info",
+    "label": "Search query",
+    "content": {
+      "type": "view.text",
+      "content": {
+        "type": "data.input",
+        "path": "query"
+      }
+    }
+  }
+  ```
+
+  </Cut>
+
+- [view.action-button](/docs-new/template-builder/reference/view.action-button): A button that calls an action. When clicking the button, an action specified in the `action` property is called.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.action-button",
+    "label": "Search query in Google",
+    "action": {
+      "type": "action.open-link",
+      "payload": {
+        "type": "data.input",
+        "path": "search_url"
+      }
+    }
+  }
+  ```
+
+  </Cut>
+
+- [view.divider](/docs-new/template-builder/reference/view.divider): A horizontal delimiter. You can place extra elements in the center of the delimiter, like a popup `hint` and `label`.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.divider"
+  }
+  ```
+
+  </Cut>
+
+- [field.radio-group](/docs-new/template-builder/reference/field.radio-group): A component for selecting one value out of several options. It is designed as a group of circles arranged vertically. The minimum number of buttons is one. Any type of data can be returned.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.radio-group",
+    "label": "Choose relevance class",
+    "options": [
+      {
+        "label": "Relevant",
+        "value": "relevant"
+      },
+      {
+        "label": "Irrelevant",
+        "value": "irrelevant"
+      }
+    ],
+    "data": {
+      "type": "data.output",
+      "path": "result"
+    },
+    "validation": {
+      "type": "condition.required"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [condition.required](/docs-new/template-builder/reference/condition.required): Checks if at least one option is selected.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "condition.required"
+  }
+  ```
+
+  </Cut>
+
+- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task layout.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "plugin.toloka",
+    "layout": {
+      "kind": "scroll",
+      "taskWidth": 600
+    }
+  }
+  ```
+
+  </Cut>
+
+</Cut>
+
+<TolokaTbSourceAddMedia/>
+
+If this preset doesn't meet your needs, see other examples in this section.
+
+## Add a response field {#add-text-area}
+
+If you need comments from the Toloker, add a text field using [field.textarea](/docs-new/template-builder/reference/field.textarea). In this example, additional validation is set up that requires you to enter text if one of two audio tracks is selected.
+
+<Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.textarea",
+    "label": "Comments",
+    "placeholder": "Enter text",
+    "data": {
+      "type": "data.output",
+      "path": "comment"
+    }
+  }
+  ```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/P1WbTTcV3ttCzs">View example</Button>
+
+<ContactSupport/>

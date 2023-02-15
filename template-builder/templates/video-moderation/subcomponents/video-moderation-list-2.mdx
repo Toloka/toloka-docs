@@ -1,0 +1,56 @@
+The [field.button-radio-group](/docs-new/template-builder/reference/field.button-radio-group) component is displayed as solid buttons. It's better to use these buttons if the question has 2–4 short answer options.
+
+  If there are more answer options, or they are long, it's better to use [field.radio-group](/docs-new/template-builder/reference/field.radio-group), as in the example.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+"type": "field.radio-group",
+"label": "What's in the video?",
+"options": [
+  {
+    "label": "The video shows a blue rotating planet",
+    "value": "1"
+  },
+  {
+    "label": "The video shows a blue planet isn't rotating",
+    "value": "2"
+  }
+],
+"validation": {
+  "type": "condition.required",
+  "hint": "Select an answer"
+},
+"data": {
+  "type": "data.output",
+  "path": "result1"
+}
+  },
+  {
+"type": "field.radio-group",
+"label": "Video quality",
+"options": [
+  {
+    "label": "The video looks like real footage",
+    "value": "1"
+  },
+  {
+    "label": "The video was made using computer graphics",
+    "value": "2"
+  }
+],
+"validation": {
+  "type": "condition.required",
+  "hint": "Select an answer"
+},
+"data": {
+  "type": "data.output",
+  "path": "result2"
+   }
+  }
+  ```
+
+  </Cut>
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/uG-C5g5h3ttDzf">View example</Button>

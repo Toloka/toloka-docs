@@ -1,0 +1,240 @@
+---
+title: "Video comparison (Side-by-side) | Template Builder"
+date: "2023-02-10T09:15:29.675069"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TolokaTbSourceAddMedia from '../subcomponents/toloka-tb-source/id-toloka-tb-source/add-media.mdx'
+import ContactSupport from '../subcomponents/contact-support.mdx'
+
+# Video comparison (Side-by-side)
+
+For this type of project, you can use the **Video comparison (Side-by-side)** preset.
+
+Take a look at the example: there are two videos and buttons to choose an answer. Note that validation, keyboard shortcuts, and task layout are already configured in this example.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/h0PX65GS3ttDRj">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [view.video](/docs-new/template-builder/reference/view.video): A video player.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.video",
+    "validation": {
+      "type": "condition.played",
+      "hint": "Please, watch the video"
+    },
+    "url": {
+      "type": "data.input",
+      "path": "video_1"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [layout.columns](/docs-new/template-builder/reference/layout.columns): Arranges videos side by side.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "layout.columns",
+    "items": []
+  }
+  ```
+
+  </Cut>
+
+- [field.radio-group](/docs-new/template-builder/reference/field.radio-group): Buttons for answer options.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.radio-group",
+    "label": "Are the videos the same or different?",
+    "options": [],
+    "validation": {
+      "type": "condition.required",
+      "hint": "Choose one of the options"
+    },
+    "data": {
+      "type": "data.output",
+      "path": "result"
+    }
+  }
+  ```
+
+  </Cut>
+
+- [condition.required](/docs-new/template-builder/reference/condition.required): Checks if at least one option is selected.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "condition.required",
+    "hint": "Choose one of the options"
+  }
+  ```
+
+  </Cut>
+
+- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task layout.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "plugin.toloka",
+    "layout": {
+      "kind": "pager",
+      "taskWidth": 1200
+    }
+  }
+  ```
+
+  </Cut>
+
+- [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys): [Keyboard shortcuts](/docs-new/template-builder/best-practices/hotkeys).
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "1": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "equal"
+    },
+    "2": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "different"
+    },
+    "3": {
+      "type": "action.set",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "payload": "error"
+    },
+    "type": "plugin.hotkeys"
+  }
+  ```
+
+  </Cut>
+
+</Cut>
+
+<TolokaTbSourceAddMedia/>
+
+## What else can be configured {#add-more}
+
+- To [check](/docs-new/template-builder/best-practices/conditions) whether a Toloker watched videos up to the end, replace the [condition.played](/docs-new/template-builder/reference/condition.played) component with [condition.played-fully](/docs-new/template-builder/reference/condition.played-fully).
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "condition.played-fully",
+    "hint": "Please, watch the video"
+  }
+  ```
+
+  </Cut>
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/gIJRfreg3ttDTG">View example</Button>
+
+- To add a detailed description to the task, use the [view.text](/docs-new/template-builder/reference/view.text) component.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.text",
+    "content": "Watch the videos and tell if they are the same."
+  }
+  ```
+
+  </Cut>
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/izMU-u7x3ttDUS">View example</Button>
+
+- To let Tolokers leave comments about the task or their response, add a text field using [field.textarea](/docs-new/template-builder/reference/field.textarea).
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.textarea",
+    "label": "Comments",
+    "placeholder": "Enter text",
+    "data": {
+      "type": "data.output",
+      "path": "comment"
+    }
+  }
+  ```
+
+  </Cut>
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/X-T_nb_K3ttDVR">View example</Button>
+
+If this preset doesn't meet your needs, see other examples in this section.
+
+## Add a layout {#add-color}
+
+To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs-new/template-builder/reference/view.alert). In this example, the source text is highlighted with a blue border, and the buttons are highlighted with a yellow one.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.alert",
+    "theme": "info",
+    "content": {
+      "type": "view.text",
+      "content": "Watch the videos and tell if they are the same."
+    }
+  },
+  {
+    "type": "view.alert",
+    "theme": "warning",
+    "content": {
+      "type": "field.radio-group",
+      "label": "Are the videos the same or different?",
+      "options": [],
+      "validation": {
+        "type": "condition.required",
+        "hint": "Choose one of the options"
+      },
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      }
+    }
+  }
+  ```
+
+  </Cut>
+
+  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/7YaPTOBr3ttDWf">View example</Button>
+
+<ContactSupport/>

@@ -1,0 +1,89 @@
+1. Prepare **Task interface**:
+
+    1. Connect the $TOLOKA_ASSETS/js/image-annotation.js library (click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425167322/1675425167322_original_svg.svg" alt="" /> in the **Task interface** block on the project page).
+
+    1. In the **html** block, replace the current code with the following:
+
+        ```html
+        <!-- editor for selecting objects that lets you add an area in advance -->
+        {{field type="image-annotation" name="object" src=image annotations=selection}}
+        <!-- buttons for responses -->
+        {{field type="radio" name="result" value="OK" label="Correct" hotkey="1"}}
+        {{field type="radio" name="result" value="BAD" label="Incorrect" hotkey="2"}}
+        ```
+
+    1. In the **css** block, replace the code with the following:
+
+        ```css
+        /* hide the button for polygon selection */
+        .image-annotation-editor__shape-polygon {
+            display: none;
+        }
+        /* adjust the interface height */
+        .image-annotation-editor__annotation-layer {
+            height: max-content;
+        }
+        ```
+
+1. Configure the **Data specification** section:
+
+    1. Click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425185879/1675425185879_original_svg.svg" alt="" /> to switch graphic mode to JSON format.
+
+    1. Remove the template code from the **Input data** field and enter the following code:
+
+        ```json
+        {
+            "image": {
+                "type": "url",
+                "hidden": false,
+                "required": true
+            },
+            "selection": {
+                "type": "array_json",
+                "hidden": false,
+                "required": false
+            },
+            "assignment_id": {
+                "type": "string",
+                "hidden": true,
+                "required": true
+            }
+        }
+        ```
+
+    1. Remove the template code from the **Output data** field and enter the following code:
+
+        ```json
+        {
+            "result": {
+                "type": "string",
+                "hidden": false,
+                "required": true,
+                "allowed_values": [
+                    "OK",
+                    "BAD"
+                ]
+            }
+        }
+        ```
+
+        To learn more about specifications, see the [Input and output data](https://toloka.ai/en/docs/guide/concepts/incoming) page.
+
+1. Click the <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425176321/1675425176321_original_svg.svg" alt="" /> **Preview task** button to view the task.
+
+    <Note mode="note" title="Note">
+
+    The project preview shows one task with standard data. You can define the number of tasks to show on the page later.
+
+    </Note>
+
+1. Click **Change input data**.
+
+1. In the **selection** field, add an example of input data:
+
+    ```json
+    [{"data":{"p1":{"x":0.472,"y":0.413},"p2":{"x":0.932,"y":0.877}},"type":"rectangle"},
+    {"data":[{"x":0.143,"y":0.807},{"x":0.317,"y":0.87},{"x":0.511,"y":0.145},{"x":0.328,"y":0.096},{"x":0.096,"y":0.554}],"type":"polygon"}]
+    ```
+
+1. If everything is OK, close the preview tab. If not, check the data you inserted in the code blocks.

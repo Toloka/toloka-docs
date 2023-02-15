@@ -1,0 +1,46 @@
+---
+title: "helper.object2entries | Template Builder"
+date: "2023-02-10T09:15:33.246822"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+# helper.object2entries
+
+Creating an array of key-value pairs from the specified object.
+
+For example, let's say you have an object that looks like this:
+
+```json
+{
+  "foo": "hello",
+  "bar": "world"
+}
+```
+
+It will be converted to an array whose objects will pair data from the source object and their designations:
+
+```json
+[
+  {
+    "key": "foo",
+    "value": "hello"
+  },
+  {
+    "key": "bar",
+    "value": "world"
+  }
+]
+```
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/CMTew3Xf3twjQE">View example</Button>
+
+## Component properties {#properties}
+
+**Name** | **Type** | **Description**
+----- | ----- | -----
+`type`<span style="color: red">\*</span> | "helper.object2entries" | Set component type.
+`data` | _any_ | The object to convert.

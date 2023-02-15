@@ -1,0 +1,75 @@
+---
+title: "Get list of message threads | Toloka-Kit"
+date: "2023-02-07T15:40:36.807428"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import GetMessageThreads from './subcomponents/get_message_threads.mdx'
+
+# Get list of message threads
+
+_Get the list of all the message threads present in a specific folder in your account._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Print message thread IDs and topics {#step-three}
+
+Iterate through all the message threads calling the `get_message_threads()` method.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      for message_thread in toloka_client.<Term term="get_message_threads"><GetMessageThreads/></Term>(folder=['INBOX', 'UNREAD']):
+      <br/>    topic=message_thread.topic
+      <br/>    print(message_thread.id, topic.get('EN') or list(topic.values())[0])
+    </HighlightChildren>
+  }
+  textToCopy={`for message_thread in toloka_client.get_message_threads(folder=['INBOX', 'UNREAD']):
+    topic=message_thread.topic
+    print(message_thread.id, topic.get('EN') or list(topic.values())[0])`}
+/>
+
+You should get an output with the message thread IDs and topics which looks like this.
+
+```bash
+63c00f08138adb3ab310b2a5 Perfect job!
+63c1573b138adb3ab310b2af Thank you!
+```
+
+## Complete code: Get list of message threads {#complete-code}
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+for message_thread in toloka_client.get_message_threads(folder=['INBOX', 'UNREAD']):
+    topic=message_thread.topic
+    print(message_thread.id, topic.get('EN') or list(topic.values())[0])
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_message_threads()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_message_threads) method_
+
+</Note>
+
+## See also {#see-also}
+
+- [How does Toloka work?](https://toloka.ai/en/docs/guide/concepts/overview)
+- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [Toloka API:  Get list of message threads](https://toloka.ai/docs/api/api-reference/#get-/message-threads)

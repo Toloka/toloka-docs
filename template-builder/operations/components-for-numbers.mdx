@@ -1,0 +1,43 @@
+---
+title: "Number input field | Template Builder"
+date: "2023-02-10T09:15:36.727503"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactSupport from '../subcomponents/contact-support.mdx'
+
+# Number input field
+
+To add a number input field, use the [field.number](/docs-new/template-builder/reference/field.number) component.
+
+## Integer validation {#number-integer-only}
+
+By default, this field can contain decimal numbers. To enter integers, use validation:
+
+```
+"validation": {
+  "type": "condition.schema",
+  "schema": {
+    "type": "integer"
+  },
+  "hint": "Enter an integer"
+}
+```
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/ly07NbGi3ttExb">View example</Button>
+
+## Prohibit negative numbers {#number-positive-only}
+
+By default, you can enter both positive and negative numbers in this field. To prohibit negative numbers, use the `minimum` property:
+
+```
+"minimum": 0
+```
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/-jTT88IN3ttEyM">View example</Button>
+
+<ContactSupport/>

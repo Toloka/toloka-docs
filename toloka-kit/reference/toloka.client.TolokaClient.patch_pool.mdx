@@ -1,0 +1,39 @@
+---
+title: "patch_pool | Toloka-Kit"
+date: "2023-02-07T15:41:32.161228"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# patch_pool
+`toloka.client.TolokaClient.patch_pool` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/__init__.py#L1657)
+
+Changes pool parameters in Toloka.
+
+If a parameter is not specified in the `patch_pool` method, then it is left unchanged in Toloka.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`pool_id`|**str**|<p>The ID of the pool to be changed.</p>
+`priority`|**Optional\[int\]**|<p>The new priority of the pool. Possible values: from -100 to 100.</p>
+
+* **Returns:**
+
+  The pool with updated parameters.
+
+* **Return type:**
+
+  [Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool)
+
+**Examples:**
+
+Changing priority of a pool.
+
+```python
+toloka_client.patch_pool(pool_id='1', priority=100)
+```

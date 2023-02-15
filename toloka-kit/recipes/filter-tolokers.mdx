@@ -1,0 +1,207 @@
+---
+title: "Filter Tolokers | Toloka-Kit"
+date: "2023-02-07T15:40:36.620350"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import AdultAllowed from './subcomponents/AdultAllowed.mdx'
+import Citizenship from './subcomponents/Citizenship.mdx'
+import ClientType from './subcomponents/ClientType.mdx'
+import DeviceCategory from './subcomponents/DeviceCategory.mdx'
+import Education from './subcomponents/Education.mdx'
+import Gender from './subcomponents/Gender.mdx'
+import Languages from './subcomponents/Languages.mdx'
+import OSFamily from './subcomponents/OSFamily.mdx'
+import Skill from './subcomponents/filter_skill.mdx'
+import Pool from './subcomponents/Pool.mdx'
+import CreatePool from './subcomponents/create_pool.mdx'
+
+# Filter Tolokers
+
+_Use pool filters to specify the Toloker groups you want to pick your tasks._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Specify pool parameters {#step-three}
+
+First, specify the parameters you want your pool to have. You can choose your own values or have your own set of the pool parameters. Refer to the [Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool) class page for more details.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      new_pool = toloka.pool.<Term term="Pool"><Pool/></Term>(
+      <br/>    # The ID of the project in which the pool is created
+      <br/>    project_id='133047',
+      <br/>    # The pool name you will see in the list and use to distinguish the pool from other ones
+      <br/>    private_name='Pool with filters',
+      <br/>    # The date when the pool is going to expire and will be closed
+      <br/>    will_expire=datetime(2030, 1, 1),
+      <br/>    # The reward for the task suite specified in U.S. dollars
+      <br/>    reward_per_assignment=0.05,
+      <br/>    # The maximum duration of the task suite completion available to Tolokers
+      <br/>    assignment_max_duration_seconds=60*5,
+      <br/>    # The filters used to select Tolokers
+      <br/>    filter=(
+      <br/>        (toloka.filter.<Term term="AdultAllowed"><AdultAllowed/></Term>==True) &
+      <br/>        (toloka.filter.<Term term="Citizenship"><Citizenship/></Term>=='US') &
+      <br/>        (toloka.filter.<Term term="ClientType"><ClientType/></Term>=='TOLOKA_APP') &
+      <br/>        (toloka.filter.<Term term="DeviceCategory"><DeviceCategory/></Term>=='SMARTPHONE') &
+      <br/>        (toloka.filter.<Term term="Education"><Education/></Term>=='MIDDLE') &
+      <br/>        (toloka.filter.<Term term="Gender"><Gender/></Term>=='MALE') &
+      <br/>        (toloka.filter.<Term term="Languages"><Languages/></Term>.in_(['EN','DE','FR'])) &
+      <br/>        (toloka.filter.<Term term="OSFamily"><OSFamily/></Term>=='IOS') &
+      <br/>        (toloka.filter.<Term term="Skill"><Skill/></Term>('12648')>70)
+      <br/>    )
+      <br/>)
+    </HighlightChildren>
+  }
+  textToCopy={`new_pool = toloka.pool.Pool(
+    # The ID of the project in which the pool is created
+    project_id='133047',
+    # The pool name you will see in the list and use to distinguish the pool from other ones
+    private_name='Pool with filters',
+    # The date when the pool is going to expire and will be closed
+    will_expire=datetime(2030, 1, 1),
+    # The reward for the task suite specified in U.S. dollars
+    reward_per_assignment=0.05,
+    # The maximum duration of the task suite completion available to Tolokers
+    assignment_max_duration_seconds=60*5,
+    # The filters used to select Tolokers
+    filter=(
+        (toloka.filter.AdultAllowed==True) &
+        (toloka.filter.Citizenship=='US') &
+        (toloka.filter.ClientType=='TOLOKA_APP') &
+        (toloka.filter.DeviceCategory=='SMARTPHONE') &
+        (toloka.filter.Education=='MIDDLE') &
+        (toloka.filter.Gender=='MALE') &
+        (toloka.filter.Languages.in_(['EN','DE','FR'])) &
+        (toloka.filter.OSFamily=='IOS') &
+        (toloka.filter.Skill('12648')>70)
+    )
+)`}
+/>
+
+<Cut title="Filters used for pool">
+
+For this recipe, we use the following filters:
+
+- **Adult content** ([AdultAllowed](/docs-new/toloka-kit/reference/toloka.client.filter.AdultAllowed) filter class): The pool tasks with the adult content will only be shown to Tolokers who have agreed to see them.
+- **Citizenship** ([Citizenship](/docs-new/toloka-kit/reference/toloka.client.filter.Citizenship) filter class): The tasks will be shown only to the Tolokers from the countries specified in the filter.
+- **Client** ([ClientType](/docs-new/toloka-kit/reference/toloka.client.filter.ClientType) filter class): The pool tasks will be available in the selected Toloka client, in our case, in the mobile app.
+- **Device type** ([DeviceCategory](/docs-new/toloka-kit/reference/toloka.client.filter.DeviceCategory) filter class): The pool tasks will be available to the Tolokers with the specified devices.
+- **Education** ([Education](/docs-new/toloka-kit/reference/toloka.client.filter.Education) filter class): The pool tasks will be available to the Tolokers with the specified education level.
+- **Gender** ([Gender](/docs-new/toloka-kit/reference/toloka.client.filter.Gender) filter class): The pool tasks will be available to the Tolokers with the specified gender.
+- **Languages** ([Languages](/docs-new/toloka-kit/reference/toloka.client.filter.Languages) filter class): The pool tasks will be available to the Tolokers with the specified languages.
+- **Operating system** ([OSFamily](/docs-new/toloka-kit/reference/toloka.client.filter.OSFamily) filter class): The pool tasks will be available to the Tolokers who use devices with the specified operating systems.
+- **Skill** ([Skill](/docs-new/toloka-kit/reference/toloka.client.filter.Skill) filter class): The pool tasks will be available to the Tolokers with the specified skill having the selected value.
+
+<Note mode="tip" title="Tip">
+
+See the [Filters](/docs-new/toloka-kit/reference/toloka.client.filter.AdultAllowed) section of the Toloka-Kit reference for the complete list of the available filters and their possible values.
+
+</Note>
+
+</Cut>
+
+<Cut title="Selected filters in the Toloka interface">
+
+The image below shows how the selected filters look in the pool interface.
+
+<Image withBackground imageId="1675425503583" alt="Filters used for pool" />
+
+</Cut>
+
+### 4. Create pool on platform {#step-four}
+
+This actually creates a pool in Toloka.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      new_pool = toloka_client.<Term term="create_pool"><CreatePool/></Term>(new_pool)
+    </HighlightChildren>
+  }
+  textToCopy={`new_pool = toloka_client.create_pool(new_pool)`}
+/>
+
+### 5. Print created pool ID {#step-five}
+
+The `create_pool()` request will return the [Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
+
+```python
+print(new_pool.id)
+```
+
+You should get an output with the created pool ID which looks like this.
+
+```bash
+1443815
+```
+
+## Complete code: Filter Tolokers {#complete-code}
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+new_pool = toloka.pool.Pool(
+    project_id='133047',
+    private_name='Pool with filters',
+    will_expire=datetime(2030, 1, 1),
+    reward_per_assignment=0.05,
+    assignment_max_duration_seconds=60*5,
+    filter=(
+        (toloka.filter.AdultAllowed==True) &
+        (toloka.filter.Citizenship=='US') &
+        (toloka.filter.ClientType=='TOLOKA_APP') &
+        (toloka.filter.DeviceCategory=='SMARTPHONE') &
+        (toloka.filter.Education=='MIDDLE') &
+        (toloka.filter.Gender=='MALE') &
+        (toloka.filter.Languages.in_(['EN','DE','FR'])) &
+        (toloka.filter.OSFamily=='IOS') &
+        (toloka.filter.Skill('12648')>70)
+    )
+)
+new_pool = toloka_client.create_pool(new_pool)
+print(new_pool.id)
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool) class_
+- _[AdultAllowed](/docs-new/toloka-kit/reference/toloka.client.filter.AdultAllowed) class_
+- _[Citizenship](/docs-new/toloka-kit/reference/toloka.client.filter.Citizenship) class_
+- _[ClientType](/docs-new/toloka-kit/reference/toloka.client.filter.ClientType) class_
+- _[DeviceCategory](/docs-new/toloka-kit/reference/toloka.client.filter.DeviceCategory) class_
+- _[Education](/docs-new/toloka-kit/reference/toloka.client.filter.Education) class_
+- _[Gender](/docs-new/toloka-kit/reference/toloka.client.filter.Gender) class_
+- _[Languages](/docs-new/toloka-kit/reference/toloka.client.filter.Languages) class_
+- _[OSFamily](/docs-new/toloka-kit/reference/toloka.client.filter.OSFamily) class_
+- _[Skill](/docs-new/toloka-kit/reference/toloka.client.filter.Skill) class_
+- _[create_pool()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.create_pool) method_
+
+</Note>
+
+## See also {#see-also}
+
+- [How does Toloka work?](https://toloka.ai/en/docs/guide/concepts/overview)
+- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [Filters](https://toloka.ai/en/docs/guide/concepts/filters)
+- [Toloka API: Create pool](https://toloka.ai/docs/api/api-reference/#post-/pools)

@@ -1,0 +1,30 @@
+---
+title: "SkillSearchResult | Toloka-Kit"
+date: "2023-02-07T15:41:41.919042"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "tkitMenu"
+---
+
+# SkillSearchResult
+`toloka.client.search_results.SkillSearchResult`
+
+```python
+SkillSearchResult(
+    self,
+    *,
+    items: Optional[List[Skill]] = None,
+    has_more: Optional[bool] = None
+)
+```
+
+The result of searching skills.
+
+## Parameters Description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`items`|**Optional\[List\[[Skill](/docs-new/toloka-kit/reference/toloka.client.skill.Skill)\]\]**|<p>A list with found skills.</p>
+`has_more`|**Optional\[bool\]**|<p>A flag showing whether there are more matching skills.</p> <ul> <li>`True` — There are more matching skills, not included in `items` due to the limit set in the search request.</li> <li>`False` — `items` contains all matching skills.</li> </ul>
