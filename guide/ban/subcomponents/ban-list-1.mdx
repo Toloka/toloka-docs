@@ -1,0 +1,28 @@
+import BanGuideTable1 from './ban-table-1.mdx'
+
+To block access to tasks for a single Toloker:
+
+1. Select a Toloker on the [Tolokers](https://platform.toloka.ai/requester/workers) page.
+
+1. Click **Actions → Ban**, then fill in the fields:
+
+    Field | Overview
+    ----- | -----
+    **Ban type** | <BanGuideTable1/>
+    **Ban expires** | Set when to lift the ban.<br/><br/>We recommend blocking access temporarily in order to maintain the desired number of Tolokers for completing tasks.
+    **Reason** | The reason for banning (only seen by the requester).
+
+To block access to tasks for multiple Tolokers:
+
+1. Select Tolokers by using the [filters](/docs-new/glossary#filters) on the [Tolokers](https://platform.toloka.ai/requester/workers) page or upload a TSV file:
+
+    ```plaintext
+    <annotator id 1>
+    <annotator id 2>
+    ...
+    <annotator id n>
+    ```
+
+1. Click **Ban**, then fill in the fields (see the table above).
+
+You can view information about access to tasks on the Toloker's page (on the [Tolokers](https://platform.toloka.ai/requester/workers) page, go to the **Bans** tab). To unblock access to tasks, hover over the ban line and click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425193044/1675425193044_original_svg.svg" alt="" />.

@@ -1,0 +1,91 @@
+---
+title: "Fast responses | Toloka documentation"
+date: "2023-02-15T15:15:16.258011"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqRightTimeLimit from '../subcomponents/faq/adding-tasks-to-the-pool/right-time-limit.mdx'
+import FaqSkillForEveryPool from '../subcomponents/faq/pool-setup/skill-for-every-pool.mdx'
+import FaqSkillForDifferentProjects from '../subcomponents/faq/pool-setup/skill-for-different-projects.mdx'
+import FaqTimeSpecified from '../subcomponents/faq/pool-setup/time-specified.mdx'
+import FaqBanAndReject from '../subcomponents/faq/users/ban-and-reject.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import QuickAnswersTable1 from './quick-answers/subcomponents/quick-answers-table-1.mdx'
+import QuickAnswersTable2 from './quick-answers/subcomponents/quick-answers-table-2.mdx'
+import QuickAnswersList1 from './quick-answers/subcomponents/quick-answers-list-1.mdx'
+import QuickAnswersList2 from './quick-answers/subcomponents/quick-answers-list-2.mdx'
+
+# Fast responses
+
+This rule is necessary to filter out cheating Tolokers who complete tasks too quickly and carelessly. You can also use it to provide protection against robots that can distort the final results in the pool.
+
+## When to use {#when-use}
+
+Restrict the pool access for Tolokers who respond too quickly to:
+
+- Restrict access for Tolokers who cheat in their responses. In this case, set the time required to complete a [task suite](/docs-new/glossary#task-suite) when giving random responses.
+
+- Provide anti-robot protection. In this case, set twice as little time for task suite completion.
+
+To estimate the time required to complete a task suite:
+
+- [Complete a task in the sandbox](/docs-new/guide/sandbox#self), if you didn't start the tasks yet.
+
+- Look up the **Average assignment completion time** in [pool statistics](/docs-new/guide/pool_statistic-pool#avgtime) if the tasks are already running.
+
+## How do I set it up? {#rule}
+
+**Field** | **Overview**
+----- | -----
+**Recent task suites to use** | The number of recent assignments submitted by the Toloker.<br/><br/>If this field is not filled in, the calculation includes only recent task suites from the pool to which the rule applies.<br/><br/>If the field is filled in, the corresponding number of task suites is used. The rule takes into account the task suites from both this pool and other pools where this field is filled in.<br/><br/>To learn more about how this field works, go to [Parameter "Remember values"](/docs-new/guide/remember-values).
+**Minimum time per task suite** | The task suite completion time (in seconds). Everything that is completed faster is considered a fast response.
+**If** | <QuickAnswersTable1/>
+**then** | <QuickAnswersTable2/>
+
+## Examples of rules {#examples}
+
+**Task**: you noticed that the pool closed too quickly and the final result was unsatisfactory. To prevent this from happening again, you decided to filter out Tolokers who complete tasks too quickly.
+
+Examples are provided for simple [classification](/docs-new/tutorials/image-classification). There are 10 tasks per suite.
+
+<Note mode="warning" title="Warning">
+
+The assignments submitted by banned Tolokers will be taken into account if you don't reject them using manual review. They can be reassigned by setting up the [Recompletion of assignments from banned users](/docs-new/guide/restore-task-overlap) rule.
+
+</Note>
+
+#### Blocking for fast responses
+
+<Tabs tabs={[
+  { title: 'Correct settings', value: <QuickAnswersList1/> },
+  { title: 'Incorrect settings', value: <QuickAnswersList2/> },
+]}/>
+
+#### Suspension in the pool for fast responses
+
+<Image withBackground imageId="1675427105032" alt="" />
+
+A Toloker who completes two task suites in less than 20 seconds is suspended from accessing the pool and can't complete your tasks for 10 days.
+
+## For developers {#for-developers}
+
+- [Toloka API: Fast responses](/docs-new/api/fast)
+- [Toloka-Kit: AssignmentSubmitTime collector class](/docs-new/toloka-kit/reference/toloka.client.collectors.AssignmentSubmitTime)
+
+## Troubleshooting {#troubleshooting}
+
+<FaqRightTimeLimit/>
+
+<FaqSkillForEveryPool/>
+
+<FaqSkillForDifferentProjects/>
+
+<FaqTimeSpecified/>
+
+<FaqBanAndReject/>
+
+<ContactGuideSupport/>

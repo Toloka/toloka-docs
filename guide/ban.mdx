@@ -1,0 +1,96 @@
+---
+title: "Ban | Toloka documentation"
+date: "2023-02-15T15:15:18.925706"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TroubleshootingTrustedUserBanned from '../subcomponents/troubleshooting/users/trusted-user-banned.mdx'
+import FaqDisableTasks from '../subcomponents/faq/result-questions/disable-tasks.mdx'
+import FaqRedoTask from '../subcomponents/faq/users/redo-task.mdx'
+import FaqFixMyself from '../subcomponents/faq/result-questions/fix-myself.mdx'
+import FaqEmptyResponse from '../subcomponents/faq/users/empty-response.mdx'
+import FaqCheatersPaid from '../subcomponents/faq/users/cheaters-paid.mdx'
+import TroubleshootingPoorResults from '../subcomponents/troubleshooting/users/poor-results.mdx'
+import TroubleshootingIncludeResponses from '../subcomponents/troubleshooting/users/include-responses.mdx'
+import FaqBanAndReject from '../subcomponents/faq/users/ban-and-reject.mdx'
+import BanGuideList1 from './ban/subcomponents/ban-list-1.mdx'
+import BanGuideList2 from './ban/subcomponents/ban-list-2.mdx'
+
+# Ban
+
+Tolokers can be banned in two ways:
+
+1. [By the requester](#ban-yourself).
+1. [By the platform](#ban-platform).
+
+## How to ban a Toloker {#ban-yourself}
+
+You can block a Toloker's access to one or more [projects](/docs-new/glossary#project). This lets you control manually which Tolokers will complete tasks. For example, you can choose all Tolokers with a [skill](/docs-new/glossary#skill) value lower than N and block their access to tasks. You can also unblock access.
+
+<Note mode="warning" title="Warning">
+
+The assignments submitted by banned Tolokers will be taken into account if they are not rejected using manual review. They can be reassigned by setting up the [Recompletion of assignments from banned users](/docs-new/guide/restore-task-overlap) rule.
+
+</Note>
+
+<Tabs tabs={[
+  { title: 'In the interface', value: <BanGuideList1/> },
+  { title: 'Via Toloka API', value: <BanGuideList2/> },
+]}/>
+
+## Banning on the platform {#ban-platform}
+
+Toloka has dedicated [anti-fraud system](https://toloka.ai/anti-fraud/) for banning dishonest Tolokers. It monitors user behavior and blocks suspicious accounts.
+
+The main reasons for banning:
+
+1. Disclosure of confidential information.
+1. Using scripts and bots or any form of cheating.
+1. Poor response quality.
+1. Providing false data during registration.
+1. Frequently skipping captchas or entering them incorrectly.
+1. Using multiple accounts.
+1. Location cheating.
+
+<Note mode="note" title="Note">
+
+If a Toloker's behavior seems suspicious, [write to support](/docs-new/guide/troubleshooting/support#cheater). We'll conduct an additional review. If the Toloker is violating the user agreement, they'll be blocked in the system and will no longer be able to complete tasks.
+
+You can also [ban](#ban) this Toloker from your project.
+
+</Note>
+
+## For developers {#for-developers}
+
+- [Toloka API: Blocking access to tasks](/docs-new/api/ban)
+- [Toloka-Kit: Banning Tolokers](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.set_user_restriction)
+
+## Troubleshooting {#troubleshooting}
+
+<TroubleshootingTrustedUserBanned/>
+
+<FaqDisableTasks/>
+
+<FaqRedoTask/>
+
+<FaqFixMyself/>
+
+<FaqEmptyResponse/>
+
+<FaqCheatersPaid/>
+
+<TroubleshootingPoorResults/>
+
+<TroubleshootingIncludeResponses/>
+
+<FaqBanAndReject/>
+
+<Cut title="Report suspicious Tolokers">
+
+<YandexForm name="ban-support-survey" src="https://forms.yandex.com/surveys/10035353.388b5c1d02f16762f4a79b515beaa9740148362a/?lang=en&iframe=1&service=toloka-ai"/>
+
+</Cut>

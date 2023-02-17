@@ -1,0 +1,38 @@
+```javascript
+exports.Task = extend(TolokaHandlebarsTask, function (options) {
+  TolokaHandlebarsTask.call(this, options);
+}, {
+  onRender: function() {
+      var field = this.getField('result');
+      var editor = field.getEditor();
+      editor.annotationInterface = field.createAnnotationInterface({
+          createInterfaceElement: function() {
+              this._input = document.createElement('input');
+              this._input.addEventListener('input', function() {
+                  this._shape.annotation = this._input.value;
+              }.bind(this));
+              return this._input;
+          },
+          onShow: function(shape) {
+              this._shape = shape;
+              this._input.value = shape.annotation;
+          }
+      });
+},
+onDestroy: function() {
+  // Task is completed. Global resources can be released (if used)
+}
+  });
+
+  function extend(ParentClass, constructorFunction, prototypeHash) {
+constructorFunction = constructorFunction || function () {};
+prototypeHash = prototypeHash || {};
+if (ParentClass) {
+  constructorFunction.prototype = Object.create(ParentClass.prototype);
+}
+for (var i in prototypeHash) {
+  constructorFunction.prototype[i] = prototypeHash[i];
+}
+return constructorFunction;
+}
+```

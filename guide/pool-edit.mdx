@@ -1,0 +1,337 @@
+---
+title: "Editing a pool | Toloka documentation"
+date: "2023-02-15T15:15:19.885154"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TolokaRequesterPoolType from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx'
+import TolokaRequesterPoolName from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
+import TolokaRequesterPoolDescription from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
+import TolokaRequesterSourceFiltersDesc from '../subcomponents/toloka-requester-source/id-toloka-requester-source/filters-desc.mdx'
+import CaptchaWarning from '../subcomponents/captcha-warning.mdx'
+import FaqRightTimeLimit from '../subcomponents/faq/adding-tasks-to-the-pool/right-time-limit.mdx'
+import FaqOverlap from '../subcomponents/faq/pool-setup/overlap.mdx'
+import FaqHowManyTasksInSuite from '../subcomponents/faq/adding-tasks-to-the-pool/how-many-tasks-in-suite.mdx'
+import TroubleshootingSpeedDropped from '../subcomponents/troubleshooting/pool-setup/speed-dropped.mdx'
+import FaqLabelingSpeed from '../subcomponents/faq/project-settings/labeling-speed.mdx'
+import FaqSpeedUpCompletion from '../subcomponents/faq/pool-setup/speed-up-completion.mdx'
+import FaqChangeTimeForTask from '../subcomponents/faq/adding-tasks-to-the-pool/change-time-for-task.mdx'
+import FaqEditUploadedTasks from '../subcomponents/faq/adding-tasks-to-the-pool/edit-uploaded-tasks.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+
+# Editing a pool
+
+You can edit a pool which doesn't have the **Archived** status. While editing, an open pool switches to the “CLOSED_FOR_UPDATE” status. For example, this way you can change the payout amount in a running pool.
+
+<Note mode="note" title="Note">
+
+The cost of a task is registered at the moment when a Toloker accepts it. If the cost changes during task completion, the Toloker will receive the amount that was specified before editing the cost.
+
+</Note>
+
+To edit the pool parameters, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425178270/1675425178270_original_svg.svg" alt="" /> at the top of the pool page or <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425172884/1675425172884_original_svg.svg" alt="" /> in the list of pools on the [project](/docs-new/glossary#project) page.
+
+<Image withBackground imageId="1675426588019" alt="" />
+
+## General information {#pool-general-info}
+
+### Pool type
+
+<TolokaRequesterPoolType/>
+
+### Pool name
+
+<TolokaRequesterPoolName/>
+
+### Pool description
+
+<TolokaRequesterPoolDescription/>
+
+<Cut title="Alternative way to edit pool information">
+
+To edit pool information:
+
+1. Click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425178270/1675425178270_original_svg.svg" alt="" /> near the pool name.
+
+1. <TolokaRequesterPoolType/>
+
+1. <TolokaRequesterPoolName/>
+
+1. <TolokaRequesterPoolDescription/>
+
+1. Click **Save**.
+
+</Cut>
+
+## Price {#pool-price-info}
+
+### Price per task suite, $
+
+Payment per [task suite](/docs-new/glossary#task-suite) in US dollars. For cents, use the dot (".") as a separator. If the **Pool type** is **General tasks**, the minimum price per task suite is $0.005. For other pool types, you can set the price to zero. To learn more about price management, go to [Setting up pricing](/docs-new/guide/dynamic-pricing).
+
+### Toloker interest at this price
+
+Calculated automatically. Shows how the price meets Tolokers' expectations.
+
+### Number of tasks per suite
+
+Calculated automatically. Shows the number of tasks per suite recommended for this type of project.
+
+### Overlap
+
+The number of Tolokers who should complete each task in the pool.
+
+Configure this parameter if you need several people to complete your task. Overlap is necessary in tasks for collecting photo datasets, recording audio, or conducting surveys. In other types of tasks, it can improve the quality of results.
+
+To save money, you can set up [dynamic overlap](/docs-new/glossary#dynamic-overlap) (also known as incremental relabeling or IRL).
+
+Dynamic overlap will help you save money. [Learn more](/docs-new/guide/dynamic-overlap).
+
+### Task price
+
+Calculated automatically.
+
+## Audience {#pool-audience-info}
+
+### Adult content
+
+Whether the tasks have some content which can be marked as adult, including shocking or pornographic content. Tasks with such content are only given to Tolokers who agree to complete these types of tasks.
+
+If you aren't sure whether the tasks have such content, enable the **My tasks may contain shocking or pornographic content** option.
+
+### Filters and skills
+
+<TolokaRequesterSourceFiltersDesc/>
+
+### Speed/quality balance
+
+A [setting](/docs-new/guide/adjust) for choosing Tolokers for your tasks. You can set the percentage or number of top-rated Tolokers.
+
+When there are many Tolokers, you can get results quickly, but the quality of the Tolokers' responses may be poor. Find a balance that meets your needs. [Learn more](/docs-new/guide/adjust).
+
+## Quality control {#pool-quality-control-info}
+
+### Captcha frequency
+
+You can choose how often [captchas](/docs-new/glossary#captcha) are shown to Tolokers:
+
+- “No” — Don't show captchas.
+
+- “Low” — Show a captcha after every 20 assignments.
+
+- “Medium”/ “High” — Show a captcha after every 10 assignments.
+
+To show the captcha to Tolokers, set [the quality control rule](/docs-new/guide/captcha).
+
+<CaptchaWarning/>
+
+### Review task responses manually
+
+Turn on this option to [review](/docs-new/guide/accept) the [completed tasks](/docs-new/glossary#completed-tasks) manually.
+
+Set the time period when you can check the tasks and reject them if the results are poor.
+
+Learn more about task review [here](/docs-new/guide/offline-accept) and [here](/docs-new/guide/accept).
+
+### Review period in days
+
+The number of days for reviewing and accepting tasks (max: 21). The Toloker will see the deadline for checking the tasks:
+
+- In the task information on the Toloka main page.
+
+- In the history of completed tasks.
+
+### Quality control rules
+
+You can add other quality control rules by clicking **Add a quality control rule**. You can select ready-made sets of rules or set the rules you need manually. [Learn more](/docs-new/guide/control).
+
+<Cut title="Optional">
+
+### Fast responses
+
+Restricting access for Tolokers who respond too quickly. Specify the minimum time required for completing a task suite (in seconds) and set the condition.
+
+For example: if the number of responses is > 5 and the number of quick responses is > 3, then ban the Toloker on the project for 5 days. [Learn more](/docs-new/guide/quick-answers).
+
+### Majority vote
+
+Evaluate Tolokers' responses by comparing them with the majority vote: reward Tolokers who give correct responses and block those who often make mistakes.
+
+In the **Accept as majority** field, specify the number of matching responses that is considered the majority vote and set the condition. The rule takes effect when the number of responses for the task is equal to the overlap.
+
+For example: if the number of responses is > 5 and the percentage of correct responses is < 60, then ban the Toloker on the project for 10 days.
+
+### Training
+
+This field is only available if you have training pools in the project.
+
+[Training pool](/docs-new/glossary#training-pool) that will be linked to the main one.
+
+### Level required
+
+This box is only available if you filled in the **Training** box.
+
+Percentage of correct responses in training tasks (from 5 to 100) required to be admitted to the pool tasks. The calculation is based on the first response the Toloker gave in each task.
+
+The minimum required level that you can set is 5. Tolokers who complete training with apercentage below this level won't have access to tasks.
+
+</Cut>
+
+## Dynamic pricing and overlap {#pool-dynamic-price-info}
+
+### Dynamic pricing
+
+This parameter allows you to vary the task price depending on the Toloker's [skill](/docs-new/glossary#skill) level. [Learn more](/docs-new/guide/dynamic-pricing).
+
+### Dynamic overlap
+
+You can use this parameter if you specify fixed values for the [input data](/docs-new/glossary#input-output-data) fields. It lets you save your budget and avoid setting fixed [overlap](/docs-new/glossary#overlap) for all pool tasks.
+
+You set the range, the service analyzes the responses, their consistency, the level of Tolokers' skills and, if necessary, increases the overlap within the range you specified. [Learn more](/docs-new/guide/dynamic-overlap).
+
+## Optional pool settings {#pool-additional-settings-info}
+
+Click **Show advanced settings** to edit optional pool settings.
+
+### Priority
+
+Number from 0 to 100. Allows you to rank a pool within a project. First, a Toloker is assigned tasks from a pool with higher priority.
+
+### Time per task suite, sec
+
+The time allowed for completing a task suite, in seconds. Uncompleted tasks are redistributed to other Tolokers.
+
+We recommend spending no more than 60 seconds per task (including the time for page loading and sending responses).
+
+If you set the interval too long, the tasks will stay open for a long time. If it is too short, the tasks won't be completed and paid for.
+
+### Keep pool open after completion, sec
+
+The interval during which the pool will remain open from the moment all tasks are completed. Minimum — 0 (1 if you use dynamic overlap), maximum — 259200 seconds (three days).
+
+For example, you can use this parameter if you need an open pool where you regularly upload new tasks.
+
+### Pool closing date
+
+The date the pool closes. The pool closes automatically on this date, even if the tasks aren't marked up.
+
+### Pool type
+
+Specify the pool type:
+
+- **General tasks**: The main pool that contains your regular tasks.
+
+- **Exam**: A pool that contains only [control tasks](/docs-new/glossary#control-task).
+
+- **Training**: A main pool that consists only of [training tasks](/docs-new/glossary#training-task) and can have zero cost. Use it to train Tolokers before performing real tasks if the [training pool](/docs-new/guide/train) doesn't work well for your project.
+
+- **Retry**: A pool that helps Tolokers who make mistakes improve their skills and get a second chance to complete tasks.
+
+- **Other**: If none of the previous options fit.
+
+<Note mode="note" title="Note">
+
+If the price per task suite is zero, you must select the pool type.
+
+</Note>
+
+### Keep task order
+
+#### Option disabled (default value)
+
+The uploaded tasks are grouped in pages and given to Tolokers in random order. Within the page, the task order is always random.
+
+<Cut title="Example">
+
+If you specified 2 tasks per suite when uploading the [file](/docs-new/glossary#tsv) with image links to the pool, the system can generate them as follows:
+
+Tasks in the file | Page 1 | Page 2 | Page 3
+----- | ----- | ----- | -----
+Image 1 | Image 2 | Image 6 | Image 4
+Image 2 | Image 5 | Image 1 | Image 3
+Image 3 |  |  |
+Image 4 |  |  |
+Image 5 |  |  |
+Image 6 |  |  |
+
+</Cut>
+
+#### Option enabled
+
+Tasks will be grouped on pages in the order they are listed in the task file.
+
+<Cut title="Example">
+
+If you specified 2 tasks per suite when uploading the file with image links to the pool, you're equally likely to get pages where the first link goes first and the second goes second, and the other way around:
+
+Tasks in the file | Page 1 | Page 2 | Page 3
+----- | ----- | ----- | -----
+Image 1 | Image 1 | Image 3 | Image 5
+Image 2 | Image 2 | Image 4 | Image 6
+Image 3 | _or_ | _or_ | _or_
+Image 4 | Image 2 | Image 4 | Image 6
+Image 5 | Image 1 | Image 3 | Image 5
+Image 6 |  |  |
+
+</Cut>
+
+If the pool has an overlap, the next task is distributed only when the previous task is completed by the necessary number of Tolokers.
+
+Use this parameter to:
+
+- Speed up collection of responses for [majority vote](/docs-new/guide/mvote) check.
+
+- Assign tasks by priority.
+
+    Put important tasks in the beginning of the file. They will be completed faster and with the necessary overlap.
+
+## What's next {#what_next}
+
+- [Add tasks to the pool](/docs-new/guide/pool)
+- Learn more about how to set up a pool:
+
+    - [Setting up pricing](/docs-new/guide/dynamic-pricing).
+    - [Dynamic overlap](/docs-new/guide/dynamic-overlap).
+    - Selective [majority vote](/docs-new/guide/selective-mvote) control.
+    - [Filters](/docs-new/guide/filters).
+    - [Speed/quality balance](/docs-new/guide/adjust).
+    - [Setting up quality control](/docs-new/guide/qa-pool-settings).
+    - [Reviewed assignments](/docs-new/guide/offline-accept).
+
+## For developers {#for-developers}
+
+- [Toloka API: Editing pool](/docs-new/api/edit-pool)
+- [Toloka API: Changing pool priority](/docs-new/api/set-priority-pool)
+- [Toloka-Kit: Editing pool](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.update_pool)
+- [Toloka-Kit: Patching pool](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.patch_pool)
+- [Toloka-Kit recipe: Change pool priority](/docs-new/toloka-kit/recipes/change-pool-priority)
+
+## Troubleshooting {#troubleshooting}
+
+<FaqRightTimeLimit/>
+
+<FaqOverlap/>
+
+<Cut title="Can I change overlap after the pool is started?">
+
+Yes. Open edit mode for the pool and set a new overlap value. You don't need to restart the pool. Updating the settings is usually fast, but if there are many tasks, it may take several minutes.
+
+</Cut>
+
+<FaqHowManyTasksInSuite/>
+
+<TroubleshootingSpeedDropped/>
+
+<FaqLabelingSpeed/>
+
+<FaqSpeedUpCompletion/>
+
+<FaqChangeTimeForTask/>
+
+<FaqEditUploadedTasks/>
+
+<ContactGuideSupport/>

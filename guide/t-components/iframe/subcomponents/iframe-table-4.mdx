@@ -1,0 +1,25 @@
+Enables [sandbox](/docs-new/glossary#sandbox) mode, which restricts working in the frame.<br/><br/>To disable certain restrictions, you can use the following values (separate with spaces if combining them):
+
+- `"allow-forms"` allows frame content to submit forms.
+
+- `"allow-modules"` allows opening modal windows (for example, using an `alert`).
+
+- `"allow-orientation-lock"` allows `lock` and `unlock` methods from the [Screen Orientation API](https://w3c.github.io/screen-orientation/).
+
+- `"allow-pointer-lock"` allows the [Pointer lock API](https://w3c.github.io/pointerlock/).
+
+- `"allow-popups"` allows popup windows (for example, using `window.open` or `target="_blank"`).
+
+- `"allow-popups-to-escape-sandbox"` allows pop-ups not to inherit sandbox mode (for example, so that in a popup window with JavaScript it is allowed without `"allow-scripts"` for a frame).
+
+- `"allow-presentation"` allows using the [Presentation API](https://w3c.github.io/presentation-api/).
+
+- `"allow-same-origin"`allows loading frame content (interprets this as content from the same source as the parent document). Blocks popup windows, so it can be used to open content safely.
+
+- `"allow-scripts"` allows running and executing scripts. However, creating popup windows is prohibited.
+
+- `"allow-top-navigation"` allows opening frame links in the parent document.
+
+- `"allow-top-navigation-by-user-activation"` allows opening a frame link clicked by the Toloker in the parent document.
+
+- `"false"` disables the restrictions listed.

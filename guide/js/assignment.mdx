@@ -1,0 +1,178 @@
+---
+title: "Assignment class | Toloka documentation"
+date: "2023-02-15T15:15:29.337031"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+
+# Assignment class
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in [Template Builder](/docs-new/template-builder/).
+
+</Note>
+
+This class manages the task progress, processes the [task suite](/docs-new/glossary#task-suite) commands for sending responses, skipping or pausing tasks, and more. It also creates an instance of the [TaskSuite](/docs-new/guide/tasksuite) class.
+
+The `Assignment` base class is available in the `window.TolokaAssignment` global variable
+
+Methods:
+
+## constructor(options) {#constructor}
+
+Task list base class builder.
+
+Parameters:
+
+- `options.assignment` — `Assignment` task list model.
+
+- `options.specs` — Parameters for [input and output data](/docs-new/glossary#input-output-data) and the task interface.
+
+- `options.workspaceOptions` — Toloker's workspace initialization parameters.
+
+## destroy() {#destroy}
+
+Calls [TaskSuite.destroy()](/docs-new/guide/tasksuite#destroy), removes all template elements from the DOM, closes the messaging channel, stops hotkey polling and location detection, calls `onDestroy`.
+
+## initHotkeys() {#inithotkeys}
+
+Hotkey handler initializer:
+
+- Resets all hotkeys ([hotkeys.reset](/docs-new/guide/services#reset)).
+
+- Calls [submit()](#submit) when the Enter key is pressed.
+
+## getId() {#getid}
+
+Returns `assignmentId` as a string or `undefined` if you are debugging the task in preview mode or using pool preview.
+
+## getOptions() {#getoptions}
+
+Returns an object with a set of parameters passed to the [constructor()](#constructor) method during initialization.
+
+<Cut title="Example">
+
+```javascript
+// getting specifications for all required fields:
+let outputSpec = this.getOptions().specs.output_spec,
+     requiredFields = Object.keys(outputSpec)
+                            .filter(key => outputSpec[key].required)
+                            .reduce((item, key) => (item[key] = outputSpec[key], item), {});
+```
+
+</Cut>
+
+## getSandboxChannel() {#getsandboxchannel}
+
+Returns the link to an active messaging channel between the parent page and the task frame. If there is no channel, the method creates it.
+
+<Cut title="Example">
+
+```javascript
+// subscribe to all messages and show them
+this.getSandboxChannel().on('*', (name, message) => console.log(message));
+// ask the parent page to show task instructions
+// there is also a separate service for this TaskInterface
+this.getSandboxChannel().triggerOut('task:interface:show:instruction');
+```
+
+</Cut>
+
+## getTaskSuite() {#gettasksuite}
+
+Returns a link to a [TaskSuite](/docs-new/guide/tasksuite) instance.
+
+## getTaskSuiteContainer() {#gettasksuitecontainer}
+
+Returns `document.body` for the Toloker's workspace.
+
+## getWorkspaceOptions() {#getworkspaceoptions}
+
+Returns an object with the Toloker's workspace settings.
+
+The most important settings:
+
+- `agent` — The value is `FRONTEND` for full task versions, `ANDROID` for the Android app, and so forth.
+
+- `isReadOnly` — "Read-only" mode flag (for example, for viewing the history of completed tasks).
+
+- `isReviewMode` — Review mode flag (for example, manual review). This setting and `isReadOnly` are useful if you want to do something like change the template layout in history view mode.
+
+- `language` — A two-letter code of the language selected by the Toloker in Toloka settings. It's useful when you want to create multilingual templates.
+
+- `origin` — Parent page FQDN.
+
+## pause() {#pause}
+
+Pauses task execution (for example, upon a `request:assignment:pause` command from the main page), calls `onPause`.
+
+## provideSolutions(strategy) {#providesolutions}
+
+Collects answers to all tasks ([TolokaTaskSuite.getSolutions()](/docs-new/guide/tasksuite#getSolutions)), validates them ([TolokaTaskSuite.validate()](/docs-new/guide/tasksuite#validate)). If validation is successful, calls `strategy`, otherwise sends an `assignment:validation:fail` request and an object with a list of errors returned by the validator. Parameter:
+
+- `strategy` — A function that sends a message about sending results (`assignment:submit`), a response array, and an `assignmentId` to the parent page.
+
+<Cut title="Example">
+
+```javascript
+provideSolutions(strategy = function(solutions) {
+        this.getSandboxChannel().triggerOut('assignment:submit', { solutions, assignmentId: this.getId() });
+    }, errorCallback = function(errors) {
+        //do nothing by default
+    }) {
+        const solutions = this.getTaskSuite().getSolutions();
+
+        Promise.resolve(this.getTaskSuite().validate(solutions))
+            .then((errors) => {
+                if (!errors) {
+                    strategy.call(this, solutions);
+                } else {
+                    this.getSandboxChannel().triggerOut('assignment:validation:fail', errors);
+                    errorCallback.call(this, errors);
+                }
+            });
+    }
+```
+
+</Cut>
+
+## resume() {#resume}
+
+Continues task execution, calls `onResume` and [start()](#start).
+
+## skip() {#skip}
+
+Lets you skip the current task, the same as clicking the **Skip** button.
+
+## start() {#start}
+
+Performs all the necessary actions when starting a task suite:
+
+- Adds the rendered task interface to `document.body`.
+
+- Initializes hotkeys for the entire interface ([InitHotkeys()](#inithotkeys)).
+
+- Calls `onStart`.
+
+## submit() {#submit}
+
+Collects, validates and sends completed tasks by calling [provideSolutions](#providesolutions).
+
+<Cut title="Example">
+
+```javascript
+// in some scenarios, you might need to set delayed sending
+// in that case, you can programmatically hide the send button in the project settings
+// for example, from TolokaTask
+this.getDOMElement().querySelector('.my_submit_button').addEventListener('click', (event) => this.getAssignment().submit());
+```
+
+</Cut>
+
+<ContactGuideSupport/>

@@ -1,0 +1,208 @@
+---
+title: "Quality control rules | Toloka documentation"
+date: "2023-02-15T15:15:19.132994"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqSetQualityControl from '../subcomponents/faq/pool-setup/set-quality-control.mdx'
+import FaqSkillForEveryPool from '../subcomponents/faq/pool-setup/skill-for-every-pool.mdx'
+import FaqSkillForDifferentProjects from '../subcomponents/faq/pool-setup/skill-for-different-projects.mdx'
+import TroubleshootingControlSettingsReplaced from '../subcomponents/troubleshooting/pool-setup/control-settings-replaced.mdx'
+import FaqTimeSpecified from '../subcomponents/faq/pool-setup/time-specified.mdx'
+import FaqSetSkill from '../subcomponents/faq/pool-setup/set-skill.mdx'
+import FaqOverlap from '../subcomponents/faq/pool-setup/overlap.mdx'
+import FaqSpecificNumber from '../subcomponents/faq/pool-setup/specific-number.mdx'
+import FaqChangeOverlap from '../subcomponents/faq/pool-setup/change-overlap.mdx'
+import FaqSubmitEmptyAssignments from '../subcomponents/faq/pool-setup/submit-empty-assignments.mdx'
+import FaqIncorrectResponses from '../subcomponents/faq/pool-setup/incorrect-responses.mdx'
+import FaqGetAccess from '../subcomponents/faq/pool-setup/get-access.mdx'
+import FaqBan from '../subcomponents/faq/pool-setup/ban.mdx'
+import FaqOneTask from '../subcomponents/faq/pool-setup/one-task.mdx'
+import FaqOutputFormat from '../subcomponents/faq/pool-setup/output-format.mdx'
+import FaqMultipleFields from '../subcomponents/faq/pool-setup/multiple-fields.mdx'
+import FaqHowManyControlTasks from '../subcomponents/faq/pool-setup/how-many-control-tasks.mdx'
+import FaqUsingSmartMixing from '../subcomponents/faq/adding-tasks-to-the-pool/using-smart-mixing.mdx'
+import FaqCorrectResponsesCounted from '../subcomponents/faq/pool-setup/correct-responses-counted.mdx'
+import FaqHint from '../subcomponents/faq/pool-setup/hint.mdx'
+import FaqQuestionsAreControl from '../subcomponents/faq/pool-setup/questions-are-control.mdx'
+import TroubleshootingExport from '../subcomponents/troubleshooting/pool-setup/export.mdx'
+import FaqNumberOfControlResponses from '../subcomponents/faq/pool-setup/number-of-control-responses.mdx'
+import FaqClassifyUsers from '../subcomponents/faq/pool-setup/classify-users.mdx'
+import FaqMakeDifferent from '../subcomponents/faq/pool-setup/make-different.mdx'
+import FaqExamPool from '../subcomponents/faq/pool-setup/exam-pool.mdx'
+import FaqSetUpExam from '../subcomponents/faq/pool-setup/set-up-exam.mdx'
+import FaqTestTolokers from '../subcomponents/faq/pool-setup/test-tolokers.mdx'
+import FaqTwoTrainingPools from '../subcomponents/faq/pool-setup/two-training-pools.mdx'
+import TroubleshootingExamThreeTasks from '../subcomponents/troubleshooting/pool-setup/exam-three-tasks.mdx'
+import TroubleshootingSpeedDropped from '../subcomponents/troubleshooting/pool-setup/speed-dropped.mdx'
+import FaqLabelingSpeed from '../subcomponents/faq/project-settings/labeling-speed.mdx'
+import FaqSpeedUpCompletion from '../subcomponents/faq/pool-setup/speed-up-completion.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import ControlList1 from './control/subcomponents/control-list-1.mdx'
+import ControlList2 from './control/subcomponents/control-list-2.mdx'
+
+# Quality control rules
+
+Quality control rules allow you to get more accurate responses and restrict access to tasks to cheating Tolokers. All rules work independently.
+
+## List of rules {#rules}
+
+- To keep track of how often Tolokers make mistakes:
+
+    - [Control tasks](/docs-new/guide/goldenset): Use them to assign a [skill](/docs-new/glossary#skill) to Tolokers based on their responses to [control tasks](/docs-new/glossary#control-task) and [ban](/docs-new/guide/ban) Tolokers who submit incorrect responses.
+
+    - [Majority vote](/docs-new/guide/mvote): Quality is based on matching the response from the majority of Tolokers who complete the same [task](/docs-new/glossary#task).
+
+    - [Results of checking](/docs-new/guide/reviewing-assignments): Evaluate Tolokers based on the number of accepted and rejected responses.
+
+- To protect your project from robots and cheaters:
+
+    - [Fast responses](/docs-new/guide/quick-answers): Control the minimum time that must be spent per [task suite](/docs-new/glossary#task-suite).
+
+    - [Skipped assignments](/docs-new/guide/skipped-assignments): Restrict access to your pool tasks for Tolokers who [skip multiple assignments](/docs-new/guide/pool_statistic-pool#skipped-tasks) in a row.
+
+- To attract a variety of Tolokers:
+
+    - [Earnings](/docs-new/guide/income): Limit the amount each Toloker can earn in the [pool](/docs-new/glossary#pool) per day.
+
+    - [Submitted assignments](/docs-new/guide/submitted-answers): Limit how many assignments each Toloker can submit in the pool per day.
+
+- To allow recompletion of certain assignments:
+
+    - [Recompletion of assignments from banned users](/docs-new/guide/restore-task-overlap): Send [completed assignments](/docs-new/glossary#completed-tasks) to other Tolokers to redo them if the Toloker was banned.
+
+    - [Processing of rejected and accepted assignments](/docs-new/guide/reassessment-after-accepting): Send rejected assignments to other Tolokers to redo them.
+
+## Quality control presets {#rule-set}
+
+Toloka has presets of quality control rules. Currently, there are three of them:
+
+- **Elementary** — suitable for requesters who need tasks to be completed by a large number of Tolokers in a short time.
+
+- **Basic** — suitable for those who need to balance quality and quantity.
+
+- **Advanced** — a set with a large number of rules required for complex tasks.
+
+The table shows the rules included in each of the sets.
+
+|                | Earnings | Skipped assignments | Control tasks | Majority vote | Submitted answers | Fast responses |
+|----------------|----------|---------------------|---------------|---------------|-------------------|----------------|
+| **Elementary** | +        | +                   | −             | −             | −                 | -              |
+| **Basic**      | +        | +                   | +             | +             | −                 | -              |
+| **Advanced**   | +        | +                   | +             | +             | +                 | +              |
+
+## How to set up quality control {#control_how}
+
+You can configure quality control in the [pool](/docs-new/guide/qa-pool-settings) and in the [project](/docs-new/guide/project-qa).
+
+<Tabs tabs={[
+  { title: 'Pool', value: <ControlList1/> },
+  { title: 'Project', value: <ControlList2/> },
+]}/>
+
+## See also {#see-also}
+
+- [Crowdsourcing concepts: Quality control](https://toloka.ai/knowledgebase/quality-control/)
+
+## For developers {#for-developers}
+
+- [Toloka API: Quality control rules](/docs-new/api/quality_control)
+- [Toloka-Kit: QualityControl class](/docs-new/toloka-kit/reference/toloka.client.quality_control.QualityControl)
+
+## Troubleshooting {#troubleshooting}
+
+<Cut title="Setting up quality control">
+
+<FaqSetQualityControl/>
+
+<FaqSkillForEveryPool/>
+
+<FaqSkillForDifferentProjects/>
+
+<TroubleshootingControlSettingsReplaced/>
+
+<FaqTimeSpecified/>
+
+<FaqSetSkill/>
+
+</Cut>
+
+<Cut title="Overlap">
+
+<FaqOverlap/>
+
+<FaqSpecificNumber/>
+
+<FaqChangeOverlap/>
+
+</Cut>
+
+<Cut title="Banning Tolokers">
+
+<FaqSubmitEmptyAssignments/>
+
+<FaqIncorrectResponses/>
+
+<FaqGetAccess/>
+
+<FaqBan/>
+
+<FaqOneTask/>
+
+</Cut>
+
+<Cut title="Majority vote">
+
+<FaqOutputFormat/>
+
+<FaqMultipleFields/>
+
+</Cut>
+
+<Cut title="Control tasks">
+
+<FaqHowManyControlTasks/>
+
+<FaqUsingSmartMixing/>
+
+<FaqCorrectResponsesCounted/>
+
+<FaqHint/>
+
+<FaqQuestionsAreControl/>
+
+<TroubleshootingExport/>
+
+<FaqNumberOfControlResponses/>
+
+<FaqClassifyUsers/>
+
+<FaqMakeDifferent/>
+
+<FaqExamPool/>
+
+<FaqSetUpExam/>
+
+<FaqTestTolokers/>
+
+<FaqTwoTrainingPools/>
+
+<TroubleshootingExamThreeTasks/>
+
+</Cut>
+
+<Cut title="Speed of task completion">
+
+<TroubleshootingSpeedDropped/>
+
+<FaqLabelingSpeed/>
+
+<FaqSpeedUpCompletion/>
+
+</Cut>
+
+<ContactGuideSupport/>

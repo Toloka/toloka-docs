@@ -1,0 +1,80 @@
+---
+title: "Assigning the skill | Toloka documentation"
+date: "2023-02-15T15:15:15.563921"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import SelectTolokers from '../subcomponents/select-tolokers.mdx'
+import FaqSkillForEveryPool from '../subcomponents/faq/pool-setup/skill-for-every-pool.mdx'
+import FaqSkillForDifferentProjects from '../subcomponents/faq/pool-setup/skill-for-different-projects.mdx'
+import TroubleshootingTraining from '../subcomponents/troubleshooting/users/training.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import NavAssignCut1 from './nav-assign/subcomponents/nav-assign-cut-1.mdx'
+
+# Assigning the skill
+
+You can assign a skill to Tolokers either manually or automatically: using quality control rules or after training.
+
+## Using quality control rules {#rules}
+
+The quality control rules feature the following actions:
+
+- **Assign skill value** — Set a fixed skill value. This option is available in most [quality control rules](/docs-new/guide/control).
+
+    You decide what value to set and what it means. If the value is irrelevant, you can set any number, such as `1` or `42`.
+
+    For example, in the [Submitted responses](/docs-new/guide/submitted-answers) rule, you can assign the “Experienced” skill to the Toloker if they completed more than 20 assignments. You can set any skill value. Tolokers with the “Experienced” skill can be granted access to more complex tasks. To do this, just specify **Experienced ≠ Missing** in the filters of the pool with more complex tasks.
+
+- **Assign skill from the field** — Set a value calculated automatically, for example, the percentage of the Toloker's correct responses.
+
+    <NavAssignCut1/>
+
+## After passing the training {#training}
+
+After a Toloker passes a [training](/docs-new/glossary#training-pool) they are automatically assigned a [training skill](/docs-new/glossary#training-skill) with the percentage of correct answers.
+
+You don't need to create this skill, it is created when you add the first training pool. If a training has the **Retry after** setting on, the skill is also deleted automatically. [Learn more](/docs-new/guide/train).
+
+## Manually {#manual}
+
+1. Go to the [Tolokers](https://platform.toloka.ai/requester/workers) page.
+
+1. Select the Tolokers to assign the skill to.
+
+   <SelectTolokers/>
+
+1. Click **+Skill**.
+
+1. Choose a skill and specify the skill value. If there is no skill, create it.
+
+1. Click **Save**.
+
+## What's next {#what-next}
+
+[Use the skill](/docs-new/guide/nav-use), for example, to select Tolokers or manage overlap or price.
+
+## See also {#see-also}
+
+- [Creating a skill](/docs-new/guide/nav-create)
+- [Editing a skill](/docs-new/guide/nav-edit)
+- [Remove a skill](/docs-new/guide/nav-delete)
+- [Filters](/docs-new/guide/filters)
+
+## For developers {#for-developers}
+
+- [Toloka API: Setting skill value](/docs-new/api/set-skill)
+- [Toloka-Kit recipe: Assign skill to Toloker](/docs-new/toloka-kit/recipes/assign-skill)
+
+## Troubleshooting {#troubleshooting}
+
+<FaqSkillForEveryPool/>
+
+<FaqSkillForDifferentProjects/>
+
+<TroubleshootingTraining/>
+
+<ContactGuideSupport/>

@@ -1,0 +1,292 @@
+---
+title: "Filters | Toloka documentation"
+date: "2023-02-15T15:15:27.387523"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TolokaRequesterSourceFilterClientAbout from '../subcomponents/toloka-requester-source/id-toloka-requester-source/filter-client-about.mdx'
+import FaqFindGender from '../subcomponents/faq/pool-setup/find-gender.mdx'
+import FaqDemographicGeoParams from '../subcomponents/faq/pool-setup/demographic-geo-params.mdx'
+import FaqArbitraryUser from '../subcomponents/faq/pool-setup/arbitrary-user.mdx'
+import FaqLimitNumberTolokers from '../subcomponents/faq/pool-setup/limit-number-tolokers.mdx'
+import FaqSpecificCity from '../subcomponents/faq/pool-setup/specific-city.mdx'
+import FaqSkillForDifferentProjects from '../subcomponents/faq/pool-setup/skill-for-different-projects.mdx'
+import FaqCalculateSkill from '../subcomponents/faq/pool-setup/calculate-skill.mdx'
+import FaqAssignSkill from '../subcomponents/faq/pool-setup/assign-skill.mdx'
+import FaqSkillExpiration from '../subcomponents/faq/adding-tasks-to-the-pool/skill-expiration.mdx'
+import FaqSelectSpecificTolokers from '../subcomponents/faq/pool-setup/select-specific-tolokers.mdx'
+import FaqSetUpFilter from '../subcomponents/faq/pool-setup/set-up-filter.mdx'
+import FaqRaiseSkill from '../subcomponents/faq/pool-setup/raise-skill.mdx'
+import FaqAssignedSkill from '../subcomponents/faq/pool-setup/assigned-skill.mdx'
+import FaqShowSkill from '../subcomponents/faq/pool-setup/show-skill.mdx'
+import FaqAutoAssignSkill from '../subcomponents/faq/pool-setup/auto-assign-skill.mdx'
+import FaqTaskAvailable from '../subcomponents/faq/pool-setup/task-available.mdx'
+import TroubleshootingMobileUnavailable from '../subcomponents/troubleshooting/pool-setup/mobile-unavailable.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+
+# Filters
+
+You can use filters to select Tolokers for your project. Tasks will only be shown to matching Tolokers, rather than to all of them. Properly configured filters help you send tasks to a target group of Tolokers. As a result, you'll get your results faster and spend less money.
+
+To select Tolokers for the [pool](/docs-new/glossary#pool), click **Add filter** at the **Select the audience for your task** step of creating a pool or on the pool editing page.
+
+From the drop-down list, select filters by profile data and device specifications.
+
+<Note mode="tip" title="Tip">
+
+Copy filters from another pool to add them faster. Click **Copy audience filters and quality settings** and select the pool you want to copy filters from.
+
+</Note>
+
+All filters added to the pool are applied simultaneously. The criteria within a single filter are combined with the logical OR operator.
+
+<Note mode="note" title="Note">
+
+<TolokaRequesterSourceFilterClientAbout/>
+
+</Note>
+
+The number of Tolokers selected with your filters is shown in the **The task is available to N active Tolokers** line, which is in the **Audience**.
+
+## Calculated data {#filter-calc-data}
+
+Use this group of filters to select Tolokers by device type, browser, or software version.
+
+<Cut title="Region by phone number">
+
+To more effectively choose Tolokers by location, add the **Region by phone** filter.
+
+</Cut>
+
+<Cut title="Region by IP">
+
+To make a task available to users with IP addresses in a particular region, add the **Region by IP** filter and enter the region name. This is useful for field tasks.
+
+</Cut>
+
+<Cut title="Client">
+
+<TolokaRequesterSourceFilterClientAbout/>
+
+If your project has field tasks, you need to select Mobile Toloka users among the Tolokers.
+
+</Cut>
+
+<Cut title="Device type">
+
+If the type of the Toloker's device matters, use the `=` and `≠` operators to set the requirements.
+
+</Cut>
+
+<Cut title="Operating system">
+
+Add this filter to select users of certain operating systems.
+
+<Note mode="tip" title="Tip">
+
+If you're looking to select MacOS, Windows, and Linux, the most popular operating systems for PCs, add the **Operating system** filter. Use the `=` operator to set the value as `Windows`. Use the <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425170178/1675425170178_original_svg.svg" alt="Button Add" /> button to add the second value, `MacOS`. Then click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425170178/1675425170178_original_svg.svg" alt="Button Add" /> again and set the third value, `Linux`.
+
+</Note>
+
+</Cut>
+
+<Cut title="Type of client application">
+
+Select this filter if the browser type determines whether Tolokers match your project tasks.
+
+</Cut>
+
+<Cut title="Browser">
+
+Use this filter if your tasks are intended for users with certain web browsers.
+
+</Cut>
+
+<Cut title="Client application versions">
+
+Use this filter if you want to make sure Tolokers have the right browser for your project.
+
+</Cut>
+
+<Cut title="Experiment group (1-100)">
+
+Use the **Experiment group (1-100)** filter to select Tolokers from one or several independent groups.
+
+To learn more, see [Using A/B experiments](/docs-new/guide/ab-experiment).
+
+</Cut>
+
+## Toloker profile {#filter-user-profile}
+
+Use filters from this group to select Tolokers by the main profile data.
+
+<Cut title="Date of birth">
+
+Using a set of operators, you can select an age-based audience among available Tolokers.
+
+</Cut>
+
+<Cut title="City">
+
+You can choose Tolokers who live in certain cities. Use this filter for field tasks or to search for data online.
+
+</Cut>
+
+<Cut title="Adult content">
+
+If there is adult content in the pool tasks, they will only be shown to Tolokers who have agreed to see them. To select such Tolokers, add the **Adult content** filter and activate this option.
+
+</Cut>
+
+<Cut title="Gender">
+
+You can choose Tolokers of a certain gender if this matters for your project.
+
+</Cut>
+
+<Cut title="Country">
+
+Add this filter to restrict the audience by region.
+
+</Cut>
+
+<Cut title="Languages">
+
+Make sure to add the **Languages** filter and specify the language of the [instructions](/docs-new/glossary#instructions) and text in the task.
+
+If you want to be sure Tolokers can read and understand the basics of your language, limit your selection to those who have passed a test on it.
+
+<Image withBackground imageId="1675426705219" alt="Filter Languages" />
+
+</Cut>
+
+<Cut title="Education">
+
+Add this filter if the Toloker's education may affect the quality of responses. Use the `=` or `≠` operator and select **Secondary**, **Vocational secondary**, or **Higher** education from the drop-down list.
+
+</Cut>
+
+<Cut title="Citizenship">
+
+Use this filter when the Toloker's citizenship may affect the quality of responses, like if your project asks Tolokers to complete a survey, transcribe audio, or search for information online. You can also use this filter to restrict Tolokers' access to tasks.
+
+</Cut>
+
+<Cut title="Verified">
+
+Use this filter if you need additional guarantees when selecting Tolokers. Your tasks will only be available to Tolokers whose personal details are verified in Toloka.
+
+</Cut>
+
+## Skill {#filter-skill}
+
+You can select Tolokers with or without a [skill](/docs-new/glossary#skill) and filter them by skill value.
+
+You can use [global skills](/docs-new/guide/nav-cross-project) as a filter to recruit Tolokers who are good at certain types of tasks. Do that by selecting **Add filter → Skills → Choose global skill**, and then set a skill limit in the filter.
+
+Examples of using a skill filter:
+
+<Cut title="I need Tolokers without a skill">
+
+Use the `=` operator and leave the value empty.
+
+<Image withBackground imageId="1675426702400" alt="" />
+
+</Cut>
+
+<Cut title="I need Tolokers with a skill and the skill level doesn't matter">
+
+Use the `≠` operator and leave the value empty. For example, use this to choose Tolokers who are already familiar with the type of tasks like those in your pool.
+
+<Image withBackground imageId="1675426707500" alt="" />
+
+</Cut>
+
+<Cut title="I need Tolokers with a skill of a certain level">
+
+Add a filter, enter a value from 0 to 100, and use a set of operators. For example, you can select only those Tolokers who previously completed a certain number of tasks of the type like in your pool.
+
+<Image withBackground imageId="1675426710797" alt="" />
+
+</Cut>
+
+<Cut title="I need Tolokers with a global skill of a certain level">
+
+Add a global level filter, enter a value from 0 to 100, and use a set of operators. For example, you can select only those Tolokers whose responses were on average better than the responses of 80% of annotators in similar projects.
+
+<Image withBackground imageId="1675426699123" alt="" />
+
+</Cut>
+
+## What's next {#what_next}
+
+- [Add tasks to the pool](/docs-new/guide/pool)
+- Learn more about how to set up a pool:
+
+    - [Setting up pricing](/docs-new/guide/dynamic-pricing).
+    - [Dynamic overlap](/docs-new/guide/dynamic-overlap).
+    - [Selective majority vote check](/docs-new/guide/selective-mvote).
+    - [Speed/quality balance](/docs-new/guide/adjust).
+    - [Setting up quality control](/docs-new/guide/qa-pool-settings).
+    - [Manual review](/docs-new/guide/offline-accept).
+
+## See also {#see-also}
+
+- [Efficiency indicators: Project availability](/docs-new/guide/efficiency-metrics/available-performers)
+
+## For developers {#for-developers}
+
+- [Toloka API: Filtering by profile data](/docs-new/api/filter-profile)
+- [Toloka API: Filtering by computed data](/docs-new/api/filter-computed)
+- [Toloka API: Filtering by skills](/docs-new/api/filter-skill)
+- [Toloka-Kit recipe: Filter Tolokers](/docs-new/toloka-kit/recipes/filter-tolokers)
+
+## Troubleshooting {#troubleshooting}
+
+<Cut title="Tolokers">
+
+<FaqFindGender/>
+
+<FaqDemographicGeoParams/>
+
+<FaqArbitraryUser/>
+
+<FaqLimitNumberTolokers/>
+
+<FaqSpecificCity/>
+
+<FaqSkillForDifferentProjects/>
+
+</Cut>
+
+<Cut title="Skill">
+
+<FaqCalculateSkill/>
+
+<FaqAssignSkill/>
+
+<FaqSkillExpiration/>
+
+<FaqSelectSpecificTolokers/>
+
+<FaqSetUpFilter/>
+
+<FaqRaiseSkill/>
+
+<FaqAssignedSkill/>
+
+<FaqShowSkill/>
+
+<FaqAutoAssignSkill/>
+
+</Cut>
+
+<FaqTaskAvailable/>
+
+<TroubleshootingMobileUnavailable/>
+
+<ContactGuideSupport/>

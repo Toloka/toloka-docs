@@ -1,0 +1,57 @@
+---
+title: "Button for recording and uploading an audio file | Toloka documentation"
+date: "2023-02-15T15:15:28.197975"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+import UploadAudioTable1 from './upload-audio/subcomponents/upload-audio-table-1.mdx'
+import UploadAudioTable2 from './upload-audio/subcomponents/upload-audio-table-2.mdx'
+import UploadAudioTable3 from './upload-audio/subcomponents/upload-audio-table-3.mdx'
+
+# Button for recording and uploading an audio file
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a button for recording and uploading audio files in [Template Builder](/docs-new/template-builder/reference/field.audio).
+
+</Note>
+
+To add a button for audio recording and upload to the task, use the `{{field type="file" sources="RECORDER" fileType="AUDIO" name="<output field name>" sources="<sources parameter>" fileType="<fileType parameter>"}}` component. Example:
+
+```plaintext
+{{field type="file" name="result" sources="RECORDER" fileType="AUDIO" label="Record audio"}}
+```
+
+For a complete list of parameters, see the [table](#parameters).
+
+Add a field with the `file` type in the [output data description](/docs-new/guide/incoming). Example:
+
+```json
+{
+  "result": {
+    "type": "file",
+    "required": true
+  }
+}
+```
+
+Create tasks for mobile devices if you want to use the button for recording and uploading audio files, because these devices have a built-in voice recorder. Set the **Client = Mobile Toloka** [filter](/docs-new/guide/filters) in the [pool](/docs-new/glossary#pool).
+
+## Parameters
+
+**Parameter**|**Description**|**Required**|**Default value**
+----- | ----- | ----- | -----
+`type`| Field type: `file` — Button for file upload. | yes | no
+`name`| Attribute for the output data field. Contains the output field name. | yes | no
+`sources`| <UploadAudioTable1/>| yes | no
+`fileType`| <UploadAudioTable2/>| yes | no
+`label`| The button label. For example, `label="Click me"`. | no | Depending on the interface language, “Upload file” (English), “Загрузить файл” (Russian), “Dosya yükle” (Turkish), “Faylni yuklash” (Uzbek).
+`multipleSelect`| The number of files to download at the same time.<br/><br/>For the single file upload, set the value to `false`.<br/><br/>For upload of multiple files:<br/><br/>1. Set the value to `true`.<br/><br/>1. In the output data description, add a field with the `array_file` type or another type of array. | no | `true` (if the output data description contains a field with the `array_file` type or another type of array).
+`validation-show`| <UploadAudioTable3/>| no | `"top-left"`
+
+<ContactGuideSupport/>

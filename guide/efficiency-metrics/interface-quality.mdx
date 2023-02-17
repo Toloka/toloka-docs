@@ -1,0 +1,43 @@
+---
+title: "Quality of interface | Toloka documentation"
+date: "2023-02-15T15:15:27.972699"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+
+# Quality of interface
+
+After completing a task, Tolokers rate different aspects of it. In particular, they indicate whether the interface is user-friendly. Based on these ratings, an interface quality indicator is generated.
+
+<Note mode="note" title="Note">
+
+If no Toloker has yet given a rating, the indicator value will be missing.
+
+</Note>
+
+## How to calculate
+
+<Formula withoutContainer={true} content="$Q_{i} = {CSI}$"/>
+
+where:
+
+- <Formula withoutContainer={true} content="$Q_{i}$"/> is the interface quality indicator.
+
+- <Formula withoutContainer={true} content="$CSI$"/> is the Tolokers' rating, which shows how satisfied they are with the interface.
+
+## How to estimate
+
+- A good indicator is `> 4.5`.
+
+- A low indicator is `< 4.5` or missing.
+
+## See also {#see-also}
+
+- [Create a project](/docs-new/guide/project)
+
+<ContactGuideSupport/>

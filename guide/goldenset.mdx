@@ -1,0 +1,136 @@
+---
+title: "Control tasks | Toloka documentation"
+date: "2023-02-15T15:15:27.572046"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqHowManyControlTasks from '../subcomponents/faq/pool-setup/how-many-control-tasks.mdx'
+import FaqCorrectResponsesCounted from '../subcomponents/faq/pool-setup/correct-responses-counted.mdx'
+import FaqSkillForEveryPool from '../subcomponents/faq/pool-setup/skill-for-every-pool.mdx'
+import FaqSkillForDifferentProjects from '../subcomponents/faq/pool-setup/skill-for-different-projects.mdx'
+import FaqMoveControlTasks from '../subcomponents/faq/sandbox/move-control-tasks.mdx'
+import FaqIncorrectResponses from '../subcomponents/faq/pool-setup/incorrect-responses.mdx'
+import TroubleshootingExport from '../subcomponents/troubleshooting/pool-setup/export.mdx'
+import FaqUsingSmartMixing from '../subcomponents/faq/adding-tasks-to-the-pool/using-smart-mixing.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import GoldensetTable1 from './goldenset/subcomponents/goldenset-table-1.mdx'
+import GoldensetTable2 from './goldenset/subcomponents/goldenset-table-2.mdx'
+import GoldensetList1 from './goldenset/subcomponents/goldenset-list-1.mdx'
+import GoldensetList2 from './goldenset/subcomponents/goldenset-list-2.mdx'
+import GoldensetList3 from './goldenset/subcomponents/goldenset-list-3.mdx'
+import GoldensetList4 from './goldenset/subcomponents/goldenset-list-4.mdx'
+import GoldensetList5 from './goldenset/subcomponents/goldenset-list-5.mdx'
+import GoldensetList6 from './goldenset/subcomponents/goldenset-list-6.mdx'
+import GoldensetList7 from './goldenset/subcomponents/goldenset-list-7.mdx'
+
+# Control tasks
+
+[Control tasks](/docs-new/glossary#control-task) contain samples of correct responses. They allow you to monitor the quality of task completion without having to check all the responses. Control tasks simplify the verification process, help identify Tolokers' qualifications, and save your time.
+
+<Note mode="note" title="Note">
+
+To save time, you can opt for having your control tasks edited by [Toloka experts](/docs-new/guide/task_markup#auto-markup). In this case, markup is performed within the pool.
+
+</Note>
+
+## When to use {#when-use}
+
+Use control tasks to assign a [skill](/docs-new/glossary#skill) to Tolokers based on their responses and [ban](/docs-new/glossary#banning-tolokers) Tolokers who submit incorrect responses.
+
+#### Don't use it if:
+
+- You have a lot of response options.
+- Tolokers need to attach a file to their assignment.
+- Tolokers need to transcribe text.
+- Tolokers need to select objects in a photo.
+- Tasks don't have a correct or incorrect response. For example: “Which image do you like best?” or “Choose the page design option that you like best”.
+
+## How to configure {#rule-golden}
+
+<Note mode="restriction" title="Alert">
+
+The **If** and **then** fields in this rule are required. If you don't fill in at least one field, you won't be able to save the rule.
+
+</Note>
+
+Field | Overview
+----- | -----
+**Recent control and training task responses to use** | The number of the Toloker's last responses to control tasks.<br/><br/>If this field is not filled in, the calculation includes only control task responses in the pool to which the rule applies.<br/><br/>If the field is filled in, the corresponding number of control task responses is used. The rule takes into account responses from both the current pool and other pools where this field is filled in.<br/><br/>[Learn more](/docs-new/guide/remember-values) about how this field works.
+**If** | <GoldensetTable1/>
+**then** | <GoldensetTable2/>
+
+## Examples of rules {#examples}
+
+**Purpose**: filter out Tolokers who often make mistakes.
+
+Solutions:
+
+- [Ban Tolokers based on control tasks and the percentage of correct responses](/docs-new/guide/goldenset#qcr-control_example1)
+
+- [Set a skill and deny access to Tolokers with a low skill level](/docs-new/guide/goldenset#nav)
+
+- [Ban Tolokers if their percentage of correct responses to control tasks is less than 40%](/docs-new/guide/goldenset#qcr-control_example3)
+
+<Note mode="warning" title="Warning">
+
+The assignments submitted by banned Tolokers will be taken into account if you don't reject them using manual review. They can be reassigned by setting up the [Recompletion of assignments from banned users](/docs-new/guide/restore-task-overlap) rule.
+
+</Note>
+
+#### Ban Tolokers based on control tasks and the percentage of correct responses
+
+<Tabs tabs={[
+  { title: 'Correct settings', value: <GoldensetList1/> },
+  { title: 'Incorrect settings', value: <GoldensetList2/> },
+  { title: 'Alternative settings', value: <GoldensetList3/> },
+]}/>
+
+#### Set a skill and deny access to Tolokers with a low skill level
+
+Skills help identify how well Tolokers do your tasks. You can ban Tolokers with low skill levels from completing tasks in your pool or project.
+
+<Tabs tabs={[
+  { title: 'Correct settings', value: <GoldensetList4/> },
+  { title: 'Incorrect settings', value: <GoldensetList5/> },
+]}/>
+
+#### Ban Tolokers if their percentage of correct responses to control tasks is less than 40%
+
+<Tabs tabs={[
+  { title: 'Correct settings', value: <GoldensetList6/> },
+  { title: 'Incorrect settings', value: <GoldensetList7/> },
+]}/>
+
+## See also {#see-also}
+
+- [Setting up quality control](/docs-new/guide/qa-pool-settings)
+- [“Remember values” parameter](/docs-new/guide/remember-values)
+
+## For developers {#for-developers}
+
+- [Toloka API: Control tasks](/docs-new/api/goldenset)
+- [Toloka-Kit: Control and training task statistics collector](/docs-new/toloka-kit/reference/toloka.client.collectors.GoldenSet)
+
+## Troubleshooting {#troubleshooting}
+
+<FaqHowManyControlTasks/>
+
+<FaqCorrectResponsesCounted/>
+
+<FaqSkillForEveryPool/>
+
+<FaqSkillForDifferentProjects/>
+
+<FaqMoveControlTasks/>
+
+<FaqIncorrectResponses/>
+
+<TroubleshootingExport/>
+
+<FaqUsingSmartMixing/>
+
+<ContactGuideSupport/>

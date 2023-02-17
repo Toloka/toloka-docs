@@ -1,0 +1,45 @@
+---
+title: "Quality of instructions | Toloka documentation"
+date: "2023-02-15T15:15:27.929623"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+
+# Quality of instructions
+
+After completing a task, Tolokers rate different aspects of it. In particular, they indicate whether the instructions were clear to them. Based on these ratings, an instructions quality indicator is generated.
+
+<Note mode="note" title="Note">
+
+If no Toloker has yet given a rating, the indicator value will be missing.
+
+</Note>
+
+## How to calculate
+
+<Formula withoutContainer={true} content="$Q_{i} = {H_{i}}\times{CSI}$"/>
+
+where:
+
+- <Formula withoutContainer={true} content="$Q_{i}$"/> is the instructions quality indicator.
+
+- <Formula withoutContainer={true} content="$H_{i}$"/> is the availability of instructions (0 means available and 1 means not available).
+
+- <Formula withoutContainer={true} content="$CSI$"/> is the Tolokers' rating, which shows how satisfied they are with the instructions.
+
+## How to estimate
+
+- A good indicator is `> 4.5`.
+
+- A low indicator is `< 4.5` or missing.
+
+## See also {#see-also}
+
+- [Writing instructions](/docs-new/guide/instruction)
+
+<ContactGuideSupport/>

@@ -1,0 +1,153 @@
+---
+title: "Azure Blob Storage | Toloka documentation"
+date: "2023-02-15T15:15:18.084806"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+
+# Azure Blob Storage
+
+<Note mode="note" title="Note">
+
+You can use any photo hosting service to add a small number of images, such as [imgbb](https://imgbb.com/), [ImageShack](https://imageshack.com/), or [imgur](https://imgur.com/). This way you can quickly get direct links to your images to add them to the task file or instructions.
+
+</Note>
+
+To try [Microsoft Azure](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction), create a [free account](https://azure.microsoft.com/en-us/free/).
+
+**Trial terms**
+
+Length | Free storage size | Grant amount
+----- | ----- | -----
+12 months | 5 GB | $200 within 30 days
+
+## Steps to follow {#workflow}
+
+To get links to files:
+
+1. Sign up for [Azure](https://signup.azure.com/signup).
+1. [Create a storage account.](#create-account)
+1. [Create a container.](#container)
+1. [Upload files to the container.](#upload)
+1. [Copy links.](#get-files)
+
+## Create a storage account {#create-account}
+
+1. Open the Azure [main page](https://portal.azure.com/?quickstart=true#home) and click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425173788/1675425173788_original_svg.svg" alt="" /> in the top left corner.
+
+1. Select **Storage accounts**.
+
+1. On the top panel, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425173354/1675425173354_original_svg.svg" alt="" /> **Create**.
+
+1. On the **Basic** tab, select the subscription for the new storage account.
+
+1. Enter the name of the resource group and your account.
+
+1. Select the region closest to your Tolokers. For example, for Tolokers from Germany: **Region → (Europe) West Central Germany**.
+
+    <Cut title="What it looks like in the interface">
+
+    <Image withBackground imageId="1675425955797" alt="" />
+
+    </Cut>
+
+1. Leave other fields unchanged. Click **Review + create**.
+
+1. Wait till it opens. Click **Go to resource.**
+
+    <Image width="400px" withBackground imageId="1675425949961" alt="" />
+
+## Create a container {#container}
+
+1. In the **Data storage** section in the left menu, select **Containers**.
+
+1. On the top panel, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425173354/1675425173354_original_svg.svg" alt="" /> **Container**.
+
+1. Enter the container name.
+
+1. In the **Public access level** field, select **Container**.
+
+    <Note mode="note" title="Note">
+
+    Files will be accessible to anyone with a link. We recommend using hashed file names to keep your files secure. You can generate hashes using online tools (for example, [Online MD5 Hash Generator](https://en.wikipedia.org/wiki/Hash_function)). Learn more about [hashing](https://en.wikipedia.org/wiki/Hash_function).
+
+    </Note>
+
+1. Click **Create**.
+
+<Note mode="note" title="Note">
+
+You can set up the lifetime of files in the container so that they are automatically deleted after a specified number of days. [Learn more](https://docs.microsoft.com/en-us/azure/cdn/cdn-manage-expiration-of-blob-content).
+
+</Note>
+
+## Upload your files to the container {#upload}
+
+1. To open the container, click on its name.
+
+1. On the top panel, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425958460/1675425958460_original_png.png" alt="" /> **Send**.
+
+1. <Cut title="Upload files">
+
+    Select files on your device.
+
+    </Cut>
+
+    <Cut title="Upload files to the folder.">
+
+    In the **Send to folder** field in the **Additional** section, enter the name of the folder. If the folder doesn't exist, it will be created.
+
+    </Cut>
+
+    <Note mode="warning" title="Warning">
+
+    The name can't contain spaces. Files can't be accessed by link.
+
+    </Note>
+
+1. Click **Send**.
+
+## Copy links {#get-files}
+
+1. Select the uploaded file and copy its **URL** from the **Review** section.
+
+1. All file links are created by the same template.
+
+    Links look like this:
+
+    ```plaintext
+    https://<storage-account>.blob.core.windows.net/<container>/<filename>
+    ```
+
+    The link in the folder looks like this:
+
+    ```plaintext
+    https://<storage-account>.blob.core.windows.net/<container>/<file-path>/<filename>
+    ```
+
+    <Note mode="note" title="Note">
+
+    To quickly get links to other files, copy the link to one of them and replace `<file-name>` with the names of other files.
+
+    </Note>
+
+1. In the [file with tasks](/docs-new/guide/pool_csv), paste the links in the column that matches the input data field to which this data is passed.
+
+    For example, if you want to use images in the `image` field, specify the file links in the `INPUT:image` column:
+
+    ```plaintext
+    INPUT:image
+    https://mytolokaaccount.blob.core.windows.net/mycontainer/newfolder/image1.png
+    https://mytolokaaccount.blob.core.windows.net/mycontainer/newfolder/image2.png
+    ```
+
+## See also {#see-also}
+
+- [How to upload tasks](/docs-new/guide/task_upload)
+
+<ContactGuideSupport/>

@@ -1,0 +1,120 @@
+---
+title: "Task markup | Toloka documentation"
+date: "2023-02-15T15:15:23.193432"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqHowManyControlTasks from '../subcomponents/faq/pool-setup/how-many-control-tasks.mdx'
+import FaqHowLongLabelingExperts from '../subcomponents/faq/result-questions/how-long-labeling-experts.mdx'
+import TroubleshootingLabelingFailed from '../subcomponents/troubleshooting/result-questions/labeling-failed.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+
+# Task markup
+
+<Note mode="restriction" title="Restriction">
+
+Task markup is available only for [training pools](/docs-new/guide/train) and pools uploaded with [“smart mixing”](/docs-new/guide/distribute-tasks-by-pages#smart-mixing).
+
+</Note>
+
+Using markup, you can add correct responses and hints to tasks, as well as change task types. You can turn a general task into a [control task](/docs-new/glossary#control-task) by adding the correct answer, or into a [training task](/docs-new/glossary#training-task) by adding the correct answer and a hint.
+
+<Cut title="Why this is important">
+
+Using control tasks, you can track Tolokers' task completion quality: assign skills, select Tolokers for projects, configure dynamic overlap, and set up pricing.
+
+Tolokers' task completion quality may be low in the following cases:
+
+- There are no control tasks in the pool. As a result, dishonest Tolokers and Tolokers with low labeling skill levels may participate in the project.
+
+- Control tasks in the pool are not updated regularly. As a result, Tolokers can guess correct answers, which makes the effectiveness of quality control decrease.
+
+</Cut>
+
+There are two ways to create control tasks:
+
+- [Automatic markup](#auto-markup) by Toloka experts.
+
+- [Manual markup](/docs-new/guide/task-markup-by-yourself), which allows you to create both control tasks and training tasks.
+
+## How to set up automatic markup {#auto-markup}
+
+To save time, you can opt for having your control tasks edited by Toloka experts. In this case, markup is performed within the pool.
+
+You can set up automatic markup if the following conditions are met:
+
+- Markup is only available for [control tasks](/docs-new/glossary#control-task).
+
+- By default, markup is supported for object classification projects created with the following templates:
+
+    - **Image classification**
+    - **Hand gesture classification**
+    - **Clickbait or not?**
+    - **Sentiment analysis & Content moderation**
+    - **Product search relevance**
+
+- For other types of projects, you can request this feature by contacting [support](/docs-new/guide/troubleshooting/support).
+
+- The pool must contain more than 100 tasks.
+
+- At least one required output field must be set up in the task interface.
+
+- You can get control tasks only once for each project. This does not apply to cases when task markup failed.
+
+- Control task markup performed by Toloka is only available in the interface. You can't access this feature through the API.
+
+## How does it work? {#how-work}
+
+<Note mode="restriction" title="Alert">
+
+Don't make changes to the project or pool while tasks are being edited. Markup will continue without these changes taken into account, which may result in discrepancies.
+
+</Note>
+
+1. Make sure the pool isn't running.
+
+1. Make sure that the task instructions are correct.
+
+1. Click **Edit** in the **Pool tasks** section.
+
+1. Go to the **General** tab.
+
+1. In the **We can label control tasks for you** section, click **Try it for free**.
+
+1. Click **Order**. Your pool data will be sent for markup to expert Tolokers. For better quality, we use algorithms that select tasks that can be used as control tasks.
+
+1. Wait until the markup is completed. This process usually takes about 6 hours. The estimated time of markup completion is indicated in the **Edit tasks** section.
+
+1. After the markup is completed, the tasks are uploaded back to the pool. In the **Edit tasks** section on the **Control tasks** tab, you'll see the following message: “Control tasks are ready”. You can [edit](/docs-new/guide/task-markup-by-yourself#task-edit) and [delete](/docs-new/guide/task-markup-by-yourself#delete-task) the control tasks you received.
+
+<Note mode="note" title="Note">
+
+If the markup process failed for some reason, contact support. Go to the tab for control tasks or to the pool page and click **Contact us**. After the problem is solved, you'll be able to request control task markup again.
+
+</Note>
+
+## What's next {#what_next}
+
+- [Add a training pool](/docs-new/guide/train)
+- [Top up your account](/docs-new/guide/refill)
+- [Start the pool](/docs-new/guide/pool-run-and-stop)
+
+## See also {#see-also}
+
+- [Ways to group tasks in suites](/docs-new/guide/distribute-tasks-by-pages)
+- [Efficiency indicators: Control tasks](/docs-new/guide/efficiency-metrics/control-tasks-share)
+- [Efficiency indicators: Control task balance](/docs-new/guide/efficiency-metrics/control-tasks-balance)
+
+## Troubleshooting {#troubleshooting}
+
+<FaqHowManyControlTasks/>
+
+<FaqHowLongLabelingExperts/>
+
+<TroubleshootingLabelingFailed/>
+
+<ContactGuideSupport/>

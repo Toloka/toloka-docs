@@ -1,0 +1,38 @@
+---
+title: "Text formatted in HTML | Toloka documentation"
+date: "2023-02-15T15:15:28.756944"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+
+# Text formatted in HTML
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in [Template Builder](/docs-new/template-builder/).
+
+</Note>
+
+To upload a task with formatted text (HTML tags and styles):
+
+1. Add a field of `string` type into the [input data description](/docs-new/guide/incoming). For example:
+
+    ```json
+    {
+    "html": {
+    "type": "string",
+    "required": true
+    }
+    }
+    ```
+
+1. In the [task interface](/docs-new/guide/spec) put the name of the input data field in triple curly brackets. For example: `{{{html}}}`.
+
+Before uploading a task, make sure that all quotation marks in the formatted text are [escaped](/docs-new/guide/pool_csv#string).
+
+<ContactGuideSupport/>

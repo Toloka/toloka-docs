@@ -1,0 +1,74 @@
+---
+title: "Button for recording and uploading a video file | Toloka documentation"
+date: "2023-02-15T15:15:29.041694"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+import UploadVideoTable1 from './upload-video/subcomponents/upload-video-table-1.mdx'
+import UploadVideoTable2 from './upload-video/subcomponents/upload-video-table-2.mdx'
+import UploadVideoTable3 from './upload-video/subcomponents/upload-video-table-3.mdx'
+import UploadVideoTable4 from './upload-video/subcomponents/upload-video-table-4.mdx'
+
+# Button for recording and uploading a video file
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a button for recording and uploading a video file in [Template Builder](/docs-new/template-builder/reference/field.media-file).
+
+</Note>
+
+To add a video upload button to the task, use the `{{field type= "file" name="output field name> "sources="<sources parameter>" fileType="<fileType parameter>"}}` component.
+
+For example, to add a video recording button, use:
+
+```plaintext
+`{{field type="file" name="result" sources="CAMERA" fileType="VIDEO"}}`
+```
+
+For a complete list of parameters, see the [table](#parameters).
+
+In the [output data](/docs-new/guide/incoming) description, add one of the fields:
+
+- Field with the `file` type — For uploading one video only. Example:
+
+    ```json
+    {
+    "result": {
+    "type": "file",
+    "required": true
+    }
+    }
+    ```
+
+- Field with the `array_file` type — For uploading several video files at once. Example:
+
+    ```json
+    {
+    "result": {
+    "type": "array_file",
+    "required": true
+    }
+    }
+    ```
+
+Run tasks with a video recording button on mobile devices, since they have a built-in camera. Set the **Client = Mobile Toloka** [filter](/docs-new/guide/filters) in the [pool](/docs-new/glossary#pool).
+
+## Parameters
+
+**Parameter**|**Description**|**Required**|**Default value**
+----- | ----- | ----- | -----
+`type`| Field type: `file` — Button for file upload. | yes | no
+`name`| Attribute for the output data field. Contains the output field name. | yes | no
+`sources`| <UploadVideoTable1/>| Yes (when creating tasks for mobile devices) | no
+`fileType`| <UploadVideoTable2/>| Yes (when creating tasks for mobile devices) | no
+`label`| The button label. For example, `label="Click me"`. | no | Depending on the interface language, “Upload file” (English), “Загрузить файл” (Russian), “Dosya yükle” (Turkish), “Faylni yuklash” (Uzbek).
+`validation-show`| <UploadVideoTable3/>| no | `"top-left"`
+`camera`| <UploadVideoTable4/>| no | `false`
+`multipleSelect`| The number of files to download at the same time.<br/><br/>For the single file upload, set the value to `false`.<br/><br/>For upload of multiple files:<br/><br/>1. Set the value to `true`.<br/><br/>1. In the output data description, add a field with the `array_file` type or another type of array. | no | `true` (if the output data description contains a field with the `array_file` type or another type of array).
+
+<ContactGuideSupport/>

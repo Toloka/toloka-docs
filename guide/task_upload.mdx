@@ -1,0 +1,163 @@
+---
+title: "How to upload tasks | Toloka documentation"
+date: "2023-02-15T15:15:21.679694"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import MediaFiles from '../subcomponents/toloka-requester-source/id-toloka-requester-source/media-files.mdx'
+import TroubleshootingMarkedAsTraining from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/marked-as-training.mdx'
+import TroubleshootingPhotosSplitAcrossPages from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/photos-split-across-pages.mdx'
+import TroubleshootingUploadingTooLong from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/uploading-too-long.mdx'
+import TroubleshootingUploadingData from '../subcomponents/troubleshooting/api/uploading-data.mdx'
+import TroubleshootingSyntaxError from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/syntax-error.mdx'
+import FaqHowManyTasksInSuite from '../subcomponents/faq/adding-tasks-to-the-pool/how-many-tasks-in-suite.mdx'
+import FaqRightTimeLimit from '../subcomponents/faq/adding-tasks-to-the-pool/right-time-limit.mdx'
+import FaqMaxNumberPerSuite from '../subcomponents/faq/adding-tasks-to-the-pool/max-number-per-suite.mdx'
+import FaqTaskSuiteDifference from '../subcomponents/faq/adding-tasks-to-the-pool/task-suite-difference.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import TaskUploadList1 from './task_upload/subcomponents/task_upload-list-1.mdx'
+import TaskUploadTable1 from './task_upload/subcomponents/task_upload-table-1.mdx'
+import TaskUploadTable2 from './task_upload/subcomponents/task_upload-table-2.mdx'
+
+# How to upload tasks
+
+To upload [file with tasks](/docs-new/glossary#tsv) to a [pool](/docs-new/guide/pool-main):
+
+1. Go to the **Prepare and upload data** step if you're creating a pool or click the **Upload** button on the pool page.
+
+1. Attach a prepared dataset or media files.
+
+    <Tabs tabs={[
+      { title: 'A prepared dataset', value: <TaskUploadList1/> },
+      { title: 'Media files', value: <MediaFiles/> },
+    ]}/>
+
+1. Click **Continue**.
+
+1. Choose a way to put tasks into suites and specify the number of tasks per suite. For more information, see [Ways to group tasks in suites](/docs-new/guide/distribute-tasks-by-pages).
+
+1. Click **Combine tasks into suites**.
+
+1. Wait for the result.
+
+To delete all the tasks in the pool, click **Delete**.
+
+<Note mode="restriction" title="Restriction">
+
+You can add up to one million tasks to the pool. To upload more tasks, create another pool.
+
+</Note>
+
+## Tips and recommendations {#tips}
+
+- Set the number of tasks per suite depending on the complexity and time allocated for a task.
+
+    We recommend that you distribute them so that each task suite takes no more than five minutes to complete.
+
+- If you get a processing error, it means that the data file is not formatted correctly. For example, there are unnecessary tabs in the file or some lines, headers, or quotes are missing.
+
+    In this case, click **Cancel**, correct the mistakes, and then upload the file again.
+
+## Processing errors {#table-with-errors}
+
+If an error occurred while uploading the file, use the table.
+
+To view the processing log, click **More on uploading errors**. The processing log is written in JSON format. Objects inside `result` match the line number of the uploaded file. Lines that were processed with an error have the status `"success": false`.
+
+<Note mode="tip" title="Tip">
+
+To work with a large log conveniently, copy it to the text editor.
+
+</Note>
+
+<Cut title="Processing errors tables">
+
+```json
+"parsing_error_of": "https://tlk.s3.yandex.net/wsdm2020/photos/2d5f63a3184919ce7e3e7068cf93da4b.jpg\t\t",
+"exception_msg": "the nameMapping array and the sourceList should be the same size (nameMapping length = 1, sourceList size = 3)"
+```
+
+**Overview**|**How to fix**
+----- | -----
+**Extra tabs.**<br/><br/>If the uploaded file contains more `\t` column separators after the data or the link than the number of columns set in the [input data](/docs-new/glossary#input-output-data), you get an error message.<br/><br/>For example, if 1 column is set in the input data, and two more `\t\t` tabs are added in the file after the link, you get 3 columns, 2 of which are excessive. | Remove extra column separators in the above example — both `\t\t` characters.
+
+```json
+"exception_msg": "the nameMapping array and the sourceList should be the same size (nameMapping length = 4, sourceList size = 6)"
+```
+
+**Overview**|**How to fix**
+----- | -----
+**The number of fields in the header and in the row doesn't match.** | <TaskUploadTable1/>
+
+```json
+"code": "VALUE_REQUIRED", "message": "Value must be present and not equal to null"
+```
+
+**Overview**|**How to fix**
+----- | -----
+**The value is missing for a required input field.** | Make sure that columns with required input data fields are filled.
+
+```json
+"code": "INVALID_URL_SYNTAX", "message": "Value must be in valid url format"
+```
+
+**Overview**|**How to fix**
+----- | -----
+**Invalid data in a “link” (“url”) field.** | <TaskUploadTable2/>
+
+```json
+"exception_msg": "unexpected end of file while reading quoted column beginning on line 2 and ending on line 4"
+```
+
+**Overview**|**How to fix**
+----- | -----
+**Unpaired quotation mark in a string.** | Check that all quotation marks are [escaped](/docs-new/guide/pool_csv#string).
+
+</Cut>
+
+## What's next {#what_next}
+
+- Learn more about [ways to group tasks in suites](/docs-new/guide/distribute-tasks-by-pages).
+
+- Check the project settings and tasks with the help of [special labeling mode](/docs-new/guide/self-labeling) before you send them to real Tolokers.
+
+- If you haven't labeled your [control](/docs-new/glossary#control-task) and [training](/docs-new/glossary#training-task) tasks in the file, [edit the tasks in the interface](/docs-new/guide/task_markup).
+
+## See also {#see-also}
+
+- [Where to store files](/docs-new/guide/cloud-storage)
+- [Amazon S3](/docs-new/guide/amazon-cloud-storage)
+- [Azure Blob Storage](/docs-new/guide/azure-cloud-storage)
+- [Google Cloud Storage](/docs-new/guide/google-cloud-storage)
+- [Yandex Object Storage](/docs-new/guide/use-object-storage)
+
+## For developers {#for-developers}
+
+- [Toloka API: Tasks](/docs-new/api/tasks)
+- [Toloka-Kit recipe: Upload tasks](/docs-new/toloka-kit/recipes/upload-tasks)
+
+## Troubleshooting {#troubleshooting}
+
+<TroubleshootingMarkedAsTraining/>
+
+<TroubleshootingPhotosSplitAcrossPages/>
+
+<TroubleshootingUploadingTooLong/>
+
+<TroubleshootingUploadingData/>
+
+<TroubleshootingSyntaxError/>
+
+<FaqHowManyTasksInSuite/>
+
+<FaqRightTimeLimit/>
+
+<FaqMaxNumberPerSuite/>
+
+<FaqTaskSuiteDifference/>
+
+<ContactGuideSupport/>

@@ -1,0 +1,152 @@
+---
+title: "Amazon S3 | Toloka documentation"
+date: "2023-02-15T15:15:19.267238"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+
+# Amazon S3
+
+<Note mode="note" title="Note">
+
+You can use any photo hosting service to add a small number of images, such as [imgbb](https://imgbb.com/), [ImageShack](https://imageshack.com/), or [imgur](https://imgur.com/). This way you can quickly get direct links to your images to add them to the task file or instructions.
+
+</Note>
+
+To try out [S3](https://aws.amazon.com/s3/?nc1=h_ls), you can activate a [free trial](https://aws.amazon.com/free).
+
+**Trial terms**
+
+Length | Free storage size | Grant amount
+----- | ----- | -----
+12 months | 5 GB | —
+
+## Steps to follow {#workflow}
+
+To get links to files:
+
+1. Sign up to [Amazon Web Services](https://aws.amazon.com/getting-started/hands-on/backup-files-to-amazon-s3/?nc1=h_ls).
+1. Go to the [Console](https://console.aws.amazon.com/console/home?nc2=h_ct&src=header-signin).
+1. Log in to [Amazon S3](https://s3.console.aws.amazon.com/s3/home).
+1. [Create a bucket](#create-bucket).
+1. [Upload files to the bucket](#upload).
+1. [Copy links](#get-files).
+
+## Create a bucket {#create-bucket}
+
+1. In the **Buckets** section, click **Create Bucket**.
+
+    <Image withBackground imageId="1675426026384" alt="" />
+
+1. Enter the bucket name. The name must be unique and must not contain spaces or upper-case letters.
+
+    Learn more about the [Bucket naming rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html).
+
+1. Select the region closest to your Tolokers. For example, for Tolokers from Germany: .
+
+1. To make files in the bucket available by link, disable the option **Block all public access** in the **Block Public Access settings for this bucket** section.
+
+    <Note mode="note" title="Note">
+
+    Files will be accessible to anyone with a link. We recommend using hashed file names to keep your files secure. You can generate hashes using online tools (for example, [Online MD5 Hash Generator](https://en.wikipedia.org/wiki/Hash_function)). Learn more about [hashing](https://en.wikipedia.org/wiki/Hash_function).
+
+    </Note>
+
+1. Confirm changes.
+
+    <Image withBackground imageId="1675426018003" alt="" />
+
+1. If you want to enable version control, select .
+
+    To make your files easier to navigate, add [tags](https://docs.aws.amazon.com/AmazonS3/latest/userguide/CostAllocTagging.html).
+
+1. Click **Create bucket**.
+
+<Note mode="note" title="Note">
+
+You can set the lifetime of files in the bucket so that they are automatically deleted after a specified number of days. [Learn more](https://aws.amazon.com/ru/blogs/aws/amazon-s3-object-expiration/).
+
+</Note>
+
+## Upload files to the bucket {#upload}
+
+1. In the **Buckets** section, select a bucket.
+
+1. On the**Objects** tab, click **Upload**.
+
+    <Image withBackground imageId="1675426013458" alt="" />
+
+1. <Cut title="Upload files">
+
+    Select the files on your computer and click **Add files**.
+
+    </Cut>
+
+    <Cut title="Upload a folder with files">
+
+    Select the folder with the files on your computer and click **Add folder**.
+
+    </Cut>
+
+    <Cut title="Create a folder and upload files">
+
+    To create a folder in the bucket, click **Create folder** and upload files.
+
+    </Cut>
+
+    <Note mode="note" title="Note">
+
+    All symbols except for Latin letters will be replaced with codes, and spaces will be replaced with plus signs.
+
+    </Note>
+
+1. Click **Upload**.
+
+1. After the files are uploaded, click **Close**.
+
+## Copy links. {#get-files}
+
+1. Select the uploaded file and click **Copy URL** on the **Object** tab.
+
+    <Image withBackground imageId="1675426021118" alt="" />
+
+1. All file links are created by the same template.
+
+    Links look like this:
+
+    ```plaintext
+    https://<bucket-name>.s3.<region-code>.amazonaws.com/<filename>
+    ```
+
+    The link in the folder looks like this:
+
+    ```plaintext
+    https://<bucket-name>.s3.<region-code>.amazonaws.com/<path-to-file>/<filename>
+    ```
+
+    <Note mode="note" title="Note">
+
+    To quickly get links to other files, copy the link to one of them and replace `<file-name>` with the names of other files.
+
+    </Note>
+
+1. In the [file with tasks](/docs-new/guide/pool_csv), paste the links in the column that matches the input data field to which this data is passed.
+
+    For example, if you want to use images in the `image` field, specify the file links in the `INPUT:image` column:
+
+    ```plaintext
+    INPUT:image
+    https://mybucket.s3.eu-north-1.amazonaws.com/newfolder/image1.png
+    https://mybucket.s3.eu-north-1.amazonaws.com/newfolder/image2.png
+    ```
+
+## See also {#see-also}
+
+- [How to upload tasks](/docs-new/guide/task_upload)
+
+<ContactGuideSupport/>

@@ -1,0 +1,24 @@
+1. Add the `{{field type="suggest" name="<output field name>" source=<input field name>}}` component to the **HTML** code. Example:
+
+    ```plaintext
+    {{field type="suggest" name="result" source=countries allowCustomInput=true}}
+    ```
+
+1. Add a field of array string type in the description of input data. Example:
+
+    ```json
+    {
+    "counries": {
+    "type": "array_string",
+    "required": true
+    }
+    }
+    ```
+
+1. [Escape](/docs-new/guide/pool_csv#json) the data and add it to the [file with tasks](/docs-new/glossary#tsv).
+
+    <Cut title="Example">
+
+    <Image width="371px" withBackground imageId="1675426664204" alt="" />
+
+    </Cut>

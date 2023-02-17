@@ -1,0 +1,58 @@
+---
+title: "Text input field | Toloka documentation"
+date: "2023-02-15T15:15:28.517027"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+import TextTable1 from './text/subcomponents/text-table-1.mdx'
+import TextTable2 from './text/subcomponents/text-table-2.mdx'
+import TextTable3 from './text/subcomponents/text-table-3.mdx'
+import TextTable4 from './text/subcomponents/text-table-4.mdx'
+
+# Text input field
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a text input field in [Template Builder](/docs-new/template-builder/reference/field.textarea).
+
+</Note>
+
+To add a multi-line text field to a task, use the `{{field type="textarea" name="<output field name>"}}` component. Example:
+
+```plaintext
+{{field type="textarea" name="result" width="270px" rows=5}}
+```
+
+Add a field of `string` type in the [output data description](/docs-new/guide/incoming). Example:
+
+```json
+{
+  "result": {
+    "type": "string",
+    "required": true
+  }
+}
+```
+
+## Parameters
+
+**Parameter**|**Description**|**Required**|**Default value**
+----- | ----- | ----- | -----
+`type`| Field type: `textarea` — Multistring text input field. | yes | no
+`name`| Attribute for the output data field. Contains the output field name. | yes | no
+`value`| Text to record in the output data file by default. | no | no
+`validation-show`| <TextTable1/>| no | `"top-left"`
+`size`| Size of the field.<br/><br/>Supported values: `"M"`, `"L"`. | no | `"L"`
+`width`| <TextTable2/>| no | depends on the browser and font size
+`rows`| Height of the text field (the number of lines visible without scrolling).<br/><br/>Example:`{{field type="textarea" name="result" width="270px" rows=5}}`| no | 3
+`disabled`| <TextTable3/>| no | `false`
+`resize`| <TextTable4/>| no | no
+`placeholder`| The prompt text to display in the empty field. | no | no
+`class`| The CSS class for the field. For example, `class="annotation"`. | no | `".field" ".field_type_textarea"`
+
+<ContactGuideSupport/>

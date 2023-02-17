@@ -1,0 +1,47 @@
+---
+title: "Bans | Toloka documentation"
+date: "2023-02-15T15:15:27.625540"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+
+# Bans
+
+This indicator shows the percentage of banned Tolokers. A high percentage may indicate incorrect quality control settings.
+
+## Features
+
+- The entire project is taken into account, since a ban is usually imposed for the entire project.
+
+- System bans are not taken into account.
+
+- The percentage is calculated for the last 2 days.
+
+## How to calculate
+
+<Formula withoutContainer={true} content="$P_{ban} = \frac{N_{ban}}{N_{total}}\times100$"/>
+
+where:
+
+- <Formula withoutContainer={true} content="$P_{ban}$"/> is the percentage of banned Tolokers.
+
+- <Formula withoutContainer={true} content="$N_{ban}$"/> is the number of banned Tolokers.
+
+- <Formula withoutContainer={true} content="$N_{total}$"/> is the total number of Tolokers.
+
+## How to estimate
+
+- A good indicator is `< 20%`.
+
+- A low indicator is `> 20%`.
+
+## See also {#see-also}
+
+- [Setting up quality control](/docs-new/guide/qa-pool-settings)
+
+<ContactGuideSupport/>

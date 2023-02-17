@@ -1,0 +1,152 @@
+---
+title: "Google Cloud Storage | Toloka documentation"
+date: "2023-02-15T15:15:24.004897"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+
+# Google Cloud Storage
+
+<Note mode="note" title="Note">
+
+You can use any photo hosting service to add a small number of images, such as [wampi](https://wampi.ru/?lang=en), [imgbb](https://imgbb.com/), [ImageShack](https://imageshack.com/), or [imgur](https://imgur.com/). This way you can quickly get direct links to your images to add them to the task file or instructions.
+
+</Note>
+
+To try out [Google Cloud Storage](https://cloud.google.com/storage/docs/introduction), you can activate [Free trial](https://cloud.google.com/free?).
+
+**Trial terms**
+
+Length | Free storage size | Grant amount
+----- | ----- | -----
+90 days | 5 GB | $300
+
+## Steps to follow {#workflow}
+
+To get links to files:
+
+1. Create a [Google](https://cloud.google.com/storage/docs/lifecycle) account.
+1. Create a [Google Cloud](https://cloud.google.com/free?) account.
+1. Go to the [Console](https://console.cloud.google.com/projectselector2/storage/browser).
+1. Click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425971337/1675425971337_original_png.png" alt="" /> **Create project**.
+1. Enter the project name. Select the organization from the drop-down list and click **Create**.
+1. [Create a bucket](#create-account).
+1. [Upload files](#upload).
+1. [Copy links](#get-files).
+
+## Create a bucket {#create-account}
+
+1. Select a project and click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425971337/1675425971337_original_png.png" alt="" /> **Create bucket**.
+
+   <Image withBackground imageId="1675426004273" alt="" />
+
+1. Enter the bucket name. The name should be unique and contain only lower-case Latin letters, numbers, hyphens, and underscores.
+
+    Learn more about the [Bucket naming rules](https://cloud.google.com/storage/docs/naming-buckets?_ga=2.31332223.-1978071647.1627855306).
+
+1. In **Choose where to store your data** select **Location type → Region** and select the region closest to your Tolokers. For example, for Tolokers from Germany: **Location → europe-west3 (Frankfurt)**.
+
+1. Leave the **Choose a default storage class for your data** section unchanged.
+
+1. In **Choose how to control access to objects**, disable the option **Enforce public access prevention on this bucket**.
+
+   <Image withBackground imageId="1675426008754" alt="" />
+
+1. Click **Create**.
+
+1. To make objects accessible by link, on the **Permissions** tab click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425986210/1675425986210_original_png.png" alt="" /> **Add**.
+
+    <Note mode="note" title="Note">
+
+    Files will be accessible to anyone with a link. We recommend using hashed file names to keep your files secure. You can generate hashes using online tools (for example, [Online MD5 Hash Generator](https://en.wikipedia.org/wiki/Hash_function)). Learn more about [hashing](https://en.wikipedia.org/wiki/Hash_function).
+
+    </Note>
+
+1. In the **New members** field, enter **allUsers**.
+
+1. Select **Cloud Storage → Storage Object Viewer**.
+
+    <Image withBackground imageId="1675425983011" alt="" />
+
+1. Click **Save → Allow public access**.
+
+<Note mode="note" title="Note">
+
+You can set the lifetime of files in the bucket so that they are automatically deleted after a specified number of days. [Learn more](https://myaccount.google.com/).
+
+</Note>
+
+## Upload files {#upload}
+
+<Cut title="Upload files">
+
+On the **Object** tab, click **Upload files** and select the files on your computer.
+
+</Cut>
+
+<Cut title="Upload a folder with files">
+
+On the **Object** tab, click **Upload folder** and select a folder on your computer.
+
+</Cut>
+
+<Cut title="Create a folder">
+
+On the **Object** tab, click **Create folder** and enter the folder name.
+
+</Cut>
+
+<Image withBackground imageId="1675426000434" alt="" />
+
+<Note mode="note" title="Note">
+
+All spaces and symbols in the file names will be replaced with codes.
+
+</Note>
+
+## Copy links {#get-files}
+
+1. Choose the file you uploaded and click **Copy URL** in the **Public access** column.
+
+   <Image withBackground imageId="1675426007349" alt="" />
+
+1. All file links are created by the same template.
+
+    Links look like this:
+
+    ```plaintext
+    https://storage.googleapis.com/<bucket>/<file-name>
+    ```
+
+    The link in the folder looks like this:
+
+    ```plaintext
+    https://storage.googleapis.com/<bucket>/<file-path>/<file-name>
+    ```
+
+    <Note mode="note" title="Note">
+
+    To quickly get links to other files, copy the link to one of them and replace `<file-name>` with the names of other files.
+
+    </Note>
+
+1. In the [file with tasks](/docs-new/guide/pool_csv), paste the links in the column that matches the input data field to which this data is passed.
+
+    For example, if you want to use images in the `image` field, specify the file links in the `INPUT:image` column:
+
+    ```plaintext
+    INPUT:image
+    https://storage.googleapis.com/mytolokabucket/newfolder/image1.png
+    https://storage.googleapis.com/mytolokabucket/newfolder/image2.png
+    ```
+
+## See also {#see-also}
+
+- [How to upload tasks](/docs-new/guide/task_upload)
+
+<ContactGuideSupport/>

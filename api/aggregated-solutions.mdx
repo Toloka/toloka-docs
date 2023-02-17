@@ -10,14 +10,14 @@ docsMenu: "apiMenu"
 
 # Overview
 
-Aggregate accepted responses for tasks with an [overlap](https://toloka.ai/en/docs/glossary#overlap) in a [pool](https://toloka.ai/en/docs/glossary#pool) of 2 or more to get the final response with the degree of confidence.
+Aggregate accepted responses for tasks with an [overlap](/docs-new/glossary#overlap) in a [pool](/docs-new/glossary#pool) of 2 or more to get the final response with the degree of confidence.
 
 You can aggregate responses in two ways:
 
 - Yes — Aggregate responses by skill (`WEIGHTED_DYNAMIC_OVERLAP`).
 - No — Aggregate responses using the Dawid-Skene method (`DAWID_SKENE`).
 
-    The Dawid-Skene aggregation model works with [control](https://toloka.ai/en/docs/glossary#control-task) and [training](https://toloka.ai/en/docs/glossary#training-task) tasks as well as with general tasks. Responses specified for control tasks might not match the actual responses to the task if Tolokers often submit an incorrect response to it.
+    The Dawid-Skene aggregation model works with [control](/docs-new/glossary#control-task) and [training](/docs-new/glossary#training-task) tasks as well as with general tasks. Responses specified for control tasks might not match the actual responses to the task if Tolokers often submit an incorrect response to it.
 
     The Dawid-Skene aggregation model automatically evaluates `|L|²` parameters for each Toloker, where `L` is the number of different aggregation values. Note that these parameters are determined automatically and are only used in calculations.
 
@@ -35,4 +35,4 @@ GET | [/aggregated-solutions/<operation_id>](/docs-new/api/get-aggregated-result
 
 ## See also {#see-also}
 
-- [Aggregation of results](https://toloka.ai/en/docs/guide/concepts/result-aggregation)
+- [Aggregation of results](/docs-new/guide/result-aggregation)

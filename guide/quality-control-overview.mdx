@@ -1,0 +1,335 @@
+---
+title: "Overview | Toloka documentation"
+date: "2023-02-15T15:15:15.224479"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TolokaRequesterSourceAntiFraud from '../subcomponents/toloka-requester-source/id-toloka-requester-source/anti-fraud.mdx'
+import FaqSetQualityControl from '../subcomponents/faq/pool-setup/set-quality-control.mdx'
+import FaqSkillForEveryPool from '../subcomponents/faq/pool-setup/skill-for-every-pool.mdx'
+import FaqSkillForDifferentProjects from '../subcomponents/faq/pool-setup/skill-for-different-projects.mdx'
+import TroubleshootingControlSettingsReplaced from '../subcomponents/troubleshooting/pool-setup/control-settings-replaced.mdx'
+import FaqGetAccess from '../subcomponents/faq/pool-setup/get-access.mdx'
+import FaqSetSkill from '../subcomponents/faq/pool-setup/set-skill.mdx'
+import FaqTimeSpecified from '../subcomponents/faq/pool-setup/time-specified.mdx'
+import FaqTestTolokers from '../subcomponents/faq/pool-setup/test-tolokers.mdx'
+import FaqMatchEnteredText from '../subcomponents/faq/pool-setup/match-entered-text.mdx'
+import TroubleshootingExamThreeTasks from '../subcomponents/troubleshooting/pool-setup/exam-three-tasks.mdx'
+import FaqTwoTextVersions from '../subcomponents/faq/pool-setup/two-text-versions.mdx'
+import FaqHowManyControlTasks from '../subcomponents/faq/pool-setup/how-many-control-tasks.mdx'
+import FaqCorrectResponsesCounted from '../subcomponents/faq/pool-setup/correct-responses-counted.mdx'
+import FaqMakeDifferent from '../subcomponents/faq/pool-setup/make-different.mdx'
+import FaqExamPool from '../subcomponents/faq/pool-setup/exam-pool.mdx'
+import FaqSetUpExam from '../subcomponents/faq/pool-setup/set-up-exam.mdx'
+import FaqUsingSmartMixing from '../subcomponents/faq/adding-tasks-to-the-pool/using-smart-mixing.mdx'
+import FaqTwoTrainingPools from '../subcomponents/faq/pool-setup/two-training-pools.mdx'
+import FaqHint from '../subcomponents/faq/pool-setup/hint.mdx'
+import FaqNumberOfControlResponses from '../subcomponents/faq/pool-setup/number-of-control-responses.mdx'
+import FaqReviewTraining from '../subcomponents/faq/pool-setup/review-training.mdx'
+import FaqQuestionsAreControl from '../subcomponents/faq/pool-setup/questions-are-control.mdx'
+import FaqDisableTasks from '../subcomponents/faq/result-questions/disable-tasks.mdx'
+import FaqIncorrectResponses from '../subcomponents/faq/pool-setup/incorrect-responses.mdx'
+import FaqOneTask from '../subcomponents/faq/pool-setup/one-task.mdx'
+import FaqBan from '../subcomponents/faq/pool-setup/ban.mdx'
+import FaqClassifyUsers from '../subcomponents/faq/pool-setup/classify-users.mdx'
+import FaqSubmitEmptyAssignments from '../subcomponents/faq/pool-setup/submit-empty-assignments.mdx'
+import FaqMultipleFields from '../subcomponents/faq/pool-setup/multiple-fields.mdx'
+import FaqFormatReviewResults from '../subcomponents/faq/pool-setup/format-review-results.mdx'
+import TroubleshootingSpeedDropped from '../subcomponents/troubleshooting/pool-setup/speed-dropped.mdx'
+import FaqLabelingSpeed from '../subcomponents/faq/project-settings/labeling-speed.mdx'
+import FaqSpeedUpCompletion from '../subcomponents/faq/pool-setup/speed-up-completion.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+
+# Overview
+
+To improve quality of answers, you must [select the audience](/docs-new/guide/filters) you need and [train](/docs-new/guide/train) it.
+
+<img style="max-width: 100%;" src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425180213/1675425180213_original_svg.svg" alt="" />
+
+## Selecting the audience {#audience-select}
+
+### Filters {#audience-filters}
+
+- [Demographics](/docs-new/guide/filters#filter-user-profile) (age, gender, education, languages, region, citizenship).
+
+- [Device specs](/docs-new/guide/filters#filter-calc-data) (device type, OS and browser version).
+
+- [Skills](/docs-new/guide/filters#filter-skill) (quality on specific [tasks](/docs-new/glossary#task)).
+
+- Top % of the best on the platform.
+
+<Cut title="Filter example">
+
+<Image withBackground imageId="1675426600800" alt="" />
+
+</Cut>
+
+### Training and onboarding {#audience-training}
+
+- Correct answers + hints.
+
+- High scores continue on to the [exam](/docs-new/glossary#exam).
+
+### Exam {#audience-exam}
+
+- Scored by % correct answers.
+
+- Best scores grant access to paid tasks.
+
+## Multi-level quality checks {#quality-checks}
+
+### Quality control {#quality-control}
+
+- [Overlap](/docs-new/guide/overlap-faq) (including dynamic overlap).
+
+- [Control tasks](/docs-new/guide/goldenset).
+
+- [Majority vote](/docs-new/guide/mvote).
+
+- Validation by other annotators.
+
+### [Anti-fraud system](https://toloka.ai/anti-fraud/) {#anti-fraud}
+
+- Platform-wide ban for fraudulent Tolokers.
+
+- Behavior analysis system.
+
+- Multilayer technologies to detect and prevent all types of fraud.
+
+### Protect your project {#protection-from-cheaters}
+
+<TolokaRequesterSourceAntiFraud/>
+
+To protect your project from cheaters, you can use the quality control rules:
+
+- [Ban](/docs-new/guide/ban) for [fast responses](/docs-new/guide/quick-answers).
+
+- [Captcha](/docs-new/guide/captcha).
+
+- Limit [skipped assignments](/docs-new/guide/skipped-assignments).
+
+- Limit number of tasks per person.
+
+<Cut title="Examples of the quality control rules">
+
+<Cut title="Fast responses">
+
+<Image withBackground imageId="1675427108700" alt="" />
+
+A Toloker who completes a [task suite](/docs-new/glossary#task-suite) in less than 10 seconds will be banned and won't be able to access your tasks.
+
+</Cut>
+
+<Cut title="Skipped assignments">
+
+<Image withBackground imageId="1675426782867" alt="" />
+
+A Toloker who skips 2 task suites in a row is restricted from accessing the pool and can't complete your tasks for 5 days.
+
+</Cut>
+
+</Cut>
+
+## Obtaining quality results after data labeling {#obtaining-results}
+
+<img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425177697/1675425177697_original_svg.svg" alt="" />
+
+### Aggregating results {#aggregating-results}
+
+- Using [majority vote](/docs-new/guide/mvote).
+
+- Using the [Dawid-Skene method](/docs-new/guide/result-aggregation#dawid-skene).
+
+- [By skill level](/docs-new/guide/result-aggregation#aggr-by-skill).
+
+### Evaluating metrics {#evaluating-metrics}
+
+- Accuracy/completeness/F1/MCC, etc.
+
+- Consistency.
+
+- Confidence.
+
+### Reassigning tasks {#reassigning-tasks}
+
+- If the submitted task is rejected.
+
+- If consistency is low.
+
+- If answers from banned Tolokers are thrown out.
+
+## Main project scenarios {#main-project-scenarios}
+
+### Validate results {#validate-results}
+
+- [Control tasks](/docs-new/guide/goldenset) — set the Toloker’s skill level based on answers in control tasks and exclude Tolokers who give the wrong answers.
+
+- [Majority vote](/docs-new/guide/mvote) — have multiple Tolokers do the same task and look for consistency in answers.
+
+- Manually check results — evaluate Tolokers by the number of accepted and rejected tasks.
+
+### Diversify the audience {#diversify-audience}
+
+- [Earnings](/docs-new/guide/income) — limit the earnings per person in your [pool](/docs-new/glossary#pool) in 24 hours.
+
+- Completed tasks — limit the number of tasks per person in your pool in 24 hours.
+
+### Prevent random clicking and bots {#random-clicking}
+
+- [Fast responses](/docs-new/guide/quick-answers) — monitor the minimum time to complete a [task suite](/docs-new/glossary#task-suite).
+
+- [Captcha](/docs-new/guide/captcha) — periodically display a [captcha](/docs-new/glossary#captcha) to catch automated scripts and bots.
+
+- [Skipped assignments](/docs-new/guide/skipped-assignments) — exclude Tolokers who skip too many tasks in a row.
+
+### Redo certain tasks {#redo-tasks}
+
+- [Re-assign tasks](/docs-new/guide/restore-task-overlap) completed by someone who was banned — if a Toloker gets banned, all their completed tasks can be automatically assigned to other people.
+
+- [Rejected and accepted task processing](/docs-new/guide/reassessment-after-accepting) — set the rules for assigning rejected tasks to other people.
+
+## Technologies for quality management {#quality-management-tech}
+
+Transform the crowd into computing power with advanced technologies for quality management.
+
+### Multiple quality control methods {#multiple-quality}
+
+Toloka offers different approaches to achieve the best quality for each [project](/docs-new/glossary#project).
+
+- Post-verification.
+
+- Task-based crowd training and testing.
+
+- Golden sets (honeypots) to monitor quality.
+
+- Advanced [aggregation](/docs-new/guide/result-aggregation) tools.
+
+- Platform-wide anti-fraud system.
+
+### Adaptive selection of Tolokers {#adaptive-selection}
+
+Multi-stage selection of a distributed crowd.
+
+- Audience [filters](/docs-new/guide/filters) by language, age, gender, interests, location, real-time ranking, and more.
+
+- [Training](/docs-new/guide/train), [exams](/docs-new/guide/how-to-use-exams), and retraining to find Tolokers for your exact task.
+
+### Smart matching mechanisms {#smart-matching}
+
+Patent-pending matching system that honors the preferences of requesters and Tolokers for mutual benefit.
+
+- Invite Tolokers to a project who are most qualified to handle it.
+
+- Offer Tolokers personalized recommendations of interesting projects they will enjoy.
+
+### Autolabeling & verification (on demand) {#autolabeling-verification}
+
+Autolabeling and pretrained models with quality control built in.
+
+- Automated prelabeling. Results are verified by human Tolokers for high accuracy.
+
+- Human in the loop workflows.
+
+## What's next {#what_next}
+
+- [Set up quality control](/docs-new/guide/qa-pool-settings).
+- [Add tasks](/docs-new/guide/pool) to the pool.
+- [Start the pool](/docs-new/guide/pool-run-and-stop).
+
+## See also {#see-also}
+
+- [Crowdsourcing concepts: Quality control](https://toloka.ai/knowledgebase/quality-control/)
+
+## Troubleshooting {#troubleshooting}
+
+<Cut title="Setting up quality control">
+
+<FaqSetQualityControl/>
+
+<FaqSkillForEveryPool/>
+
+<FaqSkillForDifferentProjects/>
+
+<TroubleshootingControlSettingsReplaced/>
+
+<FaqGetAccess/>
+
+<FaqSetSkill/>
+
+<FaqTimeSpecified/>
+
+<FaqTestTolokers/>
+
+<FaqMatchEnteredText/>
+
+<TroubleshootingExamThreeTasks/>
+
+<FaqTwoTextVersions/>
+
+</Cut>
+
+<Cut title="Control tasks">
+
+<FaqHowManyControlTasks/>
+
+<FaqCorrectResponsesCounted/>
+
+<FaqMakeDifferent/>
+
+<FaqExamPool/>
+
+<FaqSetUpExam/>
+
+<FaqUsingSmartMixing/>
+
+<FaqTwoTrainingPools/>
+
+<FaqHint/>
+
+<FaqNumberOfControlResponses/>
+
+<FaqReviewTraining/>
+
+<FaqQuestionsAreControl/>
+
+</Cut>
+
+<Cut title="Ban">
+
+<FaqDisableTasks/>
+
+<FaqIncorrectResponses/>
+
+<FaqOneTask/>
+
+<FaqBan/>
+
+<FaqClassifyUsers/>
+
+</Cut>
+
+<Cut title="Majority vote">
+
+<FaqSubmitEmptyAssignments/>
+
+<FaqMultipleFields/>
+
+<FaqFormatReviewResults/>
+
+</Cut>
+
+<Cut title="Speed of task completion">
+
+<TroubleshootingSpeedDropped/>
+
+<FaqLabelingSpeed/>
+
+<FaqSpeedUpCompletion/>
+
+</Cut>
+
+<ContactGuideSupport/>

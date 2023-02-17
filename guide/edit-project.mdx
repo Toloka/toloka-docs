@@ -1,0 +1,104 @@
+---
+title: "Editing a project | Toloka documentation"
+date: "2023-02-15T15:15:25.819463"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+
+# Editing a project
+
+You can view the list of created [projects](/docs-new/glossary#project) on the **Projects** page. Open the project page to view the [list of pools](/docs-new/guide/pool-main), [the project rating](/docs-new/guide/project_rating_stat) and [the project statistics](/docs-new/guide/project-statistic).
+
+To edit project parameters, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425191477/1675425191477_original_svg.svg" alt="" /> in the list of projects or **Project actions → Edit** on the project page.
+
+<Note mode="restriction" title="Alert">
+
+If you edit a [required field](/docs-new/guide/incoming#required), the changes apply only to new [pools](/docs-new/guide/pool-main). Existing [pools](/docs-new/glossary#pool) will continue using the previous version of the project.
+
+</Note>
+
+## General information {#project-general-info}
+
+#### Name to show Tolokers
+
+[Project](/docs-new/glossary#project) name. You will see it on your **Projects** page.
+
+#### Description for Tolokers
+
+A brief explanation of what will happen in the project.
+
+#### Private comment
+
+A comment that you write for yourself. Tolokers won't see it.
+
+You can make notes here that only you as a requester need to know about.
+
+## Task interface {#project-task-interface}
+
+#### Editor
+
+In this block, you need to create the [task interface](/docs-new/glossary#task-interface) for users. You can do it manually (using HTML/CSS/JS) or using [Template Builder](/docs-new/template-builder/).
+
+To see an example of task display, click **Task preview**.
+
+#### Data specification
+
+A block for [input data](/docs-new/guide/incoming) (to be uploaded as tasks), and output data (user responses) in the [task interface](/docs-new/guide/spec).
+
+#### Settings for displaying field tasks
+
+Specify the settings for field task display if you use one of the field task templates.
+
+The **Map provider for tasks** parameter allows you to specify which map the Tolokers will use. You can select one of the following options:
+
+- Set by Toloker
+- Google Maps
+- Yandex.Maps
+
+#### Common interface elements
+
+You can specify which interface elements the Toloker will see when working on a task. To do this, click **Show common interface elements** and select the elements you need.
+
+## Instructions for Tolokers {#project-task-instructions}
+
+#### Instructions
+
+Instructions are the basic rules that you need to tell Tolokers about before they start completing your tasks.
+
+This field should contain formatted text with images, links, and tables if they're needed to make the task conditions clear.
+
+Learn more about how to write good [instructions](/docs-new/guide/instruction).
+
+#### Translations
+
+If you want labeling to be done by Tolokers from different countries, you can [translate your project into their native languages](/docs-new/guide/project-languages).
+
+## What's next {#what-next}
+
+- [Create a task pool](/docs-new/guide/pool-main) in the project.
+- Learn more about how to set up a project:
+
+    - [Writing instructions](/docs-new/guide/instruction).
+    - [Input and output data](/docs-new/guide/incoming).
+    - [Task interface](/docs-new/guide/spec).
+    - [Adapt a task for mobile devices](/docs-new/guide/mobile).
+    - [Setting up quality control](/docs-new/guide/project-qa).
+
+## See also {#see-also}
+
+- [Crowdsourcing concepts: Instructions](https://toloka.ai/knowledgebase/instruction/)
+- [Crowdsourcing concepts: Interfaces](https://toloka.ai/knowledgebase/interface/)
+- [Template Builder: Quick start](/docs-new/template-builder/quickstart)
+- [Task interface](/docs-new/guide/spec)
+
+## For developers {#for-developers}
+
+- [Toloka API: Editing project](/docs-new/api/edit-prj)
+- [Toloka-Kit recipe: Edit project](/docs-new/toloka-kit/recipes/edit-project)
+
+<ContactGuideSupport/>

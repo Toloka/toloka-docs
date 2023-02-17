@@ -1,0 +1,71 @@
+1. Select the component type. For example, `"view.image"` — to insert a picture, `"view.audio"` — for audio files, `"view.video"` — for video files.
+
+1. In the `"url"` property, select the `"@yandex-toloka/helper.proxy"` type.
+
+1. In the `"path"` property, enter the structure `/<proxy name>/<file name>.<type>` with your data.
+
+[View an example with image classification](https://ya.cc/t/U35lM1hi3ttEbC)
+
+<Note mode="tip" title="Tip">
+
+To avoid having to enter the file path manually, copy the **URL** field from the [Integration](https://platform.toloka.ai/requester/profile/integration) tab and change the file name and type.
+
+</Note>
+
+An example where files have been added from Yandex Disk in Template Builder:
+
+```json
+{
+  "type": "view.image",
+  "url": {
+    "type": "@yandex-toloka/helper.proxy",
+    "path": "/my-proxy/example.jpg"
+  }
+}
+```
+
+You can also add links to files in the `/<proxy name>/<file name>.<type>` format to the input data and refer to them in the configuration.
+
+<Cut title="Single image">
+
+```json
+{
+  "type": "view.image",
+  "url": {
+    "type": "@yandex-toloka/helper.proxy",
+    "path": {
+      "type": "data.input",
+      "path": "image"
+    }
+  }
+}
+```
+
+[View example in the sandbox](https://ya.cc/t/7LC4AVi53ttA9S)
+
+</Cut>
+
+<Cut title="Multiple images">
+
+<Note mode="tip" title="Tip">
+
+Don't forget that array elements start from zero.
+
+</Note>
+
+```json
+{
+  "type": "view.image",
+  "url": {
+    "type": "@yandex-toloka/helper.proxy",
+    "path": {
+      "type": "data.input",
+      "path": "images.0"
+    }
+  }
+}
+```
+
+[View example in the sandbox](https://ya.cc/t/_XrwbL4V3ttEhW)
+
+</Cut>

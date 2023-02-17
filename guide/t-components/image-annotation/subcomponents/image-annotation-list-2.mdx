@@ -1,0 +1,19 @@
+If you have images with selected objects and you want to upload them to the task:
+
+1. Connect the $TOLOKA_ASSETS/js/image-annotation.js library (click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425167322/1675425167322_original_svg.svg" alt="" /> in the **Task interface** block on the project page).
+
+1. Include the `{{field type="image-annotation"``name="<output field name>"``src=<image URL>``annotations=<input field name>}}` component in the interface HTML code. Example:
+
+    ```html
+    {{field type="image-annotation" name="result" src=image annotations=polygon}}
+    ```
+
+1. Add the following in the [input data](/docs-new/guide/incoming):
+
+    - A field for entering an image link.
+
+    - The `polygon` field with the **json** type to pass the coordinates of the selected area.
+
+1. Add the `result` field with the **json** type in the output data. A field for recording results is required for this component. If the Toloker edits the selected area, the updated coordinates are recorded there.
+
+1. [Escape](/docs-new/guide/pool_csv#json) JSON with point coordinates and add it to the [file with tasks](/docs-new/glossary#tsv).

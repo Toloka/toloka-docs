@@ -8,19 +8,19 @@
       "subItems": [
         {
           "title": "How does Toloka work?",
-          "href": "https://toloka.ai/en/docs/guide/concepts/overview"
+          "href": "/guide/overview"
         },
         {
           "title": "Registration",
-          "href": "https://toloka.ai/en/docs/guide/concepts/access"
+          "href": "/guide/access"
         },
         {
           "title": "Your first project",
-          "href": "https://toloka.ai/en/docs/guide/concepts/first-project"
+          "href": "/guide/first-project"
         },
         {
           "title": "Data security",
-          "href": "https://toloka.ai/en/docs/guide/concepts/data-security"
+          "href": "/guide/data-security"
         }
       ]
     },
@@ -29,19 +29,19 @@
       "subItems": [
         {
           "title": "What tasks can't be placed in Toloka?",
-          "href": "https://toloka.ai/en/docs/guide/concepts/unwanted"
+          "href": "/guide/unwanted"
         },
         {
           "title": "Common mistakes made by requesters",
-          "href": "https://toloka.ai/en/docs/guide/concepts/frequent-customer-errors"
+          "href": "/guide/frequent-customer-errors"
         },
         {
           "title": "How to save your budget",
-          "href": "https://toloka.ai/en/docs/guide/concepts/save-money"
+          "href": "/guide/save-money"
         },
         {
           "title": "Sandbox",
-          "href": "https://toloka.ai/en/docs/guide/concepts/sandbox"
+          "href": "/guide/sandbox"
         }
       ]
     },
@@ -53,37 +53,37 @@
           "subItems": [
             {
               "title": "Where to store files",
-              "href": "https://toloka.ai/en/docs/guide/concepts/cloud-storage"
+              "href": "/guide/cloud-storage"
             },
             {
               "title": "Amazon S3",
-              "href": "https://toloka.ai/en/docs/guide/concepts/amazon-cloud-storage"
+              "href": "/guide/amazon-cloud-storage"
             },
             {
               "title": "Azure Blob Storage",
-              "href": "https://toloka.ai/en/docs/guide/concepts/azure-cloud-storage"
+              "href": "/guide/azure-cloud-storage"
             },
             {
               "title": "Google Cloud Storage",
-              "href": "https://toloka.ai/en/docs/guide/concepts/google-cloud-storage"
+              "href": "/guide/google-cloud-storage"
             },
             {
               "title": "Yandex Object Storage",
-              "href": "https://toloka.ai/en/docs/guide/concepts/use-object-storage"
+              "href": "/guide/use-object-storage"
             }
           ]
         },
         {
           "title": "Tips for designing tasks",
-          "href": "https://toloka.ai/en/docs/guide/faq"
+          "href": "/guide/tips"
         },
         {
           "title": "Using exams",
-          "href": "https://toloka.ai/en/docs/guide/concepts/how-to-use-exams"
+          "href": "/guide/how-to-use-exams"
         },
         {
           "title": "Using A/B experiments",
-          "href": "https://toloka.ai/en/docs/guide/concepts/ab-experiment"
+          "href": "/guide/ab-experiment"
         }
       ]
     },
@@ -95,43 +95,43 @@
       "subItems": [
         {
           "title": "Steps to follow",
-          "href": "https://toloka.ai/en/docs/guide/concepts/main-steps"
+          "href": "/guide/main-steps"
         },
         {
           "title": "Decomposition of the task",
-          "href": "https://toloka.ai/en/docs/guide/concepts/solution-architecture"
+          "href": "/guide/solution-architecture"
         },
         {
           "title": "Create a project",
-          "href": "https://toloka.ai/en/docs/guide/concepts/project"
+          "href": "/guide/project"
         },
         {
           "title": "Editing a project",
-          "href": "https://toloka.ai/en/docs/guide/concepts/edit-project"
+          "href": "/guide/edit-project"
         },
         {
           "title": "Writing instructions",
-          "href": "https://toloka.ai/en/docs/guide/concepts/instruction"
+          "href": "/guide/instruction"
         },
         {
           "title": "Input and output data",
-          "href": "https://toloka.ai/en/docs/guide/concepts/incoming"
+          "href": "/guide/incoming"
         },
         {
           "title": "Setting up quality control",
-          "href": "https://toloka.ai/en/docs/guide/concepts/project-qa"
+          "href": "/guide/project-qa"
         },
         {
           "title": "Translations",
-          "href": "https://toloka.ai/en/docs/guide/concepts/project-languages"
+          "href": "/guide/project-languages"
         },
         {
           "title": "Returning to a previous version of a project",
-          "href": "https://toloka.ai/en/docs/guide/concepts/project-back-to-version"
+          "href": "/guide/project-back-to-version"
         },
         {
           "title": "Interim statistics",
-          "href": "https://toloka.ai/en/docs/guide/concepts/project-interim-statistics"
+          "href": "/guide/project-interim-statistics"
         }
       ]
     },
@@ -143,11 +143,11 @@
           "subItems": [
             {
               "title": "Creating a pool",
-              "href": "https://toloka.ai/en/docs/guide/concepts/pool-main"
+              "href": "/guide/pool-main"
             },
             {
               "title": "Editing a pool",
-              "href": "https://toloka.ai/en/docs/guide/concepts/pool-edit"
+              "href": "/guide/pool-edit"
             }
           ]
         },
@@ -156,7 +156,7 @@
           "subItems": [
             {
               "title": "Filters",
-              "href": "https://toloka.ai/en/docs/guide/concepts/filters"
+              "href": "/guide/filters"
             }
           ]
         },
@@ -165,7 +165,7 @@
           "subItems": [
             {
               "title": "Setting up pricing",
-              "href": "https://toloka.ai/en/docs/guide/concepts/dynamic-pricing"
+              "href": "/guide/dynamic-pricing"
             }
           ]
         },
@@ -174,66 +174,66 @@
           "subItems": [
             {
               "title": "Overview",
-              "href": "https://toloka.ai/en/docs/guide/concepts/quality-control-overview"
+              "href": "/guide/quality-control-overview"
             },
             {
               "title": "Setting up quality control",
-              "href": "https://toloka.ai/en/docs/guide/concepts/qa-pool-settings"
+              "href": "/guide/qa-pool-settings"
             },
             {
               "title": "Quality control rules",
               "subItems": [
                 {
                   "title": "How to check Tolokers: quality control rules",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/check-performers"
+                  "href": "/guide/check-performers"
                 },
                 {
                   "title": "List of rules",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/control"
+                  "href": "/guide/control"
                 },
                 {
                   "title": "\u201cRemember values\u201d parameter",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/remember-values"
+                  "href": "/guide/remember-values"
                 },
                 {
                   "title": "Control tasks",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/goldenset"
+                  "href": "/guide/goldenset"
                 },
                 {
                   "title": "Majority vote",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/mvote"
+                  "href": "/guide/mvote"
                 },
                 {
                   "title": "Fast responses",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/quick-answers"
+                  "href": "/guide/quick-answers"
                 },
                 {
                   "title": "Captcha",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/captcha"
+                  "href": "/guide/captcha"
                 },
                 {
                   "title": "Skipped assignments",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/skipped-assignments"
+                  "href": "/guide/skipped-assignments"
                 },
                 {
                   "title": "Earnings",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/income"
+                  "href": "/guide/income"
                 },
                 {
                   "title": "Submitted responses",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/submitted-answers"
+                  "href": "/guide/submitted-answers"
                 },
                 {
                   "title": "Results of assignment review",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/reviewing-assignments"
+                  "href": "/guide/reviewing-assignments"
                 },
                 {
                   "title": "Recompletion of assignments from banned users",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/restore-task-overlap"
+                  "href": "/guide/restore-task-overlap"
                 },
                 {
                   "title": "Processing rejected and accepted assignments",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/reassessment-after-accepting"
+                  "href": "/guide/reassessment-after-accepting"
                 }
               ]
             },
@@ -242,21 +242,21 @@
               "subItems": [
                 {
                   "title": "What is overlap?",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/overlap-faq"
+                  "href": "/guide/overlap-faq"
                 },
                 {
                   "title": "Dynamic overlap",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/dynamic-overlap"
+                  "href": "/guide/dynamic-overlap"
                 },
                 {
                   "title": "Selective majority vote check",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/selective-mvote"
+                  "href": "/guide/selective-mvote"
                 }
               ]
             },
             {
               "title": "Speed/quality balance",
-              "href": "https://toloka.ai/en/docs/guide/concepts/adjust"
+              "href": "/guide/adjust"
             }
           ]
         },
@@ -265,25 +265,25 @@
           "subItems": [
             {
               "title": "Manual review",
-              "href": "https://toloka.ai/en/docs/guide/concepts/offline-accept"
+              "href": "/guide/offline-accept"
             },
             {
               "title": "Archiving a pool",
-              "href": "https://toloka.ai/en/docs/guide/concepts/pool-archive"
+              "href": "/guide/pool-archive"
             },
             {
               "title": "Interim statistics",
-              "href": "https://toloka.ai/en/docs/guide/concepts/pool-interim-statistic"
+              "href": "/guide/pool-interim-statistic"
             }
           ]
         },
         {
           "title": "Starting and stopping a pool",
-          "href": "https://toloka.ai/en/docs/guide/concepts/pool-run-and-stop"
+          "href": "/guide/pool-run-and-stop"
         },
         {
           "title": "Adding a training (optional)",
-          "href": "https://toloka.ai/en/docs/guide/concepts/train"
+          "href": "/guide/train"
         }
       ]
     },
@@ -292,39 +292,39 @@
       "subItems": [
         {
           "title": "Steps to follow",
-          "href": "https://toloka.ai/en/docs/guide/concepts/pool"
+          "href": "/guide/pool"
         },
         {
           "title": "Creating a file with tasks",
-          "href": "https://toloka.ai/en/docs/guide/concepts/pool_csv"
+          "href": "/guide/pool_csv"
         },
         {
           "title": "Uploading tasks to a pool",
           "subItems": [
             {
               "title": "How to upload tasks",
-              "href": "https://toloka.ai/en/docs/guide/concepts/task_upload"
+              "href": "/guide/task_upload"
             },
             {
               "title": "Ways to group tasks in suites",
-              "href": "https://toloka.ai/en/docs/guide/concepts/distribute-tasks-by-pages"
+              "href": "/guide/distribute-tasks-by-pages"
             }
           ]
         },
         {
           "title": "Checking project",
-          "href": "https://toloka.ai/en/docs/guide/concepts/self-labeling"
+          "href": "/guide/self-labeling"
         },
         {
           "title": "Task markup",
           "subItems": [
             {
               "title": "Overview",
-              "href": "https://toloka.ai/en/docs/guide/concepts/task_markup"
+              "href": "/guide/task_markup"
             },
             {
               "title": "How to edit tasks by yourself",
-              "href": "https://toloka.ai/en/docs/guide/concepts/task-markup-by-yourself"
+              "href": "/guide/task-markup-by-yourself"
             }
           ]
         }
@@ -335,15 +335,15 @@
       "subItems": [
         {
           "title": "Receiving responses",
-          "href": "https://toloka.ai/en/docs/guide/concepts/result-of-eval"
+          "href": "/guide/result-of-eval"
         },
         {
           "title": "Reviewing Tolokers' responses",
-          "href": "https://toloka.ai/en/docs/guide/concepts/accept"
+          "href": "/guide/accept"
         },
         {
           "title": "Aggregation of results",
-          "href": "https://toloka.ai/en/docs/guide/concepts/result-aggregation"
+          "href": "/guide/result-aggregation"
         }
       ]
     },
@@ -352,58 +352,58 @@
       "subItems": [
         {
           "title": "Project rating",
-          "href": "https://toloka.ai/en/docs/guide/concepts/project_rating_stat"
+          "href": "/guide/project_rating_stat"
         },
         {
           "title": "Project statistics",
-          "href": "https://toloka.ai/en/docs/guide/concepts/project-statistic"
+          "href": "/guide/project-statistic"
         },
         {
           "title": "Pool statistics",
-          "href": "https://toloka.ai/en/docs/guide/concepts/pool_statistic-pool"
+          "href": "/guide/pool_statistic-pool"
         },
         {
           "title": "Efficiency indicators",
           "subItems": [
             {
               "title": "Overview",
-              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/"
+              "href": "/guide/efficiency-metrics/"
             },
             {
               "title": "Bans",
-              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/ban-rate"
+              "href": "/guide/efficiency-metrics/ban-rate"
             },
             {
               "title": "Communication issues",
-              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/communication"
+              "href": "/guide/efficiency-metrics/communication"
             },
             {
               "title": "Control tasks",
-              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/control-tasks-share"
+              "href": "/guide/efficiency-metrics/control-tasks-share"
             },
             {
               "title": "Control task balance",
-              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/control-tasks-balance"
+              "href": "/guide/efficiency-metrics/control-tasks-balance"
             },
             {
               "title": "Project availability",
-              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/available-performers"
+              "href": "/guide/efficiency-metrics/available-performers"
             },
             {
               "title": "Quality of instructions",
-              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/instruction-quality"
+              "href": "/guide/efficiency-metrics/instruction-quality"
             },
             {
               "title": "Quality of interface",
-              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/interface-quality"
+              "href": "/guide/efficiency-metrics/interface-quality"
             },
             {
               "title": "Rejected tasks",
-              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/rejected-tasks"
+              "href": "/guide/efficiency-metrics/rejected-tasks"
             },
             {
               "title": "Submission rate",
-              "href": "https://toloka.ai/en/docs/guide/concepts/efficiency-metrics/submitting-tasks"
+              "href": "/guide/efficiency-metrics/submitting-tasks"
             }
           ]
         }
@@ -417,19 +417,19 @@
           "subItems": [
             {
               "title": "Viewing Tolokers",
-              "href": "https://toloka.ai/en/docs/guide/concepts/users"
+              "href": "/guide/users"
             },
             {
               "title": "Rewards",
-              "href": "https://toloka.ai/en/docs/guide/concepts/bonus"
+              "href": "/guide/bonus"
             },
             {
               "title": "Communication",
-              "href": "https://toloka.ai/en/docs/guide/concepts/messaging"
+              "href": "/guide/messaging"
             },
             {
               "title": "Ban",
-              "href": "https://toloka.ai/en/docs/guide/concepts/ban"
+              "href": "/guide/ban"
             }
           ]
         },
@@ -438,35 +438,35 @@
           "subItems": [
             {
               "title": "How do I use skills?",
-              "href": "https://toloka.ai/en/docs/guide/concepts/nav"
+              "href": "/guide/nav"
             },
             {
               "title": "Global skills",
-              "href": "https://toloka.ai/en/docs/guide/concepts/nav-cross-project"
+              "href": "/guide/nav-cross-project"
             },
             {
               "title": "Creating a skill",
-              "href": "https://toloka.ai/en/docs/guide/concepts/nav-create"
+              "href": "/guide/nav-create"
             },
             {
               "title": "Assigning the skill",
-              "href": "https://toloka.ai/en/docs/guide/concepts/nav-assign"
+              "href": "/guide/nav-assign"
             },
             {
               "title": "Using the skill",
-              "href": "https://toloka.ai/en/docs/guide/concepts/nav-use"
+              "href": "/guide/nav-use"
             },
             {
               "title": "Editing a skill",
-              "href": "https://toloka.ai/en/docs/guide/concepts/nav-edit"
+              "href": "/guide/nav-edit"
             },
             {
               "title": "Removing a skill",
-              "href": "https://toloka.ai/en/docs/guide/concepts/nav-delete"
+              "href": "/guide/nav-delete"
             },
             {
               "title": "History of skill changes",
-              "href": "https://toloka.ai/en/docs/guide/concepts/nav-history"
+              "href": "/guide/nav-history"
             }
           ]
         },
@@ -475,40 +475,40 @@
           "subItems": [
             {
               "title": "Editing the profile",
-              "href": "https://toloka.ai/en/docs/guide/concepts/edit-profile"
+              "href": "/guide/edit-profile"
             },
             {
               "title": "Notifications",
-              "href": "https://toloka.ai/en/docs/guide/concepts/notifications"
+              "href": "/guide/notifications"
             },
             {
               "title": "Finance",
               "subItems": [
                 {
                   "title": "About account management",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/budget"
+                  "href": "/guide/budget"
                 },
                 {
                   "title": "Topping up your account",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/refill"
+                  "href": "/guide/refill"
                 },
                 {
                   "title": "Promo codes",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/promocodes"
+                  "href": "/guide/promocodes"
                 },
                 {
                   "title": "Refund",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/refund"
+                  "href": "/guide/refund"
                 },
                 {
                   "title": "Payment documents",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/documents"
+                  "href": "/guide/documents"
                 }
               ]
             },
             {
               "title": "Shared access to the requester's account",
-              "href": "https://toloka.ai/en/docs/guide/concepts/multiple-access"
+              "href": "/guide/multiple-access"
             }
           ]
         }
@@ -1179,29 +1179,29 @@
       "subItems": [
         {
           "title": "Task interface",
-          "href": "https://toloka.ai/en/docs/guide/concepts/spec"
+          "href": "/guide/spec"
         },
         {
           "title": "Adapt a task for mobile devices",
-          "href": "https://toloka.ai/en/docs/guide/concepts/mobile"
+          "href": "/guide/mobile"
         },
         {
           "title": "HTML",
           "subItems": [
             {
               "title": "List of components",
-              "href": "https://toloka.ai/en/docs/guide/concepts/t-components"
+              "href": "/guide/t-components"
             },
             {
               "title": "Handlebars",
               "subItems": [
                 {
                   "title": "Expressions and helpers",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/handlebars"
+                  "href": "/guide/t-components/handlebars"
                 },
                 {
                   "title": "Additional helpers",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/helpers"
+                  "href": "/guide/t-components/helpers"
                 }
               ]
             },
@@ -1210,71 +1210,71 @@
               "subItems": [
                 {
                   "title": "String input field",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/string"
+                  "href": "/guide/t-components/string"
                 },
                 {
                   "title": "Text input field",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/text"
+                  "href": "/guide/t-components/text"
                 },
                 {
                   "title": "String input with suggest list",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/suggest"
+                  "href": "/guide/t-components/suggest"
                 },
                 {
                   "title": "Radio button",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/radiobuttons"
+                  "href": "/guide/t-components/radiobuttons"
                 },
                 {
                   "title": "Checkbox",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/checkboxes"
+                  "href": "/guide/t-components/checkboxes"
                 },
                 {
                   "title": "Drop-down list",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/list"
+                  "href": "/guide/t-components/list"
                 },
                 {
                   "title": "Button for file upload",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/upload-file"
+                  "href": "/guide/t-components/upload-file"
                 },
                 {
                   "title": "Button for image file upload",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/upload-picture"
+                  "href": "/guide/t-components/upload-picture"
                 },
                 {
                   "title": "Button for recording and uploading a video file",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/upload-video"
+                  "href": "/guide/t-components/upload-video"
                 },
                 {
                   "title": "Button for recording and uploading an audio file",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/upload-audio"
+                  "href": "/guide/t-components/upload-audio"
                 },
                 {
                   "title": "Button with click validation",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/button-link"
+                  "href": "/guide/t-components/button-link"
                 },
                 {
                   "title": "Image with area selection",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/image-annotation"
+                  "href": "/guide/t-components/image-annotation"
                 },
                 {
                   "title": "Text segmentation editor",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/segmentation-editor"
+                  "href": "/guide/t-components/segmentation-editor"
                 },
                 {
                   "title": "Image",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/img"
+                  "href": "/guide/t-components/img"
                 },
                 {
                   "title": "Button",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/button"
+                  "href": "/guide/t-components/button"
                 },
                 {
                   "title": "Iframe",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/iframe"
+                  "href": "/guide/t-components/iframe"
                 },
                 {
                   "title": "Text formatted in HTML",
-                  "href": "https://toloka.ai/en/docs/guide/concepts/t-components/html"
+                  "href": "/guide/t-components/html"
                 }
               ]
             }
@@ -1285,23 +1285,23 @@
           "subItems": [
             {
               "title": "How to use JavaScript extensions",
-              "href": "https://toloka.ai/en/docs/guide/concepts/spec-advanced"
+              "href": "/guide/spec-advanced"
             },
             {
               "title": "Assignment class",
-              "href": "https://toloka.ai/en/docs/guide/concepts/js/assignment"
+              "href": "/guide/js/assignment"
             },
             {
               "title": "TaskSuite class",
-              "href": "https://toloka.ai/en/docs/guide/concepts/js/tasksuite"
+              "href": "/guide/js/tasksuite"
             },
             {
               "title": "Task class",
-              "href": "https://toloka.ai/en/docs/guide/concepts/js/task"
+              "href": "/guide/js/task"
             },
             {
               "title": "Services for specific purposes",
-              "href": "https://toloka.ai/en/docs/guide/concepts/js/services"
+              "href": "/guide/js/services"
             }
           ]
         }
@@ -1312,19 +1312,19 @@
     },
     {
       "title": "Frequently asked questions",
-      "href": "https://toloka.ai/en/docs/guide/faq"
+      "href": "/guide/faq"
     },
     {
       "title": "Troubleshooting",
-      "href": "https://toloka.ai/en/docs/guide/troubleshooting/troubleshooting"
+      "href": "/guide/troubleshooting/troubleshooting"
     },
     {
       "title": "Support",
-      "href": "https://toloka.ai/en/docs/guide/troubleshooting/support"
+      "href": "/guide/troubleshooting/support"
     },
     {
       "title": "Glossary",
-      "href": "https://toloka.ai/en/docs/glossary"
+      "href": "/glossary"
     }
   ],
   "tutorialsMenu": [
@@ -1534,19 +1534,19 @@
     },
     {
       "title": "Frequently asked questions",
-      "href": "https://toloka.ai/en/docs/guide/faq"
+      "href": "/guide/faq"
     },
     {
       "title": "Troubleshooting",
-      "href": "https://toloka.ai/en/docs/guide/troubleshooting/troubleshooting"
+      "href": "/guide/troubleshooting/troubleshooting"
     },
     {
       "title": "Support",
-      "href": "https://toloka.ai/en/docs/guide/troubleshooting/support"
+      "href": "/guide/troubleshooting/support"
     },
     {
       "title": "Glossary",
-      "href": "https://toloka.ai/en/docs/glossary"
+      "href": "/glossary"
     }
   ],
   "appsMenu": [
@@ -1799,7 +1799,7 @@
       "subItems": [
         {
           "title": "Overview",
-          "href": "/api/my-users"
+          "href": "/api/my_users"
         },
         {
           "title": "Skills",
@@ -1847,7 +1847,7 @@
           "subItems": [
             {
               "title": "Overview",
-              "href": "/api/quality-control"
+              "href": "/api/quality_control"
             },
             {
               "title": "Control tasks",
@@ -1863,7 +1863,7 @@
             },
             {
               "title": "Compensation amount",
-              "href": "/api/earn-limit"
+              "href": "/api/earn_limit"
             },
             {
               "title": "Skipped assignments",
@@ -1879,7 +1879,7 @@
             },
             {
               "title": "Rejected tasks",
-              "href": "/api/accept-ban"
+              "href": "/api/accept_ban"
             },
             {
               "title": "Processing rejected and accepted assignments",

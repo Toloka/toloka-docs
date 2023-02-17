@@ -1,0 +1,85 @@
+---
+title: "Yandex Disk | Toloka documentation"
+date: "2023-02-15T15:15:22.376869"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import PrepareDataTable1 from './prepare-data/subcomponents/prepare-data-table-1.mdx'
+import PrepareDataList1 from './prepare-data/subcomponents/prepare-data-list-1.mdx'
+import PrepareDataList2 from './prepare-data/subcomponents/prepare-data-list-2.mdx'
+import PrepareDataList3 from './prepare-data/subcomponents/prepare-data-list-3.mdx'
+import PrepareDataList4 from './prepare-data/subcomponents/prepare-data-list-4.mdx'
+
+# Yandex Disk
+
+<Note mode="note" title="Note">
+
+You can use any photo hosting service to add a small number of images, such as [wampi](https://wampi.ru/?lang=en), [imgbb](https://imgbb.com/), [ImageShack](https://imageshack.com/), or [imgur](https://imgur.com/). This way you can quickly get direct links to your images to add them to the task file or instructions.
+
+</Note>
+
+If your tasks require images or other files, upload them to [Yandex Disk](https://disk.yandex.com). You can only use files from Yandex Disk if it's linked to the same account you are using in Toloka.
+
+To use files from Yandex Disk in tasks:
+
+1. [Connect Yandex Disk](#connect).
+
+1. [Add links to files to the task interface](#interface).
+
+1. [Add links to files to the instructions](#instruction).
+
+## Connect Yandex Disk {#connect}
+
+To use Yandex Disk as a data source:
+
+1. Click **Add Ya.Disk** on the [Integration](https://platform.toloka.ai/requester/profile/integration) tab on the [profile](https://platform.toloka.ai/requester/profile) page and allow Toloka to access Yandex Disk.
+
+1. Click **Add proxy** and fill in the fields:
+
+**Field**|**Overview**
+----- | -----
+**Unique name** | Name of the data source. The name will be inserted in the file URLs. Allowed characters in the name: Latin letters, numbers, dashes (“-”).<br/><br/>    Must be unique within Toloka.
+**Type** | Choose “Yandex Disk”.
+**Permissions** | <PrepareDataTable1/>
+**Folder name** | Name of the folder on Yandex Disk. You can't use a slash in the folder name (“/”).<br/><br/>    A folder with this name will be created on Yandex Disk automatically (`Applications/Toloka/<folder name>`).
+
+1. Click **Save**.
+
+1. Upload files for tasks or instructions to the folder. It will be located at `Applications/Toloka/<folder name>` (the name you entered in the field).
+
+## Add files to the task interface {#interface}
+
+To add a file to the [task interface](/docs-new/guide/spec):
+
+<Tabs tabs={[
+  { title: 'Template Builder', value: <PrepareDataList1/> },
+  { title: 'HTML/JS/CSS interface editor', value: <PrepareDataList2/> },
+]}/>
+
+## Add files to the instructions {#instruction}
+
+<Note mode="warning" title="Warning">
+
+Set the access rights for the folder with instructions to “Public”.
+
+</Note>
+
+To add an image to the [project instructions](/docs-new/guide/instruction):
+
+1. Upload files to the `Applications/Toloka/<folder name>` folder using the [web interface](https://disk.yandex.com/client/disk) or [Yandex Disk](https://disk.yandex.com/promo/download) app.
+
+1. Select a method of adding the file to the instructions.
+
+    <Tabs tabs={[
+      { title: 'Visual editor', value: <PrepareDataList3/> },
+      { title: 'Use links', value: <PrepareDataList4/> },
+    ]}/>
+
+If these recommendations didn't help:
+
+<ContactGuideSupport/>

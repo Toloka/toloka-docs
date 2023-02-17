@@ -1,0 +1,60 @@
+---
+title: "Checkbox | Toloka documentation"
+date: "2023-02-15T15:15:28.260286"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+import CheckboxesTable1 from './checkboxes/subcomponents/checkboxes-table-1.mdx'
+import CheckboxesTable2 from './checkboxes/subcomponents/checkboxes-table-2.mdx'
+import CheckboxesTable3 from './checkboxes/subcomponents/checkboxes-table-3.mdx'
+import CheckboxesTable4 from './checkboxes/subcomponents/checkboxes-table-4.mdx'
+
+# Checkbox
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a checkbox in [Template Builder](/docs-new/template-builder/reference/field.checkbox).
+
+</Note>
+
+To insert a checkbox in a task, use the `{{field type="checkbox" name="<output field> name"}}` component. For example, a set of three checkboxes:
+
+```plaintext
+{{field type="checkbox" name="red" label="red" hotkey="1"}}
+{{field type="checkbox" name="green" label="green" hotkey="2"}}
+{{field type="checkbox" name="yellow" label="yellow" hotkey="3"}}
+```
+
+Add a field of `boolean` type to the [output data description](/docs-new/guide/incoming). Example:
+
+```json
+{
+  "red": {
+    "type": "boolean",
+    "required": true
+  }
+}
+```
+
+## Parameters
+
+**Parameter**|**Description**|**Required**|**Default value**
+----- | ----- | ----- | -----
+`type`| Field type: `checkbox`. | yes | no
+`name`| Attribute for the output data field. Contains the output field name. | yes | no
+`label`| Signature. For example, `label="Yes"`. | no | no
+`hotkey`| The shortcut for selecting a value. | no | no
+`value`| The value to pass (written to the output file).<br/><br/>Supported values: `true`, `false`. | no | `false`
+`validation-show`| <CheckboxesTable1/>| no | `"top-left"`
+`checked`| <CheckboxesTable2/>| no | `false`
+`size`| Size of the field.<br/><br/>Supported values: `"M"`, `"L"`. | no | `"L"`
+`width`| <CheckboxesTable3/>| no | depends on the length of the signature
+`disabled`| <CheckboxesTable4/>| no | `false`
+`class`| The CSS class for the field. For example, `class="annotation"`. | no | `".field" ".field_type_checkbox"`
+
+<ContactGuideSupport/>

@@ -1,0 +1,69 @@
+---
+title: "Button for file upload | Toloka documentation"
+date: "2023-02-15T15:15:28.824629"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+import UploadFileTable1 from './upload-file/subcomponents/upload-file-table-1.mdx'
+import UploadFileTable2 from './upload-file/subcomponents/upload-file-table-2.mdx'
+import UploadFileTable3 from './upload-file/subcomponents/upload-file-table-3.mdx'
+
+# Button for file upload
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a button for uploading files in [Template Builder](/docs-new/template-builder/reference/field.media-file).
+
+</Note>
+
+To add a file upload button to the task, use the `{{field type= "file" name="output field name> "sources="<sources parameter>" fileType="<fileType parameter>"}}` component. Example:
+
+```plaintext
+`{{field type="file" name="result" sources="GALLERY" fileType="IMAGE_OR_VIDEO"}}`
+```
+
+For a complete list of parameters, see the [table](#parameters).
+
+In the [output data](/docs-new/glossary#input-output-data) description, add one of the fields:
+
+- Field with the `file` type — for uploading one file only. Example:
+
+    ```json
+    {
+    "result": {
+    "type": "file",
+    "required": true
+    }
+    }
+    ```
+
+- Field with the `array_file` type — for uploading several files at once. Example:
+
+    ```json
+    {
+    "result": {
+    "type": "array_file",
+    "required": true
+    }
+    }
+    ```
+
+## Parameters
+
+**Parameter**|**Description**|**Required**|**Default value**
+----- | ----- | ----- | -----
+`type`| Field type: `file` — Button for file upload. | yes | no
+`name`| Attribute for the output data field. Contains the output field name. | yes | no
+`sources`| <UploadFileTable1/>| yes | no
+`fileType`| <UploadFileTable2/>| Yes (when creating tasks for mobile devices) | no
+`label`| The button label. For example, `label="Click me"`. | no | Depending on the interface language, “Upload file” (English), “Загрузить файл” (Russian), “Dosya yükle” (Turkish), “Faylni yuklash” (Uzbek).
+`validation-show`| <UploadFileTable3/>| no | `"top-left"`
+`class`| The CSS class for the field. For example, `class="annotation"`. | no | `".field" ".field_type_file"`
+`multipleSelect`| The number of files to download at the same time.<br/><br/>For the single file upload, set the value to `false`.<br/><br/>For upload of multiple files:<br/><br/>1. Set the value to `true`.<br/><br/>1. In the output data description, add a field with the `array_file` type or another type of array. | no | `true` (if the output data description contains a field with the `array_file` type or another type of array).
+
+<ContactGuideSupport/>

@@ -1,0 +1,73 @@
+---
+title: "Archiving a pool | Toloka documentation"
+date: "2023-02-15T15:15:25.059428"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqDeletePool from '../subcomponents/faq/pool-n-project-archive/delete-pool.mdx'
+import FaqPoolStorageTime from '../subcomponents/faq/pool-n-project-archive/pool-storage-time.mdx'
+import FaqWhereClosedPool from '../subcomponents/faq/pool-n-project-archive/where-closed-pool.mdx'
+import FaqPoolArchivingParameters from '../subcomponents/faq/pool-n-project-archive/pool-archiving-parameters.mdx'
+import FaqAcceptTasksFromArchivedPool from '../subcomponents/faq/pool-n-project-archive/accept-tasks-from-archived-pool.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+
+# Archiving a pool
+
+A [pool](/docs-new/glossary#pool) with the “Archived” status can't be started or edited and isn't available for the [task review](/docs-new/guide/accept).
+
+By default, archived pools are not visible in the list of [project](/docs-new/glossary#project) pools. To view them:
+
+1. Open the project page.
+
+1. In the **Pools** tab, select **Archived**.
+
+The pool is automatically archived if none of the following actions is performed in the pool for a month:
+
+- Editing.
+- Uploading tasks.
+- Changing status.
+- Completing a task.
+- Cloning via the Toloka API.
+
+To archive a pool, click **<img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425165980/1675425165980_original_svg.svg" alt="Drop-down button" /> → Archive** at the top of the pool page, or <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425183285/1675425183285_original_svg.svg" alt="" /> in the list of pools on the project page.
+
+<Note mode="note" title="Note">
+
+To [archive the training pool](/docs-new/guide/train), first archive all the main pools to which it is linked.
+
+</Note>
+
+## What's next {#what-next}
+
+- [Add tasks to the pool](/docs-new/guide/pool)
+- Learn more about how to set up a pool:
+
+    - [Setting up pricing](/docs-new/guide/dynamic-pricing).
+    - [Dynamic overlap](/docs-new/guide/dynamic-overlap).
+    - Selective [majority vote](/docs-new/guide/selective-mvote) control.
+    - [Filters](/docs-new/guide/filters).
+    - [Speed/quality balance](/docs-new/guide/adjust).
+    - [Reviewed assignments](/docs-new/guide/offline-accept).
+
+## For developers {#for-developers}
+
+- [Toloka API: Moving pool to archive](/docs-new/api/archive-pool)
+- [Toloka-Kit recipe: Archive pool](/docs-new/toloka-kit/recipes/archive-pool)
+
+## Troubleshooting {#troubleshooting}
+
+<FaqDeletePool/>
+
+<FaqPoolStorageTime/>
+
+<FaqWhereClosedPool/>
+
+<FaqPoolArchivingParameters/>
+
+<FaqAcceptTasksFromArchivedPool/>
+
+<ContactGuideSupport/>

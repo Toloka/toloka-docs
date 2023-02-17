@@ -1,0 +1,60 @@
+---
+title: "What is overlap? | Toloka documentation"
+date: "2023-02-15T15:15:17.137442"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqBasicOverlap from '../subcomponents/faq/pool-setup/basic-overlap.mdx'
+import FaqCrossCheck from '../subcomponents/faq/pool-setup/cross-check.mdx'
+import TroubleshootingMaxNumber from '../subcomponents/troubleshooting/pool-setup/max-number.mdx'
+import FaqCountingWork from '../subcomponents/faq/pool-setup/counting-work.mdx'
+
+# What is overlap?
+
+Overlap is the number of Tolokers who should complete each task in the [pool](/docs-new/glossary#pool).
+
+You can set overlap in the pool settings:
+
+<Image width="400px" withBackground imageId="1675426660723" alt="" />
+
+## Tips and recommendations
+
+| Task type                            | Recommended overlap |
+|--------------------------------------|---------------------|
+| Most tasks have automatic acceptance | from 3 to 5         |
+| Simple task                          | 3                   |
+| Reviewed task                        | 1                   |
+
+You can change overlap after the pool is started. To do this, open the pool editing mode and set the new overlap value. You don't need to restart the pool. Updating the settings is usually fast, but if there are many tasks, it may take several minutes.
+
+## Advanced overlap types
+
+- Dynamic overlap lets you change [overlap](/docs-new/guide/dynamic-overlap) depending on:
+
+    - How well the Tolokers do on the task.
+    - How well Tolokers' responses match each other.
+
+    This type of overlap helps you save money without reducing the quality of data labeling.
+
+- [Selective majority vote verification](/docs-new/guide/selective-mvote) allows you to set up [majority vote check](/docs-new/guide/mvote) for only a portion of tasks.
+
+    This type of overlap helps you save money and speed up pool completion.
+
+## For developers {#for-developers}
+
+- [Toloka API: Changing task suite overlap](/docs-new/api/edit-overlap)
+- [Toloka-Kit recipe: Set overlap](/docs-new/toloka-kit/recipes/set-overlap)
+
+## Troubleshooting {#troubleshooting}
+
+<FaqBasicOverlap/>
+
+<FaqCrossCheck/>
+
+<TroubleshootingMaxNumber/>
+
+<FaqCountingWork/>

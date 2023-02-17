@@ -1,0 +1,43 @@
+---
+title: "Iframe | Toloka documentation"
+date: "2023-02-15T15:15:28.455325"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+import IframeTable1 from './iframe/subcomponents/iframe-table-1.mdx'
+import IframeTable2 from './iframe/subcomponents/iframe-table-2.mdx'
+import IframeTable3 from './iframe/subcomponents/iframe-table-3.mdx'
+import IframeTable4 from './iframe/subcomponents/iframe-table-4.mdx'
+
+# Iframe
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating an iframe in [Template Builder](/docs-new/template-builder/reference/view.iframe).
+
+</Note>
+
+To add an inline frame to a task, use the `{{iframe src=<object URL>}}` component. Example:
+
+```plaintext
+{{iframe src=url width="100px" height="100px"}}
+```
+
+## Parameters
+
+**Parameter**|**Description**|**Required**|**Default value**
+----- | ----- | ----- | -----
+`src`| Page URL. | yes | no
+`width`| <IframeTable1/>| no | `"300px"`
+`height`| <IframeTable2/>| no | `"500px"`
+`content-width`| The width of the content in the frame, in pixels. For example, `content-width="700`".<br/><br/>To make the frame the width of the screen, set `content-width="false".` | no | `"1280"`
+`zoom`| <IframeTable3/>| no | `false`
+`class`| CSS class for the frame. | no | `".iframe"`
+`sandbox`| <IframeTable4/>| no | `"allow-scripts allow-same-origin"`
+
+<ContactGuideSupport/>

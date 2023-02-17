@@ -1,0 +1,72 @@
+---
+title: "Processing rejected and accepted assignments | Toloka documentation"
+date: "2023-02-15T15:15:27.453005"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqOverlap from '../subcomponents/faq/pool-setup/overlap.mdx'
+import FaqChangeOverlap from '../subcomponents/faq/pool-setup/change-overlap.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import ReassessmentAfterAcceptingTable1 from './reassessment-after-accepting/subcomponents/reassessment-after-accepting-table-1.mdx'
+import ReassessmentAfterAcceptingTable2 from './reassessment-after-accepting/subcomponents/reassessment-after-accepting-table-2.mdx'
+import ReassessmentAfterAcceptingList1 from './reassessment-after-accepting/subcomponents/reassessment-after-accepting-list-1.mdx'
+import ReassessmentAfterAcceptingList2 from './reassessment-after-accepting/subcomponents/reassessment-after-accepting-list-2.mdx'
+
+# Processing rejected and accepted assignments
+
+You can enable the [manual review](/docs-new/guide/offline-accept) option to [reject or accept](/docs-new/guide/accept) assignments that Tolokers completed. Assignments are rejected and accepted on a page-by-page basis.
+
+<Note mode="note" title="Note">
+
+Once the review period in the **Review period in days** field runs out, tasks are accepted automatically.
+
+</Note>
+
+## When to use {#when-use}
+
+This rule is helpful when you need to:
+- Resend rejected assignments for re-completion to other Tolokers.
+
+    If you rejected an assignment, you may want it to be completed by another Toloker instead of the one whose response you rejected. To do this, you can increase the [overlap](/docs-new/glossary#overlap) for this assignment only. This is especially helpful if you have the overlap value set to 1.
+
+- Save money on re-completing assignments that you have already accepted.
+
+    If you've reviewed and accepted a task, it may not make sense for other Tolokers to also complete it. To avoid this, you can reduce the overlap for accepted assignments only.
+
+## Rule settings {#rule}
+
+<Note mode="warning" title="Warning">
+
+All fields in this rule are required. If you don't fill in at least one of them, you won't be able to save the rule.
+
+</Note>
+
+**Field**  | **Overview**
+----- | -----
+**If** | <ReassessmentAfterAcceptingTable1/>
+**then** | <ReassessmentAfterAcceptingTable2/>
+
+## Rule example {#examples}
+
+The task is to send rejected and recompleted assignments for review. Or assign them to new Tolokers after rejection.
+
+<Tabs tabs={[
+  { title: 'Correct settings', value: <ReassessmentAfterAcceptingList1/> },
+  { title: 'Incorrect settings', value: <ReassessmentAfterAcceptingList2/> },
+]}/>
+
+## For developers {#for-developers}
+
+- [Toloka API: Processing rejected and accepted assignments](/docs-new/api/reassessment)
+
+## Frequently asked questions {#troubleshooting}
+
+<FaqOverlap/>
+
+<FaqChangeOverlap/>
+
+<ContactGuideSupport/>

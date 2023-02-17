@@ -1,0 +1,134 @@
+---
+title: "Communication | Toloka documentation"
+date: "2023-02-15T15:15:18.744702"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqNotify from '../subcomponents/faq/result-questions/notify.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import MessagingList1 from './messaging/subcomponents/messaging-list-1.mdx'
+import MessagingList2 from './messaging/subcomponents/messaging-list-2.mdx'
+
+# Communication
+
+In Toloka, you can exchange information with Tolokers through messages and receive notifications about the progress of labeling and other events, as well as news and recommendations. To search, view, and send messages, go to the [Messages](https://platform.toloka.ai/requester/messages) page.
+
+## Message types
+
+There are several types of messages. To switch between them, select one of the following on the right of the screen:
+
+- **Inbox**: Messages you received.
+
+- **Sent**: Messages you sent. Recipients can be:
+
+    - Any Toloker who started at least two of your tasks.
+
+    - A group of Tolokers that you can select using [filters](/docs-new/guide/filters). To do this, click **+ Add filter**.
+
+    - Individual Tolokers. In the **To** field, specify the Toloker ID or several comma-separated IDs.
+
+- **Users**: Messages from Tolokers.
+
+- **Administrator**: Messages from the platform.
+
+- **Notifications**: System notifications about pool or aggregation completion and other events, as well as messages from the Toloka team, news, and recommendations.
+
+- **Important**: Messages that you marked as important (using the <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425181749/1675425181749_original_svg.svg" alt="" /> label).
+
+<Note mode="note" title="Note">
+
+You can specify which messages you consider important. To do this, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425185465/1675425185465_original_svg.svg" alt="" /> under the message date.
+
+</Note>
+
+## Searching for messages
+
+To find all the messages received from a certain Toloker, enter their ID in the search box in the upper-right corner and click **Search**.
+To find messages by keyword, enter a keyword or phrase in the search box.
+
+## When to write to Tolokers
+
+Send a message to Tolokers who performed your tasks if:
+
+- You've made some changes to the tasks. For example, you edited the [instructions](/docs-new/glossary#instructions), changed the rule for calculating the [skill](/docs-new/glossary#skill), or need the Tolokers to do the training again.
+
+- The Tolokers have questions about the task or instructions. Make sure to answer their questions because the labeling quality depends on how well the Tolokers understand the task. If some questions are repeated, add your answers to the instructions or add illustrative examples to the training pool.
+
+- There is a new [project](/docs-new/glossary#project) to which you want to invite the Tolokers who successfully completed similar tasks. Or you added a new [pool](/docs-new/glossary#pool) to the project after a long break.
+
+- A Toloker filed an [appeal](/docs-new/guide/accept#appeal) after you reviewed their responses. If the responses were mistakenly rejected, accept them. Make sure to review all appeals and respond on time (within 9 days after the responses were rejected).
+
+- Something was wrong with the task and now it's fixed.
+
+<Note mode="note" title="Note">
+
+If the issue is related to how the platform works in general (such as money withdrawals), refer the Toloker to the [Toloka support](/docs-new/guide/troubleshooting/support).
+
+</Note>
+
+## How to write a message
+
+<Tabs tabs={[
+  { title: 'In the interface', value: <MessagingList1/> },
+  { title: 'Via Toloka API', value: <MessagingList2/> },
+]}/>
+
+## Recommendations
+
+- Only write to Tolokers who are not banned and who meet your project requirements. Otherwise, they won't be able to find your task and will have questions about that.
+
+- Tolokers and requesters in Toloka are anonymous. Don't specify your contact details or request them from Tolokers. Contact information includes phone numbers, email addresses, and social network or messenger accounts.
+
+- Show respect to Tolokers and use a business writing style. If you received an offensive message from a Toloker, contact the [Toloka support](/docs-new/guide/troubleshooting/support).
+
+- Don't send too many bulk emails to avoid alienating Tolokers.
+
+- Make sure your messages don't contain any ads for websites, apps, products, or services.
+
+- Don't offer Tolokers to do any tasks outside the platform. Don't use Toloka for recruiting new employees.
+
+## Technical limitations
+
+- If there are more than 1000 recipients in the mailing list, an error may occur when sending the message. To avoid this, use the [API](/docs-new/api/messages).
+
+- Send your emails in small batches. To do this, use [filters](/docs-new/guide/filters).
+
+- Don't send links to your project copied from the browser address bar. They won't work for Tolokers because they use a different URL format. If you want to specify a project link, use the following format: `https://toloka.yandex.com/tasks?projectId=<ID of your project>`. For example, `https://toloka.yandex.com/tasks?projectId=112233`.
+
+- Toloka doesn't let you attach photos and video files to messages. Use a photo hosting service or cloud storage for that. Insert a file link into the message using a visual editor. If you need a Toloker to send you a screenshot or photo, ask them to upload the file to a photo hosting service or cloud storage and send you a link.
+
+- Don't use complex formatting or HTML. Some tags are not supported in emails. For more information, see [HTML markup](/docs-new/guide/instruction#html). The mobile apps have even more technical restrictions. For example, the Android app doesn't display images.
+
+## How to receive messages by email
+
+Open the **Notifications** tab in the [requester profile](https://platform.toloka.ai/requester/profile) and enable **Email** for the **New message** event. Messages will be sent to the email address specified in the profile.
+
+## Marking messages as read
+
+To mark a message as read, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425185041/1675425185041_original_svg.svg" alt="" /> to the left of its subject.
+
+To mark multiple messages at once, click **Mark all as read** above the message list.
+
+## See also {#see-also}
+
+- [Viewing Tolokers](/docs-new/guide/users)
+- [Rewards](/docs-new/guide/bonus)
+- [Ban](/docs-new/guide/ban)
+- [Efficiency indicators: Communication issues](/docs-new/guide/efficiency-metrics/communication)
+
+## For developers {#for-developers}
+
+- [Toloka API: Messages for Tolokers](/docs-new/api/messages)
+- [Toloka-Kit recipe: Send messages](/docs-new/toloka-kit/recipes/send-messages)
+- [Toloka-Kit recipe: Get list of message threads](/docs-new/toloka-kit/recipes/get-message-threads)
+- [Toloka-Kit recipe: Reply to message thread](/docs-new/toloka-kit/recipes/reply-to-message-thread)
+
+## Troubleshooting {#troubleshooting}
+
+<FaqNotify/>
+
+<ContactGuideSupport/>

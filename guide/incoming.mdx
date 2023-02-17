@@ -1,0 +1,129 @@
+---
+title: "Input and output data | Toloka documentation"
+date: "2023-02-15T15:15:24.664773"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TolokaRequesterSourceHtmlEditorTbSpec from '../subcomponents/toloka-requester-source/id-toloka-requester-source/html-editor-tb-spec.mdx'
+import FaqInsertFunction from '../subcomponents/faq/project-settings/insert-function.mdx'
+import FaqAddMask from '../subcomponents/faq/project-settings/add-mask.mdx'
+import FaqNeedConvert from '../subcomponents/faq/project-settings/need-convert.mdx'
+import FaqOutputData from '../subcomponents/faq/project-settings/output-data.mdx'
+import FaqTwoVersionsText from '../subcomponents/faq/adding-tasks-to-the-pool/two-versions-text.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import TolokaRequesterSourceInteger from '../subcomponents/toloka-requester-source/id-toloka-requester-source/type-integer.mdx'
+import TolokaRequesterSourceFloat from '../subcomponents/toloka-requester-source/id-toloka-requester-source/type-float.mdx'
+import TolokaRequesterSourceString from '../subcomponents/toloka-requester-source/id-toloka-requester-source/type-string.mdx'
+import TolokaRequesterSourceUrl from '../subcomponents/toloka-requester-source/id-toloka-requester-source/type-url.mdx'
+import TolokaRequesterSourceBoolean from '../subcomponents/toloka-requester-source/id-toloka-requester-source/type-boolean.mdx'
+import TolokaRequesterSourceCoordinates from '../subcomponents/toloka-requester-source/id-toloka-requester-source/type-coordinates.mdx'
+import TolokaRequesterSourceJson from '../subcomponents/toloka-requester-source/id-toloka-requester-source/type-json.mdx'
+import TolokaRequesterSourceFile from '../subcomponents/toloka-requester-source/id-toloka-requester-source/type-file.mdx'
+import TolokaRequesterSourceArray from '../subcomponents/toloka-requester-source/id-toloka-requester-source/type-array.mdx'
+import IncomingList1 from './incoming/subcomponents/incoming-list-1.mdx'
+import IncomingList2 from './incoming/subcomponents/incoming-list-2.mdx'
+import IncomingTable1 from './incoming/subcomponents/incoming-table-1.mdx'
+import IncomingTable2 from './incoming/subcomponents/incoming-table-2.mdx'
+
+# Input and output data
+
+<TolokaRequesterSourceHtmlEditorTbSpec/>
+
+In the **Data specification** section, you set parameters for [input and output data](/docs-new/glossary#input-output-data). These settings will be valid for all tasks in the [project](/docs-new/glossary#project).
+
+In the specification, add fields for the data used in the task or for the data you need in the results. Reference these fields when you [configure the interface](/docs-new/guide/spec).
+
+Don't repeat the input data in the output data. You will receive all data, including the input, in the results.
+
+## Editing the specification {#manual-setting}
+
+<Note mode="note" title="Note">
+
+Specification editing is available only when the **Define data specification manually** option is enabled.
+
+</Note>
+
+There are two ways to edit the specification in project settings: using either regular mode or JSON mode. JSON mode gives you more options — you can hide input data and use regular expressions to validate output data.
+
+<Tabs tabs={[
+  { title: 'Regular mode', value: <IncomingList1/> },
+  { title: 'JSON mode', value: <IncomingList2/> },
+]}/>
+
+<Cut title="Explanations for configuring fields">
+
+Parameter  | Parameter in JSON | Overview
+----- | ----- | -----
+**Name** | `id` | Field ID. Only Latin letters, numbers, hyphens, and underscores are allowed.
+**Type** | `type` | <IncomingTable1/>
+**Required** | `required` | Whether the field must be filled when uploading the tasks for the input data.<br/><br/>Whether the Toloker's response is required in the output data.<br/><br/>By default, fields are optional — `false`.
+**Hidden** | `hidden` | <IncomingTable2/>
+**Array** | `array_<type>` | <Term term="Array"><TolokaRequesterSourceArray/></Term> of objects of the same type. Used, for example, for multiple photos uploaded by a Toloker.<br/><br/>In JSON mode, there is a separate data type for the array. For example: `"type": "array_file"`.
+**Min size** | `min_size` | Minimum number of items in the array.
+**Max size** | `max_size` | Maximum number of items in the array.
+**Allowed values** | `allowed_values` | Allowed values for string, integer, float and boolean data types.
+**Min length** | `min_length` | Minimum length of the string.
+**Max length** | `max_length` | Maximum length of the string.
+**Min value** | `min_value` | Minimum values for float and integer numbers.
+**Max value** | `max_value` | Maximum values for float and integer numbers.
+**Current location** | `current_location` | Saving the Toloker's current coordinates (`true`/`false`). Only for the `coordinates` data type. Used in tasks for the mobile app.<br/><br/>The default value is `false`.
+**Pattern** | `pattern` | Regular expression that the string must match. You can configure this parameter in JSON mode.
+
+</Cut>
+
+## Data types {#data-types}
+
+You can use different data types:
+
+- <Term term="integer"><TolokaRequesterSourceInteger/></Term>
+- <Term term="float"><TolokaRequesterSourceFloat/></Term>
+- <Term term="string"><TolokaRequesterSourceString/></Term>
+- <Term term="url"><TolokaRequesterSourceUrl/></Term>
+- <Term term="boolean"><TolokaRequesterSourceBoolean/></Term>
+- <Term term="coordinates"><TolokaRequesterSourceCoordinates/></Term>
+- <Term term="json"><TolokaRequesterSourceJson/></Term>
+- <Term term="file"><TolokaRequesterSourceFile/></Term>
+- <Term term="array"><TolokaRequesterSourceArray/></Term>
+
+## Recommendations {#recomendations}
+
+- If you edit a required field, the changes apply only to new task [pools](/docs-new/glossary#pool). For example, if you need to fix an error in a project, [clone the pool](/docs-new/guide/pool-main) or [create a new one](/docs-new/guide/pool-main). Existing task pools will continue using the previous version of the project.
+
+- In the output, use value validation and don't forget to mark the field as required if the Toloker has to fill it in.
+- Hidden fields are intended only for requesters and are not available in the task interface. The values of hidden fields can't be used either in the JS code or in the template constructor.
+
+    Let's say you pass product data (like articles or batch numbers) that Tolokers don't need in order to complete the task. Or you are moderating comments and you need the authors' personal data in the results for further data processing, but the Tolokers shouldn't have access to personal data.
+
+    To create a hidden field, add it to the specification yourself and then add the `"hidden": true` parameter to this field in JSON mode. You should do this in Toloka when configuring your project. The hidden field remains when the specification is re-generated using the Template Builder.
+
+## What's next {#what_next}
+
+- [Create a task pool in the project](/docs-new/guide/pool-main).
+- Learn more about how to set up a project:
+
+    - [Writing instructions](/docs-new/guide/instruction).
+    - [Task interface](/docs-new/guide/spec).
+    - [Adapt a task for mobile devices](/docs-new/guide/mobile).
+    - [Setting up quality control](/docs-new/guide/project-qa).
+
+## See also {#see-also}
+
+- [Editing a project](/docs-new/guide/edit-project)
+
+## Troubleshooting {#troubleshooting}
+
+<FaqInsertFunction/>
+
+<FaqAddMask/>
+
+<FaqNeedConvert/>
+
+<FaqOutputData/>
+
+<FaqTwoVersionsText/>
+
+<ContactGuideSupport/>

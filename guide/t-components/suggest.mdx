@@ -1,0 +1,51 @@
+---
+title: "String input with suggest list | Toloka documentation"
+date: "2023-02-15T15:15:29.187125"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+import SuggestList1 from './suggest/subcomponents/suggest-list-1.mdx'
+import SuggestList2 from './suggest/subcomponents/suggest-list-2.mdx'
+import SuggestTable1 from './suggest/subcomponents/suggest-table-1.mdx'
+import SuggestTable2 from './suggest/subcomponents/suggest-table-2.mdx'
+import SuggestTable3 from './suggest/subcomponents/suggest-table-3.mdx'
+
+# String input with suggest list
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in [Template Builder](/docs-new/template-builder/).
+
+</Note>
+
+Contains text suggestions that are displayed when the Toloker points the cursor at the input field. There are two types of text suggestions:
+
+- Universal suggestions used in all tasks.
+
+- Individual suggestions for different tasks.
+
+<Tabs tabs={[
+  { title: 'Universal suggestions', value: <SuggestList1/> },
+  { title: 'Individual suggestions', value: <SuggestList2/> },
+]}/>
+
+## Parameters
+
+**Parameter**|**Description**|**Required**|**Default value**
+----- | ----- | ----- | -----
+`type`| Field type: `suggest` — String input field with suggestions. | yes | no
+`name`| Attribute for the output data field. Contains the output field name. | yes | no
+`source`| Name of array with suggested strings. For example: `source=countries`. The array is defined in the JS-code of the project ( `getTemplateData` method). | yes | no
+`allowCustomInput`| Whether the Toloker can ignore suggestions and enter their own string. | no | `false`
+`validation-show`| <SuggestTable1/>| no | `"top-left"`
+`placeholder`| <SuggestTable2/>| no | no
+`hotkey`| Shortcut for setting focus on the field. | no | no
+`value`| <SuggestTable3/>| no | no
+`class`| The CSS class for the field. For example: `class="mytask_field"`. | no | `".field" ".field_type_suggest"`
+
+<ContactGuideSupport/>
