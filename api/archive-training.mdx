@@ -1,6 +1,6 @@
 ---
 title: "Archive a training pool — Toloka API | Toloka documentation"
-date: "2023-02-03T19:53:25.692281"
+date: "2023-02-17T14:32:30.409888"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,7 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import ContactGuideSupport from '../guide/subcomponents/contact-support.mdx'
 import ArchiveTrainingList1 from './archive-training/subcomponents/archive-training-list-1.mdx'
 import ArchiveTrainingList2 from './archive-training/subcomponents/archive-training-list-2.mdx'
 import ArchiveTrainingTable1 from './archive-training/subcomponents/archive-training-table-1.mdx'
@@ -69,7 +70,7 @@ If the training pool is already archived, attempting to archive it again returns
 
 Parameter | Overview
 ----- | -----
-**id** | **string**<br/><br/>User ID.
+**id** | **string**<br/><br/>Operation ID.
 **type** | **string**<br/><br/>Type of operation: `TRAINING.ARCHIVE` — Archive a training pool.
 **status** | <ArchiveTrainingTable1/>
 **submitted** | **string**<br/><br/>The UTC date and time the request was sent, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
@@ -78,3 +79,5 @@ Parameter | Overview
 **progress** | **integer**<br/><br/>The percentage of the operation completed.
 **parameters.training_id** | **string**<br/><br/>ID of the training pool.
 **details** | **object**<br/><br/>Details of the operation completion.
+
+<ContactGuideSupport/>

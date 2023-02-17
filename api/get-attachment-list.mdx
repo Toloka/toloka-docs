@@ -1,6 +1,6 @@
 ---
 title: "Get the list of files — Toloka API | Toloka documentation"
-date: "2023-02-03T19:53:26.169776"
+date: "2023-02-17T14:32:30.872941"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,7 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import ContactGuideSupport from '../guide/subcomponents/contact-support.mdx'
 import GetAttachmentListList1 from './get-attachment-list/subcomponents/get-attachment-list-list-1.mdx'
 import GetAttachmentListList2 from './get-attachment-list/subcomponents/get-attachment-list-list-2.mdx'
 import GetAttachmentListTable1 from './get-attachment-list/subcomponents/get-attachment-list-table-1.mdx'
@@ -54,7 +55,7 @@ Parameter | Overview
 **type** | **string**<br/><br/>Attachment type. Currently the key can have only one value — `ASSIGNMENT_ATTACHMENT`.
 **user_id** | **string**<br/><br/>ID of the Toloker who uploaded the file(s).
 **sort** | <GetAttachmentListTable1/>
-**Standard query parameters** | [limit](./standard-query-parameters#limit), [id_gt](./standard-query-parameters#id_gt), [id_gte](./standard-query-parameters#id_gte), [id_lt](./standard-query-parameters#id_lt), [id_lte](./standard-query-parameters#id_lte), [created_gt](./standard-query-parameters#created_gt), [created_gte](./standard-query-parameters#created_gte), [created_lt](./standard-query-parameters#created_lt), [created_lte](./standard-query-parameters#created_lte).
+**Standard query parameters** | [limit](/docs-new/api/standard-query-parameters#limit), [id_gt](/docs-new/api/standard-query-parameters#id_gt), [id_gte](/docs-new/api/standard-query-parameters#id_gte), [id_lt](/docs-new/api/standard-query-parameters#id_lt), [id_lte](/docs-new/api/standard-query-parameters#id_lte), [created_gt](/docs-new/api/standard-query-parameters#created_gt), [created_gte](/docs-new/api/standard-query-parameters#created_gte), [created_lt](/docs-new/api/standard-query-parameters#created_lt), [created_lte](/docs-new/api/standard-query-parameters#created_lte).
 
 ## Query example {#request-example}
 
@@ -84,3 +85,5 @@ You can set up the display of the list of files in parts (for example, 10 files 
 ```json
 {"items" : [{file #1}, {file #2}, ... {file #n}], "has_more": false}
 ```
+
+<ContactGuideSupport/>

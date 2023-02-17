@@ -1,6 +1,6 @@
 ---
 title: "Get a list of training pools — Toloka API | Toloka documentation"
-date: "2023-02-03T19:53:29.958681"
+date: "2023-02-17T14:32:34.542054"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,7 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import ContactGuideSupport from '../guide/subcomponents/contact-support.mdx'
 import GetTrainingListList1 from './get-training-list/subcomponents/get-training-list-list-1.mdx'
 import GetTrainingListList2 from './get-training-list/subcomponents/get-training-list-list-2.mdx'
 import GetTrainingListTable1 from './get-training-list/subcomponents/get-training-list-table-1.mdx'
@@ -46,7 +47,7 @@ Parameter | Overview
 **status** | <GetTrainingListTable1/>
 **project_id** | **string**<br/><br/>ID of the project that the training pool is linked to.
 **sort** | <GetTrainingListTable2/>
-**Standard query parameters** | [limit](./standard-query-parameters#limit), [id_gt](./standard-query-parameters#id_gt), [id_gte](./standard-query-parameters#id_gte), [id_lt](./standard-query-parameters#id_lt), [id_lte](./standard-query-parameters#id_lte), [created_gt](./standard-query-parameters#created_gt), [created_gte](./standard-query-parameters#created_gte), [created_lt](./standard-query-parameters#created_lt), [created_lte](./standard-query-parameters#created_lte), [last_started_gt](./standard-query-parameters#last_started_gt), [last_started_gte](./standard-query-parameters#last_started_gte), [last_started_gte](./standard-query-parameters#last_started_gte), [last_started_lt](./standard-query-parameters#last_started_lt), [last_started_lte](./standard-query-parameters#last_started_lte).
+**Standard query parameters** | [limit](/docs-new/api/standard-query-parameters#limit), [id_gt](/docs-new/api/standard-query-parameters#id_gt), [id_gte](/docs-new/api/standard-query-parameters#id_gte), [id_lt](/docs-new/api/standard-query-parameters#id_lt), [id_lte](/docs-new/api/standard-query-parameters#id_lte), [created_gt](/docs-new/api/standard-query-parameters#created_gt), [created_gte](/docs-new/api/standard-query-parameters#created_gte), [created_lt](/docs-new/api/standard-query-parameters#created_lt), [created_lte](/docs-new/api/standard-query-parameters#created_lte), [last_started_gt](/docs-new/api/standard-query-parameters#last_started_gt), [last_started_gte](/docs-new/api/standard-query-parameters#last_started_gte), [last_started_gte](/docs-new/api/standard-query-parameters#last_started_gte), [last_started_lt](/docs-new/api/standard-query-parameters#last_started_lt), [last_started_lte](/docs-new/api/standard-query-parameters#last_started_lte).
 
 ## Query example {#request-example}
 
@@ -76,3 +77,5 @@ Contains a list of training pools and their properties in the `items` array:
 ```json
 {"items" : [{parameters_of_training_pool_1}, {parameters_of_training_pool_2}, ... {parameters_of_training_pool__n_}], "has_more": false}
 ```
+
+<ContactGuideSupport/>

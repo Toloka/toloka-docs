@@ -1,6 +1,6 @@
 ---
 title: "Overview — Toloka API | Toloka documentation"
-date: "2023-02-06T14:48:36.732828"
+date: "2023-02-17T14:32:36.725766"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,6 +8,7 @@ ogDescription: ""
 docsMenu: "apiMenu"
 ---
 
+import ContactGuideSupport from '../guide/subcomponents/contact-support.mdx'
 import FiltersTable1 from './filters/subcomponents/filters-table-1.mdx'
 import FiltersTable2 from './filters/subcomponents/filters-table-2.mdx'
 
@@ -72,3 +73,5 @@ Parameter | Overview
 **key** | **string \| required**<br/><br/>Attribute to use for filtering Tolokers. For example, the country (`country`), or a skill (specify the skill ID).
 **operator** | <FiltersTable2/>
 **value** | **boolean**, **string**, **list of strings**, **integer \| required**<br/><br/>The value of the attribute from the `key` field. For example, the ID of the region specified in the profile, or the minimum skill value. To choose the correct value, see the descriptions of filters in the sections [Filter by profile data](/docs-new/api/filter-profile), [Filter by calculated data](/docs-new/api/filter-computed), [Filter by skills](/docs-new/api/filter-skill).
+
+<ContactGuideSupport/>

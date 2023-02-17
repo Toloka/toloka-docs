@@ -1,6 +1,6 @@
 ---
 title: "Get a list of rewards issued — Toloka API | Toloka documentation"
-date: "2023-02-03T19:53:29.878717"
+date: "2023-02-17T14:32:34.463327"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,7 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import ContactGuideSupport from '../guide/subcomponents/contact-support.mdx'
 import GetBonusListList1 from './get-bonus-list/subcomponents/get-bonus-list-list-1.mdx'
 import GetBonusListList2 from './get-bonus-list/subcomponents/get-bonus-list-list-2.mdx'
 import GetBonusListTable1 from './get-bonus-list/subcomponents/get-bonus-list-table-1.mdx'
@@ -46,7 +47,7 @@ Parameter | Overview
 **assignment_id** | **string**<br/><br/>ID of the Toloker's response to the task a reward is issued for.
 **private_comment** | **string**<br/><br/>Comments that are only visible to the requester.
 **sort** | <GetBonusListTable1/>
-**Standard query parameters** | [limit](./standard-query-parameters#limit), [id_gt](./standard-query-parameters#id_gt), [id_gte](./standard-query-parameters#id_gte), [id_lt](./standard-query-parameters#id_lt), [id_lte](./standard-query-parameters#id_lte), [created_gt](./standard-query-parameters#created_gt), [created_gte](./standard-query-parameters#created_gte), [created_lt](./standard-query-parameters#created_lt), [created_lte](./standard-query-parameters#created_lte).
+**Standard query parameters** | [limit](/docs-new/api/standard-query-parameters#limit), [id_gt](/docs-new/api/standard-query-parameters#id_gt), [id_gte](/docs-new/api/standard-query-parameters#id_gte), [id_lt](/docs-new/api/standard-query-parameters#id_lt), [id_lte](/docs-new/api/standard-query-parameters#id_lte), [created_gt](/docs-new/api/standard-query-parameters#created_gt), [created_gte](/docs-new/api/standard-query-parameters#created_gte), [created_lt](/docs-new/api/standard-query-parameters#created_lt), [created_lte](/docs-new/api/standard-query-parameters#created_lte).
 
 ## Query example {#request-example}
 
@@ -76,3 +77,5 @@ You can set up the display of the list of rewards in parts (for example, 10 rewa
 ```json
 {"items" : [{bonus #1}, {bonus #2}, ... {bonus #n}], "has_more": true}
 ```
+
+<ContactGuideSupport/>

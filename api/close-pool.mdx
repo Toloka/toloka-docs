@@ -1,6 +1,6 @@
 ---
 title: "Close a pool — Toloka API | Toloka documentation"
-date: "2023-02-03T19:53:28.337895"
+date: "2023-02-17T14:32:32.878135"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,7 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import ContactGuideSupport from '../guide/subcomponents/contact-support.mdx'
 import ClosePoolList1 from './close-pool/subcomponents/close-pool-list-1.mdx'
 import ClosePoolList2 from './close-pool/subcomponents/close-pool-list-2.mdx'
 import ClosePoolTable1 from './close-pool/subcomponents/close-pool-table-1.mdx'
@@ -67,7 +68,7 @@ If the current pool status is the same as the  requested status, an empty respo
 
 Parameter | Overview
 ----- | -----
-**id** | **string**<br/><br/>User ID.
+**id** | **string**<br/><br/>Operation ID.
 **type** | **string**<br/><br/>Type of operation: `POOL.CLOSE` — Closing a pool.
 **status** | <ClosePoolTable1/>
 **submitted** | **string**<br/><br/>The UTC date and time the request was sent, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
@@ -75,3 +76,5 @@ Parameter | Overview
 **finished** | **string**<br/><br/>The UTC date and time the operation was completed, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
 **progress** | **integer**<br/><br/>The percentage of the operation completed.
 **parameters.pool_id** | **string**<br/><br/>Pool ID.
+
+<ContactGuideSupport/>

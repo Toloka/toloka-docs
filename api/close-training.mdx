@@ -1,6 +1,6 @@
 ---
 title: "Close a training — Toloka API | Toloka documentation"
-date: "2023-02-03T19:53:31.953246"
+date: "2023-02-17T14:32:36.372192"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,7 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import ContactGuideSupport from '../guide/subcomponents/contact-support.mdx'
 import CloseTrainingList1 from './close-training/subcomponents/close-training-list-1.mdx'
 import CloseTrainingList2 from './close-training/subcomponents/close-training-list-2.mdx'
 import CloseTrainingTable1 from './close-training/subcomponents/close-training-table-1.mdx'
@@ -68,7 +69,7 @@ If the current training pool status is the same as the requested status, an emp
 
 Parameter | Overview
 ----- | -----
-**id** | **string**<br/><br/>User ID.
+**id** | **string**<br/><br/>Operation ID.
 **type** | **string**<br/><br/>Type of operation: `TRAINING.CLOSE` — Close a training pool.
 **status** | <CloseTrainingTable1/>
 **submitted** | **string**<br/><br/>The UTC date and time the request was sent, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
@@ -77,3 +78,5 @@ Parameter | Overview
 **progress** | **integer**<br/><br/>The percentage of the operation completed.
 **parameters.training_id** | **string**<br/><br/>ID of the training pool.
 **details** | **object**<br/><br/>Details of the operation completion.
+
+<ContactGuideSupport/>
