@@ -1,6 +1,6 @@
 ---
 title: "Get a list of bans — Toloka API | Toloka documentation"
-date: "2023-02-03T19:53:27.115801"
+date: "2023-02-17T14:32:31.725735"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,7 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import ContactGuideSupport from '../guide/subcomponents/contact-support.mdx'
 import BanGetListList1 from './ban-get-list/subcomponents/ban-get-list-list-1.mdx'
 import BanGetListList2 from './ban-get-list/subcomponents/ban-get-list-list-2.mdx'
 import BanGetListTable1 from './ban-get-list/subcomponents/ban-get-list-table-1.mdx'
@@ -46,7 +47,7 @@ Parameter | Overview
 **project_id** | **string \| required if**<br/><br/>Required if `scope=PROJECT`.<br/><br/>The ID of the project that is blocked.
 **pool_id** | **string \| required if**<br/><br/>Required if `scope=POOL`.<br/><br/>The ID of the pool that is blocked.
 **sort** | <BanGetListTable2/>
-**Standard query parameters** | [limit](./standard-query-parameters#limit), [id_gt](./standard-query-parameters#id_gt), [id_gte](./standard-query-parameters#id_gte), [id_lt](./standard-query-parameters#id_lt), [id_lte](./standard-query-parameters#id_lte), [created_gt](./standard-query-parameters#created_gt), [created_gte](./standard-query-parameters#created_gte), [created_lt](./standard-query-parameters#created_lt), [created_lte](./standard-query-parameters#created_lte).
+**Standard query parameters** | [limit](/docs-new/api/standard-query-parameters#limit), [id_gt](/docs-new/api/standard-query-parameters#id_gt), [id_gte](/docs-new/api/standard-query-parameters#id_gte), [id_lt](/docs-new/api/standard-query-parameters#id_lt), [id_lte](/docs-new/api/standard-query-parameters#id_lte), [created_gt](/docs-new/api/standard-query-parameters#created_gt), [created_gte](/docs-new/api/standard-query-parameters#created_gte), [created_lt](/docs-new/api/standard-query-parameters#created_lt), [created_lte](/docs-new/api/standard-query-parameters#created_lte).
 
 ## Query example {#request-example}
 
@@ -64,3 +65,5 @@ Contains a list of bans in the `items` array:
 ```json
 {"items" : [{ban parameters 1}, {ban parameters 2}, ... {ban parameters n}], "has_more": true}
 ```
+
+<ContactGuideSupport/>

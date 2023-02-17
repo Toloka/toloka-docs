@@ -1,6 +1,6 @@
 ---
 title: "Clone a training pool — Toloka API | Toloka documentation"
-date: "2023-02-03T19:53:28.736262"
+date: "2023-02-17T14:32:33.307241"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,7 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import ContactGuideSupport from '../guide/subcomponents/contact-support.mdx'
 import CloneTrainingList1 from './clone-training/subcomponents/clone-training-list-1.mdx'
 import CloneTrainingList2 from './clone-training/subcomponents/clone-training-list-2.mdx'
 import CloneTrainingTable1 from './clone-training/subcomponents/clone-training-table-1.mdx'
@@ -62,7 +63,7 @@ Title | Overview
 
 Parameter | Overview
 ----- | -----
-**id** | **string**<br/><br/>User ID.
+**id** | **string**<br/><br/>Operation ID.
 **type** | **string**<br/><br/>Type of operation: `TRAINING.CLONE` — Clone a training pool.
 **status** | <CloneTrainingTable1/>
 **submitted** | **string**<br/><br/>The UTC date and time the request was sent, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
@@ -71,3 +72,5 @@ Parameter | Overview
 **progress** | **integer**<br/><br/>The percentage of the operation completed.
 **parameters.training_id** | **string**<br/><br/>ID of the source training pool.
 **details.training_id** | **string**<br/><br/>ID of the new training pool.
+
+<ContactGuideSupport/>

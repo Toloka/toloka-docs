@@ -1,6 +1,6 @@
 ---
 title: "Get aggregate responses — Toloka API | Toloka documentation"
-date: "2023-02-03T19:53:25.449145"
+date: "2023-02-17T14:32:30.169658"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,7 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import ContactGuideSupport from '../guide/subcomponents/contact-support.mdx'
 import GetAggregatedResultList1 from './get-aggregated-result/subcomponents/get-aggregated-result-list-1.mdx'
 import GetAggregatedResultList2 from './get-aggregated-result/subcomponents/get-aggregated-result-list-2.mdx'
 import GetAggregatedResultTable1 from './get-aggregated-result/subcomponents/get-aggregated-result-table-1.mdx'
@@ -49,7 +50,7 @@ Specified in the link after the question mark; separated by `&`.
 Parameter | Overview
 ----- | -----
 **sort** | <GetAggregatedResultTable1/>
-**Standard query parameters** | [limit](./standard-query-parameters#limit), [task_id_gt](./standard-query-parameters#task_id_gt), [task_id_gte](./standard-query-parameters#task_id_gte), [task_id_lt](./standard-query-parameters#task_id_lt), [task_id_lte](./standard-query-parameters#task_id_lte).
+**Standard query parameters** | [limit](/docs-new/api/standard-query-parameters#limit), [task_id_gt](/docs-new/api/standard-query-parameters#task_id_gt), [task_id_gte](/docs-new/api/standard-query-parameters#task_id_gte), [task_id_lt](/docs-new/api/standard-query-parameters#task_id_lt), [task_id_lte](/docs-new/api/standard-query-parameters#task_id_lte).
 
 ## Query example {#request-example}
 
@@ -79,3 +80,5 @@ You can set up the display of the list of responses in parts (for example, 10 re
 ```json
 {"items" : [{task #1}, {task #2}, ... {task #n}], "has_more": true}
 ```
+
+<ContactGuideSupport/>

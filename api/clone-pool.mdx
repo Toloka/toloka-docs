@@ -1,6 +1,6 @@
 ---
 title: "Clone a pool — Toloka API | Toloka documentation"
-date: "2023-02-03T19:53:28.606150"
+date: "2023-02-17T14:32:33.166928"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,7 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import ContactGuideSupport from '../guide/subcomponents/contact-support.mdx'
 import ClonePoolList1 from './clone-pool/subcomponents/clone-pool-list-1.mdx'
 import ClonePoolList2 from './clone-pool/subcomponents/clone-pool-list-2.mdx'
 import ClonePoolTable1 from './clone-pool/subcomponents/clone-pool-table-1.mdx'
@@ -62,7 +63,7 @@ Title | Overview
 
 Parameter | Overview
 ----- | -----
-**id** | **string**<br/><br/>User ID.
+**id** | **string**<br/><br/>Operation ID.
 **type** | **string**<br/><br/>Type of operation: `POOL.CLONE` — Cloning a pool.
 **status** | <ClonePoolTable1/>
 **submitted** | **string**<br/><br/>The UTC date and time the request was sent, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
@@ -71,3 +72,5 @@ Parameter | Overview
 **progress** | **integer**<br/><br/>The percentage of the operation completed.
 **parameters.pool_id** | **string**<br/><br/>Source pool ID.
 **details.pool_id** | **string**<br/><br/>New pool ID.
+
+<ContactGuideSupport/>

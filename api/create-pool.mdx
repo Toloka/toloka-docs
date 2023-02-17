@@ -1,6 +1,6 @@
 ---
 title: "Create a pool — Toloka API | Toloka documentation"
-date: "2023-02-03T19:53:30.541780"
+date: "2023-02-17T14:32:35.054863"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,7 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import ContactGuideSupport from '../guide/subcomponents/contact-support.mdx'
 import CreatePoolList1 from './create-pool/subcomponents/create-pool-list-1.mdx'
 import CreatePoolList2 from './create-pool/subcomponents/create-pool-list-2.mdx'
 import CreatePoolTable1 from './create-pool/subcomponents/create-pool-table-1.mdx'
@@ -288,14 +289,14 @@ Parameter | Overview
 **mixer_config. real_tasks_count** | **integer \| required if**<br/><br/>Required if "smart mixing" is used.<br/><br/>Number of general tasks per suite.<br/><br/>The maximum number of tasks per task suite if `golden_task_distribution_function` or `training_task_distribution_function` is used.
 **mixer_config.golden_tasks_count** | **integer \| required if**<br/><br/>Required if "smart mixing" is used.<br/><br/>Number of control tasks per suite.
 **mixer_config.training_tasks_count** | **integer \| required if**<br/><br/>Required if "smart mixing" is used.<br/><br/>Number of training tasks per suite.
-**mixer_config. golden_task_distribution_function. scope** | <CreatePoolTable4/>
+**mixer_config.golden_task_distribution_function.scope** | <CreatePoolTable4/>
 **mixer_config.golden_task_distribution_function. distribution** | **string \| required if**<br/><br/>Required if control tasks are assigned at a variable rate.<br/><br/>Distribution of control tasks within an interval. This parameter has only one possible value — `UNIFORM`.
 **mixer_config.golden_task_distribution_function. window_days** | **integer \| required if**<br/><br/>Required if control tasks are assigned at a variable rate.<br/><br/>Period in which completed tasks are counted (number of days).
 **mixer_config.golden_task_distribution_function. intervals[]** | **array of objects \| required if**<br/><br/>Required if control tasks are assigned at a variable rate. Interval borders and number of control tasks in an interval.
 **mixer_config.golden_task_distribution_function. intervals[].from** | **integer \| required if**<br/><br/>Required if control tasks are assigned at a variable rate.<br/><br/>Start of the interval (number of tasks completed by the Toloker in the project or in the pool).
 **mixer_config.golden_task_distribution_function. intervals[].to** | **integer \| required if**<br/><br/>Required if control tasks are assigned at a variable rate.<br/><br/>End of the interval (number of tasks completed by the Toloker in the project or in the pool).
 **mixer_config.golden_task_distribution_function. intervals[].frequency** | **integer \| required if**<br/><br/>Required if control tasks are assigned at a variable rate.<br/><br/>Frequency of control tasks in an interval. The first task in an interval is a control task. For example, if you set `frequency: 3` tasks number 1, 4, 7 and so on will be control tasks.
-**mixer_config. training_task_distribution_function. scope** | <CreatePoolTable5/>
+**mixer_config.training_task_distribution_function.scope** | <CreatePoolTable5/>
 **mixer_config.training_task_distribution_function. distribution** | **string \| required if**<br/><br/>Required if training tasks are assigned at a variable rate.<br/><br/>Distribution of training tasks within an interval. This parameter has only one possible value — `UNIFORM`.
 **mixer_config.training_task_distribution_function. window_days** | **integer \| required if**<br/><br/>Required if training tasks are assigned at a variable rate.<br/><br/>Period in which completed tasks are counted (number of days).
 **mixer_config.training_task_distribution_function. intervals[]** | **array of objects \| required if**<br/><br/>Required if training tasks are assigned at a variable rate.<br/><br/>Interval borders and number of control tasks in an interval.
@@ -354,3 +355,5 @@ Parameter | Overview
 ## See also {#see-also}
 
 - [Creating a pool](/docs-new/guide/pool-main)
+
+<ContactGuideSupport/>
