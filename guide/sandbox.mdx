@@ -1,0 +1,121 @@
+---
+title: "Sandbox | Toloka documentation"
+date: "2023-02-15T15:15:23.712675"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqWorkWithSandbox from '../subcomponents/faq/sandbox/work-with-sandbox.mdx'
+import FaqSeePoolAsToloker from '../subcomponents/faq/sandbox/see-pool-as-toloker.mdx'
+import FaqSameAccount from '../subcomponents/faq/sandbox/same-account.mdx'
+import TroubleshootingExportError from '../subcomponents/troubleshooting/sandbox/export-error.mdx'
+import FaqCheckMobileVersion from '../subcomponents/faq/sandbox/check-mobile-version.mdx'
+import FaqCopyFromSandbox from '../subcomponents/faq/sandbox/copy-from-sandbox.mdx'
+import TroubleshootingSubmit from '../subcomponents/troubleshooting/sandbox/submit.mdx'
+import FaqMoveControlTasks from '../subcomponents/faq/sandbox/move-control-tasks.mdx'
+import TroubleshootingDontSeeTask from '../subcomponents/troubleshooting/sandbox/dont-see-task.mdx'
+import TroubleshootingCantAddTrustedUser from '../subcomponents/troubleshooting/sandbox/cant-add-trusted-user.mdx'
+import FaqOverlap from '../subcomponents/faq/pool-setup/overlap.mdx'
+import FaqChangeOverlap from '../subcomponents/faq/pool-setup/change-overlap.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+
+# Sandbox
+
+The [Sandbox](https://sandbox.toloka.yandex.com/for-requesters) is a testing environment for Toloka. This is where you can test your [project](/docs-new/glossary#project) settings as a Toloker before moving them to the [Toloka production version](https://platform.toloka.ai/requester/) and running the project for real Tolokers. This helps you avoid making mistakes and spending money on a task that isn't working right.
+
+<Note mode="restriction" title="Restriction">
+
+Note that you can move only project and [pool](/docs-new/glossary#pool) settings. You can't move tasks and responses to them. The project's [quality control](/docs-new/glossary#quality-control) settings can't be moved, either.
+
+</Note>
+
+## How to run a project in the sandbox {#section_zmz_t4z_mlb}
+
+1. Register in the sandbox as a requester. To do this, follow the [link](https://sandbox.toloka.yandex.com/for-requesters).
+
+    <Note mode="tip" title="Tip">
+
+    To avoid confusion, use the same Yandex ID that you used in the Toloka production version to register as a requester.
+
+    </Note>
+
+1. Configure and launch your project:
+
+    - A list of instructions is provided in [Tutorials for popular tasks](/docs-new/tutorials/usecases).
+
+    - General instructions in the [Starting and tuning a project](/docs-new/guide/main-steps) section.
+
+## How to complete tasks {#self}
+
+To complete your tasks in the sandbox:
+
+1. Register in the sandbox as a Toloker (see the instructions in the [user documentation](https://toloka.ai/tolokers/docs/web/register.html?lang=en#register) ).
+
+    <Note mode="restriction" title="Alert">
+
+    Authorization via social media isn't allowed, so you need to [register](https://passport.toloka.ai/registration?mode=register&retpath=https://platform.toloka.ai) a new user in Yandex.
+
+    </Note>
+
+1. Log in to the sandbox using the requester account.
+
+1. Open the [Tolokers](https://platform.toloka.ai/requester/workers) page and click **Add trusted Tolokers**.
+
+1. Click **Add Toloker** and enter the case-sensitive username of the created Toloker.
+
+    Only trusted Tolokers can access your tasks.
+
+    The number of trusted Tolokers required for testing depends on the [overlap settings](/docs-new/guide/dynamic-overlap).
+
+    To test your project in the Sandbox, set [overlap](/docs-new/glossary#overlap) 1. If you increase the overlap, you will need to register more Tolokers and add trusted accounts.
+
+    When exporting a project to the production version of [Toloka](#export), you can specify the necessary overlap in accordance with your project goals.
+
+1. Log in to the sandbox using the Toloker account and test your tasks. Make sure that the buttons and response validation are set up correctly, and assess how long it takes to complete the tasks. Make sure that the [Toloker selection](/docs-new/guide/filters) and [quality control](/docs-new/guide/control) work.
+
+## How to move a task to the production version of Toloka {#export}
+
+To move tasks from the sandbox to the production version:
+
+1. Link the sandbox and production version accounts:
+
+    1. Open the **Integrations** tab in the production version on the [profile](https://platform.toloka.ai/requester/profile) page, click **Get OAuth token**, and copy the OAuth token displayed.
+
+    1. Open the same tab in the sandbox on the [profile](https://sandbox.toloka.yandex.com/requester/profile) page, paste the copied token into the **Main Toloka OAuth token** field, and click **Add OAuth token**.
+
+1. Go to the project page in the sandbox and click **<img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425165980/1675425165980_original_svg.svg" alt="Drop-down button" /> → <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425190968/1675425190968_original_svg.svg" alt="Export button" /> Export**.
+
+1. Choose the pools to export and click **Export**.
+
+    If the pool has [linked training](/docs-new/guide/train), it is exported automatically.
+
+## Troubleshooting {#troubleshooting}
+
+<FaqWorkWithSandbox/>
+
+<FaqSeePoolAsToloker/>
+
+<FaqSameAccount/>
+
+<TroubleshootingExportError/>
+
+<FaqCheckMobileVersion/>
+
+<FaqCopyFromSandbox/>
+
+<TroubleshootingSubmit/>
+
+<FaqMoveControlTasks/>
+
+<TroubleshootingDontSeeTask/>
+
+<TroubleshootingCantAddTrustedUser/>
+
+<FaqOverlap/>
+
+<FaqChangeOverlap/>
+
+<ContactGuideSupport/>

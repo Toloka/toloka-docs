@@ -1,0 +1,111 @@
+---
+title: "Receiving responses | Toloka documentation"
+date: "2023-02-15T15:15:20.850275"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqRedoTask from '../subcomponents/faq/users/redo-task.mdx'
+import FaqFixMyself from '../subcomponents/faq/result-questions/fix-myself.mdx'
+import FaqSendBack from '../subcomponents/faq/result-questions/send-back.mdx'
+import FaqDisableTasks from '../subcomponents/faq/result-questions/disable-tasks.mdx'
+import TroubleshootingPoolArchived from '../subcomponents/troubleshooting/result-questions/pool-archived.mdx'
+import TroubleshootingRejectedTask from '../subcomponents/troubleshooting/result-questions/rejected-task.mdx'
+import FaqRejectPart from '../subcomponents/faq/result-questions/reject-part.mdx'
+import FaqNotify from '../subcomponents/faq/result-questions/notify.mdx'
+import FaqIncreaseRating from '../subcomponents/faq/result-questions/increase-rating.mdx'
+import TroubleshootingLowRatingSimilarTasks from '../subcomponents/troubleshooting/result-questions/low-rating-similar-tasks.mdx'
+import TroubleshootingLowRatingInstructions from '../subcomponents/troubleshooting/result-questions/low-rating-instructions.mdx'
+import TroubleshootingLowRatingInterface from '../subcomponents/troubleshooting/result-questions/low-rating-interface.mdx'
+import TroubleshootingLowRatingCommunication from '../subcomponents/troubleshooting/result-questions/low-rating-communication.mdx'
+import TroubleshootingBlankSpaces from '../subcomponents/troubleshooting/result-questions/blank-spaces.mdx'
+import FaqEmptyTextField from '../subcomponents/faq/result-questions/empty-text-field.mdx'
+import TroubleshootingIncludeResponses from '../subcomponents/troubleshooting/users/include-responses.mdx'
+import FaqGetTime from '../subcomponents/faq/result-questions/get-time.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import ResultOfEvalList1 from './result-of-eval/subcomponents/result-of-eval-list-1.mdx'
+import ResultOfEvalList2 from './result-of-eval/subcomponents/result-of-eval-list-2.mdx'
+
+# Receiving responses
+
+You can download Tolokers' responses in a file as tasks are completed.
+
+If tasks were distributed with an [overlap](/docs-new/glossary#overlap) of more than 2, run [aggregation](/docs-new/guide/result-aggregation). Toloka will process all Tolokers' responses for the task and form the resulting response.
+
+## Getting the file with responses {#tsv}
+
+<Tabs tabs={[
+  { title: 'In the interface', value: <ResultOfEvalList1/> },
+  { title: 'Via Toloka API', value: <ResultOfEvalList2/> },
+]}/>
+
+## Getting files {#file-download}
+
+If the Tolokers were asked to upload files, the file with responses will contain IDs of the files received from Tolokers. To download files on your computer, click the  button on the pool page.
+
+You can download all files in the pool in one archive up to 4 GB in size. If the archive is too large (more than 4 GB), use the following tips:
+
+- Select a single status or pick a smaller time range.
+
+    For example, if you need to review assignments, only download the submitted assignments rather than the accepted or rejected ones.
+
+    If the file still exceeds the permitted size, pick a smaller time range and download the archives in several batches. The time range can be reduced to 1 day.
+
+- On the pool page, click **Review assignments** (or **View assignments** if they have already been accepted) to go to the page with the Tolokers' responses. Each string contains the Toloker's response to one task suite.
+
+    Select the responses you need and click . Download the archives in several batches. You can select and download no more than 100 responses at a time.
+
+- Use the [Toloka API](https://toloka.ai/docs/api/api-reference/#tag--attachment) to download files with responses.
+
+## See also {#see-also}
+
+- [Crowdsourcing concepts: Results](https://toloka.ai/knowledgebase/results/)
+
+## For developers {#for-developers}
+
+- [Toloka API: Getting responses](/docs-new/api/get-response)
+- [Toloka API: Files in responses](/docs-new/api/attachments)
+- [Toloka-Kit recipe: Get list of responses](/docs-new/toloka-kit/recipes/get-responses)
+- [Toloka-Kit recipe: Get list of files in responses](/docs-new/toloka-kit/recipes/get-attachments)
+- [Toloka-Kit recipe: Download attachments](/docs-new/toloka-kit/recipes/download-attachment)
+
+## Troubleshooting {#troubleshooting}
+
+<FaqRedoTask/>
+
+<FaqFixMyself/>
+
+<FaqSendBack/>
+
+<FaqDisableTasks/>
+
+<TroubleshootingPoolArchived/>
+
+<TroubleshootingRejectedTask/>
+
+<FaqRejectPart/>
+
+<FaqNotify/>
+
+<FaqIncreaseRating/>
+
+<TroubleshootingLowRatingSimilarTasks/>
+
+<TroubleshootingLowRatingInstructions/>
+
+<TroubleshootingLowRatingInterface/>
+
+<TroubleshootingLowRatingCommunication/>
+
+<TroubleshootingBlankSpaces/>
+
+<FaqEmptyTextField/>
+
+<TroubleshootingIncludeResponses/>
+
+<FaqGetTime/>
+
+<ContactGuideSupport/>

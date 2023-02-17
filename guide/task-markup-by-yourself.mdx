@@ -1,0 +1,167 @@
+---
+title: "How to edit tasks by yourself | Toloka documentation"
+date: "2023-02-15T15:15:16.831744"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqProcessingLog from '../subcomponents/faq/adding-tasks-to-the-pool/processing-log.mdx'
+import TroubleshootingUploadingTasksErrors from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/uploading-tasks-errors.mdx'
+import FaqHowManyTasksTolokerWillSee from '../subcomponents/faq/adding-tasks-to-the-pool/how-many-tasks-toloker-will-see.mdx'
+import FaqUploadAcceptedAssignments from '../subcomponents/faq/adding-tasks-to-the-pool/upload-accepted-assignments.mdx'
+import TroubleshootingMarkedAsTraining from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/marked-as-training.mdx'
+import FaqCreateTaskFileProperly from '../subcomponents/faq/adding-tasks-to-the-pool/create-task-file-properly.mdx'
+import TroubleshootingSyntaxError from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/syntax-error.mdx'
+import FaqMaxNumberPerSuite from '../subcomponents/faq/adding-tasks-to-the-pool/max-number-per-suite.mdx'
+import FaqSmartMixing from '../subcomponents/faq/adding-tasks-to-the-pool/smart-mixing.mdx'
+import FaqSmartMixingAfterUploading from '../subcomponents/faq/adding-tasks-to-the-pool/smart-mixing-after-uploading.mdx'
+import FaqRightTimeLimit from '../subcomponents/faq/adding-tasks-to-the-pool/right-time-limit.mdx'
+import FaqTaskSuiteDifference from '../subcomponents/faq/adding-tasks-to-the-pool/task-suite-difference.mdx'
+import TroubleshootingSameTaskOnDifferentPages from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/same-task-on-different-pages.mdx'
+import FaqHowManyTasksInSuite from '../subcomponents/faq/adding-tasks-to-the-pool/how-many-tasks-in-suite.mdx'
+import FaqHowManyControlTasks from '../subcomponents/faq/pool-setup/how-many-control-tasks.mdx'
+import FaqCorrectResponsesCounted from '../subcomponents/faq/pool-setup/correct-responses-counted.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import TaskMarkupByYourselfList1 from './task-markup-by-yourself/subcomponents/task-markup-by-yourself-list-1.mdx'
+import TaskMarkupByYourselfList2 from './task-markup-by-yourself/subcomponents/task-markup-by-yourself-list-2.mdx'
+
+# How to edit tasks by yourself
+
+You can turn a general task into a [control task](/docs-new/glossary#control-task) by adding the correct answer, or into a [training task](/docs-new/glossary#training-task) by adding the correct answer and a hint.
+
+<Cut title="What makes a good hint?">
+
+Avoid wordings like: “You answered incorrectly, please provide the correct response”. The Toloker learns when the hint explains the essence of their mistake.
+
+Make the hints clear. Explain which response should be chosen and why.
+
+</Cut>
+
+<Note mode="restriction" title="Restriction">
+
+Task markup is available only for [training pools](/docs-new/guide/train) and pools uploaded with [“smart mixing”](/docs-new/guide/distribute-tasks-by-pages#smart-mixing).
+
+</Note>
+
+## How do I mark up tasks? {#section_czh_fj2_ghb}
+
+1. Make sure the pool isn't running.
+
+1. Click **Edit** in the **Pool tasks** block.
+
+1. Open the **General**, **Control**, or **Training** tab. Create a control or a training task from another type of task.
+
+1. Select the responses that should be checked. (The list of the [output data fields](/docs-new/guide/incoming) is on the right.)
+
+1. Click **Save and go to next**.
+
+<Cut title="Example of task markup">
+
+In this example, the correct response is added for the control task. Only the choice in the `result` field (Good/Bad/Loading error) is checked.
+
+<Image withBackground imageId="1675426690739" alt="" />
+
+</Cut>
+
+## Improve the reliability of control tasks {#answer_distribution}
+
+After you have created the control tasks, make sure that different variations of correct responses occur with the same frequency. This will help avoid random guessing in responses.
+
+1. Go to the task markup page.
+
+1. Open the **Training tasks → Distribution of correct responses for control tasks** tab.
+
+    The distribution of responses is shown as a percentage.
+
+<Note mode="tip" title="Tip">
+
+When creating control tasks, enter only correct responses that answer the question. So for an image classification task, **Image loading error** is not a correct response that answers the task question.
+
+</Note>
+
+#### Example of response distribution
+
+<Tabs tabs={[
+  { title: 'Correct', value: <TaskMarkupByYourselfList1/> },
+  { title: 'Incorrect', value: <TaskMarkupByYourselfList2/> },
+]}/>
+
+## How to edit tasks {#task-edit}
+
+1. Make sure the pool isn't running.
+
+1. Click **Edit** in the **Pool tasks** block.
+
+1. Click the tab with the type of the task.
+
+1. Find the task in the list and click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425172884/1675425172884_original_svg.svg" alt="" /> . Editing mode opens.
+
+## How to delete a task from the pool {#delete-task}
+
+1. Make sure the pool isn't running.
+
+1. Click **Edit** in the **Pool tasks** block.
+
+1. Click the tab with the type of the task.
+
+1. Find the task in the list and click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425193044/1675425193044_original_svg.svg" alt="" />. You can also delete a task from the pool in [editing mode](#task-edit).
+
+<Note mode="tip" title="Tip">
+
+If you set the overlap to 0 [via the API](/docs-new/api/set-min-task-overlap), the task won't be visible to Tolokers, and you won't have to delete it.
+
+</Note>
+
+## What's next {#what_next}
+
+- [Add a training pool](/docs-new/guide/train).
+- [Top up your account](/docs-new/guide/refill).
+- [Start the pool](/docs-new/guide/pool-run-and-stop).
+
+## See also {#see-also}
+
+- [Efficiency indicators: Control tasks](/docs-new/guide/efficiency-metrics/control-tasks-share)
+- [Efficiency indicators: Control task balance](/docs-new/guide/efficiency-metrics/control-tasks-balance)
+
+## Troubleshooting {#troubleshooting}
+
+<Cut title="Uploading tasks to a pool">
+
+<FaqProcessingLog/>
+
+<TroubleshootingUploadingTasksErrors/>
+
+<FaqHowManyTasksTolokerWillSee/>
+
+<FaqUploadAcceptedAssignments/>
+
+<TroubleshootingMarkedAsTraining/>
+
+<FaqCreateTaskFileProperly/>
+
+<TroubleshootingSyntaxError/>
+
+<FaqMaxNumberPerSuite/>
+
+<FaqSmartMixing/>
+
+<FaqSmartMixingAfterUploading/>
+
+<FaqRightTimeLimit/>
+
+<FaqTaskSuiteDifference/>
+
+<TroubleshootingSameTaskOnDifferentPages/>
+
+</Cut>
+
+<FaqHowManyTasksInSuite/>
+
+<FaqHowManyControlTasks/>
+
+<FaqCorrectResponsesCounted/>
+
+<ContactGuideSupport/>

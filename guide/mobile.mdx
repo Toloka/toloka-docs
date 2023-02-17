@@ -1,0 +1,130 @@
+---
+title: "Adapt a task for mobile devices | Toloka documentation"
+date: "2023-02-15T15:15:17.678444"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import MobileList1 from './mobile/subcomponents/mobile-list-1.mdx'
+import MobileList2 from './mobile/subcomponents/mobile-list-2.mdx'
+import MobileList3 from './mobile/subcomponents/mobile-list-3.mdx'
+import MobileList4 from './mobile/subcomponents/mobile-list-4.mdx'
+import MobileList5 from './mobile/subcomponents/mobile-list-5.mdx'
+
+# Adapt a task for mobile devices
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in [Template Builder](/docs-new/template-builder/).
+
+</Note>
+
+By default, the task is available in both the web version of Toloka and the mobile app.
+
+To run the task on mobile apps, follow these steps:
+
+<Cut title="Step 1. Make sure that your task is suitable for mobile devices.">
+
+The following tasks don't work on mobile devices:
+
+- Tasks with embedded web pages (iframes).
+- Area selection in an image.
+- Video quality rating.
+- Tasks with large images.
+- Side-by-side image comparison where images should be placed next to each other on the screen.
+- Tasks that require typing a lot of text.
+
+Tasks that work well on mobile devices include classification, surveys, evaluation of short texts, moderation of comments, and so on.
+
+</Cut>
+
+<Cut title="Step 2. Improve the display quality for tasks shown on mobile devices.">
+
+We recommend that you use the [Template Builder](/docs-new/template-builder/). It will make it easier for you to adapt your tasks for mobile devices.
+
+Add the following code to the **CSS** block:
+
+```css
+@media screen and (max-width: 800px) {
+
+ .task {
+  width: 93%;
+
+ }
+ .popup__text {
+  width:auto;
+ }
+
+ .field{
+  white-space: normal;
+  display: block;
+  width: 100% !important;
+ }
+
+ br {
+  display: none
+ }
+}
+
+@media (pointer: coarse) {
+  .field__hotkey, .inplace_instruction  {
+    display: none;
+  }
+}
+```
+
+This code changes the [task interface](/docs-new/glossary#task-interface) for devices with the screen width of less than 800 pixels:
+
+- Accommodates all interface elements on the smartphone screen.
+- Makes sure that the hints don't go beyond the screen.
+- Removes keyboard shortcuts.
+- Adds line breaks for fields.
+- Removes empty rows.
+
+</Cut>
+
+<Cut title="Step 3. Check how the task will be displayed on mobile devices.">
+
+<Tabs tabs={[
+  { title: 'Chrome', value: <MobileList1/> },
+  { title: 'Firefox', value: <MobileList2/> },
+  { title: 'Opera', value: <MobileList3/> },
+  { title: 'Safari', value: <MobileList4/> },
+  { title: 'Yandex Browser', value: <MobileList5/> },
+]}/>
+
+<Note mode="tip" title="Tip">
+
+If the task doesn't display well, go back to the CSS block and add the missing styles to `@media screen and (max-width: 800px)`. If you aren't familiar with the CSS and HTML languages, use professional services or contact [support](/docs-new/guide/troubleshooting/support).
+
+</Note>
+
+</Cut>
+
+<Cut title="Step 4. When adding a task pool, enable display only on mobile devices in filters.">
+
+Tasks in pools will automatically be available in the web version of Toloka and the mobile app. If you want to change the default settings and limit the visibility of the task for any of the versions, add the **Client** and select the desired value: **Toloka web version** or **Toloka for mobile**.
+
+<Image withBackground imageId="1675426544190" alt="" />
+
+</Cut>
+
+## What's next {#what-next}
+
+- [Create a task pool](/docs-new/guide/pool-main) in the project.
+- Learn more about how to set up a [project](/docs-new/glossary#project):
+
+    - [Writing instructions](/docs-new/guide/instruction).
+    - [Input and output data](/docs-new/guide/incoming).
+    - [Task interface](/docs-new/guide/spec).
+    - [Setting up quality control](/docs-new/guide/project-qa).
+
+## See also {#see-also}
+
+- [Checking project](/docs-new/guide/self-labeling)
+
+<ContactGuideSupport/>

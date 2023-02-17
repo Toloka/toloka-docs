@@ -1,0 +1,361 @@
+---
+title: "Task interface | Toloka documentation"
+date: "2023-02-15T15:15:21.263536"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TroubleshootingCantUpoadFile from '../subcomponents/troubleshooting/project-settings/cant-upoad-file.mdx'
+import FaqMobileTaskDisplay from '../subcomponents/faq/project-settings/mobile-task-display.mdx'
+import FaqHideExpandable from '../subcomponents/faq/project-settings/hide-expandable.mdx'
+import FaqCalendar from '../subcomponents/faq/project-settings/calendar.mdx'
+import FaqLoadingAudioFiles from '../subcomponents/faq/project-settings/loading-audio-files.mdx'
+import FaqAddText from '../subcomponents/faq/project-settings/add-text.mdx'
+import TroubleshootingAllCheckboxes from '../subcomponents/troubleshooting/project-settings/all-checkboxes.mdx'
+import FaqLinkNotRequired from '../subcomponents/faq/project-settings/link-not-required.mdx'
+import FaqMakeTasks from '../subcomponents/faq/project-settings/make-tasks.mdx'
+import TroubleshootingSubmitDoesntWork from '../subcomponents/troubleshooting/project-settings/submit-doesnt-work.mdx'
+import FaqCheckboxSelected from '../subcomponents/faq/project-settings/checkbox-selected.mdx'
+import FaqDifferentNumbers from '../subcomponents/faq/project-settings/different-numbers.mdx'
+import FaqDeselectRadio from '../subcomponents/faq/project-settings/deselect-radio.mdx'
+import FaqAssigmentValidation from '../subcomponents/faq/project-settings/assigment-validation.mdx'
+import FaqChangeBackground from '../subcomponents/faq/project-settings/change-background.mdx'
+import FaqOwnColors from '../subcomponents/faq/project-settings/own-colors.mdx'
+import FaqSliders from '../subcomponents/faq/project-settings/sliders.mdx'
+import FaqExpandWindow from '../subcomponents/faq/project-settings/expand-window.mdx'
+import FaqUseOwnJs from '../subcomponents/faq/project-settings/use-own-js.mdx'
+import TroubleshootingRadioAttrDisappear from '../subcomponents/troubleshooting/project-settings/radio-attr-disappear.mdx'
+import FaqImplementPrettifier from '../subcomponents/faq/project-settings/implement-prettifier.mdx'
+import TroubleshootingIframeContent from '../subcomponents/troubleshooting/project-settings/iframe-content.mdx'
+import FaqPassValue from '../subcomponents/faq/project-settings/pass-value.mdx'
+import FaqLineByLine from '../subcomponents/faq/project-settings/line-by-line.mdx'
+import FaqUseInputData from '../subcomponents/faq/project-settings/use-input-data.mdx'
+import FaqDisplayFormattedText from '../subcomponents/faq/project-settings/display-formatted-text.mdx'
+import FaqVariableNumber from '../subcomponents/faq/project-settings/variable-number.mdx'
+import FaqDisplayText from '../subcomponents/faq/project-settings/display-text.mdx'
+import FaqVueMarkup from '../subcomponents/faq/project-settings/vue-markup.mdx'
+import FaqSetsolution from '../subcomponents/faq/project-settings/setsolution.mdx'
+import FaqValidateData from '../subcomponents/faq/project-settings/validate-data.mdx'
+import FaqImageExpand from '../subcomponents/faq/project-settings/image-expand.mdx'
+import FaqShortcut from '../subcomponents/faq/project-settings/shortcut.mdx'
+import FaqShowPhoto from '../subcomponents/faq/project-settings/show-photo.mdx'
+import FaqPreventAddingPhotos from '../subcomponents/faq/project-settings/prevent-adding-photos.mdx'
+import FaqDifferentAreas from '../subcomponents/faq/project-settings/different-areas.mdx'
+import FaqSideBySide from '../subcomponents/faq/project-settings/side-by-side.mdx'
+import FaqNoSelectableObject from '../subcomponents/faq/project-settings/no-selectable-object.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import SpecList1 from './spec/subcomponents/spec-list-1.mdx'
+import SpecList2 from './spec/subcomponents/spec-list-2.mdx'
+import SpecList3 from './spec/subcomponents/spec-list-3.mdx'
+
+# Task interface
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in the [Template Builder](/docs-new/template-builder/).
+
+</Note>
+
+The task interface defines the visual appearance of the [task](/docs-new/glossary#task) for the Toloker and the logic for processing responses.
+
+A user-friendly interface improves the quality of results, helps Tolokers complete tasks faster, and lets you set a lower price per task.
+
+To learn how to create a user-friendly interface, read the article in our [knowledge base](https://toloka.ai/knowledgebase/interface).
+
+## Interface configuration block {#interface-section}
+
+<Note mode="tip" title="Tip">
+
+To open the **HTML**, **CSS**, and **JS** blocks in the interface, click the block name on the right.
+
+</Note>
+
+### HTML block {#html}
+
+Add elements for the [input and output data](/docs-new/guide/incoming) to display in the task interface in this block. You can use special [components](/docs-new/guide/t-components) or HTML tags inside the `<body>` tag.
+
+[Handlebars](/docs-new/guide/t-components/handlebars) is used as a template engine for HTML.
+
+<Cut title="How do I add a component?">
+
+1. Open the task interface editor. To do this, find the **Task interface** section, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425190286/1675425190286_original_svg.svg" alt="" />, and select the component.
+
+    Click **Learn more** to see an example and a full list of parameters.
+
+1. Copy the expression using the <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425169666/1675425169666_original_svg.svg" alt="" /> button and paste it into the HTML block.
+
+1. Enter the field name from the input or output data.
+
+</Cut>
+
+<Cut title="Examples of using input data">
+
+<Cut title="Display the text in the task">
+
+Add the `text` field with the `string` type in the input data. Then in the task interface (in the HTML block), you can add this text as a variable, for example:
+
+```html
+<p>Read the text: {{text}}</p>
+```
+
+</Cut>
+
+<Cut title="Upload a file to the task (for example, an image)">
+
+Add the `url` field with the `URL` type in the input data. Then add the [Picture](/docs-new/guide/t-components/img) component in the task interface (in the HTML block) and specify the field name in the `src` attribute:
+
+```html
+{{img src=url width="400px" height="300px"}}
+```
+
+</Cut>
+
+</Cut>
+
+<Cut title="Examples of using output data">
+
+<Cut title="Ask Tolokers to enter the text">
+
+Add the `input` field with the `string` type in the output data. Make the field required. Then add the [Text input field](/docs-new/guide/t-components/text) field in the task interface (in the HTML block) and specify the field name in the `name` attribute:
+
+```html
+{{field type="textarea" name="input" width="270px" rows=5}}
+```
+
+</Cut>
+
+<Cut title="Ask Tolokers to select one of the values">
+
+Add the `result` field with the `string` type in the output data. Make this field required and specify `Yes` and `No` as acceptable values. Then add a component [Radio button](/docs-new/guide/t-components/radiobuttons) component in the task interface (in the HTML block) and specify the field name in the `name` attribute:
+
+```html
+{{field type="radio" name="result" label="Yes" value="Yes" hotkey="1"}}
+{{field type="radio" name="result" label="No" value="No" hotkey="2"}}
+```
+
+</Cut>
+
+</Cut>
+
+<Image withBackground imageId="1675426652633" alt="" />
+
+### JavaScript block {#js}
+
+In the **JS** block, you can add rules for response processing in JavaScript. [Special extensions for task classes](/docs-new/guide/spec-advanced) are available for this purpose.
+
+You can also connect JavaScript libraries to create the interface. For example, if you have several [projects](/docs-new/glossary#project) with similar tasks, save the method descriptions in a separate file and add it as a library.
+
+To connect the JavaScript library, click the <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425167322/1675425167322_original_svg.svg" alt="" /> button in the **Task interface** block and add links to libraries in the **JS** field.
+
+### CSS block {#css}
+
+In the **CSS** block, you can declare the design for tags and classes. For example, the indent at the bottom after a text field with the `task-text` class:
+
+```css
+.task-text{
+  margin-bottom: 15px;
+};
+```
+
+In addition, you can connect a CSS library. To do this, click the <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425167322/1675425167322_original_svg.svg" alt="" /> button in the **Task interface** block and add links to libraries in the **CSS** filed.
+
+## Preview features {#preview}
+
+<Note mode="restriction" title="Alert">
+
+Changes to the input and output data, as well as the number of tasks per suite aren't saved after you exit **Preview**.
+
+</Note>
+
+To view the resulting task, click **Preview task**. The preview shows a page with a task that contains standard data. Change the input data and make sure that images, links, or text are displayed correctly on the [task suite](/docs-new/glossary#task-suite). You can also complete one or more tasks and get responses.
+
+<Cut title="How do I change the number of standard tasks?">
+
+You can change the number of tasks with standard data on the preview page:
+
+1. Click **Change input data**.
+
+1. To add a task, click **Add task**.
+
+    To delete a task, click its number, then click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425166392/1675425166392_original_svg.svg" alt="" />.
+
+1. Click **Apply**.
+
+</Cut>
+
+<Cut title="How to check the input data display">
+
+Add input data to check if files or text hints are displayed on the task suite. To do this, click **Change input data** and choose one of the methods:
+
+<Tabs tabs={[
+  { title: 'Filling in the table', value: <SpecList1/> },
+  { title: 'File upload', value: <SpecList2/> },
+  { title: 'Data in JSON format', value: <SpecList3/> },
+]}/>
+
+</Cut>
+
+<Cut title="How do I check if output data is received correctly?">
+
+You can check some of the received data on the task suite.
+
+To check if the data from text comments or checkboxes is received correctly, fill in these task fields and click **Submit**. Then click **View responses**.
+
+<Note mode="tip" title="Tip">
+
+Use the [Sandbox](/docs-new/glossary#sandbox) to check if files, images, audio, or videos submitted from the task suite are received correctly. To do this, complete the project creation, create the same project in the Sandbox, and [complete](/docs-new/guide/sandbox) it from a trusted user account.
+
+</Note>
+
+</Cut>
+
+## Controls in a task {#controls}
+
+To change the set of controls, click **Show common interface elements** at the bottom of the **Task Interface** section.
+
+By default, the task suite displays:
+
+- **Remaining time**: Counts down the time for completing the task.
+
+- **Price per task suite**.
+
+- **Task name**: Corresponds to the project name.
+
+- The following buttons:
+
+  - **Contact requester button**.
+
+  - **Instructions**.
+
+  - **Fullscreen**.
+
+  - **Submit**.
+
+  - **Skip**.
+
+  - **Exit**.
+
+<Note mode="tip" title="Tip">
+
+Read the [article](https://toloka.ai/knowledgebase/interface) on how to make the task interface intuitive and user-friendly.
+
+</Note>
+
+## What's next {#what-next}
+
+- [Adapt the task interface for mobile devices](/docs-new/guide/mobile).
+- [Create a task pool in the project](/docs-new/guide/pool-main).
+- Learn more about how to set up a project:
+
+    - [Writing instructions](/docs-new/guide/instruction).
+    - [Input and output data](/docs-new/guide/incoming).
+    - [Setting up quality control](/docs-new/guide/project-qa).
+
+## See also {#see-also}
+
+- [Crowdsourcing concepts: Instructions](https://toloka.ai/knowledgebase/instruction/)
+- [Crowdsourcing concepts: Interfaces](https://toloka.ai/knowledgebase/interface/)
+- [Editing a project](/docs-new/guide/edit-project)
+
+## Troubleshooting {#troubleshooting}
+
+<Cut title="Setting up tasks, preview">
+
+<TroubleshootingCantUpoadFile/>
+
+<FaqMobileTaskDisplay/>
+
+<FaqHideExpandable/>
+
+<FaqCalendar/>
+
+<FaqLoadingAudioFiles/>
+
+</Cut>
+
+<Cut title="Setting up controls">
+
+<FaqAddText/>
+
+<TroubleshootingAllCheckboxes/>
+
+<FaqLinkNotRequired/>
+
+<FaqMakeTasks/>
+
+<TroubleshootingSubmitDoesntWork/>
+
+<FaqCheckboxSelected/>
+
+<FaqDifferentNumbers/>
+
+<FaqDeselectRadio/>
+
+<FaqAssigmentValidation/>
+
+<FaqChangeBackground/>
+
+<FaqOwnColors/>
+
+<FaqSliders/>
+
+<FaqExpandWindow/>
+
+<FaqUseOwnJs/>
+
+<TroubleshootingRadioAttrDisappear/>
+
+<FaqImplementPrettifier/>
+
+</Cut>
+
+<Cut title="Input and output data">
+
+<TroubleshootingIframeContent/>
+
+<FaqPassValue/>
+
+<FaqLineByLine/>
+
+<FaqUseInputData/>
+
+<FaqDisplayFormattedText/>
+
+<FaqVariableNumber/>
+
+<FaqDisplayText/>
+
+</Cut>
+
+<Cut title="Validation">
+
+<FaqVueMarkup/>
+
+<FaqSetsolution/>
+
+<FaqValidateData/>
+
+</Cut>
+
+<Cut title="Tasks with images">
+
+<FaqImageExpand/>
+
+<FaqShortcut/>
+
+<FaqShowPhoto/>
+
+<FaqPreventAddingPhotos/>
+
+<FaqDifferentAreas/>
+
+<FaqSideBySide/>
+
+<FaqNoSelectableObject/>
+
+</Cut>
+
+<ContactGuideSupport/>

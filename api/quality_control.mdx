@@ -1,0 +1,35 @@
+---
+title: "Overview — Toloka API | Toloka documentation"
+date: "2023-02-03T19:53:29.535843"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+# Overview
+
+Quality control rules help regulate access to a project or pool: you can filter out Tolokers who give incorrect responses in control tasks, skip too many tasks in a row, respond too fast, and so on.
+
+A rule consists of two parts: the condition ("If"), and the action to perform when the condition is met ("then"). If there are multiple conditions, they are combined using AND.
+
+To define quality control rules, add an array of `quality_control.configs` JSON objects to the pool.
+
+## Quality control rules {#quality-control-blocks}
+
+- [Control tasks](/docs-new/api/goldenset)
+- [Majority vote](/docs-new/api/mv)
+- [Entering captchas](/docs-new/api/captcha)
+- [Compensation amount](/docs-new/api/earn_limit)
+- [Skipped assignments](/docs-new/api/skipped)
+- [Submitted assignments](/docs-new/api/completed)
+- [Fast responses](/docs-new/api/fast)
+- [Rejected tasks](/docs-new/api/accept_ban)
+- [Processing rejected and accepted assignments](/docs-new/api/reassessment)
+- [Recompletion of assignments](/docs-new/api/restore-task-overlap)
+
+## See also {#see-also}
+
+- [Quality control rules](/docs-new/guide/control)
+- [How to check Tolokers](/docs-new/guide/check-performers)

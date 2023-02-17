@@ -1,0 +1,164 @@
+---
+title: "Creating a file with tasks | Toloka documentation"
+date: "2023-02-15T15:15:26.445027"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqHowManyTasksInSuite from '../subcomponents/faq/adding-tasks-to-the-pool/how-many-tasks-in-suite.mdx'
+import TroubleshootingUploadingTasksErrors from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/uploading-tasks-errors.mdx'
+import TroubleshootingUploadingTooLong from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/uploading-too-long.mdx'
+import FaqHowManyTasksTolokerWillSee from '../subcomponents/faq/adding-tasks-to-the-pool/how-many-tasks-toloker-will-see.mdx'
+import FaqUploadAcceptedAssignments from '../subcomponents/faq/adding-tasks-to-the-pool/upload-accepted-assignments.mdx'
+import TroubleshootingMarkedAsTraining from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/marked-as-training.mdx'
+import FaqCreateTaskFileProperly from '../subcomponents/faq/adding-tasks-to-the-pool/create-task-file-properly.mdx'
+import TroubleshootingSyntaxError from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/syntax-error.mdx'
+import FaqMaxNumberPerSuite from '../subcomponents/faq/adding-tasks-to-the-pool/max-number-per-suite.mdx'
+import FaqSmartMixing from '../subcomponents/faq/adding-tasks-to-the-pool/smart-mixing.mdx'
+import FaqSmartMixingAfterUploading from '../subcomponents/faq/adding-tasks-to-the-pool/smart-mixing-after-uploading.mdx'
+import FaqRightTimeLimit from '../subcomponents/faq/adding-tasks-to-the-pool/right-time-limit.mdx'
+import FaqTaskSuiteDifference from '../subcomponents/faq/adding-tasks-to-the-pool/task-suite-difference.mdx'
+import TroubleshootingSameTaskOnDifferentPages from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/same-task-on-different-pages.mdx'
+import TroubleshootingPreviewAllPhotos from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/preview-all-photos.mdx'
+import FaqMultipleKnownSolutions from '../subcomponents/faq/adding-tasks-to-the-pool/multiple-known-solutions.mdx'
+import FaqWhereIsFileAdded from '../subcomponents/faq/adding-tasks-to-the-pool/where-is-file-added.mdx'
+import FaqProperlyStructureJson from '../subcomponents/faq/adding-tasks-to-the-pool/properly-structure-json.mdx'
+import FaqArrayInputFile from '../subcomponents/faq/adding-tasks-to-the-pool/array-input-file.mdx'
+import FaqOrderInput from '../subcomponents/faq/adding-tasks-to-the-pool/order-input.mdx'
+import FaqMissingHeaders from '../subcomponents/faq/adding-tasks-to-the-pool/missing-headers.mdx'
+import TroubleshootingCommasInsideArray from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/commas-inside-array.mdx'
+import FaqHowHintDisplayed from '../subcomponents/faq/adding-tasks-to-the-pool/how-hint-displayed.mdx'
+import FaqAddYourTextHere from '../subcomponents/faq/adding-tasks-to-the-pool/add-your-text-here.mdx'
+import TroubleshootingDoubleQuotasDisappear from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/double-quotas-disappear.mdx'
+import FaqLinkGoldenField from '../subcomponents/faq/adding-tasks-to-the-pool/link-golden-field.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import PoolCsvList1 from './pool_csv/subcomponents/pool_csv-list-1.mdx'
+import PoolCsvList2 from './pool_csv/subcomponents/pool_csv-list-2.mdx'
+import PoolCsvList3 from './pool_csv/subcomponents/pool_csv-list-3.mdx'
+import PoolCsvList4 from './pool_csv/subcomponents/pool_csv-list-4.mdx'
+import PoolCsvList5 from './pool_csv/subcomponents/pool_csv-list-5.mdx'
+
+# Creating a file with tasks
+
+Tasks are uploaded to the [pool](/docs-new/guide/pool-main) in [the tasks file](/docs-new/glossary#tsv).
+
+Download the file template for your [project](/docs-new/glossary#project) on the [pool](/docs-new/glossary#pool) page. Use the template to create your own task file and upload it to the pool.
+
+<Cut title="Use sample data">
+
+If you want to see what your project will look like after the launch, but you don't have any labeling tasks yet, you can upload ready-made sample data to the pool. Sample data is available for templates:
+
+- **Image classification**
+- **Product search relevance**
+- **Object recognition & detection**
+- **Clickbait or not?**
+
+Click **Use sample data** next to **Attach the prepared file with data**. This lets you avoid any additional actions with files.
+
+Once you've finished working with the sample data and everything looks good, prepare your data and upload it to the pool.
+
+</Cut>
+
+If you need to add different task types to the pool, upload multiple files, one for each task type.
+
+## Tasks file structure {#structure}
+
+<Tabs tabs={[
+  { title: 'TSV/XLSX', value: <PoolCsvList1/> },
+  { title: 'JSON', value: <PoolCsvList2/> },
+]}/>
+
+## Working with the file {#applications}
+
+In popular spreadsheet editors, you can import and export data in TSV or XLSX:
+
+- [MS Excel](https://support.microsoft.com/en-us/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba?ui=en-us&rs=en-us&ad=us)
+- [LibreOffice](https://wiki.documentfoundation.org/Faq/Calc/012)
+- [Google Documents](https://support.google.com/docs/answer/40608?hl=en&ref_topic=1361470).
+
+A text editor is good for JSON files (for example, Notepad on Windows or TextEdit on Mac OS).
+
+You can work with data in an editor and then save it in the desired format.
+
+<Tabs tabs={[
+  { title: 'TSV', value: <PoolCsvList3/> },
+  { title: 'XLSX', value: <PoolCsvList4/> },
+  { title: 'JSON', value: <PoolCsvList5/> },
+]}/>
+
+The maximum file size is 100 MB.
+
+## What's next {#what_next}
+
+- [Upload tasks to the pool](/docs-new/guide/task_upload).
+
+## Troubleshooting {#troubleshooting}
+
+<Cut title="Uploading tasks to a pool">
+
+<FaqHowManyTasksInSuite/>
+
+<TroubleshootingUploadingTasksErrors/>
+
+<TroubleshootingUploadingTooLong/>
+
+<FaqHowManyTasksTolokerWillSee/>
+
+<FaqUploadAcceptedAssignments/>
+
+<TroubleshootingMarkedAsTraining/>
+
+<FaqCreateTaskFileProperly/>
+
+<TroubleshootingSyntaxError/>
+
+<FaqMaxNumberPerSuite/>
+
+<FaqSmartMixing/>
+
+<FaqSmartMixingAfterUploading/>
+
+<FaqRightTimeLimit/>
+
+<FaqTaskSuiteDifference/>
+
+<TroubleshootingSameTaskOnDifferentPages/>
+
+</Cut>
+
+<Cut title="Tasks file">
+
+<TroubleshootingPreviewAllPhotos/>
+
+<FaqMultipleKnownSolutions/>
+
+<FaqWhereIsFileAdded/>
+
+<FaqProperlyStructureJson/>
+
+<FaqArrayInputFile/>
+
+<FaqOrderInput/>
+
+<FaqMissingHeaders/>
+
+</Cut>
+
+<Cut title="Input data">
+
+<TroubleshootingCommasInsideArray/>
+
+<FaqHowHintDisplayed/>
+
+<FaqAddYourTextHere/>
+
+<TroubleshootingDoubleQuotasDisappear/>
+
+<FaqLinkGoldenField/>
+
+</Cut>
+
+<ContactGuideSupport/>

@@ -1,0 +1,108 @@
+---
+title: "Compensation amount — Toloka API | Toloka documentation"
+date: "2023-02-03T19:53:31.221364"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import EarnLimitList1 from './earn_limit/subcomponents/earn_limit-list-1.mdx'
+import EarnLimitList2 from './earn_limit/subcomponents/earn_limit-list-2.mdx'
+import EarnLimitList3 from './earn_limit/subcomponents/earn_limit-list-3.mdx'
+import EarnLimitTable1 from './earn_limit/subcomponents/earn_limit-table-1.mdx'
+import EarnLimitTable2 from './earn_limit/subcomponents/earn_limit-table-2.mdx'
+import EarnLimitTable3 from './earn_limit/subcomponents/earn_limit-table-3.mdx'
+import EarnLimitTable4 from './earn_limit/subcomponents/earn_limit-table-4.mdx'
+import EarnLimitTable5 from './earn_limit/subcomponents/earn_limit-table-5.mdx'
+import EarnLimitTable6 from './earn_limit/subcomponents/earn_limit-table-6.mdx'
+import EarnLimitTable7 from './earn_limit/subcomponents/earn_limit-table-7.mdx'
+import EarnLimitTable8 from './earn_limit/subcomponents/earn_limit-table-8.mdx'
+
+# Compensation amount
+
+## Overview {#about}
+
+You can restrict the total amount of compensation per Toloker in a pool. When the set amount is reached, the Toloker can no longer access tasks. This limit allows you to:
+
+- Get responses from as many Tolokers as possible (for this purpose, set a low threshold, such as the price of a single task suite).
+- Protect yourself from robots (for this purpose, the threshold should be higher, such as 10% of the price for the entire pool).
+
+Set key values in the `quality_control.configs` array in the pool settings.
+
+## Request body {#body}
+
+The Toloker is banned from the requester's projects when the Toloker's daily earnings on tasks in the pool reaches 20 dollars.
+
+You can ban a Toloker for a given number of days, hours, minutes (at a time or in total) or forever.
+
+### Ban for 10 days
+
+```json
+{
+  "configs": [
+    {
+      "collector_config": {
+        "type": "INCOME"
+      },
+      "rules": [
+        {
+          "conditions": [
+            {
+              "key": "income_sum_for_last_24_hours",
+              "operator": "GTE",
+              "value": 20
+            }
+          ],
+          "action": {
+            "type": "RESTRICTION_V2",
+            "parameters": {
+              "scope": "ALL_PROJECTS",
+              "duration_unit": "DAYS",
+              "duration": 10,
+              "private_comment": "Too many tasks have been completed"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+To set a different ban period, change the applicable [parameter](/docs-new/api/goldenset#configs-rules-action-parameters-duration) for the `action` key:
+
+<Tabs tabs={[
+  { title: 'for 12 hours', value: <EarnLimitList1/> },
+  { title: 'for 30 minutes', value: <EarnLimitList2/> },
+  { title: 'permanently', value: <EarnLimitList3/> },
+]}/>
+
+Parameter | Overview
+----- | -----
+**configs[]** | **array of objects \| required**<br/><br/>Array of quality control settings.
+**configs.collector_config** | **object \| required**<br/><br/>Parameters for collecting statistics (for example, the number of tasks skipped in the pool).
+**configs.collector_config.type** | <EarnLimitTable1/>
+**configs.rules.conditions** | **object \| required**<br/><br/>Conditions (for example, 10 task suites skipped in a row). Multiple conditions are combined with the "OR" operator.
+**configs.rules.conditions.key** | <EarnLimitTable2/>
+**configs.rules.conditions. operator** | <EarnLimitTable3/>
+**configs.rules.conditions. value** | **integer \| required**<br/><br/>The threshold value of the variable specified in `key`.
+**configs.rules.action** | **object \| required**<br/><br/>The action to perform if conditions are met (for example, block access to the project).
+**configs.rules.action.type** | <EarnLimitTable4/>
+**configs.rules.action. parameters** | **object \| required**<br/><br/>Action parameters.
+**configs.rules.action. parameters.scope** | <EarnLimitTable5/>
+**configs.collector_config. parameters** | **object \| required if**<br/><br/>Required if `configs.collector_config.type=``GOLDEN_SET`, `MAJORITY_VOTE`, `CAPTCHA`, `ASSIGNMENT_SUBMIT_TIME`.<br/><br/>Parameters for collecting data (depends on the quality control rule specified in the `type` key).
+**configs.rules.action. parameters.skill_id** | **string \| required if**<br/><br/>Required if `type=SET_SKILL_FROM_OUTPUT_FIELD`.<br/><br/>ID of the skill to update as tasks are completed.
+**configs.rules.action. parameters.from_field** | <EarnLimitTable6/>
+**configs.rules.action. parameters.skill_value** | **integer \| required if**<br/><br/>Required if `type=SET_SKILL_FROM_OUTPUT_FIELD`.<br/><br/>A fixed value to assign to the skill (a number from 0 to 100).
+**configs.rules.action. parameters.delta** | **integer \| required if**<br/><br/>Required if `type=CHANGE_OVERLAP`.<br/><br/>The value determines the amount to change the overlap by.
+**configs.rules.action. parameters.public_comment** | **string \| required if**<br/><br/>Required if `type=REJECT_ALL_ASSIGNMENTS`.<br/><br/>Comments (the reason for rejecting responses). Available to the requester and the Toloker.
+**configs.rules.action. parameters.open_pool** | <EarnLimitTable7/>
+**configs.rules.action. parameters.duration_unit** | <EarnLimitTable8/>
+**configs.rules.action. parameters.duration** | **integer**<br/><br/>Ban duration.
+**configs.rules. action.parameters. private_comment** | **string**<br/><br/>Comments (the reason for blocking access). Visible only to the requester.
+
+## See also {#see-also}
+
+- [Earnings](/docs-new/guide/income)

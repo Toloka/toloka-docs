@@ -1,0 +1,79 @@
+---
+title: "Generating API tokens | Toloka documentation"
+date: "2023-02-15T15:15:14.577926"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+# Generating API tokens
+
+After you login to the platform with [single sign-on](/docs-new/guide/sso/microsoft-authentication) (SSO) authentication method, you can generate new tokens. You can use them for API requests or for the integration applications. The previously generated tokens will continue to work, but will be deprecated with time.
+
+<Note mode="tip" title="Tip">
+
+You can generate up to **50** tokens. We recommend that you generate and use a separate token for each of the integrations you have.
+
+</Note>
+
+## Generating tokens
+
+1. Go to **Profile → Integrations** or follow [this link](https://platform.toloka.ai/requester/profile/integration). Click **<img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425166901/1675425166901_original_svg.svg" alt="Plus sign" /> Add token**:
+
+    <Image withBackground imageId="1675426516899" alt="Add token" />
+
+1. Enter a unique name or description for the token. Uniqueness is not required, but it will allow you to distinguish this token in case you have several ones. Click **Generate**:
+
+    <Image withBackground imageId="1675426502664" alt="Enter token name" />
+
+1. A new token will be generated. Click **Copy and close** to copy the token into the clipboard and close the dialog window:
+
+    <Image withBackground imageId="1675426524161" alt="Copy and close" />
+
+    <Note mode="warning" title="Warning">
+
+    You will not be able to view or copy the token after you close this window. This is done for security reasons. If you lose it, you will need to delete it and generate a new one.
+
+    </Note>
+
+1. Your newly generated token will be added to the list of the tokens associated with your account:
+
+    <Image withBackground imageId="1675426520685" alt="List of tokens" />
+
+    Here you can view the details about your generated tokens: their names, first characters, creation date, and usage information.
+
+    Click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425169249/1675425169249_original_svg.svg" alt="Delete button" /> in the token upper-right area to delete it.
+
+## Testing tokens
+
+To test the created token, use the following shell command:
+
+```bash
+curl -X GET 'https://toloka.dev/api/v1/requester' -H 'Authorization: OAuth YOUR_TOKEN'
+```
+
+Replace the `YOUR_TOKEN` substring with the API token that you received and copied at the previous steps.
+
+If you entered a correct value, you will receive a response like this with the `200` status code and basic information about your account:
+
+```json
+{
+  "balance": 100,
+  "company": {
+    "id": "123",
+    "superintendent_id": "eaf25678e128e14dea651d8c32471f21"
+  },
+  "id": "eaf25678e128e14dea651d8c32471f21",
+  "public_name": {
+    "EN": "John Smith"
+  }
+}
+```
+
+Now you can use the created API token to send other API requests: get the list of the existing [projects](/docs-new/api/get-prj-list), [pools](/docs-new/api/get-pool-list), [upload tasks](/docs-new/api/upload-tasks), and other requests.
+
+## Further reading
+
+- [Toloka API](/docs-new/api/)

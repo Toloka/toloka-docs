@@ -1,0 +1,140 @@
+---
+title: "Writing instructions | Toloka documentation"
+date: "2023-02-15T15:15:25.300904"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqVideoPlayer from '../subcomponents/faq/project-settings/video-player.mdx'
+import TroubleshootingTagsDisappear from '../subcomponents/troubleshooting/project-settings/tags-disappear.mdx'
+import FaqDifferentInstructions from '../subcomponents/faq/project-settings/different-instructions.mdx'
+import TroubleshootingRadioAttrDisappear from '../subcomponents/troubleshooting/project-settings/radio-attr-disappear.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+
+# Writing instructions
+
+When selecting a task, the Toloker is first shown the instructions that you wrote. Describe what needs to be done and give examples in them.
+
+## Why instructions are important {#section_fj5_tl3_bnb}
+
+Good instructions help the Toloker complete the task correctly. The clarity and completeness of the instructions affect response quality and the [project's rating](/docs-new/guide/project_rating_stat). Unclear or overly complex instructions, on the contrary, will scare off Tolokers.
+
+If the Toloker completed the task according to the instructions, and you rejected it, they can file an appeal. It is important to make the instructions both clear and accurate.
+
+Learn more about how to write simple and clear instructions on the [Toloka](https://toloka.ai/knowledgebase/instruction) website.
+
+## Creating instructions {#create}
+
+Write text, format it, and insert pictures, links and tables in the visual editor or using [HTML markup](#html). To switch modes, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425172020/1675425172020_original_svg.svg" alt="" />.
+
+To expand the editor to full screen, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425172445/1675425172445_original_svg.svg" alt="" />.
+
+To view the instructions as seen by the Toloker, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425171099/1675425171099_original_svg.svg" alt="" />.
+
+## HTML markup {#html}
+
+The HTML markup mode allows you to create user-friendly instructions. Declare and apply [CSS styles](#css) and use [allowed HTML tags](#html-yes).
+
+#### CSS styles {#css}
+
+Declare styles in the `style` container or use the `style` attribute in tags to assign a style.
+
+<Note mode="note" title="Note">
+
+The `style` container can be placed at the beginning or at the end of the instructions.
+
+</Note>
+
+#### Supported HTML tags
+
+The HTML markup supports basic tags:
+
+- Headers from `h1` to `h6`.
+- Paragraph `p` and the `div`, `pre`, and `blockquote` blocks.
+- The `ol`, `ul`, and `dl` lists.
+- The `table` tag for tables.
+- The `a` tag for links.
+- The `img` and `map` pictures.
+- Text layout. For example: `span`, `strong`, `em`.
+
+<Cut title="Full list of supported tags">
+
+`a`|`col`|`h1`|`img`|`span`|`td`
+----- | ----- | ----- | ----- | ----- | -----
+`b`|`colgroup`|`h2`|`li`|`strike`|`tfoot`
+`big`|`dd`|`h3`|`map`|`strong`|`th`
+`blockquote`|`div`|`h4`|`ol`|`style`|`thead`
+`br`|`dl`|`h5`|`p`|`sub`|`tr`
+`center`|`dt`|`h6`|`pre`|`sup`|`u`
+`cite`|`em`|`hr`|`samp`|`table`|`ul`
+`code`|`font`|`i`|`small`|`tbody`|
+
+</Cut>
+
+#### Unsupported HTML tags
+
+You can't insert the following in the instructions:
+
+- Scripts.
+- Frames.
+- Objects, audio players, or video players (the `object`, `audio` and `video` elements).
+
+    <Note mode="tip" title="Tip">
+
+    You can provide links to audio and video.
+
+    </Note>
+
+Tags that are not supported are removed from the instructions when saving the [project](/docs-new/glossary#project).
+
+## Editing the instructions {#edit}
+
+To change the instructions, go to project editing, make changes and save the project.
+
+<Note mode="note" title="Note">
+
+If you edit instructions in a project that already has completed tasks, you should [notify Tolokers](/docs-new/guide/qa-assign).
+
+</Note>
+
+## What's next {#what_next}
+
+- [Create a task pool in the project](/docs-new/guide/pool-main).
+- Learn more about how to set up a project:
+
+    - [Input and output data](/docs-new/guide/incoming).
+    - [Task interface](/docs-new/guide/spec).
+    - [Adapt a task for mobile devices](/docs-new/guide/mobile).
+    - [Setting up quality control](/docs-new/guide/project-qa).
+
+## See also {#see-also}
+
+- [Editing a project](/docs-new/guide/edit-project)
+- [Efficiency indicators: Quality of instructions](/docs-new/guide/efficiency-metrics/instruction-quality)
+
+## Troubleshooting {#troubleshooting}
+
+<Cut title="How do I show my instructions to the Toloker inside the task so that they don't need to open or close it?">
+
+There are three options:
+
+- Put your instructions inside the task, but make sure that it doesn't clutter the interface.
+- Use a side window for your instructions so that the Toloker can quickly expand or collapse them.
+- Hide the instructions in an expandable section or add hints for the individual interface elements.
+
+For best results, we recommend that you pre-select the Tolokers that meet your requirements and set up the quality control rules.
+
+</Cut>
+
+<FaqVideoPlayer/>
+
+<TroubleshootingTagsDisappear/>
+
+<FaqDifferentInstructions/>
+
+<TroubleshootingRadioAttrDisappear/>
+
+<ContactGuideSupport/>

@@ -1,0 +1,85 @@
+---
+title: "Speed/quality balance | Toloka documentation"
+date: "2023-02-15T15:15:15.661485"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TroubleshootingSpeedDropped from '../subcomponents/troubleshooting/pool-setup/speed-dropped.mdx'
+import FaqLabelingSpeed from '../subcomponents/faq/project-settings/labeling-speed.mdx'
+import FaqSpeedUpCompletion from '../subcomponents/faq/pool-setup/speed-up-completion.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+
+# Speed/quality balance
+
+By default, your tasks are available to all Tolokers. If you set [filters](/docs-new/guide/filters), they are available only to those who match them.
+
+When there are many Tolokers, you can get results quickly, but the quality of the Tolokers' responses may be poor.
+
+If you want to improve speed or quality of labeling, use the **Speed/quality balance** pool setting.
+
+It allows you to select Tolokers based on a [personalized quality forecast](/docs-new/glossary#personilized-quality-forecast):
+
+- **TOP %** — allows you to set the percentage of top-rated Tolokers who will have access to your task.
+
+  <Cut title="Example">
+
+  <Image withBackground imageId="1675426643623" alt="" />
+
+  Only 40% of top-rated Tolokers will have access to your task.
+
+  </Cut>
+
+- **Online** — allows you to set the maximum number of top-rated Tolokers who will have access to your task.
+
+  <Cut title="Example">
+
+  <Image withBackground imageId="1675426641033" alt="" />
+
+  Only 3000 of top-rated Tolokers will have access to your task.
+
+  </Cut>
+
+## How does it work? {#how-it-works}
+
+A personalized quality forecast is based on a large amount of data about user behavior in the system, how other Tolokers completed your task, and the task itself. Based on this data, we predict in real time how well each particular user will handle your task. We select top-rated Tolokers by comparing quality forecasts for all Tolokers.
+
+## Recommendations {#concept_gtb_2zk_xlb}
+
+- Make sure that the total number of Tolokers exceeds the one required to complete your task several times. Otherwise, your task may not be completed due to lack of Tolokers.
+
+- If you don't know what settings to choose, make the task available only to top-rated Tolokers. For example, set 20% in the **TOP %** setting. If the tasks completion speed is insufficient, increase the value to get results faster.
+
+## What's next {#what-next}
+
+- [Add tasks](/docs-new/guide/pool) to the pool.
+- Learn more about how to set up a pool:
+
+    - [Setting up pricing](/docs-new/guide/dynamic-pricing).
+    - [Dynamic overlap](/docs-new/guide/dynamic-overlap).
+    - Selective [majority vote](/docs-new/guide/selective-mvote) control.
+    - [Filters](/docs-new/guide/filters).
+    - [Setting up quality control](/docs-new/guide/qa-pool-settings).
+    - [Reviewed assignments](/docs-new/guide/offline-accept).
+
+## See also {#see-also}
+
+- [Toloker skills](/docs-new/guide/nav)
+
+## For developers {#for-developers}
+
+- [Toloka-Kit: TopPercentageByQuality class](/docs-new/toloka-kit/reference/toloka.client.pool.speed_quality_balance_config.TopPercentageByQuality)
+- [Toloka-Kit: BestConcurrentUsersByQuality class](/docs-new/toloka-kit/reference/toloka.client.pool.speed_quality_balance_config.BestConcurrentUsersByQuality)
+
+## Troubleshooting {#troubleshooting}
+
+<TroubleshootingSpeedDropped/>
+
+<FaqLabelingSpeed/>
+
+<FaqSpeedUpCompletion/>
+
+<ContactGuideSupport/>

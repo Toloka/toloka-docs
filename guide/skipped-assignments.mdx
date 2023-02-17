@@ -1,0 +1,90 @@
+---
+title: "Skipped assignments | Toloka documentation"
+date: "2023-02-15T15:15:24.936275"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqSkillForEveryPool from '../subcomponents/faq/pool-setup/skill-for-every-pool.mdx'
+import FaqSkillForDifferentProjects from '../subcomponents/faq/pool-setup/skill-for-different-projects.mdx'
+import FaqSubmitEmptyAssignments from '../subcomponents/faq/pool-setup/submit-empty-assignments.mdx'
+import FaqIncorrectResponses from '../subcomponents/faq/pool-setup/incorrect-responses.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import SkippedAssignmentsTable1 from './skipped-assignments/subcomponents/skipped-assignments-table-1.mdx'
+import SkippedAssignmentsTable2 from './skipped-assignments/subcomponents/skipped-assignments-table-2.mdx'
+import SkippedAssignmentsList1 from './skipped-assignments/subcomponents/skipped-assignments-list-1.mdx'
+import SkippedAssignmentsList2 from './skipped-assignments/subcomponents/skipped-assignments-list-2.mdx'
+
+# Skipped assignments
+
+Restrict access to [pool](/docs-new/glossary#pool) tasks for Tolokers who skip multiple [task suites](/docs-new/glossary#task-suite) in a row.
+
+Tolokers can [skip task suites](/docs-new/guide/pool_statistic-pool#skipped-tasks) that seem too large or complex and choose easier tasks. They get paid in the same way. For example, the Toloker is evaluating medical articles for whether they contain prescriptions, dosage, and mentions of specific medications. They might decide to skip long texts and label only short ones that take 10–20 seconds to read.
+
+You can set up this rule to restrict Toloker access to a pool.
+
+Before you enable skipping tasks, we recommend that you read the section [Tips for designing tasks](/docs-new/guide/faq).
+
+## When to use {#when-use}
+
+Restrict access to [pool](/docs-new/glossary#pool) tasks for Tolokers who skip multiple task suites in a row if:
+
+- Tasks are different in volume and Tolokers might skip large tasks in order to only perform short ones;
+
+- Tasks must be performed in order and skipping tasks may affect the quality.
+
+#### Don't use it if:
+
+- There aren't very many tasks in the pools. For example, if a task is a survey on a single page and the Toloker skips this page, they will no longer be able to perform tasks in the pool, which means there is no need to ban them.
+
+- Tasks are the same in volume.
+
+- The task complexity can't be estimated, which means the Tolokers won't be willing to skip tasks in search of easier ones.
+
+## How to configure {#rule}
+
+<Note mode="restriction" title="Alert">
+
+All fields in this rule are required. If you don't fill in at least one of them, you won't be able to save the rule.
+
+</Note>
+
+Field  | Overview
+----- | -----
+**If** | <SkippedAssignmentsTable1/>
+**then** | <SkippedAssignmentsTable2/>
+
+## Rule example {#examples}
+
+**Task**: you're conducting an opinion poll. For the results to be accurate, the Toloker must answer most of the questions.
+
+<Tabs tabs={[
+  { title: 'Correct settings', value: <SkippedAssignmentsList1/> },
+  { title: 'Incorrect settings', value: <SkippedAssignmentsList2/> },
+]}/>
+
+<Note mode="restriction" title="Alert">
+
+The assignments submitted by banned Tolokers will be taken into account if they are not rejected using manual review. They can be reassigned by setting up the [Recompletion of assignments from banned users](/docs-new/guide/restore-task-overlap) rule.
+
+</Note>
+
+## For developers {#for-developers}
+
+- [Toloka API: Skipped assignments](/docs-new/api/skipped)
+- [Toloka-Kit: SkippedInRowAssignments collector class](/docs-new/toloka-kit/reference/toloka.client.collectors.SkippedInRowAssignments)
+
+## Troubleshooting {#troubleshooting}
+
+<FaqSkillForEveryPool/>
+
+<FaqSkillForDifferentProjects/>
+
+<FaqSubmitEmptyAssignments/>
+
+<FaqIncorrectResponses/>
+
+<ContactGuideSupport/>

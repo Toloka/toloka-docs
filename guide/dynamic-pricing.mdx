@@ -1,0 +1,141 @@
+---
+title: "Setting up pricing | Toloka documentation"
+date: "2023-02-15T15:15:24.766266"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqSetTaskPrice from '../subcomponents/faq/finance/set-task-price.mdx'
+import FaqSetUpBudget from '../subcomponents/faq/finance/set-up-budget.mdx'
+import FaqPayMoreOptionalFields from '../subcomponents/faq/finance/pay-more-optional-fields.mdx'
+import FaqAwardsStatistics from '../subcomponents/faq/finance/awards-statistics.mdx'
+import FaqTasksWithDifferentPrices from '../subcomponents/faq/finance/tasks-with-different-prices.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+
+# Setting up pricing
+
+The price is indicated per [task suite](/docs-new/glossary#task-suite) in US dollars. For cents, use the dot (“.”) as a separator.
+
+If the value of the **Pool type** in advanced settings is **General tasks**, the minimum price per task suite is $0.005. For other [pool](/docs-new/glossary#pool) types, you can set the price to zero.
+
+In Toloka, there are two ways to set the task price:
+
+- _Fixed pricing_: Sets the price per task suite. The price will be the same for any Toloker, regardless of their [skills](/docs-new/glossary#skill) and experience.
+
+- _Dynamic pricing_: Allows you to additionally set other prices that depend on the Toloker's skill. For example, to pay more to those who have a higher skill.
+
+    Create a skill, and then assign it to Tolokers automatically or manually. For more information, see [Skills](/docs-new/guide/nav). [How do I set up dynamic pricing?](/docs-new/guide/dynamic-pricing#section_ucl_3hl_vlb)
+
+## How do I determine the optimal price? {#section_wb1_lhl_vlb}
+
+Every Toloker wants to earn more, so it is difficult to give exact figures. To find out the price you need to set, follow the recommendations:
+
+- Pay attention to the price suggest under the **Price per task suite, $** field. It contains the recommended price based on the minimum wage of the countries selected in the filters.
+
+  <Note mode="warning" title="Restriction">
+
+  The price suggest is available to a limited number of requesters.
+
+  </Note>
+
+- Pay attention to the **Toloker interest at this price** indicator. It shows how your price meets expectations of Tolokers. If the interest is low, you can raise price per task suite to have a bigger number of Tolokers in the project. If the interest is high, you can reduce price to save money.
+
+- Turn on the stopwatch and measure how long it will take to read the [instructions](/docs-new/glossary#instructions) and complete several of your tasks. Calculate how many task suites you would complete in an hour and think what price would be fair.
+
+- If your task is not urgent, set a minimum price and see how many Tolokers get interested. This way you can determine the optimal price based on the demand for your tasks.
+
+- [Register](https://passport.toloka.ai/registration?mode=register&retpath=https://platform.toloka.ai) as a Toloker (you will need an additional account on Yandex) and estimate the average earnings per hour for different tasks. Try to find tasks similar to yours.
+
+<Note mode="note" title="Note">
+
+The high task price doesn't guarantee a good quality of the result. Increasing the price allows you to attract more Tolokers, but the quality of the result depends on the quality of the Tolokers themselves. Good Tolokers can be paid more using dynamic pricing.
+
+</Note>
+
+### Price per item {#price-per-item}
+
+When you're creating or editing a pool, under the **Price per task suite, $** field you can see price per 1 [item](/docs-new/glossary#item).
+
+Price per item is calculated as:
+
+<Note>
+
+price per 1 item <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425188379/1675425188379_original_svg.svg" alt="" /> price per task suite <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425187935/1675425187935_original_svg.svg" alt="" /> overlap <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425187479/1675425187479_original_svg.svg" alt="" /> tasks per suite <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425188847/1675425188847_original_svg.svg" alt="" /> fee
+
+</Note>
+
+### What is the suggested price based on? {#price-suggest}
+
+The price suggested for the items in your pool depends on several factors:
+
+- The type of the project and the preset you chose while [creating the project](/docs-new/guide/project).
+
+- The Tolokers who match the [filters](/docs-new/guide/filters) you set for the pool.
+
+- The minimal wage in the countries where the filtered Tolokers come from (some filters can affect it indirectly, like the Tolokers' language filter).
+
+The combination of all the above factors affect the suggested price.
+
+## Setting up dynamic pricing {#section_ucl_3hl_vlb}
+
+To set up dynamic pricing:
+
+1. For dynamic pricing, you need a skill. Learn how to create and assign skills in the [Skills](/docs-new/guide/nav) section.
+
+    To increase the Toloker's motivation, make the skill [public](/docs-new/guide/nav#public). The Toloker will see the full list of prices and their level.
+
+1. When creating or editing a [pool](/docs-new/glossary#pool), specify a fixed price in the **Price per task suite, $**. This price will be used if the skill is not assigned to the Toloker.
+
+1. In the advanced settings, enable the **Use dynamic pricing** option.
+
+1. Choose a skill in the window that opens.
+
+1. The skill value is a number from 0 to 100. Set the price for each range of skill values.
+
+<Note mode="note" title="Note">
+
+The price is calculated when the task suite is assigned to the Toloker. If the skill changed or was assigned after the Toloker submitted a completed assignment, only the next assignment will be at the new price.
+
+</Note>
+
+#### Example of dynamic pricing settings
+
+<Image withBackground imageId="1675426655912" alt="" />
+
+## What's next {#what_next}
+
+- [Add tasks](/docs-new/guide/pool) to the pool.
+- Learn more about how to set up a pool:
+
+    - [Dynamic overlap](/docs-new/guide/dynamic-overlap).
+    - Selective [majority vote](/docs-new/guide/selective-mvote) control.
+    - [Filters](/docs-new/guide/filters).
+    - [Speed/quality balance](/docs-new/guide/adjust).
+    - [Setting up quality control](/docs-new/guide/qa-pool-settings).
+    - [Reviewed assignments](/docs-new/guide/offline-accept).
+
+## See also {#see-also}
+
+- [Crowdsourcing concepts: Pricing](https://toloka.ai/knowledgebase/pricing/)
+- [Toloker skills](/docs-new/guide/nav)
+
+## Troubleshooting {#troubleshooting}
+
+<FaqSetTaskPrice/>
+
+<FaqSetUpBudget/>
+
+<FaqPayMoreOptionalFields/>
+
+<FaqAwardsStatistics/>
+
+<FaqTasksWithDifferentPrices/>
+
+[Get closing documents and invoices](/docs-new/guide/troubleshooting/support#feedback_g3b_vj3_qjb)
+
+[Return the funds transferred to the Toloka account](/docs-new/guide/troubleshooting/support#feedback_khw_wc3_qjb)
+
+<ContactGuideSupport/>

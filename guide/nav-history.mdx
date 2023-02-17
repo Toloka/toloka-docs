@@ -1,0 +1,54 @@
+---
+title: "History of skill changes | Toloka documentation"
+date: "2023-02-15T15:15:20.201822"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import SelectTolokers from '../subcomponents/select-tolokers.mdx'
+import FaqSkillForEveryPool from '../subcomponents/faq/pool-setup/skill-for-every-pool.mdx'
+import FaqSkillForDifferentProjects from '../subcomponents/faq/pool-setup/skill-for-different-projects.mdx'
+import TroubleshootingTraining from '../subcomponents/troubleshooting/users/training.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+
+# History of skill changes
+
+To download the history of skill changes:
+
+1. Go to the [Tolokers](https://platform.toloka.ai/requester/workers) page.
+
+1. Select the Tolokers whose skill changes you want to view.
+
+   <SelectTolokers/>
+
+1. Click on the Toloker's ID to view the detailed information.
+
+1. Hover over the skill line and click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425167823/1675425167823_original_svg.svg" alt="" />.
+
+1. Open the downloaded file and choose a pipe `|` as a separator. The file may contain the following fields:
+
+    - `worker_id` — Toloker ID.
+    - `pool_id` — ID of the pool where the skill is used as a [filter](/docs-new/glossary#filters) or in a [quality control rule](/docs-new/glossary#quality-control). If the value is empty, it means that the skill was assigned to the Toloker manually.
+    - `skill_id` — Skill ID.
+    - `skill_name` — Skill name.
+    - `value` — Skill value.
+    - `created_date` — Date the skill was created.
+    - `action` — Action: `CREATE`/`MODIFY`.
+    - `message` — Message.
+
+    The file contains the skill change history for the last three months.
+
+To view statistics about the skill usage, select it on the [Skills](https://platform.toloka.ai/requester/quality) page.
+
+## Troubleshooting {#troubleshooting}
+
+<FaqSkillForEveryPool/>
+
+<FaqSkillForDifferentProjects/>
+
+<TroubleshootingTraining/>
+
+<ContactGuideSupport/>

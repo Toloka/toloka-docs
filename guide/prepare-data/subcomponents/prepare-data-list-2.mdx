@@ -1,0 +1,37 @@
+1. Set the **string** data type for the [input data field](/docs-new/guide/incoming) in which you will pass the file link.
+
+1. Insert the file. Note the format that specifies the field name: `proxy <field with the file link>`
+
+<Cut title="Image">
+
+Add an image in the HTML block using one of the methods:
+
+- Using the [Picture](/docs-new/guide/t-components/img): `{{img src=(proxy image)}}` component.
+
+- Using an HTML tag: `<img src="{{proxy image}}">`.
+
+</Cut>
+
+<Cut title="Audio or video">
+
+Add the HTML tag:
+
+- To insert an audio recording in the player: `<audio src="{{proxy audio}}" controls>`,
+
+- To embed a video recording in the player: `<video src="{{proxy video}}" controls>`.
+
+</Cut>
+
+<Cut title="Editor for image area selection">
+
+Add [the](/docs-new/guide/t-components/image-annotation#adding_editor)`{{field type="image-annotation" name="result" src=(proxy image)}}` component.
+
+</Cut>
+
+1. Provide relative links to Yandex Disk files in the [file with tasks](/docs-new/glossary#tsv) in the following format: `/<proxy name>/<folder name>/<filename>.<type>`. For example, `/my-proxy/example.jpg` or with the folder name — `/my-proxy/photos/example.jpg`.
+
+<Note mode="note" title="Note">
+
+Note that the folder name is not always required. Sometimes it's enough to specify the proxy name and file name separated by a slash ("/").
+
+</Note>

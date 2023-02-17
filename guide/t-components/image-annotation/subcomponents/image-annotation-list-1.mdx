@@ -1,0 +1,24 @@
+If you need to add an image editor without selected objects:
+
+1. Connect the $TOLOKA_ASSETS/js/image-annotation.js library (click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425167322/1675425167322_original_svg.svg" alt="" /> in the **Task interface** block on the project page).
+
+1. Include the `{{field type="image-annotation"``name="<output field name>"``src=<image URL>}}` component in the HTML code of the interface. For example:
+
+    ```html
+    {{field type="image-annotation" name="result" src=image}}
+    ```
+
+For a complete list of parameters, see the [table](#parameters).
+
+1. Add a field for entering an image link in the [input data](/docs-new/guide/incoming).
+
+1. Add the `result` field with the **json** type in the output data.
+
+The `result` field will be used for a JSON object with the point coordinates. Example:
+
+```json
+[{"data":{"p1":{"x":0.472,"y":0.413},"p2":{"x":0.932,"y":0.877}},"type":"rectangle"},
+{"data":[{"x":0.143,"y":0.807},{"x":0.317,"y":0.87},{"x":0.511,"y":0.145},{"x":0.328,"y":0.096},{"x":0.096,"y":0.554}],"type":"polygon"}]
+```
+
+The _x_ and _y_ values are numbers from 0 to 1. Length and width of the image are taken as 1, with the center of coordinates in the upper-left corner of the image.

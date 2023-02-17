@@ -1,0 +1,39 @@
+---
+title: "Button | Toloka documentation"
+date: "2023-02-15T15:15:28.665114"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+import ButtonTable1 from './button/subcomponents/button-table-1.mdx'
+import ButtonTable2 from './button/subcomponents/button-table-2.mdx'
+
+# Button
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a button in [Template Builder](/docs-new/template-builder/reference/field.button-radio).
+
+</Note>
+
+To add a button to a task, use the `{{button}}` component. Example:
+
+```plaintext
+{{button label="Click me" href="https://yandex.ru" action=true}}
+```
+
+## Parameters
+
+**Parameter**|**Description**|**Required**|**Default value**
+----- | ----- | ----- | -----
+`label`| Button label | no | empty string
+`href`| Link that opens when the Toloker clicks the button. The link is opened in a new browser tab. | no | —
+`action`| <ButtonTable1/>| no | `false`
+`size`| <ButtonTable2/>| no | `"M"`
+`class`| CSS class. | no | `".button"`
+
+<ContactGuideSupport/>

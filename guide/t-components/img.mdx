@@ -1,0 +1,43 @@
+---
+title: "Image | Toloka documentation"
+date: "2023-02-15T15:15:28.884265"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+import ImgTable1 from './img/subcomponents/img-table-1.mdx'
+import ImgTable2 from './img/subcomponents/img-table-2.mdx'
+import ImgTable3 from './img/subcomponents/img-table-3.mdx'
+import ImgTable4 from './img/subcomponents/img-table-4.mdx'
+
+# Image
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try adding an image in [Template Builder](/docs-new/template-builder/operations/insert-images).
+
+</Note>
+
+To add an image to the task, use the `{{img src=<image URL>}}` component. Example:
+
+```plaintext
+{{img src=url width="100px" height="75px"}}
+```
+
+You [can store your files in Yandex Cloud](/docs-new/guide/use-object-storage).
+
+## Parameters
+
+**Parameter**|**Description**|**Required**|**Default value**
+----- | ----- | ----- | -----
+`src`| <ImgTable1/>| yes | no
+`width`| <ImgTable2/>| no | `"300px"`
+`height`| <ImgTable3/>| no | `"300px"`
+`real-size`| <ImgTable4/>| no | `false`
+`class`| CSS class for the image. | no | `".img"`
+
+<ContactGuideSupport/>

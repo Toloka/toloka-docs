@@ -1,0 +1,100 @@
+---
+title: "Recompletion of assignments from banned users | Toloka documentation"
+date: "2023-02-15T15:15:24.443374"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqOverlap from '../subcomponents/faq/pool-setup/overlap.mdx'
+import FaqChangeOverlap from '../subcomponents/faq/pool-setup/change-overlap.mdx'
+import FaqSkillForEveryPool from '../subcomponents/faq/pool-setup/skill-for-every-pool.mdx'
+import FaqSkillForDifferentProjects from '../subcomponents/faq/pool-setup/skill-for-different-projects.mdx'
+import FaqOutputFormat from '../subcomponents/faq/pool-setup/output-format.mdx'
+import FaqClassifyUsers from '../subcomponents/faq/pool-setup/classify-users.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import RestoreTaskOverlapTable1 from './restore-task-overlap/subcomponents/restore-task-overlap-table-1.mdx'
+import RestoreTaskOverlapTable2 from './restore-task-overlap/subcomponents/restore-task-overlap-table-2.mdx'
+import RestoreTaskOverlapList1 from './restore-task-overlap/subcomponents/restore-task-overlap-list-1.mdx'
+import RestoreTaskOverlapList2 from './restore-task-overlap/subcomponents/restore-task-overlap-list-2.mdx'
+
+# Recompletion of assignments from banned users
+
+Use this rule if the Toloker was banned and you want someone else to complete their tasks.
+
+<Note mode="note" title="Note">
+
+Don't use this rule in [pools](/docs-new/glossary#pool) with [dynamic overlap](/docs-new/guide/dynamic-overlap). This increases the maximum [overlap](/docs-new/glossary#overlap) value.
+
+</Note>
+
+## When to use {#when-use}
+
+<Note mode="restriction" title="Alert">
+
+This rule can increase the cost of the pool.
+
+</Note>
+
+Use the rule if you want to get responses only from honest Tolokers to each task in the given overlap.
+
+The assignments submitted by banned Tolokers will be taken into account if they are not rejected manually using [manual review](/docs-new/glossary#assignment-review). They can be reassigned by setting up the corresponding rule.
+
+To download the responses of users who are not blocked:
+
+1. On the pool page, click **Download results** on the right.
+1. Select **Exclude assignments by banned Tolokers**.
+1. Click **Download results**.
+
+<Image width="373px" withBackground imageId="1675426739167" alt="" />
+
+#### Don't use it if:
+
+- You don't want to increase the overlap for tasks.
+- You don't want the final budget for pool labeling to exceed the initial budget.
+- You set up [dynamic overlap](/docs-new/guide/dynamic-overlap). This increases the maximum overlap value.
+
+## How do I set up? {#rule}
+
+<Note mode="restriction" title="Alert">
+
+All fields in this rule are required. If you don't fill in at least one of them, you won't be able to save the rule.
+
+</Note>
+
+**Field** | **Overview**
+----- | -----
+**If** | <RestoreTaskOverlapTable1/>
+**then** | <RestoreTaskOverlapTable2/>
+
+## Examples {#examples}
+
+**Task**: classify photos for a dataset across different categories. If a Toloker is banned by a quality control rule (for example, [fast resposes](/docs-new/guide/quick-answers)) or no longer matches the skill, their responses aren't counted and their tasks are sent for re-completion to another Toloker.
+
+<Tabs tabs={[
+  { title: 'Correct settings', value: <RestoreTaskOverlapList1/> },
+  { title: 'Incorrect settings', value: <RestoreTaskOverlapList2/> },
+]}/>
+
+## For developers {#for-developers}
+
+- [Toloka API: Recompletion of assignments](/docs-new/api/restore-task-overlap)
+- [Toloka-Kit: UsersAssessment collector class](/docs-new/toloka-kit/reference/toloka.client.collectors.UsersAssessment)
+
+## Troubleshooting {#troubleshooting}
+
+<FaqOverlap/>
+
+<FaqChangeOverlap/>
+
+<FaqSkillForEveryPool/>
+
+<FaqSkillForDifferentProjects/>
+
+<FaqOutputFormat/>
+
+<FaqClassifyUsers/>
+
+<ContactGuideSupport/>

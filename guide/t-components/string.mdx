@@ -1,0 +1,55 @@
+---
+title: "String input field | Toloka documentation"
+date: "2023-02-15T15:15:28.070924"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+import StringTable1 from './string/subcomponents/string-table-1.mdx'
+import StringTable2 from './string/subcomponents/string-table-2.mdx'
+import StringTable3 from './string/subcomponents/string-table-3.mdx'
+
+# String input field
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a string input field in [Template Builder](/docs-new/template-builder/reference/field.text).
+
+</Note>
+
+To add a string input field to the task, use the `{{field type="input" name="<output field> name"}}` component. Example:
+
+```plaintext
+{{field type="input" name="result" placeholder="Enter a word" validation-show="right-center"}}
+```
+
+Add a field of `string` type in the [output data description](/docs-new/guide/incoming). Example:
+
+```json
+{
+  "result": {
+    "type": "string",
+    "required": true
+     }
+}
+```
+
+## Parameters
+
+**Parameter**|**Description**|**Required**|**Default value**
+----- | ----- | ----- | -----
+`type`| Field type: `input` — String input field. | yes | no
+`name`| Attribute for the output data field. Contains the output field name. | yes | no
+`value`| A string to be recorded in the output data file by default. | no | no
+`width`| <StringTable1/>| no | depends on the browser and font size
+`validation-show`| <StringTable2/>| no | `"top-left"`
+`size`| Size of the field.<br/><br/>Supported values: `"S"`, `"M"`, `"L"`, `"XL"`. | no | `"L"`
+`disabled`| <StringTable3/>| no | `false`
+`placeholder`| The prompt text to display in the empty field. | no | no
+`class`| The CSS class for the field. For example, `class="annotation"`. | no | `".field" ".field_type_input"`
+
+<ContactGuideSupport/>

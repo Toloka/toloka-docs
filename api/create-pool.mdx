@@ -252,7 +252,7 @@ Parameter | Overview
 **dynamic_pricing_config. intervals[].to** | **integer \| required if**<br/><br/>Required if dynamic pricing is used.<br/><br/>Upper bound of the interval. May take a value from 0 to 100. By default `100`.
 **dynamic_pricing_config. intervals[].reward_per_assignment** | **float \| required if**<br/><br/>Required if dynamic pricing is used. The price per task suite for a Toloker with the specified skill level.
 **quality_control. checkpoints_config. real_settings. target_overlap** | **integer \| required if**<br/><br/>Required if selective review is used. Overlap in tasks with selective review.
-**quality_control. checkpoints_config. real_settings. task_distribution_function** | **object \| required if**<br/><br/>Required if selective review is used. Distribution of tasks with selective review. More information about [how verification tasks are assigned](https://toloka.ai/en/docs/guide/concepts/pool-main).
+**quality_control. checkpoints_config. real_settings. task_distribution_function** | **object \| required if**<br/><br/>Required if selective review is used. Distribution of tasks with selective review. More information about [how verification tasks are assigned](/docs-new/guide/pool-main).
 **quality_control. checkpoints_config. real_settings. task_distribution_function. scope** | <CreatePoolTable1/>
 **quality_control. checkpoints_config. real_settings. task_distribution_function. distribution** | **string \| required if**<br/><br/>Required if selective review is used.<br/><br/>Distribution of tasks with selective review within an interval. This parameter has only one possible value — `UNIFORM`.
 **quality_control. checkpoints_config. real_settings. task_distribution_function. window_days** | **integer \| required if**<br/><br/>Required if selective review is used.<br/><br/>Period in which completed tasks are counted (number of days).
@@ -282,9 +282,9 @@ Parameter | Overview
 **dynamic_overlap_config. max_overlap** | **integer \| required if**<br/><br/>Required if dynamic overlap is used.<br/><br/>Maximum overlap. Must be higher than the values in `defaults`. Minimum — 1. Maximum — 30000.
 **dynamic_overlap_config. min_confidence** | **float \| required if**<br/><br/>Required if dynamic overlap is used.<br/><br/>Minimum confidence of the aggregated response. Values from 0 to 1.
 **dynamic_overlap_config. answer_weight_skill_id** | **string \| required if**<br/><br/>Required if dynamic overlap is used.<br/><br/>A skill that determines the weight of the Toloker's response. For best results, use a skill calculated as the [percentage of correct responses in control tasks](/docs-new/api/goldenset).
-**dynamic_overlap_config. fields[]** | **array of objects \| required if**<br/><br/>Required if dynamic overlap is used.<br/><br/>[Output data fields](https://toloka.ai/en/docs/guide/concepts/result-aggregation) to use for aggregating responses. For best results, each of these fields must have a limited number of response options.<br/><br/>Don't specify several fields if their values depend on each other.
+**dynamic_overlap_config. fields[]** | **array of objects \| required if**<br/><br/>Required if dynamic overlap is used.<br/><br/>[Output data fields](/docs-new/guide/result-aggregation) to use for aggregating responses. For best results, each of these fields must have a limited number of response options.<br/><br/>Don't specify several fields if their values depend on each other.
 **dynamic_overlap_config. fields.name** | **string \| required if**<br/><br/>Required if dynamic overlap is used.<br/><br/>The output data field name.
-**mixer_config** | **object \| required if**<br/><br/>Required if "smart mixing" is used.<br/><br/>Parameters for automatically creating a task suite ("smart mixing"). More information about [creating task suites](https://toloka.ai/en/docs/guide/concepts/pool-main).
+**mixer_config** | **object \| required if**<br/><br/>Required if "smart mixing" is used.<br/><br/>Parameters for automatically creating a task suite ("smart mixing"). More information about [creating task suites](/docs-new/guide/pool-main).
 **mixer_config. real_tasks_count** | **integer \| required if**<br/><br/>Required if "smart mixing" is used.<br/><br/>Number of general tasks per suite.<br/><br/>The maximum number of tasks per task suite if `golden_task_distribution_function` or `training_task_distribution_function` is used.
 **mixer_config.golden_tasks_count** | **integer \| required if**<br/><br/>Required if "smart mixing" is used.<br/><br/>Number of control tasks per suite.
 **mixer_config.training_tasks_count** | **integer \| required if**<br/><br/>Required if "smart mixing" is used.<br/><br/>Number of training tasks per suite.
@@ -304,7 +304,7 @@ Parameter | Overview
 **mixer_config.training_task_distribution_function. intervals[].frequency** | **integer \| required if**<br/><br/>Required if training tasks are assigned at a variable rate.<br/><br/>Frequency of training tasks in an interval. The first task in an interval is a training task. For example, if you set `frequency: 3` tasks number 1, 4, 7 and so on will be training tasks.
 **private_comment** | **string**<br/><br/>Comments on the pool (only visible to the requester).
 **public_description** | **string**<br/><br/>Description for Tolokers. If it is filled in, the text will be displayed instead of the project's `public_description` in the list of tasks for Tolokers.
-**dynamic_pricing_config** | **object**<br/><br/>[Dynamic pricing](https://toloka.ai/en/docs/guide/concepts/dynamic-pricing#dynamic-pricing__section_ucl_3hl_vlb) settings.
+**dynamic_pricing_config** | **object**<br/><br/>[Dynamic pricing](/docs-new/guide/dynamic-pricing#dynamic-pricing__section_ucl_3hl_vlb) settings.
 **auto_accept_solutions** | <CreatePoolTable6/>
 **auto_accept_period_day** | **integer**<br/><br/>Time (number of days) for the requester to review the task. If the requester doesn't accept or reject the task within this period, the decision will be made automatically. May take a value from 1 to 21.
 **auto_close_after_complete_delay_seconds** | <CreatePoolTable7/>
@@ -317,12 +317,12 @@ Parameter | Overview
 **quality_control. training_requirement. training_pool_id** | **string**<br/><br/>ID of the training pool that is linked to the general task pool.
 **quality_control. training_requirement. training_passing_skill_value** | **integer**<br/><br/>Percentage of correct answers in training tasks (from 0 to 100) required in order to access the general tasks. Only the first answer of the Toloker in each task is taken into account.
 **quality_control. captcha_frequency** | <CreatePoolTable8/>
-**quality_control.configs** | **object**<br/><br/>[Quality control rules](/docs-new/api/quality-control).
+**quality_control.configs** | **object**<br/><br/>[Quality control rules](/docs-new/api/quality_control).
 **quality_control. checkpoints_config** | **object**<br/><br/>Selective task review. If you want to use the [majority vote](/docs-new/api/mv) quality control method, specify `MAJORITY_VOTE` in the [quality_control](#quality-control-popup) parameter. Some tasks are assigned with higher overlap (for example, "5") and checked. The rest of the tasks are assigned with the overlap set for the pool (for example, "1") and they are not checked. Selective review lets you improve pool completion quality.<br/><br/>You can reduce the frequency of checking tasks over time.<br/><br/>Example of settings: in the first 100 tasks completed by the Toloker in the pool, assign every 5th task with an overlap of "5" to check matching responses. In the following tasks, every 25th task is issued with an overlap of "5".
 **quality_control. checkpoints_config. real_settings** | **object**<br/><br/>Selective review of general tasks. To make sure selective review is enabled, don't forget to set up task display in [mixer_config](#mixer_config).
 **quality_control. checkpoints_config. golden_settings** | **object**<br/><br/>Selective review of control tasks. To make sure selective review is enabled, don't forget to set up display of this type of task in [mixer_config](#mixer_config).
 **quality_control. checkpoints_config. training_settings** | **object**<br/><br/>Selective review of training tasks. To make sure selective review is enabled, don't forget to set up display of this type of task in [mixer_config](#mixer_config).
-**speed_quality_balance** | **object**<br/><br/>[Speed/quality balance](https://toloka.ai/en/docs/guide/concepts/adjust).
+**speed_quality_balance** | **object**<br/><br/>[Speed/quality balance](/docs-new/guide/adjust).
 **speed_quality_balance. type** | <CreatePoolTable9/>
 **speed_quality_balance. percent** | **integer**<br/><br/>Percentage of Tolokers with the best task completion quality. The field is shown if the balance type is set to `TOP_PERCENTAGE_BY_QUALITY`. Possible values are 10, 20, 30, 40...100.
 **speed_quality_balance. count** | **integer**<br/><br/>The number of active Tolokers the task is available to. The field is shown if the balance type is set to `BEST_CONCURRENT_USERS_BY_QUALITY`. May take a value from 1 to 100.
@@ -353,4 +353,4 @@ Parameter | Overview
 
 ## See also {#see-also}
 
-- [Creating a pool](https://toloka.ai/en/docs/guide/concepts/pool-main)
+- [Creating a pool](/docs-new/guide/pool-main)

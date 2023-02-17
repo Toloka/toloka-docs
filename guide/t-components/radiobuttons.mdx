@@ -1,0 +1,57 @@
+---
+title: "Radio button | Toloka documentation"
+date: "2023-02-15T15:15:28.129365"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+import RadiobuttonsTable1 from './radiobuttons/subcomponents/radiobuttons-table-1.mdx'
+import RadiobuttonsTable2 from './radiobuttons/subcomponents/radiobuttons-table-2.mdx'
+import RadiobuttonsTable3 from './radiobuttons/subcomponents/radiobuttons-table-3.mdx'
+
+# Radio button
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a radio button in [Template Builder](/docs-new/template-builder/reference/field.radio-group).
+
+</Note>
+
+To add radio buttons to the task, use the `{{field type="radio" name="<output field name>"}}` component. For example, a set of two radio buttons:
+
+```plaintext
+{{field type="radio" name="result" label="Yes" value="Yes" hotkey="1"}}
+{{field type="radio" name="result" label="No" value="No" hotkey="2"}}
+```
+
+Add a field of `string` type in the [output data description](/docs-new/guide/incoming). Example:
+
+```json
+{
+  "result": {
+    "type": "string",
+    "required": true
+  }
+}
+```
+
+## Parameters
+
+**Parameter**|**Description**|**Required**|**Default value**
+----- | ----- | ----- | -----
+`type`| Field type: `radio` — Radio button. | yes | no
+`name`| Attribute for the output data field. Contains the output field name. | yes | no
+`label`| Signature. For example, `label="Yes"`. | no | no
+`value`| The value to pass (written to the output file). | no | no
+`hotkey`| The shortcut for selecting a value. | no | no
+`validation-show`| <RadiobuttonsTable1/>| no | `"top-left"`
+`checked`| <RadiobuttonsTable2/>| no | `false`
+`size`| Size of the field.<br/><br/>Supported values: `"M"`, `"L"`. | no | `"L"`
+`width`| <RadiobuttonsTable3/>| no | depends on the length of the signature
+`class`| The CSS class for the field. For example, `class="annotation"`. | no | `".field" ".field_type_radio"`
+
+<ContactGuideSupport/>

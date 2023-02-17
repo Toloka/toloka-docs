@@ -1,0 +1,33 @@
+To get a file with Tolokers' responses, click the **Download results** button on the [pool](/docs-new/glossary#pool) page.
+
+<Note mode="restriction" title="Alert">
+
+The responses submitted by the banned Toloker before the ban will be taken into account and paid for. To exclude their responses from the results and aggregations, select the option **Exclude assignments from banned users**. It will delete the responses from users who were banned at the moment of downloading the results, not when the pool was labeled.
+
+</Note>
+
+The fields in the file with responses:
+
+- `INPUT:<name of the input data field>` — Input data for tasks.
+
+- `OUTPUT:<name of the output data field>` — The Tolokers' responses. For [training tasks](/docs-new/glossary#training-task), the field includes first attempted answers.
+
+- `GOLDEN:<name of the output data field>` — Responses for [control tasks](/docs-new/glossary#control-task).
+
+- `HINT:text` — Hints for training tasks.
+
+- Information about the task completion (the same for all tasks on the page):
+
+    - `ASSIGNMENT:link` — Link for viewing the [task suite](/docs-new/glossary#task-suite).
+
+    - `ASSIGNMENT:assignment_id` — ID of the assigned task suite.
+
+    - `ASSIGNMENT:worker_id` — ID of the Toloker who completed the task.
+
+    - `ASSIGNMENT:started` — Date and time the task suite was assigned.
+
+    - `ASSIGNMENT:status` — Task status: `SUBMITTED` — completed, `APPROVED` — accepted, `REJECTED` — declined.
+
+A sample file:
+
+<Image withBackground imageId="1675426532723" alt="" />

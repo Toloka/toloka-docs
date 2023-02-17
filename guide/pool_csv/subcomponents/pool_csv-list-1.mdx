@@ -1,0 +1,415 @@
+import TolokaRequesterSourceCoordinates from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/type-coordinates.mdx'
+import TolokaRequesterSourceString from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/type-string.mdx'
+import TolokaRequesterSourceArray from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/type-array.mdx'
+import TolokaRequesterIntegerFloat from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/integer-float.mdx'
+import TolokaRequesterSourceTsvString from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/tsv-string.mdx'
+import TolokaRequesterSourceJsonString from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/json-string.mdx'
+import TolokaRequesterSourceTsvJson from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/tsv-json.mdx'
+import TolokaRequesterSourceIntegerFloat from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/integer-float.mdx'
+import TolokaRequesterSourceFieldTasksSuites from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/field-tasks-suites.mdx'
+
+The first line of the file contains the column headers:
+
+- `INPUT:<name of the input data field>` — input data for tasks.
+
+- `GOLDEN:<name of the output data field>` — responses for [control tasks](/docs-new/glossary#control-task).
+
+- `HINT:text` — hints for [training tasks](/docs-new/glossary#training-task). The Toloker will see the hint text at the top of the task (on a red background) if their response to the control task is different from the correct one.
+
+- Point coordinates for [field tasks](/docs-new/tutorials/walk):
+
+- `Al:latitude` — latitude.
+
+- `Al:longitude` — longitude.
+
+### Escaping in TSV/XLSX {#string}
+
+Escaping is the replacement of control characters in the text that are used for labeling with the corresponding text substitutions. It is used when you need to display a control character as a regular one.
+
+The type of input data determines how control characters are escaped. Determine the type of data and study the corresponding paragraph. Possible options:
+
+<Cut title="String type data">
+
+To display quotation marks `"` in the string type field:
+
+- The quotation marks of this type come in pairs. Don't escape other types of quotation marks (`« »` and `“ ”`).
+
+- Enclose the field in quotation marks `" "`.
+
+Unescaped quotation marks are removed when processing the file.
+
+Data | Example of transferring data to a file | Status | What the Toloker will see
+----- | ----- | ----- | -----
+`monitor 24" buy` | `"monitor 24"" buy"` | `correct` | `monitor 24" buy`
+`book "All about dogs"` | `book "All about dogs"` | `correct, but the quotes won't be displayed` | `book All about dogs`
+`book “All about dogs”` | `"book “All about dogs”"` | `correct` | `book “All about dogs”`
+`monitor 24" buy` | `monitor 24" buy` | `loading error` |
+
+</Cut>
+
+<Cut title="Data in JSON format">
+
+<Cut title="To load data in a field with the JSON type">
+
+- Add another quotation mark to each `"` type of quotation mark. Don't escape other types of quotation marks (`« »` and `“ ”`).
+
+- Enclose the field in quotation marks `" "`.
+
+| Data | Example of transferring data to a file | Status | What the Toloker will see
+|----- | ----- | ----- | -----
+|`{"query": "monitor 24 inch buy"}` | `"{""query"": ""monitor 24 inch buy""}"` | `correct` | `monitor 24 inch buy`
+|`{"query": "monitor 24 inch buy"}` | `"{"query": "monitor 24 inch buy"}"` | `loading error` |
+
+</Cut>
+
+<Cut title="To display a quotation mark inside an object with the JSON type">
+
+- Add another quotation mark `"` or a backslash and a quotation mark `\"` if there is no backslash before the quotation mark.
+
+- Enclose the field in quotation marks `" "`.
+
+|Data | Example of transferring data to a file | Status | What the Toloker will see
+|----- | ----- | ----- | -----
+|`{"query": "monitor 24\" buy"}` | `"{""query"": ""monitor 24\"" buy""}"` | `correct` | `monitor 24" buy`
+|`{"query": "monitor 24" buy"}` | `"{""query"": ""monitor 24\"" buy""}"` | `correct` | `monitor 24" buy`
+|`{"query": "book \"All about dogs\""}` | `"{""query"": ""book \""All about dogs\""""}"` | `correct` | `book "All about dogs"`
+|`{"query": "monitor 24\" buy"}` | `"{""query"": ""monitor 24\"\" buy""}"` | `loading error` |
+|`{"query": "book \"All about dogs\""}` | `"{"query": "book \"All about dogs\""}"` | `loading error` |
+
+</Cut>
+
+<Cut title="To display a backslash `\` inside an object with the JSON type">
+
+- Escape it with an additional slash `\`.
+
+- Enclose the field in quotation marks `" "`.
+
+| Data | Example of transferring data to a file | Status | What the Toloker will see
+|----- | ----- | ----- | -----
+|`{"query": "array A\B"}` |`"{""query"": ""array A\\B""}"` |`correct` |`array A\B`
+|`{"query": "array A\B"}` | `"{""query"": ""array A\B""}"` | `loading error` |
+
+</Cut>
+
+</Cut>
+
+<Cut title="An array of data in the JSON format">
+
+<Cut title="To load an array of data in a field with the JSON type">
+
+- Add another quotation mark to each `"` quotation mark. Don't escape other types of quotation marks (`« »` and `“ ”`).
+
+- Add a backslash `\` before each comma inside the object if it isn't there already. Don't escape commas that separate objects inside the array.
+
+- Enclose the field in quotation marks `" "`.
+
+|Data | Example of transferring data to a file | Status | What the Toloker will see
+|----- | ----- | ----- | -----
+|`[{"query": "monitor 24 inch buy"},{"query": "monitor 19 inch buy"}]` | `"{""query"": ""monitor 24 inch buy""},{""query"": ""monitor 19 inch buy""}"` | `correct` | `monitor 24 inch buy monitor 19 inch buy`
+|`[{"query": "monitor 24 inch\, system unit buy"},{"query": "monitor 17 inch\, system unit buy"}]` | `"{""query"": ""monitor 24 inch\, system unit buy""},""query"": ""monitor 19 inch\, system unit buy""}"` | `correct` | `monitor 24 inch, system unit buy monitor 19 inch, system unit buy`
+|`[{"query": "monitor 24 inch buy"},{"query": "monitor 19 inch buy"}]` | `"{"query": "monitor 24 inch buy"},{"query": "monitor 19 inch buy"}"` | `loading error` |
+|`[{"query": "monitor 24 inch, system unit buy"},"query": "monitor 17 inch, system unit buy"}]` | `"{""query"": ""monitor 24 inch, system unit buy""},""query"": ""monitor 19 inch, system unit buy""}"` | `loading error` |
+
+</Cut>
+
+<Cut title="To display a quotation mark in an array of data in a field with the JSON type">
+
+- Add another quotation mark `"` or a backslash and a quotation mark `\"` if there is no backslash before the quotation mark. Don't escape other types of quotation marks (`« »` and `“ ”`).
+
+- Enclose the field in quotation marks `" "`.
+
+|Data | Example of transferring data to a file | Status | What the Toloker will see
+|----- | ----- | ----- | -----
+|`[{"query": "monitor 24\" buy"},{"query": "monitor 19\" buy"}]` | `"{""query"": ""monitor 24\"" inch buy""},{""query"": ""monitor 19\"" buy""}"` | `correct` | `monitor 24" buy monitor 19" buy`
+|`[{"query": "monitor 24\" buy"},{"query": "monitor 19\" buy"}]` | `"{""query"": ""monitor 24\"" inch buy""},{""query"": ""monitor 19\" buy""}"` | `loading error` |
+
+</Cut>
+
+<Cut title="To display a backslash `\` in an array of data in a field with the JSON type">
+
+- Escape it with two backslashes `\\`.
+
+- Enclose the field in quotation marks `" "`.
+
+|Data | Example of transferring data to a file | Status | What the Toloker will see
+|----- | ----- | ----- | -----
+|`[{"query": "array A\B"},{"query": "array C\B"}]` | `"{""query"": ""array A\\\B""},{""query"": ""array C\D""}"` | `correct` | `array A\B array C\D`
+|`[{"query": "array A\B"},{"query": "array C\B"}]` | `"{""query"": ""array A\\B""},{""query"": ""array C\\D"}"` | `loading error` |
+
+</Cut>
+
+</Cut>
+
+### Examples
+
+See examples for the different tasks types and different [data types](/docs-new/guide/incoming#data-types).
+
+<Cut title="Tasks types">
+
+Task type depends on which fields are filled in.
+
+<Cut title="General task">
+
+To create a [general task](/docs-new/glossary#general-task), fill in the columns with the `INPUT` header.
+
+<Cut title="Example with a simple object ([string](/docs-new/guide/incoming#string), [link](/docs-new/guide/incoming#url), and so on)">
+
+<Image width="381px" withBackground imageId="1675426678028" alt="" />
+
+</Cut>
+
+<Cut title="Example with a string array">
+
+<Image width="381px" withBackground imageId="1675426664204" alt="" />
+
+</Cut>
+
+</Cut>
+
+<Cut title="Control task">
+
+To create a control task, add:
+
+- The task input data in the columns with the `INPUT` header.
+
+- Correct responses in the columns with the `GOLDEN` header.
+
+<Note mode="tip" title="Tip">
+
+You can also add responses when creating a pool in [task markup mode](/docs-new/guide/task_markup) (you need to use [“smart mixing”](/docs-new/guide/distribute-tasks-by-pages#smart-mixing) when uploading tasks).
+
+</Note>
+
+<Cut title="Example">
+
+<Image width="275px" withBackground imageId="1675426667583" alt="" />
+
+</Cut>
+
+</Cut>
+
+<Cut title="Training task">
+
+To create a training task, add:
+
+- The task input data in the columns with the `INPUT` header.
+
+- Correct responses in the columns with the `GOLDEN` header.
+
+- A hint in the `HINT:text` column.
+
+For training tasks, it is convenient to create a [separate pool](/docs-new/guide/train).
+
+<Note mode="note" title="Note">
+
+You can also add responses and hints when creating a pool in [task markup mode](/docs-new/guide/task_markup) (you need to use ["smart mixing"](/docs-new/guide/distribute-tasks-by-pages#smart-mixing) when uploading tasks).
+
+</Note>
+
+<Cut title="Example">
+
+<Image width="626px" withBackground imageId="1675426674139" alt="" />
+
+</Cut>
+
+</Cut>
+
+<Cut title="Field task">
+
+The task that the Toloker chooses on the map in the Toloka mobile app.
+
+To create a field task, add:
+
+- The task input data in the columns with the `INPUT` header.
+
+- Coordinates in the `Al:latitude` and `Al:longitude` columns.
+
+<Cut title="Example">
+
+<Image width="642px" withBackground imageId="1675425725016" alt="" />
+
+</Cut>
+
+<TolokaRequesterSourceFieldTasksSuites/>
+
+</Cut>
+
+</Cut>
+
+<Cut title="Data types">
+
+<Cut title="Integer / float">
+
+<TolokaRequesterIntegerFloat/>
+
+```
+INPUT:height
+1
+2.3
+```
+
+</Cut>
+
+<Cut title="String">
+
+<TolokaRequesterSourceTsvString/>
+
+```
+INPUT:comment
+Hi
+Very nice
+This, but
+"Text with ""qoutes""."
+"Text with \n or \t"
+"Text with ""quotes"" and ,"
+```
+
+</Cut>
+
+<Cut title="URL">
+
+```
+INPUT:link
+https://www.example.com
+https://site.com
+```
+
+</Cut>
+
+<Cut title="Boolean">
+
+```
+INPUT:answer
+true
+false
+```
+
+</Cut>
+
+<Cut title="Coordinates">
+
+You can use <Term term="coordinates"><TolokaRequesterSourceCoordinates/></Term> to specify a location on the map.
+
+```
+INPUT:location
+22.3341,32.32
+```
+
+</Cut>
+
+<Cut title="JSON">
+
+<TolokaRequesterSourceJsonString/>
+
+<TolokaRequesterSourceTsvString/>
+
+```
+INPUT:banner
+"{""title"":""banner"",""links"":[""https://www.example.com"",""https://site.com""],""priority"":true,""flags"":[{""type"":""horizontal""},{""type"":""wide""}]}"
+```
+
+</Cut>
+
+<Cut title="JSON in the training tasks">
+
+<TolokaRequesterSourceJsonString/>
+
+<TolokaRequesterSourceTsvString/>
+
+<TolokaRequesterSourceTsvJson/>
+
+```
+INPUT:banner
+"{""title"":""banner""\,""links"":[""https://www.example.com""\,""https://site.com""]\,""priority"":true\,""flags"":[{""type"":""horizontal""}\,{""type"":""wide""}]}"
+```
+
+</Cut>
+
+<Cut title="Arrays">
+
+<Term term="Array"><TolokaRequesterSourceArray/></Term> elements are separated by commas.
+
+<Cut title="Array of integer / array of float">
+
+<TolokaRequesterSourceIntegerFloat/>
+
+```
+INPUT:heights
+1,2.3
+```
+
+</Cut>
+
+<Cut title="Array of strings">
+
+<TolokaRequesterSourceTsvString/>
+
+```
+INPUT:comments
+"Hi,Very nice,""This, but"",Text with ""quotes"".,Text with \n or \t,""Text with """"quotes"""" and ,"""
+```
+
+</Cut>
+
+<Cut title="Array of URL">
+
+```
+INPUT:links
+"https://www.example.com,https://site.com"
+```
+
+</Cut>
+
+<Cut title="Array of boolean">
+
+```
+INPUT:answers
+true,false,true
+```
+
+</Cut>
+
+<Cut title="Array of coordinates">
+
+Each pair of <Term term="coordinates"><TolokaRequesterSourceCoordinates/></Term> must be enclosed in `""`.
+
+```
+INPUT:locations
+"""22.3341,32.32"",""22.3341,32.32"",""22.3341,32.32"""
+```
+
+</Cut>
+
+<Cut title="Array of JSON">
+
+The <Term term="array"><TolokaRequesterSourceArray/></Term> of the [JSON](/docs-new/glossary#json-format) objects is similar to the <Term term="string"><TolokaRequesterSourceString/></Term>.
+
+<TolokaRequesterSourceTsvString/>
+
+```
+INPUT:banners
+"{""title"":""banner1"",""links"":[""https://www.example.com"",""https://site.com""],""priority"":true,""flags"":[{""type"":""horizontal""},{""type"":""wide""}]},{""title"":""banner2"",""links"":[""https://www.example.com"",""https://site.com""],""priority"":false,""flags"":[{""type"":""vertical""},{""type"":""narrow""}]}"
+```
+
+</Cut>
+
+<Cut title="Array of JSON in the training tasks">
+
+The <Term term="array"><TolokaRequesterSourceArray/></Term> of the [JSON](/docs-new/glossary#json-format) objects is similar to the string.
+
+<TolokaRequesterSourceTsvString/>
+
+<TolokaRequesterSourceTsvJson/>
+
+```
+INPUT:banners
+"{""title"":""banner1""\,""links"":[""https://www.example.com""\,""https://site.com""]\,""priority"":true\,""flags"":[{""type"":""horizontal""}\,{""type"":""wide""}]},{""title"":""banner2""\,""links"":[""https://www.example.com""\,""https://site.com""]\,""priority"":false\,""flags"":[{""type"":""vertical""}\,{""type"":""narrow""}]}"
+```
+
+</Cut>
+
+</Cut>
+
+</Cut>
+
+The columns with [required input data fields](/docs-new/guide/incoming) must be filled. The other columns can be deleted if they are empty.

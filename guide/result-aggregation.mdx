@@ -1,0 +1,242 @@
+---
+title: "Aggregation of results | Toloka documentation"
+date: "2023-02-15T15:15:20.639981"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqConfidenceDifference from '../subcomponents/faq/result-questions/confidence-difference.mdx'
+import FaqHowDawidSkeneWork from '../subcomponents/faq/result-questions/how-dawid-skene-work.mdx'
+import TroubleshootingDawidSkeneResult from '../subcomponents/troubleshooting/result-questions/dawid-skene-result.mdx'
+import FaqAggregationProgress from '../subcomponents/faq/result-questions/aggregation-progress.mdx'
+import TroubleshootingSkillUnavailable from '../subcomponents/troubleshooting/result-questions/skill-unavailable.mdx'
+import TroubleshootingCantAggregateBySkill from '../subcomponents/troubleshooting/result-questions/cant-aggregate-by-skill.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import ResultAggregationList1 from './result-aggregation/subcomponents/result-aggregation-list-1.mdx'
+import ResultAggregationList2 from './result-aggregation/subcomponents/result-aggregation-list-2.mdx'
+import ResultAggregationList3 from './result-aggregation/subcomponents/result-aggregation-list-3.mdx'
+import ResultAggregationList4 from './result-aggregation/subcomponents/result-aggregation-list-4.mdx'
+import ResultAggregationList5 from './result-aggregation/subcomponents/result-aggregation-list-5.mdx'
+import ResultAggregationList6 from './result-aggregation/subcomponents/result-aggregation-list-6.mdx'
+
+# Aggregation of results
+
+If tasks were issued with an [overlap](/docs-new/glossary#overlap) of 2 or higher, run aggregation of results. Toloka will process all Tolokers' responses for the task and issue the resulting response and its confidence level.
+
+<img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425177697/1675425177697_original_svg.svg" alt="" />
+
+<Note mode="note" title="Note">
+
+If you run the [pool](/docs-new/glossary#pool) with the manual review, make sure that all responses are [accepted](/docs-new/guide/accept).
+
+</Note>
+
+<Tabs tabs={[
+  { title: 'In the interface', value: <ResultAggregationList5/> },
+  { title: 'Via Toloka API', value: <ResultAggregationList6/> },
+]}/>
+
+## Dawid-Skene aggregation model {#dawid-skene}
+
+The Dawid-Skene aggregation model takes into account the heterogeneity of Tolokers when aggregating responses. [Statistical significance](https://en.wikipedia.org/wiki/Statistical_significance) of the resulting response is determined based on the analysis of all Tolokers' responses.
+
+### How it works:
+
+The model evaluates `|L|²` parameters for each Toloker, where `L` is the number of all unique aggregation values.
+
+The parameters used by the model are determined automatically for each pool and are only used only in calculations. You won't see these parameters in the aggregated results.
+
+<Note mode="note" title="Note">
+
+Because the Dawid-Skene model evaluates `|L|²` parameters for each Toloker, we don't recommend using it when the Toloker labels `< |L|²` tasks. Otherwise, the quality of aggregation may be poor.
+
+</Note>
+
+The result of aggregation is a TSV file with responses. `CONFIDENCE: <field name output>` indicates the response significance as a percentage.
+
+### Benefits
+
+Data for aggregation can be uploaded any way you want.
+
+### Features
+
+The Dawid-Skene model is a non-trivial aggregation algorithm. Check out its features and learn more [about the model](https://www.jstor.org/stable/2346806).
+
+- The method doesn't guarantee that original Toloker responses will be used for aggregation. The algorithm takes into account Tolokers' quality parameters and response patterns. Consequently, it can produce a result that's different from the Tolokers' responses to this task.
+
+    <Cut title="Example">
+
+    In an image classification task, all three Tolokers selected the first response option. In another similar task, the same three Tolokers selected the first option, and the fourth Toloker selected the second option. If in the next task, the only response is given by the fourth Toloker, the David-Skene aggregation model might consider it incorrect and return a different result.
+
+    </Cut>
+
+- The Dawid-Skene aggregation model works with [control](/docs-new/glossary#control-task) and [training](/docs-new/glossary#training-task) tasks as well as with general tasks. There is a possibility that the `OUTPUT:result` field for the control task in the TSV file won't match the actual response to this task (`GOLDEN:result`).
+
+- If your project has output data marked as `"required": false` and Tolokers don't fill in this field, it won't be included in aggregation.
+
+    For example, you have 1000 tasks. In 999 of them, Tolokers didn't label the `label` field, and one Toloker labeled it as `label=x`. As a result of aggregation, this data field will have `CONFIDENCE = 100%`, since only one task out of a thousand falls under the aggregation conditions.
+
+<Cut title="How it's calculated">
+
+The Dawid-Skene method puts together a [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix) and response popularity for each Toloker. It uses the EM algorithm.
+
+The idea is that it collects the most accurate aggregated responses for each task, recording the error matrices and response popularity. It aims to determine the best popularities and error matrices among all responses. The process has several stages. Initially, the majority opinion is used to confirm that the response is correct.
+
+[Description of the Dawid-Skene method](https://www.jstor.org/stable/2346806).
+
+If you want to learn how the Dawid-Skene method is implemented in Toloka, check out the [Crowd Kit documentation](/docs-new/crowd-kit/reference/crowdkit.aggregation.classification.dawid_skene.DawidSkene).
+
+</Cut>
+
+<Note mode="note" title="Note">
+
+Aggregation only includes accepted tasks.
+
+</Note>
+
+### Requirements
+
+The main requirement for this aggregation is the output data fields:
+
+<Tabs tabs={[
+  { title: 'Fields that can be aggregated', value: <ResultAggregationList1/> },
+  { title: 'Fields that can\'t be aggregated', value: <ResultAggregationList2/> },
+]}/>
+
+### How do I check it?
+
+If you have doubts that the David-Skene aggregation model works correctly, you can:
+
+- Reassign tasks and compare the results.
+- Check the task manually.
+
+## Aggregation by skill {#aggr-by-skill}
+
+Analyzes responses based on the level of confidence in the Toloker. The confidence level is determined by the skill you choose. Skills measure the probability of the Toloker completing the task correctly.
+
+### Benefits
+
+- If your project processes a large amount of data, the aggregation results will be more accurate compared to the Dawid-Skene method.
+- You can choose the output data fields you want to aggregate.
+
+### Features
+
+Each user skill has “weight”. The higher the skill, the more we trust the Toloker and believe that their responses are correct.
+
+The result of aggregation is a TSV file with responses. `CONFIDENCE: <field name output>` indicates the confidence in the aggregated response. In this case, it shows the probability that the response is correct.
+
+<Cut title="Example">
+
+Tasks were labeled by three Tolokers with different “My skill” values: the first Toloker has a skill of 70, the second has 80, and the third has 90.
+
+All three Tolokers responded to the first task with **OK**. In this case, we are 100% sure that **OK** is the correct response.
+
+On the second task, the first and third Tolokers responded with **OK**, and the second Toloker responded with **BAD**. In this case, we'll compare the Tolokers' skills and determine the confidence based on the result.
+
+</Cut>
+
+<Cut title="How it's calculated">
+
+Terms:
+
+- <Formula withoutContainer={true} content="$q[i]$"/>is a Toloker's accuracy.
+- <Formula withoutContainer={true} content="$K$"/>— smoothing constant
+- <Formula withoutContainer={true} content="$z[j]$"/>is the most popular response.
+- <Formula withoutContainer={true} content="$z[x] estimate,$"/>— the probability that the estimate is correct
+
+A Toloker's accuracy<Formula withoutContainer={true} content="$q[i]$"/>is calculated as follows:
+
+<Formula withoutContainer={true} content="$q[i] = \frac{K+correct.golden.sets[i]}{2×K+total.golden.sets[i]}$"/>,
+
+where:
+
+<Formula withoutContainer={true} content="$K$"/>is a smoothing constant (starting from 0.5) if there are not enough responses to control tasks.
+
+If there are several estimates, the most popular response is determined by adding together<Formula withoutContainer={true} content="$q[i]$"/>of the Tolokers who selected each response option. The response with the largest total is considered more correct. Let's call this estimate<Formula withoutContainer={true} content="$z[j]$"/>.
+
+[Using Bayes' theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem), we calculate the posterior probability that the estimate<Formula withoutContainer={true} content="$z[j]$"/>is correct.
+
+A uniform distribution of estimates is assumed a priori. For the<Formula withoutContainer={true} content="$z[x] estimate,$"/>the a priori probability is calculated as
+
+<Formula withoutContainer={true} content="$P(z[x]) = \frac{1}{Y}$"/>,
+
+where:
+
+<Formula withoutContainer={true} content="$Y$"/>is the number of response options.
+
+Next, we calculate the probability that the estimate<Formula withoutContainer={true} content="$z[j]$"/>is correct.
+
+If the Toloker responded<Formula withoutContainer={true} content="$z[j]$"/>, then the probability of this is equal to the Toloker's accuracy<Formula withoutContainer={true} content="$q[i]$"/>. If they responded differently, then the probability of this is:
+
+<Formula withoutContainer={true} content="$\frac{1-q[i]}{Y-1}$"/>,
+
+where:
+
+- <Formula withoutContainer={true} content="$(1 - q[i])$"/>is the remaining probability.
+
+- <Formula withoutContainer={true} content="$(Y - 1)$"/>is the number of remaining responses.
+
+It ensures that the probability of an error is distributed evenly among the remaining estimates.
+
+We take all Tolokers' responses and, for example, option<Formula withoutContainer={true} content="$z[x] estimate,$"/>and calculate the probability that Tolokers will select this response, provided that the correct response is<Formula withoutContainer={true} content="$z[x] estimate,$"/>:
+
+```javascript
+func z_prob(x int) : float {
+    d = 1.0
+    for w[i]: workers
+         if answers[w[i]] == z[x]
+            d *= q[i]
+         else
+            d *= (1 - q[i]) / (Y - 1)
+    return d
+}
+```
+
+Next, using Bayes' theorem, we calculate the probability that the response<Formula withoutContainer={true} content="$z[j]$"/>is correct:
+
+```javascript
+r = 0
+for z[i]: answer_options
+    r += z_prob(i) * (1 / Y)
+
+eps = z_prob(j) * (1 / Y) / r
+```
+
+</Cut>
+
+<Note mode="note" title="Note">
+
+Aggregation only includes accepted tasks.
+
+</Note>
+
+### Requirements
+
+<Tabs tabs={[
+  { title: 'Pool with dynamic overlap', value: <ResultAggregationList3/> },
+  { title: 'Pools without dynamic overlap', value: <ResultAggregationList4/> },
+]}/>
+
+## For developers {#for-developers}
+
+- [Toloka API: Aggregated responses](/docs-new/api/aggregated-solutions)
+- [Toloka-Kit recipe: Aggregate responses in pool](/docs-new/toloka-kit/recipes/aggregate-responses)
+
+## Troubleshooting {#troubleshooting}
+
+<FaqConfidenceDifference/>
+
+<FaqHowDawidSkeneWork/>
+
+<TroubleshootingDawidSkeneResult/>
+
+<FaqAggregationProgress/>
+
+<TroubleshootingSkillUnavailable/>
+
+<TroubleshootingCantAggregateBySkill/>
+
+<ContactGuideSupport/>

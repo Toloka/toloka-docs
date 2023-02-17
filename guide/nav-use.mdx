@@ -1,0 +1,102 @@
+---
+title: "Using the skill | Toloka documentation"
+date: "2023-02-15T15:15:25.720523"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import FaqSkillForEveryPool from '../subcomponents/faq/pool-setup/skill-for-every-pool.mdx'
+import FaqSkillForDifferentProjects from '../subcomponents/faq/pool-setup/skill-for-different-projects.mdx'
+import TroubleshootingTraining from '../subcomponents/troubleshooting/users/training.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+
+# Using the skill
+
+You can use skills to filter and select Tolokers when assigning tasks, issuing rewards, and sending out messages.
+
+## Selecting Tolokers for tasks {#selection}
+
+When setting up a pool, you can use skills in [filters](/docs-new/guide/filters) to:
+
+- Select Tolokers without a skill. To do this, use the `=`, and leave the value empty.
+- Select Tolokers with any skill value. Use the `≠` operator, and leave the value empty.
+- Select Tolokers who have a skill value greater than or less than the specified one.
+
+For example, you can select only those Tolokers whose skill is more than 66 or is missing:
+
+<Image withBackground imageId="1675426610167" alt="" />
+
+For [global skills](/docs-new/guide/nav-cross-project), the restrictions of the `skill >80`type are used to select “Tolokers who completed similar projects 80% better on average than other Tolokers”.
+
+## Extra rewards {#awarding}
+
+To select Tolokers by skill and give them [rewards](/docs-new/glossary#reward):
+
+1. Go to the [Tolokers](https://platform.toloka.ai/requester/workers) page.
+
+1. Select Tolokers using the skill filter. To do this, use [filters](/docs-new/glossary#filters):
+
+    1. Click **Add filter**.
+
+    1. Scroll down and choose **Choose skill**.
+
+    1. Specify the skill and the required skill value.
+
+1. To credit rewards to one Toloker, click the link to their ID in the **Toloker ID** field.
+
+    On the page that opens, click **Actions → Issue bonus**.
+
+    To credit rewards to a group of Tolokers click **Issue bonus**.
+
+1. Fill in the fields in the **Issue bonus** window that appears:
+
+    - **Bonus per user** in dollars.
+
+    - **Topic** and **Message** for Tolokers. Specify the projects and accomplishments the reward was granted for. To send messages in different languages, use the button for switching languages.
+
+1. Click **Grant**.
+
+    Before doing this, check the number of people who will receive the reward, and the total amount.
+
+    <Cut title="Example">
+
+    <Image width="490px" withBackground imageId="1675427130856" alt="" />
+
+    </Cut>
+
+## Sending out messages {#messaging}
+
+To select Tolokers for [sending messages](/docs-new/guide/qa-assign) about changes in the project or new tasks:
+
+1. Go to the **Messages** page.
+
+1. Click **Compose → To users group → Add filter → Choose skill**.
+
+1. Enter the skill name.
+
+## What's next {#what-next}
+
+If necessary, you can:
+
+- [Edit](/docs-new/guide/nav-edit) the skill value manually.
+- [Remove](/docs-new/guide/nav-delete) skill for a specific Toloker.
+- [View the history](/docs-new/guide/nav-history) of skill changes.
+
+## See also {#see-also}
+
+- [Creating a skill](/docs-new/guide/nav-create)
+- [Assigning the skill](/docs-new/guide/nav-assign)
+- [Filters](/docs-new/guide/filters)
+
+## Troubleshooting {#troubleshooting}
+
+<FaqSkillForEveryPool/>
+
+<FaqSkillForDifferentProjects/>
+
+<TroubleshootingTraining/>
+
+<ContactGuideSupport/>

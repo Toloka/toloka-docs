@@ -42,7 +42,7 @@ import TutorialsDoubleCheck from './subcomponents/double-check.mdx'
 import TolokaRequesterSourceStepEnabled from '../subcomponents/toloka-requester-source/id-toloka-requester-source/step-enabled.mdx'
 import TolokaRequesterSourcePoolIsReady from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-is-ready.mdx'
 import TolokaRequesterSourceStartButton from '../subcomponents/toloka-requester-source/id-toloka-requester-source/start-button.mdx'
-import ContactSupport from '../guide/subcomponents/contact-support.mdx'
+import ContactGuideSupport from '../guide/subcomponents/contact-support.mdx'
 
 # Voice recording
 
@@ -52,7 +52,7 @@ Voice recording is a type of data labeling task with the text block to read and 
 
 <Note mode="note" title="Note">
 
-You may need additional projects for your task, such as dataset pre-check or checking Tolokers' responses. Learn more about this in [Decomposition of the task](https://toloka.ai/en/docs/guide/concepts/solution-architecture).
+You may need additional projects for your task, such as dataset pre-check or checking Tolokers' responses. Learn more about this in [Decomposition of the task](/docs-new/guide/solution-architecture).
 
 </Note>
 
@@ -174,7 +174,7 @@ Before you begin:
 
             This means that if 35% or more of a Toloker's responses are rejected, the Toloker is banned and can't access your tasks for 15 days. The rule takes effect after 3 responses of the Toloker are reviewed.
 
-        1. Add the [Processing rejected and accepted assignments](https://toloka.ai/en/docs/guide/concepts/reassessment-after-accepting) rule:
+        1. Add the [Processing rejected and accepted assignments](/docs-new/guide/reassessment-after-accepting) rule:
 
             <Image withBackground imageId="1675426312356" alt="Create a pool. Processing rejected and accepted assignments" />
 
@@ -241,7 +241,7 @@ Before you begin:
 
 ## Start labeling {#labeling}
 
-1. Make sure you have [topped up your account](https://toloka.ai/en/docs/guide/concepts/refill).
+1. Make sure you have [topped up your account](/docs-new/guide/refill).
 
 1. <TolokaRequesterSourceStartButton/>
 
@@ -265,7 +265,7 @@ After the time period specified in step 4.1 of [creating the pool](#pool), all r
 
     <Note mode="note" title="Note">
 
-    To learn about other ways of review, see the [Reviewing Tolokers' responses](https://toloka.ai/en/docs/guide/concepts/accept) section.
+    To learn about other ways of review, see the [Reviewing Tolokers' responses](/docs-new/guide/accept) section.
 
     </Note>
 
@@ -285,7 +285,7 @@ After the time period specified in step 4.1 of [creating the pool](#pool), all r
 
 If you pass texts to the input data, you can upload 2 different tasks to the pool: pass Text 1 in the `INPUT: <input field name>` field of Task 1. In Task 2, use this field to pass Text 2.
 
-If the text is specified in the task interface, then clone the project. To limit a Toloker to doing only one task in your project, use the [Submitted responses](https://toloka.ai/en/docs/guide/concepts/submitted-answers) rule. You can assign a skill or ban the Toloker after they submit one response.
+If the text is specified in the task interface, then clone the project. To limit a Toloker to doing only one task in your project, use the [Submitted responses](/docs-new/guide/submitted-answers) rule. You can assign a skill or ban the Toloker after they submit one response.
 
 </Cut>
 
@@ -301,4 +301,4 @@ The `popup` property of the component [view.image](/docs-new/template-builder/re
 - [Crowdsourcing concepts: Quality control](https://toloka.ai/knowledgebase/quality-control/)
 - [Crowdsourcing concepts: Pricing](https://toloka.ai/knowledgebase/pricing/)
 
-<ContactSupport/>
+<ContactGuideSupport/>

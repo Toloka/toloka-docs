@@ -1,0 +1,148 @@
+---
+title: "How to use JavaScript extensions | Toloka documentation"
+date: "2023-02-15T15:15:25.206935"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import SpecAdvancedTable1 from './spec-advanced/subcomponents/spec-advanced-table-1.mdx'
+import SpecAdvancedTable2 from './spec-advanced/subcomponents/spec-advanced-table-2.mdx'
+import SpecAdvancedTable3 from './spec-advanced/subcomponents/spec-advanced-table-3.mdx'
+
+# How to use JavaScript extensions
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in [Template Builder](/docs-new/template-builder/).
+
+</Note>
+
+All aspects of the task's [lifecycle](#lifecycle) are controlled by three JavaScript classes:
+
+- The [Assignment](/docs-new/guide/js/assignment) class manages [task](/docs-new/glossary#task) progress, processes the [task suite](/docs-new/glossary#task-suite) commands for sending responses, skipping or pausing tasks, and more. It also creates an instance of the [TaskSuite](/docs-new/guide/js/tasksuite) class.
+
+- [TaskSuite](/docs-new/guide/js/tasksuite) is a “wrapper class” for the [task suite](/docs-new/glossary#task-suite) interface. You can redefine this class, like if you need to display a shared element on the page.
+
+- The [Task](/docs-new/guide/js/task) class is responsible for rendering and validating an individual task. Typically, you should extend this class if a task needs to have non-standard behavior.
+
+You can use [services](/docs-new/guide/js/services) for more nuanced needs like subscribing to keypress events or getting the Toloker's GPS coordinates.
+
+## Lifecycle of a task {#lifecycle}
+
+When a Toloker starts a task, their workspace is initialized in an iframe. A messaging channel is created between the Toloka head page and the iframe. First, a list of tasks is requested and an [Assignment](/docs-new/guide/js/assignment) instance is created. Then the received list is passed to the [TaskSuite](/docs-new/guide/js/tasksuite) class. It creates an instance of the [Task](/docs-new/guide/js/task) class for each task.
+
+### Rendering
+
+To render the task suite, the [render()](/docs-new/guide/js/tasksuite#render) method of the `TaskSuite` class is called. This method calls the [render()](/docs-new/guide/js/task#render) method of the `Task` class for each task and collects the created DOM tree components in a single list.
+
+Here you can change the rendering of tasks and task suites.
+
+### Response validation
+
+When the Toloker clicks **Send**, the [TaskSuite.validate(solutions)](/docs-new/guide/js/tasksuite#validate) method is called to validate ther Toloker's responses. It calls the [Task.validate(solutions)](/docs-new/guide/js/task#validate) method for each task and returns errors.
+
+Here you can make an additional review of the Toloker's responses.
+
+### Removal
+
+When the Toloker has finished all tasks on the page or [skipped it](/docs-new/guide/pool_statistic-pool#skipped-tasks), the [destroy()](/docs-new/guide/js/tasksuite#destroy) method of the `TaskSuite` class is called. It calls the [destroy()](/docs-new/guide/js/task#destroy) method of the `Task` class for each task. These methods free up resources and remove the services and event handlers associated with tasks.
+
+## Class inheritance {#inherit}
+
+To keep the code from looking heavy, use the following function for class inheritance and redefinition:
+
+```javascript
+function extend(ParentClass, constructorFunction, prototypeHash) {
+    constructorFunction = constructorFunction || function() {};
+    prototypeHash = prototypeHash || {};
+    if (ParentClass) {
+        constructorFunction.prototype = Object.create(ParentClass.prototype);
+    }
+    for (var i in prototypeHash) {
+        constructorFunction.prototype[i] = prototypeHash[i];
+    }
+    return constructorFunction;
+}
+```
+
+Function call:
+
+```javascript
+var ChildClass = extend(ParentClass, function() {
+    ParentClass.call(this);
+}, {
+    method: function() {}
+})
+```
+
+## Data types {#data-spec-adv}
+
+### Task {#obj-task}
+
+The `Task` object is the task to perform.
+
+```json
+{
+    "id": <string>,
+    "input_values": {
+        "<ID of the field with input data>": <value>,
+        …
+     }
+}
+```
+
+**Key**|**Value**
+----- | -----
+`id` | Task ID.
+`input_values` | <SpecAdvancedTable1/>
+
+### Solution {#obj-solution}
+
+The `Solution` object is the Toloker's response in the task.
+
+```json
+{
+    "task_id": <string>,
+    "output_values": {
+        "<input field id>": <value>,
+        …
+    }
+}
+```
+
+**Key**|**Value**
+----- | -----
+`task_id` | Task ID.
+`output_values` | <SpecAdvancedTable2/>
+
+### SolutionValidationError {#obj-solutionvalidationerror}
+
+The `SolutionValidationError` object is a validation error for the Toloker's response.
+
+```json
+{
+    "task_id": string,
+    "errors": {
+        "<input field ID>": {
+            "code": "<error code>",
+            "message": "<string>"
+        },
+        …
+    }
+}
+```
+
+**Key**|**Value**
+----- | -----
+`task_id` | Task ID.
+`errors` | <SpecAdvancedTable3/>
+
+## See also {#see-also}
+
+- [Task interface](/docs-new/guide/spec)
+
+<ContactGuideSupport/>

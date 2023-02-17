@@ -1,0 +1,460 @@
+import TolokaRequesterSourceCoordinates from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/type-coordinates.mdx'
+import TolokaRequesterSourceArray from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/type-array.mdx'
+import TolokaRequesterSourceIntegerFloat from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/integer-float.mdx'
+import TolokaRequesterSourceFieldTasksSuites from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/field-tasks-suites.mdx'
+import PoolCsvTable1 from './pool_csv-table-1.mdx'
+import PoolCsvTable2 from './pool_csv-table-2.mdx'
+import PoolCsvTable3 from './pool_csv-table-3.mdx'
+import PoolCsvTable4 from './pool_csv-table-4.mdx'
+import PoolCsvTable5 from './pool_csv-table-5.mdx'
+import PoolCsvTable6 from './pool_csv-table-6.mdx'
+
+<Note mode="restriction" title="Alert">
+
+Check the format of the file with tasks. If the format of your file is old, download the template on the pool page and replace the sample data in it with your own data.
+
+</Note>
+
+The file is a JSON object which contains:
+
+- `input_values` — input data for tasks.
+
+- `known_solutions` — responses for control tasks.
+
+- `message_on_unknown_solution` — hints for training tasks. The Toloker will see the hint text at the top of the task (on a red background) if their response to the control task is different from the correct one.
+
+- Point coordinates for field tasks:
+
+- `latitude` — latitude.
+
+- `longitude` — longitude.
+
+### Examples
+
+See examples for the different tasks types and different [data types](/docs-new/guide/incoming#data-types).
+
+<Cut title="Tasks types">
+
+<Cut title="General task">
+
+To create a [general task](/docs-new/glossary#general-task), specify the names and the values of the input fields in the `input_values` object.
+
+<Cut title="Example">
+
+```json
+[
+  {
+    "input_values": {
+    "image_url": "https://www.example.com/image1.png"
+    }
+  },
+  {
+    "input_values": {
+    "image_url": "https://www.example.com/image2.png"
+    }
+  },
+  {
+    "input_values": {
+    "image_url": "https://www.example.com/image3.png"
+    }
+  }
+]
+```
+
+Key | Description
+----- | -----
+**input_values** | <PoolCsvTable1/>
+
+
+</Cut>
+
+</Cut>
+
+<Cut title="Control task">
+
+To create a control task, specify:
+
+- The names and the values of the input fields in the `input_values` object.
+
+- Correct responses in the `known_solutions` object.
+
+<Cut title="Example">
+
+```json
+{
+  "input_values": {
+    "image_url": "https://www.example.com/image1.png"
+  },
+  "known_solutions": [
+    {
+      "output_values": {
+        "result": "OK",
+        "like": false
+      }
+    }
+  ]
+}
+```
+
+Key | Description
+----- | -----
+**input_values** | <PoolCsvTable2/>
+**known_solutions[].output_values** | <PoolCsvTable3/>
+
+
+</Cut>
+
+</Cut>
+
+<Cut title="Training task">
+
+To create a training task, specify:
+
+- The names and the values of the input fields in the `input_values` object.
+
+- Correct responses in the `known_solutions` object.
+
+- A hint in the `message_on_unknown_solution` property.
+
+For training tasks, it is convenient to create a [separate pool](/docs-new/guide/train).
+
+<Note mode="note" title="Note">
+
+You can also add responses and hints when creating a pool in [task markup mode](/docs-new/guide/task_markup) (you need to use ["smart mixing"](/docs-new/guide/distribute-tasks-by-pages#smart-mixing) when uploading tasks).
+
+</Note>
+
+<Cut title="Example">
+
+```json
+{
+  "input_values": {
+    "image_url": "https://www.example.com/image1.png"
+  },
+  "known_solutions": [
+    {
+      "output_values": {
+        "result": "OK",
+        "like": false
+      }
+    }
+  ],
+  "message_on_unknown_solution": "The cat is in a good mood."
+}
+```
+
+Key | Description
+----- | -----
+**input_values** | <PoolCsvTable4/>
+**known_solutions[].output_values** | <PoolCsvTable5/>
+**message_on_unknown_solution** | **string**<br/><br/>Hint for the task.
+
+
+</Cut>
+
+</Cut>
+
+<Cut title="Field task">
+
+To create a field task, specify:
+
+- The names and the values of the input fields in the `input_values` object.
+
+- Point coordinates in the `latitude` and `longitude` properties.
+
+<Cut title="Example">
+
+```json
+{
+  "input_values": {
+    "image_url": "https://www.example.com/image1.png"
+  },
+  "latitude": "12.21",
+  "longitude": "24.32"
+}
+```
+
+Key | Description
+----- | -----
+**input_values** | <PoolCsvTable6/>
+**latitude** | **string**<br/><br/>Latitude of a point on the map.
+**longitude** | **string**<br/><br/>Longitude of a point on the map.
+
+
+</Cut>
+
+<TolokaRequesterSourceFieldTasksSuites/>
+
+</Cut>
+
+<Cut title="Old format">
+
+```json
+[
+  {
+    "INPUT:image_url": "https://www.example.com/image1.png"
+  },
+  {
+    "INPUT:image_url": "https://www.example.com/image2.png"
+  },
+  {
+    "INPUT:image_url": "https://www.example.com/image3.png"
+  }
+]
+```
+
+</Cut>
+
+</Cut>
+
+<Cut title="Data types">
+
+<Cut title="Integer / float">
+
+<TolokaRequesterSourceIntegerFloat/>
+
+```json
+[
+  {
+    "input_values": {
+      "height": 1
+    }
+  },
+  {
+    "input_values": {
+      "height": 2.3
+    }
+  }
+]
+```
+
+</Cut>
+
+<Cut title="String">
+
+According to the JSON standard, double quotes `"` inside the string should be escaped with `\"`.
+
+```json
+[
+  {
+    "input_values": {
+      "comment": "Hi"
+    }
+  },
+  {
+    "input_values": {
+      "comment": "This, but"
+    }
+  },
+  {
+    "input_values": {
+      "comment": "Very nice"
+    }
+  },
+  {
+    "input_values": {
+      "comment": "Text with \"qoutes\"."
+    }
+  },
+  {
+    "input_values": {
+      "comment": "Text with \n or \t"
+    }
+  },
+  {
+    "input_values": {
+      "comment": "Text with \"qoutes\". and ,"
+    }
+  }
+]
+```
+
+</Cut>
+
+<Cut title="URL">
+
+```json
+[
+  {
+    "input_values": {
+      "link": "https://www.example.com"
+    }
+  },
+  {
+    "input_values": {
+      "link": "https://site.com"
+    }
+  }
+]
+```
+
+</Cut>
+
+<Cut title="Boolean">
+
+```json
+[
+  {
+    "input_values": {
+      "answer": true
+    }
+  },
+  {
+    "input_values": {
+      "answer": false
+    }
+  }
+]
+```
+
+</Cut>
+
+<Cut title="Coordinates">
+
+You can use <Term term="coordinates"><TolokaRequesterSourceCoordinates/></Term> to specify a location on the map.
+
+```json
+[
+  {
+    "input_values": {
+      "location": "22.3341,32.32"
+    }
+  }
+]
+```
+
+</Cut>
+
+<Cut title="JSON">
+
+```json
+[
+  {
+    "input_values": {
+      "banner": {
+        "title": "banner",
+        "links": ["https://www.example.com", "https://site.com"],
+        "priority": true,
+        "flags": [{ "type": "horizontal" }, { "type": "wide" }]
+      }
+    }
+  }
+]
+```
+
+</Cut>
+
+<Cut title="Arrays">
+
+<Term term="Array"><TolokaRequesterSourceArray/></Term> elements are separated by commas.
+
+<Cut title="Array of integer / float">
+
+```json
+[
+  {
+    "input_values": {
+      "heights": [1, 2.3]
+    }
+  }
+]
+```
+
+</Cut>
+
+<Cut title="Array of strings">
+
+```json
+[
+  {
+    "input_values": {
+      "comments": [
+        "Hi",
+        "This, but",
+        "Very nice",
+        "Text with \"qoutes\".",
+        "Text with \n or \t"
+        "Text with \"qoutes\". and ,"
+      ]
+    }
+  }
+]
+```
+
+</Cut>
+
+<Cut title="Array of URL">
+
+```json
+[
+  {
+    "input_values": {
+      "links": [
+        "https://www.example.com",
+        "https://site.com"
+      ]
+    }
+  }
+]
+```
+
+</Cut>
+
+<Cut title="Array of boolean">
+
+```json
+[
+  {
+    "input_values": {
+      "answers": [true,false,true]
+    }
+  }
+]
+```
+
+</Cut>
+
+<Cut title="Array of coordinates">
+
+```json
+[
+  {
+    "input_values": {
+      "locations": ["22.3341,32.32", "22.3341,32.32", "22.3341,32.32"]
+    }
+  }
+]
+```
+
+</Cut>
+
+<Cut title="Array of JSON">
+
+```json
+[
+  {
+    "input_values": {
+      "banners": [
+        {
+          "title": "banner1",
+          "links": ["https://www.example.com", "https://site.com"],
+          "priority": true,
+          "flags": [{ "type": "horizontal" }, { "type": "wide" }]
+        },
+        {
+          "title": "banner2",
+          "links": ["example.com", "site.com"],
+          "priority": false,
+          "flags": [{ "type": "vertical" }, { "type": "narrow" }]
+        }
+      ]
+    }
+  }
+]
+```
+
+</Cut>
+
+</Cut>
+
+</Cut>

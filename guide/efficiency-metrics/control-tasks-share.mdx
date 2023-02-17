@@ -1,0 +1,43 @@
+---
+title: "Control tasks | Toloka documentation"
+date: "2023-02-15T15:15:27.887551"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+import ControlTasksShareList1 from './control-tasks-share/subcomponents/control-tasks-share-list-1.mdx'
+import ControlTasksShareList2 from './control-tasks-share/subcomponents/control-tasks-share-list-2.mdx'
+
+# Control tasks
+
+This indicator shows the average ratio of control tasks to other tasks within per [task suites](/docs-new/glossary#task-suite). A large percentage of control tasks lets you improve the quality but, at the same time, it may make labeling more expensive.
+
+## How to calculate
+
+<Formula withoutContainer={true} content="$P_{control} = \frac{T_{control}}{T_{total}}\times100$"/>
+
+where:
+
+- <Formula withoutContainer={true} content="$P_{control}$"/> is the percentage of control tasks.
+
+- <Formula withoutContainer={true} content="$T_{control}$"/> is the number of control tasks.
+
+- <Formula withoutContainer={true} content="$T_{total}$"/> is the total number of tasks.
+
+The indicator estimation criteria depends on the pool type.
+
+<Tabs tabs={[
+  { title: 'Pool with general tasks', value: <ControlTasksShareList1/> },
+  { title: 'Exam pools', value: <ControlTasksShareList2/> },
+]}/>
+
+## See also {#see-also}
+
+- [Task markup](/docs-new/guide/task_markup)
+- [How to edit tasks by yourself](/docs-new/guide/task-markup-by-yourself)
+
+<ContactGuideSupport/>

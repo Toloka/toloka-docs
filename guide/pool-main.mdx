@@ -1,0 +1,133 @@
+---
+title: "Creating a pool | Toloka documentation"
+date: "2023-02-15T15:15:16.956879"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TolokaRequesterPoolWizard from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-wizard.mdx'
+import TolokaRequesterSourceFiltersDesc from '../subcomponents/toloka-requester-source/id-toloka-requester-source/filters-desc.mdx'
+import ProjectModeration from '../subcomponents/toloka-requester-source/id-toloka-requester-source/project-moderation.mdx'
+import FaqOverlap from '../subcomponents/faq/pool-setup/overlap.mdx'
+import FaqSpecificNumber from '../subcomponents/faq/pool-setup/specific-number.mdx'
+import FaqChangeOverlap from '../subcomponents/faq/pool-setup/change-overlap.mdx'
+import FaqRightTimeLimit from '../subcomponents/faq/adding-tasks-to-the-pool/right-time-limit.mdx'
+import FaqHowManyTasksInSuite from '../subcomponents/faq/adding-tasks-to-the-pool/how-many-tasks-in-suite.mdx'
+import FaqSkillForEveryPool from '../subcomponents/faq/pool-setup/skill-for-every-pool.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import PoolMainTable1 from './pool-main/subcomponents/pool-main-table-1.mdx'
+import PoolMainTable2 from './pool-main/subcomponents/pool-main-table-2.mdx'
+
+# Creating a pool
+
+If you already have a [pool](/docs-new/glossary#pool) and you want to create an identical one, [clone](/docs-new/guide/pool-main) the existing pool. If not, create a new pool.
+
+## New pool {#new-pool}
+
+A pool contains the settings of a set of task that are sent out for completion. [The task interface](/docs-new/glossary#task-interface) is described in the [project](/docs-new/guide/project).
+
+<Note mode="note" title="Note">
+
+You can first test the pool settings in the [sandbox](/docs-new/guide/sandbox) and then [move](/docs-new/guide/sandbox#export) them to the Toloka production version along with the project.
+
+</Note>
+
+To create a pool:
+
+<TolokaRequesterPoolWizard/>
+
+<Image withBackground imageId="1675426588019" alt="" />
+
+Tasks in pools will automatically be available in the web version of Toloka and the mobile app. If you want to change the default settings and limit the visibility of the task for any of the versions, add the **Client** filter and select the desired value: **Toloka web version** or **Toloka for mobile**.
+
+### Pool parameters {#pool-params}
+
+**Parameter** | **Overview** | **Found at the step**
+----- | ----- | -----
+**My tasks may contain shocking or pornographic content** | Whether the tasks have some content which can be marked as adult, including shocking or pornographic content. Tasks with such content are only given to Tolokers who agree to complete these types of tasks.<br/><br/>If you aren't sure whether the tasks have such content, enable this option. | **Select the audience for your tasks**
+**Filters** | <TolokaRequesterSourceFiltersDesc/> | **Select the audience for your tasks**
+**Speed/quality balance** | A [setting](/docs-new/guide/adjust) for choosing Tolokers for your tasks. If you want to get responses very quickly, the quality may be doubtful. If you want very high quality, be prepared to wait longer. Find a balance that meets your needs. [Learn more](/docs-new/guide/adjust). | **Select the audience for your tasks**
+**Review task responses manually** | Turn on this option to [review](/docs-new/guide/accept) the [completed tasks](/docs-new/glossary#completed-tasks) manually.<br/><br/>Set the time period when you can check the tasks and reject them if the results are poor.<br/><br/>To learn more about manual review, see the [Manual review](/docs-new/guide/offline-accept) page. | **Set up quality control**
+**Training** | This field is only available if you have training pools in the project.<br/><br/>[Training pool](/docs-new/glossary#training-pool) that will be linked to the main one. | **Set up quality control**
+**Level required, %** | This field is only available if you have filled in the **Training** field.<br/><br/>Percentage of correct responses in training tasks (from 0 to 100) required to be admitted to the pool tasks. The calculation is based on the first response the Toloker gave in each task.<br/><br/>The minimum required level that you can set is 5. Tolokers who complete training with apercentage below this level won't have access to tasks. | **Set up quality control**
+**Review period in days** | <PoolMainTable1/>| **Set up quality control**<br/><br/>**Price per task suite, $** | Payment per [task suite](/docs-new/glossary#task-suite) in US dollars. For cents, use the dot (".") as a separator. If the **Pool type** is **General tasks**, the minimum price per task suite is $0.005. For other pool types, you can set the price to zero. To learn more about price management, go to [Setting up pricing](/docs-new/guide/dynamic-pricing). | **Set the task price and overlap**<br/><br/>**Overlap** | The number of Tolokers who should complete each task in the pool.<br/><br/>Configure this parameter if you need several people to complete your task. Overlap is necessary in tasks for collecting photo datasets, recording audio, or conducting surveys. In other types of tasks, it can improve the quality of results.<br/><br/>To save money, you can set up [dynamic overlap](/docs-new/glossary#dynamic-overlap) (also known as incremental relabeling or IRL).<br/><br/>Dynamic overlap will help you save money. [Learn more](/docs-new/guide/dynamic-overlap). | **Set the task price and overlap**<br/><br/>**Dynamic pricing** | Click **Show dynamic pricing & overlap** to go to the parameter. This parameter allows you to vary the task price depending on the Toloker's [skill](/docs-new/glossary#skill) level. [Learn more](/docs-new/guide/dynamic-pricing) | **Set the task price and overlap**
+**Dynamic overlap** | Click **Show dynamic pricing & overlap** to go to the parameter. You can use this parameter if you specify fixed values for the [input data](/docs-new/glossary#input-output-data) fields. It lets you save your budget and avoid setting fixed [overlap](/docs-new/glossary#overlap) for all pool tasks.<br/><br/>You set the range, the service analyzes the responses, their consistency, the level of Tolokers' skills and, if necessary, increases the overlap within the range you specified. | **Set the task price and overlap**
+**Pool priority within the project** | Number from 0 to 100. Allows you to rank a pool within a project. First, a Toloker is assigned tasks from a pool with higher priority. | **Add optional pool settings**
+**Time per task suite, sec** | The time allowed for completing a task suite, in seconds. Uncompleted tasks are redistributed to other Tolokers.<br/><br/>We recommend giving at least 60 seconds per task suite (including the time for page loading and sending responses).<br/><br/>If you set the interval too long, the tasks will stay open for a long time. If it is too short, the tasks won't be completed and paid for. | **Add optional pool settings**
+**Keep pool open after completion, sec** | The interval during which the pool will remain open from the moment all tasks are completed. Minimum — 0, maximum — 259200 seconds (three days).<br/><br/>For example, you can use this parameter if you need an open pool where you regularly upload new tasks. | **Additional settings**
+**Pool closing date** | The date the pool closes. The pool closes automatically on this date, even if the tasks aren't marked up. | **Add optional pool settings**
+**Keep task order** | <PoolMainTable2/>|**Add optional pool settings**
+**Metafields** | To pass an array of metafields, specify key and value for each metafield. | **Add optional pool settings**
+
+<ProjectModeration/>
+
+## How Tolokers see pools {#pool-appear}
+
+Tolokers can't see pools inside the project and select specific tasks (except for field tasks, where they can select points on the map). They also can't see pool settings, the number of tasks, or completion progress.
+
+If at least one pool from the project is available to the Toloker, then this project is displayed on the main page as a card with the name, description, and price for the task. After selecting a project, the Toloker is issued a task from the pool. When they complete it, another one is issued, and so on.
+
+A single project card is displayed if the pools in it differ only by name, quality control, or [filters](/docs-new/glossary#filters). In the latter case, the project card only includes tasks from the pools that the Toloker has access to.
+
+<Cut title="Tolokers see one project card">
+
+For example, you create "Pool 1" and "Pool 2" with the same settings in the "Are there traffic signs in the photo?" project. If the Toloker has access to both pools, they are displayed as a single card on the main page. <Image withBackground imageId="1675426606699" alt="" />
+
+</Cut>
+
+Several cards are displayed if the pools differ in these settings:
+
+- Acceptance type
+- Public description
+- Task price
+
+This is useful if you want to combine tasks in pools by subject, duration of audio recordings, or difficulty of evaluation.
+
+<Cut title="Tolokers see several project cards">
+
+In this example, the Toloker has access to two pools with different prices and descriptions, so there are two project cards on the main page. The Toloker can choose any of them — for example, the one with the higher price. <Image withBackground imageId="1675426573887" alt="" />
+
+</Cut>
+
+## Cloning a pool {#clone}
+
+To clone a pool, click **<img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425165980/1675425165980_original_svg.svg" alt="Drop-down button" /> → Clone** at the top of the pool page or <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425171611/1675425171611_original_svg.svg" alt="" /> in the list of pools on the project page.
+
+If you need to change the pool settings, [open edit mode](/docs-new/guide/pool-edit).
+
+## What's next {#what_next}
+
+- [Start](/docs-new/guide/pool-run-and-stop) a pool.
+- Learn more about how to set up a pool:
+
+    - [Setting up pricing](/docs-new/guide/dynamic-pricing).
+    - [Dynamic overlap](/docs-new/guide/dynamic-overlap).
+    - Selective [majority vote](/docs-new/guide/selective-mvote) control.
+    - [Filters](/docs-new/guide/filters).
+    - [Speed/quality balance](/docs-new/guide/adjust).
+    - [Setting up quality control](/docs-new/guide/qa-pool-settings).
+    - [Reviewed assignments](/docs-new/guide/offline-accept).
+
+## For developers {#for-developers}
+
+- [Toloka API: Creating pool](/docs-new/api/create-pool)
+- [Toloka-Kit recipe: Create pool](/docs-new/toloka-kit/recipes/create-pool)
+
+## Troubleshooting {#troubleshooting}
+
+<FaqOverlap/>
+
+<FaqSpecificNumber/>
+
+<FaqChangeOverlap/>
+
+<FaqRightTimeLimit/>
+
+<FaqHowManyTasksInSuite/>
+
+<FaqSkillForEveryPool/>
+
+<ContactGuideSupport/>

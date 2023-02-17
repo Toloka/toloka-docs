@@ -1,0 +1,47 @@
+---
+title: "Global skills | Toloka documentation"
+date: "2023-02-15T15:15:15.277054"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+
+# Global skills
+
+This is a special type of [skills](/docs-new/glossary#skill) in Toloka that show the general competencies of Tolokers, such as text processing or selecting objects in images.
+
+## Benefits {#benefits}
+
+- Use global skills if you want to quickly launch a [project](/docs-new/glossary#project) and recruit Tolokers who are good at certain types of tasks.
+
+- Our experiments show that global skills combined with traditional quality control methods increase the correctness and consistency of labeling.
+
+## Features {#features}
+
+- Requesters don't create this type of skills. Global skills are created by the system.
+
+- Projects created from certain templates are taken into account. For example, if the project is based on the **Video comparison (Side-by-side)** template, then the Tolokers will receive the **Video SbS** global skill.
+
+- Global skills are assigned according to the percentage of correct answers.
+
+- Global skills are updated daily by the Toloka team.
+
+## Usage {#usage}
+
+To use this feature, select **Add a filter → Skills → Choose a global skill** and specify the restriction for the selected skill in the added filter.
+
+For example, the restriction `skill > 80` means “Select Tolokers who completed similar projects better on average than 80% of other Tolokers”.
+
+<Image withBackground imageId="1675426630757" alt="" />
+
+## See also {#see-also}
+
+- [Creating a skill](/docs-new/guide/nav-create)
+- [Editing a skill](/docs-new/guide/nav-edit)
+- [Remove a skill](/docs-new/guide/nav-delete)
+
+<ContactGuideSupport/>

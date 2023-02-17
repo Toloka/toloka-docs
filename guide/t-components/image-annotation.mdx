@@ -1,0 +1,130 @@
+---
+title: "Image with area selection | Toloka documentation"
+date: "2023-02-15T15:15:28.605042"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+import ImageAnnotationList1 from './image-annotation/subcomponents/image-annotation-list-1.mdx'
+import ImageAnnotationList2 from './image-annotation/subcomponents/image-annotation-list-2.mdx'
+import ImageAnnotationTable1 from './image-annotation/subcomponents/image-annotation-table-1.mdx'
+import ImageAnnotationList3 from './image-annotation/subcomponents/image-annotation-list-3.mdx'
+import ImageAnnotationList4 from './image-annotation/subcomponents/image-annotation-list-4.mdx'
+import ImageAnnotationList5 from './image-annotation/subcomponents/image-annotation-list-5.mdx'
+import ImageAnnotationList6 from './image-annotation/subcomponents/image-annotation-list-6.mdx'
+import ImageAnnotationList7 from './image-annotation/subcomponents/image-annotation-list-7.mdx'
+
+# Image with area selection
+
+<Note mode="note" title="Note">
+
+This section describes how to add an area selection editor to an image using the HTML/JS/CSS tools. You can also try creating an [area selection](/docs-new/template-builder/operations/select-areas) editor in Template Builder.
+
+</Note>
+
+The editor lets you select an area of the image using either a rectangle or an arbitrary polygon:
+
+<Image width="490px" withBackground imageId="1675426547089" alt="" />
+
+<Note mode="note" title="Note">
+
+Don't add [training or control tasks](/docs-new/guide/pool) to a [project](/docs-new/glossary#project) that features an image area selection editor.
+
+</Note>
+
+## Adding the editor {#adding_editor}
+
+<Tabs tabs={[
+  { title: 'Picture', value: <ImageAnnotationList1/> },
+  { title: 'Images with selected objects', value: <ImageAnnotationList2/> },
+]}/>
+
+## Parameters
+
+**Parameter**|**Description**|**Required**|**Default value**
+----- | ----- | ----- | -----
+`src`| Page URL. | yes | no
+`type`| Field type: `image-annotation`, the image area selection editor. | yes | no
+`name`| Attribute for the output data field. Contains the output field name. | yes | no
+`src`| <ImageAnnotationTable1/>| yes | no
+`annotations`| Attribute for the input data field. Contains the input data field name. Here you can provide the selection coordinates for further editing. The data format is a JSON object. | no | no
+
+## Shortcuts {#hotkeys}
+
+By default, you can use the following keyboard shortcuts in the task:
+
+- **C** closes a polygon connecting the first and last points with a line.
+
+- **D** deletes the selected point, selected object, or last point when creating a polygon.
+
+- Arrows move the selected point. With **Alt** pressed, they move it slower. With **Alt+Shift** pressed, they move it faster.
+
+- **Tab** moves from the selected point to the next one.
+
+- **Shift+Tab** moves from the selected point to the previous one.
+
+Tell Tolokers about keyboard shortcuts in the [instructions](/docs-new/glossary#instructions) to speed up task completion.
+
+## Selection tools {#selection_tools}
+
+By default, the polygon tool is added to the [task interface](/docs-new/glossary#task-interface).
+
+You can change the tool set:
+
+<Tabs tabs={[
+  { title: 'Add a rectangle', value: <ImageAnnotationList3/> },
+  { title: 'Hide a polygon', value: <ImageAnnotationList4/> },
+  { title: 'Hide a rectangle', value: <ImageAnnotationList5/> },
+]}/>
+
+## Annotation {#annotation}
+
+To use annotations, insert one of these examples into the JS block:
+
+<Tabs tabs={[
+  { title: 'Text input field', value: <ImageAnnotationList6/> },
+  { title: 'Drop-down list', value: <ImageAnnotationList7/> },
+]}/>
+
+<Cut title="Explanation of examples">
+
+To let the Toloker add an annotation to the selected area or select it from the list, you need to add an interface element to the task (for example, a text field or a drop-down list):
+
+1. Get the object of the `getEditor()` editor and the `getField('result')` annotation interface in the `onRender()` method:
+
+    ```javascript
+    var field = this.getField('result');
+    var editor = field.getEditor();
+    ```
+
+1. Set the annotation interface implementation in methods:
+
+    - `createInterfaceElement()` — Calls the DOM element of the interface (called once during initialization).
+
+    - `onShow(shape, options)` — Shows the annotation interface when the Toloker hovers the mouse over the selected area. Gets JSON with the coordinates of the polygon points as input. In this JSON, you can write the annotation that the Toloker entered.
+
+</Cut>
+
+Toloker interactions with the editor cause the following events:
+
+- `shape:start` — Starts area selection.
+
+- `shape:finish` — Completes area selection.
+
+- `shape:cancel` — Deletes a point.
+
+- `shape:remove` — Deletes the selection.
+
+To subscribe to these events:
+
+```javascript
+editor.on('shape:start', function() {
+/* event handling */
+});
+```
+
+<ContactGuideSupport/>

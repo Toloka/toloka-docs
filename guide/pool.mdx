@@ -1,0 +1,50 @@
+---
+title: "Adding tasks to a pool | Toloka documentation"
+date: "2023-02-15T15:15:15.717904"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+
+# Adding tasks to a pool
+
+To add tasks to a pool:
+
+1. [Place the files for tasks](/docs-new/guide/cloud-storage).
+
+1. [Create a file with tasks](/docs-new/guide/pool_csv).
+
+1. [Upload tasks to the pool](/docs-new/guide/task_upload).
+
+    <Note mode="restriction" title="Restriction">
+
+    You can add up to one million tasks to the pool. To upload more tasks, create another pool.
+
+    </Note>
+
+1. If you haven't yet marked up [control](/docs-new/glossary#control-task) and [training](/docs-new/glossary#training-task) tasks in the file, [mark up the tasks in the interface](/docs-new/guide/task_markup).
+
+    <Note mode="note" title="Note">
+
+    If you created a project in the [sandbox](/docs-new/glossary#sandbox), keep in mind that when you move a project to the [Toloka production version](https://platform.toloka.ai/requester/), tasks aren't moved, including those that are already labeled.
+
+    </Note>
+
+## What's next {#what_next}
+
+- [Add a training pool](/docs-new/guide/train).
+
+- [Top up your account](/docs-new/guide/refill).
+
+- [Start the pool](/docs-new/guide/pool-run-and-stop).
+
+## For developers {#for-developers}
+
+- [Toloka API: Tasks](/docs-new/api/tasks)
+- [Toloka-Kit: Creating tasks](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.create_task)
+
+<ContactGuideSupport/>

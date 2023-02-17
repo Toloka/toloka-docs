@@ -1,0 +1,191 @@
+---
+title: "Create a project | Toloka documentation"
+date: "2023-02-15T15:15:23.317284"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ProjectModeration from '../subcomponents/toloka-requester-source/id-toloka-requester-source/project-moderation.mdx'
+import FaqComplexTask from '../subcomponents/faq/questions-about-templates/complex-task.mdx'
+import FaqManyClasses from '../subcomponents/faq/project-settings/many-classes.mdx'
+import FaqValidationDependingCheckbox from '../subcomponents/faq/questions-about-templates/validation-depending-checkbox.mdx'
+import FaqHowManyTasksInSuite from '../subcomponents/faq/adding-tasks-to-the-pool/how-many-tasks-in-suite.mdx'
+import FaqIrrelevantProducts from '../subcomponents/faq/questions-about-templates/irrelevant-products.mdx'
+import FaqElementsWebPages from '../subcomponents/faq/questions-about-templates/elements-web-pages.mdx'
+import FaqSelectingObjects from '../subcomponents/faq/questions-about-templates/selecting-objects.mdx'
+import FaqDifferentAreas from '../subcomponents/faq/questions-about-templates/different-areas.mdx'
+import FaqInputDataLabelingImage from '../subcomponents/faq/questions-about-templates/input-data-labeling-image.mdx'
+import FaqMarkTriangles from '../subcomponents/faq/questions-about-templates/mark-triangles.mdx'
+import FaqShortcutAddingPolygon from '../subcomponents/faq/questions-about-templates/shortcut-adding-polygon.mdx'
+import FaqLargeNumberObjects from '../subcomponents/faq/questions-about-templates/large-number-objects.mdx'
+import FaqControlAreaSelection from '../subcomponents/faq/questions-about-templates/control-area-selection.mdx'
+import FaqPairedImagesComparison from '../subcomponents/faq/questions-about-templates/paired-images-comparison.mdx'
+import FaqTextClassification from '../subcomponents/faq/questions-about-templates/text-classification.mdx'
+import FaqInputOutputTextFields from '../subcomponents/faq/questions-about-templates/input-output-text-fields.mdx'
+import FaqSimpleSurvey from '../subcomponents/faq/questions-about-templates/simple-survey.mdx'
+import FaqSurveySingleQuestion from '../subcomponents/faq/questions-about-templates/survey-single-question.mdx'
+import FaqLimitSourcePhoto from '../subcomponents/faq/questions-about-templates/limit-source-photo.mdx'
+import ContactGuideSupport from './subcomponents/contact-support.mdx'
+import ProjectList1 from './project/subcomponents/project-list-1.mdx'
+import ProjectList2 from './project/subcomponents/project-list-2.mdx'
+
+# Create a project
+
+If you already have a project and you want to create an identical one, [clone](#clone) the existing project. If not, create a new project.
+
+## New project {#new-project}
+
+The project defines what the task will look like for a Toloker.
+
+To get better results, make tasks as simple as possible and divide complex tasks into several projects.
+
+<Note mode="note" title="Note">
+
+You can first create and test your project for free in the [sandbox](/docs-new/guide/sandbox) and then [move](/docs-new/guide/sandbox#export) it to the Toloka production version.
+
+</Note>
+
+To create a project, follow the instructions:
+
+#### In the interface:
+
+1. Choose a preset:
+
+    1. Click the **Create project** button on the **Projects** page.
+
+    1. Choose a preset. The preset contains pre-configured [input and output data fields](/docs-new/guide/incoming) and [the task interface](/docs-new/guide/spec), which you can edit.
+
+        If there is no suitable preset, choose an empty preset.
+
+        <Note mode="tip" title="Tip">
+
+        If you unsure which preset to choose, you can ask Toloka experts to create a project for you. To do that,
+
+        - click **Get expert help**,
+        - select the way Toloka can contact you (WhatsApp, Telegram, Viber, email, or phone),
+        - enter your phone number or email address,
+        - briefly describe the project and the results you want to get.
+
+        Toloka engineering team will contact you for more details and explain your further steps.
+
+        </Note>
+
+1. Provide general information:
+
+    1. Enter the **Name** and **Description**. Tolokers will see this in the task list.
+
+    1. Optionally add a **Private comment**.
+
+1. Edit the task interface:
+
+    <Tabs tabs={[
+      { title: 'Template Builder', value: <ProjectList1/> },
+      { title: 'HTML/JS/CSS editor', value: <ProjectList2/> },
+    ]}/>
+
+1. [Write guidelines](/docs-new/guide/instruction) for Tolokers.
+
+    You can prepare instructions in HTML format, then copy and paste into the editor. Click **&lt;>** to switch to HTML mode.
+
+1. Optionally, add translations to other languages.
+
+    1. Select the source language and the target languages.
+
+    1. Fill in the fields in the table.
+
+    1. Click **Finish**.
+
+After creating the project, add a [task pool](/docs-new/guide/pool-main) to it. You can also set up [quality control](/docs-new/guide/control) in the project.
+
+<ProjectModeration/>
+
+## Cloning a project {#clone}
+
+You can view the list of created projects on the **Projects** page. Open the project page to view the list of pools, [project rating](/docs-new/guide/project_rating_stat), and [project statistics](/docs-new/guide/project-statistic).
+
+To clone a project, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425192399/1675425192399_original_svg.svg" alt="" /> in the list of projects or select **Project actions → Clone** on the project page.
+
+<Note mode="warning" title="Warning">
+
+Quality control in the project is not cloned.
+
+</Note>
+
+If you need to change the project settings, [open edit mode](/docs-new/guide/edit-project).
+
+## What's next {#what_next}
+
+- [Create a task pool](/docs-new/guide/pool-main) in the project.
+- Learn more about how to set up a project:
+
+    - [Writing instructions](/docs-new/guide/instruction).
+    - [Input and output data](/docs-new/guide/incoming).
+    - [Task interface](/docs-new/guide/spec).
+    - [Adapt a task for mobile devices](/docs-new/guide/mobile).
+    - [Setting up quality control](/docs-new/guide/project-qa).
+
+## See also {#see-also}
+
+- [Efficiency indicators: Quality of interface](/docs-new/guide/efficiency-metrics/interface-quality)
+
+## For developers {#for-developers}
+
+- [Toloka API: Creating project](/docs-new/api/create-prj)
+- [Toloka-Kit recipe: Create project](/docs-new/toloka-kit/recipes/create-project)
+
+## Troubleshooting {#troubleshooting}
+
+<Cut title="General task settings">
+
+<FaqComplexTask/>
+
+<FaqManyClasses/>
+
+<FaqValidationDependingCheckbox/>
+
+<FaqHowManyTasksInSuite/>
+
+</Cut>
+
+<Cut title="Setting up tasks with images">
+
+<FaqIrrelevantProducts/>
+
+<FaqElementsWebPages/>
+
+<FaqSelectingObjects/>
+
+<FaqDifferentAreas/>
+
+<FaqInputDataLabelingImage/>
+
+<FaqMarkTriangles/>
+
+<FaqShortcutAddingPolygon/>
+
+<FaqLargeNumberObjects/>
+
+<FaqControlAreaSelection/>
+
+<FaqPairedImagesComparison/>
+
+</Cut>
+
+<Cut title="Setting up tasks with texts">
+
+<FaqTextClassification/>
+
+<FaqInputOutputTextFields/>
+
+<FaqSimpleSurvey/>
+
+<FaqSurveySingleQuestion/>
+
+</Cut>
+
+<FaqLimitSourcePhoto/>
+
+<ContactGuideSupport/>

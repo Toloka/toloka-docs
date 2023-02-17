@@ -1,0 +1,45 @@
+---
+title: "Rejected tasks | Toloka documentation"
+date: "2023-02-15T15:15:27.709254"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+
+# Rejected tasks
+
+This indicator shows the percentage of rejected tasks. If the tasks are rejected too often, you should review the project settings.
+
+## Features
+
+- Only tasks with manual review are considered.
+
+- The percentage is calculated for the last 2 days.
+
+## How to calculate
+
+<Formula withoutContainer={true} content="$P_{reject} = \frac{T_{reject}}{T_{subm}}\times100$"/>
+
+where:
+
+- <Formula withoutContainer={true} content="$P_{reject}$"/> is the percentage of rejected tasks.
+
+- <Formula withoutContainer={true} content="$T_{reject}$"/> is the number of rejected tasks.
+
+- <Formula withoutContainer={true} content="$T_{subm}$"/> is the number of submitted tasks.
+
+## How to estimate
+
+- A good indicator is `< 30%`.
+
+- A low indicator is `> 30%`.
+
+## See also {#see-also}
+
+- [Reviewing Tolokers' responses](/docs-new/guide/accept)
+
+<ContactGuideSupport/>

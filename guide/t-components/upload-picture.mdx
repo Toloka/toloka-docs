@@ -1,0 +1,73 @@
+---
+title: "Button for image file upload | Toloka documentation"
+date: "2023-02-15T15:15:29.264650"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+import UploadPictureTable1 from './upload-picture/subcomponents/upload-picture-table-1.mdx'
+import UploadPictureTable2 from './upload-picture/subcomponents/upload-picture-table-2.mdx'
+import UploadPictureTable3 from './upload-picture/subcomponents/upload-picture-table-3.mdx'
+import UploadPictureTable4 from './upload-picture/subcomponents/upload-picture-table-4.mdx'
+import UploadPictureTable5 from './upload-picture/subcomponents/upload-picture-table-5.mdx'
+import UploadPictureTable6 from './upload-picture/subcomponents/upload-picture-table-6.mdx'
+import UploadPictureTable7 from './upload-picture/subcomponents/upload-picture-table-7.mdx'
+
+# Button for image file upload
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a button for uploading images in [Template Builder](/docs-new/template-builder/reference/field.media-file).
+
+</Note>
+
+To add an image upload button <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425180691/1675425180691_original_svg.svg" alt="" /> to the task, use the `{{field type= "file-img" name="<output field name> "sources="<sources parameter>" fileType="<fileType parameter>"}}`. After the image is uploaded the Toloker will see an icon for image preview. Example:
+
+```plaintext
+{{field type="file-img" name="photo" sources="CAMERA" fileType="IMAGE" camera=true}}
+```
+
+In the [output data](/docs-new/guide/incoming) description, add one of the fields:
+
+- Field with the `file` type — for uploading one image only. Example:
+
+    ```json
+    {
+    "result": {
+    "type": "file",
+    "required": true
+    }
+    }
+    ```
+
+- Field with the `array_file` type — for uploading several images at once. Example:
+
+    ```json
+    {
+    "result": {
+    "type": "array_file",
+    "required": true
+    }
+    }
+    ```
+
+## Parameters
+
+**Parameter**|**Description**|**Required**|**Default value**
+----- | ----- | ----- | -----
+`type`| Field type: `file-img` — Button for image file upload. | yes | no
+`name`| Attribute for the output data field. Contains the output field name. | yes | no
+`sources`| <UploadPictureTable1/>| Yes (when creating tasks for mobile devices) | no
+`fileType`| <UploadPictureTable2/>| Yes (when creating tasks for mobile devices) | no
+`validation-show`| <UploadPictureTable3/>| no | `"top-left"`
+`preview`| <UploadPictureTable4/>| no | `true`
+`camera`| <UploadPictureTable5/>| no | `false`
+`compress`| <UploadPictureTable6/>| no | `true`
+`requiredCoordinates`| <UploadPictureTable7/>| no | `false`
+`multipleSelect`| The number of files to download at the same time.<br/><br/>For the single file upload, set the value to `false`.<br/><br/>For upload of multiple files:<br/><br/>1. Set the value to `true`.<br/><br/>1. In the output data description, add a field with the `array_file` type or another type of array. | no | `true` (if the output data description contains a field with the `array_file` type or another type of array).
+
+<ContactGuideSupport/>

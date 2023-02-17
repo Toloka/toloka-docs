@@ -1,0 +1,62 @@
+---
+title: "Drop-down list | Toloka documentation"
+date: "2023-02-15T15:15:29.104613"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactGuideSupport from '../subcomponents/contact-support.mdx'
+import ListTable1 from './list/subcomponents/list-table-1.mdx'
+import ListTable2 from './list/subcomponents/list-table-2.mdx'
+import ListTable3 from './list/subcomponents/list-table-3.mdx'
+import ListTable4 from './list/subcomponents/list-table-4.mdx'
+import ListTable5 from './list/subcomponents/list-table-5.mdx'
+
+# Drop-down list
+
+<Note mode="note" title="Note">
+
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a drop-down list in [Template Builder](/docs-new/template-builder/reference/field.select).
+
+</Note>
+
+To add a dropdown list to the task, use `{{#field type="select" name="<output field name>"}}... {{/field}}`. The entries in the dropdown list are created using the nested expression ``{{select_item}}``. Example:
+
+```plaintext
+{{#field type="select" name="colour" placeholder="Choose a color" width="200px"}}
+{{select_item value="red" text="Red"}}
+{{select_item value="green" text="Green"}} {{/field}}
+```
+
+Add a `string` field to the [output data description](/docs-new/glossary#input-output-data).
+
+```json
+{
+  "colour": {
+    "type": "string",
+    "required": true
+  }
+}
+```
+
+## Parameters
+
+**Parameter**|**Description**|**Required**|**Default value**
+----- | ----- | ----- | -----
+`type`| Field type: `select` — Dropdown list. | yes | no
+`name`| Attribute for the output data field. Contains the output field name. | yes | no
+`placeholder`| The name of the dropdown list in the interface. | no | no
+`width`| <ListTable1/>| no | depends on the length of the signature
+`validation-show`| <ListTable2/>| no | `"top-left"`
+`size`| Size of the field.<br/><br/>Supported values: `"S"`, `"M"`, `"L"`. | no | `"L"`
+`class`| The CSS class for the field. For example, `class="annotation"`. | no | `".field" ".field_type_select"`
+`disabled`| <ListTable3/>| no | `false`
+`mode`| <ListTable4/>| no | `"dropdown"`
+`value`| Text to write to the output data file if the item is selected. | no | no
+`text`| The name of the list item. | no | no
+`selected`| <ListTable5/>| no | `false`
+
+<ContactGuideSupport/>
