@@ -1,0 +1,33 @@
+---
+title: "Service overview — Toloka ML platform | Toloka documentation"
+date: "2023-02-20T16:24:21.562454"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# Service overview
+
+Toloka ML platform is a service for storing and analyzing ML experiments. It lets you organize and structure a workflow from conducting an experiment to viewing model results in the production environment.
+
+With the help of Toloka ML platform, you can take either a pretrained model or your own model, fine tune it, and use for your own purposes online or offline. We have a [list of selected models](/docs/toloka-ml/models/collections) for you.
+
+With Toloka ML platform, you can log model training to compare the results and select the best model in the [interface](https://tolokamodels.tech/). Datasets used during training and the resulting models support versioning so that you can track improvements.
+
+This section describes all entities required to work with Toloka ML platform.
+
+## Basic concepts {#main-concepts}
+
+* [Dataset](/docs/toloka-ml/datasets) is a registry of user-defined datasets that stores models and links to their files.
+* A [model](/docs/toloka-ml/models/) is structured data about an ML model.
+* An artifact is a data object of a model or dataset. This can be a file with model layer weights, a dataset file, data used for predictions, preprocessing, post-processing, and more.
+* A [run](/docs/toloka-ml/tracking/runs) is a process for training and applying a model. You can manage runs using the Toloka ML platform [interface](https://tolokamodels.tech/) or the locally installed Python library. For your convenience, you can combine runs into [experiments](/docs/toloka-ml/tracking/experiments) to compare metrics changes.
+* [Scenario](/docs/toloka-ml/models/scenarios) is a set of parameters that is passed to the model to start a run.
+* [Metrics](/docs/toloka-ml/tracking/metrics) are model quality criteria and one of the key attributes of a run. You can use them to track model training, determine its efficiency and quality, and identify the best parameters for the model.
+
+## Tools {#tools}
+
+* [Model Collections](/docs/toloka-ml/models/collections) is a set of models that you can train additionally on your data and apply.
+* [Model Registry](/docs/toloka-ml/models/registry) is a repository that stores user models.

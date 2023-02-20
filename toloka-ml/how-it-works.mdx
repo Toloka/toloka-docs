@@ -1,0 +1,39 @@
+---
+title: "How it works — Toloka ML platform | Toloka documentation"
+date: "2023-02-20T16:24:21.435453"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# How it works
+
+You can use Toloka ML platform to train your model or experiment with it.
+
+## Model selection
+
+If you do not yet have a model of your own, you can select a pre-trained model from our catalog that fits your task and type of data. Do this at the [Collections](/docs/toloka-ml/models/collections) page.
+
+You can choose between so called foundational models (which allow you to create your own models based on them) and other models. You can try and upload your own datasets to the non-foundational models, run preset scenarios, and view the results.
+
+Most of the models allow you to interact with them and see the results of such interaction without the need to upload your own data or run your own experiments.
+
+## Data uploading and labeling
+
+You can upload a prepared dataset. After that, you can use our manual data labeling tool to create a training dataset.
+
+Instead of the manual labeling, you can engage the [Toloka's](https://toloka.ai/) crowd for large-scale human data labeling and upload the resulting datasets to Toloka ML platform afterwards and use them for model training.
+
+## Model training {#model-training}
+
+You can train the selected model with your own data (the **Train** tab on the [model details page](/docs/toloka-ml/models/registry#get-model)) and track various parameters, optimization methods, training datasets, and metrics for each training run to reproduce later.
+
+Once the model is trained enough, you can try and see the training results with the help of the **Infer** tab on the model details page. Pass the dataset without the classes specified, and get the resulting labeled dataset.
+
+<Note mode="note" title="Note">
+
+Please note that currently some of the options are available via the Toloka ML Python client only. We are working hard on adding them to the platform interface as well.
+
+</Note>

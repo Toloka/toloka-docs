@@ -1,0 +1,23 @@
+To create an experiment, set the `DatasetInfo`, `MetricEvaluatorInfo`, and `ModelInfo` objects. Optionally, set a quota, the maximum number of concurrently running runs, tags, and a description.
+
+```py
+client = PulsarClient(token='your_token')
+experiment = client.submit_experiment(
+
+    # The ModelInfo object
+    models=models,
+    # The DatasetInfo object
+    datasets=datasets,
+    # The MetricEvaluatorInfo object
+    metric_evaluator=metric_evaluator,
+    # (Optional) The quota ID (default = 'default').
+    quota_project_id='default',
+    # (Optional) The maximum number of the simultaneous runs (default = 50).
+    max_running_run=6,
+    # (Optional) The list of tags (default = []).
+    tags=['test_tag_61'],
+    # (Optional) The experiment description (default = None).
+    description='Some description',
+)
+print(experiment.experiment_id)
+```

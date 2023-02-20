@@ -1,0 +1,30 @@
+Metrics can be specified when creating an [run](/docs/toloka-ml/tracking/runs) in a JSON file. In this file, you can enter metric and slice names and specify the method of their display when comparing runs.
+
+```json
+"result":{
+    "AUC":0.6,
+    "Accuracy":0.7,
+    "Logloss":0.4,
+    "Slice1":{
+        "AUC":0.7,
+        "Accuracy":1,
+        "Logloss":0.3,
+    },
+    "Slice2":{
+        "AUC":0.5,
+        "Accuracy":0.6,
+        "Logloss":0.5,
+    },
+    "_metainfo":{
+        "AUC":{
+            "best_value":"Max"
+        },
+        "Accuracy":{
+            "best_value":"Max"
+        },
+        "Logloss":{
+            "best_value":"Min"
+        }
+    }
+}
+```

@@ -1,0 +1,6 @@
+By default, the `.get()` method returns the latest dataset version. To get a specific dataset version, pass the `version` parameter to the method:
+
+```py
+dataset_latest = client.datasets.get(alias=dataset.alias)
+dataset_v1 = client.datasets.get(alias=dataset.alias, version=1)
+```

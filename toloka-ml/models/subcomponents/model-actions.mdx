@@ -1,0 +1,45 @@
+## Model actions {#model-actions}
+
+Models in the Toloka-ML platform support the one or more actions from the list below.
+
+### Train
+
+Train the selected model with your own data and track various parameters, optimization methods, training datasets, and metrics for each training run to reproduce later. The result of the action is a trained model which you can try on real data.
+
+To use this action,
+
+1. Select the dataset from the list of [created or uploaded](/docs/toloka-ml/datasets) ones, its version, file, and type, or create your own dataset.
+
+1. Specify options which depend on the model type.
+
+1. Fill in the name and description for the resulting model.
+
+1. Click **Run scenario**.
+
+You will find the resulting model in the [Registry](https://tolokamodels.tech/models/registry) section.
+
+### Infer
+
+Try and see the training results passing a dataset without the classes specified. As a result, you get an output in a form of a labeled dataset.
+
+To use this action,
+
+1. Select the dataset from the list of [created or uploaded](/docs/toloka-ml/datasets) ones, its version, file, and type, or create your own dataset
+
+1. Fill in the name for the resulting dataset.
+
+1. Click **Run scenario**.
+
+You will find the resulting dataset in the [Datasets](https://tolokamodels.tech/datasets) section.
+
+### Interaction
+
+See the selected model in action. Some of the models support only this action and do not allow training or applying your own datasets to the model (don't have the **Train** and **Infer** tabs). Interaction with the model depends on the model type and allows entering text, recording or uploading audio files, and uploading images. You can also use the sample data (text, audio, or image) to test the model.
+
+<Note mode="note" title="Note">
+
+For some of the models, interaction might be unavailable until you train the model.
+
+</Note>
+
+To see if the above actions are available for a specific model, open the model page clicking the selected model in [Collections](https://tolokamodels.tech/models/podium) or [Registry](https://tolokamodels.tech/models/registry). The available actions will be displayed as tabs on the model page.

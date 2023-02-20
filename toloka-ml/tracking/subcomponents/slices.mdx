@@ -1,0 +1,30 @@
+#### Results per object {#slices}
+
+Results per object are table data where a row corresponds to a single object and contains its labels, predictions, and metadata. In the sampling results, you can see data of the `Metric`, `Image`, `Text`, `Audio`, `Video`, `Json`, and `Link` types.
+
+To specify the column type, pass a JSON file with metadata set for each column to the `per_object_data_metainfo` option. Write it in the format:
+
+```json
+[
+    {
+        // (Required) The column name
+        "name": "name",
+        // (Optional) The record type (default = none).
+        "type": "type",
+        // (Optional) The criteria used to choose the value and define the column behavior when comparing several runs (default = none).
+        "best_value": "Min",
+        // (Optional) Whether to show the column in the UI (default = true).
+        "show": false,
+        // (Optional) The joining type (default = none).
+        "join_type": "inner",
+        // (Optional) Whether to aggregate the column values (default = false).
+        "aggregate": true,
+        // (Optional) The column heading in the table (default = none).
+        "title": "title",
+        // (Optional) The tooltip (default = none).
+        "tooltip": "tooltip",
+        // (Optional) The column group (default = none).
+        "group_id": "group_1"
+    }, ...
+]
+```

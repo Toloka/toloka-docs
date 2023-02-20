@@ -1,0 +1,24 @@
+To view run details:
+
+1. Open the Toloka ML platform [Runs](https://tolokamodels.tech/runs) page.
+2. Click the run row in the table.
+
+This opens a page with run information. A link to that page looks like `https://tolokamodels.tech/runs/{run_id}`. Using the same link, you can open a report on any run.
+
+In the sampling results, you can see data of the types:
+
+Metric, Image, Text, Audio, Video, Json, Link
+
+To specify the column type, set the correspondence between columns and their respective types when uploading the run.
+
+If no types are specified when adding the run, you can specify them in the UI in the format:
+
+```py
+{column_name}:type={type}
+```
+
+In addition to setting the column type, you can compare multiple columns of a dataset by using the following syntax when listing a column to be displayed:
+
+```py
+{column_name}:diff_to={other_column_name}
+```

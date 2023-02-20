@@ -1,0 +1,41 @@
+Create the `Model` object and add the model to the Toloka ML platform database using the `add()` method:
+
+```py
+from pulsar.models import Model
+from pulsar.common import LightScenario
+
+client = PulsarClient(token='your_token')
+
+model = Model(
+    # (Required) The model name
+    name='test',
+    # (Optional) Tags added to the model used for searching
+    tags=['tags'],
+    # (Optional) The model alternative name, this can be set only once and can't be changed
+    alias = 'some_model_alias',
+    # (Optional) The model description
+    description='This models was created in models_tutorial',
+    # (Optional) The model artefacts
+    artifacts=[
+        ModelArtifact(
+            # The artefact name
+            name='model',
+            # The artefact source
+            source_type='source',
+            # The path to the artefact
+            data_path=f'//tmp/tmp',
+        ),
+    ],
+    # (Optional) Permissions for access control lists
+    permissions = Permissions(
+        # read: List of the groups with the read access
+        read=['readgroup'],
+        # write: List of the groups with the write access
+        write=['writegroup'],
+        # owner: List of the groups with the dataset owner access who can edit the permissons, this is the dataset creator by default
+        # owner=['your_login']
+    )
+)
+
+model_uid = client.models.add(model)
+```

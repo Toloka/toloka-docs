@@ -1,0 +1,84 @@
+---
+title: "Runs — Toloka ML platform | Toloka documentation"
+date: "2023-02-20T16:24:22.286282"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+import RunsList1 from './runs/subcomponents/runs-list-1.mdx'
+import RunsList2 from './runs/subcomponents/runs-list-2.mdx'
+import RunsList3 from './runs/subcomponents/runs-list-3.mdx'
+import RunsList4 from './runs/subcomponents/runs-list-4.mdx'
+import RunsList5 from './runs/subcomponents/runs-list-5.mdx'
+import RunsList6 from './runs/subcomponents/runs-list-6.mdx'
+import RunsList7 from './runs/subcomponents/runs-list-7.mdx'
+import RunsList8 from './runs/subcomponents/runs-list-8.mdx'
+import RunsList9 from './runs/subcomponents/runs-list-9.mdx'
+import RunsList10 from './runs/subcomponents/runs-list-10.mdx'
+import RunsList11 from './runs/subcomponents/runs-list-11.mdx'
+import RunsList12 from './runs/subcomponents/runs-list-12.mdx'
+import RunsList13 from './runs/subcomponents/runs-list-13.mdx'
+import RunsList14 from './runs/subcomponents/runs-list-14.mdx'
+import RunsList15 from './runs/subcomponents/runs-list-15.mdx'
+import RunsList16 from './runs/subcomponents/runs-list-16.mdx'
+import RunsList17 from './runs/subcomponents/runs-list-17.mdx'
+import MLComingSoon from '../subcomponents/coming-soon.mdx'
+import MLNotAvailable from '../subcomponents/not-available.mdx'
+import RunParameters from './subcomponents/parameters.mdx'
+import RunSlices from './subcomponents/slices.mdx'
+
+# Runs
+
+In Toloka ML platform every time you start a scenario to [train or apply the model](/docs/toloka-ml/models/collections/#model-actions), a separate run is created. You can combine multiple runs into a single group called an experiment.
+
+<RunParameters/>
+
+## Creating a run {#add-run}
+
+When a run is created, a model name, a dataset name, and a set of metric values are saved to the Toloka ML platform database. In addition, you can set model and dataset options that can be viewed in the Toloka ML platform interface.
+
+<Tabs tabs={[
+  { title: 'UI', value: <RunsList17/> },
+  { title: 'Python', value: <RunsList1/> },
+]}/>
+
+## Updating runs {#upd-run}
+
+You can update any fields of a run, including the date.
+
+<Tabs tabs={[
+  { title: 'UI', value: <MLComingSoon/> },
+  { title: 'Python', value: <RunsList3/> },
+]}/>
+
+## Deleting runs {#del-run}
+
+<Tabs tabs={[
+  { title: 'UI', value: <MLComingSoon/> },
+  { title: 'Python', value: <RunsList5/> },
+]}/>
+
+## Viewing a list of runs {#filter-runs}
+
+<Tabs tabs={[
+  { title: 'UI', value: <RunsList6/> },
+  { title: 'Python', value: <RunsList7/> },
+]}/>
+
+## Viewing run information {#show-run}
+
+<Tabs tabs={[
+  { title: 'UI', value: <RunsList8/> },
+  { title: 'Python', value: <RunsList9/> },
+]}/>
+
+## Comparing multiple runs {#diff-runs}
+
+<Tabs tabs={[
+  { title: 'UI', value: <MLNotAvailable/> },
+]}/>
+
+<RunSlices/>

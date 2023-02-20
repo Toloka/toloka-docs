@@ -1,0 +1,23 @@
+For the `pulsar.models` class, the following methods are implemented:
+
+* `add()`: Adding a model to the registry.
+* `update()`: Updating a model in the registry.
+* `delete(id)`: Deleting a model from the registry, where `id` is the model UID.
+
+Example of updating model parameters:
+
+```python
+from pulsar import PulsarClient
+from pulsar.models import Model, ModelArtifact, ESourceType
+# Gets the model using its UID
+model = PulsarClient.models.get(id)
+
+# Assigns a version to the model
+model.version = 'version_x.y'
+# Adds tags to the model
+model.tags.append('some_tag')
+model.tags.extend(['sa', '32'])
+
+# Updates and saves data about the model to the storage
+client.models.update(model)
+```

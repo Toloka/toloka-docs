@@ -1,0 +1,10 @@
+Delete a run using the `PulsarClient.delete(RunInfo)` method:
+```py
+run = RunInfo(
+...
+)
+client = PulsarClient(token='your_token')
+run_id = client.add(run)
+...
+client.delete(run_id)
+```

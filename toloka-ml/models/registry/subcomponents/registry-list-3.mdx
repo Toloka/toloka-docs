@@ -1,0 +1,23 @@
+For the `pulsar.models` class, the `find()` method is implemented to search for models. You can pass the following fields to the method:
+
+* `uids`: `List of Strings`: Model UIDs.
+* `names`: `List of Strings`: Model names.
+* `vesions`: `List of Strings`: Model versions.
+* `usernames`: `List of Strings`: Model owners' usernames.
+* `model_types`: `List of Strings`: Model types.
+* `statuses`: `List of Strings`: Model statuses.
+* `tags`: `List of Strings`: Model tags.
+* `date_from`: `String`: Start date to view models from.
+* `date_to`: `String`: End date to view models to.
+
+
+For example,
+
+```py
+client.models.find(
+    names=['PulsarModelName'],
+    tags=['text','generation'],
+    date_from='2020-10-10',
+    date_to='2021-10-10'
+)
+```

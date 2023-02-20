@@ -1,0 +1,15 @@
+For the `pulsar.models` class, the following methods are implemented:
+
+* `get(id)`: Getting all the model fields by `UID` in `JSON` format.
+
+    Example:
+
+    ```py
+    PulsarClient().models.get(uid='your_uid')
+    ```
+
+* `get_model_artifact_url(id, name)`: Getting model artifact URLs, where `id` is the model UID and `name` is the artifact name.
+* `get_model_scenarios()`: Getting model scenarios.
+
+
+See the [API reference](/docs/toloka-ml/api/models) for more information on the available methods.
