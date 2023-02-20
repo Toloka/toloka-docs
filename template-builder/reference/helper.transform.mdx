@@ -1,6 +1,6 @@
 ---
 title: "helper.transform — Template Builder | Toloka documentation"
-date: "2023-02-10T09:15:31.542116"
+date: "2023-02-20T17:42:08.446581"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,6 +8,7 @@ ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
+import ContactSupport from '../subcomponents/contact-support.mdx'
 import HelperTransformTable1 from './helper.transform/subcomponents/helper.transform-table-1.mdx'
 
 # helper.transform
@@ -26,3 +27,5 @@ For example, you can convert an array of image links to [view.image](/docs-new/t
 `into` | _any_ | Template to transform elements in the array. The array value can be substituted using the `data.local` component. To do this, use the construction `{ "type": "data.local", "path": "item"}`. [Learn more](/docs-new/template-builder/operations/work-with-data).
 `items` | _array_ | <HelperTransformTable1/>
 `items[]` | _any_ | Array element. This can be any element — strings, numbers, JSON objects, or other arrays.<br/><br/>If you used a reference to a field with input data, you do not need to also specify the element.
+
+<ContactSupport/>
