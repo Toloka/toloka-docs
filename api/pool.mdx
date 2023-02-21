@@ -12,17 +12,17 @@ import ContactGuideSupport from '../guide/subcomponents/contact-support.mdx'
 
 # Overview
 
-A pool consists of task suites that are sent out for completion at the same time. In the pool properties, you set the task price, overlap, [Toloker selection filters](/docs-new/api/filters), [quality control rules](/docs-new/api/quality_control), and so on.
+A pool consists of task suites that are sent out for completion at the same time. In the pool properties, you set the task price, overlap, [Toloker selection filters](/docs/api/filters), [quality control rules](/docs/api/quality_control), and so on.
 
 If the project has multiple pools, the order for completing them depends on the parameters:
 
-- Pools with identical filter settings and price per task are assigned to Tolokers in the order in which they were started. The pool that was started earlier will be completed sooner. You can [change the order for completing the pools](/docs-new/api/create-pool#priority).
+- Pools with identical filter settings and price per task are assigned to Tolokers in the order in which they were started. The pool that was started earlier will be completed sooner. You can [change the order for completing the pools](/docs/api/create-pool#priority).
 
-- Pools with different filter settings and/or a different price per task are sent out for completion when the [pool opens](/docs-new/api/open-pool).
+- Pools with different filter settings and/or a different price per task are sent out for completion when the [pool opens](/docs/api/open-pool).
 
 <Note mode="note" title="Note">
 
-Wait for the operation completion (changing its [status](/docs-new/api/get-operation) to `SUCCESS` or `FAIL`) before performing any other operation except pool creation.
+Wait for the operation completion (changing its [status](/docs/api/get-operation) to `SUCCESS` or `FAIL`) before performing any other operation except pool creation.
 
 </Note>
 
@@ -30,19 +30,19 @@ Wait for the operation completion (changing its [status](/docs-new/api/get-opera
 
 Method | Endpoint | Overview
 ----- | ----- | -----
-POST | [/pools](/docs-new/api/create-pool) | Creates a pool.
-POST | [/pools/<pool_id>/close-for-update](/docs-new/api/close-pool-for-update) | Closes a pool for editing.
-PUT | [/pools/<pool_id>](/docs-new/api/edit-pool) | Makes changes to a pool.
-POST | [/pools/<pool_id>/open](/docs-new/api/open-pool) | Opens a pool.
-POST | [/pools/<pool_id>/close](/docs-new/api/close-pool) | Closes a pool.
-POST | [/pools/<pool_id>/archive](/docs-new/api/archive-pool) | Moves a pool to the archive.
-POST | [/pools/<pool_id>/clone](/docs-new/api/clone-pool) | Creates a duplicate pool.
-GET | [/pools](/docs-new/api/get-pool-list) | Gets a list of created pools (including archived pools).
-GET | [/pools/<pool_id>](/docs-new/api/get-pool) | Gets the properties of a pool.
-PATCH | [/pools/<pool_id>](/docs-new/api/set-priority-pool) | Changes the priority of a pool.
+POST | [/pools](/docs/api/create-pool) | Creates a pool.
+POST | [/pools/<pool_id>/close-for-update](/docs/api/close-pool-for-update) | Closes a pool for editing.
+PUT | [/pools/<pool_id>](/docs/api/edit-pool) | Makes changes to a pool.
+POST | [/pools/<pool_id>/open](/docs/api/open-pool) | Opens a pool.
+POST | [/pools/<pool_id>/close](/docs/api/close-pool) | Closes a pool.
+POST | [/pools/<pool_id>/archive](/docs/api/archive-pool) | Moves a pool to the archive.
+POST | [/pools/<pool_id>/clone](/docs/api/clone-pool) | Creates a duplicate pool.
+GET | [/pools](/docs/api/get-pool-list) | Gets a list of created pools (including archived pools).
+GET | [/pools/<pool_id>](/docs/api/get-pool) | Gets the properties of a pool.
+PATCH | [/pools/<pool_id>](/docs/api/set-priority-pool) | Changes the priority of a pool.
 
 ## Learn more {#links}
 
-- [More information about pools](/docs-new/guide/pool-main)
+- [More information about pools](/docs/guide/pool-main)
 
 <ContactGuideSupport/>

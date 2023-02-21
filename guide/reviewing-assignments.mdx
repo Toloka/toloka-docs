@@ -24,13 +24,13 @@ If you don't want Tolokers who made a lot of mistakes to do your tasks in the fu
 
 ## When to use {#when-use}
 
-If [manual review](/docs-new/guide/offline-accept) is set in the [pool](/docs-new/glossary#pool), add a rule to:
+If [manual review](/docs/guide/offline-accept) is set in the [pool](/docs/glossary#pool), add a rule to:
 
-- Set the Toloker's [skill](/docs-new/glossary#skill) based on their responses.
+- Set the Toloker's [skill](/docs/glossary#skill) based on their responses.
 
 - Block access for Tolokers who give incorrect responses.
 
-To have rejected tasks redistributed to other Tolokers, set up the [Recompletion of rejected assignments](/docs-new/guide/reassessment-after-accepting) rule.
+To have rejected tasks redistributed to other Tolokers, set up the [Recompletion of rejected assignments](/docs/guide/reassessment-after-accepting) rule.
 
 ## How to configure {#rule}
 
@@ -42,7 +42,7 @@ The **If** and **then** fields in this rule are required. If you don't fill in a
 
 **Field** | **Overview**
 ----- | -----
-**Recent values to use** | How many recent responses from the Toloker to use.<br/><br/>If this field is not filled in, the calculation includes only task responses from the pool to which the rule is applied.<br/><br/>If the field is filled in, the corresponding number of responses is used. The rule takes into account responses from both the current pool and other pools where this field is filled in.<br/><br/>To learn more about how this field works, go to [“Remember values” parameter](/docs-new/guide/remember-values).
+**Recent values to use** | How many recent responses from the Toloker to use.<br/><br/>If this field is not filled in, the calculation includes only task responses from the pool to which the rule is applied.<br/><br/>If the field is filled in, the corresponding number of responses is used. The rule takes into account responses from both the current pool and other pools where this field is filled in.<br/><br/>To learn more about how this field works, go to [“Remember values” parameter](/docs/guide/remember-values).
 **If** | <ReviewingAssignmentsTable1/>
 **then** | <ReviewingAssignmentsTable2/>
 
@@ -56,7 +56,7 @@ You can also assign a skill that you can use to either block access to tasks for
 
 <Note mode="warning" title="Warning">
 
-The assignments submitted by banned Tolokers will be taken into account if they are not rejected using manual review. They can be reassigned by setting up the [Recompletion of assignments from banned users](/docs-new/guide/restore-task-overlap) rule.
+The assignments submitted by banned Tolokers will be taken into account if they are not rejected using manual review. They can be reassigned by setting up the [Recompletion of assignments from banned users](/docs/guide/restore-task-overlap) rule.
 
 </Note>
 
@@ -69,7 +69,7 @@ The assignments submitted by banned Tolokers will be taken into account if they 
 
 <Image withBackground imageId="1675427115481" alt="" />
 
-After 3 tasks are reviewed, the skill is set to the percentage of correct responses. Use the skill value to set access to other pools with [filters](/docs-new/guide/filters).
+After 3 tasks are reviewed, the skill is set to the percentage of correct responses. Use the skill value to set access to other pools with [filters](/docs/guide/filters).
 
 <Cut title="Example of filter settings">
 
@@ -79,8 +79,8 @@ After 3 tasks are reviewed, the skill is set to the percentage of correct respon
 
 ## For developers {#for-developers}
 
-- [Toloka API: Processing rejected and accepted assignments](/docs-new/api/reassessment)
-- [Toloka-Kit: AssignmentsAssessment collector class](/docs-new/toloka-kit/reference/toloka.client.collectors.AssignmentsAssessment)
+- [Toloka API: Processing rejected and accepted assignments](/docs/api/reassessment)
+- [Toloka-Kit: AssignmentsAssessment collector class](/docs/toloka-kit/reference/toloka.client.collectors.AssignmentsAssessment)
 
 ## Troubleshooting {#troubleshooting}
 

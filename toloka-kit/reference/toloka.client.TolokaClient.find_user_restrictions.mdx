@@ -15,13 +15,13 @@ Finds Toloker restrictions that match certain criteria.
 
 The number of returned restrictions is limited. To find remaining restrictions call `find_user_restrictions` with updated search criteria.
 
-To iterate over all matching Toloker restrictions you may use the [get_user_restrictions](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_user_restrictions) method.
+To iterate over all matching Toloker restrictions you may use the [get_user_restrictions](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_user_restrictions) method.
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`scope`|**Optional\[[UserRestriction.Scope](/docs-new/toloka-kit/reference/toloka.client.user_restriction.UserRestriction.Scope)\]**|<p>The scope of a restriction. Refer to the [UserRestriction.Scope](/docs-new/toloka-kit/reference/toloka.client.user_restriction.UserRestriction.Scope) page for more information on the available `scope` values.</p>
+`scope`|**Optional\[[UserRestriction.Scope](/docs/toloka-kit/reference/toloka.client.user_restriction.UserRestriction.Scope)\]**|<p>The scope of a restriction. Refer to the [UserRestriction.Scope](/docs/toloka-kit/reference/toloka.client.user_restriction.UserRestriction.Scope) page for more information on the available `scope` values.</p>
 `user_id`|**Optional\[str\]**|<p>The Toloker&#x27;s ID.</p>
 `project_id`|**Optional\[str\]**|<p>The ID of a project with restricted access.</p>
 `pool_id`|**Optional\[str\]**|<p>The ID of a pool with restricted access.</p>
@@ -33,7 +33,7 @@ To iterate over all matching Toloker restrictions you may use the [get_user_rest
 `created_lte`|**Optional\[datetime\]**|<p>Restrictions created before or on the specified date.</p>
 `created_gt`|**Optional\[datetime\]**|<p>Restrictions created after the specified date.</p>
 `created_gte`|**Optional\[datetime\]**|<p>Restrictions created after or on the specified date.</p>
-`sort`|**Union\[List\[str\], [UserRestrictionSortItems](/docs-new/toloka-kit/reference/toloka.client.search_requests.UserRestrictionSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
+`sort`|**Union\[List\[str\], [UserRestrictionSortItems](/docs/toloka-kit/reference/toloka.client.search_requests.UserRestrictionSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
 `limit`|**Optional\[int\]**|<p>Returned Toloker restrictions limit. The maximum allowed limit is 500.</p>
 
 * **Returns:**
@@ -42,7 +42,7 @@ To iterate over all matching Toloker restrictions you may use the [get_user_rest
 
 * **Return type:**
 
-  [UserRestrictionSearchResult](/docs-new/toloka-kit/reference/toloka.client.search_results.UserRestrictionSearchResult)
+  [UserRestrictionSearchResult](/docs/toloka-kit/reference/toloka.client.search_results.UserRestrictionSearchResult)
 
 **Examples:**
 

@@ -24,7 +24,7 @@ _Get the detailed information about the reward with the ID specified in the requ
 
 ### 3. Get reward information {#step-three}
 
-[Find out](/docs-new/toloka-kit/recipes/get-rewards) the ID of the reward for which you want to get the detailed information. Then get this info calling the `get_user_bonus()` method.
+[Find out](/docs/toloka-kit/recipes/get-rewards) the ID of the reward for which you want to get the detailed information. Then get this info calling the `get_user_bonus()` method.
 
 <CodeCopy
   isSmall
@@ -39,7 +39,7 @@ _Get the detailed information about the reward with the ID specified in the requ
 
 ### 4. Print reward title and amount {#step-four}
 
-The `get_user_bonus()` request will return the [UserBonus](/docs-new/toloka-kit/reference/toloka.client.user_bonus.UserBonus) class object. You can use its attributes to print the information you need.
+The `get_user_bonus()` request will return the [UserBonus](/docs/toloka-kit/reference/toloka.client.user_bonus.UserBonus) class object. You can use its attributes to print the information you need.
 
 ```python
 print(bonus.public_title['EN'], bonus.amount)
@@ -64,15 +64,15 @@ print(bonus.public_title['EN'], bonus.amount)
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[get_user_bonus()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_user_bonus) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_user_bonus()](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_user_bonus) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
-- [Toloka-Kit: UserBonus class](/docs-new/toloka-kit/reference/toloka.client.user_bonus.UserBonus)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Toloka-Kit: UserBonus class](/docs/toloka-kit/reference/toloka.client.user_bonus.UserBonus)
 - [Toloka API: Get reward by ID](https://toloka.ai/docs/api/api-reference/#get-/user-bonuses/-userBonusId-)

@@ -24,7 +24,7 @@ _Change the priority of the pool and offer it to Tolokers before other pools._
 
 ### 3. Change pool priority {#step-three}
 
-[Find out](/docs-new/toloka-kit/recipes/get-pools) the ID of the pool for which you want to change the priority. Then call the `patch_pool()` method.
+[Find out](/docs/toloka-kit/recipes/get-pools) the ID of the pool for which you want to change the priority. Then call the `patch_pool()` method.
 
 <CodeCopy
   isSmall
@@ -39,7 +39,7 @@ _Change the priority of the pool and offer it to Tolokers before other pools._
 
 ### 4. Print pool ID and priority {#step-four}
 
-The `patch_pool()` request will return the [Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
+The `patch_pool()` request will return the [Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
 
 ```python
 print(patched_pool.id, patched_pool.priority)
@@ -64,16 +64,16 @@ print(patched_pool.id, patched_pool.priority)
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[patch_pool()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.patch_pool) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[patch_pool()](/docs/toloka-kit/reference/toloka.client.TolokaClient.patch_pool) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
-- [Get list of pools](/docs-new/toloka-kit/recipes/get-pools)
-- [Toloka-Kit: Pool class](/docs-new/toloka-kit/reference/toloka.client.pool.Pool)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Get list of pools](/docs/toloka-kit/recipes/get-pools)
+- [Toloka-Kit: Pool class](/docs/toloka-kit/reference/toloka.client.pool.Pool)
 - [Toloka API: Change pool priority](https://toloka.ai/docs/api/api-reference/#patch-/pools/-id-)

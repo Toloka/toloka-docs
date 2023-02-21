@@ -14,11 +14,11 @@ import ContactGuideSupport from '../subcomponents/contact-support.mdx'
 
 <Note mode="note" title="Note">
 
-The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in [Template Builder](/docs-new/template-builder/).
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in [Template Builder](/docs/template-builder/).
 
 </Note>
 
-This class manages the task progress, processes the [task suite](/docs-new/glossary#task-suite) commands for sending responses, skipping or pausing tasks, and more. It also creates an instance of the [TaskSuite](/docs-new/guide/tasksuite) class.
+This class manages the task progress, processes the [task suite](/docs/glossary#task-suite) commands for sending responses, skipping or pausing tasks, and more. It also creates an instance of the [TaskSuite](/docs/guide/tasksuite) class.
 
 The `Assignment` base class is available in the `window.TolokaAssignment` global variable
 
@@ -32,19 +32,19 @@ Parameters:
 
 - `options.assignment` — `Assignment` task list model.
 
-- `options.specs` — Parameters for [input and output data](/docs-new/glossary#input-output-data) and the task interface.
+- `options.specs` — Parameters for [input and output data](/docs/glossary#input-output-data) and the task interface.
 
 - `options.workspaceOptions` — Toloker's workspace initialization parameters.
 
 ## destroy() {#destroy}
 
-Calls [TaskSuite.destroy()](/docs-new/guide/tasksuite#destroy), removes all template elements from the DOM, closes the messaging channel, stops hotkey polling and location detection, calls `onDestroy`.
+Calls [TaskSuite.destroy()](/docs/guide/tasksuite#destroy), removes all template elements from the DOM, closes the messaging channel, stops hotkey polling and location detection, calls `onDestroy`.
 
 ## initHotkeys() {#inithotkeys}
 
 Hotkey handler initializer:
 
-- Resets all hotkeys ([hotkeys.reset](/docs-new/guide/services#reset)).
+- Resets all hotkeys ([hotkeys.reset](/docs/guide/services#reset)).
 
 - Calls [submit()](#submit) when the Enter key is pressed.
 
@@ -86,7 +86,7 @@ this.getSandboxChannel().triggerOut('task:interface:show:instruction');
 
 ## getTaskSuite() {#gettasksuite}
 
-Returns a link to a [TaskSuite](/docs-new/guide/tasksuite) instance.
+Returns a link to a [TaskSuite](/docs/guide/tasksuite) instance.
 
 ## getTaskSuiteContainer() {#gettasksuitecontainer}
 
@@ -114,7 +114,7 @@ Pauses task execution (for example, upon a `request:assignment:pause` command fr
 
 ## provideSolutions(strategy) {#providesolutions}
 
-Collects answers to all tasks ([TolokaTaskSuite.getSolutions()](/docs-new/guide/tasksuite#getSolutions)), validates them ([TolokaTaskSuite.validate()](/docs-new/guide/tasksuite#validate)). If validation is successful, calls `strategy`, otherwise sends an `assignment:validation:fail` request and an object with a list of errors returned by the validator. Parameter:
+Collects answers to all tasks ([TolokaTaskSuite.getSolutions()](/docs/guide/tasksuite#getSolutions)), validates them ([TolokaTaskSuite.validate()](/docs/guide/tasksuite#validate)). If validation is successful, calls `strategy`, otherwise sends an `assignment:validation:fail` request and an object with a list of errors returned by the validator. Parameter:
 
 - `strategy` — A function that sends a message about sending results (`assignment:submit`), a response array, and an `assignmentId` to the parent page.
 

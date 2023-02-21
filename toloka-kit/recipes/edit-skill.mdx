@@ -25,7 +25,7 @@ _Modify an existing skill._
 
 ### 3. Get skill {#step-three}
 
-[Find out](/docs-new/toloka-kit/recipes/get-skills) the ID of the skill which you want to modify. Then create a local copy of the project object calling the `get_skill()` method.
+[Find out](/docs/toloka-kit/recipes/get-skills) the ID of the skill which you want to modify. Then create a local copy of the project object calling the `get_skill()` method.
 
 <CodeCopy
   isSmall
@@ -46,7 +46,7 @@ All the code manipulations at steps 3–4 occur in your device memory. The data 
 
 ### 4. Set skill new private comment {#step-four}
 
-Specify a new private comment for the skill. You can choose to change some other skill data. Refer to the [Skill](/docs-new/toloka-kit/reference/toloka.client.skill.Skill) class to see what other attributes it has.
+Specify a new private comment for the skill. You can choose to change some other skill data. Refer to the [Skill](/docs/toloka-kit/reference/toloka.client.skill.Skill) class to see what other attributes it has.
 
 ```python
 skill.private_comment = 'Got at least 5 right responses on control tasks with C++ or Python'
@@ -69,7 +69,7 @@ This actually updates the project data in Toloka.
 
 ### 6. Display modifications {#step-six}
 
-The `update_skill()` request will return the [Skill](/docs-new/toloka-kit/reference/toloka.client.skill.Skill) class object. You can use its attributes to print the information you need.
+The `update_skill()` request will return the [Skill](/docs/toloka-kit/reference/toloka.client.skill.Skill) class object. You can use its attributes to print the information you need.
 
 ```python
 print(updated_skill.id, updated_skill.private_comment)
@@ -97,17 +97,17 @@ print(updated_skill.id, updated_skill.private_comment)
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[get_skill()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_skill) method_
-- _[update_skill()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.update_skill) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_skill()](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_skill) method_
+- _[update_skill()](/docs/toloka-kit/reference/toloka.client.TolokaClient.update_skill) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
-- [Get skills](/docs-new/toloka-kit/recipes/get-skills)
-- [Toloka-Kit: Skill class](/docs-new/toloka-kit/reference/toloka.client.skill.Skill)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Get skills](/docs/toloka-kit/recipes/get-skills)
+- [Toloka-Kit: Skill class](/docs/toloka-kit/reference/toloka.client.skill.Skill)
 - [Toloka API: Update skill](https://toloka.ai/docs/api/api-reference/#put-/skills/-id-)

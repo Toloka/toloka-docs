@@ -34,22 +34,22 @@ Video/audio file download failure or non-video file hosted at the URL| <Troubles
 
 <Cut title="A shortcut is not displayed">
 
-To display a shortcut in the interface, set the shortcut to the same [action](/docs-new/template-builder/reference/actions) that is performed when the button is clicked.
+To display a shortcut in the interface, set the shortcut to the same [action](/docs/template-builder/reference/actions) that is performed when the button is clicked.
 
 Assign an action to the component if you haven't yet:
 
-- [action.set](/docs-new/template-builder/reference/action.set) for radio buttons.
-- [action.toggle](/docs-new/template-builder/reference/action.toggle) for checkboxes.
-- [action.play-pause](/docs-new/template-builder/reference/action.play-pause) for playback control.
-- [action.open-close](/docs-new/template-builder/reference/action.open-close) to zoom in on images.
+- [action.set](/docs/template-builder/reference/action.set) for radio buttons.
+- [action.toggle](/docs/template-builder/reference/action.toggle) for checkboxes.
+- [action.play-pause](/docs/template-builder/reference/action.play-pause) for playback control.
+- [action.open-close](/docs/template-builder/reference/action.open-close) to zoom in on images.
 
-You can see the full list of actions in [List of actions](/docs-new/template-builder/reference/actions).
+You can see the full list of actions in [List of actions](/docs/template-builder/reference/actions).
 
 Keep in mind the following:
 
 - The data types for actions must be the same. For example, in the following case the shortcut works but is not displayed: clicking on the button saves the `“true”` string to the results, and the Boolean value `true` is defined for the shortcut.
-- If multiple actions are triggered when the button is clicked ([action.bulk](/docs-new/template-builder/reference/action.bulk)), the sequence of these actions for the shortcut must be the same.
-- If you use a conditional operator to select an action, such as [helper.if](/docs-new/template-builder/reference/helper.if), the same conditional operator (**helper.if**) must be called under the same rules when the shortcut key is pressed.
+- If multiple actions are triggered when the button is clicked ([action.bulk](/docs/template-builder/reference/action.bulk)), the sequence of these actions for the shortcut must be the same.
+- If you use a conditional operator to select an action, such as [helper.if](/docs/template-builder/reference/helper.if), the same conditional operator (**helper.if**) must be called under the same rules when the shortcut key is pressed.
 
 </Cut>
 

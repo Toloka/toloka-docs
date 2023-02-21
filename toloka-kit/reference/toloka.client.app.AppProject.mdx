@@ -29,11 +29,11 @@ AppProject(
 )
 ```
 
-An [App](/docs-new/apps/) project.
+An [App](/docs/apps/) project.
 
 An App project is based on one of App solutions. It is created with a template interface and preconfigured data specification and quality control rules.
 
-To get available App solutions use the [get_apps](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_apps) method.
+To get available App solutions use the [get_apps](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_apps) method.
 
 ## Parameters Description
 
@@ -42,11 +42,11 @@ To get available App solutions use the [get_apps](/docs-new/toloka-kit/reference
 `app_id`|**Optional\[str\]**|<p>The ID of the App solution used to create the project.</p>
 `parent_app_project_id`|**Optional\[str\]**|<p>The ID of the parent project. It is set if this project is a clone of other project. Otherwise it is empty.</p>
 `name`|**Optional\[str\]**|<p>The project name.</p>
-`parameters`|**Optional\[Dict\]**|<p>Parameters of the solution. The parameters should follow the schema described in the `param_spec` field of the [solution](/docs-new/toloka-kit/reference/toloka.client.app.App).</p>
+`parameters`|**Optional\[Dict\]**|<p>Parameters of the solution. The parameters should follow the schema described in the `param_spec` field of the [solution](/docs/toloka-kit/reference/toloka.client.app.App).</p>
 `id`|**Optional\[str\]**|<p>The ID of the project.</p>
-`status`|**Optional\[[Status](/docs-new/toloka-kit/reference/toloka.client.app.AppProject.Status)\]**|<p>The project status:</p> <ul> <li>`CREATING` — Toloka is checking the project.</li> <li>`READY` — The project is active.</li> <li>`ARCHIVED` — The project was archived.</li> <li>`ERROR` — Project creation failed due to errors.</li> </ul>
+`status`|**Optional\[[Status](/docs/toloka-kit/reference/toloka.client.app.AppProject.Status)\]**|<p>The project status:</p> <ul> <li>`CREATING` — Toloka is checking the project.</li> <li>`READY` — The project is active.</li> <li>`ARCHIVED` — The project was archived.</li> <li>`ERROR` — Project creation failed due to errors.</li> </ul>
 `created`|**Optional\[datetime\]**|<p>The date and time when the project was created.</p>
 `item_price`|**Optional\[Decimal\]**|<p>The price you pay for a processed item.</p>
-`errors`|**Optional\[List\[[_AppError](/docs-new/toloka-kit/reference/toloka.client.app._AppError)\]\]**|<p>Errors found during a project check.</p>
+`errors`|**Optional\[List\[[_AppError](/docs/toloka-kit/reference/toloka.client.app._AppError)\]\]**|<p>Errors found during a project check.</p>
 `read_only`|**Optional\[bool\]**|
-`app`|**Optional\[[AppLightestResult](/docs-new/toloka-kit/reference/toloka.client.app.AppLightestResult)\]**|<p>Brief information about the project template.</p>
+`app`|**Optional\[[AppLightestResult](/docs/toloka-kit/reference/toloka.client.app.AppLightestResult)\]**|<p>Brief information about the project template.</p>

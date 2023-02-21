@@ -50,7 +50,7 @@ Parameter | Overview
 **allow_defaults** | <CreateTasksBatchTable2/>
 **skip_invalid_items** | <CreateTasksBatchTable3/>
 **open_pool** | **boolean**<br/><br/>Open the pool immediately after the operation is completed, if the pool is closed. The default value is `false`.
-**operation_id** | **string**<br/><br/>Operation ID for a scheduled upload of one or more tasks (if `async_mode=true` is set).<br/><br/>We recommended sending the ID in the POST request to avoid accidental errors, such as creating the operation multiple times for the same tasks.<br/><br/>The ID should conform to the [RFC4122 standard](https://tools.ietf.org/html/rfc4122).<br/><br/>You can use this ID in the future to [get information about the operation](/docs-new/api/operations).
+**operation_id** | **string**<br/><br/>Operation ID for a scheduled upload of one or more tasks (if `async_mode=true` is set).<br/><br/>We recommended sending the ID in the POST request to avoid accidental errors, such as creating the operation multiple times for the same tasks.<br/><br/>The ID should conform to the [RFC4122 standard](https://tools.ietf.org/html/rfc4122).<br/><br/>You can use this ID in the future to [get information about the operation](/docs/api/operations).
 
 ## Response {#response}
 

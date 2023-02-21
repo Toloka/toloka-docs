@@ -24,7 +24,7 @@ _List all the files attached to the Toloker responses in a pool._
 
 ### 3. List attachments {#step-three}
 
-[Find out](/docs-new/toloka-kit/recipes/get-pools) the ID of the pools for which you want to get all the files attached to the Toloker responses. Then iterate through all the attachments calling the `get_attachments()` method.
+[Find out](/docs/toloka-kit/recipes/get-pools) the ID of the pools for which you want to get all the files attached to the Toloker responses. Then iterate through all the attachments calling the `get_attachments()` method.
 
 <CodeCopy
   isSmall
@@ -60,15 +60,15 @@ for attachment in toloka_client.get_attachments(pool_id='1085757'):
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[get_attachments()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_attachments) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_attachments()](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_attachments) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
-- [Get list of pools](/docs-new/toloka-kit/recipes/get-pools)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Get list of pools](/docs/toloka-kit/recipes/get-pools)
 - [Toloka API: Get list of files](https://toloka.ai/docs/api/api-reference/#get-/attachments)

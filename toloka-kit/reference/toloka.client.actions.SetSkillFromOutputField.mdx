@@ -22,14 +22,14 @@ SetSkillFromOutputField(
 
 Sets Toloker's skill value to the percentage of correct or incorrect answers.
 
-You can use this action with [MajorityVote](/docs-new/toloka-kit/reference/toloka.client.collectors.MajorityVote) and [GoldenSet](/docs-new/toloka-kit/reference/toloka.client.collectors.GoldenSet) collectors.
+You can use this action with [MajorityVote](/docs/toloka-kit/reference/toloka.client.collectors.MajorityVote) and [GoldenSet](/docs/toloka-kit/reference/toloka.client.collectors.GoldenSet) collectors.
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `skill_id`|**Optional\[str\]**|<p>The ID of the skill to update.</p>
-`from_field`|**Union\[[RuleConditionKey](/docs-new/toloka-kit/reference/toloka.client.conditions.RuleConditionKey), str, None\]**|<p>The value to assign to the skill:</p> <ul> <li>`correct_answers_rate` — Percentage of correct answers.</li> <li>`incorrect_answers_rate` — Percentage of incorrect answers.</li> </ul>
+`from_field`|**Union\[[RuleConditionKey](/docs/toloka-kit/reference/toloka.client.conditions.RuleConditionKey), str, None\]**|<p>The value to assign to the skill:</p> <ul> <li>`correct_answers_rate` — Percentage of correct answers.</li> <li>`incorrect_answers_rate` — Percentage of incorrect answers.</li> </ul>
 
 **Examples:**
 

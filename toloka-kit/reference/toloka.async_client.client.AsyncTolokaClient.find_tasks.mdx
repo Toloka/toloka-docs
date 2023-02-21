@@ -15,7 +15,7 @@ Finds tasks that match certain criteria.
 
 The number of returned tasks is limited. To find remaining tasks call `find_tasks` with updated search criteria.
 
-To iterate over all matching tasks you may use the [get_tasks](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_tasks) method.
+To iterate over all matching tasks you may use the [get_tasks](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_tasks) method.
 
 ## Parameters Description
 
@@ -35,7 +35,7 @@ To iterate over all matching tasks you may use the [get_tasks](/docs-new/toloka-
 `overlap_lte`|**Optional\[int\]**|<p>Tasks with an overlap less than or equal to the specified value.</p>
 `overlap_gt`|**Optional\[int\]**|<p>Tasks with an overlap greater than the specified value.</p>
 `overlap_gte`|**Optional\[int\]**|<p>Tasks with an overlap greater than or equal to the specified value.</p>
-`sort`|**Union\[List\[str\], [TaskSortItems](/docs-new/toloka-kit/reference/toloka.client.search_requests.TaskSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
+`sort`|**Union\[List\[str\], [TaskSortItems](/docs/toloka-kit/reference/toloka.client.search_requests.TaskSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
 `limit`|**Optional\[int\]**|<p>Returned tasks limit. The default limit is 50. The maximum allowed limit is 100,000.</p>
 
 * **Returns:**
@@ -44,7 +44,7 @@ To iterate over all matching tasks you may use the [get_tasks](/docs-new/toloka-
 
 * **Return type:**
 
-  [TaskSearchResult](/docs-new/toloka-kit/reference/toloka.client.search_results.TaskSearchResult)
+  [TaskSearchResult](/docs/toloka-kit/reference/toloka.client.search_results.TaskSearchResult)
 
 **Examples:**
 

@@ -24,7 +24,7 @@ _Increase the overlap of a task when you need more Tolokers to complete it._
 
 ### 3. Change task overlap {#step-three}
 
-[Find out](/docs-new/toloka-kit/recipes/get-tasks) the ID of the task which you want to modify. Then change the task overlap calling the `patch_task()` method.
+[Find out](/docs/toloka-kit/recipes/get-tasks) the ID of the task which you want to modify. Then change the task overlap calling the `patch_task()` method.
 
 <CodeCopy
   isSmall
@@ -39,7 +39,7 @@ _Increase the overlap of a task when you need more Tolokers to complete it._
 
 ### 4. Display resulting task overlap {#step-four}
 
-The `patch_task()` request will return the [Task](/docs-new/toloka-kit/reference/toloka.client.task.Task) class object. You can use its attributes to print the information you need.
+The `patch_task()` request will return the [Task](/docs/toloka-kit/reference/toloka.client.task.Task) class object. You can use its attributes to print the information you need.
 
 ```python
 print(task.id, task.overlap)
@@ -64,16 +64,16 @@ print(task.id, task.overlap)
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[patch_task()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.patch_task) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[patch_task()](/docs/toloka-kit/reference/toloka.client.TolokaClient.patch_task) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
-- [Get list of tasks](/docs-new/toloka-kit/recipes/get-tasks)
-- [Toloka-Kit: Task class](/docs-new/toloka-kit/reference/toloka.client.task.Task)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Get list of tasks](/docs/toloka-kit/recipes/get-tasks)
+- [Toloka-Kit: Task class](/docs/toloka-kit/reference/toloka.client.task.Task)
 - [Toloka API: Edit task](https://toloka.ai/docs/api/api-reference/#patch-/tasks/-id-)

@@ -15,14 +15,14 @@ Finds message threads that match certain criteria.
 
 The number of returned message threads is limited. To find remaining threads call `find_message_threads` with updated search criteria.
 
-To iterate over all matching threads you may use the [get_message_threads](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_message_threads) method.
+To iterate over all matching threads you may use the [get_message_threads](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_message_threads) method.
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`folder`|**Union\[str, [Folder](/docs-new/toloka-kit/reference/toloka.client.message_thread.Folder), List\[Union\[str, [Folder](/docs-new/toloka-kit/reference/toloka.client.message_thread.Folder)\]\], None\]**|<p>A folder where to search threads or a list of folders. Refer to the [Folder](/docs-new/toloka-kit/reference/toloka.client.message_thread.Folder) page for more information on the available `folder` values.</p>
-`folder_ne`|**Union\[str, [Folder](/docs-new/toloka-kit/reference/toloka.client.message_thread.Folder), List\[Union\[str, [Folder](/docs-new/toloka-kit/reference/toloka.client.message_thread.Folder)\]\], None\]**|<p>A folder to skip or a list of folders. Supported values are the same as for `folder`.</p>
+`folder`|**Union\[str, [Folder](/docs/toloka-kit/reference/toloka.client.message_thread.Folder), List\[Union\[str, [Folder](/docs/toloka-kit/reference/toloka.client.message_thread.Folder)\]\], None\]**|<p>A folder where to search threads or a list of folders. Refer to the [Folder](/docs/toloka-kit/reference/toloka.client.message_thread.Folder) page for more information on the available `folder` values.</p>
+`folder_ne`|**Union\[str, [Folder](/docs/toloka-kit/reference/toloka.client.message_thread.Folder), List\[Union\[str, [Folder](/docs/toloka-kit/reference/toloka.client.message_thread.Folder)\]\], None\]**|<p>A folder to skip or a list of folders. Supported values are the same as for `folder`.</p>
 `id_lt`|**Optional\[str\]**|<p>Threads with IDs less than the specified value.</p>
 `id_lte`|**Optional\[str\]**|<p>Threads with IDs less than or equal to the specified value.</p>
 `id_gt`|**Optional\[str\]**|<p>Threads with IDs greater than the specified value.</p>
@@ -31,7 +31,7 @@ To iterate over all matching threads you may use the [get_message_threads](/docs
 `created_lte`|**Optional\[datetime\]**|<p>Threads created before or on the specified date.</p>
 `created_gt`|**Optional\[datetime\]**|<p>Threads created after the specified date.</p>
 `created_gte`|**Optional\[datetime\]**|<p>Threads created after or on the specified date.</p>
-`sort`|**Union\[List\[str\], [MessageThreadSortItems](/docs-new/toloka-kit/reference/toloka.client.search_requests.MessageThreadSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
+`sort`|**Union\[List\[str\], [MessageThreadSortItems](/docs/toloka-kit/reference/toloka.client.search_requests.MessageThreadSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
 `limit`|**Optional\[int\]**|<p>Returned message threads limit. The default limit is 50. The maximum allowed limit is 300.</p>
 
 * **Returns:**
@@ -40,7 +40,7 @@ To iterate over all matching threads you may use the [get_message_threads](/docs
 
 * **Return type:**
 
-  [MessageThreadSearchResult](/docs-new/toloka-kit/reference/toloka.client.search_results.MessageThreadSearchResult)
+  [MessageThreadSearchResult](/docs/toloka-kit/reference/toloka.client.search_results.MessageThreadSearchResult)
 
 **Examples:**
 

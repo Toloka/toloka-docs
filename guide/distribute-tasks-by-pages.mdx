@@ -27,7 +27,7 @@ The Toloker receives payment for a task suite, so the labeling cost and quality 
 
 ## Set manually {#by-empty-row}
 
-Enter the number of tasks per suite. The order of tasks depends on the [**Keep task order**](/docs-new/guide/pool-main) pool setting.
+Enter the number of tasks per suite. The order of tasks depends on the [**Keep task order**](/docs/guide/pool-main) pool setting.
 
 ## Smart mixing {#smart-mixing}
 
@@ -37,9 +37,9 @@ Specify how many tasks of each type should be in each task suite. For example, 8
 
 This method is useful if the created pool:
 
-- Contains [control](/docs-new/glossary#control-task) or [training](/docs-new/glossary#training-task) tasks in addition to the [general](/docs-new/glossary#general-task) tasks.
+- Contains [control](/docs/glossary#control-task) or [training](/docs/glossary#training-task) tasks in addition to the [general](/docs/glossary#general-task) tasks.
 
-- Has [dynamic overlap](/docs-new/guide/dynamic-overlap) (incremental relabeling, IRL) enabled.
+- Has [dynamic overlap](/docs/guide/dynamic-overlap) (incremental relabeling, IRL) enabled.
 
 <Cut title="Sample settings">
 
@@ -55,7 +55,7 @@ This method is useful if the created pool:
 
 - Tasks in the suite are mixed up before the page is shown to the Toloker.
 
-- If there aren't enough general tasks and the **Assign partial page** option is set, the Toloker is given an [incomplete task suite](/docs-new/glossary#incomplete-task-suite). Please note that the number of control and training tasks in this case must be complete.
+- If there aren't enough general tasks and the **Assign partial page** option is set, the Toloker is given an [incomplete task suite](/docs/glossary#incomplete-task-suite). Please note that the number of control and training tasks in this case must be complete.
 
 <Note mode="restriction" title="Alert">
 
@@ -63,7 +63,7 @@ If you upload a file via **Smart mixing**, you won't be able to use other ways o
 
 </Note>
 
-After uploading the tasks with **smart mixing** you will be able to [mark up tasks](/docs-new/guide/task_markup) and set selective [majority vote checking](/docs-new/guide/mvote).
+After uploading the tasks with **smart mixing** you will be able to [mark up tasks](/docs/guide/task_markup) and set selective [majority vote checking](/docs/guide/mvote).
 
 #### How to distribute tasks as suites {#smart-mixing}
 
@@ -107,7 +107,7 @@ There are 100 tasks in the pool, and 10 of them are control tasks (10%). Each su
 
 </Cut>
 
-If there are few control tasks in the open pool, [add new control tasks](/docs-new/guide/troubleshooting/troubleshooting#add-gs).
+If there are few control tasks in the open pool, [add new control tasks](/docs/guide/troubleshooting/troubleshooting#add-gs).
 
 <Cut title="What for">
 
@@ -117,7 +117,7 @@ In a large pool with few control tasks, there might be a situation when a Toloke
 
 <Note mode="note" title="Note">
 
-To filter out Tolokers, use the [Control tasks](/docs-new/guide/control) quality control rule. To rank Tolokers by the quality of responses in control tasks, use a [skill](/docs-new/guide/nav).
+To filter out Tolokers, use the [Control tasks](/docs/guide/control) quality control rule. To rank Tolokers by the quality of responses in control tasks, use a [skill](/docs/guide/nav).
 
 </Note>
 
@@ -125,7 +125,7 @@ To filter out Tolokers, use the [Control tasks](/docs-new/guide/control) quality
 
 If you upload tasks from the Toloka interface, infinite overlap is set automatically for control and training tasks, so that there is enough to mark up all general tasks.
 
-You can set the overlap via the [Toloka API](/docs-new/glossary#toloka-api) or use **Set manually** for task allocation.
+You can set the overlap via the [Toloka API](/docs/glossary#toloka-api) or use **Set manually** for task allocation.
 
 <Note mode="restriction" title="Important">
 
@@ -137,20 +137,20 @@ If another overlap value is set, control tasks may end during labeling and the p
 
 ## Tips and recommendations {#tips}
 
-- If you used **Set manually**, you can find out the number of tasks per suite in the pool settings. But some suites may be [incomplete](/docs-new/glossary#incomplete-task-suite).
+- If you used **Set manually**, you can find out the number of tasks per suite in the pool settings. But some suites may be [incomplete](/docs/glossary#incomplete-task-suite).
 
-- If you uploaded tasks in a different way, you can check how they're grouped into suites in the Toloka interface for requesters. To do this, on the pool page, click **files** → **Download all tasks**. You can use the [Toloka API](/docs-new/glossary#toloka-api) to check task distribution across suites.
+- If you uploaded tasks in a different way, you can check how they're grouped into suites in the Toloka interface for requesters. To do this, on the pool page, click **files** → **Download all tasks**. You can use the [Toloka API](/docs/glossary#toloka-api) to check task distribution across suites.
 
 ## See also {#see-also}
 
-- [Adding a training](/docs-new/guide/train)
-- [Task markup](/docs-new/guide/task_markup)
-- [Dynamic overlap](/docs-new/guide/dynamic-overlap)
+- [Adding a training](/docs/guide/train)
+- [Task markup](/docs/guide/task_markup)
+- [Dynamic overlap](/docs/guide/dynamic-overlap)
 
 ## For developers {#for-developers}
 
-- [Toloka API: Task suites](/docs-new/api/task-suite)
-- [Toloka-Kit recipe: Group tasks in task suites](/docs-new/toloka-kit/recipes/create-task-suite)
+- [Toloka API: Task suites](/docs/api/task-suite)
+- [Toloka-Kit recipe: Group tasks in task suites](/docs/toloka-kit/recipes/create-task-suite)
 
 ## Troubleshooting {#troubleshooting}
 

@@ -15,13 +15,13 @@ Finds all Toloker restrictions that match certain criteria.
 
 `get_user_restrictions` returns a generator. You can iterate over all found Toloker restrictions using the generator. Several requests to the Toloka server are possible while iterating.
 
-If you need to sort Toloker restrictions use the [find_user_restrictions](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.find_user_restrictions) method.
+If you need to sort Toloker restrictions use the [find_user_restrictions](/docs/toloka-kit/reference/toloka.client.TolokaClient.find_user_restrictions) method.
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`scope`|**Optional\[[UserRestriction.Scope](/docs-new/toloka-kit/reference/toloka.client.user_restriction.UserRestriction.Scope)\]**|<p>The scope of a restriction. Refer to the [UserRestriction.Scope](/docs-new/toloka-kit/reference/toloka.client.user_restriction.UserRestriction.Scope) page for more information on the available `scope` values.</p>
+`scope`|**Optional\[[UserRestriction.Scope](/docs/toloka-kit/reference/toloka.client.user_restriction.UserRestriction.Scope)\]**|<p>The scope of a restriction. Refer to the [UserRestriction.Scope](/docs/toloka-kit/reference/toloka.client.user_restriction.UserRestriction.Scope) page for more information on the available `scope` values.</p>
 `user_id`|**Optional\[str\]**|<p>The Toloker&#x27;s ID.</p>
 `project_id`|**Optional\[str\]**|<p>The ID of a project with restricted access.</p>
 `pool_id`|**Optional\[str\]**|<p>The ID of a pool with restricted access.</p>
@@ -41,7 +41,7 @@ If you need to sort Toloker restrictions use the [find_user_restrictions](/docs-
 
 * **Yield type:**
 
-  Generator\[[UserRestriction](/docs-new/toloka-kit/reference/toloka.client.user_restriction.UserRestriction), None, None\]
+  Generator\[[UserRestriction](/docs/toloka-kit/reference/toloka.client.user_restriction.UserRestriction), None, None\]
 
 **Examples:**
 

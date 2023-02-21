@@ -24,13 +24,13 @@ import ResultAggregationList6 from './result-aggregation/subcomponents/result-ag
 
 # Aggregation of results
 
-If tasks were issued with an [overlap](/docs-new/glossary#overlap) of 2 or higher, run aggregation of results. Toloka will process all Tolokers' responses for the task and issue the resulting response and its confidence level.
+If tasks were issued with an [overlap](/docs/glossary#overlap) of 2 or higher, run aggregation of results. Toloka will process all Tolokers' responses for the task and issue the resulting response and its confidence level.
 
 <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425177697/1675425177697_original_svg.svg" alt="" />
 
 <Note mode="note" title="Note">
 
-If you run the [pool](/docs-new/glossary#pool) with the manual review, make sure that all responses are [accepted](/docs-new/guide/accept).
+If you run the [pool](/docs/glossary#pool) with the manual review, make sure that all responses are [accepted](/docs/guide/accept).
 
 </Note>
 
@@ -73,7 +73,7 @@ The Dawid-Skene model is a non-trivial aggregation algorithm. Check out its feat
 
     </Cut>
 
-- The Dawid-Skene aggregation model works with [control](/docs-new/glossary#control-task) and [training](/docs-new/glossary#training-task) tasks as well as with general tasks. There is a possibility that the `OUTPUT:result` field for the control task in the TSV file won't match the actual response to this task (`GOLDEN:result`).
+- The Dawid-Skene aggregation model works with [control](/docs/glossary#control-task) and [training](/docs/glossary#training-task) tasks as well as with general tasks. There is a possibility that the `OUTPUT:result` field for the control task in the TSV file won't match the actual response to this task (`GOLDEN:result`).
 
 - If your project has output data marked as `"required": false` and Tolokers don't fill in this field, it won't be included in aggregation.
 
@@ -87,7 +87,7 @@ The idea is that it collects the most accurate aggregated responses for each tas
 
 [Description of the Dawid-Skene method](https://www.jstor.org/stable/2346806).
 
-If you want to learn how the Dawid-Skene method is implemented in Toloka, check out the [Crowd Kit documentation](/docs-new/crowd-kit/reference/crowdkit.aggregation.classification.dawid_skene.DawidSkene).
+If you want to learn how the Dawid-Skene method is implemented in Toloka, check out the [Crowd Kit documentation](/docs/crowd-kit/reference/crowdkit.aggregation.classification.dawid_skene.DawidSkene).
 
 </Cut>
 
@@ -222,8 +222,8 @@ Aggregation only includes accepted tasks.
 
 ## For developers {#for-developers}
 
-- [Toloka API: Aggregated responses](/docs-new/api/aggregated-solutions)
-- [Toloka-Kit recipe: Aggregate responses in pool](/docs-new/toloka-kit/recipes/aggregate-responses)
+- [Toloka API: Aggregated responses](/docs/api/aggregated-solutions)
+- [Toloka-Kit recipe: Aggregate responses in pool](/docs/toloka-kit/recipes/aggregate-responses)
 
 ## Troubleshooting {#troubleshooting}
 

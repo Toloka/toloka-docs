@@ -29,17 +29,17 @@ import GoldensetList7 from './goldenset/subcomponents/goldenset-list-7.mdx'
 
 # Control tasks
 
-[Control tasks](/docs-new/glossary#control-task) contain samples of correct responses. They allow you to monitor the quality of task completion without having to check all the responses. Control tasks simplify the verification process, help identify Tolokers' qualifications, and save your time.
+[Control tasks](/docs/glossary#control-task) contain samples of correct responses. They allow you to monitor the quality of task completion without having to check all the responses. Control tasks simplify the verification process, help identify Tolokers' qualifications, and save your time.
 
 <Note mode="note" title="Note">
 
-To save time, you can opt for having your control tasks edited by [Toloka experts](/docs-new/guide/task_markup#auto-markup). In this case, markup is performed within the pool.
+To save time, you can opt for having your control tasks edited by [Toloka experts](/docs/guide/task_markup#auto-markup). In this case, markup is performed within the pool.
 
 </Note>
 
 ## When to use {#when-use}
 
-Use control tasks to assign a [skill](/docs-new/glossary#skill) to Tolokers based on their responses and [ban](/docs-new/glossary#banning-tolokers) Tolokers who submit incorrect responses.
+Use control tasks to assign a [skill](/docs/glossary#skill) to Tolokers based on their responses and [ban](/docs/glossary#banning-tolokers) Tolokers who submit incorrect responses.
 
 #### Don't use it if:
 
@@ -59,7 +59,7 @@ The **If** and **then** fields in this rule are required. If you don't fill in a
 
 Field | Overview
 ----- | -----
-**Recent control and training task responses to use** | The number of the Toloker's last responses to control tasks.<br/><br/>If this field is not filled in, the calculation includes only control task responses in the pool to which the rule applies.<br/><br/>If the field is filled in, the corresponding number of control task responses is used. The rule takes into account responses from both the current pool and other pools where this field is filled in.<br/><br/>[Learn more](/docs-new/guide/remember-values) about how this field works.
+**Recent control and training task responses to use** | The number of the Toloker's last responses to control tasks.<br/><br/>If this field is not filled in, the calculation includes only control task responses in the pool to which the rule applies.<br/><br/>If the field is filled in, the corresponding number of control task responses is used. The rule takes into account responses from both the current pool and other pools where this field is filled in.<br/><br/>[Learn more](/docs/guide/remember-values) about how this field works.
 **If** | <GoldensetTable1/>
 **then** | <GoldensetTable2/>
 
@@ -69,15 +69,15 @@ Field | Overview
 
 Solutions:
 
-- [Ban Tolokers based on control tasks and the percentage of correct responses](/docs-new/guide/goldenset#qcr-control_example1)
+- [Ban Tolokers based on control tasks and the percentage of correct responses](/docs/guide/goldenset#qcr-control_example1)
 
-- [Set a skill and deny access to Tolokers with a low skill level](/docs-new/guide/goldenset#nav)
+- [Set a skill and deny access to Tolokers with a low skill level](/docs/guide/goldenset#nav)
 
-- [Ban Tolokers if their percentage of correct responses to control tasks is less than 40%](/docs-new/guide/goldenset#qcr-control_example3)
+- [Ban Tolokers if their percentage of correct responses to control tasks is less than 40%](/docs/guide/goldenset#qcr-control_example3)
 
 <Note mode="warning" title="Warning">
 
-The assignments submitted by banned Tolokers will be taken into account if you don't reject them using manual review. They can be reassigned by setting up the [Recompletion of assignments from banned users](/docs-new/guide/restore-task-overlap) rule.
+The assignments submitted by banned Tolokers will be taken into account if you don't reject them using manual review. They can be reassigned by setting up the [Recompletion of assignments from banned users](/docs/guide/restore-task-overlap) rule.
 
 </Note>
 
@@ -107,13 +107,13 @@ Skills help identify how well Tolokers do your tasks. You can ban Tolokers with 
 
 ## See also {#see-also}
 
-- [Setting up quality control](/docs-new/guide/qa-pool-settings)
-- [“Remember values” parameter](/docs-new/guide/remember-values)
+- [Setting up quality control](/docs/guide/qa-pool-settings)
+- [“Remember values” parameter](/docs/guide/remember-values)
 
 ## For developers {#for-developers}
 
-- [Toloka API: Control tasks](/docs-new/api/goldenset)
-- [Toloka-Kit: Control and training task statistics collector](/docs-new/toloka-kit/reference/toloka.client.collectors.GoldenSet)
+- [Toloka API: Control tasks](/docs/api/goldenset)
+- [Toloka-Kit: Control and training task statistics collector](/docs/toloka-kit/reference/toloka.client.collectors.GoldenSet)
 
 ## Troubleshooting {#troubleshooting}
 

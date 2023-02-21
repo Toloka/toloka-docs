@@ -21,13 +21,13 @@ For this type of project, you can use the **Transcribing audio recordings** pres
 
 <Cut title="Components used in the example">
 
-- [view.audio](/docs-new/template-builder/reference/view.audio): An audio player.
-- [condition.played-fully](/docs-new/template-builder/reference/condition.played): Checks if a Toloker listened to the entire audio track.
-- [field.button-radio-group](/docs-new/template-builder/reference/field.button-radio-group): Buttons for answer options.
-- [field.textarea](/docs-new/template-builder/reference/field.textarea): Text input field.
-- [condition.required](/docs-new/template-builder/reference/condition.required): Checks if the text field is filled in.
-- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task layout.
-- [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys): [Keyboard shortcuts](/docs-new/template-builder/best-practices/hotkeys).
+- [view.audio](/docs/template-builder/reference/view.audio): An audio player.
+- [condition.played-fully](/docs/template-builder/reference/condition.played): Checks if a Toloker listened to the entire audio track.
+- [field.button-radio-group](/docs/template-builder/reference/field.button-radio-group): Buttons for answer options.
+- [field.textarea](/docs/template-builder/reference/field.textarea): Text input field.
+- [condition.required](/docs/template-builder/reference/condition.required): Checks if the text field is filled in.
+- [plugin.toloka](/docs/template-builder/reference/plugin.toloka): Customizes the task layout.
+- [plugin.hotkeys](/docs/template-builder/reference/plugin.hotkeys): [Keyboard shortcuts](/docs/template-builder/best-practices/hotkeys).
 
 </Cut>
 
@@ -35,11 +35,11 @@ For this type of project, you can use the **Transcribing audio recordings** pres
 
 ## What else can be configured {#add-more}
 
-- If you want to [check](/docs-new/template-builder/best-practices/conditions) whether the audio has been started, replace the [condition.played-fully](/docs-new/template-builder/reference/condition.played-fully) component with [condition.played](/docs-new/template-builder/reference/condition.played).
+- If you want to [check](/docs/template-builder/best-practices/conditions) whether the audio has been started, replace the [condition.played-fully](/docs/template-builder/reference/condition.played-fully) component with [condition.played](/docs/template-builder/reference/condition.played).
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/fpVaBRrf3ttEQS">View example</Button>
 
-- To put a short audio track on repeat, change the properties of the [view.audio](/docs-new/template-builder/reference/view.audio) component by adding `loop: true`.
+- To put a short audio track on repeat, change the properties of the [view.audio](/docs/template-builder/reference/view.audio) component by adding `loop: true`.
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/13Djihdu3ttERD">View example</Button>
 
@@ -56,12 +56,12 @@ Choose whether a Toloker can select only one or multiple answer options:
 
 ## Add pre-recognized text {#text}
 
-  You can add text from input data to audio transcription tasks. For example, this is useful if an audio recording was recognized automatically, and now you need Tolokers to correct errors in the text. To do this, use the [view.text](/docs-new/template-builder/reference/view.text) component and refer to the number of the element in the input data array in the `content` property.
+  You can add text from input data to audio transcription tasks. For example, this is useful if an audio recording was recognized automatically, and now you need Tolokers to correct errors in the text. To do this, use the [view.text](/docs/template-builder/reference/view.text) component and refer to the number of the element in the input data array in the `content` property.
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/m8wGfgo73ttETg">View example</Button>
 
 ## See also {#see-also}
 
-- [Tutorials: Audio transcription](/docs-new/tutorials/transcript-audio)
+- [Tutorials: Audio transcription](/docs/tutorials/transcript-audio)
 
 <ContactSupport/>

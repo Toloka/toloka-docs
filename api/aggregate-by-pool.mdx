@@ -56,12 +56,12 @@ Parameter | Overview
 **pool_id** | **string**<br/><br/>Pool ID.
 **type** | <AggregateByPoolTable1/>
 **answer_weight_skill_id** | **string**<br/><br/>A skill that determines the weight of the Toloker's response.<br/><br/>Required if the `WEIGHTED_DYNAMIC_OVERLAP` aggregation type is selected.
-**fields** | **object**<br/><br/>[Output data fields](/docs-new/guide/result-aggregation) to use for aggregating responses. For best results, each of these fields must have a limited number of response options.<br/><br/>If the `DAWID_SKENE` aggregation type is selected, you can only specify one value.
+**fields** | **object**<br/><br/>[Output data fields](/docs/guide/result-aggregation) to use for aggregating responses. For best results, each of these fields must have a limited number of response options.<br/><br/>If the `DAWID_SKENE` aggregation type is selected, you can only specify one value.
 **fields.name** | **string**<br/><br/>The output data field name.
 
 ## Response {#response}
 
-Contains operation details: Check the [operation status](/docs-new/api/operations). When it is completed [get the aggregation results](/docs-new/api/get-aggregated-result).
+Contains operation details: Check the [operation status](/docs/api/operations). When it is completed [get the aggregation results](/docs/api/get-aggregated-result).
 
 ```json
 {

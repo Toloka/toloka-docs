@@ -40,9 +40,9 @@ Items are uploaded to Toloka and are grouped in batches. After uploading the sta
 `app_project_id`|**Optional\[str\]**|<p>The ID of the project that contains the item.</p>
 `batch_id`|**Optional\[str\]**|<p>The ID of the batch that contains the item.</p>
 `input_data`|**Optional\[Dict\[str, Any\]\]**|<p>Input data. It must follow the solution schema described in `App.input_spec`.</p>
-`status`|**Optional\[[Status](/docs-new/toloka-kit/reference/toloka.client.app.AppItem.Status)\]**|<p>The item status:</p> <ul> <li>`NEW` — The item is uploaded to Toloka and ready for processing.</li> <li>`PROCESSING` — The item is being processed by Tolokers.</li> <li>`COMPLETED` — Item annotation is completed.</li> <li>`ERROR` — An error occurred during processing.</li> <li>`CANCELLED` — Item processing cancelled.</li> <li>`ARCHIVE` — The item is archived.</li> <li>`NO_MONEY` — There are not enough money for processing.</li> </ul>
+`status`|**Optional\[[Status](/docs/toloka-kit/reference/toloka.client.app.AppItem.Status)\]**|<p>The item status:</p> <ul> <li>`NEW` — The item is uploaded to Toloka and ready for processing.</li> <li>`PROCESSING` — The item is being processed by Tolokers.</li> <li>`COMPLETED` — Item annotation is completed.</li> <li>`ERROR` — An error occurred during processing.</li> <li>`CANCELLED` — Item processing cancelled.</li> <li>`ARCHIVE` — The item is archived.</li> <li>`NO_MONEY` — There are not enough money for processing.</li> </ul>
 `output_data`|**Optional\[Dict\[str, Any\]\]**|<p>Annotated data.</p>
-`errors`|**Optional\[List\[[_AppError](/docs-new/toloka-kit/reference/toloka.client.app._AppError)\]\]**|<p>Errors occurred during annotation.</p>
+`errors`|**Optional\[List\[[_AppError](/docs/toloka-kit/reference/toloka.client.app._AppError)\]\]**|<p>Errors occurred during annotation.</p>
 `created_at`|**Optional\[datetime\]**|<p>The date and time when the item was created.</p>
 `started_at`|**Optional\[datetime\]**|<p>The date and time when the item processing started.</p>
 `finished_at`|**Optional\[datetime\]**|<p>The date and time when the item processing was completed.</p>

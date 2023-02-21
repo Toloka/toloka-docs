@@ -15,13 +15,13 @@ Finds all webhook subscriptions that match certain criteria.
 
 `get_webhook_subscriptions` returns a generator. You can iterate over all found webhook subscriptions using the generator. Several requests to the Toloka server are possible while iterating.
 
-If you need to sort webhook subscriptions use the [find_webhook_subscriptions](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.find_webhook_subscriptions) method.
+If you need to sort webhook subscriptions use the [find_webhook_subscriptions](/docs/toloka-kit/reference/toloka.client.TolokaClient.find_webhook_subscriptions) method.
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`event_type`|**Optional\[[WebhookSubscription.EventType](/docs-new/toloka-kit/reference/toloka.client.webhook_subscription.WebhookSubscription.EventType)\]**|<p>Event type. Refer to the [EventType](/docs-new/toloka-kit/reference/toloka.client.webhook_subscription.WebhookSubscription.EventType) page for more information on the available `event_type` values.</p>
+`event_type`|**Optional\[[WebhookSubscription.EventType](/docs/toloka-kit/reference/toloka.client.webhook_subscription.WebhookSubscription.EventType)\]**|<p>Event type. Refer to the [EventType](/docs/toloka-kit/reference/toloka.client.webhook_subscription.WebhookSubscription.EventType) page for more information on the available `event_type` values.</p>
 `pool_id`|**Optional\[str\]**|<p>The ID of a subscribed pool.</p>
 `id_lt`|**Optional\[str\]**|<p>Subscriptions with IDs less than the specified value.</p>
 `id_lte`|**Optional\[str\]**|<p>Subscriptions with IDs less than or equal to the specified value.</p>
@@ -39,4 +39,4 @@ If you need to sort webhook subscriptions use the [find_webhook_subscriptions](/
 
 * **Yield type:**
 
-  Generator\[[WebhookSubscription](/docs-new/toloka-kit/reference/toloka.client.webhook_subscription.WebhookSubscription), None, None\]
+  Generator\[[WebhookSubscription](/docs/toloka-kit/reference/toloka.client.webhook_subscription.WebhookSubscription), None, None\]

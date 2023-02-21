@@ -21,7 +21,7 @@ Take a look at the example: there are two audio tracks and buttons to choose an
 
 <Cut title="Components used in the example">
 
-- [view.audio](/docs-new/template-builder/reference/view.audio): An audio player.
+- [view.audio](/docs/template-builder/reference/view.audio): An audio player.
 
   <Cut title="Show code">
 
@@ -42,7 +42,7 @@ Take a look at the example: there are two audio tracks and buttons to choose an
 
   </Cut>
 
-- [layout.columns](/docs-new/template-builder/reference/layout.columns): Arranges audio tracks side by side.
+- [layout.columns](/docs/template-builder/reference/layout.columns): Arranges audio tracks side by side.
 
   <Cut title="Show code">
 
@@ -55,7 +55,7 @@ Take a look at the example: there are two audio tracks and buttons to choose an
 
   </Cut>
 
-- [condition.played](/docs-new/template-builder/reference/condition.played): Checks if a Toloker has started listening to the audio.
+- [condition.played](/docs/template-builder/reference/condition.played): Checks if a Toloker has started listening to the audio.
 
   <Cut title="Show code">
 
@@ -68,7 +68,7 @@ Take a look at the example: there are two audio tracks and buttons to choose an
 
   </Cut>
 
-- [field.button-radio-group](/docs-new/template-builder/reference/field.button-radio-group): Buttons for answer options.
+- [field.button-radio-group](/docs/template-builder/reference/field.button-radio-group): Buttons for answer options.
 
   <Cut title="Show code">
 
@@ -90,7 +90,7 @@ Take a look at the example: there are two audio tracks and buttons to choose an
 
   </Cut>
 
-- [condition.required](/docs-new/template-builder/reference/condition.required): Checks if at least one option is selected.
+- [condition.required](/docs/template-builder/reference/condition.required): Checks if at least one option is selected.
 
   <Cut title="Show code">
 
@@ -103,7 +103,7 @@ Take a look at the example: there are two audio tracks and buttons to choose an
 
   </Cut>
 
-- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task layout.
+- [plugin.toloka](/docs/template-builder/reference/plugin.toloka): Customizes the task layout.
 
   <Cut title="Show code">
 
@@ -119,7 +119,7 @@ Take a look at the example: there are two audio tracks and buttons to choose an
 
   </Cut>
 
-- [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys): [Keyboard shortcuts](/docs-new/template-builder/best-practices/hotkeys).
+- [plugin.hotkeys](/docs/template-builder/reference/plugin.hotkeys): [Keyboard shortcuts](/docs/template-builder/best-practices/hotkeys).
 
   <Cut title="Show code">
 
@@ -161,7 +161,7 @@ Take a look at the example: there are two audio tracks and buttons to choose an
 
 ## What else can be configured {#add-more}
 
-- To [check](/docs-new/template-builder/best-practices/conditions) whether a Toloker listened to the whole audio, replace the [condition.played](/docs-new/template-builder/reference/condition.played) component with [condition.played-fully](/docs-new/template-builder/reference/condition.played-fully).
+- To [check](/docs/template-builder/best-practices/conditions) whether a Toloker listened to the whole audio, replace the [condition.played](/docs/template-builder/reference/condition.played) component with [condition.played-fully](/docs/template-builder/reference/condition.played-fully).
 
   <Cut title="Show code">
 
@@ -176,7 +176,7 @@ Take a look at the example: there are two audio tracks and buttons to choose an
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/xaSehV5e3ttD4D">View example</Button>
 
-- To put a short audio track on repeat, change the properties of the [view.audio](/docs-new/template-builder/reference/view.audio) component by adding `loop: true`.
+- To put a short audio track on repeat, change the properties of the [view.audio](/docs/template-builder/reference/view.audio) component by adding `loop: true`.
 
   <Cut title="Show code">
 
@@ -200,7 +200,7 @@ Take a look at the example: there are two audio tracks and buttons to choose an
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/aL05xvSn3ttD5U">View example</Button>
 
-- Add [shortcuts](/docs-new/template-builder/best-practices/hotkeys) for playing and pausing audio tracks using the [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys) plugin.
+- Add [shortcuts](/docs/template-builder/best-practices/hotkeys) for playing and pausing audio tracks using the [plugin.hotkeys](/docs/template-builder/reference/plugin.hotkeys) plugin.
 
   <Cut title="Show code">
 
@@ -230,7 +230,7 @@ If this preset doesn't meet your needs, see other examples in this section.
 
 ## Add a response field {#add-text-area}
 
-If you need comments from the Toloker, add a text field using [field.textarea](/docs-new/template-builder/reference/field.textarea). In this example, additional validation is set up that requires you to enter text if one of two audio tracks is selected.
+If you need comments from the Toloker, add a text field using [field.textarea](/docs/template-builder/reference/field.textarea). In this example, additional validation is set up that requires you to enter text if one of two audio tracks is selected.
 
 <Cut title="Show code">
 
@@ -261,7 +261,7 @@ Audio tracks can be arranged in a single column, top to bottom. This interface 
 
 ## Add a source text {#add-original-text}
 
-You can add a field with a source text using the [view.text](/docs-new/template-builder/reference/view.text) component. For example, this might be useful if you want to find out which of the audio recordings best matches the description.
+You can add a field with a source text using the [view.text](/docs/template-builder/reference/view.text) component. For example, this might be useful if you want to find out which of the audio recordings best matches the description.
 
 <Cut title="Show code">
 
@@ -279,7 +279,7 @@ You can add a field with a source text using the [view.text](/docs-new/templat
 
 ## Add a layout {#add-color}
 
-To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs-new/template-builder/reference/view.alert). In this example, the source text is highlighted with a blue border, and the buttons are highlighted with a yellow one.
+To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs/template-builder/reference/view.alert). In this example, the source text is highlighted with a blue border, and the buttons are highlighted with a yellow one.
 
 <Cut title="Show code">
 

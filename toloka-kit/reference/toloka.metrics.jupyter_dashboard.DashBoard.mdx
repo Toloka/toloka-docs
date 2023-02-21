@@ -28,7 +28,7 @@ Toloka dashboard with metrics. Only for jupyter.
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`metrics`|**List\[Union\[[BaseMetric](/docs-new/toloka-kit/reference/toloka.metrics.metrics.BaseMetric), [Chart](/docs-new/toloka-kit/reference/toloka.metrics.jupyter_dashboard.Chart)\]\]**|<p>List of metrics or charts, that will be displayed on the dashboard. Each element will be displayed in a separate chart (coordinates). If you want to draw several metrics in one coordinates, wrap it into an instance of the class Chart.</p>
+`metrics`|**List\[Union\[[BaseMetric](/docs/toloka-kit/reference/toloka.metrics.metrics.BaseMetric), [Chart](/docs/toloka-kit/reference/toloka.metrics.jupyter_dashboard.Chart)\]\]**|<p>List of metrics or charts, that will be displayed on the dashboard. Each element will be displayed in a separate chart (coordinates). If you want to draw several metrics in one coordinates, wrap it into an instance of the class Chart.</p>
 `header`|**str**|<p>Your pretty header for this dashboard.</p>
 `update_seconds`|**int**|<p>Count of seconds between dash updates.</p>
 `min_time_range`|**timedelta**|<p>The minimum time range for all charts.</p>
@@ -65,6 +65,6 @@ new_dash.stop_dash()
 
 | Method | Description |
 | :------| :-----------|
-[run_dash](/docs-new/toloka-kit/reference/toloka.metrics.jupyter_dashboard.DashBoard.run_dash)| Starts dashboard. Starts server for online updating charts.
-[stop_dash](/docs-new/toloka-kit/reference/toloka.metrics.jupyter_dashboard.DashBoard.stop_dash)| Stops server. And stops updating dashboard.
-[update_charts](/docs-new/toloka-kit/reference/toloka.metrics.jupyter_dashboard.DashBoard.update_charts)| Redraws all charts on each iteration
+[run_dash](/docs/toloka-kit/reference/toloka.metrics.jupyter_dashboard.DashBoard.run_dash)| Starts dashboard. Starts server for online updating charts.
+[stop_dash](/docs/toloka-kit/reference/toloka.metrics.jupyter_dashboard.DashBoard.stop_dash)| Stops server. And stops updating dashboard.
+[update_charts](/docs/toloka-kit/reference/toloka.metrics.jupyter_dashboard.DashBoard.update_charts)| Redraws all charts on each iteration

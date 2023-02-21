@@ -21,26 +21,26 @@ For this type of project, you can use the **Generating product descriptions** pr
 
 <Cut title="Components used in the example">
 
-- [view.image](/docs-new/template-builder/reference/view.image): Image.
-- [layout.columns](/docs-new/template-builder/reference/layout.columns): Places the image in a separate column to the left of other interface elements.
-- [view.text](/docs-new/template-builder/reference/view.text): Shows the text from the task input data.
-- [field.textarea](/docs-new/template-builder/reference/field.textarea): Text input field.
-- [condition.required](/docs-new/template-builder/reference/condition.required): Checks if the text field is filled in.
-- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task width.
+- [view.image](/docs/template-builder/reference/view.image): Image.
+- [layout.columns](/docs/template-builder/reference/layout.columns): Places the image in a separate column to the left of other interface elements.
+- [view.text](/docs/template-builder/reference/view.text): Shows the text from the task input data.
+- [field.textarea](/docs/template-builder/reference/field.textarea): Text input field.
+- [condition.required](/docs/template-builder/reference/condition.required): Checks if the text field is filled in.
+- [plugin.toloka](/docs/template-builder/reference/plugin.toloka): Customizes the task width.
 
 </Cut>
 
 ## What else can be configured {#add-more}
 
-- To set the desired text length, use the [condition.schema](/docs-new/template-builder/reference/condition.schema) component instead of [condition.required](/docs-new/template-builder/reference/condition.required). It won't let a Toloker submit a response if the text they entered is longer or shorter than specified.
+- To set the desired text length, use the [condition.schema](/docs/template-builder/reference/condition.schema) component instead of [condition.required](/docs/template-builder/reference/condition.required). It won't let a Toloker submit a response if the text they entered is longer or shorter than specified.
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/Mnz9jbRH3ttFKh">View example</Button>
 
-- For short single-line text, use the [field.text](/docs-new/template-builder/reference/field.text) component instead of [field.textarea](/docs-new/template-builder/reference/field.textarea).
+- For short single-line text, use the [field.text](/docs/template-builder/reference/field.text) component instead of [field.textarea](/docs/template-builder/reference/field.textarea).
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/oBN6epCs3ttFLK">View example</Button>
 
-- If a Toloker needs to search for information online to complete the task, add the [helper.search-query](/docs-new/template-builder/reference/helper.search-query) component. The search query can be put together from words taken from the input data.
+- If a Toloker needs to search for information online to complete the task, add the [helper.search-query](/docs/template-builder/reference/helper.search-query) component. The search query can be put together from words taken from the input data.
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/jgNvI9Eq3vvsiU">View example</Button>
 
@@ -54,9 +54,9 @@ A simplified example without an image or columns It can be used for tasks that
 
 ## Multiple columns {#several-columns}
 
-To compare two texts, place them in adjacent columns using the [layout.columns](/docs-new/template-builder/reference/layout.columns) component. It allows you to set the column width and vertical alignment.
+To compare two texts, place them in adjacent columns using the [layout.columns](/docs/template-builder/reference/layout.columns) component. It allows you to set the column width and vertical alignment.
 
-The [view.group](/docs-new/template-builder/reference/view.group) component adds frames around the texts to visually separate them from each other and make them easier to read.
+The [view.group](/docs/template-builder/reference/view.group) component adds frames around the texts to visually separate them from each other and make them easier to read.
 
 The third column in the example contains two input fields for Tolokers to write their text.
 
@@ -77,14 +77,14 @@ Decide how you want to display the options: with radio buttons, regular buttons,
 ## A Toloker adds input fields {#dynamic-field-add}
 
 This is a complex example that consists of four main parts:
-- [view.image](/docs-new/template-builder/reference/view.image): Image.
-- [field.radio-group](/docs-new/template-builder/reference/field.radio-group): Response selection options.
-- [field.text](/docs-new/template-builder/reference/field.text): The text input field.
-- [field.list](/docs-new/template-builder/reference/field.list): A button that adds new text input fields.
+- [view.image](/docs/template-builder/reference/view.image): Image.
+- [field.radio-group](/docs/template-builder/reference/field.radio-group): Response selection options.
+- [field.text](/docs/template-builder/reference/field.text): The text input field.
+- [field.list](/docs/template-builder/reference/field.list): A button that adds new text input fields.
 
 What's unique about this example is that a Toloker can add and remove text input fields.
 
-In addition, the example checks that each line has at least three characters, including letters and spaces. The condition is implemented using [condition.schema](/docs-new/template-builder/reference/condition.schema).
+In addition, the example checks that each line has at least three characters, including letters and spaces. The condition is implemented using [condition.schema](/docs/template-builder/reference/condition.schema).
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/T-rVMAPk3vvtDM">View example</Button>
 

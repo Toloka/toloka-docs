@@ -27,7 +27,7 @@ Accuracy on aggregates: a fraction of worker's answers that match the aggregated
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `answers`|**DataFrame**|<p>a data frame containing `task`, `worker` and `label` columns.</p>
-`aggregator`|**Optional\[[BaseClassificationAggregator](/docs-new/crowd-kit/reference/crowdkit.aggregation.base.BaseClassificationAggregator)\]**|<p>aggregation algorithm. default: MajorityVote</p>
+`aggregator`|**Optional\[[BaseClassificationAggregator](/docs/crowd-kit/reference/crowdkit.aggregation.base.BaseClassificationAggregator)\]**|<p>aggregation algorithm. default: MajorityVote</p>
 `aggregates`|**Optional\[Series\]**|<p>aggregated answers for provided tasks.</p>
 `by`|**Optional\[str\]**|<p>if set, returns accuracies for every worker in provided data frame. Otherwise, returns an average accuracy of all workers.</p>
 `Returns`|**-**|<p>Union[float, pd.Series]</p>

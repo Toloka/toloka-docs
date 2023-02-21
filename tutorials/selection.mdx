@@ -226,7 +226,7 @@ Before you begin:
 
 ## Start labeling {#labeling}
 
-1. Make sure you have [topped up your account](/docs-new/guide/refill).
+1. Make sure you have [topped up your account](/docs/guide/refill).
 
 1. <TolokaRequesterSourceStartButton/>
 
@@ -250,7 +250,7 @@ After the specified time period, all responses are automatically accepted, regar
 
     <Note mode="note" title="Note">
 
-    To learn about other ways of review, see the [Reviewing Tolokers' responses](/docs-new/guide/accept) section.
+    To learn about other ways of review, see the [Reviewing Tolokers' responses](/docs/guide/accept) section.
 
     </Note>
 
@@ -268,7 +268,7 @@ After the specified time period, all responses are automatically accepted, regar
 
 Use the **X** shortcut for closing areas.
 
-You can customize the shortcuts using the properties of the [plugin.field.image-annotation.hotkeys](/docs-new/template-builder/reference/plugin.field.image-annotation.hotkeys) component.
+You can customize the shortcuts using the properties of the [plugin.field.image-annotation.hotkeys](/docs/template-builder/reference/plugin.field.image-annotation.hotkeys) component.
 
 </Cut>
 
@@ -278,7 +278,7 @@ We recommend that you break down your object selection project into three projec
 
 1. Sorting images containing an object.
 
-    1. [Create a task](/docs-new/tutorials/image-classification) using the **Image classification** preset.
+    1. [Create a task](/docs/tutorials/image-classification) using the **Image classification** preset.
 
     1. Sort the images containing the object you are looking for.
 
@@ -288,7 +288,7 @@ We recommend that you break down your object selection project into three projec
 
     1. Select the object in the images you obtained after the previous project. You already have such a project. Run the task with manual review.
 
-    1. Use the quality control rules: fast responses, manual review, and post-review re-assessment. [Description of rules with examples](/docs-new/guide/control).
+    1. Use the quality control rules: fast responses, manual review, and post-review re-assessment. [Description of rules with examples](/docs/guide/control).
 
 1. Reviewing object selection assignments.
 
@@ -320,7 +320,7 @@ Main options:
 
 In the case of crowdsourcing, it's better to break down this task. The simpler the task, the cheaper it is and the better the quality of the final result. The cost of labeling a single class of objects in photos might be about $0.01.
 
-Base your task on the **Object recognition & detection** preset. See the step-by-step guide for creating this type of project in the [tutorial](/docs-new/tutorials/selection).
+Base your task on the **Object recognition & detection** preset. See the step-by-step guide for creating this type of project in the [tutorial](/docs/tutorials/selection).
 
 </Cut>
 
@@ -336,7 +336,7 @@ In the **Config** section on the project settings page, use the **Visual editor*
 
 In the standard template with an area selection editor, you can't use the control tasks, because in order for the assignment to be accepted by the system as correct, the object selected by the user must exactly match the control object. This is almost impossible. Therefore, you can leave the `GOLDEN` field empty in the task file or simply delete all the columns except `INPUT`.
 
-You can't also use [training](/docs-new/glossary#training-pool) and the main pool with the **Training** type in an area selection project due to the same reason.
+You can't also use [training](/docs/glossary#training-pool) and the main pool with the **Training** type in an area selection project due to the same reason.
 
 Such tasks are usually run with manual review: the Toloker submits an assignment, and then the assignment is rejected or accepted after the review.
 
@@ -349,7 +349,7 @@ For pre-selection of users, you can use “examination tasks”. Review the assi
 - [Crowdsourcing concepts: Instructions](https://toloka.ai/knowledgebase/instruction/)
 - [Crowdsourcing concepts: Quality control](https://toloka.ai/knowledgebase/quality-control/)
 - [Crowdsourcing concepts: Pricing](https://toloka.ai/knowledgebase/pricing/)
-- [Template Builder: Object recognition](/docs-new/template-builder/templates/object-recognition)
+- [Template Builder: Object recognition](/docs/template-builder/templates/object-recognition)
 
 ## For developers {#for-developers}
 

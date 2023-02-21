@@ -57,7 +57,7 @@ You also need to select the message recipients. If you choose to send the messag
 
 ### 4. Display sent message info {#step-four}
 
-The `compose_message_thread()` request will return the [MessageThread](/docs-new/toloka-kit/reference/toloka.client.message_thread.MessageThread) class object. You can use its attributes to print the information you need.
+The `compose_message_thread()` request will return the [MessageThread](/docs/toloka-kit/reference/toloka.client.message_thread.MessageThread) class object. You can use its attributes to print the information you need.
 
 ```python
 print(message_thread.id, message_thread.topic.get('EN') or list(message_thread.topic.values())[0])
@@ -88,15 +88,15 @@ print(message_thread.id, message_thread.topic.get('EN') or list(message_thread.t
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[compose_message_thread()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.compose_message_thread) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[compose_message_thread()](/docs/toloka-kit/reference/toloka.client.TolokaClient.compose_message_thread) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
-- [Toloka-Kit: MessageThread class](/docs-new/toloka-kit/reference/toloka.client.message_thread.MessageThread)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Toloka-Kit: MessageThread class](/docs/toloka-kit/reference/toloka.client.message_thread.MessageThread)
 - [Toloka API: Send message](https://toloka.ai/docs/api/api-reference/#post-/message-threads/compose)

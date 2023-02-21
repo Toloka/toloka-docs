@@ -15,14 +15,14 @@ Finds all message threads that match certain criteria.
 
 `get_message_threads` returns a generator. You can iterate over all found message threads using the generator. Several requests to the Toloka server are possible while iterating.
 
-If you need to sort message threads use the [find_message_threads](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.find_message_threads) method.
+If you need to sort message threads use the [find_message_threads](/docs/toloka-kit/reference/toloka.client.TolokaClient.find_message_threads) method.
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`folder`|**Union\[str, [Folder](/docs-new/toloka-kit/reference/toloka.client.message_thread.Folder), List\[Union\[str, [Folder](/docs-new/toloka-kit/reference/toloka.client.message_thread.Folder)\]\], None\]**|<p>A folder where to search threads or a list of folders. Refer to the [Folder](/docs-new/toloka-kit/reference/toloka.client.message_thread.Folder) page for more information on the available `folder` values.</p>
-`folder_ne`|**Union\[str, [Folder](/docs-new/toloka-kit/reference/toloka.client.message_thread.Folder), List\[Union\[str, [Folder](/docs-new/toloka-kit/reference/toloka.client.message_thread.Folder)\]\], None\]**|<p>A folder to skip or a list of folders. Supported values are the same as for `folder`.</p>
+`folder`|**Union\[str, [Folder](/docs/toloka-kit/reference/toloka.client.message_thread.Folder), List\[Union\[str, [Folder](/docs/toloka-kit/reference/toloka.client.message_thread.Folder)\]\], None\]**|<p>A folder where to search threads or a list of folders. Refer to the [Folder](/docs/toloka-kit/reference/toloka.client.message_thread.Folder) page for more information on the available `folder` values.</p>
+`folder_ne`|**Union\[str, [Folder](/docs/toloka-kit/reference/toloka.client.message_thread.Folder), List\[Union\[str, [Folder](/docs/toloka-kit/reference/toloka.client.message_thread.Folder)\]\], None\]**|<p>A folder to skip or a list of folders. Supported values are the same as for `folder`.</p>
 `id_lt`|**Optional\[str\]**|<p>Threads with IDs less than the specified value.</p>
 `id_lte`|**Optional\[str\]**|<p>Threads with IDs less than or equal to the specified value.</p>
 `id_gt`|**Optional\[str\]**|<p>Threads with IDs greater than the specified value.</p>
@@ -39,7 +39,7 @@ If you need to sort message threads use the [find_message_threads](/docs-new/tol
 
 * **Yield type:**
 
-  [AsyncGenAdapter](/docs-new/toloka-kit/reference/toloka.util.async_utils.AsyncGenAdapter)\[[MessageThread](/docs-new/toloka-kit/reference/toloka.client.message_thread.MessageThread), None\]
+  [AsyncGenAdapter](/docs/toloka-kit/reference/toloka.util.async_utils.AsyncGenAdapter)\[[MessageThread](/docs/toloka-kit/reference/toloka.client.message_thread.MessageThread), None\]
 
 **Examples:**
 

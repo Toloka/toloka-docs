@@ -23,7 +23,7 @@ _Create a minimal working project using Toloka-Kit._
 
 <Note mode="note" title="Note">
 
-Normally, it's more convenient to create a project using [Toloka interface](/docs-new/guide/project). Nevertheless, it's still possible to create a project, write instructions, set up input and output data fields, and configure the task interface via Toloka-Kit.
+Normally, it's more convenient to create a project using [Toloka interface](/docs/guide/project). Nevertheless, it's still possible to create a project, write instructions, set up input and output data fields, and configure the task interface via Toloka-Kit.
 
 </Note>
 
@@ -35,7 +35,7 @@ Normally, it's more convenient to create a project using [Toloka interface](/doc
 
 ### 3. Configure task interface {#step-three}
 
-Configure the task interface using the `view_spec` parameter of the [TaskSpec](/docs-new/toloka-kit/reference/toloka.client.project.task_spec.TaskSpec) class, define input and output data. See comments in the code below and the [Task interface](/docs-new/guide/spec) section for more information.
+Configure the task interface using the `view_spec` parameter of the [TaskSpec](/docs/toloka-kit/reference/toloka.client.project.task_spec.TaskSpec) class, define input and output data. See comments in the code below and the [Task interface](/docs/guide/spec) section for more information.
 
 - The `image` input field contains URLs of images that need to be labeled.
 - The `result` output field will receive color values.
@@ -163,7 +163,7 @@ This actually creates a project in Toloka.
 
 ### 6. Print created project ID {#step-six}
 
-The `create_project()` request will return the [Project](/docs-new/toloka-kit/reference/toloka.client.project.Project) class object. You can use its attributes to print the information you need.
+The `create_project()` request will return the [Project](/docs/toloka-kit/reference/toloka.client.project.Project) class object. You can use its attributes to print the information you need.
 
 ```python
 print(new_project.id)
@@ -221,20 +221,20 @@ print(new_project.id)
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[Project](/docs-new/toloka-kit/reference/toloka.client.project.Project) class_
-- _[TaskSpec](/docs-new/toloka-kit/reference/toloka.client.project.task_spec.TaskSpec) class_
-- _[UrlSpec](/docs-new/toloka-kit/reference/toloka.client.project.field_spec.UrlSpec) class_
-- _[StringSpec](/docs-new/toloka-kit/reference/toloka.client.project.field_spec.StringSpec) class_
-- _[ClassicViewSpec](/docs-new/toloka-kit/reference/toloka.client.project.view_spec.ClassicViewSpec) class_
-- _[create_project()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.create_project) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[Project](/docs/toloka-kit/reference/toloka.client.project.Project) class_
+- _[TaskSpec](/docs/toloka-kit/reference/toloka.client.project.task_spec.TaskSpec) class_
+- _[UrlSpec](/docs/toloka-kit/reference/toloka.client.project.field_spec.UrlSpec) class_
+- _[StringSpec](/docs/toloka-kit/reference/toloka.client.project.field_spec.StringSpec) class_
+- _[ClassicViewSpec](/docs/toloka-kit/reference/toloka.client.project.view_spec.ClassicViewSpec) class_
+- _[create_project()](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_project) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
-- [Get list of projects](/docs-new/toloka-kit/recipes/get-projects)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Get list of projects](/docs/toloka-kit/recipes/get-projects)
 - [Toloka API: Create project](https://toloka.ai/docs/api/api-reference/#post-/projects)

@@ -30,7 +30,7 @@ First, create one or several tasks. In this example, we create three simple task
 
 - specify `input_values` as links to images
 
-You can choose your own values for tasks. Refer to the [Task](/docs-new/toloka-kit/reference/toloka.client.task.Task) class page for more details.
+You can choose your own values for tasks. Refer to the [Task](/docs/toloka-kit/reference/toloka.client.task.Task) class page for more details.
 
 <CodeCopy
   isSmall
@@ -93,7 +93,7 @@ This actually creates a task suite in Toloka.
 
 ### 6. Print created task suite ID {#step-six}
 
-The `create_task_suite()` request will return the [TaskSuite](/docs-new/toloka-kit/reference/toloka.client.task_suite.TaskSuite) class object. You can use its attributes to print the information you need.
+The `create_task_suite()` request will return the [TaskSuite](/docs/toloka-kit/reference/toloka.client.task_suite.TaskSuite) class object. You can use its attributes to print the information you need.
 
 ```python
 print(new_task_suite.id)
@@ -126,16 +126,16 @@ print(new_task_suite.id)
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[Task](/docs-new/toloka-kit/reference/toloka.client.task.Task) class_
-- _[TaskSuite](/docs-new/toloka-kit/reference/toloka.client.task_suite.TaskSuite) class_
-- _[create_task_suite()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.create_task_suite) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[Task](/docs/toloka-kit/reference/toloka.client.task.Task) class_
+- _[TaskSuite](/docs/toloka-kit/reference/toloka.client.task_suite.TaskSuite) class_
+- _[create_task_suite()](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_task_suite) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
 - [Toloka API: Create single/multiple task suites](https://toloka.ai/docs/api/api-reference/#post-/task-suites)

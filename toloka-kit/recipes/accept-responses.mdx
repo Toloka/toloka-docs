@@ -24,7 +24,7 @@ _Accept Toloker responses with the IDs specified in the request._
 
 ### 3. Accept Toloker response {#step-three}
 
-[Find out](/docs-new/toloka-kit/recipes/get-responses) the ID of the Toloker response that your want to accept and use the [accept_assignment()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.accept_assignment) method to accept the response and leave a comment.
+[Find out](/docs/toloka-kit/recipes/get-responses) the ID of the Toloker response that your want to accept and use the [accept_assignment()](/docs/toloka-kit/reference/toloka.client.TolokaClient.accept_assignment) method to accept the response and leave a comment.
 
 <CodeCopy
   isSmall
@@ -41,7 +41,7 @@ The Toloker response will be marked as accepted with the `OK` comment added to i
 
 ### 4. Print Toloker response status and public comment {#step-four}
 
-The `accept_assignment()` request will return the [Assignment](/docs-new/toloka-kit/reference/toloka.client.assignment.Assignment) class object. You can use its attributes to print the information you need.
+The `accept_assignment()` request will return the [Assignment](/docs/toloka-kit/reference/toloka.client.assignment.Assignment) class object. You can use its attributes to print the information you need.
 
 ```python
 print(accepted_assignment.status, accepted_assignment.public_comment)
@@ -66,15 +66,15 @@ print(accepted_assignment.status, accepted_assignment.public_comment)
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[accept_assignment()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.accept_assignment) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[accept_assignment()](/docs/toloka-kit/reference/toloka.client.TolokaClient.accept_assignment) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
-- [Toloka-Kit: Assignment class](/docs-new/toloka-kit/reference/toloka.client.assignment.Assignment)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Toloka-Kit: Assignment class](/docs/toloka-kit/reference/toloka.client.assignment.Assignment)
 - [Toloka API: Update response](https://toloka.ai/docs/api/api-reference/#patch-/assignments/-id-)

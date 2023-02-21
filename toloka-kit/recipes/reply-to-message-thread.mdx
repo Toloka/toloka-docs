@@ -25,7 +25,7 @@ _Send a reply to a message thread in Toloka._
 
 ### 3. Send reply to thread {#step-three}
 
-[Find out](/docs-new/toloka-kit/recipes/get-message-threads) the ID of the message thread you want to reply to. Then compose a reply using the [MessageThreadReply](/docs-new/toloka-kit/reference/toloka.client.message_thread.MessageThreadReply) class object for that.
+[Find out](/docs/toloka-kit/recipes/get-message-threads) the ID of the message thread you want to reply to. Then compose a reply using the [MessageThreadReply](/docs/toloka-kit/reference/toloka.client.message_thread.MessageThreadReply) class object for that.
 
 <CodeCopy
   isSmall
@@ -48,7 +48,7 @@ response_to_thread = toloka_client.reply_message_thread(
 
 ### 4. Display sent reply info {#step-four}
 
-The `reply_message_thread()` request will return the [MessageThread](/docs-new/toloka-kit/reference/toloka.client.message_thread.MessageThread) class object. You can use its attributes to print the information you need.
+The `reply_message_thread()` request will return the [MessageThread](/docs/toloka-kit/reference/toloka.client.message_thread.MessageThread) class object. You can use its attributes to print the information you need.
 
 ```python
 print(response_to_thread.id, response_to_thread.created)
@@ -77,16 +77,16 @@ print(response_to_thread.id, response_to_thread.created)
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[MessageThreadReply](/docs-new/toloka-kit/reference/toloka.client.message_thread.MessageThreadReply) class_
-- _[reply_message_thread()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.reply_message_thread) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[MessageThreadReply](/docs/toloka-kit/reference/toloka.client.message_thread.MessageThreadReply) class_
+- _[reply_message_thread()](/docs/toloka-kit/reference/toloka.client.TolokaClient.reply_message_thread) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
-- [Toloka-Kit: MessageThread class](/docs-new/toloka-kit/reference/toloka.client.message_thread.MessageThread)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Toloka-Kit: MessageThread class](/docs/toloka-kit/reference/toloka.client.message_thread.MessageThread)
 - [Toloka API: Reply to message thread](https://toloka.ai/docs/api/api-reference/#post-/message-threads/-id-/reply)

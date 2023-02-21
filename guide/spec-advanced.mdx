@@ -17,39 +17,39 @@ import SpecAdvancedTable3 from './spec-advanced/subcomponents/spec-advanced-tabl
 
 <Note mode="note" title="Note">
 
-The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in [Template Builder](/docs-new/template-builder/).
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in [Template Builder](/docs/template-builder/).
 
 </Note>
 
 All aspects of the task's [lifecycle](#lifecycle) are controlled by three JavaScript classes:
 
-- The [Assignment](/docs-new/guide/js/assignment) class manages [task](/docs-new/glossary#task) progress, processes the [task suite](/docs-new/glossary#task-suite) commands for sending responses, skipping or pausing tasks, and more. It also creates an instance of the [TaskSuite](/docs-new/guide/js/tasksuite) class.
+- The [Assignment](/docs/guide/js/assignment) class manages [task](/docs/glossary#task) progress, processes the [task suite](/docs/glossary#task-suite) commands for sending responses, skipping or pausing tasks, and more. It also creates an instance of the [TaskSuite](/docs/guide/js/tasksuite) class.
 
-- [TaskSuite](/docs-new/guide/js/tasksuite) is a “wrapper class” for the [task suite](/docs-new/glossary#task-suite) interface. You can redefine this class, like if you need to display a shared element on the page.
+- [TaskSuite](/docs/guide/js/tasksuite) is a “wrapper class” for the [task suite](/docs/glossary#task-suite) interface. You can redefine this class, like if you need to display a shared element on the page.
 
-- The [Task](/docs-new/guide/js/task) class is responsible for rendering and validating an individual task. Typically, you should extend this class if a task needs to have non-standard behavior.
+- The [Task](/docs/guide/js/task) class is responsible for rendering and validating an individual task. Typically, you should extend this class if a task needs to have non-standard behavior.
 
-You can use [services](/docs-new/guide/js/services) for more nuanced needs like subscribing to keypress events or getting the Toloker's GPS coordinates.
+You can use [services](/docs/guide/js/services) for more nuanced needs like subscribing to keypress events or getting the Toloker's GPS coordinates.
 
 ## Lifecycle of a task {#lifecycle}
 
-When a Toloker starts a task, their workspace is initialized in an iframe. A messaging channel is created between the Toloka head page and the iframe. First, a list of tasks is requested and an [Assignment](/docs-new/guide/js/assignment) instance is created. Then the received list is passed to the [TaskSuite](/docs-new/guide/js/tasksuite) class. It creates an instance of the [Task](/docs-new/guide/js/task) class for each task.
+When a Toloker starts a task, their workspace is initialized in an iframe. A messaging channel is created between the Toloka head page and the iframe. First, a list of tasks is requested and an [Assignment](/docs/guide/js/assignment) instance is created. Then the received list is passed to the [TaskSuite](/docs/guide/js/tasksuite) class. It creates an instance of the [Task](/docs/guide/js/task) class for each task.
 
 ### Rendering
 
-To render the task suite, the [render()](/docs-new/guide/js/tasksuite#render) method of the `TaskSuite` class is called. This method calls the [render()](/docs-new/guide/js/task#render) method of the `Task` class for each task and collects the created DOM tree components in a single list.
+To render the task suite, the [render()](/docs/guide/js/tasksuite#render) method of the `TaskSuite` class is called. This method calls the [render()](/docs/guide/js/task#render) method of the `Task` class for each task and collects the created DOM tree components in a single list.
 
 Here you can change the rendering of tasks and task suites.
 
 ### Response validation
 
-When the Toloker clicks **Send**, the [TaskSuite.validate(solutions)](/docs-new/guide/js/tasksuite#validate) method is called to validate ther Toloker's responses. It calls the [Task.validate(solutions)](/docs-new/guide/js/task#validate) method for each task and returns errors.
+When the Toloker clicks **Send**, the [TaskSuite.validate(solutions)](/docs/guide/js/tasksuite#validate) method is called to validate ther Toloker's responses. It calls the [Task.validate(solutions)](/docs/guide/js/task#validate) method for each task and returns errors.
 
 Here you can make an additional review of the Toloker's responses.
 
 ### Removal
 
-When the Toloker has finished all tasks on the page or [skipped it](/docs-new/guide/pool_statistic-pool#skipped-tasks), the [destroy()](/docs-new/guide/js/tasksuite#destroy) method of the `TaskSuite` class is called. It calls the [destroy()](/docs-new/guide/js/task#destroy) method of the `Task` class for each task. These methods free up resources and remove the services and event handlers associated with tasks.
+When the Toloker has finished all tasks on the page or [skipped it](/docs/guide/pool_statistic-pool#skipped-tasks), the [destroy()](/docs/guide/js/tasksuite#destroy) method of the `TaskSuite` class is called. It calls the [destroy()](/docs/guide/js/task#destroy) method of the `Task` class for each task. These methods free up resources and remove the services and event handlers associated with tasks.
 
 ## Class inheritance {#inherit}
 
@@ -143,6 +143,6 @@ The `SolutionValidationError` object is a validation error for the Toloker's res
 
 ## See also {#see-also}
 
-- [Task interface](/docs-new/guide/spec)
+- [Task interface](/docs/guide/spec)
 
 <ContactGuideSupport/>

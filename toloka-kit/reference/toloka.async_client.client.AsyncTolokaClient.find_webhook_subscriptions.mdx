@@ -15,13 +15,13 @@ Finds webhook subscriptions that match certain criteria.
 
 The number of returned webhook subscriptions is limited. To find remaining webhook subscriptions call `find_webhook_subscriptions` with updated search criteria.
 
-To iterate over all matching webhook subscriptions you may use the [get_webhook_subscriptions](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_webhook_subscriptions) method.
+To iterate over all matching webhook subscriptions you may use the [get_webhook_subscriptions](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_webhook_subscriptions) method.
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`event_type`|**Optional\[[WebhookSubscription.EventType](/docs-new/toloka-kit/reference/toloka.client.webhook_subscription.WebhookSubscription.EventType)\]**|<p>Event type. Refer to the [EventType](/docs-new/toloka-kit/reference/toloka.client.webhook_subscription.WebhookSubscription.EventType) page for more information on the available `event_type` values.</p>
+`event_type`|**Optional\[[WebhookSubscription.EventType](/docs/toloka-kit/reference/toloka.client.webhook_subscription.WebhookSubscription.EventType)\]**|<p>Event type. Refer to the [EventType](/docs/toloka-kit/reference/toloka.client.webhook_subscription.WebhookSubscription.EventType) page for more information on the available `event_type` values.</p>
 `pool_id`|**Optional\[str\]**|<p>The ID of a subscribed pool.</p>
 `id_lt`|**Optional\[str\]**|<p>Subscriptions with IDs less than the specified value.</p>
 `id_lte`|**Optional\[str\]**|<p>Subscriptions with IDs less than or equal to the specified value.</p>
@@ -31,7 +31,7 @@ To iterate over all matching webhook subscriptions you may use the [get_webhook_
 `created_lte`|**Optional\[datetime\]**|<p>Subscriptions created before or on the specified date.</p>
 `created_gt`|**Optional\[datetime\]**|<p>Subscriptions created after the specified date.</p>
 `created_gte`|**Optional\[datetime\]**|<p>Subscriptions created after or on the specified date.</p>
-`sort`|**Union\[List\[str\], [WebhookSubscriptionSortItems](/docs-new/toloka-kit/reference/toloka.client.search_requests.WebhookSubscriptionSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
+`sort`|**Union\[List\[str\], [WebhookSubscriptionSortItems](/docs/toloka-kit/reference/toloka.client.search_requests.WebhookSubscriptionSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
 `limit`|**Optional\[int\]**|<p>Returned webhook subscriptions limit. The maximum allowed limit is 300.</p>
 
 * **Returns:**
@@ -40,4 +40,4 @@ To iterate over all matching webhook subscriptions you may use the [get_webhook_
 
 * **Return type:**
 
-  [WebhookSubscriptionSearchResult](/docs-new/toloka-kit/reference/toloka.client.search_results.WebhookSubscriptionSearchResult)
+  [WebhookSubscriptionSearchResult](/docs/toloka-kit/reference/toloka.client.search_results.WebhookSubscriptionSearchResult)

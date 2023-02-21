@@ -14,11 +14,11 @@ import ContactGuideSupport from '../subcomponents/contact-support.mdx'
 
 <Note mode="note" title="Note">
 
-The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in [Template Builder](/docs-new/template-builder/).
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in [Template Builder](/docs/template-builder/).
 
 </Note>
 
-“Wrapper class” for [task suites](/docs-new/glossary#task-suite) creates instances of task classes. You can redefine this class (for example, if you need to display a shared element on the page with tasks or get more control over tasks, like custom keyboard shortcuts).
+“Wrapper class” for [task suites](/docs/glossary#task-suite) creates instances of task classes. You can redefine this class (for example, if you need to display a shared element on the page with tasks or get more control over tasks, like custom keyboard shortcuts).
 
 The main purpose of the `TaskSuite` class is to render tasks on the page ([render()](#render)). It is also used for collecting responses ([getSolutions()](#getsolutions)), validating them ([validate(solutions)](#validate)), and managing hotkeys ([focusNextTask()](#focusnexttask), [onKey(key)](#onkey)).
 
@@ -32,9 +32,9 @@ Basic task suite class constructor.
 
 Parameters:
 
-- `options.task` — Array of [Task](/docs-new/guide/spec-advanced#obj-task) models.
+- `options.task` — Array of [Task](/docs/guide/spec-advanced#obj-task) models.
 
-- `options.specs` — Parameters for [input and output data](/docs-new/glossary#input-output-data) and the task interface.
+- `options.specs` — Parameters for [input and output data](/docs/glossary#input-output-data) and the task interface.
 
 - `options.assignmentId` — IDs of tasks on the page.
 
@@ -42,7 +42,7 @@ Parameters:
 
 - `options.TaskClass` — Array of classes for the task you create.
 
-- `options.solutions` — Array of responses [Solution](/docs-new/guide/spec-advanced#obj-solution). Can be empty.
+- `options.solutions` — Array of responses [Solution](/docs/guide/spec-advanced#obj-solution). Can be empty.
 
 ## destroy() {#destroy}
 
@@ -64,7 +64,7 @@ Sets the focus on the task by the index. Parameter:
 
 ## getAssignment() {#getassignment}
 
-Returns a link to an [Assignment](/docs-new/guide/assignment) instance. After that, you can use all the properties and methods of that class instance.
+Returns a link to an [Assignment](/docs/guide/assignment) instance. After that, you can use all the properties and methods of that class instance.
 
 <Cut title="Example">
 
@@ -111,13 +111,13 @@ let outputSpec = this.getOptions().specs.output_spec,
 
 ## getProxyUrl(path) {#getproxyurl}
 
-Returns a complete URL to access the data on the [proxy server](/docs-new/guide/prepare-data). Parameter:
+Returns a complete URL to access the data on the [proxy server](/docs/guide/prepare-data). Parameter:
 
 - `path` — the relative path to the file.
 
 ## getSolutions() {#getsolutions}
 
-Returns an array of [Solution](/docs-new/guide/spec-advanced#obj-solution) responses.
+Returns an array of [Solution](/docs/guide/spec-advanced#obj-solution) responses.
 
 ## getStyleDOMElement() {#getstyledomeelement}
 
@@ -125,7 +125,7 @@ Returns the DOM element of the page styles.
 
 ## getTasks() {#gettasks}
 
-Returns an array of [Task](/docs-new/guide/spec-advanced#obj-task) initialized task models.
+Returns an array of [Task](/docs/guide/spec-advanced#obj-task) initialized task models.
 
 ## getTasksDOMElement() {#gettaskdomeelement}
 
@@ -133,7 +133,7 @@ Returns the DOM element of the task suite (`div.task-suite`). If the DOM element
 
 ## getTasksIndexed() {#gettasksindexed}
 
-Returns tasks indexed by their IDs: `<taskId>`: [Task](/docs-new/guide/spec-advanced#obj-task), …
+Returns tasks indexed by their IDs: `<taskId>`: [Task](/docs/guide/spec-advanced#obj-task), …
 
 ## getWorkspaceOptions() {#getworkspaceoptions}
 
@@ -187,7 +187,7 @@ A method you can redefine to execute your code when a task suite resumes working
 
 Called if the validation failed. Contains error descriptions in the parameter. Parameter:
 
-- `errors` — Array of errors [SolutionValidationError](/docs-new/guide/spec-advanced#obj-solutionvalidationerror).
+- `errors` — Array of errors [SolutionValidationError](/docs/guide/spec-advanced#obj-solutionvalidationerror).
 
 ## pause() {#pause}
 
@@ -241,11 +241,11 @@ Promise.all(promises)
 
 ## render() {#render}
 
-Creates a DOM representation of the task suite: renders all tasks in the task suite. Calls [render()](/docs-new/guide/task#render) in the Task class for each task. Calls [onRender()](#onrender). Returns `this`.
+Creates a DOM representation of the task suite: renders all tasks in the task suite. Calls [render()](/docs/guide/task#render) in the Task class for each task. Calls [onRender()](#onrender). Returns `this`.
 
 ## validate(solutions) {#validate}
 
-Validates responses according to output data parameters. Returns a `promise` object with an array of [SolutionValidationError](/docs-new/guide/spec-advanced#obj-solutionvalidationerror) errors if the responses are incorrect, or `null`. Parameter:
+Validates responses according to output data parameters. Returns a `promise` object with an array of [SolutionValidationError](/docs/guide/spec-advanced#obj-solutionvalidationerror) errors if the responses are incorrect, or `null`. Parameter:
 
 - `solutions` — Array of the Toloker's task responses. If omitted, the current values are used ([getSolutions()](#getsolutions)).
 

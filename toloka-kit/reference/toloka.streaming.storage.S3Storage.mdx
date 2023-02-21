@@ -36,8 +36,8 @@ pip install toloka-kit[s3]
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`bucket`|**[BucketType](/docs-new/toloka-kit/reference/toloka.streaming.storage.BucketType)**|<p>Boto3 bucket object.</p>
-`locker`|**Optional\[[BaseLocker](/docs-new/toloka-kit/reference/toloka.streaming.locker.BaseLocker)\]**|<p>Optional locker object. By default, no locker is used.</p>
+`bucket`|**[BucketType](/docs/toloka-kit/reference/toloka.streaming.storage.BucketType)**|<p>Boto3 bucket object.</p>
+`locker`|**Optional\[[BaseLocker](/docs/toloka-kit/reference/toloka.streaming.locker.BaseLocker)\]**|<p>Optional locker object. By default, no locker is used.</p>
 
 **Examples:**
 
@@ -69,6 +69,6 @@ await pipeline.run()  # Will load from storage at the start and save after each 
 
 | Method | Description |
 | :------| :-----------|
-[cleanup](/docs-new/toloka-kit/reference/toloka.streaming.storage.S3Storage.cleanup)| None
-[load](/docs-new/toloka-kit/reference/toloka.streaming.storage.S3Storage.load)| None
-[save](/docs-new/toloka-kit/reference/toloka.streaming.storage.S3Storage.save)| None
+[cleanup](/docs/toloka-kit/reference/toloka.streaming.storage.S3Storage.cleanup)| None
+[load](/docs/toloka-kit/reference/toloka.streaming.storage.S3Storage.load)| None
+[save](/docs/toloka-kit/reference/toloka.streaming.storage.S3Storage.save)| None

@@ -15,7 +15,7 @@ Finds skills that match certain criteria.
 
 The number of returned skills is limited. To find remaining skills call `find_skills` with updated search criteria.
 
-To iterate over all matching skills you may use the [get_skills](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_skills) method.
+To iterate over all matching skills you may use the [get_skills](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_skills) method.
 
 ## Parameters Description
 
@@ -30,7 +30,7 @@ To iterate over all matching skills you may use the [get_skills](/docs-new/tolok
 `created_lte`|**Optional\[datetime\]**|<p>Skills created before or on the specified date.</p>
 `created_gt`|**Optional\[datetime\]**|<p>Skills created after the specified date.</p>
 `created_gte`|**Optional\[datetime\]**|<p>Skills created on or after the specified date.</p>
-`sort`|**Union\[List\[str\], [SkillSortItems](/docs-new/toloka-kit/reference/toloka.client.search_requests.SkillSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
+`sort`|**Union\[List\[str\], [SkillSortItems](/docs/toloka-kit/reference/toloka.client.search_requests.SkillSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
 `limit`|**Optional\[int\]**|<p>Returned skills limit. The maximum allowed limit is 100.</p>
 
 * **Returns:**
@@ -39,7 +39,7 @@ To iterate over all matching skills you may use the [get_skills](/docs-new/tolok
 
 * **Return type:**
 
-  [SkillSearchResult](/docs-new/toloka-kit/reference/toloka.client.search_results.SkillSearchResult)
+  [SkillSearchResult](/docs/toloka-kit/reference/toloka.client.search_results.SkillSearchResult)
 
 **Examples:**
 

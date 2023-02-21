@@ -43,7 +43,7 @@ In a project, you set properties for tasks and responses:
 * Input data parameters. These parameters describe the objects to display in a task, such as images or text.
 * Output data parameters. These parameters describe Tolokers' responses. They are used for validating the
     responses entered: the data type (integer, string, etc.), range of values, string length, and so on.
-* Task interface. To learn how to define the appearance of tasks, see [Task interface](/docs-new/guide/spec).
+* Task interface. To learn how to define the appearance of tasks, see [Task interface](/docs/guide/spec).
 
 Pools and training pools are related to a project.
 
@@ -55,13 +55,13 @@ Pools and training pools are related to a project.
 `public_description`|**Optional\[str\]**|<p>Description of the project. Visible to Tolokers.</p>
 `public_instructions`|**Optional\[str\]**|<p>Instructions for completing the task. You can use any HTML markup in the instructions.</p>
 `private_comment`|**Optional\[str\]**|<p>Comments about the project. Visible only to the requester.</p>
-`task_spec`|**Optional\[[TaskSpec](/docs-new/toloka-kit/reference/toloka.client.project.task_spec.TaskSpec)\]**|<p>Parameters for input and output data and the task interface.</p>
-`assignments_issuing_type`|**[AssignmentsIssuingType](/docs-new/toloka-kit/reference/toloka.client.project.Project.AssignmentsIssuingType)**|<p>How to assign tasks. The default value is AUTOMATED.</p>
+`task_spec`|**Optional\[[TaskSpec](/docs/toloka-kit/reference/toloka.client.project.task_spec.TaskSpec)\]**|<p>Parameters for input and output data and the task interface.</p>
+`assignments_issuing_type`|**[AssignmentsIssuingType](/docs/toloka-kit/reference/toloka.client.project.Project.AssignmentsIssuingType)**|<p>How to assign tasks. The default value is AUTOMATED.</p>
 `assignments_automerge_enabled`|**Optional\[bool\]**|<p>Solve merging identical tasks in the project.</p>
 `max_active_assignments_count`|**Optional\[int\]**|<p>The number of task suites a Toloker can complete simultaneously (“Active” status)</p>
-`quality_control`|**Optional\[[QualityControl](/docs-new/toloka-kit/reference/toloka.client.quality_control.QualityControl)\]**|<p>The quality control rule.</p>
+`quality_control`|**Optional\[[QualityControl](/docs/toloka-kit/reference/toloka.client.quality_control.QualityControl)\]**|<p>The quality control rule.</p>
 `metadata`|**Optional\[Dict\[str, List\[str\]\]\]**|<p>Additional information about project.</p>
-`status`|**Optional\[[ProjectStatus](/docs-new/toloka-kit/reference/toloka.client.project.Project.ProjectStatus)\]**|<p>Project status.</p>
+`status`|**Optional\[[ProjectStatus](/docs/toloka-kit/reference/toloka.client.project.Project.ProjectStatus)\]**|<p>Project status.</p>
 `created`|**Optional\[datetime\]**|<p>The UTC date and time the project was created.</p>
 `id`|**Optional\[str\]**|<p>Project ID (assigned automatically).</p>
 `public_instructions`|**Optional\[str\]**|<p>Instructions for completing tasks. You can use any HTML markup in the instructions.</p>
@@ -90,5 +90,5 @@ print(new_project.id)
 
 | Method | Description |
 | :------| :-----------|
-[add_requester_translation](/docs-new/toloka-kit/reference/toloka.client.project.Project.add_requester_translation)| Add new translations to other language.
-[set_default_language](/docs-new/toloka-kit/reference/toloka.client.project.Project.set_default_language)| Sets the source language used in the fields public_name, public_description, and public_instructions.
+[add_requester_translation](/docs/toloka-kit/reference/toloka.client.project.Project.add_requester_translation)| Add new translations to other language.
+[set_default_language](/docs/toloka-kit/reference/toloka.client.project.Project.set_default_language)| Sets the source language used in the fields public_name, public_description, and public_instructions.

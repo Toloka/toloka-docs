@@ -32,9 +32,9 @@ _Set overlap for tasks at pool, task suite, and task levels._
 
 ### 3. Set overlap at pool level {#step-three}
 
-Create a pool and set the default overlap value for all the tasks which will be uploaded without additionally specifying it. Use the `default_overlap_for_new_task_suites` value of the [Defaults](/docs-new/toloka-kit/reference/toloka.client.pool.Pool.Defaults) class for that.
+Create a pool and set the default overlap value for all the tasks which will be uploaded without additionally specifying it. Use the `default_overlap_for_new_task_suites` value of the [Defaults](/docs/toloka-kit/reference/toloka.client.pool.Pool.Defaults) class for that.
 
-Refer to the [Create pool](/docs-new/toloka-kit/recipes/create-pool) recipe for more information on how to create a pool and what parameters you can use.
+Refer to the [Create pool](/docs/toloka-kit/recipes/create-pool) recipe for more information on how to create a pool and what parameters you can use.
 
 <CodeCopy
   isSmall
@@ -65,9 +65,9 @@ new_pool = toloka_client.create_pool(new_pool)`}
 
 ### 4. Set overlap at task suite level {#step-four}
 
-Another way to set overlap is specify it when creating a task suite. Use the `overlap` parameter of the [TaskSuite](/docs-new/toloka-kit/reference/toloka.client.task_suite.TaskSuite) class object to set a specific overlap value to the tasks inside a task suite.
+Another way to set overlap is specify it when creating a task suite. Use the `overlap` parameter of the [TaskSuite](/docs/toloka-kit/reference/toloka.client.task_suite.TaskSuite) class object to set a specific overlap value to the tasks inside a task suite.
 
-Refer to the [Group tasks in task suites](/docs-new/toloka-kit/recipes/create-task-suite) recipe for more information on how to create a task suite and what parameters you can use.
+Refer to the [Group tasks in task suites](/docs/toloka-kit/recipes/create-task-suite) recipe for more information on how to create a task suite and what parameters you can use.
 
 <CodeCopy
   isSmall
@@ -100,7 +100,7 @@ toloka_client.create_task_suite(new_task_suite)`}
 
 Now, create and upload two tasks: one without the `overlap` parameter (it will be equal to the default value, set at [step 3](#step-three)) and one with the `overlap` parameter set to `2`.
 
-Refer to the [Upload tasks](/docs-new/toloka-kit/recipes/upload-tasks) recipe for more information on how to upload tasks.
+Refer to the [Upload tasks](/docs/toloka-kit/recipes/upload-tasks) recipe for more information on how to upload tasks.
 
 <CodeCopy
   isSmall
@@ -133,7 +133,7 @@ The task uploading progress will look like this.
 
 ### 6. Print tasks with different overlap {#step-six}
 
-Use the `get_task_suites()` request to get the information about the tasks in the [task suite you created](#step-four). For information about [tasks uploaded without grouping](#step-five), use the `get_tasks()` method. Use the attributes of the returned objects ([TaskSuite](/docs-new/toloka-kit/reference/toloka.client.task_suite.TaskSuite) and [Task](/docs-new/toloka-kit/reference/toloka.client.task.Task) accordingly) to print the information you need.
+Use the `get_task_suites()` request to get the information about the tasks in the [task suite you created](#step-four). For information about [tasks uploaded without grouping](#step-five), use the `get_tasks()` method. Use the attributes of the returned objects ([TaskSuite](/docs/toloka-kit/reference/toloka.client.task_suite.TaskSuite) and [Task](/docs/toloka-kit/reference/toloka.client.task.Task) accordingly) to print the information you need.
 
 <CodeCopy
   isSmall
@@ -205,23 +205,23 @@ for task in toloka_client.get_tasks(pool_id=new_pool.id):
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool) class_
-- _[create_pool()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.create_pool) method_
-- _[Task](/docs-new/toloka-kit/reference/toloka.client.task.Task) class_
-- _[TaskSuite](/docs-new/toloka-kit/reference/toloka.client.task_suite.TaskSuite) class_
-- _[create_task_suite()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.create_task_suite) method_
-- _[create_tasks()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.create_tasks) method_
-- _[get_task_suites()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_task_suites) method_
-- _[get_tasks()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_tasks) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class_
+- _[create_pool()](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_pool) method_
+- _[Task](/docs/toloka-kit/reference/toloka.client.task.Task) class_
+- _[TaskSuite](/docs/toloka-kit/reference/toloka.client.task_suite.TaskSuite) class_
+- _[create_task_suite()](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_task_suite) method_
+- _[create_tasks()](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_tasks) method_
+- _[get_task_suites()](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_task_suites) method_
+- _[get_tasks()](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_tasks) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
 - [Toloka API: Create pool](https://toloka.ai/docs/api/api-reference/#post-/pools)
 - [Toloka API: Create single/multiple task suites](https://toloka.ai/docs/api/api-reference/#post-/task-suites)
 - [Toloka API: Create single/multiple tasks](https://toloka.ai/docs/api/api-reference/#post-/tasks)

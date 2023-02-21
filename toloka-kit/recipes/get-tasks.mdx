@@ -24,7 +24,7 @@ _Get all the tasks in the pool with the ID specified in the request._
 
 ### 3. Print task IDs, creation date, and overlap {#step-three}
 
-[Find out](/docs-new/toloka-kit/recipes/get-pools) the ID of the pool you want to view the tasks in. Then, iterate through all the tasks in the pool calling the `get_tasks()` method.
+[Find out](/docs/toloka-kit/recipes/get-pools) the ID of the pool you want to view the tasks in. Then, iterate through all the tasks in the pool calling the `get_tasks()` method.
 
 <CodeCopy
   isSmall
@@ -63,14 +63,14 @@ for task in toloka_client.get_tasks(pool_id='1227652'):
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[get_tasks()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_tasks) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_tasks()](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_tasks) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
 - [Toloka API: Get list of tasks](https://toloka.ai/docs/api/api-reference/#get-/tasks)

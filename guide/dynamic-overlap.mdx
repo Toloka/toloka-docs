@@ -136,7 +136,7 @@ Before setting up dynamic overlap, you need to prepare the output data fields.
 
 #### Setting up overlap
 
-1. [Create a pool](/docs-new/guide/pool-main) and fill in the [parameters](/docs-new/guide/pool_poolparams).
+1. [Create a pool](/docs/guide/pool-main) and fill in the [parameters](/docs/guide/pool_poolparams).
 
 1. Set the minimum overlap in the **Overlap** field.
 
@@ -152,19 +152,19 @@ Before setting up dynamic overlap, you need to prepare the output data fields.
 
 1. Save the pool.
 
-1. Upload tasks via [smart mixing](/docs-new/guide/distribute-tasks-by-pages#smart-mixing).
+1. Upload tasks via [smart mixing](/docs/guide/distribute-tasks-by-pages#smart-mixing).
 
-1. After the pool is completed, start [Aggregation of results by skill](/docs-new/guide/result-aggregation#aggr-by-skill).
+1. After the pool is completed, start [Aggregation of results by skill](/docs/guide/result-aggregation#aggr-by-skill).
 
 <Note mode="note" title="Note">
 
-**Approximate budget** in the [pool statistics](/docs-new/guide/pool_statistic-pool) is calculated based on the minimal overlap.
+**Approximate budget** in the [pool statistics](/docs/guide/pool_statistic-pool) is calculated based on the minimal overlap.
 
 </Note>
 
 <Cut title="Example">
 
-Configuring dynamic overlap for [simple classification](/docs-new/tutorials/image-classification).
+Configuring dynamic overlap for [simple classification](/docs/tutorials/image-classification).
 
 <Image withBackground imageId="1675426723898" alt="" />
 
@@ -194,7 +194,7 @@ The confidence in the aggregated `OK` response is 96.2. The task is considered c
 
 ## Tips and recommendations {#help}
 
-- Don't use the [Recompletion of assignments from banned users](/docs-new/guide/restore-task-overlap) quality control rule together with dynamic overlap. This increases the maximum overlap value.
+- Don't use the [Recompletion of assignments from banned users](/docs/guide/restore-task-overlap) quality control rule together with dynamic overlap. This increases the maximum overlap value.
 
 - Set confidence in the aggregated response at between 70 and 95 percent.
 
@@ -206,29 +206,29 @@ The confidence in the aggregated `OK` response is 96.2. The task is considered c
 
 - Upload tasks via **smart mixing**. Otherwise, the tasks are assigned with minimum overlap.
 
-    This is necessary for overlap to increase because [control](/docs-new/glossary#control-task) and [training](/docs-new/glossary#training-task) tasks uploaded via **smart mixing** have infinite overlap.
+    This is necessary for overlap to increase because [control](/docs/glossary#control-task) and [training](/docs/glossary#training-task) tasks uploaded via **smart mixing** have infinite overlap.
 
-- Use a skill calculated as the [percentage of correct responses to control tasks](/docs-new/guide/goldenset). This will give you the most accurate results.
+- Use a skill calculated as the [percentage of correct responses to control tasks](/docs/guide/goldenset). This will give you the most accurate results.
 
 - If you edit a required field, the changes apply only to new pools. Existing pools will continue using the previous version of the project.
 
 ## What's next {#what-next}
 
-- [Adding tasks](/docs-new/guide/pool) in the pool.
+- [Adding tasks](/docs/guide/pool) in the pool.
 
 - Learn more about how to set up overlap:
 
-    - Selective [majority vote](/docs-new/guide/selective-mvote) control.
+    - Selective [majority vote](/docs/guide/selective-mvote) control.
 
 ## See also {#see-also}
 
-- [Ways to group tasks in suites](/docs-new/guide/distribute-tasks-by-pages)
-- [Creating a pool](/docs-new/guide/pool-main)
-- [Aggregation of results](/docs-new/guide/result-aggregation)
+- [Ways to group tasks in suites](/docs/guide/distribute-tasks-by-pages)
+- [Creating a pool](/docs/guide/pool-main)
+- [Aggregation of results](/docs/guide/result-aggregation)
 
 ## For developers {#for-developers}
 
-- [Toloka-Kit: Dynamic overlap setting](/docs-new/toloka-kit/reference/toloka.client.pool.dynamic_overlap_config.DynamicOverlapConfig)
+- [Toloka-Kit: Dynamic overlap setting](/docs/toloka-kit/reference/toloka.client.pool.dynamic_overlap_config.DynamicOverlapConfig)
 
 ## Troubleshooting {#troubleshooting}
 

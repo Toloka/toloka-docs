@@ -15,14 +15,14 @@ Finds attachments that match certain criteria and returns their metadata.
 
 The number of returned attachments is limited. To find remaining attachments call `find_attachments` with updated search criteria.
 
-To iterate over all matching attachments you may use the [get_attachments](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_attachments) method.
+To iterate over all matching attachments you may use the [get_attachments](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_attachments) method.
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `name`|**Optional\[str\]**|<p>An attachment file name.</p>
-`type`|**Optional\[[Attachment.Type](/docs-new/toloka-kit/reference/toloka.client.attachment.Attachment.Type)\]**|<p>An attachment type. Refer to the [Attachment.Type](/docs-new/toloka-kit/reference/toloka.client.attachment.Attachment.Type) page for more information on the available `type` values.</p>
+`type`|**Optional\[[Attachment.Type](/docs/toloka-kit/reference/toloka.client.attachment.Attachment.Type)\]**|<p>An attachment type. Refer to the [Attachment.Type](/docs/toloka-kit/reference/toloka.client.attachment.Attachment.Type) page for more information on the available `type` values.</p>
 `user_id`|**Optional\[str\]**|<p>The ID of a Toloker who uploaded attachments.</p>
 `assignment_id`|**Optional\[str\]**|<p>The ID of an assignment with attachments. Either `assignment_id` of `pool_id` is required in a search request.</p>
 `pool_id`|**Optional\[str\]**|<p>The ID of a pool with attachments. Either `assignment_id` of `pool_id` is required in a search request.</p>
@@ -34,7 +34,7 @@ To iterate over all matching attachments you may use the [get_attachments](/docs
 `created_lte`|**Optional\[datetime\]**|<p>Attachments uploaded by Tolokers before or on the specified date.</p>
 `created_gt`|**Optional\[datetime\]**|<p>Attachments uploaded by Tolokers after the specified date.</p>
 `created_gte`|**Optional\[datetime\]**|<p>Attachments uploaded by Tolokers after or on the specified date.</p>
-`sort`|**Union\[List\[str\], [AttachmentSortItems](/docs-new/toloka-kit/reference/toloka.client.search_requests.AttachmentSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
+`sort`|**Union\[List\[str\], [AttachmentSortItems](/docs/toloka-kit/reference/toloka.client.search_requests.AttachmentSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
 `limit`|**Optional\[int\]**|<p>Returned attachments limit. The maximum allowed limit is 100.</p>
 
 * **Returns:**
@@ -43,7 +43,7 @@ To iterate over all matching attachments you may use the [get_attachments](/docs
 
 * **Return type:**
 
-  [AttachmentSearchResult](/docs-new/toloka-kit/reference/toloka.client.search_results.AttachmentSearchResult)
+  [AttachmentSearchResult](/docs/toloka-kit/reference/toloka.client.search_results.AttachmentSearchResult)
 
 **Examples:**
 

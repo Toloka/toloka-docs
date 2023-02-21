@@ -15,7 +15,7 @@ Finds batches that match certain criteria in an App project.
 
 The number of returned batches is limited. To find remaining batches call `find_app_batches` with updated search criteria.
 
-To iterate over all matching batches you may use the [get_app_batches](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_app_batches) method.
+To iterate over all matching batches you may use the [get_app_batches](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_app_batches) method.
 
 ## Parameters Description
 
@@ -23,7 +23,7 @@ To iterate over all matching batches you may use the [get_app_batches](/docs-new
 | :----------| :----| :-----------|
 `app_project_id`|**str**|<p>The ID of the App project.</p>
 `after_id`|**Optional\[str\]**|<p>The ID of the batch used for cursor pagination.</p>
-`status`|**Optional\[[AppBatch.Status](/docs-new/toloka-kit/reference/toloka.client.app.AppBatch.Status)\]**|<p>Refer to the [AppBatch.Status](/docs-new/toloka-kit/reference/toloka.client.app.AppBatch.Status) page for more information on the available `status` values.</p>
+`status`|**Optional\[[AppBatch.Status](/docs/toloka-kit/reference/toloka.client.app.AppBatch.Status)\]**|<p>Refer to the [AppBatch.Status](/docs/toloka-kit/reference/toloka.client.app.AppBatch.Status) page for more information on the available `status` values.</p>
 `id_gt`|**Optional\[str\]**|<p>Batches with IDs greater than the specified value.</p>
 `id_gte`|**Optional\[str\]**|<p>Batches with IDs greater than or equal to the specified value.</p>
 `id_lt`|**Optional\[str\]**|<p>Batches with IDs less than the specified value.</p>
@@ -36,7 +36,7 @@ To iterate over all matching batches you may use the [get_app_batches](/docs-new
 `created_gte`|**Optional\[datetime\]**|<p>Batches created after or on the specified date.</p>
 `created_lt`|**Optional\[datetime\]**|<p>Batches created before the specified date.</p>
 `created_lte`|**Optional\[datetime\]**|<p>Batches created before or on the specified date.</p>
-`sort`|**Union\[List\[str\], [AppBatchSortItems](/docs-new/toloka-kit/reference/toloka.client.search_requests.AppBatchSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
+`sort`|**Union\[List\[str\], [AppBatchSortItems](/docs/toloka-kit/reference/toloka.client.search_requests.AppBatchSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
 `limit`|**Optional\[int\]**|<p>Returned batches limit. The maximum allowed limit is 1000.</p>
 
 * **Returns:**
@@ -45,4 +45,4 @@ To iterate over all matching batches you may use the [get_app_batches](/docs-new
 
 * **Return type:**
 
-  [AppBatchSearchResult](/docs-new/toloka-kit/reference/toloka.client.search_results.AppBatchSearchResult)
+  [AppBatchSearchResult](/docs/toloka-kit/reference/toloka.client.search_results.AppBatchSearchResult)

@@ -13,11 +13,11 @@ docsMenu: "tkitMenu"
 
 Finds aggregated responses that match certain criteria.
 
-Pass to the `find_aggregated_solutions` the ID of the operation started by the [aggregate_solutions_by_pool](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.aggregate_solutions_by_pool) method.
+Pass to the `find_aggregated_solutions` the ID of the operation started by the [aggregate_solutions_by_pool](/docs/toloka-kit/reference/toloka.client.TolokaClient.aggregate_solutions_by_pool) method.
 
 The number of returned aggregated responses is limited. To find remaining responses call `find_aggregated_solutions` with updated search criteria.
 
-To iterate over all matching aggregated responses you may use the [get_aggregated_solutions](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_aggregated_solutions) method.
+To iterate over all matching aggregated responses you may use the [get_aggregated_solutions](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_aggregated_solutions) method.
 
 ## Parameters Description
 
@@ -28,7 +28,7 @@ To iterate over all matching aggregated responses you may use the [get_aggregate
 `task_id_lte`|**Optional\[str\]**|<p>Responses for tasks with IDs less than or equal to the specified value.</p>
 `task_id_gt`|**Optional\[str\]**|<p>Responses for tasks with IDs greater than the specified value.</p>
 `task_id_gte`|**Optional\[str\]**|<p>Responses for tasks with IDs greater than or equal to the specified value.</p>
-`sort`|**Union\[List\[str\], [AggregatedSolutionSortItems](/docs-new/toloka-kit/reference/toloka.client.search_requests.AggregatedSolutionSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
+`sort`|**Union\[List\[str\], [AggregatedSolutionSortItems](/docs/toloka-kit/reference/toloka.client.search_requests.AggregatedSolutionSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
 `limit`|**Optional\[int\]**|<p>Returned aggregated responses limit. The default limit is 50. The maximum allowed limit is 100,000.</p>
 
 * **Returns:**
@@ -37,7 +37,7 @@ To iterate over all matching aggregated responses you may use the [get_aggregate
 
 * **Return type:**
 
-  [AggregatedSolutionSearchResult](/docs-new/toloka-kit/reference/toloka.client.search_results.AggregatedSolutionSearchResult)
+  [AggregatedSolutionSearchResult](/docs/toloka-kit/reference/toloka.client.search_results.AggregatedSolutionSearchResult)
 
 **Examples:**
 

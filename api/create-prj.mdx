@@ -126,11 +126,11 @@ Parameter | Overview
 **public_instructions** | **string**<br/><br/>Instructions for completing the task. You can use any HTML markup in the instructions.
 **private_comment** | **string**<br/><br/>Comments that are only visible to the requester.
 **assignments_issuing_type** | <CreatePrjTable1/>
-**assignments_automerge_enabled** | **boolean**<br/><br/>Resolve [merging identical tasks](/docs-new/api/tasks#task-merge) in the project. The default value is `false`.
+**assignments_automerge_enabled** | **boolean**<br/><br/>Resolve [merging identical tasks](/docs/api/tasks#task-merge) in the project. The default value is `false`.
 **max_active_assignments_count** | **integer**<br/><br/>The number of task suites the Toloker can complete simultaneously ("Active" status).
 **quality_control** | **object**<br/><br/>The quality control rule.
-**quality_control.configs[]** | **array of objects**<br/><br/>[Presets](/docs-new/api/quality_control)
-**localization_config** | **object**<br/><br/>Block of translations to other languages. The complete list of parameters is shown in the [Translations to other languages](#localization-config-section) table.<br/><br/>For more information about translation, see [Translations to other languages](/docs-new/guide/project-languages).
+**quality_control.configs[]** | **array of objects**<br/><br/>[Presets](/docs/api/quality_control)
+**localization_config** | **object**<br/><br/>Block of translations to other languages. The complete list of parameters is shown in the [Translations to other languages](#localization-config-section) table.<br/><br/>For more information about translation, see [Translations to other languages](/docs/guide/project-languages).
 
 ## Input and output data (input_spec and output_spec) {#in-out}
 
@@ -144,7 +144,7 @@ Parameter | Overview
 **hidden** | **boolean**<br/><br/>Whether to hide field with the input value from the Toloker or not. The default value is `false`.<br/><br/>For output data, always `false`.
 **min_value** | **float**<br/><br/>Minimum value of the number.
 **max_value** | **float**<br/><br/>Maximum value of the number.
-**allowed_values[]** | **array of strings, array of integers, array of floats**<br/><br/>Allowed values.<br/><br/>Setting acceptable values improves the quality of [response aggregation](/docs-new/api/aggregated-solutions).
+**allowed_values[]** | **array of strings, array of integers, array of floats**<br/><br/>Allowed values.<br/><br/>Setting acceptable values improves the quality of [response aggregation](/docs/api/aggregated-solutions).
 **min_length** | **integer**<br/><br/>Minimum length of the string.
 **max_length** | **integer**<br/><br/>Maximum length of the string.
 **current_location** | **string**<br/><br/>Only for output data of the `coordinates` type: populate the field with the Toloker's current coordinates in the field (`true`/`false`). Used in tasks for the mobile app.
@@ -153,16 +153,16 @@ Parameter | Overview
 
 Parameter | Overview
 ----- | -----
-**markup** | **string**<br/><br/>HTML markup of the task.<br/><br/>For more information, see the [HTML block](/docs-new/guide/spec#html) section.
-**script** | **string**<br/><br/>JavaScript code of the task.<br/><br/>For more information, see the [JavaScript block](/docs-new/guide/spec#js) section.
-**styles** | **string**<br/><br/>CSS styles of the task.<br/><br/>For more information, see the [CSS block](/docs-new/guide/spec#css) section.
+**markup** | **string**<br/><br/>HTML markup of the task.<br/><br/>For more information, see the [HTML block](/docs/guide/spec#html) section.
+**script** | **string**<br/><br/>JavaScript code of the task.<br/><br/>For more information, see the [JavaScript block](/docs/guide/spec#js) section.
+**styles** | **string**<br/><br/>CSS styles of the task.<br/><br/>For more information, see the [CSS block](/docs/guide/spec#css) section.
 **settings** | **object \| required**<br/><br/>Whether to display common interface elements in the task.
-**config[]** | **array of objects**<br/><br/>[Configuration for Template Builder](/docs-new/api/tb-config)
+**config[]** | **array of objects**<br/><br/>[Configuration for Template Builder](/docs/api/tb-config)
 **assets** | <CreatePrjTable4/>
 **assets.script_urls[]** | <CreatePrjTable5/>
 **assets.style_urls[]** | **array of strings**<br/><br/>Links to CSS libraries.
 **type** | <CreatePrjTable6/>
-**localizationConfig** | **object**<br/><br/>Editor configuration.<br/><br/>In the Template Builder, add to this field the keys for the properties of text components that you need to translate into other languages.<br/><br/>For more information, see [Translating the task interface](/docs-new/guide/project-languages#project-languages__interface-translate).
+**localizationConfig** | **object**<br/><br/>Editor configuration.<br/><br/>In the Template Builder, add to this field the keys for the properties of text components that you need to translate into other languages.<br/><br/>For more information, see [Translating the task interface](/docs/guide/project-languages#project-languages__interface-translate).
 **localizationConfig.keys** | <CreatePrjTable7/>
 **settings.showTimer** | **boolean**<br/><br/>Show the remaining time. The default value is `true`.
 **settings.showTitle** | **boolean**<br/><br/>Show the project name in task titles. The default value is `true`.
@@ -215,6 +215,6 @@ Parameter | Overview
 
 ## See also {#see-also}
 
-- [Create a project](/docs-new/guide/project)
+- [Create a project](/docs/guide/project)
 
 <ContactGuideSupport/>

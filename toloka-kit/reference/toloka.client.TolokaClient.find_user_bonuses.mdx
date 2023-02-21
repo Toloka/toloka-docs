@@ -15,7 +15,7 @@ Finds Tolokers' rewards that match certain criteria.
 
 The number of returned rewards is limited. To find remaining rewards call `find_user_bonuses` with updated search criteria.
 
-To iterate over all matching Tolokers' rewards you may use the [get_user_bonuses](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_user_bonuses) method.
+To iterate over all matching Tolokers' rewards you may use the [get_user_bonuses](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_user_bonuses) method.
 
 ## Parameters Description
 
@@ -32,7 +32,7 @@ To iterate over all matching Tolokers' rewards you may use the [get_user_bonuses
 `created_lte`|**Optional\[datetime\]**|<p>Rewards given before or on the specified date.</p>
 `created_gt`|**Optional\[datetime\]**|<p>Rewards given after the specified date.</p>
 `created_gte`|**Optional\[datetime\]**|<p>Rewards given after or on the specified date.</p>
-`sort`|**Union\[List\[str\], [UserBonusSortItems](/docs-new/toloka-kit/reference/toloka.client.search_requests.UserBonusSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
+`sort`|**Union\[List\[str\], [UserBonusSortItems](/docs/toloka-kit/reference/toloka.client.search_requests.UserBonusSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
 `limit`|**Optional\[int\]**|<p>Returned Tolokers&#x27; rewards limit. The maximum allowed limit is 300.</p>
 
 * **Returns:**
@@ -41,7 +41,7 @@ To iterate over all matching Tolokers' rewards you may use the [get_user_bonuses
 
 * **Return type:**
 
-  [UserBonusSearchResult](/docs-new/toloka-kit/reference/toloka.client.search_results.UserBonusSearchResult)
+  [UserBonusSearchResult](/docs/toloka-kit/reference/toloka.client.search_results.UserBonusSearchResult)
 
 **Examples:**
 

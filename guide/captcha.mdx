@@ -24,9 +24,9 @@ import CaptchaList2 from './captcha/subcomponents/captcha-list-2.mdx'
 
 <CaptchaWarning/>
 
-Captchas and the [Fast responses](/docs-new/guide/quick-answers) rule provide a high level of protection from robots.
+Captchas and the [Fast responses](/docs/guide/quick-answers) rule provide a high level of protection from robots.
 
-To show a captcha to Tolokers, set captcha frequency in the [pool](/docs-new/glossary#pool) settings.
+To show a captcha to Tolokers, set captcha frequency in the [pool](/docs/glossary#pool) settings.
 
 In Toloka, a captcha is normally shown once every 10 assignments. If responses are given quickly and captchas get in the way, they can be shown every 20 assignments.
 
@@ -50,7 +50,7 @@ The **If** and **then** fields in this rule are required. If you don't fill in a
 
 **Field**  | **Overview**
 ----- | -----
-**Recent captchas to use** | The number of times the Toloker was shown a captcha recently.<br/><br/>If this field is not filled in, the calculation includes only captcha entries from the pool to which the rule is applied.<br/><br/>If the field is filled in, the corresponding number of captcha entries is used. The rule takes into account captcha entries from both this pool and other pools where this field is filled in.<br/><br/>[Learn more](/docs-new/guide/remember-values) about how this field works.
+**Recent captchas to use** | The number of times the Toloker was shown a captcha recently.<br/><br/>If this field is not filled in, the calculation includes only captcha entries from the pool to which the rule is applied.<br/><br/>If the field is filled in, the corresponding number of captcha entries is used. The rule takes into account captcha entries from both this pool and other pools where this field is filled in.<br/><br/>[Learn more](/docs/guide/remember-values) about how this field works.
 **If** | <CaptchaTable1/>
 **then** | <CaptchaTable2/>
 
@@ -60,7 +60,7 @@ Since a person can also make a mistake when entering a captcha, it's advisable t
 
 <Note mode="warning" title="Warning">
 
-The assignments submitted by banned Tolokers will be taken into account if they are not rejected using manual review. They can be reassigned by setting up the [Recompletion of assignments from banned users](/docs-new/guide/restore-task-overlap) rule.
+The assignments submitted by banned Tolokers will be taken into account if they are not rejected using manual review. They can be reassigned by setting up the [Recompletion of assignments from banned users](/docs/guide/restore-task-overlap) rule.
 
 </Note>
 
@@ -73,12 +73,12 @@ The assignments submitted by banned Tolokers will be taken into account if they 
 
 ## See also {#see-also}
 
-- [Skipped assignments](/docs-new/guide/skipped-assignments)
+- [Skipped assignments](/docs/guide/skipped-assignments)
 
 ## For developers {#for-developers}
 
-- [Toloka API: Using captcha](/docs-new/api/captcha)
-- [Toloka-Kit: Captcha class](/docs-new/toloka-kit/reference/toloka.client.collectors.Captcha)
+- [Toloka API: Using captcha](/docs/api/captcha)
+- [Toloka-Kit: Captcha class](/docs/toloka-kit/reference/toloka.client.collectors.Captcha)
 
 ## Troubleshooting {#troubleshooting}
 

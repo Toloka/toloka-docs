@@ -55,11 +55,11 @@ import SpecList3 from './spec/subcomponents/spec-list-3.mdx'
 
 <Note mode="note" title="Note">
 
-The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in the [Template Builder](/docs-new/template-builder/).
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in the [Template Builder](/docs/template-builder/).
 
 </Note>
 
-The task interface defines the visual appearance of the [task](/docs-new/glossary#task) for the Toloker and the logic for processing responses.
+The task interface defines the visual appearance of the [task](/docs/glossary#task) for the Toloker and the logic for processing responses.
 
 A user-friendly interface improves the quality of results, helps Tolokers complete tasks faster, and lets you set a lower price per task.
 
@@ -75,9 +75,9 @@ To open the **HTML**, **CSS**, and **JS** blocks in the interface, click the blo
 
 ### HTML block {#html}
 
-Add elements for the [input and output data](/docs-new/guide/incoming) to display in the task interface in this block. You can use special [components](/docs-new/guide/t-components) or HTML tags inside the `<body>` tag.
+Add elements for the [input and output data](/docs/guide/incoming) to display in the task interface in this block. You can use special [components](/docs/guide/t-components) or HTML tags inside the `<body>` tag.
 
-[Handlebars](/docs-new/guide/t-components/handlebars) is used as a template engine for HTML.
+[Handlebars](/docs/guide/t-components/handlebars) is used as a template engine for HTML.
 
 <Cut title="How do I add a component?">
 
@@ -105,7 +105,7 @@ Add the `text` field with the `string` type in the input data. Then in the task 
 
 <Cut title="Upload a file to the task (for example, an image)">
 
-Add the `url` field with the `URL` type in the input data. Then add the [Picture](/docs-new/guide/t-components/img) component in the task interface (in the HTML block) and specify the field name in the `src` attribute:
+Add the `url` field with the `URL` type in the input data. Then add the [Picture](/docs/guide/t-components/img) component in the task interface (in the HTML block) and specify the field name in the `src` attribute:
 
 ```html
 {{img src=url width="400px" height="300px"}}
@@ -119,7 +119,7 @@ Add the `url` field with the `URL` type in the input data. Then add the [Picture
 
 <Cut title="Ask Tolokers to enter the text">
 
-Add the `input` field with the `string` type in the output data. Make the field required. Then add the [Text input field](/docs-new/guide/t-components/text) field in the task interface (in the HTML block) and specify the field name in the `name` attribute:
+Add the `input` field with the `string` type in the output data. Make the field required. Then add the [Text input field](/docs/guide/t-components/text) field in the task interface (in the HTML block) and specify the field name in the `name` attribute:
 
 ```html
 {{field type="textarea" name="input" width="270px" rows=5}}
@@ -129,7 +129,7 @@ Add the `input` field with the `string` type in the output data. Make the field 
 
 <Cut title="Ask Tolokers to select one of the values">
 
-Add the `result` field with the `string` type in the output data. Make this field required and specify `Yes` and `No` as acceptable values. Then add a component [Radio button](/docs-new/guide/t-components/radiobuttons) component in the task interface (in the HTML block) and specify the field name in the `name` attribute:
+Add the `result` field with the `string` type in the output data. Make this field required and specify `Yes` and `No` as acceptable values. Then add a component [Radio button](/docs/guide/t-components/radiobuttons) component in the task interface (in the HTML block) and specify the field name in the `name` attribute:
 
 ```html
 {{field type="radio" name="result" label="Yes" value="Yes" hotkey="1"}}
@@ -144,9 +144,9 @@ Add the `result` field with the `string` type in the output data. Make this fiel
 
 ### JavaScript block {#js}
 
-In the **JS** block, you can add rules for response processing in JavaScript. [Special extensions for task classes](/docs-new/guide/spec-advanced) are available for this purpose.
+In the **JS** block, you can add rules for response processing in JavaScript. [Special extensions for task classes](/docs/guide/spec-advanced) are available for this purpose.
 
-You can also connect JavaScript libraries to create the interface. For example, if you have several [projects](/docs-new/glossary#project) with similar tasks, save the method descriptions in a separate file and add it as a library.
+You can also connect JavaScript libraries to create the interface. For example, if you have several [projects](/docs/glossary#project) with similar tasks, save the method descriptions in a separate file and add it as a library.
 
 To connect the JavaScript library, click the <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425167322/1675425167322_original_svg.svg" alt="" /> button in the **Task interface** block and add links to libraries in the **JS** field.
 
@@ -170,7 +170,7 @@ Changes to the input and output data, as well as the number of tasks per suite a
 
 </Note>
 
-To view the resulting task, click **Preview task**. The preview shows a page with a task that contains standard data. Change the input data and make sure that images, links, or text are displayed correctly on the [task suite](/docs-new/glossary#task-suite). You can also complete one or more tasks and get responses.
+To view the resulting task, click **Preview task**. The preview shows a page with a task that contains standard data. Change the input data and make sure that images, links, or text are displayed correctly on the [task suite](/docs/glossary#task-suite). You can also complete one or more tasks and get responses.
 
 <Cut title="How do I change the number of standard tasks?">
 
@@ -206,7 +206,7 @@ To check if the data from text comments or checkboxes is received correctly, fil
 
 <Note mode="tip" title="Tip">
 
-Use the [Sandbox](/docs-new/glossary#sandbox) to check if files, images, audio, or videos submitted from the task suite are received correctly. To do this, complete the project creation, create the same project in the Sandbox, and [complete](/docs-new/guide/sandbox) it from a trusted user account.
+Use the [Sandbox](/docs/glossary#sandbox) to check if files, images, audio, or videos submitted from the task suite are received correctly. To do this, complete the project creation, create the same project in the Sandbox, and [complete](/docs/guide/sandbox) it from a trusted user account.
 
 </Note>
 
@@ -246,19 +246,19 @@ Read the [article](https://toloka.ai/knowledgebase/interface) on how to make the
 
 ## What's next {#what-next}
 
-- [Adapt the task interface for mobile devices](/docs-new/guide/mobile).
-- [Create a task pool in the project](/docs-new/guide/pool-main).
+- [Adapt the task interface for mobile devices](/docs/guide/mobile).
+- [Create a task pool in the project](/docs/guide/pool-main).
 - Learn more about how to set up a project:
 
-    - [Writing instructions](/docs-new/guide/instruction).
-    - [Input and output data](/docs-new/guide/incoming).
-    - [Setting up quality control](/docs-new/guide/project-qa).
+    - [Writing instructions](/docs/guide/instruction).
+    - [Input and output data](/docs/guide/incoming).
+    - [Setting up quality control](/docs/guide/project-qa).
 
 ## See also {#see-also}
 
 - [Crowdsourcing concepts: Instructions](https://toloka.ai/knowledgebase/instruction/)
 - [Crowdsourcing concepts: Interfaces](https://toloka.ai/knowledgebase/interface/)
-- [Editing a project](/docs-new/guide/edit-project)
+- [Editing a project](/docs/guide/edit-project)
 
 ## Troubleshooting {#troubleshooting}
 

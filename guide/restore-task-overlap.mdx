@@ -26,7 +26,7 @@ Use this rule if the Toloker was banned and you want someone else to complete th
 
 <Note mode="note" title="Note">
 
-Don't use this rule in [pools](/docs-new/glossary#pool) with [dynamic overlap](/docs-new/guide/dynamic-overlap). This increases the maximum [overlap](/docs-new/glossary#overlap) value.
+Don't use this rule in [pools](/docs/glossary#pool) with [dynamic overlap](/docs/guide/dynamic-overlap). This increases the maximum [overlap](/docs/glossary#overlap) value.
 
 </Note>
 
@@ -40,7 +40,7 @@ This rule can increase the cost of the pool.
 
 Use the rule if you want to get responses only from honest Tolokers to each task in the given overlap.
 
-The assignments submitted by banned Tolokers will be taken into account if they are not rejected manually using [manual review](/docs-new/glossary#assignment-review). They can be reassigned by setting up the corresponding rule.
+The assignments submitted by banned Tolokers will be taken into account if they are not rejected manually using [manual review](/docs/glossary#assignment-review). They can be reassigned by setting up the corresponding rule.
 
 To download the responses of users who are not blocked:
 
@@ -54,7 +54,7 @@ To download the responses of users who are not blocked:
 
 - You don't want to increase the overlap for tasks.
 - You don't want the final budget for pool labeling to exceed the initial budget.
-- You set up [dynamic overlap](/docs-new/guide/dynamic-overlap). This increases the maximum overlap value.
+- You set up [dynamic overlap](/docs/guide/dynamic-overlap). This increases the maximum overlap value.
 
 ## How do I set up? {#rule}
 
@@ -71,7 +71,7 @@ All fields in this rule are required. If you don't fill in at least one of them,
 
 ## Examples {#examples}
 
-**Task**: classify photos for a dataset across different categories. If a Toloker is banned by a quality control rule (for example, [fast resposes](/docs-new/guide/quick-answers)) or no longer matches the skill, their responses aren't counted and their tasks are sent for re-completion to another Toloker.
+**Task**: classify photos for a dataset across different categories. If a Toloker is banned by a quality control rule (for example, [fast resposes](/docs/guide/quick-answers)) or no longer matches the skill, their responses aren't counted and their tasks are sent for re-completion to another Toloker.
 
 <Tabs tabs={[
   { title: 'Correct settings', value: <RestoreTaskOverlapList1/> },
@@ -80,8 +80,8 @@ All fields in this rule are required. If you don't fill in at least one of them,
 
 ## For developers {#for-developers}
 
-- [Toloka API: Recompletion of assignments](/docs-new/api/restore-task-overlap)
-- [Toloka-Kit: UsersAssessment collector class](/docs-new/toloka-kit/reference/toloka.client.collectors.UsersAssessment)
+- [Toloka API: Recompletion of assignments](/docs/api/restore-task-overlap)
+- [Toloka-Kit: UsersAssessment collector class](/docs/toloka-kit/reference/toloka.client.collectors.UsersAssessment)
 
 ## Troubleshooting {#troubleshooting}
 

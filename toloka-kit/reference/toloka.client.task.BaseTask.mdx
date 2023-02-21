@@ -30,7 +30,7 @@ A base class for tasks.
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `input_values`|**Optional\[Dict\[str, Any\]\]**|<p>A dictionary with input data for a task. Input field names are keys in the dictionary.</p>
-`known_solutions`|**Optional\[List\[[KnownSolution](/docs-new/toloka-kit/reference/toloka.client.task.BaseTask.KnownSolution)\]\]**|<p>A list of all responses considered correct. It is used with control and training tasks. If there are several output fields, then you must specify all their correct combinations.</p>
+`known_solutions`|**Optional\[List\[[KnownSolution](/docs/toloka-kit/reference/toloka.client.task.BaseTask.KnownSolution)\]\]**|<p>A list of all responses considered correct. It is used with control and training tasks. If there are several output fields, then you must specify all their correct combinations.</p>
 `message_on_unknown_solution`|**Optional\[str\]**|<p>A hint used in training tasks.</p>
 `id`|**Optional\[str\]**|<p>The ID of a task.</p>
 `origin_task_id`|**Optional\[str\]**|<p>The ID of a parent task. This parameter is set if the task was created by copying.</p>

@@ -36,14 +36,14 @@ Task(
 
 A task that is assigned to Tolokers.
 
-Tasks are grouped into [TaskSuites](/docs-new/toloka-kit/reference/toloka.client.task_suite.TaskSuite).
+Tasks are grouped into [TaskSuites](/docs/toloka-kit/reference/toloka.client.task_suite.TaskSuite).
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `input_values`|**Optional\[Dict\[str, Any\]\]**|<p>A dictionary with input data for a task. Input field names are keys in the dictionary.</p>
-`known_solutions`|**Optional\[List\[[BaseTask.KnownSolution](/docs-new/toloka-kit/reference/toloka.client.task.BaseTask.KnownSolution)\]\]**|<p>A list of all responses considered correct. It is used with control and training tasks. If there are several output fields, then you must specify all their correct combinations.</p>
+`known_solutions`|**Optional\[List\[[BaseTask.KnownSolution](/docs/toloka-kit/reference/toloka.client.task.BaseTask.KnownSolution)\]\]**|<p>A list of all responses considered correct. It is used with control and training tasks. If there are several output fields, then you must specify all their correct combinations.</p>
 `message_on_unknown_solution`|**Optional\[str\]**|<p>A hint used in training tasks.</p>
 `id`|**Optional\[str\]**|<p>The ID of a task.</p>
 `pool_id`|**Optional\[str\]**|<p>The ID of the pool that the task belongs to.</p>
@@ -55,7 +55,7 @@ Tasks are grouped into [TaskSuites](/docs-new/toloka-kit/reference/toloka.client
 `traits_none_of_any`|**Optional\[List\[str\]\]**|<p>The task can not be assigned to Tolokers who have any of the specified traits.</p>
 `origin_task_id`|**Optional\[str\]**|<p>The ID of a parent task. This parameter is set if the task was created by copying.</p>
 `created`|**Optional\[datetime\]**|<p>The UTC date and time when the task was created.</p>
-`baseline_solutions`|**Optional\[List\[[BaselineSolution](/docs-new/toloka-kit/reference/toloka.client.task.Task.BaselineSolution)\]\]**|<p>Preliminary responses for dynamic overlap and aggregation of results by skill. They are used to calculate a confidence level of the first responses from Toloker.</p>
+`baseline_solutions`|**Optional\[List\[[BaselineSolution](/docs/toloka-kit/reference/toloka.client.task.Task.BaselineSolution)\]\]**|<p>Preliminary responses for dynamic overlap and aggregation of results by skill. They are used to calculate a confidence level of the first responses from Toloker.</p>
 
 **Examples:**
 
@@ -68,4 +68,4 @@ task = toloka.client.Task(
 )
 ```
 
-See more complex example in the description of the [create_tasks](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.create_tasks) method.
+See more complex example in the description of the [create_tasks](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_tasks) method.

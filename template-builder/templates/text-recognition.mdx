@@ -24,9 +24,9 @@ Note that validation and task layout are already configured in this Template Bu
 
 <Cut title="Components used in the example">
 
-- [view.list](/docs-new/template-builder/reference/view.list): Displays data in a list.
+- [view.list](/docs/template-builder/reference/view.list): Displays data in a list.
 
-- [view.image](/docs-new/template-builder/reference/view.image): Adds an image.
+- [view.image](/docs/template-builder/reference/view.image): Adds an image.
 
   <Cut title="Show code">
 
@@ -43,9 +43,9 @@ Note that validation and task layout are already configured in this Template Bu
   ```
   </Cut>
 
-- [view.text](/docs-new/template-builder/reference/view.text): Displays a block with text.
+- [view.text](/docs/template-builder/reference/view.text): Displays a block with text.
 
-  If you need formatted text, use the [view.markdown](/docs-new/template-builder/reference/view.markdown) component.
+  If you need formatted text, use the [view.markdown](/docs/template-builder/reference/view.markdown) component.
 
   <Cut title="Show code">
 
@@ -61,7 +61,7 @@ Note that validation and task layout are already configured in this Template Bu
   ```
   </Cut>
 
-- A combination of [helper.if](/docs-new/template-builder/reference/helper.if) and [condition.equals](/docs-new/template-builder/reference/condition.equals): Displays the response field when the checkbox is not selected.
+- A combination of [helper.if](/docs/template-builder/reference/helper.if) and [condition.equals](/docs/template-builder/reference/condition.equals): Displays the response field when the checkbox is not selected.
 
   <Cut title="Show code">
 
@@ -98,9 +98,9 @@ Note that validation and task layout are already configured in this Template Bu
 
   </Cut>
 
-- [field.text](/docs-new/template-builder/reference/field.text): Adds a field for entering a short text.
+- [field.text](/docs/template-builder/reference/field.text): Adds a field for entering a short text.
 
-  Use the [conditions.required](/docs-new/template-builder/reference/conditions) component inside the `validation` property to check that a Toloker filled in the text field.
+  Use the [conditions.required](/docs/template-builder/reference/conditions) component inside the `validation` property to check that a Toloker filled in the text field.
 
   <Cut title="Show code">
 
@@ -121,7 +121,7 @@ Note that validation and task layout are already configured in this Template Bu
 
   </Cut>
 
-- [field.checkbox](/docs-new/template-builder/reference/field.checkbox): Adds a checkbox.
+- [field.checkbox](/docs/template-builder/reference/field.checkbox): Adds a checkbox.
 
   <Cut title="Show code">
 
@@ -140,7 +140,7 @@ Note that validation and task layout are already configured in this Template Bu
 
   </Cut>
 
-- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task layout.
+- [plugin.toloka](/docs/template-builder/reference/plugin.toloka): Customizes the task layout.
 
   <Cut title="Show code">
 
@@ -162,7 +162,7 @@ If this template doesn't meet your needs, see other examples in the **Images** 
 
 ## Add a description {#add-description}
 
-To add a detailed description to the task, use the `label` property of the [view.image](/docs-new/template-builder/reference/view.image) component.
+To add a detailed description to the task, use the `label` property of the [view.image](/docs/template-builder/reference/view.image) component.
 
 <Cut title="Show code">
 
@@ -185,7 +185,7 @@ To add a detailed description to the task, use the `label` property of the [view
 
 ## Add a clarifying question
 
-To ask Tolokers to clarify their choice if they selected the **No business** checkbox, add the [helper.if](/docs-new/template-builder/reference/helper.if) component which contains [field.radio-group](/docs-new/template-builder/reference/field.radio-group).
+To ask Tolokers to clarify their choice if they selected the **No business** checkbox, add the [helper.if](/docs/template-builder/reference/helper.if) component which contains [field.radio-group](/docs/template-builder/reference/field.radio-group).
 
 <Cut title="Show code">
 
@@ -239,7 +239,7 @@ To ask Tolokers to clarify their choice if they selected the **No business** che
 
 ## Add a layout {#add-layout}
 
-To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs-new/template-builder/reference/view.alert). You can place it in the [view.list](/docs-new/template-builder/reference/view.list) along with the other components.
+To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs/template-builder/reference/view.alert). You can place it in the [view.list](/docs/template-builder/reference/view.list) along with the other components.
 
 In this example, the text is highlighted with a blue border.
 
@@ -262,7 +262,7 @@ In this example, the text is highlighted with a blue border.
 
 ## Add a field for comments {#add-text-area}
 
-To let Tolokers leave comments about the task or their response, add a text field using [field.textarea](/docs-new/template-builder/reference/field.textarea).
+To let Tolokers leave comments about the task or their response, add a text field using [field.textarea](/docs/template-builder/reference/field.textarea).
 
 <Cut title="Show code">
 
@@ -284,7 +284,7 @@ To let Tolokers leave comments about the task or their response, add a text fiel
 
 ## Add keyboard shortcuts {#add-shortcuts}
 
-Add keyboard shortcuts to rotate and zoom in images in the [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys) configuration.
+Add keyboard shortcuts to rotate and zoom in images in the [plugin.hotkeys](/docs/template-builder/reference/plugin.hotkeys) configuration.
 
 <Cut title="Show code">
 

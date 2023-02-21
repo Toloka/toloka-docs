@@ -59,7 +59,7 @@ Parameter | Overview
 **allow_defaults** | <CreateTaskSuiteTable2/>
 **skip_invalid_items** | <CreateTaskSuiteTable3/>
 **open_pool** | **boolean**<br/><br/>Open the pool immediately after the operation is completed, if the pool is closed. The default value is `false`.
-**operation_id** | **string**<br/><br/>Operation ID for asynchronously loading one or more task suites (if `async_mode=true`).<br/><br/>We recommend sending the ID in the POST request to avoid accidental errors, such as creating the operation multiple times for the same task suites.<br/><br/>The ID should conform to the [RFC4122 standard](https://tools.ietf.org/html/rfc4122).<br/><br/>You can use this ID in the future to [get information about the operation](/docs-new/api/operations).
+**operation_id** | **string**<br/><br/>Operation ID for asynchronously loading one or more task suites (if `async_mode=true`).<br/><br/>We recommend sending the ID in the POST request to avoid accidental errors, such as creating the operation multiple times for the same task suites.<br/><br/>The ID should conform to the [RFC4122 standard](https://tools.ietf.org/html/rfc4122).<br/><br/>You can use this ID in the future to [get information about the operation](/docs/api/operations).
 
 ## Request body {#body}
 
@@ -122,7 +122,7 @@ Parameter | Overview
 **pool_id** | **string \| required**<br/><br/>The ID of the pool that tasks are uploaded to.
 **tasks[]** | **array of object \| required**<br/><br/>Data for the tasks.
 **tasks[].input_values** | <CreateTaskSuiteTable4/>
-**overlap** | **integer \| required if**<br/><br/>Required if the parameter is not used when creating a task suite `allow_defaults=true`, and the overlap is not specified in the pool parameters (in the [`defaults.​default_​overlap_for_​new_task_suites`](/docs-new/api/create-pool#default_overlap_for_new_task_suites) key).<br/><br/>Task suite overlap.
+**overlap** | **integer \| required if**<br/><br/>Required if the parameter is not used when creating a task suite `allow_defaults=true`, and the overlap is not specified in the pool parameters (in the [`defaults.​default_​overlap_for_​new_task_suites`](/docs/api/create-pool#default_overlap_for_new_task_suites) key).<br/><br/>Task suite overlap.
 **longitude** | **float \| required if**<br/><br/>Required if tasks are selected on the map. Otherwise, not used.<br/><br/>The longitude of the point on the map for the task suite.
 **latitude** | **float \| required if**<br/><br/>Required if tasks are selected on the map. Otherwise, not used.<br/><br/>The latitude of the point on the map for the task suite.
 **tasks[].known_solutions** | **object**<br/><br/>Responses and hints for control tasks and training tasks.
@@ -141,13 +141,13 @@ Parameter | Overview
 
 It includes:
 
-- [Task suite data](/docs-new/api/create-task-suite#body) in JSON format.
+- [Task suite data](/docs/api/create-task-suite#body) in JSON format.
 - Parameters that are assigned automatically.
 
 Parameter | Overview
 ----- | -----
 **id** | **string**<br/><br/>ID of a task suite.
-**tasks[].id** | **string**<br/><br/>Task ID if the task suite is created automatically with the "smart mixing" option ([learn more](/docs-new/guide/task_upload)).
+**tasks[].id** | **string**<br/><br/>Task ID if the task suite is created automatically with the "smart mixing" option ([learn more](/docs/guide/task_upload)).
 **tasks[].origin_task_id** | **string**<br/><br/>The ID of a task from another pool from which this task was copied for majority vote verification.
 **remaining_overlap** | **integer**<br/><br/>The remaining overlap for each task. For example, if the task has an overlap of `5` but was completed by two  people, the `remaining_overlap` value is `3`.<br/><br/>If the task is under review or active, the key is `0`.
 **automerged** | <CreateTaskSuiteTable8/>

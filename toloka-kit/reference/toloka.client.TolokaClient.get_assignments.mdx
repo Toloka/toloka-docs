@@ -15,13 +15,13 @@ Finds all assignments that match certain criteria.
 
 `get_assignments` returns a generator. You can iterate over all found assignments using the generator. Several requests to the Toloka server are possible while iterating.
 
-If you need to sort assignments use the [find_assignments](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.find_assignments) method.
+If you need to sort assignments use the [find_assignments](/docs/toloka-kit/reference/toloka.client.TolokaClient.find_assignments) method.
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`status`|**Union\[str, [Assignment.Status](/docs-new/toloka-kit/reference/toloka.client.assignment.Assignment.Status), List\[Union\[str, [Assignment.Status](/docs-new/toloka-kit/reference/toloka.client.assignment.Assignment.Status)\]\], None\]**|<p>Assignment status or a list of statuses. Refer to the [Assignment.Status](/docs-new/toloka-kit/reference/toloka.client.assignment.Assignment.Status) page for more information on the available `status` values.</p>
+`status`|**Union\[str, [Assignment.Status](/docs/toloka-kit/reference/toloka.client.assignment.Assignment.Status), List\[Union\[str, [Assignment.Status](/docs/toloka-kit/reference/toloka.client.assignment.Assignment.Status)\]\], None\]**|<p>Assignment status or a list of statuses. Refer to the [Assignment.Status](/docs/toloka-kit/reference/toloka.client.assignment.Assignment.Status) page for more information on the available `status` values.</p>
 `task_id`|**Optional\[str\]**|<p>Assignments containing the task with the specified ID.</p>
 `task_suite_id`|**Optional\[str\]**|<p>Assignments for a task suite with the specified ID.</p>
 `pool_id`|**Optional\[str\]**|<p>Assignments in a pool with the specified ID.</p>
@@ -62,7 +62,7 @@ If you need to sort assignments use the [find_assignments](/docs-new/toloka-kit/
 
 * **Yield type:**
 
-  Generator\[[Assignment](/docs-new/toloka-kit/reference/toloka.client.assignment.Assignment), None, None\]
+  Generator\[[Assignment](/docs/toloka-kit/reference/toloka.client.assignment.Assignment), None, None\]
 
 **Examples:**
 

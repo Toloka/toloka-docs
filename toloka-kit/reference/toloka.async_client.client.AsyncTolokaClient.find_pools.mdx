@@ -15,13 +15,13 @@ Finds pools that match certain criteria.
 
 The number of returned pools is limited. To find remaining pools call `find_pools` with updated search criteria.
 
-To iterate over all matching pools you may use the [get_pools](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_pools) method.
+To iterate over all matching pools you may use the [get_pools](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_pools) method.
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`status`|**Optional\[[Pool.Status](/docs-new/toloka-kit/reference/toloka.client.pool.Pool.Status)\]**|<p>Pool status. Refer to the [Pool.Status](/docs-new/toloka-kit/reference/toloka.client.pool.Pool.Status) page for more information on the available `status` values.</p>
+`status`|**Optional\[[Pool.Status](/docs/toloka-kit/reference/toloka.client.pool.Pool.Status)\]**|<p>Pool status. Refer to the [Pool.Status](/docs/toloka-kit/reference/toloka.client.pool.Pool.Status) page for more information on the available `status` values.</p>
 `project_id`|**Optional\[str\]**|<p>Pools belonging to the project with the specified ID.</p>
 `id_lt`|**Optional\[str\]**|<p>Pools with IDs less than the specified value.</p>
 `id_lte`|**Optional\[str\]**|<p>Pools with IDs less than or equal to the specified value.</p>
@@ -35,7 +35,7 @@ To iterate over all matching pools you may use the [get_pools](/docs-new/toloka-
 `last_started_lte`|**Optional\[datetime\]**|<p>Pools that were opened last time before or on the specified date.</p>
 `last_started_gt`|**Optional\[datetime\]**|<p>Pools that were opened last time after the specified date.</p>
 `last_started_gte`|**Optional\[datetime\]**|<p>Pools that were opened last time after or on the specified date.</p>
-`sort`|**Union\[List\[str\], [PoolSortItems](/docs-new/toloka-kit/reference/toloka.client.search_requests.PoolSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
+`sort`|**Union\[List\[str\], [PoolSortItems](/docs/toloka-kit/reference/toloka.client.search_requests.PoolSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
 `limit`|**Optional\[int\]**|<p>Returned pools limit. The default limit is 20. The maximum allowed limit is 300.</p>
 
 * **Returns:**
@@ -44,7 +44,7 @@ To iterate over all matching pools you may use the [get_pools](/docs-new/toloka-
 
 * **Return type:**
 
-  [PoolSearchResult](/docs-new/toloka-kit/reference/toloka.client.search_results.PoolSearchResult)
+  [PoolSearchResult](/docs/toloka-kit/reference/toloka.client.search_results.PoolSearchResult)
 
 **Examples:**
 

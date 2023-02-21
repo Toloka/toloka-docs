@@ -36,9 +36,9 @@ awarding bonuses) are processed as asynchronous operations that run in the backg
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `id`|**Optional\[str\]**|<p>Operation ID.</p>
-`status`|**Optional\[[Status](/docs-new/toloka-kit/reference/toloka.client.operations.Operation.Status)\]**|<p>The status of the operation.</p>
+`status`|**Optional\[[Status](/docs/toloka-kit/reference/toloka.client.operations.Operation.Status)\]**|<p>The status of the operation.</p>
 `submitted`|**Optional\[datetime\]**|<p>The UTC date and time the request was sent.</p>
-`parameters`|**Optional\[[Parameters](/docs-new/toloka-kit/reference/toloka.client.operations.Operation.Parameters)\]**|<p>Operation parameters (depending on the operation type).</p>
+`parameters`|**Optional\[[Parameters](/docs/toloka-kit/reference/toloka.client.operations.Operation.Parameters)\]**|<p>Operation parameters (depending on the operation type).</p>
 `started`|**Optional\[datetime\]**|<p>The UTC date and time the operation started.</p>
 `finished`|**Optional\[datetime\]**|<p>The UTC date and time the operation finished.</p>
 `progress`|**Optional\[int\]**|<p>The percentage of the operation completed.</p>
@@ -47,5 +47,5 @@ awarding bonuses) are processed as asynchronous operations that run in the backg
 
 | Method | Description |
 | :------| :-----------|
-[is_completed](/docs-new/toloka-kit/reference/toloka.client.operations.Operation.is_completed)| Returns `True` if the operation is completed. Status equals SUCCESS or FAIL.
-[raise_on_fail](/docs-new/toloka-kit/reference/toloka.client.operations.Operation.raise_on_fail)| Raises FailedOperation exception if status is FAIL. Otherwise does nothing.
+[is_completed](/docs/toloka-kit/reference/toloka.client.operations.Operation.is_completed)| Returns `True` if the operation is completed. Status equals SUCCESS or FAIL.
+[raise_on_fail](/docs/toloka-kit/reference/toloka.client.operations.Operation.raise_on_fail)| Raises FailedOperation exception if status is FAIL. Otherwise does nothing.

@@ -24,7 +24,7 @@ If your project has a lot of similar tasks, you'll need to protect it from fake 
 
 #### Limiting fast responses
 
-Use the [Fast responses](/docs-new/guide/quick-answers) rule to weed out Tolokers who perform tasks too quickly and carelessly. You've tried doing tasks and you know that each task takes at least 15 seconds. You should suspend Tolokers who submit three out of ten assignments in a row faster than the control time.
+Use the [Fast responses](/docs/guide/quick-answers) rule to weed out Tolokers who perform tasks too quickly and carelessly. You've tried doing tasks and you know that each task takes at least 15 seconds. You should suspend Tolokers who submit three out of ten assignments in a row faster than the control time.
 
 <Image withBackground imageId="1675425581727" alt="" />
 
@@ -32,13 +32,13 @@ Use the [Fast responses](/docs-new/guide/quick-answers) rule to weed out Toloker
 
 Another “optimization” technique that cheaters use is skipping certain assignments. They pick out the ones that seem easier to them, while other Tolokers reliably complete all the assignments they receive. However, both get paid in the same way.
 
-Use the [Skipped assignments](/docs-new/guide/skipped-assignments) rule to restrict access to Tolokers who skip several pages of tasks in a row.
+Use the [Skipped assignments](/docs/guide/skipped-assignments) rule to restrict access to Tolokers who skip several pages of tasks in a row.
 
 <Image withBackground imageId="1675425588383" alt="" />
 
 #### Captcha
 
-Use the [Captcha](/docs-new/guide/captcha) rule to protect from robots. In Toloka, a captcha is shown every 10 assignments. If assignments are completed quickly and captchas get in the way, they can be shown every 20 assignments: specify low captcha frequency in the pool settings.
+Use the [Captcha](/docs/guide/captcha) rule to protect from robots. In Toloka, a captcha is shown every 10 assignments. If assignments are completed quickly and captchas get in the way, they can be shown every 20 assignments: specify low captcha frequency in the pool settings.
 
 <Image withBackground imageId="1675425601594" alt="" />
 
@@ -48,7 +48,7 @@ Use the [Captcha](/docs-new/guide/captcha) rule to protect from robots. In Tolok
 
 Limits are also useful when you need as many different Tolokers as possible. For example, to collect data for statistics, run surveys, or pick the best version of a logo. Another case is personal descriptions for a [dating service](https://rb.ru/opinion/chat-bot-dataset/). If texts are all written by the same person, they are likely to turn out monotonous and boring.
 
-You can limit the number of tasks in the pool per Toloker or set a limit on daily earnings for your project. Use the [Submitted responses](/docs-new/guide/submitted-answers) and [Earnings](/docs-new/guide/income) rules.
+You can limit the number of tasks in the pool per Toloker or set a limit on daily earnings for your project. Use the [Submitted responses](/docs/guide/submitted-answers) and [Earnings](/docs/guide/income) rules.
 
 <Image withBackground imageId="1675425579166" alt="" />
 
@@ -58,7 +58,7 @@ Results from conscientious Tolokers should be checked, too. In Toloka, this can 
 
 #### Control tasks
 
-Tolokers complete tasks by selecting one of multiple possible answers. To check the quality in this type of project, use the [Control tasks](/docs-new/guide/goldenset) rule. This involves adding questions where you define the correct response.
+Tolokers complete tasks by selecting one of multiple possible answers. To check the quality in this type of project, use the [Control tasks](/docs/guide/goldenset) rule. This involves adding questions where you define the correct response.
 
 Mix the control questions in with the general tasks. They should make up at least 1% of the total tasks. Assign Tolokers a skill level depending on how many answers they get right.
 
@@ -70,7 +70,7 @@ The skill filters will remove anyone who makes a critical number of errors. Pay 
 
 Sometimes requesters aren't able to regularly add control tasks and keep them updated.
 
-In this case, the [Majority vote](/docs-new/guide/mvote) rule is helpful. The platform assigns the same task to multiple Tolokers. For example, five people get the exact same task. If three or more choose the same answer, we assume it is correct.
+In this case, the [Majority vote](/docs/guide/mvote) rule is helpful. The platform assigns the same task to multiple Tolokers. For example, five people get the exact same task. If three or more choose the same answer, we assume it is correct.
 
 <Image withBackground imageId="1675425598419" alt="" />
 
@@ -80,7 +80,7 @@ Use the percentage of matching responses to assign skill levels, control access 
 
 For tasks that aren't multiple-choice, the customer or other Tolokers check the answers. They might include recording audio, taking pictures, or writing something. Poor-quality responses are rejected.
 
-Use the [Review results](/docs-new/guide/reviewing-assignments) rule to control Tolokers' access to tasks. The platform calculates the percentage of responses accepted and rejected for each Toloker. Those who often made mistakes will stop getting tasks.
+Use the [Review results](/docs/guide/reviewing-assignments) rule to control Tolokers' access to tasks. The platform calculates the percentage of responses accepted and rejected for each Toloker. Those who often made mistakes will stop getting tasks.
 
 <Image withBackground imageId="1675425575787" alt="" />
 
@@ -92,7 +92,7 @@ Quality control rules let you minimize the consequences of errors. Toloka lets y
 
 For example, you can use Toloka to improve speech recognition algorithms. Tolokers listen to a series of 5–10-second recordings and make a transcription of each of them in order to convert speech to text.
 
-In some cases, they get it wrong. Use the [Processing rejected and accepted assignments](/docs-new/guide/reassessment-after-accepting) rule to automatically have Tolokers review each other's work.
+In some cases, they get it wrong. Use the [Processing rejected and accepted assignments](/docs/guide/reassessment-after-accepting) rule to automatically have Tolokers review each other's work.
 
 <Image withBackground imageId="1675425593435" alt="" />
 
@@ -100,7 +100,7 @@ In some cases, they get it wrong. Use the [Processing rejected and accepted assi
 
 When Tolokers make too many mistakes, the platform bans them from taking on more tasks. But the responses that they have already provided remain in the database and may get into the final dataset. Send these assignments for recompletion.
 
-The [Recompletion of assignments from banned users](/docs-new/guide/restore-task-overlap) rule is helpful here. While the cost will go up, there will be fewer errors.
+The [Recompletion of assignments from banned users](/docs/guide/restore-task-overlap) rule is helpful here. While the cost will go up, there will be fewer errors.
 
 <Image withBackground imageId="1675425590944" alt="" />
 
@@ -110,13 +110,13 @@ When Tolokers are blocked, the tasks they've completed are sent to other Toloker
 
 The best practice is to combine quality control rules. For example, if tasks involve selecting a response from several options, you should use:
 
-- [Captchas](/docs-new/guide/captcha).
-- [Fast responses](/docs-new/guide/quick-answers).
+- [Captchas](/docs/guide/captcha).
+- [Fast responses](/docs/guide/quick-answers).
 
 Content generation projects like writing texts or taking photos need a different combination:
 
 - [Limit on available tasks](#limit-task).
-- [Review results](/docs-new/guide/reviewing-assignments).
+- [Review results](/docs/guide/reviewing-assignments).
 - [Recompletion of rejected assignments](#revision-results).
 
 ## General recommendations {#general-advice}
@@ -127,7 +127,7 @@ Each project requires its own approach. Methods that are effective in one case m
 
 1. Write clear instructions. If you create control tasks, make sure they don't have any outdated, ambiguous, or incorrect responses.
 
-1. Test your project in the testing environment, the [Sandbox](/docs-new/guide/sandbox). Running and completing tasks in it will help you understand the rules and estimate how much time it will take to complete a single task.
+1. Test your project in the testing environment, the [Sandbox](/docs/guide/sandbox). Running and completing tasks in it will help you understand the rules and estimate how much time it will take to complete a single task.
 
 1. Launch the first real project with a small number of tasks. Analyze the results and adjust the settings if necessary.
 
@@ -141,8 +141,8 @@ Each project requires its own approach. Methods that are effective in one case m
 
 ## For developers {#for-developers}
 
-- [Toloka API: Quality control rules](/docs-new/api/quality_control)
-- [Toloka-Kit recipe: Use quality control rules](/docs-new/toloka-kit/recipes/use-quality-control-rules)
-- [Toloka-Kit: QualityControl class](/docs-new/toloka-kit/reference/toloka.client.quality_control.QualityControl)
+- [Toloka API: Quality control rules](/docs/api/quality_control)
+- [Toloka-Kit recipe: Use quality control rules](/docs/toloka-kit/recipes/use-quality-control-rules)
+- [Toloka-Kit: QualityControl class](/docs/toloka-kit/reference/toloka.client.quality_control.QualityControl)
 
 <ContactGuideSupport/>

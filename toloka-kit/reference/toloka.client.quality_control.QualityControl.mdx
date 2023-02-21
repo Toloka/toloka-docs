@@ -31,10 +31,10 @@ Quality control consists of rules. All rules work independently.
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`training_requirement`|**Optional\[[TrainingRequirement](/docs-new/toloka-kit/reference/toloka.client.quality_control.QualityControl.TrainingRequirement)\]**|<p>Parameters of the training pool that is linked to the pool with the main tasks.</p>
-`captcha_frequency`|**Optional\[[CaptchaFrequency](/docs-new/toloka-kit/reference/toloka.client.quality_control.QualityControl.CaptchaFrequency)\]**|<p>Deprecated. Frequency of captcha display (By default, captcha is not shown): LOW - show every 20 tasks. MEDIUM, HIGH - show every 10 tasks.</p>
-`configs`|**Optional\[List\[[QualityControlConfig](/docs-new/toloka-kit/reference/toloka.client.quality_control.QualityControl.QualityControlConfig)\]\]**|<p>List of quality control units. See QualityControl.QualityControlConfig</p>
-`checkpoints_config`|**Optional\[[CheckpointsConfig](/docs-new/toloka-kit/reference/toloka.client.quality_control.QualityControl.CheckpointsConfig)\]**|<p>Random check majority opinion. Detailed description in QualityControl.CheckpointsConfig.</p>
+`training_requirement`|**Optional\[[TrainingRequirement](/docs/toloka-kit/reference/toloka.client.quality_control.QualityControl.TrainingRequirement)\]**|<p>Parameters of the training pool that is linked to the pool with the main tasks.</p>
+`captcha_frequency`|**Optional\[[CaptchaFrequency](/docs/toloka-kit/reference/toloka.client.quality_control.QualityControl.CaptchaFrequency)\]**|<p>Deprecated. Frequency of captcha display (By default, captcha is not shown): LOW - show every 20 tasks. MEDIUM, HIGH - show every 10 tasks.</p>
+`configs`|**Optional\[List\[[QualityControlConfig](/docs/toloka-kit/reference/toloka.client.quality_control.QualityControl.QualityControlConfig)\]\]**|<p>List of quality control units. See QualityControl.QualityControlConfig</p>
+`checkpoints_config`|**Optional\[[CheckpointsConfig](/docs/toloka-kit/reference/toloka.client.quality_control.QualityControl.CheckpointsConfig)\]**|<p>Random check majority opinion. Detailed description in QualityControl.CheckpointsConfig.</p>
 
 **Examples:**
 
@@ -57,4 +57,4 @@ new_pool.quality_control.add_action(
 
 | Method | Description |
 | :------| :-----------|
-[add_action](/docs-new/toloka-kit/reference/toloka.client.quality_control.QualityControl.add_action)| Adds new QualityControlConfig to QualityControl object. Usually in pool.
+[add_action](/docs/toloka-kit/reference/toloka.client.quality_control.QualityControl.add_action)| Adds new QualityControlConfig to QualityControl object. Usually in pool.

@@ -15,13 +15,13 @@ Finds all trainings that match certain criteria.
 
 `get_trainings` returns a generator. You can iterate over all found trainings using the generator. Several requests to the Toloka server are possible while iterating.
 
-If you need to sort trainings use the [find_trainings](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.find_trainings) method.
+If you need to sort trainings use the [find_trainings](/docs/toloka-kit/reference/toloka.client.TolokaClient.find_trainings) method.
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`status`|**Optional\[[Training.Status](/docs-new/toloka-kit/reference/toloka.client.training.Training.Status)\]**|<p>Training pool status. Refer to the [Training.Status](/docs-new/toloka-kit/reference/toloka.client.training.Training.Status) page for more information on the available `status` values.</p>
+`status`|**Optional\[[Training.Status](/docs/toloka-kit/reference/toloka.client.training.Training.Status)\]**|<p>Training pool status. Refer to the [Training.Status](/docs/toloka-kit/reference/toloka.client.training.Training.Status) page for more information on the available `status` values.</p>
 `project_id`|**Optional\[str\]**|<p>Training pools belonging to the project with the specified ID.</p>
 `id_lt`|**Optional\[str\]**|<p>Training pools with IDs less than the specified value.</p>
 `id_lte`|**Optional\[str\]**|<p>Training pools with IDs less than or equal to the specified value.</p>
@@ -43,7 +43,7 @@ If you need to sort trainings use the [find_trainings](/docs-new/toloka-kit/refe
 
 * **Yield type:**
 
-  [AsyncGenAdapter](/docs-new/toloka-kit/reference/toloka.util.async_utils.AsyncGenAdapter)\[[Training](/docs-new/toloka-kit/reference/toloka.client.training.Training), None\]
+  [AsyncGenAdapter](/docs/toloka-kit/reference/toloka.util.async_utils.AsyncGenAdapter)\[[Training](/docs/toloka-kit/reference/toloka.client.training.Training), None\]
 
 **Examples:**
 

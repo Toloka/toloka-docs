@@ -15,7 +15,7 @@ Finds App solutions that match certain criteria.
 
 The number of returned solutions is limited. To find remaining solutions call `find_apps` with updated search criteria.
 
-To iterate over all matching solutions you may use the [get_apps](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_apps) method.
+To iterate over all matching solutions you may use the [get_apps](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_apps) method.
 
 ## Parameters Description
 
@@ -31,7 +31,7 @@ To iterate over all matching solutions you may use the [get_apps](/docs-new/tolo
 `name_gte`|**-**|<p>Solutions with names lexicographically greater than or equal to the specified value.</p>
 `name_lt`|**-**|<p>Solutions with names lexicographically less than the specified value.</p>
 `name_lte`|**-**|<p>Solutions with names lexicographically less than or equal to the specified value.</p>
-`sort`|**Union\[List\[str\], [AppSortItems](/docs-new/toloka-kit/reference/toloka.client.search_requests.AppSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
+`sort`|**Union\[List\[str\], [AppSortItems](/docs/toloka-kit/reference/toloka.client.search_requests.AppSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
 `limit`|**Optional\[int\]**|<p>Returned solutions limit. The maximum allowed limit is 1000.</p>
 
 * **Returns:**
@@ -40,4 +40,4 @@ To iterate over all matching solutions you may use the [get_apps](/docs-new/tolo
 
 * **Return type:**
 
-  [AppSearchResult](/docs-new/toloka-kit/reference/toloka.client.search_results.AppSearchResult)
+  [AppSearchResult](/docs/toloka-kit/reference/toloka.client.search_results.AppSearchResult)

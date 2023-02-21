@@ -24,7 +24,7 @@ _Move the project which you no longer use into archive._
 
 ### 3. Archive project {#step-three}
 
-[Find out](/docs-new/toloka-kit/recipes/get-projects) the ID of the project which you want to archive. Then call the `archive_project()` method.
+[Find out](/docs/toloka-kit/recipes/get-projects) the ID of the project which you want to archive. Then call the `archive_project()` method.
 
 <CodeCopy
   isSmall
@@ -39,7 +39,7 @@ _Move the project which you no longer use into archive._
 
 ### 4. Print project ID and status {#step-four}
 
-The `archive_project()` request will return the [Project](/docs-new/toloka-kit/reference/toloka.client.project.Project) class object. You can use its attributes to print the information you need.
+The `archive_project()` request will return the [Project](/docs/toloka-kit/reference/toloka.client.project.Project) class object. You can use its attributes to print the information you need.
 
 ```python
 print(archived_project.id, archived_project.status)
@@ -64,16 +64,16 @@ print(archived_project.id, archived_project.status)
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[archive_project()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.archive_project) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[archive_project()](/docs/toloka-kit/reference/toloka.client.TolokaClient.archive_project) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
-- [Get list of projects](/docs-new/toloka-kit/recipes/get-projects)
-- [Toloka-Kit: Project class](/docs-new/toloka-kit/reference/toloka.client.project.Project)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Get list of projects](/docs/toloka-kit/recipes/get-projects)
+- [Toloka-Kit: Project class](/docs/toloka-kit/reference/toloka.client.project.Project)
 - [Toloka API: Archive project](https://toloka.ai/docs/api/api-reference/#post-/projects/-id-/archive)

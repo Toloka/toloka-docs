@@ -15,13 +15,13 @@ Finds all projects that match certain criteria.
 
 `get_projects` returns a generator. You can iterate over all found projects using the generator. Several requests to the Toloka server are possible while iterating.
 
-If you need to sort projects use the [find_projects](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.find_projects) method.
+If you need to sort projects use the [find_projects](/docs/toloka-kit/reference/toloka.client.TolokaClient.find_projects) method.
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`status`|**Optional\[[Project.ProjectStatus](/docs-new/toloka-kit/reference/toloka.client.project.Project.ProjectStatus)\]**|<p>Project status. Refer to the [ProjectStatus](/docs-new/toloka-kit/reference/toloka.client.project.Project.ProjectStatus) page for more information on the available `status` values.</p>
+`status`|**Optional\[[Project.ProjectStatus](/docs/toloka-kit/reference/toloka.client.project.Project.ProjectStatus)\]**|<p>Project status. Refer to the [ProjectStatus](/docs/toloka-kit/reference/toloka.client.project.Project.ProjectStatus) page for more information on the available `status` values.</p>
 `id_lt`|**Optional\[str\]**|<p>Projects with IDs less than the specified value.</p>
 `id_lte`|**Optional\[str\]**|<p>Projects with IDs less than or equal to the specified value.</p>
 `id_gt`|**Optional\[str\]**|<p>Projects with IDs greater than the specified value.</p>
@@ -38,7 +38,7 @@ If you need to sort projects use the [find_projects](/docs-new/toloka-kit/refere
 
 * **Yield type:**
 
-  [AsyncGenAdapter](/docs-new/toloka-kit/reference/toloka.util.async_utils.AsyncGenAdapter)\[[Project](/docs-new/toloka-kit/reference/toloka.client.project.Project), None\]
+  [AsyncGenAdapter](/docs/toloka-kit/reference/toloka.util.async_utils.AsyncGenAdapter)\[[Project](/docs/toloka-kit/reference/toloka.client.project.Project), None\]
 
 **Examples:**
 

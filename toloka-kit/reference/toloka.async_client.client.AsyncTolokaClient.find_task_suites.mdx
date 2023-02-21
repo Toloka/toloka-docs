@@ -15,7 +15,7 @@ Finds task suites that match certain criteria.
 
 The number of returned task suites is limited. To find remaining task suites call `find_task_suites` with updated search criteria.
 
-To iterate over all matching task suites you may use the [get_task_suites](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_task_suites) method.
+To iterate over all matching task suites you may use the [get_task_suites](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_task_suites) method.
 
 ## Parameters Description
 
@@ -36,7 +36,7 @@ To iterate over all matching task suites you may use the [get_task_suites](/docs
 `overlap_lte`|**Optional\[int\]**|<p>Task suites with an overlap less than or equal to the specified value.</p>
 `overlap_gt`|**Optional\[int\]**|<p>Task suites with an overlap greater than the specified value.</p>
 `overlap_gte`|**Optional\[int\]**|<p>Task suites with an overlap greater than or equal to the specified value.</p>
-`sort`|**Union\[List\[str\], [TaskSuiteSortItems](/docs-new/toloka-kit/reference/toloka.client.search_requests.TaskSuiteSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
+`sort`|**Union\[List\[str\], [TaskSuiteSortItems](/docs/toloka-kit/reference/toloka.client.search_requests.TaskSuiteSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
 `limit`|**Optional\[int\]**|<p>Returned task suites limit. The default limit is 50. The maximum allowed limit is 100,000.</p>
 
 * **Returns:**
@@ -45,7 +45,7 @@ To iterate over all matching task suites you may use the [get_task_suites](/docs
 
 * **Return type:**
 
-  [TaskSuiteSearchResult](/docs-new/toloka-kit/reference/toloka.client.search_results.TaskSuiteSearchResult)
+  [TaskSuiteSearchResult](/docs/toloka-kit/reference/toloka.client.search_results.TaskSuiteSearchResult)
 
 **Examples:**
 

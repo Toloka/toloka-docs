@@ -24,7 +24,7 @@ _Get the detailed information about the project with the ID specified in the req
 
 ### 3. Get project information {#step-three}
 
-[Find out](/docs-new/toloka-kit/recipes/get-projects) the ID of the project for which you want to get the detailed information. Then get this info calling the `get_project()` method.
+[Find out](/docs/toloka-kit/recipes/get-projects) the ID of the project for which you want to get the detailed information. Then get this info calling the `get_project()` method.
 
 <CodeCopy
   isSmall
@@ -39,7 +39,7 @@ _Get the detailed information about the project with the ID specified in the req
 
 ### 4. Print project name and status {#step-four}
 
-The `get_project()` request will return the [Project](/docs-new/toloka-kit/reference/toloka.client.project.Project) class object. You can use its attributes to print the information you need.
+The `get_project()` request will return the [Project](/docs/toloka-kit/reference/toloka.client.project.Project) class object. You can use its attributes to print the information you need.
 
 ```python
 print(project.public_name, project.status)
@@ -64,15 +64,15 @@ print(project.public_name, project.status)
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[get_project()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_project) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_project()](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_project) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
-- [Toloka-Kit: Project class](/docs-new/toloka-kit/reference/toloka.client.project.Project)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Toloka-Kit: Project class](/docs/toloka-kit/reference/toloka.client.project.Project)
 - [Toloka API: Get project by ID](https://toloka.ai/docs/api/api-reference/#get-/projects/-id-)

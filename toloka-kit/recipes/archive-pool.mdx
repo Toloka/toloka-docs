@@ -24,7 +24,7 @@ _Move the pool which you no longer use into archive._
 
 ### 3. Archive pool {#step-three}
 
-[Find out](/docs-new/toloka-kit/recipes/get-pools) the ID of the pool you want to archive. Then call the `archive_pool()` method.
+[Find out](/docs/toloka-kit/recipes/get-pools) the ID of the pool you want to archive. Then call the `archive_pool()` method.
 
 <CodeCopy
   isSmall
@@ -39,7 +39,7 @@ _Move the pool which you no longer use into archive._
 
 ### 4. Print pool ID and status {#step-four}
 
-The `archive_pool()` request will return the [Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
+The `archive_pool()` request will return the [Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
 
 ```python
 print(archived_pool.id, archived_pool.status)
@@ -64,17 +64,17 @@ print(archived_pool.id, archived_pool.status)
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[archive_pool()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.archive_pool) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[archive_pool()](/docs/toloka-kit/reference/toloka.client.TolokaClient.archive_pool) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
-- [Archiving a pool](/docs-new/guide/pool-archive)
-- [Get list of pools](/docs-new/toloka-kit/recipes/get-pools)
-- [Toloka-Kit: Pool class](/docs-new/toloka-kit/reference/toloka.client.pool.Pool)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Archiving a pool](/docs/guide/pool-archive)
+- [Get list of pools](/docs/toloka-kit/recipes/get-pools)
+- [Toloka-Kit: Pool class](/docs/toloka-kit/reference/toloka.client.pool.Pool)
 - [Toloka API: Archive pool](https://toloka.ai/docs/api/api-reference/#post-/pools/-id-/archive)

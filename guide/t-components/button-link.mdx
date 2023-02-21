@@ -15,7 +15,7 @@ import ButtonLinkTable1 from './button-link/subcomponents/button-link-table-1.md
 
 <Note mode="note" title="Note">
 
-The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a button with click validation in [Template Builder](/docs-new/template-builder/operations/internet-search#action.open-link).
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a button with click validation in [Template Builder](/docs/template-builder/operations/internet-search#action.open-link).
 
 </Note>
 
@@ -23,11 +23,11 @@ If a task requires a Toloker to click a link (for example, to open a webpage), T
 
 Variations of button use:
 
-- Checking if the Toloker opened a link. The [output data](/docs-new/glossary#input-output-data) will contain a field with values `true` (the Toloker opened the link) or `false` (the Toloker didn't open the link).
+- Checking if the Toloker opened a link. The [output data](/docs/glossary#input-output-data) will contain a field with values `true` (the Toloker opened the link) or `false` (the Toloker didn't open the link).
 
 - Preventing the Toloker from completing the task if the link was not opened. Add the `"allowed_values":[true]` parameter in the output data description.
 
-To add the button with the link to the [task interface](/docs-new/glossary#task-interface), use the `{{field type="button-clicked" name="output field name>"}}` component. Example:
+To add the button with the link to the [task interface](/docs/glossary#task-interface), use the `{{field type="button-clicked" name="output field name>"}}` component. Example:
 
 ```plaintext
 {{field type="button-clicked" name="ads" label="Click me" href="https://yandex.ru" action=true}}

@@ -18,18 +18,18 @@ You can create a subscription and receive notifications from Toloka when certain
 - When a task's status changes to a specified one.
 - When an aggregated score appears after dynamic overlap.
 
-The events that you want to be notified about are set when [creating a subscription](/docs-new/api/put-webhook-subscriptions).
+The events that you want to be notified about are set when [creating a subscription](/docs/api/put-webhook-subscriptions).
 
-Notifications about the events you're subscribed to are sent in JSON format. For a description of notification data, see [Notification format](/docs-new/api/using-webhook-subscriptions).
+Notifications about the events you're subscribed to are sent in JSON format. For a description of notification data, see [Notification format](/docs/api/using-webhook-subscriptions).
 
 ## Methods {#methods}
 
 Method | Endpoint | Overview
 ----- | ----- | -----
-PUT | [/webhook-subscriptions](/docs-new/api/put-webhook-subscriptions) | Creates one or more subscriptions.
-GET | [/webhook-subscriptions/<subscription_id>](/docs-new/api/get-webhook-subscriptions) | Gets subscription data.
-GET | [/webhook-subscriptions](/docs-new/api/get-webhook-subscriptions-list) | Gets data for multiple active subscriptions.
-DELETE | [/webhook-subscriptions/<subscription_id>](/docs-new/api/delete-webhook-subscriptions) | Deletes a subscription.
-POST | [/webhook-subscriptions/<subscription_id>/test](/docs-new/api/post-webhook-subscriptions) | Sends a test notification to the URL specified in the subscription.
+PUT | [/webhook-subscriptions](/docs/api/put-webhook-subscriptions) | Creates one or more subscriptions.
+GET | [/webhook-subscriptions/<subscription_id>](/docs/api/get-webhook-subscriptions) | Gets subscription data.
+GET | [/webhook-subscriptions](/docs/api/get-webhook-subscriptions-list) | Gets data for multiple active subscriptions.
+DELETE | [/webhook-subscriptions/<subscription_id>](/docs/api/delete-webhook-subscriptions) | Deletes a subscription.
+POST | [/webhook-subscriptions/<subscription_id>/test](/docs/api/post-webhook-subscriptions) | Sends a test notification to the URL specified in the subscription.
 
 <ContactGuideSupport/>

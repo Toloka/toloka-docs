@@ -20,20 +20,20 @@ To upload tasks to a pool, you need to create JSON objects that contain:
 - Correct responses (for control tasks).
 - Hints (for training tasks).
 
-Toloka automatically combines tasks into suites. You only need to specify the number of tasks to include in each suite (the `mixer_config` key in the [pool](/docs-new/api/pool)).
+Toloka automatically combines tasks into suites. You only need to specify the number of tasks to include in each suite (the `mixer_config` key in the [pool](/docs/api/pool)).
 
-If you want to create the task suites yourself, follow the instructions in [Overview](/docs-new/api/task-suite).
+If you want to create the task suites yourself, follow the instructions in [Overview](/docs/api/task-suite).
 
 ## Methods {#methods}
 
 Method | Endpoint | Overview
 ----- | ----- | -----
-POST | [/tasks](/docs-new/api/create-task) | Creates one or multiple tasks.
-POST | [/tasks](/docs-new/api/create-tasks-batch) | Creates multiple tasks.
-GET | [/tasks/<task_id>](/docs-new/api/get-task) | Gets task data.
-GET | [/tasks](/docs-new/api/get-tasks-list) | Gets the list of tasks in the pool.
-PATCH | [/tasks/<task_id>](/docs-new/api/edit-task-overlap) | Changes the task overlap.
-PATCH | [/tasks/<task_id>/set-overlap-or-min](/docs-new/api/set-min-task-overlap) | Stops assigning a task to Tolokers.
+POST | [/tasks](/docs/api/create-task) | Creates one or multiple tasks.
+POST | [/tasks](/docs/api/create-tasks-batch) | Creates multiple tasks.
+GET | [/tasks/<task_id>](/docs/api/get-task) | Gets task data.
+GET | [/tasks](/docs/api/get-tasks-list) | Gets the list of tasks in the pool.
+PATCH | [/tasks/<task_id>](/docs/api/edit-task-overlap) | Changes the task overlap.
+PATCH | [/tasks/<task_id>/set-overlap-or-min](/docs/api/set-min-task-overlap) | Stops assigning a task to Tolokers.
 
 ## Merging tasks {#task-merge}
 
@@ -58,13 +58,13 @@ The response to the task received will be automatically assigned to another tas
 
 The response will be recorded with a zero price, and the overlap will be reduced by one.
 
-This option is only available for general tasks without manual review that were uploaded using ["smart mixing"](/docs-new/guide/task_upload).
+This option is only available for general tasks without manual review that were uploaded using ["smart mixing"](/docs/guide/task_upload).
 
-To activate task merging in a project, specify `"assignments_automerge_enabled": true` in the [project](/docs-new/api/project).
+To activate task merging in a project, specify `"assignments_automerge_enabled": true` in the [project](/docs/api/project).
 
 ## See also {#see-also}
 
-- [Adding tasks to a pool](/docs-new/guide/pool)
-- [How to upload tasks](/docs-new/guide/task_upload)
+- [Adding tasks to a pool](/docs/guide/pool)
+- [How to upload tasks](/docs/guide/task_upload)
 
 <ContactGuideSupport/>

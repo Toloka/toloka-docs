@@ -25,14 +25,14 @@ GetAssignmentsTsvParameters(
 
 Parameters for downloading assignments.
 
-These parameters are used in the [TolokaClient.get_assignments_df](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_assignments_df) method.
+These parameters are used in the [TolokaClient.get_assignments_df](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_assignments_df) method.
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`status`|**Optional\[List\[[Status](/docs-new/toloka-kit/reference/toloka.client.assignment.GetAssignmentsTsvParameters.Status)\]\]**|<p>Statuses of assignments to download.</p>
+`status`|**Optional\[List\[[Status](/docs/toloka-kit/reference/toloka.client.assignment.GetAssignmentsTsvParameters.Status)\]\]**|<p>Statuses of assignments to download.</p>
 `start_time_from`|**Optional\[datetime\]**|<p>Download assignments submitted after the specified date and time.</p>
 `start_time_to`|**Optional\[datetime\]**|<p>Download assignments submitted before the specified date and time.</p>
 `exclude_banned`|**Optional\[bool\]**|<p>Exclude answers from banned Tolokers, even if their assignments have suitable status.</p>
-`field`|**Optional\[List\[[Field](/docs-new/toloka-kit/reference/toloka.client.assignment.GetAssignmentsTsvParameters.Field)\]\]**|<p>Names of `Assignment` fields to be downloaded. Fields other then from `Assignment` class are always downloaded.</p>
+`field`|**Optional\[List\[[Field](/docs/toloka-kit/reference/toloka.client.assignment.GetAssignmentsTsvParameters.Field)\]\]**|<p>Names of `Assignment` fields to be downloaded. Fields other then from `Assignment` class are always downloaded.</p>

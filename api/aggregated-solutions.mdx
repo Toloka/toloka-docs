@@ -12,14 +12,14 @@ import ContactGuideSupport from '../guide/subcomponents/contact-support.mdx'
 
 # Overview
 
-Aggregate accepted responses for tasks with an [overlap](/docs-new/glossary#overlap) in a [pool](/docs-new/glossary#pool) of 2 or more to get the final response with the degree of confidence.
+Aggregate accepted responses for tasks with an [overlap](/docs/glossary#overlap) in a [pool](/docs/glossary#pool) of 2 or more to get the final response with the degree of confidence.
 
 You can aggregate responses in two ways:
 
 - Yes — Aggregate responses by skill (`WEIGHTED_DYNAMIC_OVERLAP`).
 - No — Aggregate responses using the Dawid-Skene method (`DAWID_SKENE`).
 
-    The Dawid-Skene aggregation model works with [control](/docs-new/glossary#control-task) and [training](/docs-new/glossary#training-task) tasks as well as with general tasks. Responses specified for control tasks might not match the actual responses to the task if Tolokers often submit an incorrect response to it.
+    The Dawid-Skene aggregation model works with [control](/docs/glossary#control-task) and [training](/docs/glossary#training-task) tasks as well as with general tasks. Responses specified for control tasks might not match the actual responses to the task if Tolokers often submit an incorrect response to it.
 
     The Dawid-Skene aggregation model automatically evaluates `|L|²` parameters for each Toloker, where `L` is the number of different aggregation values. Note that these parameters are determined automatically and are only used in calculations.
 
@@ -31,12 +31,12 @@ You can aggregate responses in two ways:
 
 Method | Endpoint | Overview
 ----- | ----- | -----
-POST | [/aggregated-solutions/aggregate-by-pool](/docs-new/api/aggregate-by-pool) | Starts aggregating responses to all completed tasks in the pool.
-POST | [/aggregated-solutions/aggregate-by-task](/docs-new/api/aggregate-by-task) | Starts aggregating responses to a single task.
-GET | [/aggregated-solutions/<operation_id>](/docs-new/api/get-aggregated-result) | Gets aggregated responses.
+POST | [/aggregated-solutions/aggregate-by-pool](/docs/api/aggregate-by-pool) | Starts aggregating responses to all completed tasks in the pool.
+POST | [/aggregated-solutions/aggregate-by-task](/docs/api/aggregate-by-task) | Starts aggregating responses to a single task.
+GET | [/aggregated-solutions/<operation_id>](/docs/api/get-aggregated-result) | Gets aggregated responses.
 
 ## See also {#see-also}
 
-- [Aggregation of results](/docs-new/guide/result-aggregation)
+- [Aggregation of results](/docs/guide/result-aggregation)
 
 <ContactGuideSupport/>

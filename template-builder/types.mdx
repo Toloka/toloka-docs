@@ -17,16 +17,16 @@ In the component descriptions, each property has a type. This page contains expl
 For the `type` property, the name of the component is indicated everywhere. If you specify a different name, that would be a different component.
 
 ## action
-Any [action component](/docs-new/template-builder/reference/actions). Components with the name `actions.*` let you perform various actions, such as show notifications.
+Any [action component](/docs/template-builder/reference/actions). Components with the name `actions.*` let you perform various actions, such as show notifications.
 
 ## any
 
 Any value. Those might be:
 
 - Standard JSON elements: string, number, `true`, `false`, object, or array.
-- [Helpers](/docs-new/template-builder/reference/helpers) that return a value.
+- [Helpers](/docs/template-builder/reference/helpers) that return a value.
 - Other components, if allowed in the configuration.
-- References to other places in the configuration using the structure `{ "$ref": "path.to.element" }`. Use this type of linking for [code reuse](/docs-new/template-builder/best-practices/reuse).
+- References to other places in the configuration using the structure `{ "$ref": "path.to.element" }`. Use this type of linking for [code reuse](/docs/template-builder/best-practices/reuse).
 
 ## array
 
@@ -37,9 +37,9 @@ Array of comma-separated elements. You can use
 Any value. Those might be:
 
 - Standard JSON elements: string, number, `true`, `false`, object, or array.
-- [Helpers](/docs-new/template-builder/reference/helpers) that return a value.
+- [Helpers](/docs/template-builder/reference/helpers) that return a value.
 - Other components, if allowed in the configuration.
-- References to other places in the configuration using the structure `{ "$ref": "path.to.element" }`. Use this type of linking for [code reuse](/docs-new/template-builder/best-practices/reuse).
+- References to other places in the configuration using the structure `{ "$ref": "path.to.element" }`. Use this type of linking for [code reuse](/docs/template-builder/best-practices/reuse).
 
 </Cut>
 
@@ -55,7 +55,7 @@ Boolean value without quotation marks: `true` or `false`.
 
 ## condition
 
-Any component of the [condition](/docs-new/template-builder/reference/conditions). Use components with the name `conditions.*` to match an expression against a condition. For example, you can check that a text field is filled in.
+Any component of the [condition](/docs/template-builder/reference/conditions). Use components with the name `conditions.*` to match an expression against a condition. For example, you can check that a text field is filled in.
 
 ## integer
 
@@ -82,7 +82,7 @@ A pointer to a visual component using the construction `{ "$ref": "path.to.eleme
 
 <Note mode="note" title="Note">
 
-The list of components you can link to might be limited. For example, [action.play-pause](/docs-new/template-builder/reference/action.play-pause) works only with the components that support audio or video playback.
+The list of components you can link to might be limited. For example, [action.play-pause](/docs/template-builder/reference/action.play-pause) works only with the components that support audio or video playback.
 
 </Note>
 
@@ -92,8 +92,8 @@ A string enclosed in quotation marks. For example: `"Hello world"`.
 
 ## writable
 
-Component you can write the data to: `data.internal` or `data.output`. In some components, you can use `data.relative`. [Learn more about components](/docs-new/template-builder/operations/work-with-data).
+Component you can write the data to: `data.internal` or `data.output`. In some components, you can use `data.relative`. [Learn more about components](/docs/template-builder/operations/work-with-data).
 
 ## visual
 
-A visual component (`layout.*`, `view.*`, `field.*`) or [helper](/docs-new/template-builder/reference/helpers) that returns it. See the list in the [component reference guide](/docs-new/template-builder/reference/).
+A visual component (`layout.*`, `view.*`, `field.*`) or [helper](/docs/template-builder/reference/helpers) that returns it. See the list in the [component reference guide](/docs/template-builder/reference/).

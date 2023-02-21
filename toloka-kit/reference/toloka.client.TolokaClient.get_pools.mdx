@@ -15,13 +15,13 @@ Finds all pools that match certain criteria.
 
 `get_pools` returns a generator. You can iterate over all found pools using the generator. Several requests to the Toloka server are possible while iterating.
 
-If you need to sort pools use the [find_pools](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.find_pools) method.
+If you need to sort pools use the [find_pools](/docs/toloka-kit/reference/toloka.client.TolokaClient.find_pools) method.
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`status`|**Optional\[[Pool.Status](/docs-new/toloka-kit/reference/toloka.client.pool.Pool.Status)\]**|<p>Pool status. Refer to the [Pool.Status](/docs-new/toloka-kit/reference/toloka.client.pool.Pool.Status) page for more information on the available `status` values.</p>
+`status`|**Optional\[[Pool.Status](/docs/toloka-kit/reference/toloka.client.pool.Pool.Status)\]**|<p>Pool status. Refer to the [Pool.Status](/docs/toloka-kit/reference/toloka.client.pool.Pool.Status) page for more information on the available `status` values.</p>
 `project_id`|**Optional\[str\]**|<p>Pools belonging to the project with the specified ID.</p>
 `id_lt`|**Optional\[str\]**|<p>Pools with IDs less than the specified value.</p>
 `id_lte`|**Optional\[str\]**|<p>Pools with IDs less than or equal to the specified value.</p>
@@ -43,7 +43,7 @@ If you need to sort pools use the [find_pools](/docs-new/toloka-kit/reference/to
 
 * **Yield type:**
 
-  Generator\[[Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool), None, None\]
+  Generator\[[Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool), None, None\]
 
 **Examples:**
 

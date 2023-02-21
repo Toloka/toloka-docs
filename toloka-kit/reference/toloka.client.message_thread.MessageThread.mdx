@@ -42,11 +42,11 @@ will be created
 `id`|**Optional\[str\]**|<p>Message thread ID.</p>
 `topic`|**Optional\[Dict\[str, str\]\]**|<p>Message thread title.</p>
 `interlocutors_inlined`|**Optional\[bool\]**|<p>Access information about the sender and recipients.</p> <ul> <li>`True` — information is available in the field interlocutors.</li> <li>`False` — information is available on a separate request.</li> </ul>
-`interlocutors`|**Optional\[List\[[Interlocutor](/docs-new/toloka-kit/reference/toloka.client.message_thread.Interlocutor)\]\]**|<p>Information about the sender and recipients, sorted by IDs.</p>
+`interlocutors`|**Optional\[List\[[Interlocutor](/docs/toloka-kit/reference/toloka.client.message_thread.Interlocutor)\]\]**|<p>Information about the sender and recipients, sorted by IDs.</p>
 `messages_inlined`|**Optional\[bool\]**|<p>Access to message threads:</p> <ul> <li>`True` — The message is available in the messages field.</li> <li>`False` — The message is available in a separate request.</li> </ul>
-`messages`|**Optional\[List\[[Message](/docs-new/toloka-kit/reference/toloka.client.message_thread.MessageThread.Message)\]\]**|<p>Messages in the thread. Sorted by creation date (new first).</p>
-`meta`|**Optional\[[Meta](/docs-new/toloka-kit/reference/toloka.client.message_thread.MessageThread.Meta)\]**|<p>Meta</p>
+`messages`|**Optional\[List\[[Message](/docs/toloka-kit/reference/toloka.client.message_thread.MessageThread.Message)\]\]**|<p>Messages in the thread. Sorted by creation date (new first).</p>
+`meta`|**Optional\[[Meta](/docs/toloka-kit/reference/toloka.client.message_thread.MessageThread.Meta)\]**|<p>Meta</p>
 `answerable`|**Optional\[bool\]**|<p>Ability to reply to a message:</p> <ul> <li>`True` — The Toloker can respond to the message.</li> <li>`False` — The Toloker cannot respond to the message.</li> </ul>
-`folders`|**Optional\[List\[[Folder](/docs-new/toloka-kit/reference/toloka.client.message_thread.Folder)\]\]**|<p>Folders where the thread is located.</p>
-`compose_details`|**Optional\[[ComposeDetails](/docs-new/toloka-kit/reference/toloka.client.message_thread.MessageThread.ComposeDetails)\]**|<p>For messages that you sent: details of the POST request for creating the message.</p>
+`folders`|**Optional\[List\[[Folder](/docs/toloka-kit/reference/toloka.client.message_thread.Folder)\]\]**|<p>Folders where the thread is located.</p>
+`compose_details`|**Optional\[[ComposeDetails](/docs/toloka-kit/reference/toloka.client.message_thread.MessageThread.ComposeDetails)\]**|<p>For messages that you sent: details of the POST request for creating the message.</p>
 `created`|**Optional\[datetime\]**|<p>The date the first message in the chain was created.</p>

@@ -15,7 +15,7 @@ Aggregates responses to a single task on the Toloka server.
 
 <Note mode="tip" title="Tip">
 
-Try [crowd-kit library](/docs-new/crowd-kit). It has many aggregation methods and executes on your computer.
+Try [crowd-kit library](/docs/crowd-kit). It has many aggregation methods and executes on your computer.
 
 </Note>
 
@@ -26,7 +26,7 @@ Try [crowd-kit library](/docs-new/crowd-kit). It has many aggregation methods an
 `task_id`|**Optional\[str\]**|<p>The ID of the task.</p>
 `pool_id`|**Optional\[str\]**|<p>The ID of the pool containing the task.</p>
 `answer_weight_skill_id`|**Optional\[str\]**|<p>The ID of the skill that determines the weight of the Toloker&#x27;s responses.</p>
-`fields`|**Optional\[List\[[WeightedDynamicOverlapTaskAggregatedSolutionRequest.Field](/docs-new/toloka-kit/reference/toloka.client.aggregation.WeightedDynamicOverlapTaskAggregatedSolutionRequest.Field)\]\]**|<p>Output data fields to aggregate. For the best results, each of these fields should have limited number of response options. If the `DAWID_SKENE` aggregation type is selected, you can only specify one value.</p>
+`fields`|**Optional\[List\[[WeightedDynamicOverlapTaskAggregatedSolutionRequest.Field](/docs/toloka-kit/reference/toloka.client.aggregation.WeightedDynamicOverlapTaskAggregatedSolutionRequest.Field)\]\]**|<p>Output data fields to aggregate. For the best results, each of these fields should have limited number of response options. If the `DAWID_SKENE` aggregation type is selected, you can only specify one value.</p>
 
 * **Returns:**
 
@@ -34,7 +34,7 @@ Try [crowd-kit library](/docs-new/crowd-kit). It has many aggregation methods an
 
 * **Return type:**
 
-  [AggregatedSolution](/docs-new/toloka-kit/reference/toloka.client.aggregation.AggregatedSolution)
+  [AggregatedSolution](/docs/toloka-kit/reference/toloka.client.aggregation.AggregatedSolution)
 
 **Examples:**
 

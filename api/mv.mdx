@@ -39,7 +39,7 @@ To set up the verification, define key values in the `quality_control.configs` a
 
 ## Request body {#body}
 
-The pool is set up to use verification with an overlap of "5". The calculation uses tasks in which three or more Tolokers submitted the same response. The percentage of correct responses (those that match the majority vote) is stored as skill level 43. You can apply the skill for [filtering Tolokers](/docs-new/api/filter-skill). The skill is first calculated after two tasks that coincide with the majority vote have been completed.
+The pool is set up to use verification with an overlap of "5". The calculation uses tasks in which three or more Tolokers submitted the same response. The percentage of correct responses (those that match the majority vote) is stored as skill level 43. You can apply the skill for [filtering Tolokers](/docs/api/filter-skill). The skill is first calculated after two tasks that coincide with the majority vote have been completed.
 
 You can ban a Toloker from accessing the tasks in the project for a given number of days, hours, minutes (at a time or in total) or forever.
 
@@ -102,7 +102,7 @@ You can ban a Toloker from accessing the tasks in the project for a given number
 }
 ```
 
-To set a different ban period, change the applicable [parameter](/docs-new/api/goldenset#configs-rules-action-parameters-duration) for the `action` key:
+To set a different ban period, change the applicable [parameter](/docs/api/goldenset#configs-rules-action-parameters-duration) for the `action` key:
 
 <Tabs tabs={[
   { title: 'for 12 hours', value: <MvList1/> },
@@ -138,6 +138,6 @@ Parameter | Overview
 
 ## See also {#see-also}
 
-- [Majority vote](/docs-new/guide/mvote)
+- [Majority vote](/docs/guide/mvote)
 
 <ContactGuideSupport/>

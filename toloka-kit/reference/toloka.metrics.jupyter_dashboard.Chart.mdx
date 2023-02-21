@@ -29,7 +29,7 @@ If you want to draw really cool chart that displays several metrics in the same 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `name`|**Optional\[str\]**|<p>The header for this chart. Could be None, Chart create name from the first metric.</p>
-`metrics`|**List\[[BaseMetric](/docs-new/toloka-kit/reference/toloka.metrics.metrics.BaseMetric)\]**|<p>List of metrics, that will be displayed on this chart (in the same coordinates).</p>
+`metrics`|**List\[[BaseMetric](/docs/toloka-kit/reference/toloka.metrics.metrics.BaseMetric)\]**|<p>List of metrics, that will be displayed on this chart (in the same coordinates).</p>
 
 **Examples:**
 
@@ -49,6 +49,6 @@ Chart(
 
 | Method | Description |
 | :------| :-----------|
-[create_async_tasks](/docs-new/toloka-kit/reference/toloka.metrics.jupyter_dashboard.Chart.create_async_tasks)| None
-[create_figure](/docs-new/toloka-kit/reference/toloka.metrics.jupyter_dashboard.Chart.create_figure)| Create figure for this chart. Called at each step.
-[update_metrics](/docs-new/toloka-kit/reference/toloka.metrics.jupyter_dashboard.Chart.update_metrics)| Gathers all metrics, and stores them in lines.
+[create_async_tasks](/docs/toloka-kit/reference/toloka.metrics.jupyter_dashboard.Chart.create_async_tasks)| None
+[create_figure](/docs/toloka-kit/reference/toloka.metrics.jupyter_dashboard.Chart.create_figure)| Create figure for this chart. Called at each step.
+[update_metrics](/docs/toloka-kit/reference/toloka.metrics.jupyter_dashboard.Chart.update_metrics)| Gathers all metrics, and stores them in lines.

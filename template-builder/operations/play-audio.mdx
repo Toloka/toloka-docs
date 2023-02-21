@@ -21,7 +21,7 @@ In this section, we'll show how you can [embed an audio player](#insert-to-inter
 
 ## Add an audio player to the interface {#insert-to-interface}
 
-To insert an audio file into the task interface, add the [view.audio](/docs-new/template-builder/reference/view.audio) component to the template. In the `url` property, specify a direct link to the file (we recommend that you use the MP3 format):
+To insert an audio file into the task interface, add the [view.audio](/docs/template-builder/reference/view.audio) component to the template. In the `url` property, specify a direct link to the file (we recommend that you use the MP3 format):
 ```json
 {
   "type": "view.audio",
@@ -29,7 +29,7 @@ To insert an audio file into the task interface, add the [view.audio](/docs-new/
 }
 ```
 
-If you pass a link to an audio file in the [input data](/docs-new/template-builder/operations/work-with-data), use the `data.input` component in the `url` property.
+If you pass a link to an audio file in the [input data](/docs/template-builder/operations/work-with-data), use the `data.input` component in the `url` property.
 
 To loop audio playback automatically, put `true` in the `loop` property.
 
@@ -44,7 +44,7 @@ To loop audio playback automatically, put `true` in the `loop` property.
 
 ## Record audio {#record-audio}
 
-To allow Tolokers to upload their audio files, use the [field.audio](/docs-new/template-builder/reference/field.audio) component.
+To allow Tolokers to upload their audio files, use the [field.audio](/docs/template-builder/reference/field.audio) component.
 
 On the website, `field.audio` allows Tolokers to upload audio files, and in the app, it opens the sound recorder.
 
@@ -64,9 +64,9 @@ On the website, `field.audio` allows Tolokers to upload audio files, and in the 
 
 To create a template for audio transcription tasks, we used the following components:
 
-- [condition.played](/docs-new/template-builder/reference/condition.played): To make sure that a Toloker listened to the audio.
-- [condition.required](/docs-new/template-builder/reference/condition.required): To make sure that a Toloker entered text into the multiline field ([field.textarea](/docs-new/template-builder/reference/field.textarea)).
-- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): To customize the task layout.
+- [condition.played](/docs/template-builder/reference/condition.played): To make sure that a Toloker listened to the audio.
+- [condition.required](/docs/template-builder/reference/condition.required): To make sure that a Toloker entered text into the multiline field ([field.textarea](/docs/template-builder/reference/field.textarea)).
+- [plugin.toloka](/docs/template-builder/reference/plugin.toloka): To customize the task layout.
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/aAynLBRt3ttCCg">View example</Button>
 

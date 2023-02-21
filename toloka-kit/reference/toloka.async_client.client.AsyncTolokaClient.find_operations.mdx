@@ -15,14 +15,14 @@ Finds operations that match certain criteria.
 
 The number of returned operations is limited. To find remaining operations call `find_operations` with updated search criteria.
 
-To iterate over all matching operations you may use the [get_operations](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_operations) method.
+To iterate over all matching operations you may use the [get_operations](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_operations) method.
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`type`|**Optional\[[OperationType](/docs-new/toloka-kit/reference/toloka.client.operations.OperationType)\]**|<p>Operation type. Refer to the [OperationType](/docs-new/toloka-kit/reference/toloka.client.operations.OperationType) page for more information on the available `type` values.</p>
-`status`|**Optional\[[Operation.Status](/docs-new/toloka-kit/reference/toloka.client.operations.Operation.Status)\]**|<p>The status of the operation. Refer to the [Operation.Status](/docs-new/toloka-kit/reference/toloka.client.operations.Operation.Status) page for more information on the available `status` values.</p>
+`type`|**Optional\[[OperationType](/docs/toloka-kit/reference/toloka.client.operations.OperationType)\]**|<p>Operation type. Refer to the [OperationType](/docs/toloka-kit/reference/toloka.client.operations.OperationType) page for more information on the available `type` values.</p>
+`status`|**Optional\[[Operation.Status](/docs/toloka-kit/reference/toloka.client.operations.Operation.Status)\]**|<p>The status of the operation. Refer to the [Operation.Status](/docs/toloka-kit/reference/toloka.client.operations.Operation.Status) page for more information on the available `status` values.</p>
 `id_lt`|**Optional\[str\]**|<p>Operations with IDs less than the specified value.</p>
 `id_lte`|**Optional\[str\]**|<p>Operations with IDs less than or equal to the specified value.</p>
 `id_gt`|**Optional\[str\]**|<p>Operations with IDs greater than the specified value.</p>
@@ -35,7 +35,7 @@ To iterate over all matching operations you may use the [get_operations](/docs-n
 `finished_lte`|**Optional\[datetime\]**|<p>Operations finished before or on the specified date.</p>
 `finished_gt`|**Optional\[datetime\]**|<p>Operations finished after the specified date.</p>
 `finished_gte`|**Optional\[datetime\]**|<p>Operations finished after or on the specified date.</p>
-`sort`|**Union\[List\[str\], [OperationSortItems](/docs-new/toloka-kit/reference/toloka.client.search_requests.OperationSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
+`sort`|**Union\[List\[str\], [OperationSortItems](/docs/toloka-kit/reference/toloka.client.search_requests.OperationSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
 `limit`|**Optional\[int\]**|<p>Returned operations limit. The default limit is 50. The maximum allowed limit is 500.</p>
 
 * **Returns:**
@@ -44,7 +44,7 @@ To iterate over all matching operations you may use the [get_operations](/docs-n
 
 * **Return type:**
 
-  [OperationSearchResult](/docs-new/toloka-kit/reference/toloka.client.search_results.OperationSearchResult)
+  [OperationSearchResult](/docs/toloka-kit/reference/toloka.client.search_results.OperationSearchResult)
 
 **Examples:**
 

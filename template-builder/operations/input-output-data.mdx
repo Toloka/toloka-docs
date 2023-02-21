@@ -16,7 +16,7 @@ This section contains the code examples for reading from the input data (`data.i
 
 Read and write for interim data (`data.internal`) is similar.
 
-For more information on how to add a quotation mark `"`, backslash `\`, line break, or tab to the object in the input data, see [If you're not familiar with JSON](/docs-new/template-builder/quickstart). For more information about escaping in TSV files, see the [documentation](/docs-new/guide/pool_csv).
+For more information on how to add a quotation mark `"`, backslash `\`, line break, or tab to the object in the input data, see [If you're not familiar with JSON](/docs/template-builder/quickstart). For more information about escaping in TSV files, see the [documentation](/docs/guide/pool_csv).
 
 ## Basic example {#read-write-data}
 
@@ -26,7 +26,7 @@ Let's say you want to display the question text from the input data and write th
   "question": "Would you buy an elephant?"
 }
 ```
-Example of the question display in the [view.text](/docs-new/template-builder/reference/view.text) component:
+Example of the question display in the [view.text](/docs/template-builder/reference/view.text) component:
 ```json
 {
   "type": "view.text",
@@ -37,7 +37,7 @@ Example of the question display in the [view.text](/docs-new/template-builder/re
   }
 }
 ```
-Example of writing a response using the [field.radio-group](/docs-new/template-builder/reference/field.radio-group) component:
+Example of writing a response using the [field.radio-group](/docs/template-builder/reference/field.radio-group) component:
 ```json
 {
   "type": "field.radio-group",
@@ -117,9 +117,9 @@ You can reference a specific array element like this:
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/V44snIfa3ttBb2">View example</Button>
 
-If the array length is unknown or very large, you can get all the array values using the [helper.transform](/docs-new/template-builder/reference/helper.transform) component.
+If the array length is unknown or very large, you can get all the array values using the [helper.transform](/docs/template-builder/reference/helper.transform) component.
 
-For example, you can convert an array of image links to an array of [view.image](/docs-new/template-builder/reference/view.image) components to display them in the interface.
+For example, you can convert an array of image links to an array of [view.image](/docs/template-builder/reference/view.image) components to display them in the interface.
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/V44snIfa3ttBb2">View example</Button>
 
@@ -137,7 +137,7 @@ Similarly to reading elements from an array, you can also write the results to a
 
 ## Related information
 
-- [Creating specifications](/docs-new/template-builder/operations/create-specs)
-- [Clearing the entered values](/docs-new/template-builder/operations/clear-data)
+- [Creating specifications](/docs/template-builder/operations/create-specs)
+- [Clearing the entered values](/docs/template-builder/operations/clear-data)
 
 <ContactSupport/>

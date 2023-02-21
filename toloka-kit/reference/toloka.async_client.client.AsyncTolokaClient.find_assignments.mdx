@@ -15,13 +15,13 @@ Finds assignments that match certain criteria.
 
 The number of returned assignments is limited. To find remaining assignments call `find_assignments` with updated search criteria.
 
-To iterate over all matching assignments you may use the [get_assignments](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_assignments) method.
+To iterate over all matching assignments you may use the [get_assignments](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_assignments) method.
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`status`|**Union\[str, [Assignment.Status](/docs-new/toloka-kit/reference/toloka.client.assignment.Assignment.Status), List\[Union\[str, [Assignment.Status](/docs-new/toloka-kit/reference/toloka.client.assignment.Assignment.Status)\]\], None\]**|<p>Assignment status or a list of statuses. Refer to the [Assignment.Status](/docs-new/toloka-kit/reference/toloka.client.assignment.Assignment.Status) page for more information on the available `status` values.</p>
+`status`|**Union\[str, [Assignment.Status](/docs/toloka-kit/reference/toloka.client.assignment.Assignment.Status), List\[Union\[str, [Assignment.Status](/docs/toloka-kit/reference/toloka.client.assignment.Assignment.Status)\]\], None\]**|<p>Assignment status or a list of statuses. Refer to the [Assignment.Status](/docs/toloka-kit/reference/toloka.client.assignment.Assignment.Status) page for more information on the available `status` values.</p>
 `task_id`|**Optional\[str\]**|<p>Assignments containing the task with the specified ID.</p>
 `task_suite_id`|**Optional\[str\]**|<p>Assignments for a task suite with the specified ID.</p>
 `pool_id`|**Optional\[str\]**|<p>Assignments in a pool with the specified ID.</p>
@@ -54,7 +54,7 @@ To iterate over all matching assignments you may use the [get_assignments](/docs
 `expired_lte`|**Optional\[datetime\]**|<p>Assigned task suites expired before or on the specified date.</p>
 `expired_gt`|**Optional\[datetime\]**|<p>Assigned task suites expired after the specified date.</p>
 `expired_gte`|**Optional\[datetime\]**|<p>Assigned task suites expired after or on the specified date.</p>
-`sort`|**Union\[List\[str\], [AssignmentSortItems](/docs-new/toloka-kit/reference/toloka.client.search_requests.AssignmentSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
+`sort`|**Union\[List\[str\], [AssignmentSortItems](/docs/toloka-kit/reference/toloka.client.search_requests.AssignmentSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
 `limit`|**Optional\[int\]**|<p>Returned assignments limit. The default limit is 50. The maximum allowed limit is 100,000.</p>
 
 * **Returns:**
@@ -63,7 +63,7 @@ To iterate over all matching assignments you may use the [get_assignments](/docs
 
 * **Return type:**
 
-  [AssignmentSearchResult](/docs-new/toloka-kit/reference/toloka.client.search_results.AssignmentSearchResult)
+  [AssignmentSearchResult](/docs/toloka-kit/reference/toloka.client.search_results.AssignmentSearchResult)
 
 **Examples:**
 

@@ -58,7 +58,7 @@ Parameter | Overview
 **user_id** | **string**<br/><br/>Toloker ID. It is used to get the list of the skills assigned to the specific Toloker.
 **skill_id** | **string**<br/><br/>Skill ID. It is used to get the list of the Tolokers who have the specific skill.
 **sort** | <GetUserSkillListTable1/>
-**Standard query parameters** | [limit](/docs-new/api/standard-query-parameters#limit), [id_gt](/docs-new/api/standard-query-parameters#id_gt), [id_gte](/docs-new/api/standard-query-parameters#id_gte), [id_lt](/docs-new/api/standard-query-parameters#id_lt), [id_lte](/docs-new/api/standard-query-parameters#id_lte), [created_gt](/docs-new/api/standard-query-parameters#created_gt), [created_gte](/docs-new/api/standard-query-parameters#created_gte), [created_lt](/docs-new/api/standard-query-parameters#created_lt), [created_lte](/docs-new/api/standard-query-parameters#created_lte), [modified_gt](/docs-new/api/standard-query-parameters#modified_gt), [modified_gte](/docs-new/api/standard-query-parameters#modified_gte), [modified_lt](/docs-new/api/standard-query-parameters#modified_lt), [modified_lte](/docs-new/api/standard-query-parameters#modified_lte).
+**Standard query parameters** | [limit](/docs/api/standard-query-parameters#limit), [id_gt](/docs/api/standard-query-parameters#id_gt), [id_gte](/docs/api/standard-query-parameters#id_gte), [id_lt](/docs/api/standard-query-parameters#id_lt), [id_lte](/docs/api/standard-query-parameters#id_lte), [created_gt](/docs/api/standard-query-parameters#created_gt), [created_gte](/docs/api/standard-query-parameters#created_gte), [created_lt](/docs/api/standard-query-parameters#created_lt), [created_lte](/docs/api/standard-query-parameters#created_lte), [modified_gt](/docs/api/standard-query-parameters#modified_gt), [modified_gte](/docs/api/standard-query-parameters#modified_gte), [modified_lt](/docs/api/standard-query-parameters#modified_lt), [modified_lte](/docs/api/standard-query-parameters#modified_lte).
 
 ## Query example {#request-example}
 
@@ -83,7 +83,7 @@ You can set up the display of the list of skills in parts (for example, 10 skill
 
 ## Response {#response}
 
-[Skill properties](/docs-new/api/get-user-skill#response) in the `items` array:
+[Skill properties](/docs/api/get-user-skill#response) in the `items` array:
 
 ```json
 {"items" : [{<Toloker 1 skill 1 >}, {<Toloker 1 skill 2>}, ... {<Toloker 1 skill n>}, ... {<Toloker n skill 1>}, {<Toloker n skill 2>}, ... {<Toloker n skill n>}], "has_more": false}

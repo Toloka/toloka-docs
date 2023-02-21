@@ -17,15 +17,15 @@ import CloudStorageList4 from './cloud-storage/subcomponents/cloud-storage-list-
 # Where to store files
 
 If your task requires images, audio, or video files, you can upload them:
-- Directly [from your device](#media-files). Use this way if there is only a single `URL` type input field in the [specification](/docs-new/guide/incoming).
+- Directly [from your device](#media-files). Use this way if there is only a single `URL` type input field in the [specification](/docs/guide/incoming).
 
-- To [photo hosting](#image-hosting). Use it if you need less than 10 images (for example, for task [instructions](/docs-new/glossary#instructions) or for testing a [pool](/docs-new/glossary#pool)).
+- To [photo hosting](#image-hosting). Use it if you need less than 10 images (for example, for task [instructions](/docs/glossary#instructions) or for testing a [pool](/docs/glossary#pool)).
 
 - To [cloud storage](#cloud). Use it if you need to add more then 10 images, audio, or video files.
 
 ## Uploading media files directly {#media-files}
 
-Upload media files from your device to avoid difficulties with placing links in the [file with tasks](/docs-new/glossary#tsv).
+Upload media files from your device to avoid difficulties with placing links in the [file with tasks](/docs/glossary#tsv).
 
 When you're uploading tasks to the pool, click **Select media files** and choose files.
 
@@ -105,16 +105,16 @@ Toloka is not responsible for such changes or for placing them in this section w
 
 Storage type | Trial length | Free storage size | Grant amount | Additional information.
 ----- | ----- | ----- | ----- | -----
-[Amazon S3](/docs-new/guide/amazon-cloud-storage) | 12 months | 5 GB | — | [Free access level](https://aws.amazon.com/free)
-[Azure Blob Storage](/docs-new/guide/azure-cloud-storage) | 12 months | 5 GB | $200 within 30 days | [Free account](https://azure.microsoft.com/en-us/free/)
-[Google Cloud Storage](/docs-new/guide/google-cloud-storage) | 90 days | 5 GB | $300 | [Trial period](https://cloud.google.com/free?)
-[Yandex Object Storage](/docs-new/guide/use-object-storage) | 60 days | 5 TB | $50 | [Trial period](https://cloud.yandex.com/en-ru/docs/free-trial/)
+[Amazon S3](/docs/guide/amazon-cloud-storage) | 12 months | 5 GB | — | [Free access level](https://aws.amazon.com/free)
+[Azure Blob Storage](/docs/guide/azure-cloud-storage) | 12 months | 5 GB | $200 within 30 days | [Free account](https://azure.microsoft.com/en-us/free/)
+[Google Cloud Storage](/docs/guide/google-cloud-storage) | 90 days | 5 GB | $300 | [Trial period](https://cloud.google.com/free?)
+[Yandex Object Storage](/docs/guide/use-object-storage) | 60 days | 5 TB | $50 | [Trial period](https://cloud.yandex.com/en-ru/docs/free-trial/)
 
 ## Creating a file with tasks {#tsv-create}
 
-To use a file in the task interface, you should have a field of **URL** type in your project's [input data](/docs-new/guide/incoming). You'll need the name of this field later when creating a file.
+To use a file in the task interface, you should have a field of **URL** type in your project's [input data](/docs/guide/incoming). You'll need the name of this field later when creating a file.
 
-In the [file with the tasks](/docs-new/guide/pool_csv), paste the links into the column that matches the input data field to which this data is passed.
+In the [file with the tasks](/docs/guide/pool_csv), paste the links into the column that matches the input data field to which this data is passed.
 
 For example, if you want to use images in the `image` field, specify the file links in the `INPUT:image` column:
 
@@ -127,6 +127,6 @@ For example, if you want to use images in the `image` field, specify the file li
 
 ## See also {#see-also}
 
-- [How to upload tasks](/docs-new/guide/task_upload)
+- [How to upload tasks](/docs/guide/task_upload)
 
 <ContactGuideSupport/>

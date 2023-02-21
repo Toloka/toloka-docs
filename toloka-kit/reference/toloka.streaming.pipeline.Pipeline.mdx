@@ -32,8 +32,8 @@ while at least one of them may resume.
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `period`|**timedelta**|<p>Period of observers calls. By default, 60 seconds.</p>
-`storage`|**Optional\[[BaseStorage](/docs-new/toloka-kit/reference/toloka.streaming.storage.BaseStorage)\]**|<p>Optional storage object to save pipeline&#x27;s state. Allow to recover from previous state in case of failure.</p>
-`iteration_mode`|**[IterationMode](/docs-new/toloka-kit/reference/toloka.streaming.pipeline.IterationMode)**|<p>When to start new iteration. Default is `FIRST_COMPLETED`</p>
+`storage`|**Optional\[[BaseStorage](/docs/toloka-kit/reference/toloka.streaming.storage.BaseStorage)\]**|<p>Optional storage object to save pipeline&#x27;s state. Allow to recover from previous state in case of failure.</p>
+`iteration_mode`|**[IterationMode](/docs/toloka-kit/reference/toloka.streaming.pipeline.IterationMode)**|<p>When to start new iteration. Default is `FIRST_COMPLETED`</p>
 
 **Examples:**
 
@@ -83,7 +83,7 @@ await pipeline.run()  # Save state after each iteration. Try to load saved at st
 
 | Method | Description |
 | :------| :-----------|
-[observers_iter](/docs-new/toloka-kit/reference/toloka.streaming.pipeline.Pipeline.observers_iter)| Iterate over registered observers.
-[register](/docs-new/toloka-kit/reference/toloka.streaming.pipeline.Pipeline.register)| Register given observer.
-[run](/docs-new/toloka-kit/reference/toloka.streaming.pipeline.Pipeline.run)| None
-[run_manually](/docs-new/toloka-kit/reference/toloka.streaming.pipeline.Pipeline.run_manually)| None
+[observers_iter](/docs/toloka-kit/reference/toloka.streaming.pipeline.Pipeline.observers_iter)| Iterate over registered observers.
+[register](/docs/toloka-kit/reference/toloka.streaming.pipeline.Pipeline.register)| Register given observer.
+[run](/docs/toloka-kit/reference/toloka.streaming.pipeline.Pipeline.run)| None
+[run_manually](/docs/toloka-kit/reference/toloka.streaming.pipeline.Pipeline.run_manually)| None

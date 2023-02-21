@@ -15,13 +15,13 @@ Creates tasks in Toloka asynchronously.
 
 You can send a maximum of 100,000 requests of this kind per minute and a maximum of 2,000,000 requests per day.
 
-See also the [create_tasks](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.create_tasks) method.
+See also the [create_tasks](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_tasks) method.
 
 ## Parameters Description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`tasks`|**List\[[Task](/docs-new/toloka-kit/reference/toloka.client.task.Task)\]**|<p>A list of tasks to be created.</p>
+`tasks`|**List\[[Task](/docs/toloka-kit/reference/toloka.client.task.Task)\]**|<p>A list of tasks to be created.</p>
 `allow_defaults`|**Optional\[bool\]**|<p>Active overlap setting:</p> <ul> <li>`True` — Use the overlap that is set in the `defaults.default_overlap_for_new_tasks` pool parameter.</li> <li>`False` — Use the overlap that is set in the `overlap` task parameter.</li> </ul> <p></p><p>Default value: `False`.</p>
 `open_pool`|**Optional\[bool\]**|<p>Open the pool immediately after creating a task suite, if the pool is closed. </p><p>Default value: `False`.</p>
 `operation_id`|**Optional\[UUID\]**|<p>The ID of the operation conforming to the [RFC4122 standard](https://tools.ietf.org/html/rfc4122). Use it if the `async_mode` is set to `True`.</p>
@@ -34,7 +34,7 @@ See also the [create_tasks](/docs-new/toloka-kit/reference/toloka.client.TolokaC
 
 * **Return type:**
 
-  [TasksCreateOperation](/docs-new/toloka-kit/reference/toloka.client.operations.TasksCreateOperation)
+  [TasksCreateOperation](/docs/toloka-kit/reference/toloka.client.operations.TasksCreateOperation)
 
 **Examples:**
 

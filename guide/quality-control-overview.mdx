@@ -46,7 +46,7 @@ import ContactGuideSupport from './subcomponents/contact-support.mdx'
 
 # Overview
 
-To improve quality of answers, you must [select the audience](/docs-new/guide/filters) you need and [train](/docs-new/guide/train) it.
+To improve quality of answers, you must [select the audience](/docs/guide/filters) you need and [train](/docs/guide/train) it.
 
 <img style="max-width: 100%;" src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425180213/1675425180213_original_svg.svg" alt="" />
 
@@ -54,11 +54,11 @@ To improve quality of answers, you must [select the audience](/docs-new/guide/fi
 
 ### Filters {#audience-filters}
 
-- [Demographics](/docs-new/guide/filters#filter-user-profile) (age, gender, education, languages, region, citizenship).
+- [Demographics](/docs/guide/filters#filter-user-profile) (age, gender, education, languages, region, citizenship).
 
-- [Device specs](/docs-new/guide/filters#filter-calc-data) (device type, OS and browser version).
+- [Device specs](/docs/guide/filters#filter-calc-data) (device type, OS and browser version).
 
-- [Skills](/docs-new/guide/filters#filter-skill) (quality on specific [tasks](/docs-new/glossary#task)).
+- [Skills](/docs/guide/filters#filter-skill) (quality on specific [tasks](/docs/glossary#task)).
 
 - Top % of the best on the platform.
 
@@ -72,7 +72,7 @@ To improve quality of answers, you must [select the audience](/docs-new/guide/fi
 
 - Correct answers + hints.
 
-- High scores continue on to the [exam](/docs-new/glossary#exam).
+- High scores continue on to the [exam](/docs/glossary#exam).
 
 ### Exam {#audience-exam}
 
@@ -84,11 +84,11 @@ To improve quality of answers, you must [select the audience](/docs-new/guide/fi
 
 ### Quality control {#quality-control}
 
-- [Overlap](/docs-new/guide/overlap-faq) (including dynamic overlap).
+- [Overlap](/docs/guide/overlap-faq) (including dynamic overlap).
 
-- [Control tasks](/docs-new/guide/goldenset).
+- [Control tasks](/docs/guide/goldenset).
 
-- [Majority vote](/docs-new/guide/mvote).
+- [Majority vote](/docs/guide/mvote).
 
 - Validation by other annotators.
 
@@ -106,11 +106,11 @@ To improve quality of answers, you must [select the audience](/docs-new/guide/fi
 
 To protect your project from cheaters, you can use the quality control rules:
 
-- [Ban](/docs-new/guide/ban) for [fast responses](/docs-new/guide/quick-answers).
+- [Ban](/docs/guide/ban) for [fast responses](/docs/guide/quick-answers).
 
-- [Captcha](/docs-new/guide/captcha).
+- [Captcha](/docs/guide/captcha).
 
-- Limit [skipped assignments](/docs-new/guide/skipped-assignments).
+- Limit [skipped assignments](/docs/guide/skipped-assignments).
 
 - Limit number of tasks per person.
 
@@ -120,7 +120,7 @@ To protect your project from cheaters, you can use the quality control rules:
 
 <Image withBackground imageId="1675427108700" alt="" />
 
-A Toloker who completes a [task suite](/docs-new/glossary#task-suite) in less than 10 seconds will be banned and won't be able to access your tasks.
+A Toloker who completes a [task suite](/docs/glossary#task-suite) in less than 10 seconds will be banned and won't be able to access your tasks.
 
 </Cut>
 
@@ -140,11 +140,11 @@ A Toloker who skips 2 task suites in a row is restricted from accessing the pool
 
 ### Aggregating results {#aggregating-results}
 
-- Using [majority vote](/docs-new/guide/mvote).
+- Using [majority vote](/docs/guide/mvote).
 
-- Using the [Dawid-Skene method](/docs-new/guide/result-aggregation#dawid-skene).
+- Using the [Dawid-Skene method](/docs/guide/result-aggregation#dawid-skene).
 
-- [By skill level](/docs-new/guide/result-aggregation#aggr-by-skill).
+- [By skill level](/docs/guide/result-aggregation#aggr-by-skill).
 
 ### Evaluating metrics {#evaluating-metrics}
 
@@ -166,31 +166,31 @@ A Toloker who skips 2 task suites in a row is restricted from accessing the pool
 
 ### Validate results {#validate-results}
 
-- [Control tasks](/docs-new/guide/goldenset) — set the Toloker’s skill level based on answers in control tasks and exclude Tolokers who give the wrong answers.
+- [Control tasks](/docs/guide/goldenset) — set the Toloker’s skill level based on answers in control tasks and exclude Tolokers who give the wrong answers.
 
-- [Majority vote](/docs-new/guide/mvote) — have multiple Tolokers do the same task and look for consistency in answers.
+- [Majority vote](/docs/guide/mvote) — have multiple Tolokers do the same task and look for consistency in answers.
 
 - Manually check results — evaluate Tolokers by the number of accepted and rejected tasks.
 
 ### Diversify the audience {#diversify-audience}
 
-- [Earnings](/docs-new/guide/income) — limit the earnings per person in your [pool](/docs-new/glossary#pool) in 24 hours.
+- [Earnings](/docs/guide/income) — limit the earnings per person in your [pool](/docs/glossary#pool) in 24 hours.
 
 - Completed tasks — limit the number of tasks per person in your pool in 24 hours.
 
 ### Prevent random clicking and bots {#random-clicking}
 
-- [Fast responses](/docs-new/guide/quick-answers) — monitor the minimum time to complete a [task suite](/docs-new/glossary#task-suite).
+- [Fast responses](/docs/guide/quick-answers) — monitor the minimum time to complete a [task suite](/docs/glossary#task-suite).
 
-- [Captcha](/docs-new/guide/captcha) — periodically display a [captcha](/docs-new/glossary#captcha) to catch automated scripts and bots.
+- [Captcha](/docs/guide/captcha) — periodically display a [captcha](/docs/glossary#captcha) to catch automated scripts and bots.
 
-- [Skipped assignments](/docs-new/guide/skipped-assignments) — exclude Tolokers who skip too many tasks in a row.
+- [Skipped assignments](/docs/guide/skipped-assignments) — exclude Tolokers who skip too many tasks in a row.
 
 ### Redo certain tasks {#redo-tasks}
 
-- [Re-assign tasks](/docs-new/guide/restore-task-overlap) completed by someone who was banned — if a Toloker gets banned, all their completed tasks can be automatically assigned to other people.
+- [Re-assign tasks](/docs/guide/restore-task-overlap) completed by someone who was banned — if a Toloker gets banned, all their completed tasks can be automatically assigned to other people.
 
-- [Rejected and accepted task processing](/docs-new/guide/reassessment-after-accepting) — set the rules for assigning rejected tasks to other people.
+- [Rejected and accepted task processing](/docs/guide/reassessment-after-accepting) — set the rules for assigning rejected tasks to other people.
 
 ## Technologies for quality management {#quality-management-tech}
 
@@ -198,7 +198,7 @@ Transform the crowd into computing power with advanced technologies for quality 
 
 ### Multiple quality control methods {#multiple-quality}
 
-Toloka offers different approaches to achieve the best quality for each [project](/docs-new/glossary#project).
+Toloka offers different approaches to achieve the best quality for each [project](/docs/glossary#project).
 
 - Post-verification.
 
@@ -206,7 +206,7 @@ Toloka offers different approaches to achieve the best quality for each [project
 
 - Golden sets (honeypots) to monitor quality.
 
-- Advanced [aggregation](/docs-new/guide/result-aggregation) tools.
+- Advanced [aggregation](/docs/guide/result-aggregation) tools.
 
 - Platform-wide anti-fraud system.
 
@@ -214,9 +214,9 @@ Toloka offers different approaches to achieve the best quality for each [project
 
 Multi-stage selection of a distributed crowd.
 
-- Audience [filters](/docs-new/guide/filters) by language, age, gender, interests, location, real-time ranking, and more.
+- Audience [filters](/docs/guide/filters) by language, age, gender, interests, location, real-time ranking, and more.
 
-- [Training](/docs-new/guide/train), [exams](/docs-new/guide/how-to-use-exams), and retraining to find Tolokers for your exact task.
+- [Training](/docs/guide/train), [exams](/docs/guide/how-to-use-exams), and retraining to find Tolokers for your exact task.
 
 ### Smart matching mechanisms {#smart-matching}
 
@@ -236,9 +236,9 @@ Autolabeling and pretrained models with quality control built in.
 
 ## What's next {#what_next}
 
-- [Set up quality control](/docs-new/guide/qa-pool-settings).
-- [Add tasks](/docs-new/guide/pool) to the pool.
-- [Start the pool](/docs-new/guide/pool-run-and-stop).
+- [Set up quality control](/docs/guide/qa-pool-settings).
+- [Add tasks](/docs/guide/pool) to the pool.
+- [Start the pool](/docs/guide/pool-run-and-stop).
 
 ## See also {#see-also}
 

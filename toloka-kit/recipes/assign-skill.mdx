@@ -45,13 +45,13 @@ user_skill = toloka_client.set_user_skill(
 
 ### 4. Print created skill information {#step-four}
 
-The `set_user_skill()` request will return the [UserSkill](/docs-new/toloka-kit/reference/toloka.client.user_skill.UserSkill) class object. You can use its attributes to print the information you need.
+The `set_user_skill()` request will return the [UserSkill](/docs/toloka-kit/reference/toloka.client.user_skill.UserSkill) class object. You can use its attributes to print the information you need.
 
 ```python
 print(user_skill.id, user_skill.skill_id, user_skill.user_id, user_skill.value)
 ```
 
-You should get an output with the ID of the skill-Toloker pair (this allows [removing skills from Tolokers](/docs-new/toloka-kit/recipes/delete-user-skill) later), assigned skill ID, Toloker ID, and the skill level the Toloker received which looks like this.
+You should get an output with the ID of the skill-Toloker pair (this allows [removing skills from Tolokers](/docs/toloka-kit/recipes/delete-user-skill) later), assigned skill ID, Toloker ID, and the skill level the Toloker received which looks like this.
 
 ```bash
 54132692 12648 1ad097faba0eff85a04fe30bc04d53db 50
@@ -74,15 +74,15 @@ print(user_skill.id, user_skill.skill_id, user_skill.user_id, user_skill.value)
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[set_user_skill()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.set_user_skill) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[set_user_skill()](/docs/toloka-kit/reference/toloka.client.TolokaClient.set_user_skill) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
-- [Toloka-Kit: UserSkill class](/docs-new/toloka-kit/reference/toloka.client.user_skill.UserSkill)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Toloka-Kit: UserSkill class](/docs/toloka-kit/reference/toloka.client.user_skill.UserSkill)
 - [Toloka API: Set skill](https://toloka.ai/docs/api/api-reference/#put-/user-skills)

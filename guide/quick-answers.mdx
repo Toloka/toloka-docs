@@ -27,21 +27,21 @@ This rule is necessary to filter out cheating Tolokers who complete tasks too qu
 
 Restrict the pool access for Tolokers who respond too quickly to:
 
-- Restrict access for Tolokers who cheat in their responses. In this case, set the time required to complete a [task suite](/docs-new/glossary#task-suite) when giving random responses.
+- Restrict access for Tolokers who cheat in their responses. In this case, set the time required to complete a [task suite](/docs/glossary#task-suite) when giving random responses.
 
 - Provide anti-robot protection. In this case, set twice as little time for task suite completion.
 
 To estimate the time required to complete a task suite:
 
-- [Complete a task in the sandbox](/docs-new/guide/sandbox#self), if you didn't start the tasks yet.
+- [Complete a task in the sandbox](/docs/guide/sandbox#self), if you didn't start the tasks yet.
 
-- Look up the **Average assignment completion time** in [pool statistics](/docs-new/guide/pool_statistic-pool#avgtime) if the tasks are already running.
+- Look up the **Average assignment completion time** in [pool statistics](/docs/guide/pool_statistic-pool#avgtime) if the tasks are already running.
 
 ## How do I set it up? {#rule}
 
 **Field** | **Overview**
 ----- | -----
-**Recent task suites to use** | The number of recent assignments submitted by the Toloker.<br/><br/>If this field is not filled in, the calculation includes only recent task suites from the pool to which the rule applies.<br/><br/>If the field is filled in, the corresponding number of task suites is used. The rule takes into account the task suites from both this pool and other pools where this field is filled in.<br/><br/>To learn more about how this field works, go to [Parameter "Remember values"](/docs-new/guide/remember-values).
+**Recent task suites to use** | The number of recent assignments submitted by the Toloker.<br/><br/>If this field is not filled in, the calculation includes only recent task suites from the pool to which the rule applies.<br/><br/>If the field is filled in, the corresponding number of task suites is used. The rule takes into account the task suites from both this pool and other pools where this field is filled in.<br/><br/>To learn more about how this field works, go to [Parameter "Remember values"](/docs/guide/remember-values).
 **Minimum time per task suite** | The task suite completion time (in seconds). Everything that is completed faster is considered a fast response.
 **If** | <QuickAnswersTable1/>
 **then** | <QuickAnswersTable2/>
@@ -50,11 +50,11 @@ To estimate the time required to complete a task suite:
 
 **Task**: you noticed that the pool closed too quickly and the final result was unsatisfactory. To prevent this from happening again, you decided to filter out Tolokers who complete tasks too quickly.
 
-Examples are provided for simple [classification](/docs-new/tutorials/image-classification). There are 10 tasks per suite.
+Examples are provided for simple [classification](/docs/tutorials/image-classification). There are 10 tasks per suite.
 
 <Note mode="warning" title="Warning">
 
-The assignments submitted by banned Tolokers will be taken into account if you don't reject them using manual review. They can be reassigned by setting up the [Recompletion of assignments from banned users](/docs-new/guide/restore-task-overlap) rule.
+The assignments submitted by banned Tolokers will be taken into account if you don't reject them using manual review. They can be reassigned by setting up the [Recompletion of assignments from banned users](/docs/guide/restore-task-overlap) rule.
 
 </Note>
 
@@ -73,8 +73,8 @@ A Toloker who completes two task suites in less than 20 seconds is suspended fro
 
 ## For developers {#for-developers}
 
-- [Toloka API: Fast responses](/docs-new/api/fast)
-- [Toloka-Kit: AssignmentSubmitTime collector class](/docs-new/toloka-kit/reference/toloka.client.collectors.AssignmentSubmitTime)
+- [Toloka API: Fast responses](/docs/api/fast)
+- [Toloka-Kit: AssignmentSubmitTime collector class](/docs/toloka-kit/reference/toloka.client.collectors.AssignmentSubmitTime)
 
 ## Troubleshooting {#troubleshooting}
 

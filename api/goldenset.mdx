@@ -27,13 +27,13 @@ import GoldensetTable8 from './goldenset/subcomponents/goldenset-table-8.mdx'
 
 Control tasks contain correct responses. They are used for calculating the Toloker's percentage of correct responses. Depending on the result, you can either change the Toloker's skill value, or block access to tasks.
 
-Add [tasks](/docs-new/api/task-suite) with correct responses to the pool. Set key values in the `quality_control.configs` array in the pool settings.
+Add [tasks](/docs/api/task-suite) with correct responses to the pool. Set key values in the `quality_control.configs` array in the pool settings.
 
 ## Request body {#body}
 
 Let's say that the following settings are made in the project:
 
-- Calculating the skill value equal to the percentage of correct responses in control tasks. You can use the skill value for [filtering Tolokers](/docs-new/api/filter-skill).
+- Calculating the skill value equal to the percentage of correct responses in control tasks. You can use the skill value for [filtering Tolokers](/docs/api/filter-skill).
 - Denying access to the project if less than 75% of the Toloker's responses are correct.
 
 The first skill calculation is made when 7 control tasks are completed. The calculation uses the last 10 responses from the project's control tasks.
@@ -133,6 +133,6 @@ Parameter | Overview
 
 ## See also {#see-also}
 
-- [Control tasks](/docs-new/guide/goldenset)
+- [Control tasks](/docs/guide/goldenset)
 
 <ContactGuideSupport/>

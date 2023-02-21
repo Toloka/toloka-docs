@@ -8,7 +8,7 @@ If you have images with selected objects and you want to upload them to the task
     {{field type="image-annotation" name="result" src=image annotations=polygon}}
     ```
 
-1. Add the following in the [input data](/docs-new/guide/incoming):
+1. Add the following in the [input data](/docs/guide/incoming):
 
     - A field for entering an image link.
 
@@ -16,4 +16,4 @@ If you have images with selected objects and you want to upload them to the task
 
 1. Add the `result` field with the **json** type in the output data. A field for recording results is required for this component. If the Toloker edits the selected area, the updated coordinates are recorded there.
 
-1. [Escape](/docs-new/guide/pool_csv#json) JSON with point coordinates and add it to the [file with tasks](/docs-new/glossary#tsv).
+1. [Escape](/docs/guide/pool_csv#json) JSON with point coordinates and add it to the [file with tasks](/docs/glossary#tsv).

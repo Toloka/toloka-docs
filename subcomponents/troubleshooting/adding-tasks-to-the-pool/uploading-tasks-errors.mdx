@@ -5,7 +5,7 @@ import UploadingTasksErrorsTable2 from './uploading-tasks-errors/subcomponents/u
 
 ### Errors in column headers
 
-If the [column headings](/docs-new/guide/pool_csv) are incorrect, the whole file is rejected. Otherwise, Toloka specifies the number of tasks with processing errors.
+If the [column headings](/docs/guide/pool_csv) are incorrect, the whole file is rejected. Otherwise, Toloka specifies the number of tasks with processing errors.
 
 ### Processing errors tables
 
@@ -16,7 +16,7 @@ If the [column headings](/docs-new/guide/pool_csv) are incorrect, the whole file
 
 **Overview**|**How to fix**
 ----- | -----
-**Extra tabs.**<br/><br/>If the uploaded file contains more `\t` column separators after the data or the link than the number of columns set in the [input data](/docs-new/glossary#input-output-data), you get an error message.<br/><br/>For example, if 1 column is set in the input data, and two more `\t\t` tabs are added in the file after the link, you get 3 columns, 2 of which are excessive. | Remove extra column separators in the above example — both `\t\t` characters.
+**Extra tabs.**<br/><br/>If the uploaded file contains more `\t` column separators after the data or the link than the number of columns set in the [input data](/docs/glossary#input-output-data), you get an error message.<br/><br/>For example, if 1 column is set in the input data, and two more `\t\t` tabs are added in the file after the link, you get 3 columns, 2 of which are excessive. | Remove extra column separators in the above example — both `\t\t` characters.
 
 ```json
 "exception_msg": "the nameMapping array and the sourceList should be the same size (nameMapping length = 4, sourceList size = 6)"

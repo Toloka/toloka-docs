@@ -18,11 +18,11 @@ import SelectAreasList6 from './select-areas/subcomponents/select-areas-list-6.m
 
 # Object selection in an image
 
-This section describes how to add the area selection editor to an image and speed up task completion with shortcuts. If you just need to insert a picture, read the [Inserting images](/docs-new/template-builder/operations/insert-images) section.
+This section describes how to add the area selection editor to an image and speed up task completion with shortcuts. If you just need to insert a picture, read the [Inserting images](/docs/template-builder/operations/insert-images) section.
 
 ## Add the area selection editor {#add-select}
 
-To allow Tolokers to select areas in pictures, use the [field.image-annotation](/docs-new/template-builder/reference/field.image-annotation) component.
+To allow Tolokers to select areas in pictures, use the [field.image-annotation](/docs/template-builder/reference/field.image-annotation) component.
 
 ```json
 {
@@ -73,7 +73,7 @@ For each new object of the `labels` property, a button is added to the editor th
 
 ## Add keyboard shortcuts {#hotkeys}
 
-To help Tolokers work faster, you can add keyboard shortcuts using the [plugin.field.image-annotation.hotkeys](/docs-new/template-builder/reference/plugin.field.image-annotation.hotkeys) component. Shortcuts can be assigned to the up and down arrows (`up`,`down`), numbers, and Latin letters.
+To help Tolokers work faster, you can add keyboard shortcuts using the [plugin.field.image-annotation.hotkeys](/docs/template-builder/reference/plugin.field.image-annotation.hotkeys) component. Shortcuts can be assigned to the up and down arrows (`up`,`down`), numbers, and Latin letters.
 
 If you install the shortcut plugin without assigning keys, they are assigned automatically.
 
@@ -91,11 +91,11 @@ You can change them as described below. If you don't need some of the shortcuts,
 
 To create a template for area selection tasks, use the following components:
 
-- [field.image-annotation](/docs-new/template-builder/reference/field.image-annotation): To add the area selection editor.
-- [plugin.field.image-annotation.hotkeys](/docs-new/template-builder/reference/plugin.field.image-annotation.hotkeys): To add keyboard shortcuts.
-- [view.text](/docs-new/template-builder/reference/view.text): To add a description to the task.
-- [condition.required](/docs-new/template-builder/reference/condition.required): To make sure that a Toloker selected at least one area.
-- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): To customize the task layout.
+- [field.image-annotation](/docs/template-builder/reference/field.image-annotation): To add the area selection editor.
+- [plugin.field.image-annotation.hotkeys](/docs/template-builder/reference/plugin.field.image-annotation.hotkeys): To add keyboard shortcuts.
+- [view.text](/docs/template-builder/reference/view.text): To add a description to the task.
+- [condition.required](/docs/template-builder/reference/condition.required): To make sure that a Toloker selected at least one area.
+- [plugin.toloka](/docs/template-builder/reference/plugin.toloka): To customize the task layout.
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/24FTx6RS3ttFHQ">View example</Button>
 

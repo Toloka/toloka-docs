@@ -25,7 +25,7 @@ _Change the project public description using Toloka-Kit._
 
 ### 3. Get project {#step-three}
 
-[Find out](/docs-new/toloka-kit/recipes/get-projects) the ID of the project which you want to modify. Then create a local copy of the project object calling the `get_project()` method.
+[Find out](/docs/toloka-kit/recipes/get-projects) the ID of the project which you want to modify. Then create a local copy of the project object calling the `get_project()` method.
 
 <CodeCopy
   isSmall
@@ -46,7 +46,7 @@ All the code manipulations at steps 3–4 occur in your device memory. The data 
 
 ### 4. Set project new name {#step-four}
 
-Specify a new public name that the Tolokers will see. You can choose to change some other project data. Refer to the [Project](/docs-new/toloka-kit/reference/toloka.client.project.Project) class to see what other attributes it has.
+Specify a new public name that the Tolokers will see. You can choose to change some other project data. Refer to the [Project](/docs/toloka-kit/reference/toloka.client.project.Project) class to see what other attributes it has.
 
 ```python
 project.public_name = "Elephant color (advanced)"
@@ -69,7 +69,7 @@ This actually updates the project data in Toloka.
 
 ### 6. Display modifications {#step-six}
 
-The `update_project()` request will return the [Project](/docs-new/toloka-kit/reference/toloka.client.project.Project) class object. You can use its attributes to print the information you need.
+The `update_project()` request will return the [Project](/docs/toloka-kit/reference/toloka.client.project.Project) class object. You can use its attributes to print the information you need.
 
 ```python
 print(updated_project.public_name)
@@ -96,17 +96,17 @@ print(updated_project.public_name)
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[get_project()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_project) method_
-- _[update_project()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.update_project) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_project()](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_project) method_
+- _[update_project()](/docs/toloka-kit/reference/toloka.client.TolokaClient.update_project) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
-- [Get list of projects](/docs-new/toloka-kit/recipes/get-projects)
-- [Toloka-Kit: Project class](/docs-new/toloka-kit/reference/toloka.client.project.Project)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Get list of projects](/docs/toloka-kit/recipes/get-projects)
+- [Toloka-Kit: Project class](/docs/toloka-kit/reference/toloka.client.project.Project)
 - [Toloka API: Update project](https://toloka.ai/docs/api/api-reference/#put-/projects/-id-)

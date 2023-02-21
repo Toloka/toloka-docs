@@ -14,11 +14,11 @@ import ContactGuideSupport from '../subcomponents/contact-support.mdx'
 
 <Note mode="note" title="Note">
 
-The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in [Template Builder](/docs-new/template-builder/).
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in [Template Builder](/docs/template-builder/).
 
 </Note>
 
-The `Task` base class is responsible for the [task interface](/docs-new/glossary#task-interface). This class is available in the global variable `window.TolokaTask`.
+The `Task` base class is responsible for the [task interface](/docs/glossary#task-interface). This class is available in the global variable `window.TolokaTask`.
 
 Methods:
 
@@ -28,13 +28,13 @@ Implements the logic for removing the focus from the task and calls the [onBlur(
 
 ## constructor(options) {#constructor}
 
-The [task UI](/docs-new/guide/spec) constructor.
+The [task UI](/docs/guide/spec) constructor.
 
 Parameters:
 
-- `options.task` — The [Task](/docs-new/guide/spec-advanced#obj-task) model.
+- `options.task` — The [Task](/docs/guide/spec-advanced#obj-task) model.
 
-- `options.specs` — Parameters for [input and output data](/docs-new/glossary#input-output-data) and the task interface.
+- `options.specs` — Parameters for [input and output data](/docs/glossary#input-output-data) and the task interface.
 
 - `options.workspaceOptions` — Toloker's workspace initialization parameters.
 
@@ -93,7 +93,7 @@ Retrieves the saved state of the task from the browser's local storage using the
 
 ## getSolution() {#getsolution}
 
-Returns the [Solution](/docs-new/guide/spec-advanced#obj-solution) task responses.
+Returns the [Solution](/docs/guide/spec-advanced#obj-solution) task responses.
 
 ## getStyleDOMElement() {#getstyledomeelement}
 
@@ -101,7 +101,7 @@ Returns a DOM element for task styles that is added to `document.head` when rend
 
 ## getTask() {#gettask}
 
-Returns the [Task](/docs-new/guide/spec-advanced#obj-task) task model.
+Returns the [Task](/docs/guide/spec-advanced#obj-task) task model.
 
 ## getTemplateData() {#gettemplatedata}
 
@@ -183,7 +183,7 @@ Called after the task is resumed.
 
 Called when the Toloker's response validation fails. Parameter:
 
-- `errors` — Validation errors in the Toloker's response [SolutionValidationError](/docs-new/guide/spec-advanced#obj-solutionvalidationerror).
+- `errors` — Validation errors in the Toloker's response [SolutionValidationError](/docs/guide/spec-advanced#obj-solutionvalidationerror).
 
 ## pause() {#pause}
 
@@ -251,7 +251,7 @@ Checks `assignmentId`to make sure that the task is working in Toloker mode and n
 
 Sets the responses. Parameter:
 
-- `solution` — The Toloker's response to the task ([Solution](/docs-new/guide/spec-advanced#obj-solution)).
+- `solution` — The Toloker's response to the task ([Solution](/docs/guide/spec-advanced#obj-solution)).
 
 ## setSolutionOutputValue(fieldName, value) {#setsolutionoutputvalue}
 
@@ -275,13 +275,13 @@ Forcibly shows a global error in the task (only if the toloka-handlebars-templat
 
 ## template(data) {#template}
 
-Template engine for the task. In the task's [HTML interface](/docs-new/guide/spec), it replaces occurrences such as `${fieldX}` with the corresponding value and the `fieldX` key from the `data` parameter. Returns the task's HTML interface as a string. Parameter:
+Template engine for the task. In the task's [HTML interface](/docs/guide/spec), it replaces occurrences such as `${fieldX}` with the corresponding value and the `fieldX` key from the `data` parameter. Returns the task's HTML interface as a string. Parameter:
 
 - `data` — Object with data to insert in the template.
 
 ## validate(solution) {#validate}
 
-Validates responses according to output data parameters. Returns [SolutionValidationError](/docs-new/guide/spec-advanced#obj-solutionvalidationerror) if the responses are invalid, otherwise `null`. Parameter:
+Validates responses according to output data parameters. Returns [SolutionValidationError](/docs/guide/spec-advanced#obj-solutionvalidationerror) if the responses are invalid, otherwise `null`. Parameter:
 
 - `solution` — The Toloker's response to the task. If omitted, the current one is used ([getSolution()](#getsolution)).
 

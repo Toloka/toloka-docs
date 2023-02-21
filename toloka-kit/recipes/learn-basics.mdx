@@ -16,9 +16,9 @@ docsMenu: "tkitMenu"
 
 Before you start using the Toloka-Kit library in your own Python code, you need to:
 
-- [Register](/docs-new/toloka-kit/registration) in the web version of Toloka.
-- [Top up](/docs-new/toloka-kit/registration#top-up) your account.
-- [Install Toloka-Kit](/docs-new/toloka-kit/quick-start).
+- [Register](/docs/toloka-kit/registration) in the web version of Toloka.
+- [Top up](/docs/toloka-kit/registration#top-up) your account.
+- [Install Toloka-Kit](/docs/toloka-kit/quick-start).
 
 ## Label data
 
@@ -47,7 +47,7 @@ logging.basicConfig(
 )
 ```
 
-Now, create a [Toloka client](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) instance. All API calls will go through it:
+Now, create a [Toloka client](/docs/toloka-kit/reference/toloka.client.TolokaClient) instance. All API calls will go through it:
 
 ```python
 toloka_client = toloka.TolokaClient(getpass.getpass('Enter your OAuth token: '), 'PRODUCTION') # Or switch to 'SANDBOX'
@@ -57,8 +57,8 @@ print(toloka_client.get_requester())
 
 <Note mode="tip" title="The code portion above uses">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[get_requester()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_requester) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_requester()](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_requester) method_
 
 </Note>
 
@@ -70,7 +70,7 @@ Requester(_unexpected={}, id='6c6c50dce62ca4aef87dfcbc6e9de162', balance=Decimal
 
 ### Project
 
-A [project](/docs-new/guide/overview#project) is a top-level object. It contains instructions, task interface settings, input and output data specification, and default quality control rules for this project pools. Projects make it easier for you to post similar tasks in the future, because you don't have to re-configure the interface.
+A [project](/docs/guide/overview#project) is a top-level object. It contains instructions, task interface settings, input and output data specification, and default quality control rules for this project pools. Projects make it easier for you to post similar tasks in the future, because you don't have to re-configure the interface.
 
 The easier the task, the better the results. If your task contains more than one question, you should divide it into several projects.
 
@@ -85,15 +85,15 @@ new_project = toloka.Project(
 
 <Note mode="tip" title="The code portion above uses">
 
-- _[Project](/docs-new/toloka-kit/reference/toloka.client.project.Project) class_
+- _[Project](/docs/toloka-kit/reference/toloka.client.project.Project) class_
 
 </Note>
 
 The code above creates an object in your device memory. This is not all, the project must also contain:
 
-- [Input and output data specification](/docs-new/guide/incoming)
-- [Task interface settings](/docs-new/guide/spec)
-- [Instructions for Tolokers](/docs-new/guide/instruction)
+- [Input and output data specification](/docs/guide/incoming)
+- [Task interface settings](/docs/guide/spec)
+- [Instructions for Tolokers](/docs/guide/instruction)
 
 <Note mode="restriction" title="Important">
 
@@ -114,8 +114,8 @@ output_specification = {'result': toloka.project.StringSpec()}
 
 <Note mode="tip" title="The code portion above uses">
 
-- _[UrlSpec](/docs-new/toloka-kit/reference/toloka.client.project.field_spec.UrlSpec) class_
-- _[StringSpec](/docs-new/toloka-kit/reference/toloka.client.project.field_spec.StringSpec) class_
+- _[UrlSpec](/docs/toloka-kit/reference/toloka.client.project.field_spec.UrlSpec) class_
+- _[StringSpec](/docs/toloka-kit/reference/toloka.client.project.field_spec.StringSpec) class_
 
 </Note>
 
@@ -125,8 +125,8 @@ The task interface displays the main task elements to Tolokers. It's important b
 
 There are two editors available in Toloka:
 
-- [HTML/CSS/JS editor](/docs-new/guide/spec#interface-section)
-- [Template Builder](/docs-new/template-builder/)
+- [HTML/CSS/JS editor](/docs/guide/spec#interface-section)
+- [Template Builder](/docs/template-builder/)
 
 Template Builder configures task interface at the entity level. We recommend it for your projects, especially for the first ones.
 
@@ -169,21 +169,21 @@ new_project.task_spec = toloka.project.task_spec.TaskSpec(
 
 <Note mode="tip" title="The code portion above uses">
 
-- _[ImageViewV1](/docs-new/toloka-kit/reference/toloka.client.project.template_builder.view.ImageViewV1) class_
-- _[InputData](/docs-new/toloka-kit/reference/toloka.client.project.template_builder.data.InputData) class_
-- _[RadioGroupFieldV1](/docs-new/toloka-kit/reference/toloka.client.project.template_builder.fields.RadioGroupFieldV1) class_
-- _[OutputData](/docs-new/toloka-kit/reference/toloka.client.project.template_builder.data.OutputData) class_
-- _[GroupFieldOption](/docs-new/toloka-kit/reference/toloka.client.project.template_builder.fields.GroupFieldOption) class_
-- _[RequiredConditionV1](/docs-new/toloka-kit/reference/toloka.client.project.template_builder.conditions.RequiredConditionV1) class_
-- _[TolokaPluginV1](/docs-new/toloka-kit/reference/toloka.client.project.template_builder.plugins.TolokaPluginV1) class_
-- _[TemplateBuilderViewSpec](/docs-new/toloka-kit/reference/toloka.client.project.view_spec.TemplateBuilderViewSpec) class_
-- _[TaskSpec](/docs-new/toloka-kit/reference/toloka.client.project.task_spec.TaskSpec) class_
+- _[ImageViewV1](/docs/toloka-kit/reference/toloka.client.project.template_builder.view.ImageViewV1) class_
+- _[InputData](/docs/toloka-kit/reference/toloka.client.project.template_builder.data.InputData) class_
+- _[RadioGroupFieldV1](/docs/toloka-kit/reference/toloka.client.project.template_builder.fields.RadioGroupFieldV1) class_
+- _[OutputData](/docs/toloka-kit/reference/toloka.client.project.template_builder.data.OutputData) class_
+- _[GroupFieldOption](/docs/toloka-kit/reference/toloka.client.project.template_builder.fields.GroupFieldOption) class_
+- _[RequiredConditionV1](/docs/toloka-kit/reference/toloka.client.project.template_builder.conditions.RequiredConditionV1) class_
+- _[TolokaPluginV1](/docs/toloka-kit/reference/toloka.client.project.template_builder.plugins.TolokaPluginV1) class_
+- _[TemplateBuilderViewSpec](/docs/toloka-kit/reference/toloka.client.project.view_spec.TemplateBuilderViewSpec) class_
+- _[TaskSpec](/docs/toloka-kit/reference/toloka.client.project.task_spec.TaskSpec) class_
 
 </Note>
 
 #### Instructions
 
-The first thing the Tolokers see when they select a task are the [instructions](/docs-new/guide/instruction) that you wrote. Describe what needs to be done in simple and clear language, and give examples.
+The first thing the Tolokers see when they select a task are the [instructions](/docs/guide/instruction) that you wrote. Describe what needs to be done in simple and clear language, and give examples.
 
 Good instructions help the Tolokers complete the task correctly. The clarity and completeness of the instructions affect the response quality and the project rating. Unclear or too complex instructions, on the contrary, will scare off Tolokers.
 
@@ -205,7 +205,7 @@ new_project = toloka_client.create_project(new_project)
 
 <Note mode="tip" title="The code portion above uses">
 
-- _[create_project()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.create_project) method_
+- _[create_project()](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_project) method_
 
 </Note>
 
@@ -245,7 +245,7 @@ This means that you successfully created the project with the parameters that yo
 
 ### Pool
 
-A [pool](/docs-new/guide/overview#pool) is a set of tasks that share common pricing, start date, selection of Tolokers, overlap, and quality control configurations. All task in a pool are processed in parallel. One project can have several pools. You can add new tasks to a pool at any time, as well as open or stop it.
+A [pool](/docs/guide/overview#pool) is a set of tasks that share common pricing, start date, selection of Tolokers, overlap, and quality control configurations. All task in a pool are processed in parallel. One project can have several pools. You can add new tasks to a pool at any time, as well as open or stop it.
 
 The code below will create a pool as an object in your device memory. You will send it to Toloka with `toloka_client` method a bit later.
 
@@ -262,7 +262,7 @@ new_pool = toloka.Pool(
 
 <Note mode="tip" title="The code portion above uses">
 
-- _[Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool) class_
+- _[Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class_
 
 </Note>
 
@@ -281,13 +281,13 @@ new_pool.defaults = toloka.pool.Pool.Defaults(
 
 <Note mode="tip" title="The code portion above uses">
 
-- _[Defaults](/docs-new/toloka-kit/reference/toloka.client.pool.Pool.Defaults) class_
+- _[Defaults](/docs/toloka-kit/reference/toloka.client.pool.Pool.Defaults) class_
 
 </Note>
 
 #### Task suite
 
-A [task suite](/docs-new/guide/overview#tasks-page) is a set of tasks that are shown on a single page.
+A [task suite](/docs/guide/overview#tasks-page) is a set of tasks that are shown on a single page.
 
 An important part of configuring pools is to decide how many tasks will be assigned to a Toloker at once. For example, if you set 3 tasks for a task suite, a Toloker will see three images at once on one page.
 
@@ -313,13 +313,13 @@ new_pool.set_mixer_config(
 
 <Note mode="tip" title="The code portion above uses">
 
-- _[set_mixer_config](/docs-new/toloka-kit/reference/toloka.client.pool.codegen_setter_for_mixer_config) setter for the [Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool) class_
+- _[set_mixer_config](/docs/toloka-kit/reference/toloka.client.pool.codegen_setter_for_mixer_config) setter for the [Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class_
 
 </Note>
 
 #### Filters
 
-[Filters](/docs-new/guide/filters) help you select Tolokers for your project.
+[Filters](/docs/guide/filters) help you select Tolokers for your project.
 
 There may be different reasons to use filters, for example:
 
@@ -337,15 +337,15 @@ new_pool.filter = toloka.filter.Languages.in_('EN')
 
 <Note mode="tip" title="The code portion above uses">
 
-- _[Languages](/docs-new/toloka-kit/reference/toloka.client.filter.Languages) class_
+- _[Languages](/docs/toloka-kit/reference/toloka.client.filter.Languages) class_
 
 </Note>
 
 #### Quality control rules {#quality_control_rules}
 
-[Quality control rules](/docs-new/guide/check-performers) regulate task completion and Toloker access.
+[Quality control rules](/docs/guide/check-performers) regulate task completion and Toloker access.
 
-Quality control lets you get more accurate responses and restrict access to tasks for cheating users. All rules work independently. Learn more about [settting up quality control](/docs-new/guide/qa-pool-settings).
+Quality control lets you get more accurate responses and restrict access to tasks for cheating users. All rules work independently. Learn more about [settting up quality control](/docs/guide/qa-pool-settings).
 
 This example uses the captcha rule. It is the simplest way to exclude fake users (robots) and cheaters:
 
@@ -372,8 +372,8 @@ new_pool.quality_control.add_action(
 
 <Note mode="tip" title="The code portion above uses">
 
-- _[set_captcha_frequency](/docs-new/toloka-kit/reference/toloka.client.pool.codegen_setter_for_quality_control_captcha_frequency) setter for the [Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool) class_
-- _[Captcha](/docs-new/toloka-kit/reference/toloka.client.collectors.Captcha) class_
+- _[set_captcha_frequency](/docs/toloka-kit/reference/toloka.client.pool.codegen_setter_for_quality_control_captcha_frequency) setter for the [Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class_
+- _[Captcha](/docs/toloka-kit/reference/toloka.client.collectors.Captcha) class_
 
 </Note>
 
@@ -387,7 +387,7 @@ new_pool = toloka_client.create_pool(new_pool)
 
 <Note mode="tip" title="The code portion above uses">
 
-- _[create_pool()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.create_pool) method_
+- _[create_pool()](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_pool) method_
 
 </Note>
 
@@ -409,7 +409,7 @@ Right now the pool is empty and closed. It has no tasks or task suites.
 
 ### Upload tasks
 
-A [task](/docs-new/guide/overview#task) is the smallest portion of data you need to mark up.
+A [task](/docs/guide/overview#task) is the smallest portion of data you need to mark up.
 
 This example uses a small data set with images. This dataset is collected by the Toloka team and distributed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
 
@@ -456,8 +456,8 @@ new_pool = toloka_client.open_pool(new_pool.id)
 
 <Note mode="tip" title="The code portion above uses">
 
-- _[Task](/docs-new/toloka-kit/reference/toloka.client.task.Task) class_
-- _[create_tasks()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.create_pool) method_
+- _[Task](/docs/toloka-kit/reference/toloka.client.task.Task) class_
+- _[create_tasks()](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_pool) method_
 
 </Note>
 
@@ -490,10 +490,10 @@ wait_pool_for_close(pool_id)
 
 <Note mode="tip" title="The code portion above uses">
 
-- _[get_pool()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_pool) method_
-- _[get_analytics()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_analytics) method_
-- _[CompletionPercentagePoolAnalytics](/docs-new/toloka-kit/reference/toloka.client.analytics_request.CompletionPercentagePoolAnalytics) class_
-- _[wait_operation()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.wait_operation) method_
+- _[get_pool()](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_pool) method_
+- _[get_analytics()](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_analytics) method_
+- _[CompletionPercentagePoolAnalytics](/docs/toloka-kit/reference/toloka.client.analytics_request.CompletionPercentagePoolAnalytics) class_
+- _[wait_operation()](/docs/toloka-kit/reference/toloka.client.TolokaClient.wait_operation) method_
 
 </Note>
 
@@ -687,7 +687,7 @@ print(f'answers count: {len(answers_df)}')
 
 <Note mode="tip" title="The code portion above uses">
 
-- _[get_assignments_df()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_assignments_df) method_
+- _[get_assignments_df()](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_assignments_df) method_
 
 </Note>
 
@@ -697,11 +697,11 @@ If a Toloker completed several task suites, then `toloka_client.get_assignments_
 
 ### Aggregation {#aggregation}
 
-You should run the [results aggregation](/docs-new/guide/result-aggregation) only if you set the overlap for the tasks to 2 or higher.
+You should run the [results aggregation](/docs/guide/result-aggregation) only if you set the overlap for the tasks to 2 or higher.
 
-The [majority vote](/docs-new/guide/mvote) method is a quality control method based on matching responses from the majority of Tolokers who complete the same task. For example, if 2 out of 3 Tolokers selected the `cat` label, then the final label for this task will be `cat`.
+The [majority vote](/docs/guide/mvote) method is a quality control method based on matching responses from the majority of Tolokers who complete the same task. For example, if 2 out of 3 Tolokers selected the `cat` label, then the final label for this task will be `cat`.
 
-Majority vote is easily implemented, but you can also use our crowdsourcing [Crowd-Kit library](/docs-new/crowd-kit/). It contains a lot of new aggregation methods.
+Majority vote is easily implemented, but you can also use our crowdsourcing [Crowd-Kit library](/docs/crowd-kit/). It contains a lot of new aggregation methods.
 
 Install it using the command below:
 
@@ -722,7 +722,7 @@ print(predicted_answers)
 
 <Note mode="tip" title="The code portion above uses">
 
-- _[fit_predict()](/docs-new/crowd-kit/reference/crowdkit.aggregation.classification.majority_vote.MajorityVote.fit_predict) method of the Crowd-Kit [MajorityVote](/docs-new/crowd-kit/reference/crowdkit.aggregation.classification.majority_vote.MajorityVote) class_
+- _[fit_predict()](/docs/crowd-kit/reference/crowdkit.aggregation.classification.majority_vote.MajorityVote.fit_predict) method of the Crowd-Kit [MajorityVote](/docs/crowd-kit/reference/crowdkit.aggregation.classification.majority_vote.MajorityVote) class_
 
 </Note>
 
@@ -784,7 +784,7 @@ print(predicted_answers)
 
 ## Useful links
 
-- [Toloka-Kit recipe list](/docs-new/toloka-kit/recipes/use-cases)
-- [Toloka documentation](/docs-new/)
-- [Toloka API documentation](/docs-new/api/)
+- [Toloka-Kit recipe list](/docs/toloka-kit/recipes/use-cases)
+- [Toloka documentation](/docs/)
+- [Toloka API documentation](/docs/api/)
 - [Toloka homepage](https://toloka.ai/)

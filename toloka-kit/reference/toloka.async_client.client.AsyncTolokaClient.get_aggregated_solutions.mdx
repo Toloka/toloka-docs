@@ -13,15 +13,15 @@ docsMenu: "tkitMenu"
 
 Finds all aggregated responses that match certain criteria.
 
-Pass to the `get_aggregated_solutions` the ID of the operation started by the [aggregate_solutions_by_pool](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.aggregate_solutions_by_pool) method.
+Pass to the `get_aggregated_solutions` the ID of the operation started by the [aggregate_solutions_by_pool](/docs/toloka-kit/reference/toloka.client.TolokaClient.aggregate_solutions_by_pool) method.
 
 `get_aggregated_solutions` returns a generator. You can iterate over all found aggregated responses using the generator. Several requests to the Toloka server are possible while iterating.
 
-If you need to sort aggregated responses use the [find_aggregated_solutions](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.find_aggregated_solutions) method.
+If you need to sort aggregated responses use the [find_aggregated_solutions](/docs/toloka-kit/reference/toloka.client.TolokaClient.find_aggregated_solutions) method.
 
 <Note mode="tip" title="Tip">
 
-Try [crowd-kit library](/docs-new/crowd-kit). It has many aggregation methods and executes on your computer.
+Try [crowd-kit library](/docs/crowd-kit). It has many aggregation methods and executes on your computer.
 
 </Note>
 
@@ -42,7 +42,7 @@ Try [crowd-kit library](/docs-new/crowd-kit). It has many aggregation methods an
 
 * **Yield type:**
 
-  [AsyncGenAdapter](/docs-new/toloka-kit/reference/toloka.util.async_utils.AsyncGenAdapter)\[[AggregatedSolution](/docs-new/toloka-kit/reference/toloka.client.aggregation.AggregatedSolution), None\]
+  [AsyncGenAdapter](/docs/toloka-kit/reference/toloka.util.async_utils.AsyncGenAdapter)\[[AggregatedSolution](/docs/toloka-kit/reference/toloka.client.aggregation.AggregatedSolution), None\]
 
 **Examples:**
 

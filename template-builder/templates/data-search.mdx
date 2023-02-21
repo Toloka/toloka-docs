@@ -18,35 +18,35 @@ For this type of project, you can use the **Mining business contacts** preset. I
 
 <Cut title="Components used in the example">
 
-- [view.text](/docs-new/template-builder/reference/view.text): To add text to the task.
-- [view.link-group](/docs-new/template-builder/reference/view.link-group): To group links together.
-- [helper.search-query](/docs-new/template-builder/reference/helper.search-query): To create a search query.
-- A combination of [helper.if](/docs-new/template-builder/reference/helper.if) and [condition.equals](/docs-new/template-builder/reference/condition.equals): Hides the contact input fields if “No contacts” is selected.
-- [field.checkbox](/docs-new/template-builder/reference/field.checkbox): To add a checkbox.
-- [field.phone-number](/docs-new/template-builder/reference/field.phone-number): To add a phone number input field.
-- [field.email](/docs-new/template-builder/reference/field.email): To add an email input field.
-- A combination of [condition.any](/docs-new/template-builder/reference/condition.any), [condition.required](/docs-new/template-builder/reference/condition.required), and [condition.equals](/docs-new/template-builder/reference/condition.equals): For checking that either the “Phone” or “Email” field is filled in, or the “No contacts” option is selected.
-- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task layout.
+- [view.text](/docs/template-builder/reference/view.text): To add text to the task.
+- [view.link-group](/docs/template-builder/reference/view.link-group): To group links together.
+- [helper.search-query](/docs/template-builder/reference/helper.search-query): To create a search query.
+- A combination of [helper.if](/docs/template-builder/reference/helper.if) and [condition.equals](/docs/template-builder/reference/condition.equals): Hides the contact input fields if “No contacts” is selected.
+- [field.checkbox](/docs/template-builder/reference/field.checkbox): To add a checkbox.
+- [field.phone-number](/docs/template-builder/reference/field.phone-number): To add a phone number input field.
+- [field.email](/docs/template-builder/reference/field.email): To add an email input field.
+- A combination of [condition.any](/docs/template-builder/reference/condition.any), [condition.required](/docs/template-builder/reference/condition.required), and [condition.equals](/docs/template-builder/reference/condition.equals): For checking that either the “Phone” or “Email” field is filled in, or the “No contacts” option is selected.
+- [plugin.toloka](/docs/template-builder/reference/plugin.toloka): Customizes the task layout.
 
 </Cut>
 
 ## What else can be configured {#examples}
 
-- To let Tolokers enter long texts, add the [field.textarea](/docs-new/template-builder/reference/field.textarea) field.
+- To let Tolokers enter long texts, add the [field.textarea](/docs/template-builder/reference/field.textarea) field.
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/5aKHQEXE3vvu7U">View example</Button>
 
-- To let Tolokers enter numbers, add the [field.number](/docs-new/template-builder/reference/field.number) field.
+- To let Tolokers enter numbers, add the [field.number](/docs/template-builder/reference/field.number) field.
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/BFMRXUUS3xDkbn">View example</Button>
 
-- To let Tolokers search for files online, add the file selection field [field.file](/docs-new/template-builder/reference/field.file). For example, use this if they need to upload a photo with a certain object in it.
+- To let Tolokers search for files online, add the file selection field [field.file](/docs/template-builder/reference/field.file). For example, use this if they need to upload a photo with a certain object in it.
 
     In task verification mode, the uploaded images will appear automatically. You can view, rotate, and switch between images.
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/2q9TFDoh3xE9PR">View example</Button>
 
-- If a Toloker needs to find and submit a link to a specific page from the website, add the [condition.same-domain](/docs-new/template-builder/reference/condition.same-domain) component. The component checks that the link is from the required domain.
+- If a Toloker needs to find and submit a link to a specific page from the website, add the [condition.same-domain](/docs/template-builder/reference/condition.same-domain) component. The component checks that the link is from the required domain.
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/sBbrym1_3xE9iw">View example</Button>
 
@@ -54,7 +54,7 @@ If this preset doesn't meet your needs, see other examples in this section.
 
 ## Add a field for selecting response options {#add-radio-group}
 
-If a Toloker needs to click on the search link and answer a question, add the [field.radio-group](/docs-new/template-builder/reference/field.radio-group) field for selecting one of the response options.
+If a Toloker needs to click on the search link and answer a question, add the [field.radio-group](/docs/template-builder/reference/field.radio-group) field for selecting one of the response options.
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/beR3LXQ83y8f94">View example</Button>
 
@@ -64,9 +64,9 @@ For example, use this to search for information about an actor by their name and
 
 In this example, the following fields are added:
 
-- [view.image](/docs-new/template-builder/reference/view.image): Image.
-- [field.text](/docs-new/template-builder/reference/field.text): For entering a short text.
-- [field.date](/docs-new/template-builder/reference/field.date): For entering the date of birth.
+- [view.image](/docs/template-builder/reference/view.image): Image.
+- [field.text](/docs/template-builder/reference/field.text): For entering a short text.
+- [field.date](/docs/template-builder/reference/field.date): For entering the date of birth.
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/k9H6qX0v3vw22r">View example</Button>
 
@@ -76,16 +76,16 @@ Another version of the task, in which a Toloker needs to find information about 
 
 In this example, the following fields are added:
 
-- The [layout.columns](/docs-new/template-builder/reference/layout.columns) component, which allows you to place the task description and the site page inside the [view.iframe](/docs-new/template-builder/reference/view.iframe) component in two columns.
-- [view.text](/docs-new/template-builder/reference/view.text): The task text.
-- [view.link](/docs-new/template-builder/reference/view.link): A link to the site.
-- [field.button-radio-group](/docs-new/template-builder/reference/field.button-radio-group): Buttons for response options.
-- The [condition.schema](/docs-new/template-builder/reference/condition.schema) component: Checks the format of the entered data (in this case, the INN and OGRN code formats).
+- The [layout.columns](/docs/template-builder/reference/layout.columns) component, which allows you to place the task description and the site page inside the [view.iframe](/docs/template-builder/reference/view.iframe) component in two columns.
+- [view.text](/docs/template-builder/reference/view.text): The task text.
+- [view.link](/docs/template-builder/reference/view.link): A link to the site.
+- [field.button-radio-group](/docs/template-builder/reference/field.button-radio-group): Buttons for response options.
+- The [condition.schema](/docs/template-builder/reference/condition.schema) component: Checks the format of the entered data (in this case, the INN and OGRN code formats).
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/s5vP6HDb3ttFVB">View example</Button>
 
 ## See also {#see-also}
 
-- [Tutorials: Searching for product characteristics](/docs-new/tutorials/internet-search)
+- [Tutorials: Searching for product characteristics](/docs/tutorials/internet-search)
 
 <ContactSupport/>

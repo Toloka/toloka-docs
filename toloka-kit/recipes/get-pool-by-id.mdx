@@ -24,7 +24,7 @@ _Get the detailed information about the pool with the ID specified in the reques
 
 ### 3. Get pool information {#step-three}
 
-[Find out](/docs-new/toloka-kit/recipes/get-pools) the ID of the pool for which you want to get the detailed information. Then get this info calling the `get_pool()` method.
+[Find out](/docs/toloka-kit/recipes/get-pools) the ID of the pool for which you want to get the detailed information. Then get this info calling the `get_pool()` method.
 
 <CodeCopy
   isSmall
@@ -39,7 +39,7 @@ _Get the detailed information about the pool with the ID specified in the reques
 
 ### 4. Print pool private name, status, and last close reason {#step-four}
 
-The `get_pool()` request will return the [Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
+The `get_pool()` request will return the [Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
 
 ```python
 print(pool.private_name, pool.status, pool.last_close_reason)
@@ -64,15 +64,15 @@ print(pool.private_name, pool.status, pool.last_close_reason)
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[get_pool()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_pool) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_pool()](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_pool) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
-- [Toloka-Kit: Pool class](/docs-new/toloka-kit/reference/toloka.client.pool.Pool)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Toloka-Kit: Pool class](/docs/toloka-kit/reference/toloka.client.pool.Pool)
 - [Toloka API: Get pool by ID](https://toloka.ai/docs/api/api-reference/#get-/pools/-id-)

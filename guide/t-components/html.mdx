@@ -14,13 +14,13 @@ import ContactGuideSupport from '../subcomponents/contact-support.mdx'
 
 <Note mode="note" title="Note">
 
-The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in [Template Builder](/docs-new/template-builder/).
+The task interface configuration guide describes the features of the HTML/JS/CSS editor. You can also try creating a task interface in [Template Builder](/docs/template-builder/).
 
 </Note>
 
 To upload a task with formatted text (HTML tags and styles):
 
-1. Add a field of `string` type into the [input data description](/docs-new/guide/incoming). For example:
+1. Add a field of `string` type into the [input data description](/docs/guide/incoming). For example:
 
     ```json
     {
@@ -31,8 +31,8 @@ To upload a task with formatted text (HTML tags and styles):
     }
     ```
 
-1. In the [task interface](/docs-new/guide/spec) put the name of the input data field in triple curly brackets. For example: `{{{html}}}`.
+1. In the [task interface](/docs/guide/spec) put the name of the input data field in triple curly brackets. For example: `{{{html}}}`.
 
-Before uploading a task, make sure that all quotation marks in the formatted text are [escaped](/docs-new/guide/pool_csv#string).
+Before uploading a task, make sure that all quotation marks in the formatted text are [escaped](/docs/guide/pool_csv#string).
 
 <ContactGuideSupport/>

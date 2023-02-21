@@ -24,7 +24,7 @@ _Get the detailed information about the task with the ID specified in the reques
 
 ### 3. Get task information {#step-three}
 
-[Find out](/docs-new/toloka-kit/recipes/get-tasks) the ID of the task for which you want to get the detailed information. Then get this info calling the `get_task()` method.
+[Find out](/docs/toloka-kit/recipes/get-tasks) the ID of the task for which you want to get the detailed information. Then get this info calling the `get_task()` method.
 
 <CodeCopy
   isSmall
@@ -39,7 +39,7 @@ _Get the detailed information about the task with the ID specified in the reques
 
 ### 4. Print task ID, overlap, and creation date {#step-four}
 
-The `get_task()` request will return the [Task](/docs-new/toloka-kit/reference/toloka.client.task.Task) class object. You can use its attributes to print the information you need.
+The `get_task()` request will return the [Task](/docs/toloka-kit/reference/toloka.client.task.Task) class object. You can use its attributes to print the information you need.
 
 ```python
 print(task.id, task.overlap, task.created.date())
@@ -64,15 +64,15 @@ print(task.id, task.overlap, task.created.date())
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[get_task()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.get_task) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_task()](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_task) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
-- [Toloka-Kit: Task class](/docs-new/toloka-kit/reference/toloka.client.task.Task)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Toloka-Kit: Task class](/docs/toloka-kit/reference/toloka.client.task.Task)
 - [Toloka API: Get task by ID](https://toloka.ai/docs/api/api-reference/#get-/tasks/-id-)

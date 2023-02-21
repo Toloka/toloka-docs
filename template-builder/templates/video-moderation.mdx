@@ -27,11 +27,11 @@ Take a look at the example: the labeling interface includes a video player, and 
 
 <Cut title="Components used in the example">
 
-- [view.list](/docs-new/template-builder/reference/view.list): Displays data in a list.
+- [view.list](/docs/template-builder/reference/view.list): Displays data in a list.
 
-- [view.video](/docs-new/template-builder/reference/view.video): Adds a video player.
+- [view.video](/docs/template-builder/reference/view.video): Adds a video player.
 
-  The [condition.played](/docs-new/template-builder/reference/condition.played) component inside the `validation` property checks that a Toloker started watching the video.
+  The [condition.played](/docs/template-builder/reference/condition.played) component inside the `validation` property checks that a Toloker started watching the video.
 
   <Cut title="Show code">
 
@@ -54,9 +54,9 @@ Take a look at the example: the labeling interface includes a video player, and 
 
   </Cut>
 
-- [field.button-radio-group](/docs-new/template-builder/reference/field.button-radio-group): Adds buttons for selecting an answer option.
+- [field.button-radio-group](/docs/template-builder/reference/field.button-radio-group): Adds buttons for selecting an answer option.
 
-  The [condition.required](/docs-new/template-builder/reference/condition.required) component inside the `validation` property checks if at least one option is selected.
+  The [condition.required](/docs/template-builder/reference/condition.required) component inside the `validation` property checks if at least one option is selected.
 
   <Cut title="Show code">
 
@@ -102,7 +102,7 @@ Take a look at the example: the labeling interface includes a video player, and 
 
   </Cut>
 
-- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task layout.
+- [plugin.toloka](/docs/template-builder/reference/plugin.toloka): Customizes the task layout.
 
   <Cut title="Show code">
 
@@ -118,7 +118,7 @@ Take a look at the example: the labeling interface includes a video player, and 
 
   </Cut>
 
-- [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys): Adds [keyboard shortcuts](/docs-new/template-builder/best-practices/hotkeys).
+- [plugin.hotkeys](/docs/template-builder/reference/plugin.hotkeys): Adds [keyboard shortcuts](/docs/template-builder/best-practices/hotkeys).
 
   <Cut title="Show code">
 
@@ -186,7 +186,7 @@ If this preset doesn't meet your needs, see other examples in this section.
 
 ## Check that the video is fully viewed
 
-If you want to be sure that a Toloker watched the whole video, replace the [condition.played](/docs-new/template-builder/reference/condition.played) component with [condition.played-fully](/docs-new/template-builder/reference/condition.played-fully).
+If you want to be sure that a Toloker watched the whole video, replace the [condition.played](/docs/template-builder/reference/condition.played) component with [condition.played-fully](/docs/template-builder/reference/condition.played-fully).
 
 <Cut title="Show code">
 
@@ -210,7 +210,7 @@ If you want to be sure that a Toloker watched the whole video, replace the [con
 
 ## Add a description {#add-description}
 
-To add a detailed description to the task, use the [view.text](/docs-new/template-builder/reference/view.text) component.
+To add a detailed description to the task, use the [view.text](/docs/template-builder/reference/view.text) component.
 
 <Cut title="Show code">
 
@@ -227,7 +227,7 @@ To add a detailed description to the task, use the [view.text](/docs-new/templat
 
 ## Add a response field {#add-text-area}
 
-To let Tolokers leave comments about the task or their response, add a text field using [field.textarea](/docs-new/template-builder/reference/field.textarea).
+To let Tolokers leave comments about the task or their response, add a text field using [field.textarea](/docs/template-builder/reference/field.textarea).
 
 <Cut title="Show code">
 
@@ -249,7 +249,7 @@ To let Tolokers leave comments about the task or their response, add a text fiel
 
 ## Add a layout {#add-layout}
 
-To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs-new/template-builder/reference/view.alert). You can place it in the [view.list](/docs-new/template-builder/reference/view.list) along with the other components.
+To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs/template-builder/reference/view.alert). You can place it in the [view.list](/docs/template-builder/reference/view.list) along with the other components.
 
 In this example, the description is highlighted with a blue border, and the buttons are highlighted with a yellow one.
 
@@ -311,7 +311,7 @@ Decide whether a Toloker can select only one or multiple answer options.
 
 ## Add clarifying questions to one of the options {#add-addition}
 
-The [helper.if](/docs-new/template-builder/reference/helper.if) component displays an interface element after a specific response is selected. In this example, a Toloker can only select correct statements about the video if it is loaded.
+The [helper.if](/docs/template-builder/reference/helper.if) component displays an interface element after a specific response is selected. In this example, a Toloker can only select correct statements about the video if it is loaded.
 
   <Cut title="Show code">
 
@@ -359,13 +359,13 @@ The [helper.if](/docs-new/template-builder/reference/helper.if) component displa
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/9ywPoPF53ttDzz">View example</Button>
 
-If you need to check sequentially more than two conditions, use the [helper.switch](/docs-new/template-builder/reference/helper.switch) component.
+If you need to check sequentially more than two conditions, use the [helper.switch](/docs/template-builder/reference/helper.switch) component.
 
 ## Video and search query comparison {#search}
 
 #### Does the video match the search query
 
-Add a button that opens the search results and generate a search query link using the [helper.search-query](/docs-new/template-builder/reference/helper.search-query) component. To make sure that a Toloker clicked on the link and checked its contents, configure validation, as in the example.
+Add a button that opens the search results and generate a search query link using the [helper.search-query](/docs/template-builder/reference/helper.search-query) component. To make sure that a Toloker clicked on the link and checked its contents, configure validation, as in the example.
 
 <Cut title="Show code">
 
@@ -390,7 +390,7 @@ Add a button that opens the search results and generate a search query link usin
 
 #### Side-by-side video and web page comparison
 
-You can display the web page in the built-in window using the [view.iframe](/docs-new/template-builder/reference/view.iframe) component. Place the video next to it using [layout.side-by-side](/docs-new/template-builder/reference/layout.side-by-side).
+You can display the web page in the built-in window using the [view.iframe](/docs/template-builder/reference/view.iframe) component. Place the video next to it using [layout.side-by-side](/docs/template-builder/reference/layout.side-by-side).
 
 <Cut title="Show code">
 
@@ -418,9 +418,9 @@ You can display the web page in the built-in window using the [view.iframe](/doc
 
 This is a more complex example that compares the video with the results of a search query. The following components are added:
 
-- [view.iframe](/docs-new/template-builder/reference/view.iframe): Displays the web page in an embedded window.
-- [view.device-frame](/docs-new/template-builder/reference/view.device-frame): Wraps the window in a smartphone frame.
-- [layout.side-by-side](/docs-new/template-builder/reference/layout.side-by-side): Places the video and the search results window next to each other.
+- [view.iframe](/docs/template-builder/reference/view.iframe): Displays the web page in an embedded window.
+- [view.device-frame](/docs/template-builder/reference/view.device-frame): Wraps the window in a smartphone frame.
+- [layout.side-by-side](/docs/template-builder/reference/layout.side-by-side): Places the video and the search results window next to each other.
 
 <Cut title="Show code">
 
@@ -462,7 +462,7 @@ This is a more complex example that compares the video with the results of a sea
 
 ## Compare the video with another type of data {#compare-video-and-other}
 
-- Add an image using the [view.image](/docs-new/template-builder/reference/view.image) component. Place the video next to the image using the [layout.columns](/docs-new/template-builder/reference/layout.columns) component.
+- Add an image using the [view.image](/docs/template-builder/reference/view.image) component. Place the video next to the image using the [layout.columns](/docs/template-builder/reference/layout.columns) component.
 
   <Cut title="Show code">
 
@@ -492,7 +492,7 @@ This is a more complex example that compares the video with the results of a sea
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/BLaJlPMg3ttE75">View example</Button>
 
-- Place the video next to the text or audio using the [view.list](/docs-new/template-builder/reference/view.list) component.
+- Place the video next to the text or audio using the [view.list](/docs/template-builder/reference/view.list) component.
 
   <Tabs tabs={[
   { title: 'Compare the video with text', value: <VideoModerationList3/> },
@@ -501,6 +501,6 @@ This is a more complex example that compares the video with the results of a sea
 
 ## See also {#see-also}
 
-- [Tutorials: Video classification](/docs-new/tutorials/video-moderation)
+- [Tutorials: Video classification](/docs/tutorials/video-moderation)
 
 <ContactSupport/>

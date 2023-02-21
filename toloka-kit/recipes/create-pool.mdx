@@ -27,7 +27,7 @@ _Create a pool in a project in Toloka._
 
 First, specify the parameters you want your pool to have. In this example, we use the following pool settings:
 
-- the ID of the project in which the pool is created, [find it out](/docs-new/toloka-kit/recipes/get-projects) before creating the pool
+- the ID of the project in which the pool is created, [find it out](/docs/toloka-kit/recipes/get-projects) before creating the pool
 - the pool name you will see in the list and use to distinguish the pool from other ones
 - whether or not the pool can contain adult content
 - the date when the pool is going to expire and will be closed
@@ -36,7 +36,7 @@ First, specify the parameters you want your pool to have. In this example, we us
 - whether or not the responses must be accepted automatically rather than reviewed manually
 - the overlap used for the pool
 
-You can choose your own values or have your own set of the pool parameters. Refer to the [Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool) class page for more details.
+You can choose your own values or have your own set of the pool parameters. Refer to the [Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class page for more details.
 
 <CodeCopy
   isSmall
@@ -92,7 +92,7 @@ This actually creates a pool in Toloka.
 
 ### 5. Print created pool ID {#step-five}
 
-The `create_pool()` request will return the [Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
+The `create_pool()` request will return the [Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
 
 ```python
 print(new_pool.id)
@@ -128,16 +128,16 @@ print(new_pool.id)
 
 <Note mode="tip" title="List of classes and methods used in this recipe">
 
-- _[TolokaClient](/docs-new/toloka-kit/reference/toloka.client.TolokaClient) class_
-- _[Pool](/docs-new/toloka-kit/reference/toloka.client.pool.Pool) class_
-- _[create_pool()](/docs-new/toloka-kit/reference/toloka.client.TolokaClient.create_pool) method_
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class_
+- _[create_pool()](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_pool) method_
 
 </Note>
 
 ## See also {#see-also}
 
-- [How does Toloka work?](/docs-new/guide/overview)
-- [Sample project recipe](/docs-new/toloka-kit/recipes/learn-basics)
-- [More usage examples](/docs-new/toloka-kit/recipes/use-cases)
-- [Get list of projects](/docs-new/toloka-kit/recipes/get-projects)
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Get list of projects](/docs/toloka-kit/recipes/get-projects)
 - [Toloka API: Create pool](https://toloka.ai/docs/api/api-reference/#post-/pools)

@@ -21,11 +21,11 @@ For this type of project, you can use the **Image classification** preset. Note 
 
 <Cut title="Components used in the example">
 
-- [view.image](/docs-new/template-builder/reference/view.image): Image.
-- [field.button-radio-group](/docs-new/template-builder/reference/field.button-radio-group): Buttons for answer options.
-- [condition.required](/docs-new/template-builder/reference/condition.required): Checks if at least one option is selected.
-- [plugin.toloka](/docs-new/template-builder/reference/plugin.toloka): Customizes the task layout.
-- [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys): [Keyboard shortcuts](/docs-new/template-builder/best-practices/hotkeys).
+- [view.image](/docs/template-builder/reference/view.image): Image.
+- [field.button-radio-group](/docs/template-builder/reference/field.button-radio-group): Buttons for answer options.
+- [condition.required](/docs/template-builder/reference/condition.required): Checks if at least one option is selected.
+- [plugin.toloka](/docs/template-builder/reference/plugin.toloka): Customizes the task layout.
+- [plugin.hotkeys](/docs/template-builder/reference/plugin.hotkeys): [Keyboard shortcuts](/docs/template-builder/best-practices/hotkeys).
 
 </Cut>
 
@@ -33,15 +33,15 @@ For this type of project, you can use the **Image classification** preset. Note 
 
 ## What else can be configured {#add-more}
 
-- To add a detailed description to the task, use the [view.text](/docs-new/template-builder/reference/view.text) component.
+- To add a detailed description to the task, use the [view.text](/docs/template-builder/reference/view.text) component.
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/VfAHjs2V3ttFWX">View example</Button>
 
-- To let Tolokers leave comments about the task or their response, add a text field using [field.textarea](/docs-new/template-builder/reference/field.textarea).
+- To let Tolokers leave comments about the task or their response, add a text field using [field.textarea](/docs/template-builder/reference/field.textarea).
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/iMo8AGit3ttFWz">View example</Button>
 
-- Add keyboard shortcuts to rotate and zoom in images in the [plugin.hotkeys](/docs-new/template-builder/reference/plugin.hotkeys) configuration.
+- Add keyboard shortcuts to rotate and zoom in images in the [plugin.hotkeys](/docs/template-builder/reference/plugin.hotkeys) configuration.
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/gLh9ufLx3ttFXM">View example</Button>
 
@@ -58,7 +58,7 @@ Decide whether a Toloker can select only one or multiple answer options:
 
 ## Add conditions {#dependencies}
 
-The [helper.if](/docs-new/template-builder/reference/helper.if) component displays an interface element after a specific response is selected. For example, it lets a Toloker select correct statements about an image only if the image is loaded.
+The [helper.if](/docs/template-builder/reference/helper.if) component displays an interface element after a specific response is selected. For example, it lets a Toloker select correct statements about an image only if the image is loaded.
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/RbqyYj2-3ttFYz">View example</Button>
 
@@ -66,13 +66,13 @@ The [helper.if](/docs-new/template-builder/reference/helper.if) component displa
 
 ### Does the image match the search query
 
-Add a button that opens the search results and generate a search query link using the [helper.search-query](/docs-new/template-builder/reference/helper.search-query) component. To make sure that a Toloker clicked on the link and checked its contents, configure validation, as in the example.
+Add a button that opens the search results and generate a search query link using the [helper.search-query](/docs/template-builder/reference/helper.search-query) component. To make sure that a Toloker clicked on the link and checked its contents, configure validation, as in the example.
 
   <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/h9tN8XX73ttFZm">View example</Button>
 
 ### Side-by-side image and web page comparison
 
-You can display the web page in the built-in window using the [view.iframe](/docs-new/template-builder/reference/view.iframe) component. Place the image next to it using [layout.side-by-side](/docs-new/template-builder/reference/layout.side-by-side).
+You can display the web page in the built-in window using the [view.iframe](/docs/template-builder/reference/view.iframe) component. Place the image next to it using [layout.side-by-side](/docs/template-builder/reference/layout.side-by-side).
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/vHtHEcj_3vvrRM">View example</Button>
 
@@ -80,14 +80,14 @@ You can display the web page in the built-in window using the [view.iframe](/doc
 
 This is a more complex example that compares the image with the results of a search query. The following components are added:
 
-- [view.iframe](/docs-new/template-builder/reference/view.iframe): Displays the web page in an embedded window.
-- [view.device-frame](/docs-new/template-builder/reference/view.device-frame): Wraps the window in a smartphone frame.
-- [layout.side-by-side](/docs-new/template-builder/reference/layout.side-by-side): Places the image and the search results window next to each other.
+- [view.iframe](/docs/template-builder/reference/view.iframe): Displays the web page in an embedded window.
+- [view.device-frame](/docs/template-builder/reference/view.device-frame): Wraps the window in a smartphone frame.
+- [layout.side-by-side](/docs/template-builder/reference/layout.side-by-side): Places the image and the search results window next to each other.
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/a9bzsPXh3vvrwH">View example</Button>
 
 ## See also {#see-also}
 
-- [Tutorials: Image classification](/docs-new/tutorials/image-classification)
+- [Tutorials: Image classification](/docs/tutorials/image-classification)
 
 <ContactSupport/>

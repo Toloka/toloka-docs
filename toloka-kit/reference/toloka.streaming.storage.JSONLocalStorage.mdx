@@ -27,7 +27,7 @@ Simplest local storage to dump state of a pipeline and restore in case of restar
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `dirname`|**str**|<p>Directory to store pipeline&#x27;s state files. By default, &quot;/tmp&quot;.</p>
-`locker`|**Optional\[[BaseLocker](/docs-new/toloka-kit/reference/toloka.streaming.locker.BaseLocker)\]**|<p>Optional locker object. By default, FileLocker with the same dirname is used.</p>
+`locker`|**Optional\[[BaseLocker](/docs/toloka-kit/reference/toloka.streaming.locker.BaseLocker)\]**|<p>Optional locker object. By default, FileLocker with the same dirname is used.</p>
 
 **Examples:**
 
@@ -48,6 +48,6 @@ storage = JSONLocalStorage('/store-data-here', locker=FileLocker('/store-locks-h
 
 | Method | Description |
 | :------| :-----------|
-[cleanup](/docs-new/toloka-kit/reference/toloka.streaming.storage.JSONLocalStorage.cleanup)| None
-[load](/docs-new/toloka-kit/reference/toloka.streaming.storage.JSONLocalStorage.load)| None
-[save](/docs-new/toloka-kit/reference/toloka.streaming.storage.JSONLocalStorage.save)| None
+[cleanup](/docs/toloka-kit/reference/toloka.streaming.storage.JSONLocalStorage.cleanup)| None
+[load](/docs/toloka-kit/reference/toloka.streaming.storage.JSONLocalStorage.load)| None
+[save](/docs/toloka-kit/reference/toloka.streaming.storage.JSONLocalStorage.save)| None

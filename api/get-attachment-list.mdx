@@ -55,7 +55,7 @@ Parameter | Overview
 **type** | **string**<br/><br/>Attachment type. Currently the key can have only one value — `ASSIGNMENT_ATTACHMENT`.
 **user_id** | **string**<br/><br/>ID of the Toloker who uploaded the file(s).
 **sort** | <GetAttachmentListTable1/>
-**Standard query parameters** | [limit](/docs-new/api/standard-query-parameters#limit), [id_gt](/docs-new/api/standard-query-parameters#id_gt), [id_gte](/docs-new/api/standard-query-parameters#id_gte), [id_lt](/docs-new/api/standard-query-parameters#id_lt), [id_lte](/docs-new/api/standard-query-parameters#id_lte), [created_gt](/docs-new/api/standard-query-parameters#created_gt), [created_gte](/docs-new/api/standard-query-parameters#created_gte), [created_lt](/docs-new/api/standard-query-parameters#created_lt), [created_lte](/docs-new/api/standard-query-parameters#created_lte).
+**Standard query parameters** | [limit](/docs/api/standard-query-parameters#limit), [id_gt](/docs/api/standard-query-parameters#id_gt), [id_gte](/docs/api/standard-query-parameters#id_gte), [id_lt](/docs/api/standard-query-parameters#id_lt), [id_lte](/docs/api/standard-query-parameters#id_lte), [created_gt](/docs/api/standard-query-parameters#created_gt), [created_gte](/docs/api/standard-query-parameters#created_gte), [created_lt](/docs/api/standard-query-parameters#created_lt), [created_lte](/docs/api/standard-query-parameters#created_lte).
 
 ## Query example {#request-example}
 
@@ -80,7 +80,7 @@ You can set up the display of the list of files in parts (for example, 10 files 
 
 ## Response {#response}
 
-[Information about files](/docs-new/api/get-attachment) in the `items` array:
+[Information about files](/docs/api/get-attachment) in the `items` array:
 
 ```json
 {"items" : [{file #1}, {file #2}, ... {file #n}], "has_more": false}
