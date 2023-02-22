@@ -1,6 +1,6 @@
 ---
 title: "Edit a pool — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:36.659831"
+date: "2023-02-22T15:34:25.949211"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -20,6 +20,12 @@ import EditPoolList2 from './edit-pool/subcomponents/edit-pool-list-2.mdx'
 Makes changes to a pool.
 
 The pool can't be edited if it's open. [Close the pool](/docs/api/close-pool-for-update) before editing.
+
+<Note mode="restriction" title="Restriction">
+
+You can send a maximum of 10 requests per hour to change the pool overlap parameters values. Refer to the [Rate limiting](/docs/api/rate-limiting) section for the complete list of the request limitations in Toloka API.
+
+</Note>
 
 <Note mode="note" title="Note">
 

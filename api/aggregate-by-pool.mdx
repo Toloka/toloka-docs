@@ -1,6 +1,6 @@
 ---
 title: "Aggregate responses in a pool — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:33.824015"
+date: "2023-02-22T15:34:23.187157"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -21,6 +21,12 @@ import AggregateByPoolTable3 from './aggregate-by-pool/subcomponents/aggregate-b
 <Announce/>
 
 Starts aggregating responses to all completed tasks in the pool.
+
+<Note mode="restriction" title="Restriction">
+
+You can send a maximum of 5 requests of this kind per minute, 30 requests per hour, and 200 requests per day. Refer to the [Rate limiting](/docs/api/rate-limiting) section for the complete list of the request limitations in Toloka API.
+
+</Note>
 
 ## Request {#request}
 

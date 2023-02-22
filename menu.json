@@ -1610,6 +1610,10 @@
       "href": "/docs/api/access"
     },
     {
+      "title": "Rate limiting",
+      "href": "/api/rate-limiting"
+    },
+    {
       "title": "Quick start",
       "subItems": [
         {

@@ -1,6 +1,6 @@
 ---
 title: "To send a message — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:34.261939"
+date: "2023-02-22T15:34:23.565963"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -28,10 +28,16 @@ import MessageSendTable7 from './message-send/subcomponents/message-send-table-7
 
 Sends a message to Tolokers.
 
-- [Specify recipients](#spis) in a list.
-- [Select Tolokers](#didi) using a filter.
+- [Specify recipients](#body) in a list.
+- [Select Tolokers](#body) using a filter.
 
 The sent message is added to a new [message thread](/docs/api/messages).
+
+<Note mode="restriction" title="Restriction">
+
+You can send a maximum of 1 messages per day to mass mail all your users, and 100,000 messages per day when targeting specific Tolokers. Refer to the [Rate limiting](/docs/api/rate-limiting) section for the complete list of the request limitations in Toloka API.
+
+</Note>
 
 ## Request {#request}
 
