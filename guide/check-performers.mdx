@@ -1,6 +1,6 @@
 ---
 title: "How to check Tolokers: quality control rules | Toloka documentation"
-date: "2023-02-15T15:15:16.358599"
+date: "2023-02-22T17:52:27.299953"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -22,95 +22,133 @@ Use quality control rules to get better results for tasks and restrict access to
 
 If your project has a lot of similar tasks, you'll need to protect it from fake Tolokers (robots) and cheaters.
 
-#### Limiting fast responses
+### Limiting fast responses
 
 Use the [Fast responses](/docs/guide/quick-answers) rule to weed out Tolokers who perform tasks too quickly and carelessly. You've tried doing tasks and you know that each task takes at least 15 seconds. You should suspend Tolokers who submit three out of ten assignments in a row faster than the control time.
 
-<Image withBackground imageId="1675425581727" alt="" />
+<Cut title="Example">
 
-#### Limit on skipped assignments
+<Image withBackground imageId="1675427108700" alt="" />
+
+A Toloker who completes a task suite in less than 10 seconds will be banned and won't be able to access your tasks for 10 days.
+
+</Cut>
+
+### Limit on skipped assignments
 
 Another “optimization” technique that cheaters use is skipping certain assignments. They pick out the ones that seem easier to them, while other Tolokers reliably complete all the assignments they receive. However, both get paid in the same way.
 
 Use the [Skipped assignments](/docs/guide/skipped-assignments) rule to restrict access to Tolokers who skip several pages of tasks in a row.
 
-<Image withBackground imageId="1675425588383" alt="" />
+<Cut title="Example">
 
-#### Captcha
+<Image withBackground imageId="1675426782867" alt="" />
 
-Use the [Captcha](/docs/guide/captcha) rule to protect from robots. In Toloka, a captcha is shown every 10 assignments. If assignments are completed quickly and captchas get in the way, they can be shown every 20 assignments: specify low captcha frequency in the pool settings.
+A Toloker who skips 2 task suites in a row is restricted from accessing the pool and can't complete your tasks for 5 days.
 
-<Image withBackground imageId="1675425601594" alt="" />
+</Cut>
 
-<CaptchaWarning/>
-
-#### Limit on available tasks
+### Limit on available tasks
 
 Limits are also useful when you need as many different Tolokers as possible. For example, to collect data for statistics, run surveys, or pick the best version of a logo. Another case is personal descriptions for a [dating service](https://rb.ru/opinion/chat-bot-dataset/). If texts are all written by the same person, they are likely to turn out monotonous and boring.
 
 You can limit the number of tasks in the pool per Toloker or set a limit on daily earnings for your project. Use the [Submitted responses](/docs/guide/submitted-answers) and [Earnings](/docs/guide/income) rules.
 
-<Image withBackground imageId="1675425579166" alt="" />
+<Cut title="Example">
+
+<Image withBackground imageId="8f72719bb27cdcd15b58a1e9a38cc60d" alt="" />
+
+A Toloker who submits 1 assignment is restricted from accessing the project and can't complete your tasks.
+
+</Cut>
 
 ## Task completion quality control {#check-resalts}
 
 Results from conscientious Tolokers should be checked, too. In Toloka, this can be done automatically.
 
-#### Control tasks
+### Control tasks
 
 Tolokers complete tasks by selecting one of multiple possible answers. To check the quality in this type of project, use the [Control tasks](/docs/guide/goldenset) rule. This involves adding questions where you define the correct response.
 
 Mix the control questions in with the general tasks. They should make up at least 1% of the total tasks. Assign Tolokers a skill level depending on how many answers they get right.
 
-<Image withBackground imageId="1675425585477" alt="" />
+<Cut title="Example">
+
+<Image withBackground imageId="1675426796505" alt="" />
+
+If the Toloker gives at least 10 responses to the control tasks, the percentage of correct answers is assigned as the skill value. This is useful if you want to prevent Tolokers with a low skill level from completing your tasks.
+
+</Cut>
 
 The skill filters will remove anyone who makes a critical number of errors. Pay highly skilled Tolokers more. That will encourage everyone to try harder.
 
-#### Majority vote
+### Majority vote
 
 Sometimes requesters aren't able to regularly add control tasks and keep them updated.
 
 In this case, the [Majority vote](/docs/guide/mvote) rule is helpful. The platform assigns the same task to multiple Tolokers. For example, five people get the exact same task. If three or more choose the same answer, we assume it is correct.
 
-<Image withBackground imageId="1675425598419" alt="" />
+<Cut title="Example">
+
+<Image withBackground imageId="1675426910375" alt="" />
+
+If the Toloker gives at least 3 answers to tasks and the percentage of correct answers is less than 65%, they are banned on the project.
+
+</Cut>
 
 Use the percentage of matching responses to assign skill levels, control access to tasks, and reward Tolokers.
 
-#### Review results
+### Review results
 
 For tasks that aren't multiple-choice, the customer or other Tolokers check the answers. They might include recording audio, taking pictures, or writing something. Poor-quality responses are rejected.
 
 Use the [Review results](/docs/guide/reviewing-assignments) rule to control Tolokers' access to tasks. The platform calculates the percentage of responses accepted and rejected for each Toloker. Those who often made mistakes will stop getting tasks.
 
-<Image withBackground imageId="1675425575787" alt="" />
+<Cut title="Example">
+
+<Image withBackground imageId="1675427120424" alt="" />
+
+If more than 50% of Toloker's responses are rejected, the Toloker is blocked and can't complete your tasks for 15 days.
+
+</Cut>
 
 ## Recompletion of rejected assignments {#revision-results}
 
 Quality control rules let you minimize the consequences of errors. Toloka lets you send individual tasks back to Tolokers to be redone or have them redo all their work if they make too many mistakes.
 
-#### Rejected tasks
+### Rejected tasks
 
 For example, you can use Toloka to improve speech recognition algorithms. Tolokers listen to a series of 5–10-second recordings and make a transcription of each of them in order to convert speech to text.
 
 In some cases, they get it wrong. Use the [Processing rejected and accepted assignments](/docs/guide/reassessment-after-accepting) rule to automatically have Tolokers review each other's work.
 
-<Image withBackground imageId="1675425593435" alt="" />
+<Cut title="Example">
 
-#### Responses from banned Tolokers
+<Image withBackground imageId="aba9557f2d6ddbfc88b25a9fdef96d2e" alt="" />
+
+A Toloker's assignments rejected after the review are sent to another Toloker for recompletion.
+
+</Cut>
+
+### Responses from banned Tolokers
 
 When Tolokers make too many mistakes, the platform bans them from taking on more tasks. But the responses that they have already provided remain in the database and may get into the final dataset. Send these assignments for recompletion.
 
 The [Recompletion of assignments from banned users](/docs/guide/restore-task-overlap) rule is helpful here. While the cost will go up, there will be fewer errors.
 
-<Image withBackground imageId="1675425590944" alt="" />
+<Cut title="Example">
 
-When Tolokers are blocked, the tasks they've completed are sent to other Tolokers.
+<Image withBackground imageId="1cb0eac2cf3903c289702647a86c057f" alt="" />
+
+If a Toloker is banned by a quality control rule, their tasks are sent for re-completion to another Toloker.
+
+</Cut>
 
 ## Combination of methods {#combination-methods}
 
 The best practice is to combine quality control rules. For example, if tasks involve selecting a response from several options, you should use:
 
-- [Captchas](/docs/guide/captcha).
+- [Control tasks](/docs/guide/goldenset).
 - [Fast responses](/docs/guide/quick-answers).
 
 Content generation projects like writing texts or taking photos need a different combination:

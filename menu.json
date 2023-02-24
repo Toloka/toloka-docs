@@ -208,10 +208,6 @@
                   "href": "/docs/guide/quick-answers"
                 },
                 {
-                  "title": "Captcha",
-                  "href": "/docs/guide/captcha"
-                },
-                {
                   "title": "Skipped assignments",
                   "href": "/docs/guide/skipped-assignments"
                 },
@@ -224,7 +220,7 @@
                   "href": "/docs/guide/submitted-answers"
                 },
                 {
-                  "title": "Results of assignment review",
+                  "title": "Results of manual review",
                   "href": "/docs/guide/reviewing-assignments"
                 },
                 {
@@ -612,6 +608,10 @@
                 {
                   "title": "Audio comparison (Side-by-side)",
                   "href": "/docs/template-builder/templates/sbs-audio"
+                },
+                {
+                  "title": "Voice recording",
+                  "href": "/docs/template-builder/templates/voice-recording"
                 }
               ]
             },
@@ -1610,6 +1610,10 @@
       "href": "/docs/api/access"
     },
     {
+      "title": "Rate limiting",
+      "href": "/docs/api/rate-limiting"
+    },
+    {
       "title": "Quick start",
       "subItems": [
         {
@@ -1856,10 +1860,6 @@
             {
               "title": "Majority vote",
               "href": "/docs/api/mv"
-            },
-            {
-              "title": "Entering captchas",
-              "href": "/docs/api/captcha"
             },
             {
               "title": "Compensation amount",

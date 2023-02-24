@@ -1,0 +1,179 @@
+---
+title: "Voice recording — Template Builder | Toloka documentation"
+date: "2023-02-22T16:39:20.512368"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import ContactSupport from '../subcomponents/contact-support.mdx'
+
+# Voice recording
+
+For this type of project, you can use the **Voice Recording** preset.
+
+This preset helps you convert text to speech. Using the Toloka mobile app, Tolokers should tap the button and read the text aloud. If the Toloker uses a desktop application, when he clicks on the button, a window opens to download an audio file. After getting the results, you can listen to the recordings and download them.
+
+Take a look at the example: the labeling interface includes a text and a voice recorder button. Note that the validation and task layout are already configured in this example.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/XgN35IUF3xqvGy">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [view.list](/docs/template-builder/reference/view.list): Displays data in a list.
+- [view.text](/docs/template-builder/reference/view.text): Adds the text you want to convert to speech.
+
+    <Cut title="Show code">
+
+    ```json
+    {
+      "type": "view.text",
+      "content": {
+        "type": "data.input",
+        "path": "text"
+      }
+    }
+    ```
+
+    </Cut>
+
+- [field.audio](/docs/template-builder/reference/field.audio): Allows to record (or upload) an audio file.
+
+    <Cut title="Show code">
+
+    ```json
+    {
+      "type": "field.audio",
+      "data": {
+          "type": "data.output",
+          "path": "audio_file"
+      },
+      "validation": {
+          "type": "condition.required"
+      }
+    }
+    ```
+    </Cut>
+
+- [condition.required](/docs/template-builder/reference/condition.required): Сhecks if the audio file is in the response.
+
+    <Cut title="Show code">
+
+    ```json
+    {
+      "type": "condition.required"
+    }
+    ```
+
+    </Cut>
+
+- [plugin.toloka](/docs/template-builder/reference/plugin.toloka): Customizes the task layout.
+
+    <Cut title="Show code">
+
+    ```json
+    {
+      "type": "plugin.toloka",
+      "layout": {
+        "kind": "scroll",
+        "taskWidth": 500
+      }
+    }
+    ```
+
+    </Cut>
+
+</Cut>
+
+If this template doesn't meet your needs, see other examples in the **Audio** section.
+
+## Add a description {#add-description}
+
+To add a detailed description to the task, use the [view.text](/docs/template-builder/reference/view.text) component.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "view.text",
+  "content": "Tap the voice recorder button and read the text aloud."
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/a5j6lIKx3zL3nz">View example</Button>
+
+## Add a layout {#add-layout}
+
+To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs/template-builder/reference/view.alert). You can place it in the [view.list](/docs/template-builder/reference/view.list) along with the other components.
+
+In this example, the text is highlighted with a blue border.
+
+<Cut title="Show code">
+
+```json
+  {
+    "type": "view.alert",
+    "theme": "info",
+    "content": {
+       "type": "view.text",
+       "content": {
+         "type": "data.input",
+         "path": "text"
+        }
+    }
+  }
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/3bZ9nXUi3zLAZC">View example</Button>
+
+## Add a condition {#add-a-condition}
+
+The [helper.if](/docs/template-builder/reference/helper.if) component displays an interface element after a specific response is selected.
+
+<Cut title="Show code">
+
+```json
+{
+   "type": "helper.if",
+   "condition": {
+      "type": "condition.equals",
+      "data": {
+         "type": "data.output",
+          "path": "not_recorded"
+        },
+       "to": false
+    },
+   "then": {
+      "type": "field.audio",
+      "data": {
+          "type": "data.output",
+          "path": "audio"
+        }
+    },
+    "else": {
+      "type": "field.textarea",
+      "label": "Tell us why you couldn't upload the file.",
+      "placeholder": "Enter text",
+      "data": {
+          "type": "data.output",
+          "path": "comment"
+        },
+       "validation": {
+          "type": "condition.required",
+          "hint": "Add comment"
+        }
+    }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/3VRy3mKj3zvPcB">View example</Button>
+
+<ContactSupport/>

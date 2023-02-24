@@ -1,0 +1,56 @@
+---
+title: "Rate limiting — Toloka API | Toloka documentation"
+date: "2023-02-22T15:34:23.845599"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+# Rate limiting
+
+Toloka applies the following rate limiting to the requests from clients to the Toloka API.
+
+## Requests per second
+
+Toloka limits the number of requests that clients can send per second. If you exceed **300** requests to the Toloka API per second, the platform will return an error with the `429 Too Many Requests` HTTP status code. If the problem persists, please lower the number of requests per second and try and repeat your requests in a couple of seconds.
+
+## API methods request limiting
+
+Some of the API methods have their own additional limitations for the methods that allow you to create or edit objects during a minute, hour, or day. Once you reach the limit, the platform will return an error with the `429 Too Many Requests` HTTP status code and the reason for the error in the response body.
+
+Method | Minute | Hour | Day
+------ | ------ | ---- | ---
+[Aggregate results](/docs/api/aggregated-solutions) | 5 | 30 | 200
+[Assign skills](/docs/api/set-skill) | – | – | 100,000
+[Change overlap](/docs/api/edit-pool) | – | 10 | –
+[Clone pools](/docs/api/clone-pool) | 20 | – | 100
+[Clone training pools](/docs/api/clone-training) | 20 | – | 100
+[Create pools](/docs/api/create-pool) | 20 | – | 100
+[Create projects](/docs/api/create-prj) | 20 | – | 100
+[Create skills](/docs/api/create-skill) | 10 | – | 100
+[Create tasks](/docs/api/create-task) | 200,000 | – | 4,000,000
+[Create task suites](/docs/api/create-task-suite) | 100,000 | – | 2,000,000
+[Create training pools](/docs/api/create-training) | 20 | – | 100
+[Issue rewards](/docs/api/create-bonus) | – | – | 10,000
+[Message all Tolokers](/docs/api/message-send) | – | – | 1 message
+[Message specific Tolokers](/docs/api/message-send) | – | – | 100,000
+
+## Additional actions limitations
+
+The actions below don't have public API methods, but they affect the actions in the interface and also apply some limitations.
+
+Action | Minute | Hour | Day
+------ | ------ | ---- | ---
+Give access to account | – | – | 100
+Mass actions with users | – | – | 10,000 operations
+Upload files | – | – | 1000 files
+Uploaded file size | – | – | 5,242,880 KB
+Size of files uploaded by Tolokers | – | – | 1,073,741,824 KB
+
+<Note mode="note" title="Note">
+
+If you need to increase some of the above limits, please [contact our support](/docs/guide/troubleshooting/support).
+
+</Note>

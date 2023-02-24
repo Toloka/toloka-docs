@@ -1,6 +1,6 @@
 ---
 title: "Create a pool — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:35.054863"
+date: "2023-02-22T15:34:24.331310"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -37,7 +37,7 @@ The pool is automatically assigned an ID.
 
 <Note mode="restriction" title="Restriction">
 
-You can send a maximum of 20 requests of this kind per minute and 100 requests per day.
+You can send a maximum of 20 requests of this kind per minute and 100 requests per day. Refer to the [Rate limiting](/docs/api/rate-limiting) section for the complete list of the request limitations in Toloka API.
 
 </Note>
 
@@ -335,8 +335,7 @@ Parameter | Overview
 **mixer_config.force_last_assignment_delay_seconds** | **integer**<br/><br/>Waiting time (in seconds) after adding a task or increasing the overlap before assigning the last task suite in the pool. Minimum — 0, maximum — 86,400 seconds (one day).<br/><br/>This parameter can be used if the pool has `force_last_assignment: true`.
 **mixer_config.mix_tasks_in_creation_order** | <CreatePoolTable11/>
 **mixer_config. shuffle_tasks_in_task_suite** | <CreatePoolTable12/>
-**mixer_config.golden_task_distribution_function** | **object**<br/><br/>Vary the frequency of control tasks. The option allows you to change the frequency of checking as the Toloker completes more tasks.<br/><br/>If it is filled in, use `real_task_count` to specify the maximum number of tasks per task suite. To use the option, set the `golden_task_count:0` and `min_golden_tasks_count:null` parameter values.<br/><br/>The interval bound is the number of a task in the pool. If the task suite has several intervals, the settings for the first interval are applied.<br/><br/>**Example:**<br/><br/>In the first task suite (the range from 1 to 25), every fifth task is a control task, and in the following suites, every 25th task is a control task.<br/><br/>**mixer_config.training_task_distribution_function** | **object**<br/><br/>Issue of training tasks with uneven frequency. This option allows you to change the frequency of training tasks as the Toloker completes more tasks.<br/><br/>If it is filled in, then in `real_task_count` specify the maximum number of tasks to put in a task suite. To use the option, set parameter values `training_task_count:0` and `min_training_tasks_count:null`.<br/><br/>**Example:**<br/><br/>
-In the first task suite (the range from 1 to 25), every fifth task is a training task, and in the following suites, every 25th task is a training task.
+**mixer_config.golden_task_distribution_function** | **object**<br/><br/>Vary the frequency of control tasks. The option allows you to change the frequency of checking as the Toloker completes more tasks.<br/><br/>If it is filled in, use `real_task_count` to specify the maximum number of tasks per task suite. To use the option, set the `golden_task_count:0` and `min_golden_tasks_count:null` parameter values.<br/><br/>The interval bound is the number of a task in the pool. If the task suite has several intervals, the settings for the first interval are applied.<br/><br/>**Example:**<br/><br/>In the first task suite (the range from 1 to 25), every fifth task is a control task, and in the following suites, every 25th task is a control task.<br/><br/>**mixer_config.training_task_distribution_function** | **object**<br/><br/>Issue of training tasks with uneven frequency. This option allows you to change the frequency of training tasks as the Toloker completes more tasks.<br/><br/>If it is filled in, then in `real_task_count` specify the maximum number of tasks to put in a task suite. To use the option, set parameter values `training_task_count:0` and `min_training_tasks_count:null`.<br/><br/>**Example:**<br/><br/>In the first task suite (the range from 1 to 25), every fifth task is a training task, and in the following suites, every 25th task is a training task.
 
 ## Response {#response}
 

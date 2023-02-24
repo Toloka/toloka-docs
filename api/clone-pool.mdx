@@ -1,6 +1,6 @@
 ---
 title: "Clone a pool — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:33.166928"
+date: "2023-02-22T15:34:22.546109"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -21,6 +21,12 @@ import ClonePoolTable1 from './clone-pool/subcomponents/clone-pool-table-1.mdx'
 Creates a duplicate pool.
 
 An empty pool will be created with the same parameters.
+
+<Note mode="restriction" title="Restriction">
+
+You can send a maximum of 20 requests of this kind per minute and 100 requests per day. Refer to the [Rate limiting](/docs/api/rate-limiting) section for the complete list of the request limitations in Toloka API.
+
+</Note>
 
 ## Request {#request}
 
