@@ -1,6 +1,6 @@
 ---
 title: "Entries2ObjectHelperV1 — Toloka-Kit | Toloka documentation"
-date: "2023-02-07T15:41:52.060682"
+date: "2023-02-27T17:42:40.959848"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,7 @@ docsMenu: "tkitMenu"
 ---
 
 # Entries2ObjectHelperV1
-`toloka.client.project.template_builder.helpers.Entries2ObjectHelperV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/project/template_builder/helpers.py#L45)
+`toloka.client.project.template_builder.helpers.Entries2ObjectHelperV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/project/template_builder/helpers.py#L45)
 
 ```python
 Entries2ObjectHelperV1(
@@ -23,6 +23,8 @@ Entries2ObjectHelperV1(
 Creating an object from a specified array of key-value pairs.
 
 For example, let's say you have an array like this:
+
+```python
 [
     {
         "key": "foo",
@@ -33,8 +35,10 @@ For example, let's say you have an array like this:
         "value": "world"
     }
 ]
+```
+
 It is converted to an object whose elements consist of the values of the original array:
-{ "foo": "hello", "bar": "world" }
+`{ "foo": "hello", "bar": "world" }`
 
 ## Parameters Description
 

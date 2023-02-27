@@ -1,6 +1,6 @@
 ---
 title: "TolokaClient — Toloka-Kit | Toloka documentation"
-date: "2023-02-07T15:41:41.631568"
+date: "2023-02-27T17:42:28.638876"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,7 @@ docsMenu: "tkitMenu"
 ---
 
 # TolokaClient
-`toloka.client.TolokaClient` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/client/__init__.py#L170)
+`toloka.client.TolokaClient` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/__init__.py#L171)
 
 ```python
 TolokaClient(
@@ -21,7 +21,8 @@ TolokaClient(
     url: Optional[str] = None,
     retry_quotas: Union[List[str], str, None] = 'MIN',
     retryer_factory: Optional[Callable[[], Retry]] = None,
-    act_under_account_id: Optional[str] = None
+    act_under_account_id: Optional[str] = None,
+    verify: Union[str, bool, SSLContext] = True
 )
 ```
 
@@ -48,6 +49,7 @@ Call `TolokaClient.update_project` and pass the `Project` to apply your changes.
 `retry_quotas`|**Union\[List\[str\], str, None\]**|<p>List of quotas that must be retried. Set `None` or pass an empty list for not retrying any quotas. If you specified the `retries` as `Retry` instance, you must set this parameter to `None`. Possible values:</p> <ul> <li>`MIN` - Retry minutes quotas.</li> <li>`HOUR` - Retry hourly quotas. This means that the program just sleeps for an hour.</li> <li>`DAY` - Retry daily quotas. We do not recommend retrying these quotas.</li> </ul> <p></p><p>Default value: `MIN`.</p>
 `retryer_factory`|**Optional\[Callable\[\[\], Retry\]\]**|<p>Factory that creates `Retry` object. Fully specified retry policy that will apply to all requests. </p><p>Default value: `None`.</p>
 `act_under_account_id`|**Optional\[str\]**|<p>ID of the requester that has been shared access with the current token owner account. All requests will be made using a specified account. See [Shared access to the requester&#x27;s account](/docs/guide/multiple-access) documentation page. ID of the requester can be retrieved using the [get_requester](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_requester) method (this method should be called by the account owner using account&#x27;s token).</p>
+`verify`|**Union\[str, bool, SSLContext\]**|<p>SSL certificates (a.k.a CA bundle) used to verify the identity of requested hosts. Either `True` (default CA bundle), a path to an SSL certificate file, an `ssl.SSLContext`, or `False` (which will disable verification)</p>
 
 **Examples:**
 
@@ -75,13 +77,13 @@ toloka_client = toloka.TolokaClient(your_oauth_token, 'PRODUCTION')  # Or switch
 [archive_app_project](/docs/toloka-kit/reference/toloka.client.TolokaClient.archive_app_project)| Archives an App project.
 [archive_pool](/docs/toloka-kit/reference/toloka.client.TolokaClient.archive_pool)| Archives a pool.
 [archive_pool_async](/docs/toloka-kit/reference/toloka.client.TolokaClient.archive_pool_async)| Archives a pool. Sends an asynchronous request to Toloka.
-[archive_project](/docs/toloka-kit/reference/toloka.client.TolokaClient.archive_project)| Sends project to archive
-[archive_project_async](/docs/toloka-kit/reference/toloka.client.TolokaClient.archive_project_async)| Sends project to archive, asynchronous version
+[archive_project](/docs/toloka-kit/reference/toloka.client.TolokaClient.archive_project)| Archives a project.
+[archive_project_async](/docs/toloka-kit/reference/toloka.client.TolokaClient.archive_project_async)| Archives a project. Sends an asynchronous request to Toloka.
 [archive_training](/docs/toloka-kit/reference/toloka.client.TolokaClient.archive_training)| Archives a training.
 [archive_training_async](/docs/toloka-kit/reference/toloka.client.TolokaClient.archive_training_async)| Archives a training. Sends an asynchronous request to Toloka.
 [clone_pool](/docs/toloka-kit/reference/toloka.client.TolokaClient.clone_pool)| Clones an existing pool.
 [clone_pool_async](/docs/toloka-kit/reference/toloka.client.TolokaClient.clone_pool_async)| Clones an existing pool. Sends an asynchronous request to Toloka.
-[clone_project](/docs/toloka-kit/reference/toloka.client.TolokaClient.clone_project)| Synchronously clones the project, all pools and trainings
+[clone_project](/docs/toloka-kit/reference/toloka.client.TolokaClient.clone_project)| Clones a project and all pools and trainings inside it.
 [clone_training](/docs/toloka-kit/reference/toloka.client.TolokaClient.clone_training)| Clones an existing training.
 [clone_training_async](/docs/toloka-kit/reference/toloka.client.TolokaClient.clone_training_async)| Clones an existing training. Sends an asynchronous request to Toloka.
 [close_pool](/docs/toloka-kit/reference/toloka.client.TolokaClient.close_pool)| Closes a pool.
@@ -96,7 +98,7 @@ toloka_client = toloka.TolokaClient(your_oauth_token, 'PRODUCTION')  # Or switch
 [create_app_items](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_app_items)| Creates task items in an App project in Toloka and adds them to an existing batch.
 [create_app_project](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_app_project)| Creates an App project in Toloka.
 [create_pool](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_pool)| Creates a new pool in Toloka.
-[create_project](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_project)| Creates a new project
+[create_project](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_project)| Creates a new project in Toloka.
 [create_skill](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_skill)| Creates a new Skill
 [create_task](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_task)| Creates a new task in Toloka.
 [create_task_suite](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_task_suite)| Creates a task suite in Toloka.
@@ -152,7 +154,7 @@ toloka_client = toloka.TolokaClient(your_oauth_token, 'PRODUCTION')  # Or switch
 [get_operations](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_operations)| Finds all operations that match certain rules and returns them in an iterable object
 [get_pool](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_pool)| Gets pool data from Toloka.
 [get_pools](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_pools)| Finds all pools that match certain criteria.
-[get_project](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_project)| Reads one specific project
+[get_project](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_project)| Gets project data from Toloka.
 [get_projects](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_projects)| Finds all projects that match certain criteria.
 [get_requester](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_requester)| Reads information about the customer and the account balance
 [get_skill](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_skill)| Reads one specific skill
@@ -193,7 +195,7 @@ toloka_client = toloka.TolokaClient(your_oauth_token, 'PRODUCTION')  # Or switch
 [stop_app_batch](/docs/toloka-kit/reference/toloka.client.TolokaClient.stop_app_batch)| Stops annotation of a batch of task items in an App project.
 [unarchive_app_project](/docs/toloka-kit/reference/toloka.client.TolokaClient.unarchive_app_project)| Unarchives an App project.
 [update_pool](/docs/toloka-kit/reference/toloka.client.TolokaClient.update_pool)| Updates all pool parameters in Toloka.
-[update_project](/docs/toloka-kit/reference/toloka.client.TolokaClient.update_project)| Makes changes to the project
+[update_project](/docs/toloka-kit/reference/toloka.client.TolokaClient.update_project)| Updates all project parameters in Toloka.
 [update_skill](/docs/toloka-kit/reference/toloka.client.TolokaClient.update_skill)| Makes changes to the skill
 [update_training](/docs/toloka-kit/reference/toloka.client.TolokaClient.update_training)| Updates parameters of a training in Toloka.
 [upsert_webhook_subscriptions](/docs/toloka-kit/reference/toloka.client.TolokaClient.upsert_webhook_subscriptions)| Creates (upsert) many webhook-subscriptions.

@@ -1,6 +1,6 @@
 ---
 title: "NewUserSkills — Toloka-Kit | Toloka documentation"
-date: "2023-02-07T15:42:02.065030"
+date: "2023-02-27T17:42:51.497795"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,7 @@ docsMenu: "tkitMenu"
 ---
 
 # NewUserSkills
-`toloka.metrics.metrics.NewUserSkills` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.3/src/metrics/metrics.py#L259)
+`toloka.metrics.metrics.NewUserSkills` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/metrics/metrics.py#L267)
 
 ```python
 NewUserSkills(
@@ -56,9 +56,14 @@ collector = MetricCollector
 )
 asyncio.run(collector.run())
 ```
+
+```python
+{
     'count': [(datetime.datetime(2021, 11, 18, 8, 31, 54, 11000), 1)],
     'values':  [(datetime.datetime(2021, 11, 18, 8, 31, 54, 11000), Decimal('50.000000000000'))],
 }
+```
+
 ## Methods Summary
 
 | Method | Description |
