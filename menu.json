@@ -630,6 +630,10 @@
                 {
                   "title": "Searching for product characteristics",
                   "href": "/docs/template-builder/templates/data-search"
+                },
+                {
+                  "title": "Product photo search",
+                  "href": "/docs/template-builder/templates/product-photo-search"
                 }
               ]
             },
