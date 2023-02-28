@@ -1,0 +1,382 @@
+---
+title: "Product photo search — Template Builder | Toloka documentation"
+date: "2023-02-28T16:44:57.397454"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import TolokaTbSourceAddMedia from '../subcomponents/toloka-tb-source/id-toloka-tb-source/add-media.mdx'
+import ContactSupport from '../subcomponents/contact-support.mdx'
+
+# Product photo search
+
+For this type of project, you can use the **Product photo search** preset.
+
+This template helps you get the photos of the products from the Internet that meet the specified parameters. The Tolokers search products by name or SKU the Internet and upload product images.
+
+Take a look at the example:  the template includes a product description, links to search in Google, an upload area, and a checkbox. The Tolokers must upload a product photo or select the **No photo found** option if the photo hasn't been found.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/w2TrMbmD42b39k">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [view.list](/docs/template-builder/reference/view.list): Displays data in a list.
+
+- [view.text](/docs/template-builder/reference/view.text): Adds a block with text.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.text",
+    "label": "Product name",
+    "content": {
+      "type": "data.input",
+      "path": "name"
+    }
+  },
+  {
+    "type": "view.text",
+    "label": "Brand",
+    "content": {
+      "type": "data.input",
+      "path": "brand"
+    }
+  },
+  {
+    "type": "view.text",
+    "label": "SKU",
+    "content": {
+      "type": "data.input",
+      "path": "sku"
+    }
+  }
+  ```
+  </Cut>
+
+- [view.link-group](/docs/template-builder/reference/view.link-group): Groups links together.
+
+  A combination of [condition.any](/docs/template-builder/reference/condition.any) and [condition.link-opened](/docs/template-builder/reference/condition.link-opened) used inside the the `validation` property checks if a Toloker has clicked at least one link.
+
+  The [helper.search-query](/docs/template-builder/reference/helper.search-query) component creates a string with a search query reference.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.link-group",
+    "validation": {
+      "type": "condition.any",
+      "hint": "Search for photos by the name or SKU",
+      "conditions": [
+        {
+          "type": "condition.link-opened",
+          "url": {
+            "<Formula withoutContainer={true} content="$ref": "view.items.3.links.0.url"
+          }
+        },
+        {
+          "type": "condition.link-opened",
+          "url": {
+            "$"/>ref": "view.items.3.links.1.url"
+          }
+        }
+      ]
+    },
+    "links": [
+      {
+        "url": {
+          "type": "helper.search-query",
+          "query": {
+            "type": "data.input",
+            "path": "name"
+          },
+          "engine": "google/images"
+        },
+        "content": "Search by product name",
+        "theme": "primary"
+      },
+      {
+        "url": {
+          "type": "helper.search-query",
+          "query": {
+            "type": "data.input",
+            "path": "sku"
+          },
+          "engine": "google/images"
+        },
+        "content": "Search by SKU",
+        "theme": "primary"
+      }
+    ]
+  }
+  ```
+
+  </Cut>
+
+- A combination of [helper.if](/docs/template-builder/reference/helper.if) and [condition.equals](/docs/template-builder/reference/condition.equals): Hides the photo upload field if the **No photo found** option is selected.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "helper.if",
+    "condition": {
+      "type": "condition.equals",
+      "data": {
+        "type": "data.output",
+        "path": "not_found"
+      },
+      "to": false
+   },
+    "then": {
+      "type": "view.list",
+      "items": [
+        {
+          "type": "field.file",
+          "label": "Product photo",
+          "data": {
+            "type": "data.output",
+            "path": "image"
+          }
+        }
+      ]
+    }
+  }
+  ```
+  </Cut>
+
+- [field.file](/docs/template-builder/reference/field.file): Displays a button to upload files.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.file",
+    "label": "Product photo",
+    "data": {
+      "type": "data.output",
+      "path": "image"
+    }
+  }
+  ```
+  </Cut>
+
+- [field.checkbox](/docs/template-builder/reference/field.checkbox): Adds a checkbox.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.checkbox",
+    "label": "No photo found",
+    "preserveFalse": true,
+    "data": {
+      "type": "data.output",
+      "path": "not_found"
+    }
+  }
+  ```
+  </Cut>
+
+- A combination of [condition.any](/docs/template-builder/reference/condition.any), [condition.required](/docs/template-builder/reference/condition.required), and [condition.equals](/docs/template-builder/reference/condition.equals) inside the `validation` property: Checks that either the product image is uploaded or the **No photo found** option is selected.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "condition.any",
+    "conditions": [
+      {
+        "type": "condition.required",
+        "data": {
+          "type": "data.output",
+          "path": "image"
+        }
+      },
+      {
+        "type": "condition.equals",
+        "data": {
+          "type": "data.output",
+          "path": "not_found"
+        },
+        "to": true
+      }
+    ],
+    "hint": "Please, attach a file or check \"No photo found\""
+  }
+  ```
+  </Cut>
+
+- [plugin.toloka](/docs/template-builder/reference/plugin.toloka): Customizes the task layout.
+
+  <Cut title="Show code">
+
+  ```json
+  "plugins": [
+    {
+      "type": "plugin.toloka",
+      "layout": {
+        "kind": "scroll",
+        "taskWidth": 500
+      }
+    }
+  ]
+  ```
+  </Cut>
+
+</Cut>
+
+<TolokaTbSourceAddMedia/>
+
+If this template doesn't meet your needs, see other examples in the **Data enrichment** section.
+
+## Add a description {#add-description}
+
+To add a detailed description to the task, use the [view.text](/docs/template-builder/reference/view.text) component.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "view.text",
+  "content": "Search for photos by the name or SKU. If you couldn't find photos, select the “No photo found” option."
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/NyFlK-o642gTLQ">View example</Button>
+
+## Add a response field {#add-text-area}
+
+To let Tolokers leave comments about the task or their response, add a text field using [field.textarea](/docs/template-builder/reference/field.textarea).
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "field.textarea",
+  "label": "Comments",
+  "placeholder": "Enter text",
+  "data": {
+    "type": "data.output",
+    "path": "comment"
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/FuPdYTCm42gTtZ">View example</Button>
+
+## Add a layout {#add-layout}
+
+To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs/template-builder/reference/view.alert). In this example, the task description is highlighted with a blue border.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "view.alert",
+  "theme": "info",
+  "content": {
+    "type": "view.text",
+    "content": "Search for photos by the name or SKU."
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/1uDPJ4zp42gUQX">View example</Button>
+
+## Add conditions {#dependencies}
+
+The [helper.switch](/docs/template-builder/reference/helper.switch) component displays an additional interface element if a certain condition is met. In this example, the Toloker first selects **Yes** if the photo has been found, and **No** if it has not. After that, depending on the selected option an additional field appears: to upload the photo or to leave a comment why the photo cannot be uploaded.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "field.radio-group",
+  "label": "Could you find a product photo?",
+  "data": {
+    "type": "data.output",
+    "path": "photo"
+  },
+  "options": [
+    {
+      "label": "Yes",
+      "value": "yes"
+    },
+    {
+      "label": "No",
+      "value": "no"
+    }
+  ],
+  "validation": {
+    "type": "condition.required",
+    "hint": "Select one of the options"
+  }
+},
+{
+  "type": "helper.switch",
+  "cases": [
+    {
+      "condition": {
+        "type": "condition.equals",
+        "data": {
+          "type": "data.output",
+          "path": "photo"
+        },
+        "to": "yes"
+      },
+      "result": {
+        "type": "field.file",
+        "label": "Product photo",
+        "data": {
+          "type": "data.output",
+          "path": "image"
+        },
+        "validation": {
+          "type": "condition.required",
+          "hint": "Please, attach a photo."
+        }
+      }
+    },
+    {
+      "condition": {
+        "type": "condition.equals",
+        "data": {
+          "type": "data.output",
+          "path": "photo"
+        },
+        "to": "no"
+      },
+      "result": {
+        "type": "field.textarea",
+        "label": "Why?",
+        "placeholder": "Add comment",
+        "data": {
+          "type": "data.output",
+          "path": "comment"
+        },
+        "validation": {
+          "type": "condition.required",
+          "hint": "Please, add comment."
+        }
+      }
+    }
+  ]
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/2Cdpm5sU42gWEH">View example</Button>
+
+<ContactSupport/>
