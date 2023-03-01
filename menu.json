@@ -2835,23 +2835,23 @@
           "href": "/docs/apps-api/ref/app-project"
         },
         {
-          "href": "/docs/apps-api/ref/app-project/app-projects-get",
+          "href": "/docs/apps-api/ref/app-project/app-projects_get",
           "title": "Get projects"
         },
         {
-          "href": "/docs/apps-api/ref/app-project/app-projects-post",
+          "href": "/docs/apps-api/ref/app-project/app-projects_post",
           "title": "Create project"
         },
         {
-          "href": "/docs/apps-api/ref/app-project/app-projectsapp_project_id-get",
+          "href": "/docs/apps-api/ref/app-project/app-projects_app_project_id_get",
           "title": "Get project by ID"
         },
         {
-          "href": "/docs/apps-api/ref/app-project/app-projectsapp_project_idarchive-post",
+          "href": "/docs/apps-api/ref/app-project/app-projects_app_project_id_archive_post",
           "title": "Archive project"
         },
         {
-          "href": "/docs/apps-api/ref/app-project/app-projectsapp_project_idunarchive-post",
+          "href": "/docs/apps-api/ref/app-project/app-projects_app_project_id_unarchive_post",
           "title": "Unarchive project"
         }
       ]
@@ -2864,11 +2864,11 @@
           "href": "/docs/apps-api/ref/app"
         },
         {
-          "href": "/docs/apps-api/ref/app/apps-get",
+          "href": "/docs/apps-api/ref/app/apps_get",
           "title": "Get project templates"
         },
         {
-          "href": "/docs/apps-api/ref/app/appsapp_id-get",
+          "href": "/docs/apps-api/ref/app/apps_app_id_get",
           "title": "Get project template by ID"
         }
       ]
@@ -2881,19 +2881,19 @@
           "href": "/docs/apps-api/ref/item"
         },
         {
-          "href": "/docs/apps-api/ref/item/app-projectsapp_project_iditemsitem_id-get",
+          "href": "/docs/apps-api/ref/item/app-projects_app_project_id_items_item_id_get",
           "title": "Get item by ID"
         },
         {
-          "href": "/docs/apps-api/ref/item/app-projectsapp_project_iditems-get",
+          "href": "/docs/apps-api/ref/item/app-projects_app_project_id_items_get",
           "title": "Get project items"
         },
         {
-          "href": "/docs/apps-api/ref/item/app-projectsapp_project_iditems-post",
+          "href": "/docs/apps-api/ref/item/app-projects_app_project_id_items_post",
           "title": "Add new item"
         },
         {
-          "href": "/docs/apps-api/ref/item/app-projectsapp_project_iditemsbulk-post",
+          "href": "/docs/apps-api/ref/item/app-projects_app_project_id_items_bulk_post",
           "title": "Add items in bulk"
         }
       ]
@@ -2906,35 +2906,35 @@
           "href": "/docs/apps-api/ref/batch"
         },
         {
-          "href": "/docs/apps-api/ref/batch/app-projectsapp_project_idbatches-get",
+          "href": "/docs/apps-api/ref/batch/app-projects_app_project_id_batches_get",
           "title": "Get project batches"
         },
         {
-          "href": "/docs/apps-api/ref/batch/app-projectsapp_project_idbatches-post",
+          "href": "/docs/apps-api/ref/batch/app-projects_app_project_id_batches_post",
           "title": "Create batch with items"
         },
         {
-          "href": "/docs/apps-api/ref/batch/app-projectsapp_project_idbatchessync-post",
+          "href": "/docs/apps-api/ref/batch/app-projects_app_project_id_batches_sync_post",
           "title": "Start sync batch processing"
         },
         {
-          "href": "/docs/apps-api/ref/batch/app-projectsapp_project_idbatchesbatch_id-get",
+          "href": "/docs/apps-api/ref/batch/app-projects_app_project_id_batches_batch_id_get",
           "title": "Get batch by ID"
         },
         {
-          "href": "/docs/apps-api/ref/batch/app-projectsapp_project_idbatchesbatch_id-patch",
+          "href": "/docs/apps-api/ref/batch/app-projects_app_project_id_batches_batch_id_patch",
           "title": "Update batch"
         },
         {
-          "href": "/docs/apps-api/ref/batch/app-projectsapp_project_idbatchesbatch_idstart-post",
+          "href": "/docs/apps-api/ref/batch/app-projects_app_project_id_batches_batch_id_start_post",
           "title": "Start batch processing"
         },
         {
-          "href": "/docs/apps-api/ref/batch/app-projectsapp_project_idbatchesbatch_idstop-post",
+          "href": "/docs/apps-api/ref/batch/app-projects_app_project_id_batches_batch_id_stop_post",
           "title": "Stop batch processing"
         },
         {
-          "href": "/docs/apps-api/ref/batch/app-projectsapp_project_idbatchesbatch_idresume-post",
+          "href": "/docs/apps-api/ref/batch/app-projects_app_project_id_batches_batch_id_resume_post",
           "title": "Resume batch processing"
         }
       ]
