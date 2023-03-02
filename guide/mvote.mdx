@@ -1,6 +1,6 @@
 ---
 title: "Majority vote | Toloka documentation"
-date: "2023-02-15T15:15:20.027268"
+date: "2023-03-02T19:39:06.775998"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -16,8 +16,6 @@ import FaqMultipleFields from '../subcomponents/faq/pool-setup/multiple-fields.m
 import ContactGuideSupport from './subcomponents/contact-support.mdx'
 import MvoteTable1 from './mvote/subcomponents/mvote-table-1.mdx'
 import MvoteTable2 from './mvote/subcomponents/mvote-table-2.mdx'
-import MvoteTable3 from './mvote/subcomponents/mvote-table-3.mdx'
-import MvoteTable4 from './mvote/subcomponents/mvote-table-4.mdx'
 import MvoteList1 from './mvote/subcomponents/mvote-list-1.mdx'
 import MvoteList2 from './mvote/subcomponents/mvote-list-2.mdx'
 import MvoteList3 from './mvote/subcomponents/mvote-list-3.mdx'
@@ -25,10 +23,12 @@ import MvoteList4 from './mvote/subcomponents/mvote-list-4.mdx'
 import MvoteList5 from './mvote/subcomponents/mvote-list-5.mdx'
 import MvoteList6 from './mvote/subcomponents/mvote-list-6.mdx'
 import MvoteList7 from './mvote/subcomponents/mvote-list-7.mdx'
+import MvoteCut1 from './mvote/subcomponents/mvote-cut-1.mdx'
+import MvoteCut2 from './mvote/subcomponents/mvote-cut-2.mdx'
 
 # Majority vote
 
-Majority vote is a [quality control](/docs/glossary#quality-control) method based on matching responses from the majority of Tolokers who complete the same task. For example, if a task has an [overlap](/docs/glossary#overlap) of “5” and three Tolokers selected the same answer, this is considered indirect confirmation of the correct response.
+Majority vote is a [quality control](/docs/glossary#quality-control) method based on matching responses from the majority of Tolokers who complete the same [task](/docs/glossary#task). For example, if a task has an [overlap](/docs/glossary#overlap) of “5” and three Tolokers selected the same answer, this is considered indirect confirmation of the correct response.
 
 <Note mode="note" title="Note">
 
@@ -56,12 +56,12 @@ The number of tasks per suite doesn't affect how the rule works. Responses are e
 
 ## When to use {#when-use}
 
-#### Use the **Majority vote** rule if:
+Use the **Majority vote** rule if:
 
 - You can't regularly create and add control tasks.
 - You want to make an additional review of the Toloker's responses.
 
-#### Don't use it if:
+Don't use it if:
 
 - You have a lot of response options.
 - Tolokers need to attach a file to their assignment.
@@ -71,64 +71,31 @@ The number of tasks per suite doesn't affect how the rule works. Responses are e
 
 ## Usage recommendations {#advice}
 
-#### Don't use too many response options or too many questions in the task.
+- Don't use too many response options or too many questions in the task.
 
-The more options you have, the lower the probability that **majority vote** will be calculated correctly.
+    The more options you have, the lower the probability that **majority vote** will be calculated correctly.
 
-To calculate the **majority vote** for the task, all the responses to all the questions inside the task must match. If a task has multiple questions or the questions have more than just a few response options, it will be unlikely to have enough exactly matching task responses from different Tolokers in order to calculate the skill. As a result, the task won't be used for skill calculation. If the **majority vote** hasn't been calculated for the task, the Toloker isn't penalized for mismatching the majority vote.
+    To calculate the **majority vote** for the task, all the responses to all the questions inside the task must match. If a task has multiple questions or the questions have more than just a few response options, it will be unlikely to have enough exactly matching task responses from different Tolokers in order to calculate the skill. As a result, the task won't be used for skill calculation. If the **majority vote** hasn't been calculated for the task, the Toloker isn't penalized for mismatching the majority vote.
 
-<Cut title="Example">
+    <MvoteCut1/>
 
-|        | Toloker 1 | Toloker 2 | Toloker 3 | Toloker 4 | Toloker 5 |
-|--------|-----------|-----------|-----------|-----------|-----------|
-| Task 1 | OK        | BAD       | OK        | BAD       | OK        |
-| Task 2 | BAD       | OK        | OK        | BAD       | 404       |
-| Task 3 | 404       | OK        | 404       | OK        | OK        |
-| Task 4 | OK        | BAD       | OK        | 404       | 404       |
-| Task 5 | OK        | BAD       | OK        | 404       | OK        |
+    Let's say the task Toloker has to select at least three matching categories out of twenty or report that the image is not displayed. Since there can be multiple combinations of categories, the rule calculation will mostly include tasks where all the Tolokers responded **Not displayed**. Those might be either correct or “fraudulent” responses from Tolokers who just clicked through the tasks in a hurry. In any case, it would be unreliable to base the skill on these responses.
 
-The requester has five tasks, each completed by five Tolokers. Each task has one output field with three response options.`Overlap = 3`. In this case, tasks 1, 3, and 5 match the threshold, but the other tasks are not included in the **majority vote** calculation.
+    Try using [decomposition](/docs/guide/solution-architecture) or [control tasks](/docs/glossary#control-task). This way you can better assess the quality of your Tolokers.
 
-The Tolokers will be assigned the following skills based on **majority vote**:
+- Don't set the threshold **Accept as majority** below 50% of the overlap or equal to the overlap.
 
-Toloker 1 | (1+0+1)/3=66% correct
------ | -----
-Toloker 2 | (0+1+0)/3=33% correct
-Toloker 3 | (1+0+1)/3= 66% correct
-Toloker 4 | (0+1+0)/3=33% correct
-Toloker 5 | (1+1+1)/3=100% correct
+    If the response threshold is equal to the overlap, the rule will only use the tasks where all the Tolokers gave the same responses, ignoring tasks with mismatching votes.
 
-</Cut>
+    <MvoteCut1/>
 
-Let's say the task Toloker has to select at least three matching categories out of twenty or report that the image is not displayed. Since there can be multiple combinations of categories, the rule calculation will mostly include tasks where all the Tolokers responded **Not displayed**. Those might be either correct or “fraudulent” responses from Tolokers who just clicked through the tasks in a hurry. In any case, it would be unreliable to base the skill on these responses.
+- Don't use the **majority vote** if:
 
-Try using [decomposition](/docs/guide/solution-architecture) or [control tasks](/docs/glossary#control-task). This way you can better assess the quality of your Tolokers.
+    - You have a lot of response options.
 
-#### Don't set the threshold **Accept as majority** below 50% of the overlap or equal to the overlap.
+    - Tolokers need to attach a file to their assignment.
 
-If the response threshold is equal to the overlap, the rule will only use the tasks where all the Tolokers gave the same responses, ignoring tasks with mismatching votes.
-
-<Cut title="Example">
-
-Let's say the pool has `Overlap = 5` and `Accept as majority = 2`. The Tolokers completed the task.
-
-|           | Task response |
-|-----------|---------------|
-| Toloker 1 | OK            |
-| Toloker 2 | OK            |
-| Toloker 3 | BAD           |
-| Toloker 4 | BAD           |
-| Toloker 5 | 404           |
-
-In this case, Tolokers 1, 2, 3, and 4 responded correctly, but Toloker 5 failed. However, you don't have any way to know which response is correct.
-
-</Cut>
-
-#### Don't use the **majority vote** if:
-
-- You have a lot of response options.
-- Tolokers need to attach a file to their assignment.
-- Tolokers need to transcribe text or select objects in a photo, or other tasks where the Tolokers can't possibly provide the same responses.
+    - Tolokers need to transcribe text or select objects in a photo, or other tasks where the Tolokers can't possibly provide the same responses.
 
 ## Rule settings {#rule}
 
@@ -138,14 +105,12 @@ In this rule, all fields are required except **Recent tasks to use**. If you don
 
 </Note>
 
-**Field**  | **Overview**
+**Field** | **Overview**
 ----- | -----
 **Accept as majority** | The number of matching responses that is considered the "majority vote" (for example, 3).
-**Recent values to use** | How many recent responses from the Toloker to use.<br/><br/>If this field is not filled in, the calculation includes only task responses from the pool to which the rule is applied.<br/><br/>If the field is filled in, the corresponding number of responses is used. The rule takes into account responses from both the current pool and other pools where this field is filled in.<br/><br/>[Learn more](/docs/guide/remember-values) about how this field works.
+**Recent tasks to use** | How many recent responses from the Toloker to use.<br/><br/>If this field is not filled in, the calculation includes only task responses from the pool to which the rule is applied.<br/><br/>If the field is filled in, the corresponding number of responses is used. The rule takes into account responses from both the current pool and other pools where this field is filled in.<br/><br/>[Learn more](/docs/guide/remember-values) about how this field works.
 **If** | <MvoteTable1/>
 **then** | <MvoteTable2/>
-**If** | <MvoteTable3/>
-**then** | <MvoteTable4/>
 
 ## Examples of rules {#examples}
 
@@ -157,7 +122,7 @@ The assignments submitted by banned Tolokers will be taken into account if they 
 
 </Note>
 
-#### Calculating a skill and banning for incorrect responses
+### Calculating a skill and banning for incorrect responses
 
 <Tabs tabs={[
   { title: 'Correct settings', value: <MvoteList1/> },
@@ -165,14 +130,14 @@ The assignments submitted by banned Tolokers will be taken into account if they 
   { title: 'Alternative settings', value: <MvoteList3/> },
 ]}/>
 
-#### Setting the skill
+### Setting the skill
 
 <Tabs tabs={[
   { title: 'Correct settings', value: <MvoteList4/> },
   { title: 'Incorrect settings', value: <MvoteList5/> },
 ]}/>
 
-#### Blocking for incorrect responses
+### Blocking for incorrect responses
 
 <Tabs tabs={[
   { title: 'Correct settings', value: <MvoteList6/> },

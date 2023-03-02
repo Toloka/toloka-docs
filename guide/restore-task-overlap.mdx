@@ -1,6 +1,6 @@
 ---
 title: "Recompletion of assignments from banned users | Toloka documentation"
-date: "2023-02-15T15:15:24.443374"
+date: "2023-03-02T19:39:11.324173"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -45,18 +45,22 @@ The assignments submitted by banned Tolokers will be taken into account if they 
 To download the responses of users who are not blocked:
 
 1. On the pool page, click **Download results** on the right.
-1. Select **Exclude assignments by banned Tolokers**.
-1. Click **Download results**.
 
-<Image width="373px" withBackground imageId="1675426739167" alt="" />
+1. Click **Additional options**.
 
-#### Don't use it if:
+1. Turn off the **Include responses from banned Tolokers** option.
+
+1. Click **Download**.
+
+<Image withBackground imageId="1677773298999" alt="" />
+
+Don't use it if:
 
 - You don't want to increase the overlap for tasks.
 - You don't want the final budget for pool labeling to exceed the initial budget.
 - You set up [dynamic overlap](/docs/guide/dynamic-overlap). This increases the maximum overlap value.
 
-## How do I set up? {#rule}
+## How to configure {#rule}
 
 <Note mode="restriction" title="Alert">
 
@@ -71,7 +75,7 @@ All fields in this rule are required. If you don't fill in at least one of them,
 
 ## Examples {#examples}
 
-**Task**: classify photos for a dataset across different categories. If a Toloker is banned by a quality control rule (for example, [fast resposes](/docs/guide/quick-answers)) or no longer matches the skill, their responses aren't counted and their tasks are sent for re-completion to another Toloker.
+Task: classify photos for a dataset across different categories. If a Toloker is banned by a quality control rule (for example, [fast resposes](/docs/guide/quick-answers)) or no longer matches the skill, their responses aren't counted and their tasks are sent for re-completion to another Toloker.
 
 <Tabs tabs={[
   { title: 'Correct settings', value: <RestoreTaskOverlapList1/> },

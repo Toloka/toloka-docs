@@ -1,6 +1,6 @@
 ---
 title: "Fast responses | Toloka documentation"
-date: "2023-02-15T15:15:16.258011"
+date: "2023-03-02T19:39:03.165095"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -35,9 +35,9 @@ To estimate the time required to complete a task suite:
 
 - [Complete a task in the sandbox](/docs/guide/sandbox#self), if you didn't start the tasks yet.
 
-- Look up the **Average assignment completion time** in [pool statistics](/docs/guide/pool_statistic-pool#avgtime) if the tasks are already running.
+- Look up the **Average assignment submit time** in [pool statistics](/docs/guide/pool_statistic-pool) if the tasks are already running.
 
-## How do I set it up? {#rule}
+## How to configure {#rule}
 
 **Field** | **Overview**
 ----- | -----
@@ -46,9 +46,9 @@ To estimate the time required to complete a task suite:
 **If** | <QuickAnswersTable1/>
 **then** | <QuickAnswersTable2/>
 
-## Examples of rules {#examples}
+## Examples {#examples}
 
-**Task**: you noticed that the pool closed too quickly and the final result was unsatisfactory. To prevent this from happening again, you decided to filter out Tolokers who complete tasks too quickly.
+You noticed that the pool closed too quickly and the final result was unsatisfactory. To prevent this from happening again, you decided to filter out Tolokers who complete tasks too quickly.
 
 Examples are provided for simple [classification](/docs/tutorials/image-classification). There are 10 tasks per suite.
 
@@ -58,14 +58,14 @@ The assignments submitted by banned Tolokers will be taken into account if you d
 
 </Note>
 
-#### Blocking for fast responses
+### Blocking for fast responses
 
 <Tabs tabs={[
   { title: 'Correct settings', value: <QuickAnswersList1/> },
   { title: 'Incorrect settings', value: <QuickAnswersList2/> },
 ]}/>
 
-#### Suspension in the pool for fast responses
+### Suspension in the pool for fast responses
 
 <Image withBackground imageId="1675427105032" alt="" />
 
