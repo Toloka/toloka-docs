@@ -1,6 +1,6 @@
 ---
 title: "Results of manual review | Toloka documentation"
-date: "2023-02-15T15:15:15.492144"
+date: "2023-03-02T19:39:02.396545"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -42,11 +42,11 @@ The **If** and **then** fields in this rule are required. If you don't fill in a
 
 **Field** | **Overview**
 ----- | -----
-**Recent values to use** | How many recent responses from the Toloker to use.<br/><br/>If this field is not filled in, the calculation includes only task responses from the pool to which the rule is applied.<br/><br/>If the field is filled in, the corresponding number of responses is used. The rule takes into account responses from both the current pool and other pools where this field is filled in.<br/><br/>To learn more about how this field works, go to [“Remember values” parameter](/docs/guide/remember-values).
+**Recent tasks to use** | How many recent responses from the Toloker to use.<br/><br/>If this field is not filled in, the calculation includes only task responses from the pool to which the rule is applied.<br/><br/>If the field is filled in, the corresponding number of responses is used. The rule takes into account responses from both the current pool and other pools where this field is filled in.<br/><br/>To learn more about how this field works, go to [“Remember values” parameter](/docs/guide/remember-values).
 **If** | <ReviewingAssignmentsTable1/>
 **then** | <ReviewingAssignmentsTable2/>
 
-## Examples of rules {#examples}
+## Examples {#examples}
 
 You understand that the Toloker didn't complete your tasks well enough. You can block this Toloker's access to tasks that you're going to do yourself.
 
@@ -67,13 +67,13 @@ The assignments submitted by banned Tolokers will be taken into account if they 
 
 ### Setting the skill
 
-<Image withBackground imageId="1675427115481" alt="" />
+<Image withBackground imageId="1677773312987" alt="" />
 
 After 3 tasks are reviewed, the skill is set to the percentage of correct responses. Use the skill value to set access to other pools with [filters](/docs/guide/filters).
 
 <Cut title="Example of filter settings">
 
-<Image withBackground imageId="1675426610167" alt="" />
+<Image withBackground imageId="1677773315899" alt="" />
 
 </Cut>
 

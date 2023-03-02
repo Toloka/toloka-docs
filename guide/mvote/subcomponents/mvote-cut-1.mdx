@@ -1,0 +1,23 @@
+<Cut title="Example">
+
+|        | Toloker 1 | Toloker 2 | Toloker 3 | Toloker 4 | Toloker 5 |
+|--------|-----------|-----------|-----------|-----------|-----------|
+| Task 1 | OK        | BAD       | OK        | BAD       | OK        |
+| Task 2 | BAD       | OK        | OK        | BAD       | 404       |
+| Task 3 | 404       | OK        | 404       | OK        | OK        |
+| Task 4 | OK        | BAD       | OK        | 404       | 404       |
+| Task 5 | OK        | BAD       | OK        | 404       | OK        |
+
+The requester has five tasks, each completed by five Tolokers. Each task has one output field with three response options.`Overlap = 3`. In this case, tasks 1, 3, and 5 match the threshold, but the other tasks are not included in the **majority vote** calculation.
+
+The Tolokers will be assigned the following skills based on **majority vote**:
+
+
+Toloker 1 | (1+0+1)/3=66% correct
+----- | -----
+Toloker 2 | (0+1+0)/3=33% correct
+Toloker 3 | (1+0+1)/3= 66% correct
+Toloker 4 | (0+1+0)/3=33% correct
+Toloker 5 | (1+1+1)/3=100% correct
+
+</Cut>

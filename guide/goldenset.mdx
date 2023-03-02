@@ -1,6 +1,6 @@
 ---
 title: "Control tasks | Toloka documentation"
-date: "2023-02-15T15:15:27.572046"
+date: "2023-03-02T19:39:14.581120"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -41,7 +41,7 @@ To save time, you can opt for having your control tasks edited by [Toloka expert
 
 Use control tasks to assign a [skill](/docs/glossary#skill) to Tolokers based on their responses and [ban](/docs/glossary#banning-tolokers) Tolokers who submit incorrect responses.
 
-#### Don't use it if:
+Don't use it if:
 
 - You have a lot of response options.
 - Tolokers need to attach a file to their assignment.
@@ -57,15 +57,15 @@ The **If** and **then** fields in this rule are required. If you don't fill in a
 
 </Note>
 
-Field | Overview
+**Field** | **Overview**
 ----- | -----
 **Recent control and training task responses to use** | The number of the Toloker's last responses to control tasks.<br/><br/>If this field is not filled in, the calculation includes only control task responses in the pool to which the rule applies.<br/><br/>If the field is filled in, the corresponding number of control task responses is used. The rule takes into account responses from both the current pool and other pools where this field is filled in.<br/><br/>[Learn more](/docs/guide/remember-values) about how this field works.
 **If** | <GoldensetTable1/>
 **then** | <GoldensetTable2/>
 
-## Examples of rules {#examples}
+## Examples {#examples}
 
-**Purpose**: filter out Tolokers who often make mistakes.
+Purpose: filter out Tolokers who often make mistakes.
 
 Solutions:
 
@@ -81,7 +81,7 @@ The assignments submitted by banned Tolokers will be taken into account if you d
 
 </Note>
 
-#### Ban Tolokers based on control tasks and the percentage of correct responses
+### Ban Tolokers based on control tasks and the percentage of correct responses {#qcr-control_example1}
 
 <Tabs tabs={[
   { title: 'Correct settings', value: <GoldensetList1/> },
@@ -89,7 +89,7 @@ The assignments submitted by banned Tolokers will be taken into account if you d
   { title: 'Alternative settings', value: <GoldensetList3/> },
 ]}/>
 
-#### Set a skill and deny access to Tolokers with a low skill level
+### Set a skill and deny access to Tolokers with a low skill level {#nav}
 
 Skills help identify how well Tolokers do your tasks. You can ban Tolokers with low skill levels from completing tasks in your pool or project.
 
@@ -98,7 +98,7 @@ Skills help identify how well Tolokers do your tasks. You can ban Tolokers with 
   { title: 'Incorrect settings', value: <GoldensetList5/> },
 ]}/>
 
-#### Ban Tolokers if their percentage of correct responses to control tasks is less than 40%
+### Ban Tolokers if their percentage of correct responses to control tasks is less than 40% {#qcr-control_example3}
 
 <Tabs tabs={[
   { title: 'Correct settings', value: <GoldensetList6/> },
