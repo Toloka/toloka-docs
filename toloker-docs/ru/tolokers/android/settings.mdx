@@ -1,0 +1,99 @@
+---
+title: "Необходимые настройки | Документация для исполнителей Толоки"
+date: "2023-02-19T16:04:36.059830"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "androidTolokersRuMenu"
+---
+
+import RuSettingsContent1 from '../subcomponents/settings/settings-part-1.mdx'
+import RuSettingsContent2 from '../subcomponents/settings/settings-part-2.mdx'
+import RuSettingsContent3 from '../subcomponents/settings/settings-part-3.mdx'
+
+<RuSettingsContent1/>
+
+- Включите [push-уведомления](#notifications-android), чтобы мгновенно узнавать о событии.
+
+- Скачайте [карту региона](#map), чтобы выполнять полевые задания офлайн.
+
+- Включите [геотеги в настройках камеры](#camera), если собираетесь выполнять полевые задания.
+
+- Установите [приложение для добавления нескольких фотографий](#google).
+
+<RuSettingsContent2/>
+
+1. Откройте меню, нажав кнопку <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1677848121910/1677848121910_original_png.png" alt="" /> слева вверху экрана.
+
+1. Выберите **Настройки**.
+
+1. Установите тип интернет-соединения в зависимости от вида задания:
+
+    <RuSettingsContent3/>
+
+## Уведомления {#notifications-android}
+
+Выберите, какие уведомления и каким способом вы хотите получать:
+
+1. Откройте меню, нажав слева вверху экрана кнопку <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1677848121910/1677848121910_original_png.png" alt="" />.
+
+1. Выберите **Настройки**.
+
+1. Перейдите в блок **Настройка уведомлений**.
+
+1. Включите уведомление и нажмите кнопку **Сохранить**.
+
+## Карта региона {#map}
+
+Чтобы пользоваться картой без подключения к интернету, скачайте карту региона на устройство:
+
+1. Откройте меню, нажав кнопку <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1677848121910/1677848121910_original_png.png" alt="" /> слева.
+
+1. Выберите **Настройки**.
+
+1. Включите опцию **Загрузка офлайн-карт**.
+
+1. Нажмите <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1677848121910/1677848121910_original_png.png" alt="" /> → **Доступные**.
+
+1. Нажмите значок <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1677848088341/1677848088341_original_png.png" alt="" />, чтобы перейти к заданиям на карте.
+
+1. Нажмите на значок <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1677848074133/1677848074133_original_png.png" alt="" /> в нижней части экрана и сохраните карту:
+
+    <Image width="300px" withBackground imageId="1677848144699" alt="" />
+
+Чтобы скачанная карта автоматически обновлялась:
+
+1. Откройте **Настройки**.
+
+1. Включите опцию **Автообновление** в разделе **Карты**.
+
+Чтобы удалить скачанные карты:
+
+1. Откройте **Настройки**.
+
+1. Нажмите кнопку **Очистить** в разделе **Карты**.
+
+## Камера {#camera}
+
+Часто в полевых заданиях требуется сфотографировать что-либо (например, вывеску магазина). Все фотографии должны содержать информацию о месте съемки, иначе задание будет отклонено заказчиком. Чтобы сохранять местоположение в фотографиях:
+
+1. Откройте приложение **Камера** на вашем устройстве.
+
+1. Перейдите в настройки, нажав кнопку <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1677847613391/1677847613391_original_svg.svg" alt="" />.
+
+1. Включите опцию **Геометки**/**Геотеги**.
+
+    <Note mode="note" title="Примечание">
+
+    Нужно принять запрос системы на разрешение доступа.
+
+    </Note>
+
+Если фотографии в ответах отправляются слишком медленно, выберите более низкое разрешение в настройках камеры, но не ниже 3 мегапикселей.
+
+## Галерея {#google}
+
+В некоторых полевых заданиях требуется прикрепить сразу несколько фотографий (например, фасад и вывеску). Если **Галерея** не поддерживает множественный выбор, установите приложение [Google Фото](https://play.google.com/store/apps/details?id=com.google.android.apps.photos).
+
+<Button themeColor="light" view="default" size="l" type="link" url="./troubleshooting/troubleshooting#not_working_properly">Написать в службу поддержки</Button>
