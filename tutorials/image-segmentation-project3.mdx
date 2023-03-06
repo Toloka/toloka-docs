@@ -1,6 +1,6 @@
 ---
 title: "Project 3. Are the bounding boxes correct? — Tutorials | Toloka documentation"
-date: "2023-02-14T11:23:05.497729"
+date: "2023-03-06T16:04:38.742587"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -31,38 +31,40 @@ In this [project](/docs/glossary#project), Tolokers will determine if traffic si
 
 ## Create a project {#create-project}
 
-#### In the interface:
+In the interface:
 
 1. Choose a preset:
 
-    1. Click **Create project**.
+    1. Click **Create a project**.
+
+    1. Click **Do it myself**.
+
     1. Select the **Object recognition & detection** preset.
-    1. Click **Choose this preset**.
 
 1. Provide general information:
 
-    1. In the **Name for Tolokers** field, enter `Are the traffic signs outlined correctly?`.
+    1. In the **Name to show Tolokers** field, enter `Are the traffic signs outlined correctly?`.
+
     1. In the **Description for Tolokers** field, enter `Look at the image and decide whether the traffic signs are outlined correctly or not`.
+
     1. Optionally add a **Private comment**.
 
-1. Edit the task interface. The output data format depends on the interface editor, so choose the same editor as in [Project 2](/docs/tutorials/image-segmentation-project2#interface-tb-html).
+1. Edit the [task interface](/docs/glossary#task-interface). The output data format depends on the interface editor, so choose the same editor as in [Project 2](/docs/tutorials/image-segmentation-project2).
 
    <Tabs tabs={[
       { title: 'Template Builder', value: <ImageSegmentationProject3List1/> },
       { title: 'HTML/CSS/JS editor', value: <ImageSegmentationProject3List4/> },
     ]}/>
 
-1. Save the changes.
+1. In the **Instructions for Tolokers** field, enter the [instructions](/docs/glossary#instructions).
 
-1. Write instructions for Tolokers:
-
-    **Instructions:**
+    Instructions text:
 
     ```plaintext
-    Look at the image and answer the question: **Are all traffic signs outlined correctly?**
-    If there are, click **Yes**.
-    If there isn't, click **No**.
-    For example, road signs are outlined correctly, so the correct answer is **Yes**.
+    Look at the image and answer the question: "Are all traffic signs outlined correctly?"
+    If there are, click "Yes".
+    If there isn't, click "No".
+    For example, road signs are outlined correctly, so the correct answer is "Yes".
     ```
 
     <Note mode="tip" title="Tip">
@@ -71,7 +73,9 @@ In this [project](/docs/glossary#project), Tolokers will determine if traffic si
 
     </Note>
 
-1. Click **Create project**.
+1. In the upper-right corner, click **Save**.
+
+Learn more about working with the project in the [Project](/docs/guide/project) section.
 
 ## Create a pool {#create_pool}
 
