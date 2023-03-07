@@ -1,0 +1,206 @@
+---
+title: "Models — Toloka ML platform | Toloka documentation"
+date: "2023-02-20T16:24:21.723863"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# Models
+
+A model in Toloka ML platform is structured data about an ML model: search fields and artifact information.
+
+Artifacts are model components that are necessary for its application. Artifacts are only registered in Toloka ML platform, they are stored at any other location that has a direct download link.
+
+Model parameters:
+
+* `name`: Model name. Required parameter.
+* `uid`: Model ID. You can't set it manually.
+* `alias`: Model alternative name. It is set once. It can be applied instead of the ID to safely use links.
+* `submit_datetime`: Date when the model was added. You can't set it manually.
+* `update_datetime`: Date when the model was last updated. You can't set it manually.
+* `username`: User who added the model. You can't set it manually.
+* `description`: model description.
+* `tags`: tags.
+* `status`: Model status. You can't set it manually.
+* `permissions`: Access rights (`read` (read only), `write` (edit), and `owner` (change access rights)).
+* `task_types`: Model task type. For example, text classification.
+* `model_type`: Type for basic models.
+
+Parameters depending on the version (you can set them regardless of other model versions):
+
+* `artifacts`: Model artifacts.
+* `light_scenarios`: Simple [scenarios](/docs/toloka-ml/models/scenarios). They are linked to a workflow or a run in Nirvana to create.
+* `submit_datetime`: Date when the version was added. You can't set it manually.
+* `major_version`: Number of major model versions. You can't set it manually.
+* `version`: Number of minor model versions. You can't set it manually.
+* `username`: User who added the version. It overrides the username of the user who created the model when viewing its details in the interface. You can't set it manually.
+* `info`: Model version information. It is usually used to name its major version.
+* `model_meta`: Model version metadata.
+* `producer_meta`: Parent model metadata.
+* `parent_uid`: Parent model ID.
+* `run_id`: ID of the run that generated the model.
+
+Model methods:
+
+`add()`: Creating a model.
+`update()`: Saving a model after updating any parameters. No new model version is created.
+`new_version()`: Saving file changes and creating a new version. The version number is increased automatically.
+`patch()`: Fixing specified version or model parameters. To change a version's parameters, use the `new_version` flag.
+`get()`: Getting a model's ID or alias.
+`find()`: Getting a model list.
+`get_model_scenarios()`: Getting the `ModelScenarios` object to run scenarios.
+`delete()`: Deleting a model and all model versions.
+
+## Before you start {#before-you-begin}
+
+Enable the modules and add your token:
+
+```py
+from pulsar.models import Model
+from pulsar.common import LightScenario
+
+client = PulsarClient(token='your_token')
+```
+
+## Adding a model {#add}
+
+Create an object named `Model` and add the model to the Toloka ML platform database using the `add()` method:
+
+```py
+model = Model(
+    # (Required) The model name
+    name='test',
+    # (Optional) Tags added to the model used for searching
+    tags=['tags'],
+    # (Optional) The model alternative name, this can be set only once and can't be changed
+    alias = 'some_model_alias',
+    # (Optional) The model description
+    description='This models was created in models_tutorial',
+    # (Optional) The model artefacts
+    artifacts=[
+        ModelArtifact(
+            # The artefact name
+            name='model',
+            # The artefact source
+            source_type='source',
+            # The path to the artefact
+            data_path=f'//tmp/tmp',
+        ),
+    ],
+    # (Optional) Permissions for access control lists
+    permissions = Permissions(
+        # read: List of the groups with the read access
+        read=['readgroup'],
+        # write: List of the groups with the write access
+        write=['writegroup'],
+        # owner: List of the groups with the dataset owner access who can edit the permissons, this is the dataset creator by default
+        # owner=['your_login']
+    )
+)
+
+model_uid = client.models.add(model)
+```
+
+## Updating a model {#update}
+
+Pass new model data in the `update()` method:
+
+```py
+model.description = 'New description'
+client.models.update(model)
+```
+
+## Adding a new version {#new-version}
+
+Next, use the `new_version()` method:
+
+```py
+run_id = 'c428f098-3c47-4e94-b12f-52be5a264d7b'
+flow_id = '84d4a1d2-526f-4233-b003-c025731c5b32'
+# (Optional) The model scenarios
+model.light_scenarios=[
+    LightScenario(workflow_id=flow_id, name='test_scenario'),
+    LightScenario(workflow_run_id=run_id, name='test_scenario2'),
+]
+client.models.new_version(model)
+```
+
+Models have major versions that are used for displaying major changes. For example, updating the parent model.
+
+To create a new major version , set the new_major_version flag to `True` in the `new_version()` method.
+
+```py
+model = client.models.get(model_uid)
+model.info = 'UpgradedModel'
+client.models.new_version(model, new_major_version=True)
+```
+
+As a result, the model's major version is increased by `1`, while its minor version is set to `0`.
+
+## Editing parameters {#patch}
+
+Replace specific parameters with no Model object created using the `patch()` method:
+
+```py
+artifact2 = ModelArtifact(
+    name='mode2l',
+    source_type='Yt',
+    data_path='//tmp/newtmp2',
+)
+# Use the `new_version` attribute to change the version parameters
+client.models.patch(model_uid, new_version=True, artifacts=Append([artifact2]))
+```
+
+## Getting a model {#get}
+
+Use the `get()` method. To get a specific version, set it in the `version` or `major_version` parameter for the model's minor and major version, respectively.
+
+```py
+model = client.models.get(model_uid)
+model_v_0_0 = client.models.get(uid=model_uid, version=0, major_version=0)
+```
+
+## Finding models {#find}
+
+You can get a list of models using the `find()` method. You can use parameters such as `tags`, `user_name`, `date_from`, and `date_to`:
+
+```py
+models = client.find(tags=['test_tag_44'])
+print(models[0])
+```
+
+## Getting scenarios {#get-scenarios}
+
+Use the `get_model_scenarios()` method:
+
+```py
+scenarios = client.models.get_model_scenarios(model_id)
+
+# Launches the scenario generation
+scenarios.generate.run(
+    dst_column: 'subtitle_generated',
+    source_column: 'prefix',
+    val_table: {
+        'path': 'path'
+    }
+)
+
+# Gets the test settings for the scenario generation
+test_config = scenarios.generate.test_config
+print(test_config)
+
+# Launches the scenario generation with the test settings
+scenarios.generate.run(**test_config)
+```
+
+## Deleting a model {#delete}
+
+Use the `delete()` method:
+
+```py
+model = client.get(model_id)
+client.delete(model_id)
+```

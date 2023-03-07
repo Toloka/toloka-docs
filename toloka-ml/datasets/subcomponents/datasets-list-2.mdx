@@ -1,0 +1,15 @@
+Access permissions are passed to datasets using the `Permissions` object:
+
+```py
+dataset.permissions = Permissions(
+    # Groups with the read permissions
+    read=['Toloka'],
+
+    # Groups with the write permissions that can modify the dataset
+    write=['matrixnet'],
+
+    # Groups with access control permissions
+    owner=['your_login']
+)
+client.datasets.update(dataset)
+```

@@ -6260,5 +6260,103 @@
         }
       ]
     }
+  ],
+  "mlMenu": [
+    {
+      "title": "Toloka ML platform"
+    },
+    {
+      "title": "Service overview",
+      "href": "/docs/toloka-ml"
+    },
+    {
+      "title": "How it works",
+      "href": "/docs/toloka-ml/how-it-works"
+    },
+    {
+      "title": "Quick start",
+      "href": "/docs/toloka-ml/quickstart"
+    },
+    {
+      "title": "Datasets",
+      "href": "/docs/toloka-ml/datasets"
+    },
+    {
+      "title": "Models",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/docs/toloka-ml/models"
+        },
+        {
+          "title": "Collections",
+          "href": "/docs/toloka-ml/models/collections"
+        },
+        {
+          "title": "Registry",
+          "href": "/docs/toloka-ml/models/registry"
+        },
+        {
+          "title": "Scenarios",
+          "href": "/docs/toloka-ml/models/scenarios"
+        }
+      ]
+    },
+    {
+      "title": "Tracking",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/docs/toloka-ml/tracking"
+        },
+        {
+          "title": "Runs",
+          "href": "/docs/toloka-ml/tracking/runs"
+        },
+        {
+          "title": "Experiments",
+          "href": "/docs/toloka-ml/tracking/experiments"
+        },
+        {
+          "title": "Metrics",
+          "href": "/docs/toloka-ml/tracking/metrics"
+        }
+      ]
+    },
+    {
+      "title": "Python API"
+    },
+    {
+      "title": "Overview",
+      "href": "/docs/toloka-ml/api"
+    },
+    {
+      "title": "Main structures",
+      "href": "/docs/toloka-ml/api/core"
+    },
+    {
+      "title": "PulsarClient",
+      "href": "/docs/toloka-ml/api/client"
+    },
+    {
+      "title": "ModelsClient",
+      "href": "/docs/toloka-ml/api/models"
+    },
+    {
+      "title": "ModelScenario",
+      "href": "/docs/toloka-ml/api/scenarios"
+    },
+    {
+      "title": "DatasetsClient",
+      "href": "/docs/toloka-ml/api/datasets"
+    },
+    {
+      "title": "UI",
+      "href": "/docs/toloka-ml/api/ui"
+    },
+    {
+      "title": "Diff tool",
+      "href": "/docs/toloka-ml/api/diff-tool"
+    }
   ]
 }

@@ -1,0 +1,152 @@
+---
+title: "DatasetsClient — Toloka ML platform | Toloka documentation"
+date: "2023-02-20T16:24:22.460443"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+Methods for working with datasets:
+
+<Cut title="add(self, dataset)">
+
+Adding a dataset to the Toloka ML platform database.
+
+Parameters:
+
+* `dataset`: `Dataset`: Dataset to be added.
+
+Values returned:
+
+* `uid`: `string`: ID of the added dataset.
+**Example**
+
+```py
+from pulsar import PulsarClient, ESourceType, Permissions, DatasetInfo, RunInfo, ModelInfo
+from pulsar.datasets import Dataset, DatasetFile
+
+client = PulsarClient(token='your_token')
+
+dataset = Dataset(
+    # (Required) The dataset name
+    name='dataset from tutorial',
+    # (Optional) The dataset description
+    description='This dataset was created in datasets_tutorial',
+    # (Optional) Tags added to the dataset used for searching
+    tags=['tutorial'],
+    # (Optional) Comments to the version
+    version_comment='Initial version',
+    # (Optional) The dataset alternative name, this can be set only once and can't be changed
+    alias = 'tutorial/ilyzhin3',
+    # (Optional) The dataset files in a remote database
+    files=[
+        DatasetFile(name='data/train', source_type=ESourceType.Link, data_uri='s3.eu-central-1.amazonaws.com/BUCKET/dataset1'),
+        DatasetFile(name='data/test', source_type=ESourceType.Link, data_uri='s3.eu-central-1.amazonaws.com/BUCKET/dataset2'),
+        DatasetFile(name='data/train', source_type=ESourceType.Link, data_uri='s3.eu-central-1.amazonaws.com/BUCKET/readme'),
+    ]
+    # (Optional) Permissions for access control lists
+    permissions = Permissions(
+        # read: List of the groups with the read access
+        read=['coworker_login'],
+        # write: List of the groups with the write access
+        write=['coeditor_login'],
+        # owner: List of the groups with the dataset owner access who can edit the permissons, this is the dataset creator by default
+        # owner=['your_login']
+    )
+)
+# The '.add()' method returns the dataset ID
+dataset.uid = client.datasets.add(dataset)
+```
+
+</Cut>
+
+<Cut title="get(self, uid, alias, version)">
+
+Getting a dataset.
+
+Parameters:
+
+* `uid=None`: `string`: (Optional) dataset ID.
+* `alias=None`: `string`: (Optional) dataset alternative name.
+* `version=None`: `integer`: (Optional) dataset version.
+
+Values returned:
+
+* `dataset`: `Dataset`: Dataset.
+
+</Cut>
+
+<Cut title="update(self, dataset)">
+
+Updating all properties of one or more dataset versions without creating a new version. Files cannot be changed.
+
+Parameters:
+
+* `dataset`: `Dataset`: Updated dataset.
+**Example**
+
+```py
+from pulsar import PulsarClient
+
+client = PulsarClient(token='your_token')
+
+# info: The dictionary with the dataset data
+dataset_v1.info = {
+    'column_count': 14,
+    'cat_features': [1, 3, 5]
+}
+# The 'update()' method only updates the 'dataset_v1' version parameters (dataset first version)
+client.datasets.update(dataset_v1)
+```
+
+</Cut>
+
+<Cut title="patch(self, uid, version, alias, name, description, permissions, version_comment, info, tags)">
+
+Updating parameters of one or more datasets without creating a new version. Files cannot be changed.
+
+Parameters:
+
+* `uid=None`: `string`: (Optional) ID.
+* `version=None`: `integer`: (Optional) version.
+* `alias=None`: `string`: (Optional) alternative name.
+* `name=None`: `string`: (Optional) name.
+* `description=None`: `string`: (Optional) description.
+* `permissions=None`: `Permissions`: (Optional) access rights.
+* `version_comment=None`: `string`: Comment on the version.
+* `info=None`: `dict`: (Optional) version information.
+* `tags=None`: `list[string]`: (Optional) tags.
+
+</Cut>
+
+<Cut title="new_version(self, dataset, add_files, remove_files)">
+
+Updating files with a new version created.
+
+Parameters:
+
+* `dataset`: `Dataset`: Updated dataset.
+* `add_files=None`: `list[DatasetFile]`: (Optional) files to add.
+* `remove_files=None`: `list[string]`: (Optional) files to remove.
+
+Values returned:
+
+* `version`: `integer`: Number of the new version.
+
+**Example**
+
+```py
+from pulsar import PulsarClient, ESourceType
+from pulsar.datasets import DatasetFile
+
+client = PulsarClient(token='your_token')
+
+dataset.files.append(
+    DatasetFile(name='some_file', source_type=ESourceType.Sandbox, data_id='123456')
+)
+dataset.version = client.datasets.new_version(dataset)
+```
+
+</Cut>

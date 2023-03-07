@@ -1,0 +1,180 @@
+---
+title: "Experiments — Toloka ML platform | Toloka documentation"
+date: "2023-02-20T16:24:21.893673"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# Experiments
+
+In the Toloka ML platform library, an experiment is a set of runs. You can create an experiment manually:
+
+Experiment parameters:
+
+* `datasets`: `DatasetInfo` objects. They correspond to the path to the registry where a dataset is stored. Required parameter.
+* `metric_evaluator`: `MetricEvaluatorInfo` object. Required parameter.
+* `quota_project_id`: Quota ID.
+* `max_running_run`: Maximum number of concurrently running runs.
+* `tags`: tags. They are added for all experiment runs.
+* `description`: Experiment description.
+
+## Before you start {#before-you-begin}
+
+Before you start:
+
+* Enable the PulsarClient, DatasetInfo, ExperimentView, MetricEvaluatorInfo, and ModelInfo modules.
+* [Get a Toloka ML platform token](/docs/toloka-ml/quickstart#authorization).
+* Create an object named `PulsarClient`:
+
+     ```py
+    import os
+    import sys
+    sys.path.append(os.path.dirname(os.path.realpath(os.path.pardir)))
+
+    from pulsar import (
+        PulsarClient,
+        DatasetInfo,
+        ExperimentView,
+        MetricEvaluatorInfo,
+        ModelInfo
+    )
+
+    client = PulsarClient(token='your_token')
+    ```
+
+## Creating an experiment {#create}
+
+To add an experiment, set the `ModelInfo`, `DatasetInfo`, and `MetricEvaluatorInfo` objects:
+
+```py
+import json
+
+catboost_model = ModelInfo(
+    # The model operation ID
+    operation_guid='e5b28210-d395-41fd-afea-b50ce4f33cfe',
+
+    # The JSON file that will be sent to the `config` parameter of the model operation
+    operation_options={'config': json.dumps({'loss-function': 'Logloss', 'n_estimators': 9})},
+
+    # (Optional) The model name
+    name='CatBoost',
+)
+
+lightgbm_model = ModelInfo(
+    operation_guid='8c5531df-5f87-47c9-a7b7-630270a3f746',
+    operation_options={'config': json.dumps({'objective': 'binary', 'n_estimators': 9})},
+    name='LightGBM',
+)
+
+xgboost_model = ModelInfo(
+    operation_guid='a45838a6-0025-48c3-b74b-c634a999888a',
+    operation_options={'config': json.dumps({'objective': 'binary:logistic', 'n_estimators': 9})},
+    name='XGBoost',
+)
+
+models = [lightgbm_model, catboost_model, xgboost_model]
+first_dataset = DatasetInfo(
+    # The path to the folder with the dataset
+    path='//home/mltools/data/pools/binclass/amazon',
+    # The dataset claster
+    cluster='hahn',
+    # (Optional) The dataset name
+    name='binclass/amazon',
+    # (Optional) Additional dataset information
+    info={
+        'feature_count': 9,
+    }
+)
+
+# You can get datasets from the Toloka ML platform storage (about 500 datasets)
+# using the '.get_datasets()' method
+second_dataset = client.get_datasets(filter_by_path='.*internet')[0]
+datasets = [first_dataset, second_dataset]
+metric_evaluator = MetricEvaluatorInfo(
+    # The model operation ID
+    operation_guid='328c3cd2-f457-4c15-83b4-a4d8c4da54b2',
+    # The JSON file that will be sent to the `config` parameter of the model operation
+    operation_options={'config': json.dumps({'metrics': ['Logloss', 'Accuracy', 'AUC']})},
+)
+```
+
+Next, create an experiment using the `PulsarClient.submit_experiment()` function:
+
+```py
+experiment = client.submit_experiment(
+    # The ModelInfo objects
+    models=models,
+    # The DatasetInfo objects
+    datasets=datasets,
+    # The MetricEvaluatorInfo objects
+    metric_evaluator=metric_evaluator,
+    # (Optional) The quota ID (default = 'default').
+    quota_project_id='default',
+    # (Optional) The maximum number of simultaneous runs (default = 50).
+    max_running_run=6,
+    # (Optional) The list of tags (default = []).
+    tags=['test_tag_61'],
+    # (Optional) The experiment description (default = None).
+    description='Some description',
+)
+```
+
+## Viewing an experiment {#view}
+
+Get the experiment results using the `experiment.get_results(prettified=True)` function:
+
+```py
+experiment.wait().get_results(prettified=True)['AUC']
+```
+
+Get an array with information about every run using the `experiment.get_results()` function without `prettified=True`:
+
+```py
+run_infos = experiment.get_results()
+```
+
+To get the results of the completed experiment, use the `wait()` function:
+
+```py
+experiment.wait().get_results(prettified=True)['AUC']
+```
+
+Find runs in the experiment using the `PulsarClient.find()` function:
+
+```py
+today = datetime.today().replace(hour=0, minute=0)
+new_run_infos = client.find(tags=['test_tag_61'], date_from=today)
+```
+
+If you created an operation that failed in your experiment, you can view its details using the `get_results()` function:
+
+```py
+bad_model = ModelInfo(
+    operation_guid='0b5b3cf3-d1e0-4976-9d40-1b22c6d4ef11',
+    operation_options={'config': '{}', 'some_absent_parameter': 10},
+    name='BadModel',
+)
+
+bad_experiment = client.submit_experiment(
+    models=[bad_model],
+    datasets=datasets,
+    metric_evaluator=metric_evaluator,
+    quota_project_id='matrixnet',
+    max_running_run=1,
+)
+
+print(bad_experiment.wait().get_results()[0].error_message)
+```
+
+## Removing runs from an experiment {#delete-run}
+
+Delete a run using the `delete()` function:
+
+```py
+runs = client.find(tags=['test_tag_61'], date_from=today)
+for run in runs:
+    client.delete(run.run_id)
+```

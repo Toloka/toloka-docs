@@ -1,0 +1,8 @@
+Pass a dataset with new files to the `new_version()` method:
+
+```py
+dataset.files.append(
+    DatasetFile(name='some_file', source_type=ESourceType.Sandbox, data_id='123456')
+)
+dataset.version = client.datasets.new_version(dataset)
+```

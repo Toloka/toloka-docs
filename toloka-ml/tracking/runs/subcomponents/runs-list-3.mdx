@@ -1,0 +1,33 @@
+Update a run using the `PulsarClient.update(RunInfo)` method:
+
+```py
+run = RunInfo(
+...
+)
+client = PulsarClient(token='your_token')
+...
+run.name = 'another_name'
+run.user_datetime = dt(2019, 8, 21)
+run.result = {'Accuracy': 0.99, 'AUC': 0.99}
+
+client.update(run)
+```
+
+Update a run using special methods of the `PulsarClient` object:
+
+```py
+run = RunInfo(
+...
+)
+client = PulsarClient(token='your_token')
+run_id = client.add(run)
+...
+client.update_name(run_id, 'another_name')
+client.update_description(run_id, 'new description')
+# You can also update the nested metrics
+client.set_metric_value(run_id, 'AUC', {'train': 0.81, 'test': 0.53})
+client.set_metric_value(run_id, 'Accuracy.train', 0.93)
+client.set_metric_value(run_id, 'Accuracy.test', 0.65)
+client.add_tags(run_id, ['test-tag', 'tag-from-tutorial'])
+client.remove_tags(run_id, ['test-tag', 'some-unknown-tag'])
+```

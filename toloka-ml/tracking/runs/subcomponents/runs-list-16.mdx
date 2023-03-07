@@ -1,0 +1,45 @@
+Get the experiment results using the `experiment.get_results(prettified=True)` method:
+
+```py
+client = PulsarClient(token='your_token')
+experiment = client.submit_experiment(
+...
+)
+experiment.wait().get_results(prettified=True)['AUC']
+```
+
+Get information about every run using the `experiment.get_results()` method without `prettified=True`:
+
+```py
+client = PulsarClient(token='your_token')
+experiment = client.submit_experiment(
+...
+)
+
+run_infos = experiment.get_results()
+```
+
+Find runs in the experiment using the `PulsarClient.find()` method:
+
+```py
+client = PulsarClient(token='your_token')
+experiment = client.submit_experiment(
+...
+)
+
+today = datetime.today().replace(hour=0, minute=0)
+new_run_infos = client.find(tags=['test_tag_61'], date_from=today)
+```
+
+Delete a run from the database using the `PulsarClient.delete(run_id)` method:
+
+```py
+client = PulsarClient(token='your_token')
+experiment = client.submit_experiment(
+...
+)
+
+runs = client.find(tags=['test_tag_61'], date_from=today)
+for run in runs:
+client.delete(run.run_id)
+```

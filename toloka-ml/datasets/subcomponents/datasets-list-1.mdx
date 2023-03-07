@@ -1,0 +1,33 @@
+To create a dataset, create an object named `Dataset` and add it to the Toloka ML platform database using the `add()` method:
+
+```py
+dataset = Dataset(
+    # (Required) The dataset name
+    name='dataset from tutorial',
+    # (Optional) The dataset description
+    description='This dataset was created in Toloka ML platform datasets_tutorial',
+    # (Optional) Tags added to the dataset used for searching
+    tags=['tutorial'],
+    # (Optional) Comments to the version
+    version_comment='Initial version',
+    # (Optional) The dataset alternative name, this can be set only once and can't be changed
+    alias = 'tutorial/ilyzhin3',
+    # (Optional) The dataset files in a remote database
+    files=[
+        DatasetFile(name='data/train', source_type=ESourceType.Link, data_uri='s3.eu-central-1.amazonaws.com/BUCKET/dataset1'),
+        DatasetFile(name='data/test', source_type=ESourceType.Link, data_uri='s3.eu-central-1.amazonaws.com/BUCKET/dataset2'),
+        DatasetFile(name='data/train', source_type=ESourceType.Link, data_uri='s3.eu-central-1.amazonaws.com/BUCKET/readme'),
+    ]
+    # (Optional) Permissions for access control lists
+    permissions = Permissions(
+        # read: List of the groups with the read access
+        read=['Toloka'],
+        # write: List of the groups with the write access
+        write=['matrixnet'],
+        # owner: List of the groups with the dataset owner access who can edit the permissons, this is the dataset creator by default
+        # owner=['your_login']
+    )
+)
+# The '.add()' method returns the dataset ID
+dataset.uid = client.datasets.add(dataset)
+```

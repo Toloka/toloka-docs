@@ -1,0 +1,135 @@
+---
+title: "Datasets — Toloka ML platform | Toloka documentation"
+date: "2023-02-20T16:24:21.619386"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# Datasets
+
+A dataset describes data for ML models. It contains various metadata (name, description, tags, and so on) and a set of links to dataset files.
+
+Dataset parameters:
+
+* `name`: Dataset name. Required parameter.
+* `description`: Description.
+* `alias`: Dataset alternative name. It is set once. It can be applied instead of the ID to safely use links.
+* `tags`: tags.
+* `permissions`: Access rights (`read` (read only), `write` (edit), and `owner` (change access rights)).
+
+Parameters depending on the version (you can set them regardless of other dataset versions):
+
+* `info`: Glossary with version information.
+* `version_comment`: Comment on the version.
+* `submit_datetime`: Date when the version was added.
+* `files`: List of files of this dataset version. Files look like `DatasetFile(filename, source type, file path)`.
+
+Dataset methods:
+
+* `add()`: Creating a dataset.
+* `get()`: Getting a dataset by `UID` or alias.
+* `update()`: Saving dataset parameter changes without files, no new version is created.
+* `new_version()`: Saving file changes and creating a new version. The version number is increased automatically.
+
+## Before you start {#before-you-begin}
+
+Enable the modules and add your token:
+
+```py
+from pulsar import PulsarClient, ESourceType, Permissions, DatasetInfo, RunInfo, ModelInfo
+from pulsar.datasets import Dataset, DatasetFile
+
+client = PulsarClient(token='your_token')
+```
+
+## Adding a dataset {#create}
+
+Create an object named `Dataset` and add the dataset to the Toloka ML platform database using the `add()` method:
+
+```py
+dataset = Dataset(
+    # (Required) The dataset name
+    name='dataset from tutorial',
+    # (Optional) The dataset description
+    description='This dataset was created in datasets_tutorial',
+    # (Optional) Tags added to the dataset used for searching
+    tags=['tutorial'],
+    # (Optional) Comments to the version
+    version_comment='Initial version',
+    # (Optional) The dataset alternative name, this can be set only once and can't be changed
+    alias = 'tutorial/ilyzhin3',
+    # (Optional) The dataset files in a remote database
+    files=[
+        DatasetFile(name='data/train', source_type=ESourceType.Link, data_uri='s3.eu-central-1.amazonaws.com/BUCKET/dataset1'),
+        DatasetFile(name='data/test', source_type=ESourceType.Link, data_uri='s3.eu-central-1.amazonaws.com/BUCKET/dataset2'),
+        DatasetFile(name='data/train', source_type=ESourceType.Link, data_uri='s3.eu-central-1.amazonaws.com/BUCKET/readme'),
+    ]
+    # (Optional) Permissions for access control lists
+    permissions = Permissions(
+        # read: List of the groups with the read access
+        read=['coworker_login'],
+        # write: List of the groups with the write access
+        write=['coeditor_login'],
+        # owner: List of the groups with the dataset owner access who can edit the permissons, this is the dataset creator by default
+        # owner=['your_login']
+    )
+)
+# The '.add()' method returns the dataset ID
+dataset.uid = client.datasets.add(dataset)
+```
+
+## Adding files {#add-files}
+
+You can add and update files only when a new version is created. This way, you can refer to files in a specific dataset version without fearing that they might disappear.
+
+```py
+dataset.files.append(
+    DatasetFile(name='some_file', source_type=ESourceType.Sandbox, data_id='123456')
+)
+dataset.version = client.datasets.new_version(dataset)
+```
+
+## Getting a dataset {#get}
+
+By default, the `get()` method returns the latest dataset version. To get a specific dataset version, pass the `version` parameter to the method:
+
+```py
+dataset_latest = client.datasets.get(alias=dataset.alias)
+dataset_v1 = client.datasets.get(alias=dataset.alias, version=1)
+```
+
+To get the path to a dataset file, use the `get_file()` method:
+
+```py
+train = dataset_v1.get_file('data/train')
+```
+
+## Updating a dataset {#update}
+
+The `update()` method only updates the parameters of the version received:
+
+```py
+# info: The dictionary with the dataset data
+dataset_v1.info = {
+    'column_count': 14,
+    'cat_features': [1, 3, 5]
+}
+# The 'update()' method only updates the 'dataset_v1' version parameters (dataset first version)
+client.datasets.update(dataset_v1)
+```
+
+## Datasets in runs {#runs}
+
+Runs contain the `dataset` field which requires an object of the `DatasetInfo` class that is not equal to `Dataset`. The `Dataset` object contains all details of the dataset and its files. The `DatasetInfo` object contains minimum information for a link to the dataset for a sample or run.
+
+```py
+run = RunInfo(
+    model=ModelInfo(name='model'),
+    # You must specify the dataset version and UID or alias
+    dataset=DatasetInfo(alias=dataset.alias, version=1),
+)
+client.add(run)
+```

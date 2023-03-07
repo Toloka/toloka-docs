@@ -1,0 +1,143 @@
+---
+title: "Plots — Toloka ML platform | Toloka documentation"
+date: "2023-02-20T16:24:21.788921"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# Plots
+
+The Toloka ML platform library lets you plot charts and tables.
+
+# Before you start {#before-you-begin}
+
+Enable the modules:
+
+```py
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.realpath(os.path.pardir)))
+
+from pulsar import PulsarClient
+from datetime import datetime as dt
+
+client = PulsarClient(token='your_token')
+```
+
+## Creating a chart {#plot}
+
+To get a list of metric changes and check if a dataset is empty, use the `print()` and `list()` functions:
+
+```py
+runs = PulsarClient().find(
+    model_names=['VizExampleModel'],
+    dataset_names=['VizExampleDataset'],
+    usernames=['nikitxskv']
+)
+
+print(len(runs))
+list(map(lambda x: x.user_datetime, runs))
+```
+
+If there is an existing dataset, you can use it to plot a chart with the `plot_runs()` function:
+
+```py
+client.plot_runs(model_name='VizExampleModel', dataset_name='VizExampleDataset')
+```
+
+Run values in the chart can be filtered by tag, owner name, and date:
+
+```py
+plot_data = client.plot_runs(
+    model_name='VizExampleModel',
+    dataset_name='VizExampleDataset',
+    tags=['VizExampleTag'],
+    username='nikitxskv',
+    date_from=dt(2019, 8, 4),
+    date_to=dt(2019, 8, 7),
+)
+```
+
+The `plot_runs()` function returns a glossary with metric parameters and values:
+
+```py
+print(plot_data.keys())
+
+print(plot_data['AUC'].keys())
+
+plot_data['AUC']['values']
+```
+
+Response:
+
+```py
+dict_keys(['Accuracy', 'AUC'])
+dict_keys(['values', 'descriptions', 'datetimes', 'urls'])
+[0.798715313191201, 0.826951234358611, 0.782497223794202, 0.7999364161722352]
+```
+
+If you send runs to Toloka ML platform using the `submit_experiment()` function, the number of run metrics can be decreased by one experiment. For example, you can select the maximum metric value by experiment:
+
+```py
+client.plot_runs(
+    model_name='VizExampleModel',
+    dataset_name='VizExampleDataset',
+    reduce_by_experiment_policy='Max',
+)
+```
+
+## Creating a table {#table}
+
+You can plot a table using the `PulsarClent.plot_table()` function: Let's say we have three models and three datasets and we want to get the maximum metric values over the entire time:
+
+```py
+metrics = client.plot_table(
+    # The model names
+    model_names=['TablePlotModel1', 'TablePlotModel2', 'TablePlotModel3'],
+    # The dataset names
+    dataset_names=['TablePlotDataset1', 'TablePlotDataset2', 'TablePlotDataset3'],
+    # Leave only the last created run (Last) or the run with the maximum (Max) or minimum (Min) metrics value
+    reduce_policy='Max',
+    # Tags used to search for the model runs
+    tags=['TablePlotTag'],
+)
+
+print(metrics.keys())
+```
+
+A response will return available metrics:
+
+```py
+dict_keys(['Accuracy', 'AUC'])
+```
+
+Getting the `AUC` metric:
+
+```py
+metrics['AUC']
+```
+
+Response:
+
+TablePlotDataset | TablePlotModel1 | TablePlotModel2 | TablePlotModel3
+:--- | :--- |:--- | :---
+TablePlotDataset1 |0.694821 |0.557706 |0.991075
+TablePlotDataset2 |0.545892 |0.243466 |0.276137
+TablePlotDataset3 |0.646042 |0.030134 |0.666217
+
+Getting the `Accuracy` metric:
+
+```py
+metrics['Accuracy']
+```
+
+Response:
+
+TablePlotDataset | TablePlotModel1 | TablePlotModel2 | TablePlotModel3
+:--- | :--- |:--- | :---
+TablePlotDataset1 | 0.264271 | 0.583644 | 0.212879
+TablePlotDataset2 | None | None | 0.554404
+TablePlotDataset3 | None | 0.615715 | 0.966925

@@ -1,0 +1,40 @@
+To create a run, use the `add` method that accepts the `RunInfo` object as a parameter.
+
+```py
+from pulsar import PulsarClient, ModelInfo, DatasetInfo, Metrics, Metric, RunInfo
+
+client = PulsarClient(token='your_pulsar_token')
+
+model = ModelInfo(name='CatBoost')
+
+dataset = DatasetInfo(name='Name of Dataset')
+
+# The metrics object
+metrics = Metrics(
+    [
+        Metric('AUC', 0.85, 'slice1', tags=['tag1', 'tag2'], main=True),
+        Metric('Accuracy', 0.93, 'slice1', tags=['tag2'], main=True),
+        Metric('Calc', [0.88, 0,92], tags=['tag3', 'tag2']),
+    ]
+)
+
+run = RunInfo(
+    # The ModelInfo object
+    model=model,
+    # The DatasetInfo object
+    dataset=dataset,
+    # The metrics object
+    metrics=metrics,
+    # (Optional) Tag list
+    tags=['tag_1','tag_2'],
+    # (Optional) The run name
+    name='qickstart',
+    # (Optional) The run description
+    description='Some description.',
+)
+
+run_id = client.add(run)
+print(run_id)
+```
+
+This run is placed in the [Toloka ML platform web interface](https://tolokamodels.tech/) and accessible via a direct link like `https://tolokamodels.tech/runs{run_id}`.

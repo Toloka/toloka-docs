@@ -1,0 +1,290 @@
+---
+title: "PulsarClient — Toloka ML platform | Toloka documentation"
+date: "2023-02-20T16:24:22.904621"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# PulsarClient
+
+A client for working with the Toloka ML platform API.
+
+### Parameters {#parameters}
+
+* `token=None`: `string`: (Optional) [OAuth token](/docs/toloka-ml/quickstart#authorization). By default, the token is taken from the `~/.pulsar/token` file.
+
+### Methods {#methods}
+
+<Cut title="add(self, runs)">
+
+Adding one or more runs to the Toloka ML platform database.
+
+Parameters:
+
+* `runs`: `RunInfo` or `list[RunInfo]`: Information about added runs.
+
+Values returned:
+
+* `run_ids`: `string` or `list[string]`: IDs of added runs.
+
+</Cut>
+
+<Cut title="update(self, runs)">
+
+Updating one or more runs in the Toloka ML platform database.
+
+Parameters:
+
+* `runs`: `RunInfo` or `list[RunInfo]`: Information about updated runs.
+
+</Cut>
+
+<Cut title="delete(self, run_ids)">
+
+Deleting one or more runs from the Toloka ML platform database.
+
+Parameters:
+
+* `run_ids`: `string` or `list[string]`: IDs of runs to be deleted.
+
+Values returned:
+
+* `runs`: `RunInfo` or `list[RunInfo]`: Information about deleted runs.
+
+</Cut>
+
+<Cut title="get(self, run_ids)">
+
+Getting information about one or more runs.
+
+Parameters:
+
+* `run_ids`: `string` or `list[string]`: IDs of runs that information is to be received for.
+
+Values returned:
+
+* `runs`: `RunInfo` or `list[RunInfo]`: Information about the runs.
+
+</Cut>
+
+<Cut title="get_metrics(self, run_ids, metrics, slices)">
+
+Getting metrics of one or more runs.
+
+Parameters:
+
+* `run_ids`:`string` or `list[string]`: Run IDs.
+* `metrics=None`: `list[string]`: (Optional) metric filters.
+* `slices=None`: `list[string]`: (Optional) slice filters.
+
+Values returned:
+
+* `data`: `list[dict]`: Metric data.
+* `name`: `list[string]`: Metric names.
+* `slices`: `list[string]`: Slice names.
+* `tags`: `list[string]`: Tags.
+
+</Cut>
+
+<Cut title="find(self, run_ids, model_names, dataset_names, tags, experiment_ids, usernames, date_from, date_to)">
+
+Finding runs.
+
+Parameters:
+
+* `run_ids=None`: `list[string]`: (Optional) run IDs.
+* `model_names=None`: `list[string]`: (Optional) model names.
+* `dataset_names=None`: `list[string]`: (Optional) dataset names.
+* `tags=None`: `list[string]`: (Optional) tags.
+* `experiment_ids=None`: `list[string]`: (Optional) experiment IDs.
+* `usernames=None`: `list[string]`: (Optional) usernames of run owners.
+* `date_from=None`: `datetime`: (Optional) start date to search for runs from.
+* `date_to=None`: `datetime`: (Optional) end date to search for runs to.
+
+Values returned:
+
+* `runs`: `list[RunInfo]`: Information about runs found.
+
+</Cut>
+
+<Cut title="submit_experiment(self, models, datasets, metric_evaluator, tags, user_datetime, description, quota_project_id, yt_token,  max_running_run=50, retries_count=0, ttl, nirvana_execution_params, project_code, permissions)">
+
+Adding an experiment for multiple models and datasets to the Toloka ML platform database.
+
+Parameters:
+
+* `models`: `list[ModelInfo]`: Models run.
+* `datasets`: `list [DatasetInfo]`: Datasets the models are run on.
+* `metric_evaluator`: `MetricEvaluatorInfo`: Metric evaluation object.
+* `tags=None`: `list[string]`: (Optional) tags.
+* `user_datetime=None`: `datetime`: (Optional) user date.
+* `description=None`: `string`: (Optional) additional information to be added to every experiment run.
+* `quota_project_id=None`: `string`: (Optional) quota for running a graph in Nirvana.
+* `yt_token=None`: `string`: (Optional) [OAuth token](/docs/toloka-ml/quickstart#authorization) alternative name.
+* `max_running_run=50`: `integer`: (Optional) maximum number of concurrently running runs.
+* `retries_count=0`: `integer`: (Optional) number of attempts to restart a failed run.
+* `ttl=None`: `integer`: (Optional) time-to-live of Nirvana graph results in days.
+* `permissions=None`: `Permissions`: (Optional) access rights.
+
+Values returned:
+
+* `experiment`: `ExperimentView`: Information about the experiment.
+
+</Cut>
+
+<Cut title="submit_workflows_experiment(self, workflows, tags, description, quota_project_id, nirvana_execution_params, project_code permissions)">
+
+Adding an experiment for multiple workflows to the Toloka ML platform database.
+
+Parameters:
+
+* `workflows`: `list[WorkflowInfo]`: Workflows run.
+* `tags=None`: `list[string]`: (Optional) tags.
+* `description=None`: `string`: (Optional) additional information to be added to every experiment run.
+* `permissions=None`: `Permissions`: (Optional) access rights.
+
+Values returned:
+
+* `experiment`: `ExperimentView`: Information about the experiment.
+
+</Cut>
+
+<Cut title="submit_parameter_tuning_experiment(self, config, tags, description, quota_project_id, max_running_run, nirvana_execution_params, project_code, permissions)">
+
+Adding a YOPT experiment with parameter selection to the Toloka ML platform database.
+
+Parameters:
+
+* `config`: `ParameterTuningConfig`: Parameter selection configuration.
+* `tags`: `list[string]=None`: (Optional) tags.
+* `description=None`: `string`: (Optional) additional information to be added to every experiment run.
+* `max_running_run=5`: `integer`: (Optional) maximum number of concurrently running runs.
+* `permissions=None`: `Permissions`: (Optional) access rights.
+
+Values returned:
+
+* `experiment`: `ExperimentView`: Information about the experiment.
+
+</Cut>
+
+<Cut title="get_per_sample_data(self, run_id, prettified)">
+
+Getting the results of the evaluation of a model trained on a test dataset.
+
+Parameters:
+
+* `run_id`: `string`: Run ID.
+* `prettified=False`: `bool`: (Optional) if True, returns pandas.DataFrame to `results` instead of an unhandled code.
+
+Values returned:
+
+* `results`: Evaluation results.
+
+</Cut>
+
+<Cut title="add_tags(self, run_id, tags)">
+
+Adding tags to a run.
+
+Parameters:
+
+* `run_id`: `string`: Run ID.
+* `tags`: `list[string]`: (Optional) tags.
+
+</Cut>
+
+<Cut title="remove_tags(self, run_id, tags)">
+
+Removing tags from a run.
+
+Parameters:
+
+* `run_id`: `string`: Run ID.
+* `tags`: `list[string]`: (Optional) tags.
+
+</Cut>
+
+<Cut title="set_metric_value(self, run_id, metric_name, metric_value)">
+
+Setting a metric value in a run.
+
+Parameters:
+
+* `run_id`: `string`: Run ID.
+* `metric_name`: `string`: Metric name, may be nested with a period (`.`) used as a separator.
+* `metric_value`: `integer`, or `float`, or `dict`, or `list`: Metric value, may be nested.
+
+</Cut>
+
+<Cut title="update_description(self, run_id, description)">
+
+Updating a run description.
+
+Parameters:
+
+* `run_id`: `string`: Run ID.
+* `description`: `string`: New description.
+
+</Cut>
+
+<Cut title="update_name(self, run_id, name)">
+
+Updating a run name.
+
+Parameters:
+
+* `run_id`: `string`: Run ID.
+* `name`: `string`: New name.
+
+</Cut>
+
+<Cut title="plot_runs(self, model_name, dataset_name, tags, username, date_from, date_to, reduce_by_experiment_policy)">
+
+Creating a chart based on run performance results.
+
+Parameters:
+
+* `model_names`: `string`: Model name.
+* `dataset_names`: `string`: Dataset name.
+* `tags=None`: `list[string]`: (Optional) tags.
+* `usernames=None`: `list[string]`: (Optional) usernames of run owners.
+* `date_from=None`: `datetime`: (Optional) start date to search for runs from.
+* `date_to=None`: `datetime`: (Optional) end date to search for runs to.
+* `reduce_by_experiment_policy=None`: `string`: (Optional) selecting a metric from all experiment runs:
+
+    * `Min`: Minimum metric value.
+    * `Max`: Maximum metric value.
+
+Values returned:
+
+* `run results`: `dict`: Run results in `{metric_name: run results}` format.
+
+</Cut>
+
+<Cut title="plot_table(self,  model_names, dataset_names, reduce_policy, tags, usernames, date_from, date_to, prettified)">
+
+Creating a table for a model or dataset.
+
+Parameters:
+
+* `model_names=None`: `list[string]`: (Optional) model names.
+* `dataset_names=None`: `list[string]`: (Optional) dataset names.
+* `reduce_by_experiment_policy=None`: `string`: (Optional) selecting a metric from all experiment runs:
+
+    * `Min`: Minimum metric value.
+    * `Max`: Maximum metric value.
+
+* `tags=None`: `list[string]`: (Optional) tags.
+* `usernames=None`: `list[string]`: (Optional) usernames of run owners.
+* `date_from=None`: `datetime`: (Optional) start date to search for runs from.
+* `date_to=None`: `datetime`: (Optional) end date to search for runs to.
+* `prettified=True`: `bool`: (Optional) if True, returns pandas.DataFrame to `results` instead of an unhandled code.
+
+Values returned:
+
+* `run results`: `dict`: Run results in `{metric_name: table}` format.
+
+</Cut>
