@@ -14,7 +14,7 @@ A client for working with the Toloka ML platform API.
 
 ### Parameters {#parameters}
 
-* `token=None`: `string`: (Optional) [OAuth token](/docs/toloka-ml/quickstart#authorization). By default, the token is taken from the `~/.pulsar/token` file.
+* `token=None`: `string`: (Optional) [OAuth token](/docs/toloka-ml/api/#token). By default, the token is taken from the `~/.pulsar/token` file.
 
 ### Methods {#methods}
 
@@ -123,7 +123,7 @@ Parameters:
 * `user_datetime=None`: `datetime`: (Optional) user date.
 * `description=None`: `string`: (Optional) additional information to be added to every experiment run.
 * `quota_project_id=None`: `string`: (Optional) quota for running a graph in Nirvana.
-* `yt_token=None`: `string`: (Optional) [OAuth token](/docs/toloka-ml/quickstart#authorization) alternative name.
+* `yt_token=None`: `string`: (Optional) [OAuth token](/docs/toloka-ml/api/#token) alternative name.
 * `max_running_run=50`: `integer`: (Optional) maximum number of concurrently running runs.
 * `retries_count=0`: `integer`: (Optional) number of attempts to restart a failed run.
 * `ttl=None`: `integer`: (Optional) time-to-live of Nirvana graph results in days.
