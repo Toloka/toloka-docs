@@ -6358,5 +6358,305 @@
       "title": "Diff tool",
       "href": "/docs/toloka-ml/api/diff-tool"
     }
+  ],
+  "webTolokersMenu": [
+    {
+      "title": "About Toloka",
+      "href": "/docs/toloker-docs/en/tolokers/web/index"
+    },
+    {
+      "title": "Registration and logging in",
+      "href": "/docs/toloker-docs/en/tolokers/web/register"
+    },
+    {
+      "title": "Task list",
+      "href": "/docs/toloker-docs/en/tolokers/web/task-select"
+    },
+    {
+      "title": "Entering captchas",
+      "href": "/docs/toloker-docs/en/tolokers/web/captcha"
+    },
+    {
+      "title": "How to be a successful Toloker",
+      "href": "/docs/toloker-docs/en/tolokers/web/tasks"
+    },
+    {
+      "title": "Tasks under review",
+      "href": "/docs/toloker-docs/en/tolokers/web/priemka"
+    },
+    {
+      "title": "Profile",
+      "href": "/docs/toloker-docs/en/tolokers/web/profile"
+    },
+    {
+      "title": "Messages",
+      "href": "/docs/toloker-docs/en/tolokers/web/messages"
+    },
+    {
+      "title": "Skills",
+      "href": "/docs/toloker-docs/en/tolokers/web/skills"
+    },
+    {
+      "title": "Awards",
+      "href": "/docs/toloker-docs/en/tolokers/web/achievements"
+    },
+    {
+      "title": "Rewards for friends",
+      "subItems": [
+        {
+          "title": "How to invite people",
+          "href": "/docs/toloker-docs/en/tolokers/web/referal"
+        },
+        {
+          "title": "Current reward rules",
+          "href": "/docs/toloker-docs/en/tolokers/web/referal-rules"
+        },
+        {
+          "title": "Previous reward rules",
+          "href": "/docs/toloker-docs/en/tolokers/web/referal-archive"
+        }
+      ]
+    },
+    {
+      "title": "Withdrawing money",
+      "subItems": [
+        {
+          "title": "Withdrawal methods",
+          "href": "/docs/toloker-docs/en/tolokers/web/pay/about"
+        },
+        {
+          "title": "PayPal",
+          "href": "/docs/toloker-docs/en/tolokers/web/pay/paypal"
+        },
+        {
+          "title": "Payoneer",
+          "href": "/docs/toloker-docs/en/tolokers/web/pay/payoneer"
+        },
+        {
+          "title": "QIWI",
+          "href": "/docs/toloker-docs/en/tolokers/web/pay/Qiwi-wallet"
+        }
+      ]
+    },
+    {
+      "title": "Troubleshooting",
+      "href": "/docs/toloker-docs/en/tolokers/web/troubleshooting/troubleshooting"
+    },
+    {
+      "title": "Support",
+      "href": "/docs/toloker-docs/en/tolokers/web/troubleshooting/support"
+    },
+    {
+      "title": "UHRS - Public FAQ",
+      "href": "/docs/toloker-docs/en/tolokers/web/uhrs-faq"
+    }
+  ],
+  "androidTolokersMenu": [
+    {
+      "title": "Toloka for Android",
+      "href": "/docs/toloker-docs/en/tolokers/android/index"
+    },
+    {
+      "title": "About",
+      "href": "/docs/toloker-docs/en/tolokers/android/about"
+    },
+    {
+      "title": "Registration and logging in",
+      "href": "/docs/toloker-docs/en/tolokers/android/auth"
+    },
+    {
+      "title": "Required settings",
+      "href": "/docs/toloker-docs/en/tolokers/android/settings"
+    },
+    {
+      "title": "Entering captchas",
+      "href": "/docs/toloker-docs/en/tolokers/android/captcha"
+    },
+    {
+      "title": "Choosing a task",
+      "href": "/docs/toloker-docs/en/tolokers/android/task-select"
+    },
+    {
+      "title": "How to be a successful Toloker",
+      "href": "/docs/toloker-docs/en/tolokers/android/tasks"
+    },
+    {
+      "title": "Tasks under review",
+      "href": "/docs/toloker-docs/en/tolokers/android/priemka"
+    },
+    {
+      "title": "Profile",
+      "href": "/docs/toloker-docs/en/tolokers/android/profile"
+    },
+    {
+      "title": "Messages",
+      "href": "/docs/toloker-docs/en/tolokers/android/messages"
+    },
+    {
+      "title": "Skills",
+      "href": "/docs/toloker-docs/en/tolokers/android/skills"
+    },
+    {
+      "title": "Awards",
+      "href": "/docs/toloker-docs/en/tolokers/android/achievements"
+    },
+    {
+      "title": "Goals",
+      "href": "/docs/toloker-docs/en/tolokers/android/goals"
+    },
+    {
+      "title": "Rewards for friends",
+      "subItems": [
+        {
+          "title": "How to invite people",
+          "href": "/docs/toloker-docs/en/tolokers/android/referal"
+        },
+        {
+          "title": "Current reward rules",
+          "href": "/docs/toloker-docs/en/tolokers/android/referal-rules"
+        },
+        {
+          "title": "Previous reward rules",
+          "href": "/docs/toloker-docs/en/tolokers/android/referal-archive"
+        }
+      ]
+    },
+    {
+      "title": "Withdrawing money",
+      "subItems": [
+        {
+          "title": "Withdrawal methods",
+          "href": "/docs/toloker-docs/en/tolokers/android/pay/about"
+        },
+        {
+          "title": "PayPal",
+          "href": "/docs/toloker-docs/en/tolokers/android/pay/paypal"
+        },
+        {
+          "title": "Payoneer",
+          "href": "/docs/toloker-docs/en/tolokers/android/pay/payoneer"
+        },
+        {
+          "title": "QIWI",
+          "href": "/docs/toloker-docs/en/tolokers/android/pay/Qiwi-wallet"
+        }
+      ]
+    },
+    {
+      "title": "Troubleshooting",
+      "href": "/docs/toloker-docs/en/tolokers/android/troubleshooting/troubleshooting"
+    },
+    {
+      "title": "Support",
+      "href": "/docs/toloker-docs/en/tolokers/android/troubleshooting/support"
+    },
+    {
+      "title": "UHRS - Public FAQ",
+      "href": "/docs/toloker-docs/en/tolokers/android/uhrs-faq"
+    }
+  ],
+  "iosTolokersMenu": [
+    {
+      "title": "Toloka for iOS",
+      "href": "/docs/toloker-docs/en/tolokers/ios/index"
+    },
+    {
+      "title": "About",
+      "href": "/docs/toloker-docs/en/tolokers/ios/about"
+    },
+    {
+      "title": "Registration and logging in",
+      "href": "/docs/toloker-docs/en/tolokers/ios/auth"
+    },
+    {
+      "title": "Required settings",
+      "href": "/docs/toloker-docs/en/tolokers/ios/settings"
+    },
+    {
+      "title": "Entering captchas",
+      "href": "/docs/toloker-docs/en/tolokers/ios/captcha"
+    },
+    {
+      "title": "Choosing a task",
+      "href": "/docs/toloker-docs/en/tolokers/ios/task-select"
+    },
+    {
+      "title": "How to be a successful Toloker",
+      "href": "/docs/toloker-docs/en/tolokers/ios/tasks"
+    },
+    {
+      "title": "Tasks under review",
+      "href": "/docs/toloker-docs/en/tolokers/ios/priemka"
+    },
+    {
+      "title": "Profile",
+      "href": "/docs/toloker-docs/en/tolokers/ios/profile"
+    },
+    {
+      "title": "Messages",
+      "href": "/docs/toloker-docs/en/tolokers/ios/messages"
+    },
+    {
+      "title": "Skills",
+      "href": "/docs/toloker-docs/en/tolokers/ios/skills"
+    },
+    {
+      "title": "Awards",
+      "href": "/docs/toloker-docs/en/tolokers/ios/achievements"
+    },
+    {
+      "title": "Goals",
+      "href": "/docs/toloker-docs/en/tolokers/ios/goals"
+    },
+    {
+      "title": "Rewards for friends",
+      "subItems": [
+        {
+          "title": "How to invite people",
+          "href": "/docs/toloker-docs/en/tolokers/ios/referal"
+        },
+        {
+          "title": "Current reward rules",
+          "href": "/docs/toloker-docs/en/tolokers/ios/referal-rules"
+        },
+        {
+          "title": "Previous reward rules",
+          "href": "/docs/toloker-docs/en/tolokers/ios/referal-archive"
+        }
+      ]
+    },
+    {
+      "title": "Withdrawing money",
+      "subItems": [
+        {
+          "title": "Withdrawal methods",
+          "href": "/docs/toloker-docs/en/tolokers/ios/pay/about"
+        },
+        {
+          "title": "PayPal",
+          "href": "/docs/toloker-docs/en/tolokers/ios/pay/paypal"
+        },
+        {
+          "title": "Payoneer",
+          "href": "/docs/toloker-docs/en/tolokers/ios/pay/payoneer"
+        },
+        {
+          "title": "QIWI",
+          "href": "/docs/toloker-docs/en/tolokers/ios/pay/Qiwi-wallet"
+        }
+      ]
+    },
+    {
+      "title": "Troubleshooting",
+      "href": "/docs/toloker-docs/en/tolokers/ios/troubleshooting/troubleshooting"
+    },
+    {
+      "title": "Support",
+      "href": "/docs/toloker-docs/en/tolokers/ios/troubleshooting/support"
+    },
+    {
+      "title": "UHRS - Public FAQ",
+      "href": "/docs/toloker-docs/en/tolokers/ios/uhrs-faq"
+    }
   ]
 }
