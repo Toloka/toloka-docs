@@ -1,6 +1,6 @@
 ---
 title: "Project 2. Select an object in the image — Tutorials | Toloka documentation"
-date: "2023-03-06T16:04:36.416067"
+date: "2023-03-10T16:55:46.876723"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,6 +8,11 @@ ogDescription: ""
 docsMenu: "tutorialsMenu"
 ---
 
+import SaveProject from './subcomponents/save-project.mdx'
+import TutorialsCreateProjectButton from './subcomponents/create-project-button.mdx'
+import TutorialsChoosePresetImage from './subcomponents/choose-preset-image.mdx'
+import TutorialsAddNameDescription from './subcomponents/add-name-description.mdx'
+import TolokaRequesterSourceInstructions from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instructions.mdx'
 import TolokaRequesterPoolType from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx'
 import TolokaRequesterPoolName from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
 import TolokaRequesterPoolDescription from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
@@ -36,13 +41,15 @@ In the interface:
 
 1. Choose a preset:
 
-    1. Click **Create a project**.
+    1. <TutorialsCreateProjectButton/>
+
+        <TutorialsChoosePresetImage/>
 
     1. Click **Do it myself**.
 
     1. Select the **Object recognition & detection** preset.
 
-1. Provide general information:
+1. <TutorialsAddNameDescription/>
 
     1. In the **Name to show Tolokers** field, enter `Outline traffic signs in the image`.
 
@@ -57,7 +64,7 @@ In the interface:
       { title: 'HTML/CSS/JS editor', value: <ImageSegmentationProject2List2/> },
     ]}/>
 
-1. In the **Instructions for Tolokers** field, enter the [instructions](/docs/glossary#instructions).
+1. <TolokaRequesterSourceInstructions/>
 
     Instructions text: "Click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675426051746/1675426051746_original_png.png" /> and draw a rectangle around all traffic signs in the image".
 
@@ -67,9 +74,7 @@ In the interface:
 
     </Note>
 
-1. In the upper-right corner, click **Save**.
-
-Learn more about working with the project in the [Project](/docs/guide/project) section.
+1. <SaveProject/>
 
 ## Create a pool {#create-pool}
 

@@ -1,6 +1,6 @@
 ---
 title: "Project 3. Does the item found look similar to the original? — Tutorials | Toloka documentation"
-date: "2023-02-14T11:23:08.024860"
+date: "2023-03-10T16:55:53.263036"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,6 +8,11 @@ ogDescription: ""
 docsMenu: "tutorialsMenu"
 ---
 
+import SaveProject from './subcomponents/save-project.mdx'
+import TutorialsCreateProjectButton from './subcomponents/create-project-button.mdx'
+import TutorialsChoosePresetImage from './subcomponents/choose-preset-image.mdx'
+import TutorialsAddNameDescription from './subcomponents/add-name-description.mdx'
+import TolokaRequesterSourceInstructions from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instructions.mdx'
 import TolokaRequesterPoolType from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx'
 import TolokaRequesterPoolName from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
 import TolokaRequesterPoolDescription from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
@@ -41,15 +46,19 @@ Since the **Assignment review** option is enabled in the [pool](/docs/glossary#p
 
 To create a project, open [Toloka for requesters](https://platform.toloka.ai/for-requesters/).
 
-#### In the interface:
+In the interface:
 
-1. Choose a template:
+1. Choose a preset:
 
-    1. Click **Create project**.
+    1. <TutorialsCreateProjectButton/>
 
-    1. Select the **Image classification** template.
+        <TutorialsChoosePresetImage/>
 
-1. Provide general information:
+    1. Click **Do it myself**.
+
+    1. Select the **Image classification** preset.
+
+1. <TutorialsAddNameDescription/>
 
     1. In the **Name for Tolokers** field, enter `Are these shoes similar to each other?`.
 
@@ -57,33 +66,25 @@ To create a project, open [Toloka for requesters](https://platform.toloka.ai/for
 
     1. Optionally add a **Private comment**.
 
-    1. Save the changes.
-
-1. Edit the task interface in the editor you selected:
+1. Edit the [task interface](/docs/glossary#task-interface) in the editor you selected:
 
    <Tabs tabs={[
       { title: 'Template Builder', value: <ItemLookSimilarList1/> },
       { title: 'HTML/CSS/JS editor', value: <ItemLookSimilarList2/> },
     ]}/>
 
-1. Save the changes.
+1. <TolokaRequesterSourceInstructions/>
 
-1. In **Instructions for Tolokers**, enter the [instructions](/docs/glossary#instructions).
+    Instructions text:
 
-    1. **Instructions:**
+    ```plaintext
+    Take a look at the pictures that show two pairs of shoes. Decide whether they look similar or not.
 
-        ```plaintext
-        Take a look at the pictures that show two pairs of shoes. Decide whether they look similar or not.
+    Shoes are considered similar if they have a similar color, fabric, length, and style.
+    If you don't see a pair of shoes in any of the pictures, click "Yes".
+    ```
 
-        Shoes are considered similar if they have a similar color, fabric, length, and style.
-        If you don't see a pair of shoes in any of the pictures, click **Yes**.
-        ```
-
-    1. Save the changes.
-
-1. To go back to the **Projects** page, click **Finish editing**.
-
-Learn more about working with the project in the [Project](/docs/guide/project) section.
+1. <SaveProject/>
 
 ## Create a pool {#create_pool}
 

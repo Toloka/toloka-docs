@@ -1,6 +1,6 @@
 ---
 title: "Project 4. Which of the found items is most similar to the original? — Tutorials | Toloka documentation"
-date: "2023-02-14T11:23:10.095990"
+date: "2023-03-10T16:55:56.193660"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,6 +8,11 @@ ogDescription: ""
 docsMenu: "tutorialsMenu"
 ---
 
+import SaveProject from './subcomponents/save-project.mdx'
+import TutorialsCreateProjectButton from './subcomponents/create-project-button.mdx'
+import TutorialsChoosePresetImage from './subcomponents/choose-preset-image.mdx'
+import TutorialsAddNameDescription from './subcomponents/add-name-description.mdx'
+import TolokaRequesterSourceInstructions from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instructions.mdx'
 import TolokaRequesterPoolType from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx'
 import TolokaRequesterPoolName from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
 import TolokaRequesterPoolDescription from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
@@ -27,21 +32,25 @@ import ItemMoreSimilarList2 from './item_more_similar/subcomponents/item_more_si
 
 # Project 4. Which of the found items is most similar to the original?
 
-In this [project](/docs/glossary#project), Tolokers compare images of shoes with the original image and decide which pair of images is most similar. To make a comparison in the project, add the results from the [second project](/docs/tutorials/find_an_item_in_store). To learn how, see **Prepare and upload a [file](/docs/glossary#tsv) with tasks**.
+In this [project](/docs/glossary#project), Tolokers compare images of shoes with the original image and decide which pair of images is most similar. To make a comparison in the project, add the results from the [second project](/docs/guide/find_an_item_in_store). To learn how, see **Prepare and upload a [file](/docs/glossary#tsv) with tasks**.
 
 ## Create a project {#create_project}
 
 To create a project, open [Toloka for requesters](https://platform.toloka.ai/for-requesters/).
 
-#### In the interface:
+In the interface:
 
-1. Choose a template:
+1. Choose a preset:
 
-    1. Click **Create project**.
+    1. <TutorialsCreateProjectButton/>
 
-    1. Select the **Image comparison (Side-by-side)** template.
+        <TutorialsChoosePresetImage/>
 
-1. Provide general information:
+    1. Click **Do it myself**.
+
+    1. Select the **Image comparison (Side-by-side)** preset.
+
+1. <TutorialsAddNameDescription/>
 
     1. In the **Name for Tolokers** field, enter `Which object is similar to the original one?`.
 
@@ -49,32 +58,24 @@ To create a project, open [Toloka for requesters](https://platform.toloka.ai/for
 
     1. Optionally add a **Private comment**.
 
-    1. Save the changes.
-
-1. Edit the task interface in the editor you selected:
+1. Edit the [task interface](/docs/glossary#task-interface) in the editor you selected:
 
    <Tabs tabs={[
       { title: 'Template Builder', value: <ItemMoreSimilarList1/> },
       { title: 'HTML/CSS/JS editor', value: <ItemMoreSimilarList2/> },
     ]}/>
 
-1. Save the changes.
+1. <TolokaRequesterSourceInstructions/>
 
-1. In **Instructions for Tolokers**, enter the [instructions](/docs/glossary#instructions).
+    Instructions text:
 
-    1. **Instructions:**
+    ```plaintext
+    Look at 2 pictures with different shoes and decide which pair of shoes looks most similar to the original pair.
+    Rely on your own sense of style, but also remember that the shoes look alike if
+    they are the same color, fabric, length, and style.
+    ```
 
-        ```plaintext
-        Look at 2 pictures with different shoes and decide which pair of shoes looks most similar to the original pair.
-        Rely on your own sense of style, but also remember that the shoes look alike if
-        they are the same color, fabric, length, and style.
-        ```
-
-    1. Save the changes.
-
-1. To go back to the **Projects** page, click **Finish editing**.
-
-Learn more about working with the project in the [Project](/docs/guide/project) section.
+1. <SaveProject/>
 
 ## Create a pool {#create_pool}
 

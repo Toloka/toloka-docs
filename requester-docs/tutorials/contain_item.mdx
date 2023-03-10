@@ -1,6 +1,6 @@
 ---
 title: "Project 1. Does the photo contain a certain object? — Tutorials | Toloka documentation"
-date: "2023-02-14T11:23:08.255955"
+date: "2023-03-10T16:55:53.626188"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,6 +8,11 @@ ogDescription: ""
 docsMenu: "tutorialsMenu"
 ---
 
+import SaveProject from './subcomponents/save-project.mdx'
+import TutorialsCreateProjectButton from './subcomponents/create-project-button.mdx'
+import TutorialsChoosePresetImage from './subcomponents/choose-preset-image.mdx'
+import TutorialsAddNameDescription from './subcomponents/add-name-description.mdx'
+import TolokaRequesterSourceInstructions from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instructions.mdx'
 import TolokaRequesterPoolType from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx'
 import TolokaRequesterPoolName from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
 import TolokaRequesterPoolDescription from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
@@ -31,19 +36,23 @@ import ContainItemList2 from './contain_item/subcomponents/contain_item-list-2.m
 
 In this [project](/docs/glossary#project), you will ask Tolokers if there are shoes in the photo.
 
-## Create a project {#create_project}
+## Create a project {#project}
 
 To create a project, open [Toloka for requesters](https://platform.toloka.ai/for-requesters/).
 
-#### In the interface:
+In the interface:
 
-1. Choose a template:
+1. Choose a preset:
 
-    1. Click **Create project**.
+    1. <TutorialsCreateProjectButton/>
 
-    1. Select the **Image classification** template.
+        <TutorialsChoosePresetImage/>
 
-1. Provide general information:
+    1. Click **Do it myself**.
+
+    1. Select the **Image classification** preset.
+
+1. <TutorialsAddNameDescription/>
 
     1. In the **Name for Tolokers** field, enter `Are there shoes in the photo?`.
 
@@ -51,35 +60,31 @@ To create a project, open [Toloka for requesters](https://platform.toloka.ai/for
 
     1. Optionally add a **Private comment**.
 
-    1. Save the changes.
-
-1. Edit the task interface in the editor you selected:
+1. Edit the [task interface](/docs/glossary#task-interface) in the editor you selected:
 
     <Tabs tabs={[
       { title: 'Template Builder', value: <ContainItemList1/> },
       { title: 'HTML/CSS/JS editor', value: <ContainItemList2/> },
     ]}/>
 
-1. Save the changes.
+1. <TolokaRequesterSourceInstructions/>
 
-1. In the **Instructions for Tolokers** field, enter the [instructions](/docs/glossary#instructions) and add an image.
+    Instructions text:
 
-    1. **Instructions:**
+    ```plaintext
+    Look at the picture and determine if there are shoes in the picture.
+    If there are, click "Yes".
+    If there aren't, click "No".
+    For example, there are shoes in the photo, so the correct answer is "Yes".
+    ```
 
-        ```plaintext
-        Look at the picture and determine if there are **shoes** in the picture.
-        If there are, click **Yes**.
-        If there aren't, click **No**.
-        For example, there are shoes in the photo, so the correct answer is **Yes**.
-        ```
+    <Note mode="note" title="Note">
 
-    1. To add an image, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425175297/1675425175297_original_svg.svg" alt="" /> and provide a link to the image you want to use as an example.
+    To add an image, click <img src="https://tlk-infra-front.azureedge.net/portal-static/uploaded/images/1675425175297/1675425175297_original_svg.svg" alt="" /> and provide a link to the image you want to use as an example.
 
-    1. Save the changes.
+    </Note>
 
-1. To go back to the **Projects** page, click **Finish editing**.
-
-Learn more about working with the project in the [Project](/docs/guide/project) section.
+1. <SaveProject/>
 
 ## Create a pool {#create_pool}
 
