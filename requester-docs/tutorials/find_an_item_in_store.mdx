@@ -1,6 +1,6 @@
 ---
 title: "Project 2. Find a similar item in an online store — Tutorials | Toloka documentation"
-date: "2023-02-14T11:23:03.849318"
+date: "2023-03-10T16:55:48.359003"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,6 +8,11 @@ ogDescription: ""
 docsMenu: "tutorialsMenu"
 ---
 
+import TutorialsCreateProjectButton from './subcomponents/create-project-button.mdx'
+import TutorialsChoosePresetImage from './subcomponents/choose-preset-image.mdx'
+import TutorialsAddNameDescription from './subcomponents/add-name-description.mdx'
+import TolokaRequesterSourceInstructions from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instructions.mdx'
+import SaveProject from './subcomponents/save-project.mdx'
 import TolokaRequesterPoolType from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx'
 import TolokaRequesterPoolName from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
 import TolokaRequesterPoolDescription from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
@@ -28,52 +33,48 @@ import FindAnItemInStoreList2 from './find_an_item_in_store/subcomponents/find_a
 
 In this [project](/docs/glossary#project), Tolokers will search an online store for shoes that are similar to the ones shown in the task. Use the results from [project 1](/docs/tutorials/contain_item#get_results) as source images.
 
-## Create a project {#create_project}
+## Create a project {#project}
 
 To create a project, open [Toloka for requesters](https://platform.toloka.ai/for-requesters/).
 
-#### In the interface:
+In the interface:
 
 1. Choose a template:
 
-    1. Click **Create project**.
+    1. <TutorialsCreateProjectButton/>
+
+        <TutorialsChoosePresetImage/>
+
+    1. Click **Do it myself**.
 
     1. Select the **Product photo search** template.
 
-1. Provide general information:
+1. <TutorialsAddNameDescription/>
 
-    1. In the **Project title** field, enter `Find the same or similar shoes in an online store`.
+    1. In the **Name to show Tolokers** field, enter `Find the same or similar shoes in an online store`.
 
-    1. In the **Description** field, enter `Go to an online store and provide a link and an image of the same or similar pair of shoes`.
+    1. In the **Description for Tolokers** field, enter `Go to an online store and provide a link and an image of the same or similar pair of shoes`.
 
     1. Optionally add a **Private comment**.
 
-    1. Save the changes.
-
-1. Edit the task interface in the editor you selected:
+1. Edit the [task interface](/docs/glossary#task-interface) in the editor you selected:
 
     <Tabs tabs={[
       { title: 'Template Builder', value: <FindAnItemInStoreList1/> },
       { title: 'HTML/CSS/JS editor', value: <FindAnItemInStoreList2/> },
     ]}/>
 
-1. Save the changes.
+1. <TolokaRequesterSourceInstructions/>
 
-1. In **Instructions for Tolokers**, enter the [instructions](/docs/glossary#instructions).
+    Instructions text:
 
-    1. **Instructions:**
+    ```plaintext
+    Look at what the person is wearing in the picture.
+    Then go to the ASOS online store and search for the same pair of shoes.
+    It should be similar in category, style, color, and length.
+    ```
 
-        ```plaintext
-        Look at what the person is wearing in the picture.
-        Then go to the ASOS online store and search for the same pair of shoes.
-        It should be similar in category, style, color, and length.
-        ```
-
-    1. Save the changes.
-
-1. To go back to the **Projects** page, click **Finish editing**.
-
-Learn more about working with the project in the [Project](/docs/guide/project) section.
+1. <SaveProject/>
 
 ## Create a pool {#create_pool}
 
