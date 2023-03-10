@@ -6434,7 +6434,7 @@
         },
         {
           "title": "QIWI",
-          "href": "/en/docs/web/pay/Qiwi-wallet"
+          "href": "/en/docs/web/pay/qiwi-wallet"
         }
       ]
     },
@@ -6538,7 +6538,7 @@
         },
         {
           "title": "QIWI",
-          "href": "/en/docs/android/pay/Qiwi-wallet"
+          "href": "/en/docs/android/pay/qiwi-wallet"
         }
       ]
     },
@@ -6642,7 +6642,7 @@
         },
         {
           "title": "QIWI",
-          "href": "/en/docs/ios/pay/Qiwi-wallet"
+          "href": "/en/docs/ios/pay/qiwi-wallet"
         }
       ]
     },
@@ -6741,7 +6741,7 @@
           "title": "Система быстрых платежей"
         },
         {
-          "href": "/ru/docs/web/pay/Qiwi-wallet",
+          "href": "/ru/docs/web/pay/qiwi-wallet",
           "title": "QIWI"
         }
       ]
@@ -6870,7 +6870,7 @@
           "title": "Система быстрых платежей"
         },
         {
-          "href": "/ru/docs/android/pay/Qiwi-wallet",
+          "href": "/ru/docs/android/pay/qiwi-wallet",
           "title": "QIWI"
         }
       ]
@@ -6999,7 +6999,7 @@
           "title": "Система быстрых платежей"
         },
         {
-          "href": "/ru/docs/ios/pay/Qiwi-wallet",
+          "href": "/ru/docs/ios/pay/qiwi-wallet",
           "title": "QIWI"
         }
       ]
