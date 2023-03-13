@@ -1171,10 +1171,6 @@
         {
           "title": "Troubleshooting",
           "href": "/docs/template-builder/troubleshooting/troubleshooting"
-        },
-        {
-          "title": "Support",
-          "href": "/docs/template-builder/support"
         }
       ]
     },
@@ -1588,10 +1584,6 @@
     {
       "href": "/docs/apps/troubleshooting",
       "title": "Troubleshooting"
-    },
-    {
-      "href": "/docs/apps/support",
-      "title": "Support"
     },
     {
       "title": "List of solutions"
