@@ -2820,122 +2820,118 @@
       "title": "Reference"
     },
     {
-      "title": "New API reference",
+      "title": "Overview",
       "href": "https://toloka.ai/docs/api/apps-reference/"
     },
     {
-      "title": "Overview",
-      "href": "/docs/apps-api/ref/"
-    },
-    {
-      "title": "app-project",
+      "title": "App",
       "subItems": [
         {
           "title": "Overview",
-          "href": "/docs/apps-api/ref/app-project"
+          "href": "https://toloka.ai/docs/api/apps-reference/#tag--app"
         },
         {
-          "href": "/docs/apps-api/ref/app-project/app-projects_get",
-          "title": "Get projects"
-        },
-        {
-          "href": "/docs/apps-api/ref/app-project/app-projects_post",
-          "title": "Create project"
-        },
-        {
-          "href": "/docs/apps-api/ref/app-project/app-projects_app_project_id_get",
-          "title": "Get project by ID"
-        },
-        {
-          "href": "/docs/apps-api/ref/app-project/app-projects_app_project_id_archive_post",
-          "title": "Archive project"
-        },
-        {
-          "href": "/docs/apps-api/ref/app-project/app-projects_app_project_id_unarchive_post",
-          "title": "Unarchive project"
-        }
-      ]
-    },
-    {
-      "title": "app",
-      "subItems": [
-        {
-          "title": "Overview",
-          "href": "/docs/apps-api/ref/app"
-        },
-        {
-          "href": "/docs/apps-api/ref/app/apps_get",
+          "href": "https://toloka.ai/docs/api/apps-reference/#get-/apps",
           "title": "Get project templates"
         },
         {
-          "href": "/docs/apps-api/ref/app/apps_app_id_get",
+          "href": "https://toloka.ai/docs/api/apps-reference/#get-/apps/-app_id-",
           "title": "Get project template by ID"
         }
       ]
     },
     {
-      "title": "item",
+      "title": "App-project",
       "subItems": [
         {
           "title": "Overview",
-          "href": "/docs/apps-api/ref/item"
+          "href": "https://toloka.ai/docs/api/apps-reference/#tag--app-project"
         },
         {
-          "href": "/docs/apps-api/ref/item/app-projects_app_project_id_items_item_id_get",
-          "title": "Get item by ID"
+          "href": "https://toloka.ai/docs/api/apps-reference/#get-/app-projects",
+          "title": "Get projects"
         },
         {
-          "href": "/docs/apps-api/ref/item/app-projects_app_project_id_items_get",
+          "href": "https://toloka.ai/docs/api/apps-reference/#post-/app-projects",
+          "title": "Create project"
+        },
+        {
+          "href": "https://toloka.ai/docs/api/apps-reference/#get-/app-projects/-app_project_id-",
+          "title": "Get project by ID"
+        },
+        {
+          "href": "https://toloka.ai/docs/api/apps-reference/#post-/app-projects/-app_project_id-/archive",
+          "title": "Archive project"
+        },
+        {
+          "href": "https://toloka.ai/docs/api/apps-reference/#post-/app-projects/-app_project_id-/unarchive",
+          "title": "Unarchive project"
+        }
+      ]
+    },
+    {
+      "title": "Item",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "https://toloka.ai/docs/api/apps-reference/#tag--item"
+        },
+        {
+          "href": "https://toloka.ai/docs/api/apps-reference/#get-/app-projects/-app_project_id-/items",
           "title": "Get project items"
         },
         {
-          "href": "/docs/apps-api/ref/item/app-projects_app_project_id_items_post",
+          "href": "https://toloka.ai/docs/api/apps-reference/#post-/app-projects/-app_project_id-/items",
           "title": "Add new item"
         },
         {
-          "href": "/docs/apps-api/ref/item/app-projects_app_project_id_items_bulk_post",
+          "href": "https://toloka.ai/docs/api/apps-reference/#get-/app-projects/-app_project_id-/items/-item_id-",
+          "title": "Get item by ID"
+        },
+        {
+          "href": "https://toloka.ai/docs/api/apps-reference/#post-/app-projects/-app_project_id-/items/bulk",
           "title": "Add items in bulk"
         }
       ]
     },
     {
-      "title": "batch",
+      "title": "Batch",
       "subItems": [
         {
           "title": "Overview",
-          "href": "/docs/apps-api/ref/batch"
+          "href": "https://toloka.ai/docs/api/apps-reference/#tag--batch"
         },
         {
-          "href": "/docs/apps-api/ref/batch/app-projects_app_project_id_batches_get",
+          "href": "https://toloka.ai/docs/api/apps-reference/#get-/app-projects/-app_project_id-/batches",
           "title": "Get project batches"
         },
         {
-          "href": "/docs/apps-api/ref/batch/app-projects_app_project_id_batches_post",
+          "href": "https://toloka.ai/docs/api/apps-reference/#post-/app-projects/-app_project_id-/batches",
           "title": "Create batch with items"
         },
         {
-          "href": "/docs/apps-api/ref/batch/app-projects_app_project_id_batches_sync_post",
-          "title": "Start sync batch processing"
-        },
-        {
-          "href": "/docs/apps-api/ref/batch/app-projects_app_project_id_batches_batch_id_get",
+          "href": "https://toloka.ai/docs/api/apps-reference/#get-/app-projects/-app_project_id-/batches/-batch_id-",
           "title": "Get batch by ID"
         },
         {
-          "href": "/docs/apps-api/ref/batch/app-projects_app_project_id_batches_batch_id_patch",
+          "href": "https://toloka.ai/docs/api/apps-reference/#patch-/app-projects/-app_project_id-/batches/-batch_id-",
           "title": "Update batch"
         },
         {
-          "href": "/docs/apps-api/ref/batch/app-projects_app_project_id_batches_batch_id_start_post",
+          "href": "https://toloka.ai/docs/api/apps-reference/#post-/app-projects/-app_project_id-/batches/-batch_id-/resume",
+          "title": "Resume batch processing"
+        },
+        {
+          "href": "https://toloka.ai/docs/api/apps-reference/#post-/app-projects/-app_project_id-/batches/-batch_id-/start",
           "title": "Start batch processing"
         },
         {
-          "href": "/docs/apps-api/ref/batch/app-projects_app_project_id_batches_batch_id_stop_post",
+          "href": "https://toloka.ai/docs/api/apps-reference/#post-/app-projects/-app_project_id-/batches/-batch_id-/stop",
           "title": "Stop batch processing"
         },
         {
-          "href": "/docs/apps-api/ref/batch/app-projects_app_project_id_batches_batch_id_resume_post",
-          "title": "Resume batch processing"
+          "href": "https://toloka.ai/docs/api/apps-reference/#post-/app-projects/-app_project_id-/batches/sync",
+          "title": "Start sync batch processing"
         }
       ]
     }
