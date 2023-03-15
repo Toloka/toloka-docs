@@ -1,6 +1,6 @@
 ---
 title: "Get responses — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:32.168197"
+date: "2023-03-15T11:24:16.939844"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,7 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import HasMore from './subcomponents/has-more.mdx'
 import ResultList1 from './result/subcomponents/result-list-1.mdx'
 import ResultList2 from './result/subcomponents/result-list-2.mdx'
 import ResultTable1 from './result/subcomponents/result-table-1.mdx'
@@ -74,10 +75,13 @@ You can set up the display of the list of responses in parts (for example, 10 re
 
 ## Response {#response}
 
-[Information about responses](/docs/api/get-assignment-id) in the `items` array:
-
 ```json
 {"items" : [{task suite #1}, {task suite #2}, ... {task suite #n}], "has_more": true}
 ```
+
+Property | Description
+----- | -----
+**items[]** | **array of objects**<br/><br/>Contains [information about responses](/docs/api/get-assignment-id).
+**has_more** | <HasMore/>
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-result">Contact support</Button>

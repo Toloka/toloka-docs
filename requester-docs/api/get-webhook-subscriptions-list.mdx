@@ -1,6 +1,6 @@
 ---
 title: "Get a list of subscriptions — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:35.986198"
+date: "2023-03-15T11:24:22.566950"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,8 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import QueryParams from './subcomponents/query-params.mdx'
+import HasMore from './subcomponents/has-more.mdx'
 import GetWebhookSubscriptionsListList1 from './get-webhook-subscriptions-list/subcomponents/get-webhook-subscriptions-list-list-1.mdx'
 import GetWebhookSubscriptionsListList2 from './get-webhook-subscriptions-list/subcomponents/get-webhook-subscriptions-list-list-2.mdx'
 import GetWebhookSubscriptionsListTable1 from './get-webhook-subscriptions-list/subcomponents/get-webhook-subscriptions-list-table-1.mdx'
@@ -41,7 +43,7 @@ Title | Overview
 
 ## Query parameters {#query-params}
 
-Specified in the link after the question mark; separated by `&`.
+<QueryParams/>
 
 Parameter | Overview
 ----- | -----
@@ -97,14 +99,14 @@ Contains a list of subscriptions with information about each of them in JSON for
 }
 ```
 
-Parameter | Overview
+Property | Description
 ----- | -----
 **items[]** | **array of objects**<br/><br/>An array of objects with information about the requested subscriptions.
-**webhook_url** | **string**<br/><br/>The URL that notifications will be sent to.
-**event_type** | <GetWebhookSubscriptionsListTable3/>
-**pool_id** | **string**<br/><br/>ID of the pool that the subscription was created for.
-**id** | **string**<br/><br/>ID of the subscription.
-**created** | **string**<br/><br/>The date and time when the subscription was created (UTC). It uses ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
-**has_more** | <GetWebhookSubscriptionsListTable4/>
+**items[].webhook_url** | **string**<br/><br/>The URL that notifications will be sent to.
+**items[].event_type** | <GetWebhookSubscriptionsListTable3/>
+**items[].pool_id** | **string**<br/><br/>ID of the pool that the subscription was created for.
+**items[].id** | **string**<br/><br/>ID of the subscription.
+**items[].created** | **string**<br/><br/>The date and time when the subscription was created (UTC). It uses ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**has_more** | <HasMore/>
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-get-webhook-subscriptions-list">Contact support</Button>

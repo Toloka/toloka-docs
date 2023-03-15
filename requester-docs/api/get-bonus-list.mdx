@@ -1,6 +1,6 @@
 ---
 title: "Get a list of rewards issued — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:34.463327"
+date: "2023-03-15T11:24:20.255784"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,8 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import QueryParams from './subcomponents/query-params.mdx'
+import HasMore from './subcomponents/has-more.mdx'
 import GetBonusListList1 from './get-bonus-list/subcomponents/get-bonus-list-list-1.mdx'
 import GetBonusListList2 from './get-bonus-list/subcomponents/get-bonus-list-list-2.mdx'
 import GetBonusListTable1 from './get-bonus-list/subcomponents/get-bonus-list-table-1.mdx'
@@ -38,7 +40,7 @@ Title | Overview
 
 ## Query parameters {#query-params}
 
-Specified in the link after the question mark; separated by `&`.
+<QueryParams/>
 
 Parameter | Overview
 ----- | -----
@@ -71,10 +73,13 @@ You can set up the display of the list of rewards in parts (for example, 10 rewa
 
 ## Response {#response}
 
-[Information about rewards](/docs/api/get-one-bonus) in the `items` array:
-
 ```json
 {"items" : [{bonus #1}, {bonus #2}, ... {bonus #n}], "has_more": true}
 ```
+
+Property | Description
+----- | -----
+**items[]** | **array of objects**<br/><br/>Contains [information about rewards](/docs/api/get-one-bonus).
+**has_more** | <HasMore/>
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-get-bonus-list">Contact support</Button>

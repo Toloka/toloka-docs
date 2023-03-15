@@ -1,6 +1,6 @@
 ---
 title: "Get the list of pools — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:31.217228"
+date: "2023-03-15T11:24:15.509757"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,8 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import QueryParams from './subcomponents/query-params.mdx'
+import HasMore from './subcomponents/has-more.mdx'
 import GetPoolListList1 from './get-pool-list/subcomponents/get-pool-list-list-1.mdx'
 import GetPoolListList2 from './get-pool-list/subcomponents/get-pool-list-list-2.mdx'
 import GetPoolListTable1 from './get-pool-list/subcomponents/get-pool-list-table-1.mdx'
@@ -39,7 +41,7 @@ Title | Overview
 
 ## Query parameters {#query-params}
 
-Specified in the link after the question mark; separated by `&`.
+<QueryParams/>
 
 Parameter | Overview
 ----- | -----
@@ -71,10 +73,13 @@ You can set up the display of the list of pools in parts (for example, 10 pools 
 
 ## Response {#response}
 
-Contains a list of pools and their properties in the `items` array:
-
 ```json
 {"items": [{parameters_of_pool_1}, {parameters_of_pool_2}, ... {parameters_of_pool__n_}], "has_more": false}
 ```
+
+Property | Description
+----- | -----
+**items[]** | **array of objects**<br/><br/>Contains a list of pools and their properties.
+**has_more** | <HasMore/>
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-get-pool-list">Contact support</Button>

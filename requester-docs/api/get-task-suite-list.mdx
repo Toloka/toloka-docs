@@ -1,6 +1,6 @@
 ---
 title: "Get the list of task suites — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:30.030767"
+date: "2023-03-15T11:24:13.709960"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,8 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import QueryParams from './subcomponents/query-params.mdx'
+import HasMore from './subcomponents/has-more.mdx'
 import GetTaskSuiteListList1 from './get-task-suite-list/subcomponents/get-task-suite-list-list-1.mdx'
 import GetTaskSuiteListList2 from './get-task-suite-list/subcomponents/get-task-suite-list-list-2.mdx'
 import GetTaskSuiteListTable1 from './get-task-suite-list/subcomponents/get-task-suite-list-table-1.mdx'
@@ -38,7 +40,7 @@ Title | Overview
 
 ## Query parameters {#query-params}
 
-Specified in the link after the question mark; separated by `&`.
+<QueryParams/>
 
 Parameter | Overview
 ----- | -----
@@ -71,10 +73,13 @@ You can set up the display of the list of task suites in parts (for example, 10 
 
 ## Response {#response}
 
-Contains task suite data in the `items` array.
-
 ```json
 {"items" : [{task suite 1}, {task suite 2}, ... {task suite n}], "has_more": true}
 ```
+
+Property | Description
+----- | -----
+**items[]** | **array of objects**<br/><br/>Contains task suite data.
+**has_more** | <HasMore/>
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-get-task-suite-list">Contact support</Button>
