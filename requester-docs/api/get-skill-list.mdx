@@ -1,6 +1,6 @@
 ---
 title: "Get the list of skills — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:33.480796"
+date: "2023-03-15T11:24:18.826920"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,8 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import QueryParams from './subcomponents/query-params.mdx'
+import HasMore from './subcomponents/has-more.mdx'
 import GetSkillListList1 from './get-skill-list/subcomponents/get-skill-list-list-1.mdx'
 import GetSkillListList2 from './get-skill-list/subcomponents/get-skill-list-list-2.mdx'
 import GetSkillListTable1 from './get-skill-list/subcomponents/get-skill-list-table-1.mdx'
@@ -38,7 +40,7 @@ Title | Overview
 
 ## Query parameters {#query-params}
 
-Specified in the link after the question mark; separated by `&`.
+<QueryParams/>
 
 Parameter | Overview
 ----- | -----
@@ -69,10 +71,13 @@ You can set up the display of the list of skills in parts (for example, 10 skill
 
 ## Response {#response}
 
-[Information about skills](/docs/api/get-skill) in the `items` array:
-
 ```json
 {"items": [{skill 1}, {skill 2}, ... {skill n}], "has_more": false}
 ```
+
+Property | Description
+----- | -----
+**items[]** | **array of objects**<br/><br/>Contains [information about skills](/docs/api/get-skill).
+**has_more** | <HasMore/>
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-get-skill-list">Contact support</Button>

@@ -1,6 +1,6 @@
 ---
 title: "Get a list of bans — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:31.725735"
+date: "2023-03-15T11:24:16.248904"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,8 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import QueryParams from './subcomponents/query-params.mdx'
+import HasMore from './subcomponents/has-more.mdx'
 import BanGetListList1 from './ban-get-list/subcomponents/ban-get-list-list-1.mdx'
 import BanGetListList2 from './ban-get-list/subcomponents/ban-get-list-list-2.mdx'
 import BanGetListTable1 from './ban-get-list/subcomponents/ban-get-list-table-1.mdx'
@@ -37,7 +39,7 @@ Title | Overview
 
 ## Query parameters {#query-params}
 
-Specified in the link after the question mark; separated by `&`.
+<QueryParams/>
 
 Parameter | Overview
 ----- | -----
@@ -59,10 +61,13 @@ To get the list of bans in parts (for example, 10 bans at a time), use a combin
 
 ## Response {#response}
 
-Contains a list of bans in the `items` array:
-
 ```json
 {"items" : [{ban parameters 1}, {ban parameters 2}, ... {ban parameters n}], "has_more": true}
 ```
+
+Property | Description
+----- | -----
+**items[]** | **array of objects**<br/><br/>Contains a list of bans.
+**has_more** | <HasMore/>
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-ban-get-list">Contact support</Button>

@@ -1,6 +1,6 @@
 ---
 title: "Get aggregate responses — Toloka API | Toloka documentation"
-date: "2023-02-22T15:34:19.508984"
+date: "2023-03-15T11:24:13.927417"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,8 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import QueryParams from './subcomponents/query-params.mdx'
+import HasMore from './subcomponents/has-more.mdx'
 import GetAggregatedResultList1 from './get-aggregated-result/subcomponents/get-aggregated-result-list-1.mdx'
 import GetAggregatedResultList2 from './get-aggregated-result/subcomponents/get-aggregated-result-list-2.mdx'
 import GetAggregatedResultTable1 from './get-aggregated-result/subcomponents/get-aggregated-result-table-1.mdx'
@@ -50,7 +52,7 @@ Title | Overview
 
 ## Query parameters {#query-params}
 
-Specified in the link after the question mark; separated by `&`.
+<QueryParams/>
 
 Parameter | Overview
 ----- | -----
@@ -80,10 +82,13 @@ You can set up the display of the list of responses in parts (for example, 10 re
 
 ## Response {#response}
 
-[Aggregation result](/docs/api/aggregate-by-task) in the `items` array.
-
 ```json
 {"items" : [{task #1}, {task #2}, ... {task #n}], "has_more": true}
 ```
+
+Property | Description
+----- | -----
+**items[]** | **array of objects**<br/><br/>Contains [aggregation result](/docs/api/aggregate-by-task).
+**has_more** | <HasMore/>
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-get-aggregated-result">Contact support</Button>

@@ -1,6 +1,6 @@
 ---
 title: "Get the list of operations — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:30.233752"
+date: "2023-03-15T11:24:14.033423"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,8 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import QueryParams from './subcomponents/query-params.mdx'
+import HasMore from './subcomponents/has-more.mdx'
 import GetOperationsListList1 from './get-operations-list/subcomponents/get-operations-list-list-1.mdx'
 import GetOperationsListList2 from './get-operations-list/subcomponents/get-operations-list-list-2.mdx'
 import GetOperationsListTable1 from './get-operations-list/subcomponents/get-operations-list-table-1.mdx'
@@ -36,7 +38,7 @@ Title | Overview
 
 ## Query parameters {#query-params}
 
-Specified in the link after the question mark; separated by `&`.
+<QueryParams/>
 
 Parameter | Overview
 ----- | -----
@@ -47,10 +49,13 @@ Parameter | Overview
 
 ## Response {#response}
 
-Contains a list of operations in the `items` array:
-
 ```json
 {"items": [{operation details 1}, {operation details 2}, ... {operation details n}], "has_more": false}
 ```
+
+Property | Description
+----- | -----
+**items[]** | **array of objects**<br/><br/>Contains a list of operations.
+**has_more** | <HasMore/>
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-get-operations-list">Contact support</Button>

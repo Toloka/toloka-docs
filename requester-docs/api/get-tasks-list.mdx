@@ -1,6 +1,6 @@
 ---
 title: "Get the list of tasks — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:30.818698"
+date: "2023-03-15T11:24:14.896893"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,8 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import QueryParams from './subcomponents/query-params.mdx'
+import HasMore from './subcomponents/has-more.mdx'
 import GetTasksListList1 from './get-tasks-list/subcomponents/get-tasks-list-list-1.mdx'
 import GetTasksListList2 from './get-tasks-list/subcomponents/get-tasks-list-list-2.mdx'
 import GetTasksListTable1 from './get-tasks-list/subcomponents/get-tasks-list-table-1.mdx'
@@ -38,7 +40,7 @@ Title | Overview
 
 ## Query parameters {#query-params}
 
-Specified in the link after the question mark; separated by `&`.
+<QueryParams/>
 
 Parameter | Overview
 ----- | -----
@@ -70,10 +72,13 @@ You can set up the display of the list of tasks in parts (for example, 10 tasks 
 
 ## Response {#response}
 
-Contains task data in the `items` array.
-
 ```json
 {"items" : [{task 1}, {task 2}, ... {task n}], "has_more": true}
 ```
+
+Property | Description
+----- | -----
+**items[]** | **array of objects**<br/><br/>Contains task data.
+**has_more** | <HasMore/>
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-get-tasks-list">Contact support</Button>

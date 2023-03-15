@@ -1,6 +1,6 @@
 ---
 title: "Get the list of files — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:30.872941"
+date: "2023-03-15T11:24:14.980627"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,8 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import QueryParams from './subcomponents/query-params.mdx'
+import HasMore from './subcomponents/has-more.mdx'
 import GetAttachmentListList1 from './get-attachment-list/subcomponents/get-attachment-list-list-1.mdx'
 import GetAttachmentListList2 from './get-attachment-list/subcomponents/get-attachment-list-list-2.mdx'
 import GetAttachmentListTable1 from './get-attachment-list/subcomponents/get-attachment-list-table-1.mdx'
@@ -44,7 +46,7 @@ Title | Overview
 
 ## Query parameters {#query-params}
 
-Specified in the link after the question mark; separated by `&`.
+<QueryParams/>
 
 Parameter | Overview
 ----- | -----
@@ -79,10 +81,13 @@ You can set up the display of the list of files in parts (for example, 10 files 
 
 ## Response {#response}
 
-[Information about files](/docs/api/get-attachment) in the `items` array:
-
 ```json
 {"items" : [{file #1}, {file #2}, ... {file #n}], "has_more": false}
 ```
+
+Property | Description
+----- | -----
+**items[]** | **array of objects**<br/><br/>Contains [information about files](/docs/api/get-attachment).
+**has_more** | <HasMore/>
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-get-attachment-list">Contact support</Button>
