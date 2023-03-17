@@ -1,6 +1,6 @@
 ---
 title: "helper.translate — Template Builder | Toloka documentation"
-date: "2023-02-20T17:42:10.869116"
+date: "2023-03-17T17:21:47.717857"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,14 +8,13 @@ ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
-
 # helper.translate
 
 Component for translating interface elements to other languages. More details in [Translating the task interface](/docs/guide/project-languages#interface-translate).
 
 In the properties that should be displayed in different languages, add:
 
-```
+```json
 {
   "type": "helper.translate",
   "key": "<key name>"
@@ -26,11 +25,11 @@ Adding the `key` property displays a field for entering the key text. Enter the 
 
 Usage example:
 
-```
+```json
 {
   "view": {
     "type": "view.image",
-    "url": "https://yastat.net/s3/tb/static/file-examples/image/small.png",
+    "url": "https://tlkfrontprod.azureedge.net/template-builder-production/static/file-examples/small.png",
     "label": {
       "type": "helper.translate",
       "key": "label-image"

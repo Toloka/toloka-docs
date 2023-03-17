@@ -1,0 +1,37 @@
+---
+title: "@yandex-toloka/data.assignment-id — Template Builder | Toloka documentation"
+date: "2023-03-17T17:21:46.398491"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+# @yandex-toloka/data.assignment-id
+
+This component returns the assignment ID.
+
+This might be useful in case Tolokers click links to go to some other platform and complete their tasks there (for example, take a survey on a third-party platform). This way, it won't be possible to identify them or track their actions unless you know the ID of the assignment.
+
+To get the assignment ID, add `{"type": "@yandex-toloka/data.assignment-id"}` to the property of the desired component.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/I_2W-b_i452rEC">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [view.list](/docs/template-builder/reference/view.list): Displays data in a list.
+- [view.link](/docs/template-builder/reference/view.link): Displays a link.
+- [plugin.trigger](/docs/template-builder/reference/plugin.trigger): Triggers a specific action when an event occurs.
+- [action.set](/docs/template-builder/reference/action.set): Sets the value from `payload` in the data in the `data` property.
+- [helper.join](/docs/template-builder/reference/helper.join): Combines two or more strings into one.
+
+</Cut>
+
+## Component properties {#properties}
+
+**Name** | **Type** | **Description**
+----- | ----- | -----
+`type`<span style="color: red">\*</span> | "@yandex-toloka/data.assignment-id" | Set component type.
+
+<Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=template-builder-reference-data-assignment-id">Contact support</Button>
