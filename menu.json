@@ -7029,5 +7029,17 @@
       "href": "/ru/docs/ios/uhrs-faq",
       "title": "Вопросы и ответы по UHRS"
     }
+  ],
+  "mobileTolokersMenu": [
+    {
+      "title": "Choose your version",
+      "href": "/en/docs/mobile"
+    }
+  ],
+  "mobileTolokersRuMenu": [
+    {
+      "title": "Выберите вашу версию",
+      "href": "/ru/docs/mobile"
+    }
   ]
 }
