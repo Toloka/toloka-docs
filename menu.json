@@ -1124,6 +1124,10 @@
                   "href": "/docs/template-builder/reference/datas"
                 },
                 {
+                  "title": "data.assignment-id",
+                  "href": "/docs/template-builder/reference/data.assignment-id"
+                },
+                {
                   "title": "data.location",
                   "href": "/docs/template-builder/reference/data.location"
                 }
