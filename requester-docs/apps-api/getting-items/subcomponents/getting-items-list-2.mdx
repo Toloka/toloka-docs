@@ -1,0 +1,27 @@
+```python
+# Connect Toloka-Kit library to your Python script
+import toloka.client as toloka
+
+# Instantiate the TolokaClient class object
+toloka_client = toloka.TolokaClient('AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE', 'PRODUCTION')
+
+# Get the first item in the batch
+items = toloka_client.find_app_items(
+    app_project_id='8lvN9kBN4wwsj47ZqNal',
+    batch_id='7d0YYJ2Av5OhnLVwAygZ',
+    sort=['id'],
+    limit=1
+)
+
+print(items.content[0].id)
+print(items.content[0].input_data)
+print(items.content[0].output_data)
+```
+
+The response prints the details of the first item which include the item ID, input and output data.
+
+```bash
+QPVvLYdlRPBH9pl7KzBV
+{'id': '1', 'text': 'Kate likes dogs.'}
+{'text': 'Kate likes dogs.', 'result': ['OK'], 'confidence': '0.9998542274'}
+```

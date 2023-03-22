@@ -1,0 +1,33 @@
+```bash
+curl -X GET 'https://toloka.dev/api/app/v0/app-projects/8lvN9kBN4wwsj47ZqNal/items?batch_id=7d0YYJ2Av5OhnLVwAygZ&sort=id&limit=1' \
+     -H 'Authorization: OAuth AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE'
+```
+
+The response prints the details of the first item which include the item ID, input and output data.
+
+```json
+{
+  "content": [
+    {
+      "app_project_id": "8lvN9kBN4wwsj47ZqNal",
+      "batch_id": "7d0YYJ2Av5OhnLVwAygZ",
+      "created_at": "2022-01-22T07:44:57.035",
+      "errors": [],
+      "id": "QPVvLYdlRPBH9pl7KzBV",
+      "input_data": {
+        "id": "1",
+        "text": "Kate likes dogs."
+      },
+      "output_data": {
+        "confidence": 0.9998542274,
+        "result": [
+          "OK"
+        ],
+        "text": "Kate likes dogs."
+      },
+      "status": "NEW"
+    }
+  ],
+  "has_more": true
+}
+```

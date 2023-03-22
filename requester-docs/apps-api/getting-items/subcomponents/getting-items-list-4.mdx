@@ -1,0 +1,41 @@
+```python
+# The ID of the first item is used to start the iteration
+last_id = items.content[0].id
+
+# While the 'has_more' parameter in the response is equal to `True`,
+# we iterate through the items in the batch
+while items.has_more:
+    items = toloka_client.find_app_items(
+        app_project_id='8lvN9kBN4wwsj47ZqNal',
+        batch_id='7d0YYJ2Av5OhnLVwAygZ',
+        sort=['id'],
+        limit=10,
+        after_id=last_id
+    )
+
+    # As we set the limit to '10', we need to additionally iterate
+    # through the items in the returned set of items
+    for i in range(0,len(items.content)):
+        print(items.content[i].id)
+        print(items.content[i].input_data)
+        print(items.content[i].output_data)
+
+    # Now we use the ID of the last item in the set for the next iteration
+    last_id = items.content[-1].id
+
+# When 'has_more' is finally equal to 'False', no more items are left
+print('No more items in batch')
+```
+
+The response prints the details of the second and subsequent items which include the item IDs, input and output data.
+
+```bash
+Vnj0LMw4Rn5Hkev3Y4aD
+{'id': '4', 'text': 'Pete likes cats.'}
+{'text': 'Pete likes cats.', 'result': ['OK'], 'confidence': '0.9993645425'}
+...
+zNkQE9y1ANzTdVQp3JwY
+{'id': '12024', 'text': 'Mary likes dogs.'}
+{'text': 'Mary likes dogs.', 'result': ['OK'], 'confidence': '0.9874202523'}
+No more items in batch
+```
