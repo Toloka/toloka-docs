@@ -1,0 +1,34 @@
+---
+title: "Filtering — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:22.128602"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# Filtering
+
+`ml_platform.ui.Filtering`
+
+```python
+Filtering(
+    self,
+    *,
+    name: str,
+    value: Union[str, int, float],
+    operation: str = None
+)
+```
+
+A class of filtering parameters.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`name`|**str**|<p>Column name.</p>
+`value`|**Union\[str, int, float\]**|<p>Filter value.</p>
+`subindex`|**-**|<p>Subcolumn index.</p>
+`operation`|**str**|<p>Filter operation. Possible values: `'equal'`, `'notEqual'`, `'greaterThan'`, `'lessThan'`, `'greaterThanOrEqual'`, and `'lessThanOrEqual'`.</p>

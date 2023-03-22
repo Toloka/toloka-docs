@@ -1,0 +1,52 @@
+---
+title: "find — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:22.535318"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# find
+
+`ml_platform.experiments.ExperimentsClient.find`
+
+```python
+find(
+    self,
+    experiment_ids: Optional[List[str]] = None,
+    tags: Optional[List[str]] = None,
+    usernames: Optional[List[str]] = None,
+    statuses: Optional[List] = None,
+    date_from: Optional[datetime] = None,
+    date_to: Optional[datetime] = None,
+    with_invalidated: bool = False,
+    offset: int = 0,
+    limit: int = 1000
+)
+```
+
+Finds experiments.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`experiment_ids`|**Optional\[List\[str\]\]**|<p>Experiment IDs.</p>
+`tags`|**Optional\[List\[str\]\]**|<p>Tags list.</p>
+`usernames`|**Optional\[List\[str\]\]**|<p>Usernames list.</p>
+`statuses`|**Optional\[List\]**|<p>Statuses list.</p>
+`date_from`|**Optional\[datetime\]**|<p>Start date to search for experiments from.</p>
+`date_to`|**Optional\[datetime\]**|<p>End date to search for experiments to.</p>
+`with_invalidated`|**bool**|<p>Whether to include invalidated runs into the search result.</p>
+`offset`|**int**|<p>The number of runs to skip.</p>
+`limit`|**int**|<p>The maximum number of runs to return.</p>
+
+* **Returns:**
+
+  The list of experiments.
+
+* **Return type:**
+
+  List\[[Experiment](/docs/toloka-ml/reference/ml_platform.experiments.Experiment)\]

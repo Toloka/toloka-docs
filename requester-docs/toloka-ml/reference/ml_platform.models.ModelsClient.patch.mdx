@@ -1,0 +1,44 @@
+---
+title: "patch — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:22.946219"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# patch
+
+`ml_platform.models.ModelsClient.patch`
+
+```python
+patch(
+    self,
+    uid: Optional[str] = None,
+    alias: Optional[str] = None,
+    name: Optional[str] = None,
+    description: Optional[str] = None,
+    tags: Optional[List[str]] = None,
+    permissions: Optional[Permissions] = None,
+    status: Optional[str] = None,
+    model_type: Optional[str] = None,
+    task_types: Optional[List[str]] = None
+)
+```
+
+Updates model parameters without creating a new version. Files cannot be changed.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`uid`|**Optional\[str\]**|<p>Model ID.</p>
+`alias`|**Optional\[str\]**|<p>Model alias.</p>
+`name`|**Optional\[str\]**|<p>Model name.</p>
+`description`|**Optional\[str\]**|<p>Model description.</p>
+`tags`|**Optional\[List\[str\]\]**|<p>Model tags.</p>
+`permissions`|**Optional\[[Permissions](/docs/toloka-ml/reference/ml_platform.core.Permissions)\]**|<p>Model access rights.</p>
+`status`|**Optional\[str\]**|<p>Model status.</p>
+`model_type`|**Optional\[str\]**|<p>Model type.</p>
+`task_types`|**Optional\[List\[str\]\]**|<p>Task types.</p>

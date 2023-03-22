@@ -1,0 +1,44 @@
+---
+title: "get_model_artifact_url — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:23.353817"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# get_model_artifact_url
+
+`ml_platform.models.ModelsClient.get_model_artifact_url`
+
+```python
+get_model_artifact_url(
+    self,
+    uid: str,
+    name: str,
+    alias: Optional[str] = None,
+    major_version: Optional[int] = None,
+    version: Optional[int] = None
+)
+```
+
+Gets the URL of a model artifact.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`uid`|**str**|<p>Model ID.</p>
+`name`|**str**|<p>Artifact name.</p>
+`alias`|**Optional\[str\]**|<p>Model alias.</p>
+`major_version`|**Optional\[int\]**|<p>Major version of the model.</p>
+`version`|**Optional\[int\]**|<p>Minor version of the model.</p>
+
+* **Returns:**
+
+  Artifact URL.
+
+* **Return type:**
+
+  str

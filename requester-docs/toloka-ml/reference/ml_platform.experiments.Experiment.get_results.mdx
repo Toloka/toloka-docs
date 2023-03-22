@@ -1,0 +1,38 @@
+---
+title: "get_results — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:28.142510"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# get_results
+
+`ml_platform.experiments.Experiment.get_results`
+
+```python
+get_results(
+    self,
+    run_filter: Optional[Callable] = None,
+    prettified: bool = False
+)
+```
+
+Gets the experiment results.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`run_filter`|**Optional\[Callable\]**|<p>Filter runs by run_filter predicate function.</p>
+`prettified`|**bool**|<p>Whether to format the returned results.</p> <ul> <li>If `True`, returns `pandas.DataFrame` to `results` instead of the unhandled code.</li> <li>If `False`, returns raw unformatted results.</li> </ul>
+
+* **Returns:**
+
+  List of information about runs if `prettified` is set to `True`. Otherwise, the map of metrics values.
+
+* **Return type:**
+
+  Any

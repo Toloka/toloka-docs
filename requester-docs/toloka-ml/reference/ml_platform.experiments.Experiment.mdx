@@ -1,0 +1,56 @@
+---
+title: "Experiment — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:21.659753"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# Experiment
+
+`ml_platform.experiments.Experiment`
+
+```python
+Experiment(
+    self,
+    *,
+    _id: str = None,
+    instance_ids: List[str] = None,
+    description: Union[str, UpdateField[str]] = None,
+    name: Union[str, UpdateField[str]] = None,
+    permissions: Permissions = None,
+    status: str = None,
+    tags: Union[List[str], UpdateField[List[str]]] = None,
+    type: str = None,
+    username: str = None,
+    submit_datetime: str = None,
+    update_datetime: str = None,
+    baseline: Union[str, UpdateField[str]] = None,
+    instance_columns: Union[List[str], UpdateField[List[str]]] = None,
+    config: Dict = None,
+    notes: Union[str, UpdateField[str]] = None,
+    url: str = None,
+    metainfo: Dict = None,
+    invalidated: bool = None,
+    delete_datetime: str = None,
+    deleted_by: str = None
+)
+```
+
+## Methods summary
+
+| Method | Description |
+| :------| :-----------|
+[add_runs](/docs/toloka-ml/reference/ml_platform.experiments.Experiment.add_runs)| Adds runs to the experiment.
+[cancel](/docs/toloka-ml/reference/ml_platform.experiments.Experiment.cancel)| Cancels the experiment.
+[delete](/docs/toloka-ml/reference/ml_platform.experiments.Experiment.delete)| Deletes the experiment.
+[get_results](/docs/toloka-ml/reference/ml_platform.experiments.Experiment.get_results)| Gets the experiment results.
+[get_status](/docs/toloka-ml/reference/ml_platform.experiments.Experiment.get_status)| Gets number of experiment runs for each possible status.
+[invalidate](/docs/toloka-ml/reference/ml_platform.experiments.Experiment.invalidate)| Invalidates the experiment.
+[remove_runs](/docs/toloka-ml/reference/ml_platform.experiments.Experiment.remove_runs)| Removes runs from the experiment.
+[restart_failed_runs](/docs/toloka-ml/reference/ml_platform.experiments.Experiment.restart_failed_runs)| Restarts failed runs.
+[restore](/docs/toloka-ml/reference/ml_platform.experiments.Experiment.restore)| Restores the experiment.
+[save](/docs/toloka-ml/reference/ml_platform.experiments.Experiment.save)| Saves the experiment changes.
+[wait](/docs/toloka-ml/reference/ml_platform.experiments.Experiment.wait)| Waits for the experiment completion.

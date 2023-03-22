@@ -1,0 +1,39 @@
+---
+title: "ModelsClient — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:25.544906"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# ModelsClient
+
+`ml_platform.models.ModelsClient`
+
+```python
+ModelsClient(
+    self,
+    token: Optional[str] = None,
+    http_client: Optional[HttpClient] = None
+)
+```
+
+Provides a client to work with models.
+
+## Methods summary
+
+| Method | Description |
+| :------| :-----------|
+[add](/docs/toloka-ml/reference/ml_platform.models.ModelsClient.add)| Adds a model to the Toloka ML platform database.
+[delete](/docs/toloka-ml/reference/ml_platform.models.ModelsClient.delete)| Deletes the model.
+[find](/docs/toloka-ml/reference/ml_platform.models.ModelsClient.find)| Finds a model.
+[get](/docs/toloka-ml/reference/ml_platform.models.ModelsClient.get)| Gets the model.
+[get_model_artifact_url](/docs/toloka-ml/reference/ml_platform.models.ModelsClient.get_model_artifact_url)| Gets the URL of a model artifact.
+[get_model_scenarios](/docs/toloka-ml/reference/ml_platform.models.ModelsClient.get_model_scenarios)| Gets the model scenarios.
+[get_versions](/docs/toloka-ml/reference/ml_platform.models.ModelsClient.get_versions)| Gets all versions of the model.
+[new_version](/docs/toloka-ml/reference/ml_platform.models.ModelsClient.new_version)| Add a new model version with the parameters for versions.
+[patch](/docs/toloka-ml/reference/ml_platform.models.ModelsClient.patch)| Updates model parameters without creating a new version. Files cannot be changed.
+[patch_version](/docs/toloka-ml/reference/ml_platform.models.ModelsClient.patch_version)| Creates a model version with the parameters for version.
+[update](/docs/toloka-ml/reference/ml_platform.models.ModelsClient.update)| Updates the model with common parameters.

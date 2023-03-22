@@ -1,0 +1,47 @@
+---
+title: "patch_version — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:23.269004"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# patch_version
+
+`ml_platform.datasets.DatasetsClient.patch_version`
+
+```python
+patch_version(
+    self,
+    uid: Optional[str] = None,
+    alias: Optional[str] = None,
+    major_version: Optional[int] = None,
+    version: Optional[int] = None,
+    new_major_version: bool = False,
+    expected_major_version: Optional[int] = None,
+    files: Optional[List[DatasetFile]] = None,
+    light_scenarios: Optional[List] = None,
+    scenario_presets: Optional[List[Preset]] = None,
+    scenario_params: Optional[List[ScenarioParamGroup]] = None,
+    dataset_meta: Optional[Dict] = None,
+    version_comment: Optional[str] = None,
+    info: Union[dict, list, None] = None
+)
+```
+
+Creates the dataset version with the version parameters.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`new_major_version`|**bool**|<p>Whether to create a new major version of the dataset.</p>
+`expected_major_version`|**Optional\[int\]**|<p>Major version of the dataset to create.</p>
+
+* **Returns:**
+
+  Created major and minor versions of the dataset.
+
+* **Return type:**

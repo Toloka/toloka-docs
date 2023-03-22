@@ -1,0 +1,27 @@
+---
+title: "update — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:24.878787"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# update
+
+`ml_platform.datasets.DatasetsClient.update`
+
+```python
+update(self, dataset: Dataset)
+```
+
+Overwrites all properties of the dataset or the dataset version without new version creation.
+
+You cannot change dataset files with such an update.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`dataset`|**[Dataset](/docs/toloka-ml/reference/ml_platform.datasets.Dataset)**|<p>Dataset with the changed fields.</p>

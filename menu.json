@@ -6320,39 +6320,303 @@
       ]
     },
     {
-      "title": "Python API"
+      "title": "Python API reference"
     },
     {
       "title": "Overview",
-      "href": "/docs/toloka-ml/api"
+      "href": "/docs/toloka-ml/reference"
     },
     {
-      "title": "Main structures",
-      "href": "/docs/toloka-ml/api/core"
+      "title": "Main Structures",
+      "subItems": [
+        {
+          "title": "DatasetInfo",
+          "href": "/docs/toloka-ml/reference/ml_platform.core.DatasetInfo"
+        },
+        {
+          "title": "Metric",
+          "href": "/docs/toloka-ml/reference/ml_platform.core.Metric"
+        },
+        {
+          "title": "Metrics",
+          "subItems": [
+            {
+              "title": "Overview",
+              "href": "/docs/toloka-ml/reference/ml_platform.core.Metrics"
+            },
+            {
+              "title": "filter",
+              "href": "/docs/toloka-ml/reference/ml_platform.core.Metrics.filter"
+            },
+            {
+              "title": "get",
+              "href": "/docs/toloka-ml/reference/ml_platform.core.Metrics.get"
+            }
+          ]
+        },
+        {
+          "title": "ModelInfo",
+          "href": "/docs/toloka-ml/reference/ml_platform.core.ModelInfo"
+        },
+        {
+          "title": "Permissions",
+          "href": "/docs/toloka-ml/reference/ml_platform.core.Permissions"
+        },
+        {
+          "title": "RunInfo",
+          "href": "/docs/toloka-ml/reference/ml_platform.core.RunInfo"
+        }
+      ]
     },
     {
       "title": "PulsarClient",
-      "href": "/docs/toloka-ml/api/client"
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient"
+        },
+        {
+          "title": "add_tags",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.add_tags"
+        },
+        {
+          "title": "add",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.add"
+        },
+        {
+          "title": "delete",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.delete"
+        },
+        {
+          "title": "find",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.find"
+        },
+        {
+          "title": "get_metrics",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.get_metrics"
+        },
+        {
+          "title": "get_per_sample_data",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.get_per_sample_data"
+        },
+        {
+          "title": "patch",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.patch"
+        },
+        {
+          "title": "patch_metric",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.patch_metric"
+        },
+        {
+          "title": "plot_runs",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.plot_runs"
+        },
+        {
+          "title": "plot_table",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.plot_table"
+        },
+        {
+          "title": "remove_tags",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.remove_tags"
+        },
+        {
+          "title": "set_metric_value",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.set_metric_value"
+        },
+        {
+          "title": "update",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.update"
+        },
+        {
+          "title": "update_description",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.update_description"
+        },
+        {
+          "title": "update_metrics",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.update_metrics"
+        },
+        {
+          "title": "update_name",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.update_name"
+        },
+        {
+          "title": "update_user_config",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.update_user_config"
+        },
+        {
+          "title": "upload_file_to_s3",
+          "href": "/docs/toloka-ml/reference/ml_platform.client.PulsarClient.upload_file_to_s3"
+        }
+      ]
     },
     {
       "title": "ModelsClient",
-      "href": "/docs/toloka-ml/api/models"
-    },
-    {
-      "title": "ModelScenario",
-      "href": "/docs/toloka-ml/api/scenarios"
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/docs/toloka-ml/reference/ml_platform.models.ModelsClient"
+        },
+        {
+          "title": "add",
+          "href": "/docs/toloka-ml/reference/ml_platform.models.ModelsClient.add"
+        },
+        {
+          "title": "delete",
+          "href": "/docs/toloka-ml/reference/ml_platform.models.ModelsClient.delete"
+        },
+        {
+          "title": "find",
+          "href": "/docs/toloka-ml/reference/ml_platform.models.ModelsClient.find"
+        },
+        {
+          "title": "get",
+          "href": "/docs/toloka-ml/reference/ml_platform.models.ModelsClient.get"
+        },
+        {
+          "title": "get_model_artifact_url",
+          "href": "/docs/toloka-ml/reference/ml_platform.models.ModelsClient.get_model_artifact_url"
+        },
+        {
+          "title": "get_model_scenarios",
+          "href": "/docs/toloka-ml/reference/ml_platform.models.ModelsClient.get_model_scenarios"
+        },
+        {
+          "title": "get_versions",
+          "href": "/docs/toloka-ml/reference/ml_platform.models.ModelsClient.get_versions"
+        },
+        {
+          "title": "new_version",
+          "href": "/docs/toloka-ml/reference/ml_platform.models.ModelsClient.new_version"
+        },
+        {
+          "title": "patch",
+          "href": "/docs/toloka-ml/reference/ml_platform.models.ModelsClient.patch"
+        },
+        {
+          "title": "patch_version",
+          "href": "/docs/toloka-ml/reference/ml_platform.models.ModelsClient.patch_version"
+        },
+        {
+          "title": "update",
+          "href": "/docs/toloka-ml/reference/ml_platform.models.ModelsClient.update"
+        }
+      ]
     },
     {
       "title": "DatasetsClient",
-      "href": "/docs/toloka-ml/api/datasets"
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient"
+        },
+        {
+          "title": "add",
+          "href": "/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.add"
+        },
+        {
+          "title": "delete",
+          "href": "/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.delete"
+        },
+        {
+          "title": "find",
+          "href": "/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.find"
+        },
+        {
+          "title": "get",
+          "href": "/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.get"
+        },
+        {
+          "title": "get_file",
+          "href": "/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.get_file"
+        },
+        {
+          "title": "new_version",
+          "href": "/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.new_version"
+        },
+        {
+          "title": "patch",
+          "href": "/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.patch"
+        },
+        {
+          "title": "patch_version",
+          "href": "/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.patch_version"
+        },
+        {
+          "title": "update",
+          "href": "/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.update"
+        }
+      ]
     },
     {
-      "title": "UI",
-      "href": "/docs/toloka-ml/api/ui"
+      "title": "ExperimentsClient",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/docs/toloka-ml/reference/ml_platform.experiments.ExperimentsClient"
+        },
+        {
+          "title": "add",
+          "href": "/docs/toloka-ml/reference/ml_platform.experiments.ExperimentsClient.add"
+        },
+        {
+          "title": "add_runs",
+          "href": "/docs/toloka-ml/reference/ml_platform.experiments.ExperimentsClient.add_runs"
+        },
+        {
+          "title": "delete",
+          "href": "/docs/toloka-ml/reference/ml_platform.experiments.ExperimentsClient.delete"
+        },
+        {
+          "title": "find",
+          "href": "/docs/toloka-ml/reference/ml_platform.experiments.ExperimentsClient.find"
+        },
+        {
+          "title": "get_best_run",
+          "href": "/docs/toloka-ml/reference/ml_platform.experiments.ExperimentsClient.get_best_run"
+        },
+        {
+          "title": "patch",
+          "href": "/docs/toloka-ml/reference/ml_platform.experiments.ExperimentsClient.patch"
+        },
+        {
+          "title": "remove_runs",
+          "href": "/docs/toloka-ml/reference/ml_platform.experiments.ExperimentsClient.remove_runs"
+        }
+      ]
     },
     {
-      "title": "Diff tool",
-      "href": "/docs/toloka-ml/api/diff-tool"
+      "title": "PulsarUIClient",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/docs/toloka-ml/reference/ml_platform.ui.PulsarUIClient"
+        },
+        {
+          "title": "create_metric_table_config",
+          "href": "/docs/toloka-ml/reference/ml_platform.ui.PulsarUIClient.create_metric_table_config"
+        },
+        {
+          "title": "create_object_table_config",
+          "href": "/docs/toloka-ml/reference/ml_platform.ui.PulsarUIClient.create_object_table_config"
+        }
+      ]
+    },
+    {
+      "title": "DiffTool",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "/docs/toloka-ml/reference/ml_platform.diff_tool.DiffTool"
+        },
+        {
+          "title": "get_aggregation_diff",
+          "href": "/docs/toloka-ml/reference/ml_platform.diff_tool.DiffTool.get_aggregation_diff"
+        },
+        {
+          "title": "get_sliced_aggregation_diff",
+          "href": "/docs/toloka-ml/reference/ml_platform.diff_tool.DiffTool.get_sliced_aggregation_diff"
+        }
+      ]
     }
   ],
   "webTolokersMenu": [

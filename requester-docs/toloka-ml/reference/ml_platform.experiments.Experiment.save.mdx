@@ -1,0 +1,37 @@
+---
+title: "save — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:21.267400"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# save
+
+`ml_platform.experiments.Experiment.save`
+
+```python
+save(self)
+```
+
+Saves the experiment changes.
+
+You can change the following fields:
+    * name: str
+    * description: str
+    * tags: List[str]
+    * permissions: Permissions
+    * baseline: str
+    * run_columns: List[str]
+    * invalidated: bool
+    * notes: str
+
+* **Returns:**
+
+  The updated experiment.
+
+* **Return type:**
+
+  [Experiment](/docs/toloka-ml/reference/ml_platform.experiments.Experiment)

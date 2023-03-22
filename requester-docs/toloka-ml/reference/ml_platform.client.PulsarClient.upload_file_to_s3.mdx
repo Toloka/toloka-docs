@@ -1,0 +1,42 @@
+---
+title: "upload_file_to_s3 — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:23.540311"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# upload_file_to_s3
+
+`ml_platform.client.PulsarClient.upload_file_to_s3`
+
+```python
+upload_file_to_s3(
+    self,
+    file: BinaryIO,
+    name: str,
+    bucket: Optional[str] = None,
+    host: Optional[str] = None
+)
+```
+
+Uploads the file to S3 object storage.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`file`|**BinaryIO**|<p>The file to upload to S3.</p>
+`name`|**str**|<p>File name for UI and S3.</p>
+`bucket`|**Optional\[str\]**|<p>S3 bucket. Can be pre-specified in user config.</p>
+`host`|**Optional\[str\]**|<p>S3 host. Can be pre-specified in user config.</p>
+
+* **Returns:**
+
+  Artifact class object with S3 source_type.
+
+* **Return type:**
+
+  [Artifact](/docs/toloka-ml/reference/ml_platform.common.Artifact)

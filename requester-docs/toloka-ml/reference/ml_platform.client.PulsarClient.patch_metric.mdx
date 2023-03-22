@@ -1,0 +1,38 @@
+---
+title: "patch_metric — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:24.624371"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# patch_metric
+
+`ml_platform.client.PulsarClient.patch_metric`
+
+```python
+patch_metric(
+    self,
+    run_id: str,
+    name: str,
+    slice: Optional[str] = None,
+    value: Union[int, float, List, None] = None,
+    std: Union[int, float, None] = None,
+    tags: Optional[List[str]] = None
+)
+```
+
+Updates value for single metrics.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`run_id`|**str**|<p>Used to specific runs that should be updated.</p>
+`name`|**str**|<p>Metrics name, filter.</p>
+`slice`|**Optional\[str\]**|<p>Metrics slice, filter, should be specified if you have two or more metrics with same name.</p>
+`value`|**Union\[int, float, List, None\]**|<p>Metrics value. Allowed operations: Set, Append</p>
+`std`|**Union\[int, float, None\]**|<p>Metrics std. Allowed operations: Set, Unset</p>
+`tags`|**Optional\[List\[str\]\]**|<p>Metrics tags, Allowed operations: Set, Append, Remove, Unset</p>

@@ -1,0 +1,70 @@
+---
+title: "patch — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:22.779702"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# patch
+
+`ml_platform.client.PulsarClient.patch`
+
+```python
+patch(
+    self,
+    run_ids: Union[str, List[str]],
+    model: Optional[ModelInfo] = None,
+    dataset: Optional[DatasetInfo] = None,
+    result: Optional[Dict] = None,
+    tags: Optional[List[str]] = None,
+    user_datetime: Optional[datetime] = None,
+    name: Optional[str] = None,
+    description: Optional[str] = None,
+    model_output_url: Optional[str] = None,
+    per_object_data_metainfo: Optional[List[Dict]] = None,
+    diff_tool_config: Optional[Dict] = None,
+    report_url: Optional[str] = None,
+    permissions: Optional[Permissions] = None,
+    produced_model_uid: Optional[str] = None,
+    produced_dataset_uid: Optional[str] = None,
+    links: Optional[List[str]] = None,
+    metrics: Optional[Metrics] = None,
+    experiment_id: Optional[str] = None,
+    status: Optional[str] = None,
+    metrics_ttl: Optional[str] = None,
+    user_data: Optional[Dict] = None,
+    metadata: Optional[Dict] = None
+)
+```
+
+Updates specified properties of run.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`run_ids`|**Union\[str, List\[str\]\]**|<p>Run IDs.</p>
+`model`|**Optional\[[ModelInfo](/docs/toloka-ml/reference/ml_platform.core.ModelInfo)\]**|<p>Model information.</p>
+`dataset`|**Optional\[[DatasetInfo](/docs/toloka-ml/reference/ml_platform.core.DatasetInfo)\]**|<p>Datasets the models are run on.</p>
+`result`|**Optional\[Dict\]**|<p>Run metrics values.</p>
+`tags`|**Optional\[List\[str\]\]**|<p>List of tags.</p>
+`user_datetime`|**Optional\[datetime\]**|<p>User date.</p>
+`name`|**Optional\[str\]**|<p>Run name.</p>
+`description`|**Optional\[str\]**|<p>Run description.</p>
+`model_output_url`|**Optional\[str\]**|<p>URL for the model output.</p>
+`per_object_data_metainfo`|**Optional\[List\[Dict\]\]**|<p>Per object data (`model_output` data) metainfo.</p>
+`diff_tool_config`|**Optional\[Dict\]**|<p>Diff tool configuration.</p>
+`report_url`|**Optional\[str\]**|<p>HTML report URL.</p>
+`permissions`|**Optional\[[Permissions](/docs/toloka-ml/reference/ml_platform.core.Permissions)\]**|<p>Permissions to access the run.</p>
+`produced_model_uid`|**Optional\[str\]**|<p>Resulting model ID.</p>
+`produced_dataset_uid`|**Optional\[str\]**|<p>Resulting dataset ID.</p>
+`links`|**Optional\[List\[str\]\]**|<p>Links to external services.</p>
+`metrics`|**Optional\[[Metrics](/docs/toloka-ml/reference/ml_platform.core.Metrics)\]**|<p>List with metrics for the run.</p>
+`experiment_id`|**Optional\[str\]**|<p>ID of the experiment.</p>
+`status`|**Optional\[str\]**|<p>Run status.</p>
+`metrics_ttl`|**Optional\[str\]**|<p>The time until the metrics expire.</p>
+`user_data`|**Optional\[Dict\]**|<p>Main user data.</p>
+`metadata`|**Optional\[Dict\]**|<p>Any additional user data.</p>

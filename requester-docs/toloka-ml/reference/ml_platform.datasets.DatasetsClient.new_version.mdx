@@ -1,0 +1,40 @@
+---
+title: "new_version — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:25.686680"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# new_version
+
+`ml_platform.datasets.DatasetsClient.new_version`
+
+```python
+new_version(
+    self,
+    dataset: Dataset,
+    new_major_version: bool = False,
+    expected_major_version: Optional[int] = None
+)
+```
+
+Issues the new dataset version with the changed fields.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`dataset`|**[Dataset](/docs/toloka-ml/reference/ml_platform.datasets.Dataset)**|<p>Dataset with changed fields.</p>
+`new_major_version`|**bool**|<p>Whether to create a new major version of the dataset.</p>
+`expected_major_version`|**Optional\[int\]**|<p>Major version of the dataset to create.</p>
+
+* **Returns:**
+
+  Created major and minor versions of the new dataset.
+
+* **Return type:**
+
+  Tuple\[int, int\]

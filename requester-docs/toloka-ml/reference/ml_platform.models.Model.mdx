@@ -1,0 +1,47 @@
+---
+title: "Model — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:27.568147"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# Model
+
+`ml_platform.models.Model`
+
+```python
+Model(
+    self,
+    *,
+    uid: str = None,
+    alias: str = None,
+    parent_uid: str = None,
+    instance_id: str = None,
+    model_type: str = None,
+    name: str = None,
+    submit_datetime: str = None,
+    update_datetime: str = None,
+    username: str = None,
+    major_version: int = None,
+    version: Union[int, str] = None,
+    description: str = None,
+    info: str = None,
+    tags: List[str] = None,
+    status: ModelStatus = None,
+    permissions: Permissions = None,
+    permission_level: str = None,
+    invalidated: bool = False,
+    invalidated_version: bool = False,
+    model_meta: Dict = None,
+    producer_meta: ProducerMeta = None,
+    task_types: List[str] = None,
+    artifacts: List[ModelArtifact] = None,
+    scenario_presets: List[Preset] = None,
+    scenario_params: List[ScenarioParamGroup] = None,
+    delete_datetime: str = None,
+    deleted_by: str = None
+)
+```

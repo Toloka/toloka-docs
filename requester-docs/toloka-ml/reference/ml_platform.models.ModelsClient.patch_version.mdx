@@ -1,0 +1,49 @@
+---
+title: "patch_version — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:25.742110"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# patch_version
+
+`ml_platform.models.ModelsClient.patch_version`
+
+```python
+patch_version(
+    self,
+    uid: Optional[str] = None,
+    alias: Optional[str] = None,
+    major_version: Optional[int] = None,
+    version: Optional[int] = None,
+    new_major_version: bool = False,
+    expected_major_version: Optional[int] = None,
+    producer_meta: Optional[ProducerMeta] = None,
+    run_id: Optional[str] = None,
+    model_meta: Optional[Dict] = None,
+    parent_uid: Optional[str] = None,
+    artifacts: Optional[List[ModelArtifact]] = None,
+    light_scenarios: Optional[List] = None,
+    scenario_presets: Optional[List[Preset]] = None,
+    scenario_params: Optional[List[ScenarioParamGroup]] = None,
+    info: Optional[str] = None
+)
+```
+
+Creates a model version with the parameters for version.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`new_major_version`|**bool**|<p>Whether to create a new major version of the model.</p>
+`expected_major_version`|**Optional\[int\]**|<p>Major version of the model to create.</p>
+
+* **Returns:**
+
+  Created major and minor versions.
+
+* **Return type:**

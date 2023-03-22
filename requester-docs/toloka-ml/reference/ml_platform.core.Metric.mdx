@@ -1,0 +1,48 @@
+---
+title: "Metric — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:27.118399"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# Metric
+
+`ml_platform.core.Metric`
+
+Metrics class.
+
+```python
+Metric(
+    self,
+    name: str,
+    value: Any,
+    slice: Optional[str] = None,
+    best_value: Optional[str] = None,
+    type: Optional[str] = None,
+    tags: Optional[List[str]] = None,
+    main: Optional[bool] = None,
+    std: Optional[float] = None,
+    timestamp: Optional[int] = None,
+    step: Optional[int] = None
+)
+```
+
+
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`name`|**str**| <p>Metrics name.</p>
+`value`|**str**| <p>Metrics value.</p>
+`slice`|**Optional\[str\]**| <p>Slice name.</p>
+`best_value`|**Optional\[str\]**| <p>Best metrics value.</p>
+`type`|**Optional\[str\]**| <p>Metrics type.</p>
+`tags`|**Optional\[List\[str\]\]**| <p>Tags.</p>
+`main`|**Optional\[bool\]**| Whether this is the main metrics or not.
+`std`|**Optional\[float\]**|
+`timestamp`|**Optional\[int\]**|
+`step`|**Optional\[int\]**|

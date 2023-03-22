@@ -1,0 +1,48 @@
+---
+title: "get_file — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:22.221661"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# get_file
+
+`ml_platform.datasets.DatasetsClient.get_file`
+
+```python
+get_file(
+    self,
+    name: str,
+    uid: Optional[str] = None,
+    alias: Optional[str] = None,
+    major_version: Optional[int] = None,
+    version: Optional[int] = None,
+    request_kwargs: Optional[Dict] = None,
+    return_response: bool = False
+)
+```
+
+Gets dataset file from Toloka ML platform by name and dataset ID/alias and version.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`name`|**str**|<p>Name of dataset file.</p>
+`uid`|**Optional\[str\]**|<p>Dataset ID.</p>
+`alias`|**Optional\[str\]**|<p>Dataset alias.</p>
+`major_version`|**Optional\[int\]**|<p>Dataset major version.</p>
+`version`|**Optional\[int\]**|<p>Dataset version.</p>
+`request_kwargs`|**Optional\[Dict\]**|<p>Additional kwargs for the request.</p>
+`return_response`|**bool**|<p>If set to `True`, the complete response is returned. Otherwise, only response text is returned.</p>
+
+* **Returns:**
+
+  Dataset file.
+
+* **Return type:**
+
+  Union\[[DatasetFile](/docs/toloka-ml/reference/ml_platform.datasets.DatasetFile), str\]

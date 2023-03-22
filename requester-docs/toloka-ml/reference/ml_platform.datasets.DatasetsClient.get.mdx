@@ -1,0 +1,45 @@
+---
+title: "get — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:22.061269"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# get
+
+`ml_platform.datasets.DatasetsClient.get`
+
+```python
+get(
+    self,
+    *,
+    uid: Optional[str] = None,
+    alias: Optional[str] = None,
+    major_version: Optional[int] = None,
+    version: Optional[int] = None,
+    label: Optional[str] = None
+)
+```
+
+Gets dataset from Toloka ML platform by ID or alias and version.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`uid`|**Optional\[str\]**|<p>Dataset ID.</p>
+`alias`|**Optional\[str\]**|<p>Dataset alias.</p>
+`major_version`|**Optional\[int\]**|<p>Major dataset version.</p>
+`version`|**Optional\[int\]**|<p>Dataset version.</p>
+`label`|**Optional\[str\]**|<p>Dataset label.</p>
+
+* **Returns:**
+
+  Dataset matching the query filters.
+
+* **Return type:**
+
+  [Dataset](/docs/toloka-ml/reference/ml_platform.datasets.Dataset)

@@ -1,0 +1,44 @@
+---
+title: "create_metric_table_config — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:23.097103"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# create_metric_table_config
+
+`ml_platform.ui.PulsarUIClient.create_metric_table_config`
+
+```python
+create_metric_table_config(
+    self,
+    metrics: Optional[List[str]] = None,
+    slices: Optional[List[str]] = None,
+    diff_type: Optional[str] = None,
+    pvalue_thresholds: Optional[List[float]] = None,
+    stat_tests: Optional[List[str]] = None
+)
+```
+
+Creating a table with metrics parameters.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`metrics`|**Optional\[List\[str\]\]**|<p>Metrics names.</p>
+`slices`|**Optional\[List\[str\]\]**|<p>Slice names.</p>
+`diff_type`|**Optional\[str\]**|<p>Possible values: `Abs`, `Perc`.</p>
+`pvalue_thresholds`|**Optional\[List\[float\]\]**|<p>List of three floats with threshold p-values to indicate colors.</p>
+`stat_tests`|**Optional\[List\[str\]\]**|<p>Stats tests.</p>
+
+* **Returns:**
+
+  Table config ID.
+
+* **Return type:**
+
+  str

@@ -1,0 +1,33 @@
+---
+title: "get — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:27.289347"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# get
+
+`ml_platform.client.PulsarClient.get`
+
+```python
+get(self, run_ids: Union[str, List[str]])
+```
+
+Gets information about one or more runs.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`run_ids`|**Union\[str, List\[str\]\]**|<p>IDs of runs that information is to be received for.</p>
+
+* **Returns:**
+
+  Information about the runs.
+
+* **Return type:**
+
+  Union\[[RunInfo](/docs/toloka-ml/reference/ml_platform.core.RunInfo), List\[[RunInfo](/docs/toloka-ml/reference/ml_platform.core.RunInfo)\]\]

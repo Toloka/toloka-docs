@@ -1,0 +1,38 @@
+---
+title: "update_metrics — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:23.165575"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# update_metrics
+
+`ml_platform.client.PulsarClient.update_metrics`
+
+```python
+update_metrics(
+    self,
+    run_id: str,
+    metrics: List[MetricUpdate]
+)
+```
+
+Updates metrics values and parameters.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`run_id`|**str**|<p>Run ID.</p>
+`metrics`|**List\[[MetricUpdate](/docs/toloka-ml/reference/ml_platform.core.MetricUpdate)\]**|<p>Metrics filters.</p>
+
+* **Returns:**
+
+  Updated metrics.
+
+* **Return type:**
+
+  List\[Dict\]

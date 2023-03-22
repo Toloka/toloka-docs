@@ -1,0 +1,37 @@
+---
+title: "DatasetsClient — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:22.420936"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# DatasetsClient
+
+`ml_platform.datasets.DatasetsClient`
+
+```python
+DatasetsClient(
+    self,
+    token: Optional[str] = None,
+    http_client: Optional[HttpClient] = None
+)
+```
+
+Provides API methods for working with datasets.
+
+## Methods summary
+
+| Method | Description |
+| :------| :-----------|
+[add](/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.add)| Adds dataset to Toloka ML platform.
+[delete](/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.delete)| Deletes the model by ID or alias.
+[find](/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.find)| Finds the dataset.
+[get](/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.get)| Gets dataset from Toloka ML platform by ID or alias and version.
+[get_file](/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.get_file)| Gets dataset file from Toloka ML platform by name and dataset ID/alias and version.
+[new_version](/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.new_version)| Issues the new dataset version with the changed fields.
+[patch](/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.patch)| Updates the specified properties of the dataset or the dataset version without new version creation.
+[patch_version](/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.patch_version)| Creates the dataset version with the version parameters.
+[update](/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient.update)| Overwrites all properties of the dataset or the dataset version without new version creation.

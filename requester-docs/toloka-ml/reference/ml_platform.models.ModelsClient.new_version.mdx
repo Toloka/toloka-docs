@@ -1,0 +1,40 @@
+---
+title: "new_version — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:28.970584"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# new_version
+
+`ml_platform.models.ModelsClient.new_version`
+
+```python
+new_version(
+    self,
+    model: Model,
+    new_major_version: bool = False,
+    expected_major_version: Optional[int] = None
+)
+```
+
+Add a new model version with the parameters for versions.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`model`|**[Model](/docs/toloka-ml/reference/ml_platform.models.Model)**|<p>Model from the Model class.</p>
+`new_major_version`|**bool**|<p>Whether to create a new major version of the model.</p>
+`expected_major_version`|**Optional\[int\]**|<p>Major version of the model to create.</p>
+
+* **Returns:**
+
+  Created major and minor versions.
+
+* **Return type:**
+
+  Tuple\[int, int\]
