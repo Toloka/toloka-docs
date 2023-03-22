@@ -1,0 +1,30 @@
+---
+title: "remove_runs — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:28.310716"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# remove_runs
+
+`ml_platform.experiments.ExperimentsClient.remove_runs`
+
+```python
+remove_runs(
+    self,
+    run_ids: Union[str, List[str]],
+    experiment_id: Optional[str] = None
+)
+```
+
+Removes runs from the experiment by IDs.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`run_ids`|**Union\[str, List\[str\]\]**|<p>List of run IDs.</p>
+`experiment_id`|**Optional\[str\]**|<p>Experiment ID.</p>

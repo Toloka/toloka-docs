@@ -1,0 +1,32 @@
+---
+title: "set_metric_value — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:26.358983"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# set_metric_value
+
+`ml_platform.client.PulsarClient.set_metric_value`
+
+```python
+set_metric_value(
+    self,
+    run_id: str,
+    metric_name: str,
+    metric_value: Union[int, float, Dict, List]
+)
+```
+
+Sets metrics value in the run.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`run_id`|**str**|<p>Run id.</p>
+`metric_name`|**str**|<p>Metrics name to set (can be nested with `.` as a delimiter).</p>
+`metric_value`|**Union\[int, float, Dict, List\]**|<p>Metrics value to set (can be nested).</p>

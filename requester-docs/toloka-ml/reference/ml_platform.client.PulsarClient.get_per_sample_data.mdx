@@ -1,0 +1,38 @@
+---
+title: "get_per_sample_data — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:21.962335"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# get_per_sample_data
+
+`ml_platform.client.PulsarClient.get_per_sample_data`
+
+```python
+get_per_sample_data(
+    self,
+    run_id: str,
+    prettified: bool = True
+)
+```
+
+Gets the results of the evaluation of a model trained on a test dataset.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`run_id`|**str**|<p>ID of the run to get results.</p>
+`prettified`|**bool**|<p>Whether to format the returned results.</p> <ul> <li>If `True`, returns `pandas.DataFrame` to `results` instead of an unhandled code.</li> <li>If `False`, returns raw unformatted results.</li> </ul>
+
+* **Returns:**
+
+  Evaluation results.
+
+* **Return type:**
+
+  Any

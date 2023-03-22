@@ -1,0 +1,48 @@
+---
+title: "find — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:21.740222"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# find
+
+`ml_platform.datasets.DatasetsClient.find`
+
+```python
+find(
+    self,
+    names: Optional[List[str]] = None,
+    usernames: Optional[List[str]] = None,
+    tags: Optional[List[str]] = None,
+    date_from: Optional[datetime] = None,
+    date_to: Optional[datetime] = None,
+    offset: int = 0,
+    limit: int = 1000
+)
+```
+
+Finds the dataset.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`names`|**Optional\[List\[str\]\]**|<p>Datasets names.</p>
+`usernames`|**Optional\[List\[str\]\]**|<p>Dataset creators usernames.</p>
+`tags`|**Optional\[List\[str\]\]**|<p>Models tags.</p>
+`date_from`|**Optional\[datetime\]**|<p>Start date to search for datasets from.</p>
+`date_to`|**Optional\[datetime\]**|<p>End date to search for datasets to.</p>
+`offset`|**int**|<p>The number of datasets to skip.</p>
+`limit`|**int**|<p>The maximum number of datasets to return.</p>
+
+* **Returns:**
+
+  List of datasets.
+
+* **Return type:**
+
+  List\[[Dataset](/docs/toloka-ml/reference/ml_platform.datasets.Dataset)\]

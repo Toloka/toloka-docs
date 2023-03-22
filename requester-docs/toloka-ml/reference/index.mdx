@@ -1,0 +1,35 @@
+---
+title: "Python API — Toloka ML platform | Toloka documentation"
+date: "2023-02-20T16:24:22.718119"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+import PipInstall from '../subcomponents/pip-install.mdx'
+
+# Python API reference
+
+The API lets you use Toloka ML platform tools based on Python methods.
+
+<PipInstall/>
+
+## Get OAuth token {#token}
+
+Toloka ML Python client requires OAuth token to send requests, launch experiments, monitor the status of running graphs, and display a model's output and per object diffs.
+
+To get your token, [sign in](/docs/toloka-ml/quickstart#authorization) to the platform via the platform interface and click [this link](https://tolokamodels.tech/token).
+
+## Classes and methods
+
+The main Toloka ML platform API methods and structures are listed below:
+
+* [Main structures](/docs/toloka-ml/reference/ml_platform.core.DatasetInfo/)
+* [PulsarClient](/docs/toloka-ml/reference/ml_platform.client.PulsarClient/)
+* [ModelsClient](/docs/toloka-ml/reference/ml_platform.models.ModelsClient/)
+* [DatasetsClient](/docs/toloka-ml/reference/ml_platform.datasets.DatasetsClient/)
+* [ExperimentsClient](/docs/toloka-ml/reference/ml_platform.experiments.ExperimentsClient/)
+* [PulsarUIClient](/docs/toloka-ml/reference/ml_platform.ui.PulsarUIClient/)
+* [DiffTool](/docs/toloka-ml/reference/ml_platform.diff_tool.DiffTool/)

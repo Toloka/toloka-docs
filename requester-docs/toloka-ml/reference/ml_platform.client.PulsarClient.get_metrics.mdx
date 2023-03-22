@@ -1,0 +1,44 @@
+---
+title: "get_metrics — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:22.339809"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# get_metrics
+
+`ml_platform.client.PulsarClient.get_metrics`
+
+```python
+get_metrics(
+    self,
+    run_ids: Union[str, List[str]],
+    metrics: Union[str, List[str], None] = None,
+    slices: Union[str, List[str], None] = None
+)
+```
+
+Gets metrics of one or more runs.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`run_ids`|**Union\[str, List\[str\]\]**|<p>Run IDs.</p>
+`metrics`|**Union\[str, List\[str\], None\]**|<p>Metrics filters.</p>
+`slices`|**Union\[str, List\[str\], None\]**|<p>Slice filters.</p>
+
+* **Returns:**
+
+  Dict containing the following keys:
+* 'data': list of dict
+* 'names': list of str
+* 'slices': list of str
+* 'tags': list of str
+
+* **Return type:**
+
+  Union\[Dict, List\[Dict\]\]

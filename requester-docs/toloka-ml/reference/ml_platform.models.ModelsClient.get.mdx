@@ -1,0 +1,42 @@
+---
+title: "get — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:23.776130"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# get
+
+`ml_platform.models.ModelsClient.get`
+
+```python
+get(
+    self,
+    uid: Optional[str] = None,
+    alias: Optional[str] = None,
+    major_version: Optional[int] = None,
+    version: Optional[int] = None
+)
+```
+
+Gets the model.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`uid`|**Optional\[str\]**|<p>Model ID.</p>
+`alias`|**Optional\[str\]**|<p>Model alias.</p>
+`major_version`|**Optional\[int\]**|<p>Model major_version.</p>
+`version`|**Optional\[int\]**|<p>Model version.</p>
+
+* **Returns:**
+
+  Model from the Model class.
+
+* **Return type:**
+
+  [Model](/docs/toloka-ml/reference/ml_platform.models.Model)

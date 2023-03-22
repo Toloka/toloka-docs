@@ -1,0 +1,42 @@
+---
+title: "filter — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:24.251928"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# filter
+
+`ml_platform.core.Metrics.filter`
+
+```python
+filter(
+    self,
+    metric_names: Optional[List[str]] = None,
+    slice_names: Optional[List[str]] = None,
+    tags: Optional[List[str]] = None,
+    metric_type: Optional[str] = None
+)
+```
+
+Filters metrics based on filtering params.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`metric_names`|**Optional\[List\[str\]\]**|<p>Metrics names.</p>
+`slice_names`|**Optional\[List\[str\]\]**|<p>Slice names.</p>
+`tags`|**Optional\[List\[str\]\]**|<p>List of tags.</p>
+`metric_type`|**Optional\[str\]**|<p>Metrics type.</p>
+
+* **Returns:**
+
+  Metrics class instance with filtered metrics.
+
+* **Return type:**
+
+  [Metrics](/docs/toloka-ml/reference/ml_platform.core.Metrics)

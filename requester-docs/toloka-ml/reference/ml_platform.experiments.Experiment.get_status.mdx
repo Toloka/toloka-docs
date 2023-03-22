@@ -1,0 +1,33 @@
+---
+title: "get_status — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:28.454850"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# get_status
+
+`ml_platform.experiments.Experiment.get_status`
+
+```python
+get_status(self, verbose: bool = False)
+```
+
+Gets number of experiment runs for each possible status.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`verbose`|**bool**|<p>Whether to print the experiment status.</p>
+
+* **Returns:**
+
+  The list of the experiment statuses with the number of experiments in each status.
+
+* **Return type:**
+
+  Dict\[str, int\]

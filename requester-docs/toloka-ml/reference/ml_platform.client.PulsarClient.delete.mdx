@@ -1,0 +1,33 @@
+---
+title: "delete — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:24.432473"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# delete
+
+`ml_platform.client.PulsarClient.delete`
+
+```python
+delete(self, run_ids: Union[str, List[str]])
+```
+
+Deletes one or more runs from the Toloka ML platform database.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`run_ids`|**Union\[str, List\[str\]\]**|<p>IDs of runs to be deleted.</p>
+
+* **Returns:**
+
+  Information about deleted runs.
+
+* **Return type:**
+
+  Union\[[RunInfo](/docs/toloka-ml/reference/ml_platform.core.RunInfo), List\[[RunInfo](/docs/toloka-ml/reference/ml_platform.core.RunInfo)\]\]

@@ -1,0 +1,44 @@
+---
+title: "patch — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:21.127242"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# patch
+
+`ml_platform.datasets.DatasetsClient.patch`
+
+```python
+patch(
+    self,
+    uid: Optional[str] = None,
+    alias: Optional[str] = None,
+    name: Optional[str] = None,
+    description: Optional[str] = None,
+    permissions: Optional[Permissions] = None,
+    tags: Optional[List[str]] = None,
+    dataset_type: Optional[str] = None,
+    labels: Optional[List[str]] = None
+)
+```
+
+Updates the specified properties of the dataset or the dataset version without new version creation.
+
+You cannot change dataset files with such an update.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`uid`|**Optional\[str\]**|<p>Dataset ID.</p>
+`alias`|**Optional\[str\]**|<p>Dataset alias that can be used instead of the datase ID (cannot be changed after setting).</p>
+`name`|**Optional\[str\]**|<p>Dataset name.</p>
+`description`|**Optional\[str\]**|<p>Dataset description.</p>
+`permissions`|**Optional\[[Permissions](/docs/toloka-ml/reference/ml_platform.core.Permissions)\]**|<p>Permissions for managing access to the dataset.</p>
+`tags`|**Optional\[List\[str\]\]**|<p>List of tags.</p>
+`dataset_type`|**Optional\[str\]**|<p>Descriptive string about dataset type.</p>
+`labels`|**Optional\[List\[str\]\]**|<p>List of labels that should be added to the specified version.</p>

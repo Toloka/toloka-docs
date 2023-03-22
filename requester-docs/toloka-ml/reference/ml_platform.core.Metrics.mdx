@@ -1,0 +1,37 @@
+---
+title: "Metrics — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:24.181922"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# Metrics
+
+`ml_platform.core.Metrics`
+
+```python
+Metrics(
+    self,
+    metrics: Optional[List[Union[Metric, Dict]]] = None,
+    external_source: Optional[MLFlowMetricsSource] = None
+)
+```
+
+Metrics class for serving metrics
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`metrics`|**Optional\[List\[Union\[[Metric](/docs/toloka-ml/reference/ml_platform.core.Metric), Dict\]\]\]**|<p>Metrics list.</p>
+`external_source`|**Optional\[[MLFlowMetricsSource](/docs/toloka-ml/reference/ml_platform.core.MLFlowMetricsSource)\]**|<p>External source for metrics.</p>
+
+## Methods summary
+
+| Method | Description |
+| :------| :-----------|
+[filter](/docs/toloka-ml/reference/ml_platform.core.Metrics.filter)| Filters metrics based on filtering params.
+[get](/docs/toloka-ml/reference/ml_platform.core.Metrics.get)| Returns metrics.

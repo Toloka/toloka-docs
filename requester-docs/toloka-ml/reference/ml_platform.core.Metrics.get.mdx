@@ -1,0 +1,40 @@
+---
+title: "get — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:26.046941"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# get
+
+`ml_platform.core.Metrics.get`
+
+```python
+get(
+    self,
+    metric_name: str,
+    slice_name: Optional[str] = None,
+    tags: Optional[List[str]] = None
+)
+```
+
+Returns metrics.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`metric_name`|**str**|<p>Metrics name.</p>
+`slice_name`|**Optional\[str\]**|<p>Slice by which metrics are calculated.</p>
+`tags`|**Optional\[List\[str\]\]**|<p>Metrics tags.</p>
+
+* **Returns:**
+
+  Metric class instance found using the filter.
+
+* **Return type:**
+
+  [Metric](/docs/toloka-ml/reference/ml_platform.core.Metric)

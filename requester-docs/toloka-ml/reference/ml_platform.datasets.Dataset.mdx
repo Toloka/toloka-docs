@@ -1,0 +1,40 @@
+---
+title: "Dataset — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:27.751911"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# Dataset
+
+`ml_platform.datasets.Dataset`
+
+```python
+Dataset(
+    self,
+    *,
+    uid: str = None,
+    name: str,
+    description: str = None,
+    alias: str = None,
+    tags: List[str] = None,
+    dataset_type: str = None,
+    permissions: Permissions = None,
+    invalidated: bool = False,
+    major_version: int = None,
+    version: int = None,
+    version_comment: str = None,
+    submit_datetime: str = None,
+    info: Dict = None,
+    files: List[DatasetFile] = None,
+    labels: List[str] = None,
+    delete_datetime: str = None,
+    deleted_by: str = None,
+    scenario_presets: List[Preset] = None,
+    scenario_params: List[ScenarioParamGroup] = None,
+    dataset_meta: Dict = None
+)
+```

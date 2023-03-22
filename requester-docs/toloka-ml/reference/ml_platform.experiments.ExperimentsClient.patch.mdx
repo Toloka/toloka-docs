@@ -1,0 +1,43 @@
+---
+title: "patch — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:27.877238"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# patch
+
+`ml_platform.experiments.ExperimentsClient.patch`
+
+```python
+patch(
+    self,
+    experiment_id: str,
+    name: Optional[str] = None,
+    description: Optional[str] = None,
+    tags: Optional[List[str]] = None,
+    permissions: Optional[Permissions] = None,
+    baseline: Optional[str] = None,
+    run_columns: Optional[List[str]] = None,
+    notes: Optional[Dict] = None,
+    metainfo: Optional[Dict] = None
+)
+```
+
+Patches the experiment.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`experiment_id`|**str**|<p>Experiment ID.</p>
+`name`|**Optional\[str\]**|<p>Experiment name.</p>
+`description`|**Optional\[str\]**|<p>Experiment description.</p>
+`tags`|**Optional\[List\[str\]\]**|<p>Experiment tags.</p>
+`permissions`|**Optional\[[Permissions](/docs/toloka-ml/reference/ml_platform.core.Permissions)\]**|<p>Experiment permissions.</p>
+`baseline`|**Optional\[str\]**|<p>Baseline run ID.</p>
+`run_columns`|**Optional\[List\[str\]\]**|<p>Run columns.</p>
+`notes`|**Optional\[Dict\]**|<p>Additional notes.</p>

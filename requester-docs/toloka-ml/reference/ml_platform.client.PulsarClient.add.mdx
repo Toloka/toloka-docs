@@ -1,0 +1,33 @@
+---
+title: "add — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:25.111435"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# add
+
+`ml_platform.client.PulsarClient.add`
+
+```python
+add(self, runs: Union[RunInfo, List[RunInfo]])
+```
+
+Adds one or more runs to the Toloka ML platform database.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`runs`|**Union\[[RunInfo](/docs/toloka-ml/reference/ml_platform.core.RunInfo), List\[[RunInfo](/docs/toloka-ml/reference/ml_platform.core.RunInfo)\]\]**|<p>Information about the runs to add.</p>
+
+* **Returns:**
+
+  IDs of the added runs.
+
+* **Return type:**
+
+  Union\[str, List\[str\]\]

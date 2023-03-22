@@ -1,0 +1,48 @@
+---
+title: "get_aggregation_diff — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:21.517186"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# get_aggregation_diff
+
+`ml_platform.diff_tool.DiffTool.get_aggregation_diff`
+
+```python
+get_aggregation_diff(
+    self,
+    baseline_id: str,
+    competitor_ids: Union[str, List[str]],
+    metric_columns: Optional[List[str]] = None,
+    replace_invalid_json_values: bool = False,
+    stat_tests: Optional[List[str]] = None
+)
+```
+
+Builds object aggregation diff.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`baseline_id`|**str**|<p>Baseline run ID.</p>
+`competitor_ids`|**Union\[str, List\[str\]\]**|<p>Competitor run IDs.</p>
+`metric_columns`|**Optional\[List\[str\]\]**|<p>Columns to calculate diff.</p>
+`replace_invalid_json_values`|**bool**|<p>Whether to replace invalid JSON values from response. If `True`, float `nans` and `infs` will be replaced with `None`.</p>
+`stat_tests`|**Optional\[List\[str\]\]**|<p>Stat test to calculate `pvalue`. Should be from `{Wilcoxon, Ttest}`.</p>
+
+* **Returns:**
+
+  Dict containing the following keys:
+* 'data': list of dicts,
+* 'instance_ids': list of strings,
+* 'metric_names': list of string,
+* 'slice_names': list of strings
+
+* **Return type:**
+
+  Dict

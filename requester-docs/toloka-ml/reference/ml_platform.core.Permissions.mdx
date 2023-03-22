@@ -1,0 +1,35 @@
+---
+title: "Permissions — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:25.948281"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# Permissions
+
+`ml_platform.core.Permissions`
+
+A structure for granting access rights.
+
+```python
+Permissions(
+    self,
+    *,
+    read: List[str] = None,
+    write: List[str] = None,
+    owner: List[str] = None
+)
+```
+
+Permissions class.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`read`|**List\[str\]**|<p>List of roles with the `read` access.</p>
+`write`|**List\[str\]**|<p>List of roles with the `write` access. Roles with the `write` access implicitly have the `read` access.</p>
+`owner`|**List\[str\]**|<p>List of roles with the `owner` access (should be not empty). Roles with the `owner` access implicitly have the `read` and `write` access.</p>

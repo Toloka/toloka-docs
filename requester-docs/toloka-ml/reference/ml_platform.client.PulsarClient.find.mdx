@@ -1,0 +1,56 @@
+---
+title: "find — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:27.482404"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# find
+
+`ml_platform.client.PulsarClient.find`
+
+```python
+find(
+    self,
+    run_ids: Optional[List[str]] = None,
+    model_names: Optional[List[str]] = None,
+    dataset_names: Optional[List[str]] = None,
+    tags: Optional[List[str]] = None,
+    experiment_ids: Optional[List[str]] = None,
+    usernames: Optional[List[str]] = None,
+    date_from: Optional[datetime] = None,
+    date_to: Optional[datetime] = None,
+    with_invalidated: bool = False,
+    offset: int = 0,
+    limit: int = 1000
+)
+```
+
+Gets the runs info.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`run_ids`|**Optional\[List\[str\]\]**|<p>Run IDs.</p>
+`model_names`|**Optional\[List\[str\]\]**|<p>Model names.</p>
+`dataset_names`|**Optional\[List\[str\]\]**|<p>Dataset names.</p>
+`tags`|**Optional\[List\[str\]\]**|<p>Tag list.</p>
+`experiment_ids`|**Optional\[List\[str\]\]**|<p>Experiment IDs.</p>
+`usernames`|**Optional\[List\[str\]\]**|<p>Usernames of the run owners.</p>
+`date_from`|**Optional\[datetime\]**|<p>Start date to search for runs from.</p>
+`date_to`|**Optional\[datetime\]**|<p>End date to search for runs to.</p>
+`with_invalidated`|**bool**|<p>Include invalidated runs into the search result.</p>
+`offset`|**int**|<p>The number of runs to skip.</p>
+`limit`|**int**|<p>The maximum number of runs to return.</p>
+
+* **Returns:**
+
+  The information about the runs.
+
+* **Return type:**
+
+  List\[[RunInfo](/docs/toloka-ml/reference/ml_platform.core.RunInfo)\]

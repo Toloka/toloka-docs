@@ -1,0 +1,50 @@
+---
+title: "plot_table — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:28.085507"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# plot_table
+
+`ml_platform.client.PulsarClient.plot_table`
+
+```python
+plot_table(
+    self,
+    model_names: List[str],
+    dataset_names: List[str],
+    reduce_policy: Optional[str] = None,
+    tags: Optional[List[str]] = None,
+    usernames: Optional[List[str]] = None,
+    date_from: Optional[datetime] = None,
+    date_to: Optional[datetime] = None,
+    prettified: bool = True
+)
+```
+
+Creates a table for the model or dataset.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`model_names`|**List\[str\]**|<p>Model names list.</p>
+`dataset_names`|**List\[str\]**|<p>Dataset names list.</p>
+`reduce_policy`|**Optional\[str\]**|<p>Selecting metrics from all experiment runs:</p> <ul> <li>`Min` - Minimum metrics value to choose from all runs.</li> <li>`Max` - Maximum metrics value to choose from all runs.</li> </ul>
+`tags`|**Optional\[List\[str\]\]**|<p>Tags list.</p>
+`usernames`|**Optional\[List\[str\]\]**|<p>Usernames of run owners.</p>
+`date_from`|**Optional\[datetime\]**|<p>Start date to search for runs from.</p>
+`date_to`|**Optional\[datetime\]**|<p>End date to search for runs to.</p>
+`prettified`|**bool**|<p>Whether to format the returned results.</p> <ul> <li>If `True`, the `{metric_name: pandas.DataFrame}` map will be returned to `results` instead of an unhandled code.</li> <li>If `False`, the `{metric_name: list}` map will be returned.</li> </ul>
+
+* **Returns:**
+
+  Run results in `{metric_name: table}` format.
+
+* **Return type:**
+
+  Dict

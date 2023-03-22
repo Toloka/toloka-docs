@@ -1,0 +1,48 @@
+---
+title: "plot_runs — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:24.556339"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# plot_runs
+
+`ml_platform.client.PulsarClient.plot_runs`
+
+```python
+plot_runs(
+    self,
+    model_name: str,
+    dataset_name: str,
+    tags: Optional[List[str]] = None,
+    username: Optional[str] = None,
+    date_from: Optional[datetime] = None,
+    date_to: Optional[datetime] = None,
+    reduce_by_experiment_policy: Optional[str] = None
+)
+```
+
+Creates a chart based on the run performance results.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`model_name`|**str**|<p>Model name.</p>
+`dataset_name`|**str**|<p>Dataset name.</p>
+`tags`|**Optional\[List\[str\]\]**|<p>Tags list.</p>
+`username`|**Optional\[str\]**|<p>Usernames of run owners.</p>
+`date_from`|**Optional\[datetime\]**|<p>Start date to search for runs from.</p>
+`date_to`|**Optional\[datetime\]**|<p>End date to search for runs to.</p>
+`reduce_by_experiment_policy`|**Optional\[str\]**|<p>Selecting metrics from all experiment runs:</p> <ul> <li>`Min` - Minimum metrics value to choose from all experiment runs.</li> <li>`Max` - Maximum metrics value to choose from all experiment runs.</li> </ul>
+
+* **Returns:**
+
+  Run results in `{metric_name: run results}` format.
+
+* **Return type:**
+
+  Dict

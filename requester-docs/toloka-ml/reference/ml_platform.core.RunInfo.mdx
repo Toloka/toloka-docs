@@ -1,0 +1,81 @@
+---
+title: "RunInfo — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:26.515084"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# RunInfo
+
+`ml_platform.core.RunInfo`
+
+```python
+RunInfo(
+    self,
+    *,
+    username: str = None,
+    status: str = None,
+    submit_datetime: datetime = None,
+    datetime: datetime = None,
+    finish_datetime: datetime = None,
+    delete_datetime: datetime = None,
+    deleted_by: str = None,
+    error_message: str = None,
+    permission_level: str = None,
+    update_datetime: datetime = None,
+    access_datetime: datetime = None,
+    model: ModelInfo = None,
+    dataset: DatasetInfo = None,
+    result: Dict = None,
+    tags: List[str] = None,
+    user_datetime: datetime = None,
+    name: str = None,
+    description: str = None,
+    model_output_url: str = None,
+    per_object_data_metainfo: List = None,
+    diff_tool_config: Dict = None,
+    report_url: str = None,
+    permissions: Permissions = None,
+    user_data: Dict = None,
+    produced_model_uid: str = None,
+    produced_dataset_uid: str = None,
+    metrics_ttl: int = None,
+    links: List = None,
+    metrics: Metrics = None,
+    metadata: Dict = None,
+    experiment_id: str = None,
+    invalidated: bool = False,
+    metainfo: Dict = None,
+    _id: str = None,
+    **extra_data: Any
+)
+```
+
+`RunInfo` is a structure that contains the information about a run.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`model`|**[ModelInfo](/docs/toloka-ml/reference/ml_platform.core.ModelInfo)**|<p>Model info.</p>
+`dataset`|**[DatasetInfo](/docs/toloka-ml/reference/ml_platform.core.DatasetInfo)**|<p>Dataset info.</p>
+`result`|**Dict**|<p>Run metric values.</p>
+`tags`|**List\[str\]**|<p>List of tags.</p>
+`user_datetime`|**datetime**|<p>User datetime.</p>
+`name`|**str**|<p>Run name.</p>
+`description`|**str**|<p>Run description.</p>
+`model_output_url`|**str**|<p>URL for the model output.</p>
+`per_object_data_metainfo`|**List**|<p>Per object data (`model_output` data) metainfo.</p>
+`diff_tool_config`|**Dict**|<p>Diff tool configuration.</p>
+`report_url`|**str**|<p>HTML report URL.</p>
+`permissions`|**[Permissions](/docs/toloka-ml/reference/ml_platform.core.Permissions)**|<p>Permissions to access the run.</p>
+`validate`|**-**|<p>To validate fields or not.</p>
+`produced_model_uid`|**str**|<p>Resulting model ID.</p>
+`produced_dataset_uid`|**str**|<p>Resulting dataset ID.</p>
+`metrics_ttl`|**int**|<p>Time before the metrics are deleted, measured in days.</p>
+`links`|**List**|<p>Links for external services.</p>
+`metrics`|**[Metrics](/docs/toloka-ml/reference/ml_platform.core.Metrics)**|<p>List with metrics for run. Metrics must be written as dict with the following fields:</p> <ul> <li>name (str),</li> <li>value (int, List[int]),</li> <li>slice(str, optional),</li> <li>type (MetricType, optional),</li> <li>best_value (str, optional),</li> <li>tags (List[str], optional)</li> </ul>
+`metadata`|**Dict**|<p>Any addtional user data.</p>

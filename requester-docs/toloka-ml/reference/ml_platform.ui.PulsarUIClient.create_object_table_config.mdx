@@ -1,0 +1,48 @@
+---
+title: "create_object_table_config — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:24.822488"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# create_object_table_config
+
+`ml_platform.ui.PulsarUIClient.create_object_table_config`
+
+```python
+create_object_table_config(
+    self,
+    sorting: Union[Sorting, List[Sorting], None] = None,
+    filtering: Union[Filtering, List[Filtering], None] = None,
+    column_bands: Optional[List[str]] = None,
+    column_width: Union[ColumnWidth, List[ColumnWidth], None] = None,
+    filter_logic: Optional[str] = None,
+    row_height: Optional[int] = None,
+    sync_aggregation: Optional[bool] = None
+)
+```
+
+Creates a table with object parameters.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`sorting`|**Union\[[Sorting](/docs/toloka-ml/reference/ml_platform.ui.Sorting), List\[[Sorting](/docs/toloka-ml/reference/ml_platform.ui.Sorting)\], None\]**|<p>Sorting rules.</p>
+`filtering`|**Union\[[Filtering](/docs/toloka-ml/reference/ml_platform.ui.Filtering), List\[[Filtering](/docs/toloka-ml/reference/ml_platform.ui.Filtering)\], None\]**|<p>Filtering rules.</p>
+`column_bands`|**Optional\[List\[str\]\]**|<p>Table columns for visualization.</p>
+`column_width`|**Union\[[ColumnWidth](/docs/toloka-ml/reference/ml_platform.ui.ColumnWidth), List\[[ColumnWidth](/docs/toloka-ml/reference/ml_platform.ui.ColumnWidth)\], None\]**|<p>Column widths.</p>
+`filter_logic`|**Optional\[str\]**|<p>Filter logic. Possible values: 'and', 'or'.</p>
+`row_height`|**Optional\[int\]**|<p>Row height in pixels.</p>
+`sync_aggregation`|**Optional\[bool\]**|<p>Whether to sync between visible aggregation columns and visible aggregation metrics.</p>
+
+* **Returns:**
+
+  Table config ID.
+
+* **Return type:**
+
+  str

@@ -1,0 +1,40 @@
+---
+title: "get_versions — Toloka ML platform | Toloka documentation"
+date: "2023-03-15T14:35:23.017341"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "mlMenu"
+---
+
+# get_versions
+
+`ml_platform.models.ModelsClient.get_versions`
+
+```python
+get_versions(
+    self,
+    uid: Optional[str] = None,
+    alias: Optional[str] = None,
+    fields: Optional[List[str]] = None
+)
+```
+
+Gets all versions of the model.
+
+## Parameters description
+
+| Parameters | Type | Description |
+| :----------| :----| :-----------|
+`uid`|**Optional\[str\]**|<p>Model ID.</p>
+`alias`|**Optional\[str\]**|<p>Model alias.</p>
+`fields`|**Optional\[List\[str\]\]**|<p>Fields of the model to return.</p>
+
+* **Returns:**
+
+  List of models.
+
+* **Return type:**
+
+  List\[[Model](/docs/toloka-ml/reference/ml_platform.models.Model)\]
