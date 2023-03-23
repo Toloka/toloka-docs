@@ -1,0 +1,56 @@
+{
+	"Note": {
+		"prefix": "note",
+		"body": [
+			"<Note mode=\"note\" title=\"Note\">",
+			"",
+			"$0",
+			"",
+			"</Note>"
+		],
+		"description": "Create a note"
+	},
+	"Warning": {
+		"prefix": "warning",
+		"body": [
+			"<Note mode=\"warning\" title=\"Warning\">",
+			"",
+			"$0",
+			"",
+			"</Note>"
+		],
+		"description": "Create a warning"
+	},
+	"Restriction": {
+		"prefix": "restriction",
+		"body": [
+			"<Note mode=\"restriction\" title=\"Restriction\">",
+			"",
+			"$0",
+			"",
+			"</Note>"
+		],
+		"description": "Create a restriction"
+	},
+	"Cut": {
+		"prefix": "cut",
+		"body": [
+			"<Cut title=\"$1\">",
+			"",
+			"$0",
+			"",
+			"</Cut>"
+		],
+		"description": "Create a cut"
+	},
+	"Tabs": {
+		"prefix": ["tabs","list"],
+		"body": [
+			"<Tabs tabs={[",
+			"  { title: '$1', value: <$2/> },",
+			"  { title: '$3', value: <$4/> },",
+			"]}/>"
+		],
+		"description": "Create tabs"
+	}
+}
