@@ -2090,7 +2090,7 @@
               "href": "/docs/api/aggregate-by-task"
             },
             {
-              "title": "Get aggregate responses",
+              "title": "Get aggregated results",
               "href": "/docs/api/get-aggregated-result"
             }
           ]

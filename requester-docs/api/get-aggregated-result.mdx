@@ -1,6 +1,6 @@
 ---
-title: "Get aggregate responses — Toloka API | Toloka documentation"
-date: "2023-03-15T11:24:13.927417"
+title: "Get aggregated results — Toloka API | Toloka documentation"
+date: "2023-03-24T10:02:54.333929"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -19,11 +19,11 @@ import GetAggregatedResultList4 from './get-aggregated-result/subcomponents/get-
 import GetAggregatedResultList5 from './get-aggregated-result/subcomponents/get-aggregated-result-list-5.mdx'
 import GetAggregatedResultList6 from './get-aggregated-result/subcomponents/get-aggregated-result-list-6.mdx'
 
-# Get aggregate responses
+# Get aggregated results
 
 <Announce/>
 
-Gets aggregated responses.
+Gets results of aggregation of responses from Tolokers.
 
 <Note mode="restriction" title="Restriction">
 
@@ -61,12 +61,13 @@ Parameter | Overview
 
 ## Query example {#request-example}
 
-You can set up the display of the list of responses in parts (for example, 10 responses at a time):
+You can set up the display of the list of results in parts (for example, 10 results at a time):
 
-1. Show the first 10 responses, starting with the response with the lowest task ID.
-1. Show the remaining responses (10 at a time) in ascending order.
+1. Show the first 10 results, starting with the result with the lowest task ID.
 
-**Show the first 10 responses**
+1. Show the remaining results (10 at a time) in ascending order.
+
+**Show the first 10 results**
 
 <Tabs tabs={[
   { title: 'Production version', value: <GetAggregatedResultList3/> },
