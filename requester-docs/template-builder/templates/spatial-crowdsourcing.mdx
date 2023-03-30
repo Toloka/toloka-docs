@@ -1,13 +1,12 @@
 ---
 title: "Collecting offline data — Template Builder | Toloka documentation"
-date: "2023-02-10T09:15:30.672355"
+date: "2023-03-30T10:05:22.462316"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
 ogDescription: ""
 docsMenu: "defaultMenu"
 ---
-
 
 # Collecting offline data
 
@@ -47,9 +46,9 @@ Take a look at the example: the interface includes a text block, a button for s
 
 - [view.action-button](/docs/template-builder/reference/view.action-button): Adds a button that calls an action.
 
-  In this example, clicking the button calls [@yandex-toloka/data.location](/docs/template-builder/reference/data.location) which sends the coordinates of the Toloker's device.
+  In this example, clicking the button calls [@toloka/data.location](/docs/template-builder/reference/data.location) which sends the coordinates of the Toloker's device.
 
-  The [@yandex-toloka/condition.distance](/docs/template-builder/reference/condition.distance) component compares the Toloker's coordinates with the business location that you specified. The Toloker can submit the response if the difference is less than 50 meters. To change this condition, replace the value of the `max` property with the desired distance.
+  The [@toloka/condition.distance](/docs/template-builder/reference/condition.distance) component compares the Toloker's coordinates with the business location that you specified. The Toloker can submit the response if the difference is less than 50 meters. To change this condition, replace the value of the `max` property with the desired distance.
 
   <Cut title="Show code">
 
@@ -60,7 +59,7 @@ Take a look at the example: the interface includes a text block, a button for s
     "action": {
       "type": "action.set",
       "payload": {
-        "type": "@yandex-toloka/data.location"
+        "type": "@toloka/data.location"
       },
       "data": {
         "type": "data.output",
@@ -79,10 +78,10 @@ Take a look at the example: the interface includes a text block, a button for s
           }
         },
         {
-          "type": "@yandex-toloka/condition.distance",
+          "type": "@toloka/condition.distance",
           "hint": "you are too far away from the location.",
           "from": {
-            "type": "@yandex-toloka/data.location"
+            "type": "@toloka/data.location"
           },
           "to": {
             "type": "data.input",
