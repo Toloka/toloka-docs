@@ -1,6 +1,6 @@
 ---
 title: "RASA — Crowd-Kit | Toloka documentation"
-date: "2023-02-06T17:36:10.506121"
+date: "2023-03-31T13:53:10.840610"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "ckitMenu"
 ---
 
 # RASA
-`crowdkit.aggregation.embeddings.rasa.RASA` | [Source code](https://github.com/Toloka/crowd-kit/blob/v1.2.0/crowdkit/aggregation/embeddings/rasa.py#L21)
+
+`crowdkit.aggregation.embeddings.rasa.RASA` | [Source code](https://github.com/Toloka/crowd-kit/blob/v1.2.1/crowdkit/aggregation/embeddings/rasa.py#L21)
 
 ```python
 RASA(
@@ -20,35 +21,37 @@ RASA(
 )
 ```
 
-Reliability Aware Sequence Aggregation.
+The **Reliability Aware Sequence Aggregation** (RASA) algorithm consists of three steps.
 
-RASA estimates *global* workers' reliabilities <Formula withoutContainer={true} content="$\beta$"/> that are initialized by ones.
+**Step 1**. Encode the worker answers into embeddings.
 
-Next, the algorithm iteratively performs two steps:
+**Step 2**. Estimate the *global* workers' reliabilities <Formula withoutContainer={true} content="$\beta$"/> by iteratively performing two steps:
 
-1. For each task, estimate the aggregated embedding: <Formula withoutContainer={true} content="$\hat{e}_i = \frac{\sum_k
-\beta_k e_i^k}{\sum_k \beta_k}$"/>.
+1. For each task, estimate the aggregated embedding:
 
-2. For each worker, estimate the global reliability: <Formula withoutContainer={true} content="$\beta_k = \frac{\chi^2_{(\alpha/2,
-|\mathcal{V}_k|)}}{\sum_i\left(\|e_i^k - \hat{e}_i\|^2\right)}$"/>, where <Formula withoutContainer={true} content="$\mathcal{V}_k$"/>
-is a set of tasks completed by the worker <Formula withoutContainer={true} content="$k$"/>.
+    <Formula withoutContainer={true} content="$\hat{e}_i = \frac{\sum_k \beta_k e_i^k}{\sum_k \beta_k}$"/>
 
-Finally, the aggregated result is the output which embedding is
-the closest one to the <Formula withoutContainer={true} content="$\hat{e}_i$"/>.
+2. For each worker, estimate the global reliability:
 
-Jiyi Li.
-A Dataset of Crowdsourced Word Sequences: Collections and Answer Aggregation for Ground Truth Creation.
-*Proceedings of the First Workshop on Aggregating and Analysing Crowdsourced Annotations for NLP*,
-pages 24–28 Hong Kong, China, November 3, 2019.
+    <Formula withoutContainer={true} content="$\beta_k = \frac{\chi^2_{(\alpha/2, |\mathcal{V}_k|)}}{\sum_i\left(\|e_i^k - \hat{e}_i\|^2\right)}$"/>, where <Formula withoutContainer={true} content="$\mathcal{V}_k$"/> is a set of tasks completed by the worker <Formula withoutContainer={true} content="$k$"/>.
+
+**Step 3**. Estimate the aggregated result. It is the output which embedding is the closest one to <Formula withoutContainer={true} content="$\hat{e}_i$"/>.
+
+Jiyi Li, Fumiyo Fukumoto. A Dataset of Crowdsourced Word Sequences: Collections and Answer Aggregation for Ground Truth Creation.
+
+In *Proceedings of the First Workshop on Aggregating and Analysing Crowdsourced Annotations for NLP*, Hong Kong, China (November 3, 2019), 24–28.
+
 <https://doi.org/10.18653/v1/D19-5904>
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`n_iter`|**int**|<p>A number of iterations.</p>
-`alpha`|**float**|<p>Confidence level of chi-squared distribution quantiles in beta parameter formula.</p>
-`embeddings_and_outputs_`|**DataFrame**|<p>Tasks&#x27; embeddings and outputs. A pandas.DataFrame indexed by `task` with `embedding` and `output` columns.</p>
+`n_iter`|**int**|<p>The maximum number of iterations.</p>
+`tol`|**float**|<p>The tolerance stopping criterion for iterative methods with a variable number of steps. The algorithm converges when the loss change is less than the `tol` parameter.</p>
+`alpha`|**float**|<p>The significance level of the chi-squared distribution quantiles in the <Formula withoutContainer={true} content="$\beta$"/> parameter formula.</p>
+`embeddings_and_outputs_`|**DataFrame**|<p>The task embeddings and outputs. The `pandas.DataFrame` data is indexed by `task` and has the `embedding` and `output` columns.</p>
+`loss_history_`|**List\[float\]**|<p>A list of loss values during training.</p>
 
 **Examples:**
 
@@ -66,10 +69,11 @@ df = pd.DataFrame(
 )
 result = RASA().fit_predict(df)
 ```
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|
-[fit](/docs/crowd-kit/reference/crowdkit.aggregation.embeddings.rasa.RASA.fit)| Fit the model.
-[fit_predict](/docs/crowd-kit/reference/crowdkit.aggregation.embeddings.rasa.RASA.fit_predict)| Fit the model and return aggregated outputs.
-[fit_predict_scores](/docs/crowd-kit/reference/crowdkit.aggregation.embeddings.rasa.RASA.fit_predict_scores)| Fit the model and return scores.
+[fit](/docs/crowd-kit/reference/crowdkit.aggregation.embeddings.rasa.RASA.fit)| Fits the model to the training data.
+[fit_predict](/docs/crowd-kit/reference/crowdkit.aggregation.embeddings.rasa.RASA.fit_predict)| Fits the model to the training data and returns the aggregated outputs.
+[fit_predict_scores](/docs/crowd-kit/reference/crowdkit.aggregation.embeddings.rasa.RASA.fit_predict_scores)| Fits the model to the training data and returns the estimated scores.

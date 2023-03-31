@@ -1,6 +1,6 @@
 ---
 title: "CoNAL — Crowd-Kit | Toloka documentation"
-date: "2023-02-06T17:36:14.431556"
+date: "2023-03-31T13:53:15.025152"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "ckitMenu"
 ---
 
 # CoNAL
-`crowdkit.learning.conal.CoNAL` | [Source code](https://github.com/Toloka/crowd-kit/blob/v1.2.0/crowdkit/learning/conal.py#L38)
+
+`crowdkit.learning.conal.CoNAL` | [Source code](https://github.com/Toloka/crowd-kit/blob/v1.2.1/crowdkit/learning/conal.py#L38)
 
 ```python
 CoNAL(
@@ -28,8 +29,10 @@ common noise adaptation layer. The common noise adaptation layer is a trainable 
 instance embedding and the worker ID as input and outputs a scalar value between 0 and 1.
 
 Zhendong Chu, Jing Ma, and Hongning Wang. Learning from Crowds by Modeling Common Confusions.
+
 *Proceedings of the AAAI Conference on Artificial Intelligence*, 35(7), 5832-5840, 2021.
-https://doi.org/10.1609/aaai.v35i7.16730
+
+<https://doi.org/10.1609/aaai.v35i7.16730>
 
 **Examples:**
 
@@ -42,7 +45,8 @@ embeddings = torch.randn(3, 5)
 conal = CoNAL(5, 2)
 conal(embeddings, input, workers)
 ```
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|

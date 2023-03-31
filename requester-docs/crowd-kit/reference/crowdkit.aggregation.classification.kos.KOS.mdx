@@ -1,6 +1,6 @@
 ---
 title: "KOS — Crowd-Kit | Toloka documentation"
-date: "2023-02-06T17:36:11.037666"
+date: "2023-03-31T13:53:11.404378"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "ckitMenu"
 ---
 
 # KOS
-`crowdkit.aggregation.classification.kos.KOS` | [Source code](https://github.com/Toloka/crowd-kit/blob/v1.2.0/crowdkit/aggregation/classification/kos.py#L14)
+
+`crowdkit.aggregation.classification.kos.KOS` | [Source code](https://github.com/Toloka/crowd-kit/blob/v1.2.1/crowdkit/aggregation/classification/kos.py#L14)
 
 ```python
 KOS(
@@ -19,32 +20,35 @@ KOS(
 )
 ```
 
-Karger-Oh-Shah aggregation model.
+The **KOS** (Karger, Oh, and Shah 2011) aggregation model is an iterative algorithm that calculates the log-likelihood of the task being positive while modeling the worker reliability.
 
-Iterative algorithm that calculates the log-likelihood of the task being positive while modeling
-the reliabilities of the workers.
+Let <Formula withoutContainer={true} content="$A_{ij}$"/> be a matrix of the responses of a worker <Formula withoutContainer={true} content="$j$"/> on a task <Formula withoutContainer={true} content="$i$"/>.
 
-Let <Formula withoutContainer={true} content="$A_{ij}$"/> be a matrix of answers of worker <Formula withoutContainer={true} content="$j$"/> on task <Formula withoutContainer={true} content="$i$"/>.
+If the worker <Formula withoutContainer={true} content="$j$"/> does not respond to the task <Formula withoutContainer={true} content="$i$"/>, then <Formula withoutContainer={true} content="$A_{ij} = 0$"/>. Otherwise, <Formula withoutContainer={true} content="$|A_{ij}| = 1$"/>.
 
-<Formula withoutContainer={true} content="$A_{ij} = 0$"/> if worker <Formula withoutContainer={true} content="$j$"/> didn't answer the task <Formula withoutContainer={true} content="$i$"/>, otherwise <Formula withoutContainer={true} content="$|A_{ij}| = 1$"/>.
+The algorithm operates on real-valued task messages <Formula withoutContainer={true} content="$x_{i \rightarrow j}$"/>  and
+worker messages <Formula withoutContainer={true} content="$y_{j \rightarrow i}$"/>. A task message <Formula withoutContainer={true} content="$x_{i \rightarrow j}$"/> represents
+the log-likelihood of task <Formula withoutContainer={true} content="$i$"/> being a positive task, and a worker message <Formula withoutContainer={true} content="$y_{j \rightarrow i}$"/> represents
+how reliable worker <Formula withoutContainer={true} content="$j$"/> is.
 
-The algorithm operates on real-valued task messages <Formula withoutContainer={true} content="$x_{i \rightarrow j}$"/> and worker messages <Formula withoutContainer={true} content="$y_{j \rightarrow i}$"/>. A task message <Formula withoutContainer={true} content="$x_{i \rightarrow j}$"/> represents the log-likelihood of task <Formula withoutContainer={true} content="$i$"/> being a positive task, and a worker message <Formula withoutContainer={true} content="$y_{j \rightarrow i}$"/> represents how reliable worker <Formula withoutContainer={true} content="$j$"/> is.
+At <Formula withoutContainer={true} content="$k$"/>-th iteration, the values are updated as follows:
 
-On iteration <Formula withoutContainer={true} content="$k$"/> the values are updated as follows:
+<Formula withoutContainer={true} content="$x_{i \rightarrow j}^{(k)} = \sum_{j^{'} \in \partial i \backslash j} A_{ij^{'}} y_{j^{'} \rightarrow i}^{(k-1)} \\
+y_{j \rightarrow i}^{(k)} = \sum_{i^{'} \in \partial j \backslash i} A_{i^{'}j} x_{i^{'} \rightarrow j}^{(k-1)}$"/>
 
-<Formula withoutContainer={true} content="$x_{i \rightarrow j}^{(k)} = \sum_{j^{'} \in \partial i \backslash j} A_{ij^{'}} y_{j^{'} \rightarrow i}^{(k-1)} \\ y_{j \rightarrow i}^{(k)} = \sum_{i^{'} \in \partial j \backslash i} A_{i^{'}j} x_{i^{'} \rightarrow j}^{(k-1)}$"/>
+David R. Karger, Sewoong Oh, and Devavrat Shah. Budget-Optimal Task Allocation for Reliable Crowdsourcing Systems.
 
-Karger, David R., Sewoong Oh, and Devavrat Shah. Budget-optimal task allocation for reliable crowdsourcing systems.
-Operations Research 62.1 (2014): 1-24.
+*Operations Research 62.1 (2014)*, 1-38.
 
 <https://arxiv.org/abs/1110.3564>
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`n_iter`|**int**|<p>The number of iterations.</p>
-`labels_`|**Optional\[Series\]**|<p>Tasks&#x27; labels. A pandas.Series indexed by `task` such that `labels.loc[task]` is the tasks&#x27;s most likely true label.</p>
+`n_iter`|**int**|<p>The maximum number of iterations.</p>
+`random_state`|**int**|<p>The state of the random number generator.</p>
+`labels_`|**Optional\[Series\]**|<p>The task labels. The `pandas.Series` data is indexed by `task` so that `labels.loc[task]` is the most likely true label of tasks.</p>
 
 **Examples:**
 
@@ -55,9 +59,10 @@ df, gt = load_dataset('relevance-2')
 ds = KOS(10)
 result = ds.fit_predict(df)
 ```
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|
-[fit](/docs/crowd-kit/reference/crowdkit.aggregation.classification.kos.KOS.fit)| Fit the model.
-[fit_predict](/docs/crowd-kit/reference/crowdkit.aggregation.classification.kos.KOS.fit_predict)| Fit the model and return aggregated results.
+[fit](/docs/crowd-kit/reference/crowdkit.aggregation.classification.kos.KOS.fit)| Fits the model to the training data.
+[fit_predict](/docs/crowd-kit/reference/crowdkit.aggregation.classification.kos.KOS.fit_predict)| Fits the model to the training data and returns the aggregated results.

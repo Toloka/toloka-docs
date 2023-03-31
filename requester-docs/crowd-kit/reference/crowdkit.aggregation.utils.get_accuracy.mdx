@@ -1,6 +1,6 @@
 ---
 title: "get_accuracy — Crowd-Kit | Toloka documentation"
-date: "2023-02-06T17:36:13.796228"
+date: "2023-03-31T13:53:14.325915"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "ckitMenu"
 ---
 
 # get_accuracy
-`crowdkit.aggregation.utils.get_accuracy` | [Source code](https://github.com/Toloka/crowd-kit/blob/v1.2.0/crowdkit/aggregation/utils.py#L129)
+
+`crowdkit.aggregation.utils.get_accuracy` | [Source code](https://github.com/Toloka/crowd-kit/blob/v1.2.1/crowdkit/aggregation/utils.py#L129)
 
 ```python
 get_accuracy(
@@ -19,12 +20,12 @@ get_accuracy(
 )
 ```
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`data`|**DataFrame**|<p>Workers&#x27; labeling results. A pandas.DataFrame containing `task`, `worker` and `label` columns.</p>
-`true_labels`|**Series**|<p>Tasks&#x27; ground truth labels. A pandas.Series indexed by `task` such that `labels.loc[task]` is the tasks&#x27;s ground truth label.</p>
+`data`|**DataFrame**|<p>Workers' labeling results. A pandas.DataFrame containing `task`, `worker` and `label` columns.</p>
+`true_labels`|**Series**|<p>Tasks' ground truth labels. A pandas.Series indexed by `task` such that `labels.loc[task]` is the tasks's ground truth label.</p>
 
 * **Returns:**
 

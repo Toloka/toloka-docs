@@ -1,6 +1,6 @@
 ---
 title: "BinaryRelevance — Crowd-Kit | Toloka documentation"
-date: "2023-02-06T17:36:11.758006"
+date: "2023-03-31T13:53:12.148745"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "ckitMenu"
 ---
 
 # BinaryRelevance
-`crowdkit.aggregation.multilabel.binary_relevance.BinaryRelevance` | [Source code](https://github.com/Toloka/crowd-kit/blob/v1.2.0/crowdkit/aggregation/multilabel/binary_relevance.py#L14)
+
+`crowdkit.aggregation.multilabel.binary_relevance.BinaryRelevance` | [Source code](https://github.com/Toloka/crowd-kit/blob/v1.2.1/crowdkit/aggregation/multilabel/binary_relevance.py#L14)
 
 ```python
 BinaryRelevance(self, base_aggregator: BaseClassificationAggregator = ...)
@@ -29,13 +30,13 @@ classification task, and therefore it is considered separately. For example, som
 
 </Note>
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `base_aggregator`|**[BaseClassificationAggregator](/docs/crowd-kit/reference/crowdkit.aggregation.base.BaseClassificationAggregator)**|<p>Aggregator instance that will be used for each binary classification. All class parameters will be copied, except for the results of previous fit.</p>
-`labels_`|**Optional\[Series\]**|<p>Tasks&#x27; labels. A pandas.Series indexed by `task` such that `labels.loc[task]` is the tasks&#x27; aggregated labels.</p>
-`aggregators_`|**Dict\[str, [BaseClassificationAggregator](/docs/crowd-kit/reference/crowdkit.aggregation.base.BaseClassificationAggregator)\]**|<p>Labels&#x27; aggregators matched to classes. A dictionary that matches aggregators to classes. The key is the class found in the source data, and the value is the aggregator used for this class. The set of keys is all the classes that are in the input data.</p>
+`labels_`|**Optional\[Series\]**|<p>Tasks' labels. A pandas.Series indexed by `task` such that `labels.loc[task]` is the tasks' aggregated labels.</p>
+`aggregators_`|**Dict\[str, [BaseClassificationAggregator](/docs/crowd-kit/reference/crowdkit.aggregation.base.BaseClassificationAggregator)\]**|<p>Labels' aggregators matched to classes. A dictionary that matches aggregators to classes. The key is the class found in the source data, and the value is the aggregator used for this class. The set of keys is all the classes that are in the input data.</p>
 
 **Examples:**
 
@@ -55,7 +56,8 @@ df = pd.DataFrame(
 df.columns = ['task', 'worker', 'label']
 result = BinaryRelevance(DawidSkene(n_iter=10)).fit_predict(df)
 ```
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|

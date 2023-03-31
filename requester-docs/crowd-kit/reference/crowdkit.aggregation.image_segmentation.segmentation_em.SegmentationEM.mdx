@@ -1,6 +1,6 @@
 ---
 title: "SegmentationEM — Crowd-Kit | Toloka documentation"
-date: "2023-02-06T17:36:11.311352"
+date: "2023-03-31T13:53:11.704274"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "ckitMenu"
 ---
 
 # SegmentationEM
-`crowdkit.aggregation.image_segmentation.segmentation_em.SegmentationEM` | [Source code](https://github.com/Toloka/crowd-kit/blob/v1.2.0/crowdkit/aggregation/image_segmentation/segmentation_em.py#L13)
+
+`crowdkit.aggregation.image_segmentation.segmentation_em.SegmentationEM` | [Source code](https://github.com/Toloka/crowd-kit/blob/v1.2.1/crowdkit/aggregation/image_segmentation/segmentation_em.py#L13)
 
 ```python
 SegmentationEM(
@@ -32,12 +33,12 @@ Doris Jung-Lin Lee. 2018.
 Quality Evaluation Methods for Crowdsourced Image Segmentation
 <https://ilpubs.stanford.edu:8090/1161/1/main.pdf>
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `n_iter`|**int**|<p>A number of EM iterations.</p>
-`segmentations_`|**Series**|<p>Tasks&#x27; segmentations. A pandas.Series indexed by `task` such that `labels.loc[task]` is the tasks&#x27;s aggregated segmentation.</p>
+`segmentations_`|**Series**|<p>Tasks' segmentations. A pandas.Series indexed by `task` such that `labels.loc[task]` is the tasks's aggregated segmentation.</p>
 
 **Examples:**
 
@@ -55,7 +56,8 @@ df = pd.DataFrame(
 )
 result = SegmentationEM().fit_predict(df)
 ```
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|
