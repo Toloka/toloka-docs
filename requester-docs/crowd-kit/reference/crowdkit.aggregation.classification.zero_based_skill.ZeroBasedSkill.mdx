@@ -1,6 +1,6 @@
 ---
 title: "ZeroBasedSkill — Crowd-Kit | Toloka documentation"
-date: "2023-02-06T17:36:09.988079"
+date: "2023-03-31T13:53:10.245187"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "ckitMenu"
 ---
 
 # ZeroBasedSkill
-`crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill` | [Source code](https://github.com/Toloka/crowd-kit/blob/v1.2.0/crowdkit/aggregation/classification/zero_based_skill.py#L14)
+
+`crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill` | [Source code](https://github.com/Toloka/crowd-kit/blob/v1.2.1/crowdkit/aggregation/classification/zero_based_skill.py#L14)
 
 ```python
 ZeroBasedSkill(
@@ -22,27 +23,33 @@ ZeroBasedSkill(
 )
 ```
 
-The Zero-Based Skill aggregation model aka ZBS.
+The **Zero-Based Skill** (ZBS) aggregation model performs weighted majority voting on tasks. After processing a pool of tasks,
 
-Performs weighted majority voting on tasks. After processing a pool of tasks,
-re-estimates workers' skills through a gradient descend step of optimization
-of the mean squared error of current skills and the fraction of responses that
+it re-estimates the workers' skills with a gradient descend step to optimize
+the mean squared error of the current skills and the fraction of responses that
 are equal to the aggregated labels.
 
-Repeats this process until labels do not change or the number of iterations exceeds.
+This process is repeated until the labels change or exceed the number of iterations.
 
-It's necessary that all workers in a dataset that send to 'predict' existed in answers
-the dataset that was sent to 'fit'.
+<Note mode="note" title="Note">
 
-## Parameters Description
+It is necessary that all workers in the dataset that is sent to `predict` exist in responses to
+the dataset that was sent to `fit`.
+
+</Note>
+
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`n_iter`|**int**|<p>A number of iterations to perform.</p>
-`lr_init`|**float**|<p>A starting learning rate.</p>
-`lr_steps_to_reduce`|**int**|<p>A number of steps necessary to decrease the learning rate.</p>
-`lr_reduce_factor`|**float**|<p>A factor that the learning rate will be multiplied by every `lr_steps_to_reduce` steps.</p>
-`eps`|**float**|<p>A convergence threshold.</p>
+`n_iter`|**int**|<p>The maximum number of iterations.</p>
+`lr_init`|**float**|<p>The initial learning rate.</p>
+`lr_steps_to_reduce`|**int**|<p>The number of steps required to reduce the learning rate.</p>
+`lr_reduce_factor`|**float**|<p>The factor by which the learning rate will be multiplied every `lr_steps_to_reduce` step.</p>
+`eps`|**float**|<p>The convergence threshold.</p>
+`skills_`|**Optional\[Series\]**|<p>The workers' skills. The `pandas.Series` data is indexed by `worker` and has the corresponding worker skill.</p>
+`labels_`|**Optional\[Series\]**|<p>The task labels. The `pandas.Series` data is indexed by `task` so that `labels.loc[task]` is the most likely true label of tasks.</p>
+`probas_`|**Optional\[DataFrame\]**|<p>The probability distributions of task labels. The `pandas.DataFrame` data is indexed by `task` so that `result.loc[task, label]` is the probability that the `task` true label is equal to `label`. Each probability is in the range from 0 to 1, all task probabilities must sum up to 1.</p>
 
 **Examples:**
 
@@ -52,12 +59,13 @@ from crowdkit.datasets import load_dataset
 df, gt = load_dataset('relevance-2')
 result = ZeroBasedSkill().fit_predict(df)
 ```
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|
-[fit](/docs/crowd-kit/reference/crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill.fit)| Fit the model.
-[fit_predict](/docs/crowd-kit/reference/crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill.fit_predict)| Fit the model and return aggregated results.
-[fit_predict_proba](/docs/crowd-kit/reference/crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill.fit_predict_proba)| Fit the model and return probability distributions on labels for each task.
-[predict](/docs/crowd-kit/reference/crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill.predict)| Infer the true labels when the model is fitted.
-[predict_proba](/docs/crowd-kit/reference/crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill.predict_proba)| Return probability distributions on labels for each task when the model is fitted.
+[fit](/docs/crowd-kit/reference/crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill.fit)| Fits the model to the training data.
+[fit_predict](/docs/crowd-kit/reference/crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill.fit_predict)| Fits the model to the training data and returns the aggregated results.
+[fit_predict_proba](/docs/crowd-kit/reference/crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill.fit_predict_proba)| Fits the model to the training data and returns the aggregated results.
+[predict](/docs/crowd-kit/reference/crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill.predict)| Predicts the true labels of tasks when the model is fitted.
+[predict_proba](/docs/crowd-kit/reference/crowdkit.aggregation.classification.zero_based_skill.ZeroBasedSkill.predict_proba)| Returns probability distributions of labels for each task when the model is fitted.

@@ -1,6 +1,6 @@
 ---
 title: "TextRASA — Crowd-Kit | Toloka documentation"
-date: "2023-02-06T17:36:12.876045"
+date: "2023-03-31T13:53:13.349781"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "ckitMenu"
 ---
 
 # TextRASA
-`crowdkit.aggregation.texts.text_rasa.TextRASA` | [Source code](https://github.com/Toloka/crowd-kit/blob/v1.2.0/crowdkit/aggregation/texts/text_rasa.py#L11)
+
+`crowdkit.aggregation.texts.text_rasa.TextRASA` | [Source code](https://github.com/Toloka/crowd-kit/blob/v1.2.1/crowdkit/aggregation/texts/text_rasa.py#L11)
 
 ```python
 TextRASA(
@@ -26,7 +27,7 @@ RASA on text embeddings.
 Given a sentence encoder, encodes texts provided by workers and runs the RASA algorithm for embedding
 aggregation.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
@@ -44,10 +45,11 @@ from sentence_transformers import SentenceTransformer
 encoder = SentenceTransformer('all-mpnet-base-v2')
 hrrasa = TextRASA(encoder=encoder.encode)
 df, gt = load_dataset('crowdspeech-test-clean')
-df['text'] = df['text'].apply(lambda s: s.lower())
+df['text'] = df['text'].str.lower()
 result = hrrasa.fit_predict(df)
 ```
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|
