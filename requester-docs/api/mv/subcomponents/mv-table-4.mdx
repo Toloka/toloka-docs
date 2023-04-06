@@ -1,9 +1,8 @@
-**string \| required**<br/><br/>Type of action:
+**string \| required**<br/><br/>Comparison operator (the `key` data is compared with the threshold value from `value`):
 
-- `RESTRICTION` — Ban access to projects or pools.
-- `SET_SKILL_FROM_OUTPUT_FIELD` — Set the "percentage of correct responses" as the skill value (used in [control tasks](/docs/api/goldenset) and [majority vote](/docs/api/mv) rules).<br/><br/>    You can use the skill value for filtering Tolokers.
-
-- `CHANGE_OVERLAP` — Change the overlap. For example, to re-assign a task suite to other Tolokers or cancel the recompletion of already accepted assignments.
-- `REJECT_ALL_ASSIGNMENTS` — Reject all Toloker responses. For example, after a certain number of Toloker responses, it became clear that the Toloker completed tasks poorly.
-- `APPROVE_ALL_ASSIGNMENTS` — Accept all Toloker responses. For example, if the Toloker completes most tasks well and you are satisfied with this result.
-- `SET_SKILL` — Assign the specified constant value to the skill.
+- `EQ` ("Equal") — Equal to.
+- `NE` ("Not equal to") — Not equal to.
+- `GT` ("Greater than") — Greater than.
+- `LT` ("Less than") — Less than.
+- `GTE` ("Greater than equal to") — Greater than or equal to.
+- `LTE` ("Less than equal to") — Less than or equal to.

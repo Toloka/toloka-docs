@@ -1,5 +1,9 @@
-**string \| required**<br/><br/>Values that are checked in the condition:
+**object \| required if**<br/><br/>Required if `configs[].collector_config.type` is equal to one of the values:
 
-- `pending_assignments_count` — The number of task suites that are completed and awaiting review.
-- `accepted_assignments_count` — The number of task suites accepted after the review.
-- `rejected_assignments_count` — The number of task suites rejected after the review.
+- `GOLDEN_SET`
+
+- `MAJORITY_VOTE`
+
+- `ASSIGNMENT_SUBMIT_TIME`
+
+Parameters for collecting data (depends on the quality control rule specified in the `type` key).

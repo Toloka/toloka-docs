@@ -1,6 +1,6 @@
 ---
 title: "Fast responses — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:28.965520"
+date: "2023-04-06T13:56:08.368617"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,6 +8,9 @@ ogDescription: ""
 docsMenu: "apiMenu"
 ---
 
+import ConfigsRules from './subcomponents/configs-rules.mdx'
+import DurationUnit from './subcomponents/duration-unit.mdx'
+import Duration from './subcomponents/duration.mdx'
 import FastList1 from './fast/subcomponents/fast-list-1.mdx'
 import FastList2 from './fast/subcomponents/fast-list-2.mdx'
 import FastList3 from './fast/subcomponents/fast-list-3.mdx'
@@ -32,7 +35,7 @@ In the example below, the Toloker is blocked from accessing the task suites if 4
 
 You can ban a Toloker from your project for a given number of days, hours, minutes (at a time or in total) or permanently.
 
-#### Ban for 10 days
+### Ban for 10 days
 
 ```json
 {
@@ -75,7 +78,7 @@ You can ban a Toloker from your project for a given number of days, hours, minut
 }
 ```
 
-To set a different ban period, change the applicable [parameter](/docs/api/goldenset#configs-rules-action-parameters-duration) for the `action` key:
+To set a different ban period, change the <Term term="duration-unit"><DurationUnit/></Term> and <Term term="duration"><Duration/></Term> parameters for the `action` key:
 
 <Tabs tabs={[
   { title: 'for 12 hours', value: <FastList1/> },
@@ -86,32 +89,32 @@ To set a different ban period, change the applicable [parameter](/docs/api/golde
 Parameter | Overview
 ----- | -----
 **configs[]** | **array of objects \| required**<br/><br/>Array of quality control settings.
-**configs.collector_config** | **object \| required**<br/><br/>Parameters for collecting statistics (for example, the number of tasks skipped in the pool).
-**configs.collector_config.type** | <FastTable1/>
-**configs.collector_config. parameters.fast_submit_threshold_seconds** | **integer \| required**<br/><br/>The minimum acceptable response time, in seconds.
-**configs.collector_config. parameters.history_size** | **integer \| required**<br/><br/>The maximum number of the Toloker's recent responses in the project to use for calculating the percentage of correct responses.<br/><br/>If this field is omitted, the calculation is based on all the Toloker's responses in the pool.
-**configs.rules.conditions** | **object \| required**<br/><br/>Conditions (for example, 10 task suites skipped in a row). Multiple conditions are combined with the "OR" operator.
-**configs.rules.conditions.key** | <FastTable2/>
-**configs.rules.conditions. operator** | <FastTable3/>
-**configs.rules.conditions. value** | **integer \| required**<br/><br/>The threshold value of the variable specified in `key`.
-**configs.rules.action** | **object \| required**<br/><br/>The action to perform if conditions are met (for example, block access to the project).
-**configs.rules.action.type** | <FastTable4/>
-**configs.rules.action. parameters** | **object \| required**<br/><br/>Action parameters.
-**configs.rules.action. parameters.scope** | <FastTable5/>
-**configs.collector_config. parameters** | **object \| required if**<br/><br/>Required if `configs.collector_config.type=``GOLDEN_SET`, `MAJORITY_VOTE`, `CAPTCHA`, `ASSIGNMENT_SUBMIT_TIME`.<br/><br/>Parameters for collecting data (depends on the quality control rule specified in the `type` key).
-**configs.rules.action. parameters.skill_id** | **string \| required if**<br/><br/>Required if `type=SET_SKILL_FROM_OUTPUT_FIELD`.<br/><br/>ID of the skill to update as tasks are completed.
-**configs.rules.action. parameters.from_field** | <FastTable6/>
-**configs.rules.action. parameters.skill_value** | **integer \| required if**<br/><br/>Required if `type=SET_SKILL_FROM_OUTPUT_FIELD`.<br/><br/>A fixed value to assign to the skill (a number from 0 to 100).
-**configs.rules.action. parameters.delta** | **integer \| required if**<br/><br/>Required if `type=CHANGE_OVERLAP`.<br/><br/>The value determines the amount to change the overlap by.
-**configs.rules.action. parameters.public_comment** | **string \| required if**<br/><br/>Required if `type=REJECT_ALL_ASSIGNMENTS`.<br/><br/>Comments (the reason for rejecting responses). Available to the requester and the Toloker.
-**configs.rules.action. parameters.duration_unit** | <FastTable7/>
-**configs.rules.action. parameters.duration** | **integer**<br/><br/>Ban duration.
-**configs.rules. action.parameters. private_comment** | **string**<br/><br/>Comments (the reason for blocking access). Visible only to the requester.
-**configs.rules.action. parameters.open_pool** | <FastTable8/>
+**configs[].collector_config** | **object \| required**<br/><br/>Parameters for collecting statistics (for example, the number of tasks skipped in the pool).
+**configs[].collector_config.type** | <FastTable1/>
+**configs[].collector_config. parameters** | <FastTable2/>
+**configs[].collector_config. parameters.fast_submit_threshold_seconds** | **integer \| required**<br/><br/>The minimum acceptable response time, in seconds.
+**configs[].collector_config. parameters.history_size** | **integer \| required**<br/><br/>The maximum number of the Toloker's recent responses in the project to use for calculating the percentage of correct responses.<br/><br/>If this field is omitted, the calculation is based on all the Toloker's responses in the pool.
+**configs[].rules** | **object \| required**<br/><br/><ConfigsRules/>
+**configs[].rules.conditions** | **object \| required**<br/><br/>Conditions (for example, 10 task suites skipped in a row). Multiple conditions are combined with the "OR" operator.
+**configs[].rules.conditions.key** | <FastTable3/>
+**configs[].rules.conditions. operator** | <FastTable4/>
+**configs[].rules.conditions. value** | **integer \| required**<br/><br/>The threshold value of the variable specified in `key`.
+**configs[].rules.action** | **object \| required**<br/><br/>The action to perform if conditions are met (for example, block access to the project).
+**configs[].rules.action.type** | <FastTable5/>
+**configs[].rules.action. parameters** | **object \| required**<br/><br/>Action parameters.
+**configs[].rules.action. parameters.scope** | <FastTable6/>
+**configs[].rules.action. parameters.skill_id** | **string \| required if**<br/><br/>Required if `type=SET_SKILL_FROM_OUTPUT_FIELD`.<br/><br/>ID of the skill to update as tasks are completed.
+**configs[].rules.action. parameters.from_field** | <FastTable7/>
+**configs[].rules.action. parameters.skill_value** | **integer \| required if**<br/><br/>Required if `type=SET_SKILL_FROM_OUTPUT_FIELD`.<br/><br/>A fixed value to assign to the skill (a number from 0 to 100).
+**configs[].rules.action. parameters.delta** | **integer \| required if**<br/><br/>Required if `type=CHANGE_OVERLAP`.<br/><br/>The value determines the amount to change the overlap by.
+**configs[].rules.action. parameters.public_comment** | **string \| required if**<br/><br/>Required if `type=REJECT_ALL_ASSIGNMENTS`.<br/><br/>Comments (the reason for rejecting responses). Available to the requester and the Toloker.
+**configs[].rules.action. parameters.duration_unit** | **string**<br/><br/><DurationUnit/>
+**configs[].rules.action.parameters.duration**  | **integer**<br/><br/><Duration/>
+**configs[].rules. action.parameters. private_comment** | **string**<br/><br/>Comments (the reason for blocking access). Visible only to the requester.
+**configs[].rules.action. parameters.open_pool** | <FastTable8/>
 
 ## See also {#see-also}
 
 - [Fast responses](/docs/guide/quick-answers)
-
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-fast">Contact support</Button>

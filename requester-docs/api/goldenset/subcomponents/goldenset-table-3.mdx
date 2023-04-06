@@ -1,8 +1,10 @@
-**string \| required**<br/><br/>Comparison operator (the `key` data is compared with the threshold value from `value`):
+**string \| required**<br/><br/>Values that are checked in the condition.
 
-- `EQ` ("Equal") — Equal to.
-- `NE` ("Not equal to") — Not equal to.
-- `GT` ("Greater than") — Greater than.
-- `LT` ("Less than") — Less than.
-- `GTE` ("Greater than equal to") — Greater than or equal to.
-- `LTE` ("Less than equal to") — Less than or equal to.
+- `total_answers_count` — The number of completed control tasks.
+- `correct_answers_rate` — The percentage of correct responses in training and control tasks (from 0 to 100).
+- `incorrect_answers_rate` — The percentage of incorrect responses in training and control tasks (from 0 to 100).
+- `golden_set_answers_count` — The number of completed control tasks.
+- `golden_set_correct_answers_rate` — The percentage of correct responses in training and control tasks (from 0 to 100).
+- `golden_set_incorrect_answers_rate` — The percentage of incorrect responses in training and control tasks (from 0 to 100).
+
+Multiple conditions with the same `key` value are combined using the AND operator.
