@@ -1,8 +1,4 @@
-**string \| required**<br/><br/>Comparison operator (the `key` data is compared with the threshold value from `value`):
+**string \| required**<br/><br/>Values that are checked in the condition:
 
-- `EQ` ("Equal") — Equal to.
-- `NE` ("Not equal to") — Not equal to.
-- `GT` ("Greater than") — Greater than.
-- `LT` ("Less than") — Less than.
-- `GTE` ("Greater than equal to") — Greater than or equal to.
-- `LTE` ("Less than equal to") — Less than or equal to.
+- `total_submitted_count` — The number of the Toloker's recent responses (less than or equal to `history_size`).
+- `fast_submitted_count` — The number of fast responses (out of the recent ones).

@@ -1,3 +1,9 @@
-**string \| required**<br/><br/>The value that is checked in the rule:
+**object \| required if**<br/><br/>Required if `configs[].collector_config.type` is equal to one of the values:
 
-- `pool_access_revoked_reason` — The reason the Toloker lost access to the pool.
+- `GOLDEN_SET`
+
+- `MAJORITY_VOTE`
+
+- `ASSIGNMENT_SUBMIT_TIME`
+
+Parameters for collecting data (depends on the quality control rule specified in the `type` key).

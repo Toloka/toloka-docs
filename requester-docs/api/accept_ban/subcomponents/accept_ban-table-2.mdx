@@ -1,5 +1,9 @@
-**string \| required**<br/><br/>Values that are checked in the condition:
+**object \| required if**<br/><br/>Required if `configs[].collector_config.type` is equal to one of the values:
 
-- `total_assignments_count` — The number of tasks in the pool that the Toloker completed.
-- `accepted_assignments_rate` — The percentage of pool tasks performed by the Toloker and accepted with manual review.
-- `rejected_assignments_rate` — The percentage of pool tasks performed by the Toloker that were rejected during manual review.
+- `GOLDEN_SET`
+
+- `MAJORITY_VOTE`
+
+- `ASSIGNMENT_SUBMIT_TIME`
+
+Parameters for collecting data (depends on the quality control rule specified in the `type` key).
