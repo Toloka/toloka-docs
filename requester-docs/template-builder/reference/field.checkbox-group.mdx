@@ -1,6 +1,6 @@
 ---
 title: "field.checkbox-group — Template Builder | Toloka documentation"
-date: "2023-03-29T11:05:08.563208"
+date: "2023-04-07T18:44:19.517436"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -12,7 +12,26 @@ docsMenu: "defaultMenu"
 
 Adds a group of checkboxes for selecting independent answer options. This is useful if there are several options. You can add just one checkbox, but it's easier to use [field.checkbox](/docs/template-builder/reference/field.checkbox) for that.
 
-<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/AA2nEh_E3twhqK">View example</Button>
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/qeQoTGCe47BNW2">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [data.output](/docs/template-builder/operations/work-with-data): The output data. This is what you get when a Toloker clicks the **Submit** button.
+- [condition.required](/docs/template-builder/reference/condition.required): Checks if at least one option is selected.
+
+</Cut>
+
+By default, if the component returns `false`, this result will not be added to the output. To add `false` to the results, specify `"preserveFalse": true`.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/Mo_S234j47BPYs">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [data.output](/docs/template-builder/operations/work-with-data): The output data. This is what you get when a Toloker clicks the **Submit** button.
+- [condition.any](/docs/template-builder/reference/condition.any): Checks that at least one of the child conditions is met.
+- [condition.equals](/docs/template-builder/reference/condition.equals): Checks whether the original value is equal to the specified value.
+
+</Cut>
 
 ## Component properties {#properties}
 
