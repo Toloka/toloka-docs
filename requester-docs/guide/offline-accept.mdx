@@ -1,6 +1,6 @@
 ---
 title: "Manual review | Toloka documentation"
-date: "2023-02-15T15:15:23.628822"
+date: "2023-04-11T17:39:47.573168"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,10 +8,9 @@ ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
-
 # Manual review
 
-Manual review is a [pool](/docs/glossary#pool) setting that allows you to check responses and not pay for poorly completed tasks.
+Manual review is a [pool](/docs/glossary#pool) setting that allows you to check responses and not pay for poorly completed [tasks](/docs/glossary#task).
 
 You can find the [Review methods](/docs/guide/accept#acception) in the **Working with results → Reviewing Tolokers' responses** section.
 
@@ -55,9 +54,9 @@ You can review responses manually or with the help of Tolokers by posting a sepa
 
 ## Rejecting responses {#declined}
 
-- If **you reject responses, assignments aren't sent automatically** to other Tolokers.
+- If you reject responses, assignments aren't sent automatically to other Tolokers.
 
-- You can't **reject (or accept)** one response on the page — **only the entire page** with all responses on it.
+- You can't reject or accept one response on the page — only the entire page with all responses on it.
 
 - If [the Toloker is banned](/docs/glossary#banning-tolokers) by [the quality control rules](/docs/glossary#quality-control-rule), their responses still need to be checked.
 
@@ -71,23 +70,23 @@ Rejecting the Toloker's responses in one task doesn't result in rejecting respon
 
 If your [pool type](/docs/guide/pool-main#table_n3q_vhz_jlb) is set to **Exam** or **Retry**, then at the end of the review period, all responses that haven't been reviewed can be accepted or rejected automatically.
 
-#### Automatic rejection
+### Automatic rejection
 
 When setting or editing the pool, enable the **Reject tasks at the end of the review period** option and specify the reason for rejection. It will be shown to Tolokers whose responses are rejected.
 
 <Cut title="Example">
 
-<Image withBackground imageId="1675425614939" alt="" />
+<Image withBackground imageId="890561ab2397a7905ea3c13e7dd2ef53" alt="" />
 
 </Cut>
 
-#### Automatic acceptance
+### Automatic acceptance
 
-Leave the option in the **No** position, and the tasks will be automatically accepted.
+Leave the **Reject tasks at the end of the review period** option turned off, and the tasks will be automatically accepted.
 
 <Cut title="Example">
 
-<Image withBackground imageId="1675425571384" alt="" />
+<Image withBackground imageId="fe5e1d3153d731e5dc7df6e4a3b65080" alt="" />
 
 </Cut>
 
@@ -105,15 +104,15 @@ Take the following steps before starting the pool:
 
     </Note>
 
-1. Save the settings — the **Save** button is at the bottom of the pool parameters page.
+1. Click the **Save** button at the bottom of the pool parameters page.
 
 As the Tolokers start completing the tasks, you will start receiving responses.
 
 <Note mode="warning" title="Warning">
 
-- **Set the deadline so that you have enough time to review the responses.** After the deadline expires, the responses that haven't been reviewed are accepted and paid automatically, except for the cases described [above](#auto-reject_auto-accept).
+- Set the deadline so that you have enough time to review the responses. After the deadline expires, the responses that haven't been reviewed are accepted and paid automatically, except for the cases described [above](#auto-reject_auto-accept).
 
-- **Explain the acceptance criteria in the instructions for Tolokers.** This will improve the quality of the results, as well as reduce the number of appeals and questions about rejection reasons from the Tolokers.
+- Explain the acceptance criteria in the instructions for Tolokers. This will improve the quality of the results, as well as reduce the number of appeals and questions about rejection reasons from the Tolokers.
 
 </Note>
 
@@ -123,11 +122,11 @@ As the Tolokers start completing the tasks, you will start receiving responses.
 
 If responses are rejected, Toloka can automatically send the task to other Tolokers. To set it:
 
-1. Add the **Recompletion of rejected assignments** quality control rule to the pool.
+1. Add the **Processing rejected and accepted assignments** quality control rule to the pool.
 
 1. Set the following values in the rule block:
 
-<Image withBackground imageId="1675426807759" alt="" />
+<Image withBackground imageId="aba9557f2d6ddbfc88b25a9fdef96d2e" alt="" />
 
 </Cut>
 
@@ -141,13 +140,13 @@ You can restrict the Tolokers' access to tasks:
 - Suspend their access to projects (set up a quality control rule).
 - Assign them a skill and use it as a filter in other projects (set up filters in pool parameters).
 
-Learn more about this in the [**Review results**](/docs/guide/reviewing-assignments) rule settings.
+Learn more about this in the [Results of manual review](/docs/guide/reviewing-assignments) rule settings.
 
 </Cut>
 
 ## What's next {#what-next}
 
-- [Add tasks to the pool](/docs/guide/pool)
+- [Add tasks](/docs/guide/pool) to the pool.
 - Learn more about how to set up a pool:
 
     - [Setting up pricing](/docs/guide/dynamic-pricing).
