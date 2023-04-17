@@ -1,3 +1,33 @@
 Use the [field.radio-group](/docs/template-builder/reference/field.radio-group) component.
 
-  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/cCnptYRg3ttFNe">View example</Button>
+<Cut title="Show code">
+
+```json
+{
+  "type": "helper.if",
+  "condition": {
+    "type": "condition.equals",
+    "data": {
+      "type": "data.output",
+      "path": "verdict"
+    },
+    "to": "bad"
+  },
+  "then": {
+    "type": "field.textarea",
+    "data": {
+      "type": "data.output",
+      "path": "error_description"
+    },
+    "label": "Describe the error",
+    "validation": {
+      "type": "condition.required",
+      "hint": "enter something in the box"
+    }
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/cCnptYRg3ttFNe">View example</Button>

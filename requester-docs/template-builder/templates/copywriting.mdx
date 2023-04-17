@@ -1,6 +1,6 @@
 ---
 title: "Copywriting — Template Builder | Toloka documentation"
-date: "2023-02-10T09:15:30.188544"
+date: "2023-04-17T14:34:44.863554"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -14,58 +14,329 @@ import CopywritingList3 from './copywriting/subcomponents/copywriting-list-3.mdx
 
 # Copywriting
 
-For this type of project, you can use the **Generating product descriptions** preset. It has pre-configured validation and task layout.
+For projects of this type, you can use the **Generating product descriptions** preset.
 
-<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/vgh-fVxH3ttFJY">View example</Button>
+This preset helps to create a description of products based on the image and its name.
+
+Take a look at the example: the labeling interface includes an image, text data, button and a text input area. If the Toloker clicks on the button, a search engine opens with a request about the product. Note that validation and task layout are already configured in this example.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/L6DkKbbO47KQ38">View example</Button>
 
 <Cut title="Components used in the example">
 
-- [view.image](/docs/template-builder/reference/view.image): Image.
-- [layout.columns](/docs/template-builder/reference/layout.columns): Places the image in a separate column to the left of other interface elements.
+- [view.list](/docs/template-builder/reference/view.list): Displays data in a list.
+
+- [layout.columns](/docs/template-builder/reference/layout.columns): Places content in separate columns.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "layout.columns",
+    "items": [
+      {
+        "type": "view.image",
+        "url": {
+          "type": "data.input",
+          "path": "image"
+        },
+        "fullHeight": true,
+        "ratio": [
+          2,
+          1
+        ]
+      },
+      {
+        "type": "view.list",
+        "items": [
+          {
+            "type": "view.text",
+            "content": {
+              "type": "data.input",
+              "path": "title"
+            },
+            "label": "Title"
+          },
+          {
+            "type": "view.action-button",
+            "label": "Search product in Google",
+            "action": {
+              "type": "action.open-link",
+              "payload": {
+                "type": "data.input",
+                "path": "search_url"
+              }
+            }
+          },
+          {
+            "type": "field.textarea",
+            "data": {
+              "type": "data.output",
+              "path": "result"
+            },
+            "label": "Describe the product in 2-3 sentences:",
+            "validation": {
+              "type": "condition.required",
+              "hint": "Write the description in the box"
+            }
+          }
+        ]
+      }
+	]
+  }
+  ```
+  </Cut>
+
+- [view.image](/docs/template-builder/reference/view.image): Adds an image.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.image",
+    "url": {
+      "type": "data.input",
+      "path": "image"
+    },
+    "fullHeight": true,
+    "ratio": [
+      2,
+      1
+    ]
+  }
+  ```
+  </Cut>
+
 - [view.text](/docs/template-builder/reference/view.text): Shows the text from the task input data.
-- [field.textarea](/docs/template-builder/reference/field.textarea): Text input field.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.text",
+    "content": {
+      "type": "data.input",
+      "path": "title"
+    },
+    "label": "Title"
+  }
+  ```
+  </Cut>
+
+- [view.action-button](/docs/template-builder/reference/view.action-button): Displays the button that triggers the action.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "view.action-button",
+    "label": "Search product in Google",
+    "action": {
+      "type": "action.open-link",
+      "payload": {
+        "type": "data.input",
+        "path": "search_url"
+      }
+    }
+  }
+  ```
+  </Cut>
+
+- [field.textarea](/docs/template-builder/reference/field.textarea): Adds a block for entering multi-line text.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "field.textarea",
+    "data": {
+      "type": "data.output",
+      "path": "result"
+    },
+   "label": "Describe the product in 2-3 sentences:",
+   "validation": {
+      "type": "condition.required",
+      "hint": "Write the description in the box"
+    }
+  }
+  ```
+  </Cut>
+
 - [condition.required](/docs/template-builder/reference/condition.required): Checks if the text field is filled in.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "validation": {
+      "type": "condition.required",
+      "hint": "Write the description in the box"
+    }
+  }
+  ```
+  </Cut>
+
 - [plugin.toloka](/docs/template-builder/reference/plugin.toloka): Customizes the task width.
+
+  <Cut title="Show code">
+
+  ```json
+  {
+    "type": "plugin.toloka",
+    "layout": {
+      "kind": "pager"
+    }
+  }
+  ```
+  </Cut>
 
 </Cut>
 
-## What else can be configured {#add-more}
+If this template doesn't meet your needs, see other examples in the **Text** section.
 
-- To set the desired text length, use the [condition.schema](/docs/template-builder/reference/condition.schema) component instead of [condition.required](/docs/template-builder/reference/condition.required). It won't let a Toloker submit a response if the text they entered is longer or shorter than specified.
+## Set the desired text length {#text-length}
 
-  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/Mnz9jbRH3ttFKh">View example</Button>
+To set the desired text length, use the [condition.schema](/docs/template-builder/reference/condition.schema) component instead of [condition.required](/docs/template-builder/reference/condition.required). It won't let a Toloker submit a response if the text they entered is longer or shorter than specified.
 
-- For short single-line text, use the [field.text](/docs/template-builder/reference/field.text) component instead of [field.textarea](/docs/template-builder/reference/field.textarea).
+<Cut title="Show code">
 
-  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/oBN6epCs3ttFLK">View example</Button>
+ ```json
+ {
+    "type": "condition.schema",
+    "schema": {
+      "type": "string",
+      "minLength": 50,
+      "maxLength": 200
+    },
+    "hint": "Please make sure your description contains 50 to 200 characters"
+ }
+ ```
 
-- If a Toloker needs to search for information online to complete the task, add the [helper.search-query](/docs/template-builder/reference/helper.search-query) component. The search query can be put together from words taken from the input data.
+</Cut>
 
-  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/jgNvI9Eq3vvsiU">View example</Button>
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/vq9w3lrp47NtE7">View example</Button>
 
-If this preset doesn't meet your needs, see other examples in this section.
+## Use short single-line text field {#short-text-field}
 
-## Example without an image {#text-answer-only}
+For short single-line text, use the [field.text](/docs/template-builder/reference/field.text) component instead of [field.textarea](/docs/template-builder/reference/field.textarea).
 
-A simplified example without an image or columns It can be used for tasks that don't require visual display, such as translations.
+<Cut title="Show code">
 
-<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/RYB77BTQ3ttFMj">View example</Button>
+ ```json
+ {
+   "type": "field.text",
+   "data": {
+     "type": "data.output",
+     "path": "result"
+    },
+    "label": "Describe the product in 2-3 sentences:",
+    "validation": {
+      "type": "condition.required",
+      "hint": "Write the description in the box"
+    }
+ }
+ ```
 
-## Multiple columns {#several-columns}
+</Cut>
 
-To compare two texts, place them in adjacent columns using the [layout.columns](/docs/template-builder/reference/layout.columns) component. It allows you to set the column width and vertical alignment.
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/lFvWtPU63zeh7g">View example</Button>
 
-The [view.group](/docs/template-builder/reference/view.group) component adds frames around the texts to visually separate them from each other and make them easier to read.
+## Add a description {#add-description}
 
-The third column in the example contains two input fields for Tolokers to write their text.
+To add a detailed description to the task, use the `label` property of the [view.image](/docs/template-builder/reference/view.image) component.
 
-<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/EtNLEAun3ttFNK">View example</Button>
+<Cut title="Show code">
 
-## Show hidden field {#checkbox-showing-text}
+```json
+{
+  "type": "view.text",
+  "content": "Look at the product photo and write a brief description about it."
+}
 
-This example is suitable for text search, such as for finding errors in a text. If a Toloker finds mistakes, selecting the relevant option opens the text input field.
+```
 
-Decide how you want to display the options: with radio buttons, regular buttons, or a checkbox.
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/F-uKaF6v47LVBm">View example</Button>
+
+## Add a layout {#add-layout}
+
+To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs/template-builder/reference/view.alert).
+
+You can place it in the [view.list](/docs/template-builder/reference/view.list) along with the other components.
+
+In this example, the description is highlighted with a blue border.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "view.alert",
+  "theme": "info",
+  "content": {
+    "type": "view.text",
+    "content": "Look at the product photo and write a brief description about it."
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/U4g9kJuh3zfJy9">View example</Button>
+
+## Remove an image {#remove-image}
+
+For tasks where images or columns are not required, use a simplified example without them.
+
+<Cut title="Show code">
+
+```json
+{
+  "view": {
+    "type": "view.list",
+    "items": [
+      {
+        "type": "view.text",
+        "label": "Text for translation",
+        "content": {
+          "type": "data.input",
+          "path": "text"
+        }
+      },
+      {
+        "type": "field.textarea",
+        "label": "How would you say this in Spanish?",
+        "data": {
+          "type": "data.output",
+          "path": "result"
+        },
+        "validation": {
+          "type": "condition.required"
+        }
+      }
+    ]
+  },
+  "plugins": [
+    {
+      "type": "plugin.toloka",
+      "layout": {
+        "kind": "scroll",
+        "taskWidth": 600
+      }
+    }
+  ]
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/uBF6lQJj48fLnK">View example</Button>
+
+## Add a condition {#dependencies}
+
+The [helper.if](/docs/template-builder/reference/helper.if) component displays an interface element after a specific response is selected.
+
+Parameters can be displayed using: [field.radio-group](/docs/template-builder/reference/field.radio-group), [field.button-radio-group](/docs/template-builder/reference/field.button-radio-group), [field.checkbox](/docs/template-builder/reference/field.checkbox).
 
 <Tabs tabs={[
   { title: 'Radio buttons', value: <CopywritingList1/> },
@@ -73,18 +344,202 @@ Decide how you want to display the options: with radio buttons, regular buttons,
   { title: 'Checkbox', value: <CopywritingList3/> },
 ]}/>
 
-## A Toloker adds input fields {#dynamic-field-add}
+## Use multiple columns {#several-columns}
 
-This is a complex example that consists of four main parts:
-- [view.image](/docs/template-builder/reference/view.image): Image.
-- [field.radio-group](/docs/template-builder/reference/field.radio-group): Response selection options.
-- [field.text](/docs/template-builder/reference/field.text): The text input field.
-- [field.list](/docs/template-builder/reference/field.list): A button that adds new text input fields.
+To compare two texts, place them in adjacent columns using the [layout.columns](/docs/template-builder/reference/layout.columns) component. It allows you to set the column width and vertical alignment.
 
-What's unique about this example is that a Toloker can add and remove text input fields.
+The [view.group](/docs/template-builder/reference/view.group) component adds frames around the texts to visually separate them from each other and make them easier to read.
+
+The third column in the example contains two input fields for Tolokers to write their text.
+
+ <Cut title="Show code">
+
+ ```json
+ {
+    "type": "layout.columns",
+    "fullHeight": true,
+    "items": [
+      {
+        "type": "view.group",
+        "label": {
+          "type": "data.input",
+          "path": "title1"
+        },
+        "content": {
+          "type": "view.text",
+          "content": {
+            "type": "data.input",
+            "path": "text1"
+          }
+        }
+      },
+      {
+        "type": "view.group",
+        "label": {
+          "type": "data.input",
+          "path": "title2"
+        },
+        "content": {
+          "type": "view.text",
+          "content": {
+            "type": "data.input",
+            "path": "text2"
+          }
+        }
+      },
+    ...
+	]
+ }
+  ```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/EtNLEAun3ttFNK">View example</Button>
+
+## Check the link click {#link-click}
+
+Add a button that opens the search results and generate a search query link using the [helper.search-query](/docs/template-builder/reference/helper.search-query) component. To make sure that a Toloker clicked on the link and checked its contents, configure validation, as in the example.
+
+<Cut title="Show code">
+
+ ```json
+ {
+   "type": "helper.search-query",
+   "engine": "bing",
+   "query": {
+      "type": "data.input",
+      "path": "link"
+    }
+ }
+ ```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/Ruij6YJb48fZu3">View example</Button>
+
+## Allow a Toloker to add input fields {#dynamic-field-add}
+
+This is a complex example that consists of four main parts.
+
+What's unique about this example is that a Toloker can add and remove text input fields. The condition is implemented using [field.list](/docs/template-builder/reference/field.list).
+
+ <Cut title="Show code">
+
+ ```json
+ {
+   "type": "field.list",
+   "buttonLabel": "Add another name",
+   "data": {
+      "type": "data.output",
+     "path": "names",
+     "default": [
+       ""
+     ]
+   },
+   "render": {
+     "type": "field.text",
+     "placeholder": "Enter no more than one name here",
+     "data": {
+       "type": "data.relative"
+     },
+     "validation": {
+       "type": "condition.any",
+       "hint": "The name must be longer than three letters and include only letters and spaces",
+       "conditions": [
+         {
+           "type": "condition.not",
+           "condition": {
+             "type": "condition.equals",
+             "data": {
+               "type": "data.output",
+               "path": "result"
+             },
+             "to": "names_to_follow"
+           }
+         },
+         {
+           "type": "condition.schema",
+           "schema": {
+             "type": "string",
+             "minLength": 3,
+             "pattern": "^[А-Яа-яЁёa-zA-Z\\s]+<Formula withoutContainer={true} content="$"
+           }
+         }
+       ]
+     }
+   },
+   "validation": {
+     "type": "condition.any",
+     "hint": "enter at least one name",
+     "conditions": [
+       {
+         "type": "condition.not",
+         "condition": {
+           "type": "condition.equals",
+           "data": {
+             "type": "data.output",
+             "path": "result"
+           },
+           "to": "names_to_follow"
+         }
+       },
+       {
+         "type": "condition.not",
+         "condition": {
+           "type": "condition.empty",
+           "data": {
+             "type": "data.output",
+             "path": "names"
+           }
+         }
+       }
+     ]
+   }
+ }
+ ```
+
+</Cut>
 
 In addition, the example checks that each line has at least three characters, including letters and spaces. The condition is implemented using [condition.schema](/docs/template-builder/reference/condition.schema).
 
-  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/T-rVMAPk3vvtDM">View example</Button>
+ <Cut title="Show code">
+
+ ```json
+ {
+   "type": "condition.schema",
+   "schema": {
+      "type": "string",
+      "minLength": 3,
+      "pattern": "^[А-Яа-яЁёa-zA-Z\\s]+$"/>"
+    }
+ }
+ ```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/ojMRgKBZ48fhVf">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [layout.columns](/docs/template-builder/reference/layout.columns): Places content in separate columns.
+- [view.image](/docs/template-builder/reference/view.image): Displays an image.
+- [data.input](/docs/template-builder/operations/work-with-data): The input data. For example, links to images that will be shown to Tolokers.
+- [view.group](/docs/template-builder/reference/view.group): Groups components visually into framed blocks.
+- [view.list](/docs/template-builder/reference/view.list): Displays data in a list.
+- [field.radio-group](/docs/template-builder/reference/field.radio-group): Adds radio buttons for selecting an answer option.
+- [data.output](/docs/template-builder/operations/work-with-data): The output data. This is what you get when a Toloker clicks the **Submit** button.
+- [condition.required](/docs/template-builder/reference/condition.required): Checks that the data is filled in.
+- [helper.if](/docs/template-builder/reference/helper.if): Allows to execute either one block of code or another, depending on the condition.
+- [condition.equals](/docs/template-builder/reference/condition.equals): Checks whether the original value is equal to the specified value.
+- [field.list](/docs/template-builder/reference/field.list): Allows a Toloker to add and remove new text input fields.
+- [field.text](/docs/template-builder/reference/field.text): Adds a field for entering a short text.
+- [condition.any](/docs/template-builder/reference/condition.any): Checks that at least one of the child conditions is met.
+- [condition.not](/docs/template-builder/reference/condition.not): Returns the inverse of the specified condition.
+- [condition.schema](/docs/template-builder/reference/condition.schema): Allows validating data using [JSON Schema](https://json-schema.org/learn/getting-started-step-by-step.html).
+- [condition.empty](/docs/template-builder/reference/condition.empty): Checks that the data didn't get a value.
+- [plugin.trigger](/docs/template-builder/reference/plugin.trigger): Triggers a specific action when an event occurs. The action is set in the `action` property.
+- [plugin.hotkeys](/docs/template-builder/reference/plugin.hotkeys): Adds [keyboard shortcuts](/docs/template-builder/best-practices/hotkeys).
+
+</Cut>
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=template-builder-templates-copywriting">Contact support</Button>
