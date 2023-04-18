@@ -10,6 +10,17 @@
 		],
 		"description": "Create a note"
 	},
+	"Tip": {
+		"prefix": "tip",
+		"body": [
+			"<Note mode=\"tip\" title=\"Tip\">",
+			"",
+			"$0",
+			"",
+			"</Note>"
+		],
+		"description": "Create a tip"
+	},
 	"Warning": {
 		"prefix": "warning",
 		"body": [
@@ -22,7 +33,7 @@
 		"description": "Create a warning"
 	},
 	"Restriction": {
-		"prefix": "restriction",
+		"prefix": ["alert","restriction"],
 		"body": [
 			"<Note mode=\"restriction\" title=\"Restriction\">",
 			"",
