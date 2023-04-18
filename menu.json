@@ -416,7 +416,7 @@
               "href": "/docs/guide/users"
             },
             {
-              "title": "Rewards",
+              "title": "Bonuses",
               "href": "/docs/guide/bonus"
             },
             {
@@ -2102,22 +2102,22 @@
       "href": "/docs/api/accept"
     },
     {
-      "title": "Rewards",
+      "title": "Bonuses",
       "subItems": [
         {
           "title": "Overview",
           "href": "/docs/api/bonus"
         },
         {
-          "title": "Issue rewards",
+          "title": "Issue bonuses",
           "href": "/docs/api/create-bonus"
         },
         {
-          "title": "Get a list of rewards issued",
+          "title": "Get a list of bonuses issued",
           "href": "/docs/api/get-bonus-list"
         },
         {
-          "title": "Get reward properties",
+          "title": "Get bonus properties",
           "href": "/docs/api/get-one-bonus"
         }
       ]
@@ -3126,18 +3126,18 @@
           ]
         },
         {
-          "title": "Rewards",
+          "title": "Bonuses",
           "subItems": [
             {
-              "title": "Issue rewards to Tolokers",
+              "title": "Issue bonuses to Tolokers",
               "href": "/docs/toloka-kit/recipes/assign-reward"
             },
             {
-              "title": "Get list of all rewards issued",
+              "title": "Get list of all bonuses issued",
               "href": "/docs/toloka-kit/recipes/get-rewards"
             },
             {
-              "title": "Get reward details",
+              "title": "Get bonus details",
               "href": "/docs/toloka-kit/recipes/get-reward-by-id"
             }
           ]
@@ -6665,18 +6665,18 @@
       "href": "/en/docs/web/achievements"
     },
     {
-      "title": "Rewards for friends",
+      "title": "Bonuses for friends",
       "subItems": [
         {
           "title": "How to invite people",
           "href": "/en/docs/web/referal"
         },
         {
-          "title": "Current reward rules",
+          "title": "Current bonus rules",
           "href": "/en/docs/web/referal-rules"
         },
         {
-          "title": "Previous reward rules",
+          "title": "Previous bonus rules",
           "href": "/en/docs/web/referal-archive"
         }
       ]
@@ -6769,18 +6769,18 @@
       "href": "/en/docs/android/goals"
     },
     {
-      "title": "Rewards for friends",
+      "title": "Bonuses for friends",
       "subItems": [
         {
           "title": "How to invite people",
           "href": "/en/docs/android/referal"
         },
         {
-          "title": "Current reward rules",
+          "title": "Current bonus rules",
           "href": "/en/docs/android/referal-rules"
         },
         {
-          "title": "Previous reward rules",
+          "title": "Previous bonus rules",
           "href": "/en/docs/android/referal-archive"
         }
       ]
@@ -6873,18 +6873,18 @@
       "href": "/en/docs/ios/goals"
     },
     {
-      "title": "Rewards for friends",
+      "title": "Bonuses for friends",
       "subItems": [
         {
           "title": "How to invite people",
           "href": "/en/docs/ios/referal"
         },
         {
-          "title": "Current reward rules",
+          "title": "Current bonus rules",
           "href": "/en/docs/ios/referal-rules"
         },
         {
-          "title": "Previous reward rules",
+          "title": "Previous bonus rules",
           "href": "/en/docs/ios/referal-archive"
         }
       ]

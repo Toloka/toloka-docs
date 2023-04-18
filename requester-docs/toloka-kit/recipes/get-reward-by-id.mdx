@@ -1,5 +1,5 @@
 ---
-title: "Get reward details — Toloka-Kit | Toloka documentation"
+title: "Get bonus details — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:37.250178"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
@@ -12,9 +12,9 @@ import Import from './subcomponents/recipes/import.mdx'
 import Instantiate from './subcomponents/recipes/instantiate.mdx'
 import GetUserBonus from './subcomponents/get_user_bonus.mdx'
 
-# Get reward details
+# Get bonus details
 
-_Get the detailed information about the reward with the ID specified in the request._
+_Get the detailed information about the bonus with the ID specified in the request._
 
 ## Steps to follow
 
@@ -22,9 +22,9 @@ _Get the detailed information about the reward with the ID specified in the requ
 
 <Instantiate/>
 
-### 3. Get reward information {#step-three}
+### 3. Get bonus information {#step-three}
 
-[Find out](/docs/toloka-kit/recipes/get-rewards) the ID of the reward for which you want to get the detailed information. Then get this info calling the `get_user_bonus()` method.
+[Find out](/docs/toloka-kit/recipes/get-rewards) the ID of the bonus for which you want to get the detailed information. Then get this info calling the `get_user_bonus()` method.
 
 <CodeCopy
   isSmall
@@ -37,7 +37,7 @@ _Get the detailed information about the reward with the ID specified in the requ
   textToCopy={`bonus = toloka_client.get_user_bonus('3139')`}
 />
 
-### 4. Print reward title and amount {#step-four}
+### 4. Print bonus title and amount {#step-four}
 
 The `get_user_bonus()` request will return the [UserBonus](/docs/toloka-kit/reference/toloka.client.user_bonus.UserBonus) class object. You can use its attributes to print the information you need.
 
@@ -45,13 +45,13 @@ The `get_user_bonus()` request will return the [UserBonus](/docs/toloka-kit/refe
 print(bonus.public_title['EN'], bonus.amount)
 ```
 
-You should get an output with the reward title and amount which looks like this.
+You should get an output with the bonus title and amount which looks like this.
 
 ```bash
 Perfect job! 0.500
 ```
 
-## Complete code: Get reward details {#complete-code}
+## Complete code: Get bonus details {#complete-code}
 
 ```python
 import toloka.client as toloka
@@ -75,4 +75,4 @@ print(bonus.public_title['EN'], bonus.amount)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
 - [More usage examples](/docs/toloka-kit/recipes/use-cases)
 - [Toloka-Kit: UserBonus class](/docs/toloka-kit/reference/toloka.client.user_bonus.UserBonus)
-- [Toloka API: Get reward by ID](https://toloka.ai/docs/api/api-reference/#get-/user-bonuses/-userBonusId-)
+- [Toloka API: Get bonus by ID](https://toloka.ai/docs/api/api-reference/#get-/user-bonuses/-userBonusId-)

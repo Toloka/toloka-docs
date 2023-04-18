@@ -1,5 +1,5 @@
 ---
-title: "Get a list of rewards issued — Toloka API | Toloka documentation"
+title: "Get a list of bonuses issued — Toloka API | Toloka documentation"
 date: "2023-03-15T11:24:20.255784"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
@@ -19,11 +19,11 @@ import GetBonusListList4 from './get-bonus-list/subcomponents/get-bonus-list-lis
 import GetBonusListList5 from './get-bonus-list/subcomponents/get-bonus-list-list-5.mdx'
 import GetBonusListList6 from './get-bonus-list/subcomponents/get-bonus-list-list-6.mdx'
 
-# Get a list of rewards issued
+# Get a list of bonuses issued
 
 <Announce/>
 
-Gets a list of rewards issued.
+Gets a list of bonuses issued.
 
 ## Request {#request}
 
@@ -45,19 +45,19 @@ Title | Overview
 Parameter | Overview
 ----- | -----
 **user_id** | **string**<br/><br/>Toloker ID.
-**assignment_id** | **string**<br/><br/>ID of the Toloker's response to the task a reward is issued for.
+**assignment_id** | **string**<br/><br/>ID of the Toloker's response to the task a bonus is issued for.
 **private_comment** | **string**<br/><br/>Comments that are only visible to the requester.
 **sort** | <GetBonusListTable1/>
 **Standard query parameters** | [limit](/docs/api/standard-query-parameters#limit), [id_gt](/docs/api/standard-query-parameters#id_gt), [id_gte](/docs/api/standard-query-parameters#id_gte), [id_lt](/docs/api/standard-query-parameters#id_lt), [id_lte](/docs/api/standard-query-parameters#id_lte), [created_gt](/docs/api/standard-query-parameters#created_gt), [created_gte](/docs/api/standard-query-parameters#created_gte), [created_lt](/docs/api/standard-query-parameters#created_lt), [created_lte](/docs/api/standard-query-parameters#created_lte).
 
 ## Query example {#request-example}
 
-You can set up the display of the list of rewards in parts (for example, 10 rewards at a time):
+You can set up the display of the list of bonuses in parts (for example, 10 bonuses at a time):
 
-1. Show the first 10 rewards, starting with the one with the lowest ID.
-1. Show the remaining rewards (10 at a time) in ascending order.
+1. Show the first 10 bonuses, starting with the one with the lowest ID.
+1. Show the remaining bonuses (10 at a time) in ascending order.
 
-**Show the first 10 rewards**
+**Show the first 10 bonuses**
 
 <Tabs tabs={[
   { title: 'Production version', value: <GetBonusListList3/> },
@@ -79,7 +79,7 @@ You can set up the display of the list of rewards in parts (for example, 10 rewa
 
 Property | Description
 ----- | -----
-**items[]** | **array of objects**<br/><br/>Contains [information about rewards](/docs/api/get-one-bonus).
+**items[]** | **array of objects**<br/><br/>Contains [information about bonuses](/docs/api/get-one-bonus).
 **has_more** | <HasMore/>
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-get-bonus-list">Contact support</Button>
