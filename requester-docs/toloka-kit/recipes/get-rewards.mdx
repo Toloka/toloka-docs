@@ -1,5 +1,5 @@
 ---
-title: "Get list of all rewards issued — Toloka-Kit | Toloka documentation"
+title: "Get list of all bonuses issued — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:39.662217"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
@@ -12,9 +12,9 @@ import Import from './subcomponents/recipes/import.mdx'
 import Instantiate from './subcomponents/recipes/instantiate.mdx'
 import GetUserBonuses from './subcomponents/get_user_bonuses.mdx'
 
-# Get list of all rewards issued
+# Get list of all bonuses issued
 
-_Get all the rewards you issued in Toloka._
+_Get all the bonuses you issued in Toloka._
 
 ## Steps to follow
 
@@ -22,9 +22,9 @@ _Get all the rewards you issued in Toloka._
 
 <Instantiate/>
 
-### 3. Print reward IDs, public titles, and amount {#step-three}
+### 3. Print bonus IDs, public titles, and amount {#step-three}
 
-Iterate through all the rewards calling the `get_user_bonuses()` method.
+Iterate through all the bonuses calling the `get_user_bonuses()` method.
 
 <CodeCopy
   isSmall
@@ -39,14 +39,14 @@ Iterate through all the rewards calling the `get_user_bonuses()` method.
     print(bonus.id, bonus.public_title.get('EN'), bonus.amount)`}
 />
 
-You should get an output with the reward IDs, public titles, and amount which looks like this.
+You should get an output with the bonus IDs, public titles, and amount which looks like this.
 
 ```bash
 3139 Perfect job! 0.500
 3258 Completed much faster than others 1.000
 ```
 
-## Complete code: Get list of all rewards issued {#complete-code}
+## Complete code: Get list of all bonuses issued {#complete-code}
 
 ```python
 import toloka.client as toloka
@@ -69,4 +69,4 @@ for bonus in toloka_client.get_user_bonuses():
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
 - [More usage examples](/docs/toloka-kit/recipes/use-cases)
-- [Toloka API: Get list of rewards](https://toloka.ai/docs/api/api-reference/#get-/user-bonuses)
+- [Toloka API: Get list of bonuses](https://toloka.ai/docs/api/api-reference/#get-/user-bonuses)

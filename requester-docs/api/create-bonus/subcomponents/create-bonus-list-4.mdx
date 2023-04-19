@@ -25,7 +25,7 @@ import CreateBonusTable4 from './create-bonus-table-4.mdx'
 Parameter | Overview
 ----- | -----
 **id** | **string**<br/><br/>    Operation ID.
-**type** | **string**<br/><br/>    Type of operation: `USER_BONUS.BATCH_CREATE` — Issuing a reward to multiple Tolokers.
+**type** | **string**<br/><br/>    Type of operation: `USER_BONUS.BATCH_CREATE` — Issuing a bonus to multiple Tolokers.
 **status** | <CreateBonusTable3/>
 **submitted** | **string**<br/><br/>    The UTC date and time the request was sent, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
 **started** | **string**<br/><br/>    The UTC date and time the operation started, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
@@ -33,8 +33,8 @@ Parameter | Overview
 **parameters** | **object**<br/><br/>    Parameters of the operation in the request.
 **skip_invalid_items** | <CreateBonusTable4/>
 **details** | **object**<br/><br/>    Information about the completed operation.
-**details.total_count** | **integer**<br/><br/>    The number of rewards in the request.
-**details.valid_count** | **integer**<br/><br/>    The number of JSON objects with reward information that passed validation.
-**details.not_valid_count** | **integer**<br/><br/>    The number of invalid JSON objects with reward information.
-**details.success_count** | **integer**<br/><br/>    The number of rewards issued.
-**details.failed_count** | **integer**<br/><br/>    The number of rewards that weren't issued.
+**details.total_count** | **integer**<br/><br/>    The number of bonuses in the request.
+**details.valid_count** | **integer**<br/><br/>    The number of JSON objects with bonus information that passed validation.
+**details.not_valid_count** | **integer**<br/><br/>    The number of invalid JSON objects with bonus information.
+**details.success_count** | **integer**<br/><br/>    The number of bonuses issued.
+**details.failed_count** | **integer**<br/><br/>    The number of bonuses that weren't issued.

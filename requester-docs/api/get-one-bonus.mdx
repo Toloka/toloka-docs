@@ -1,5 +1,5 @@
 ---
-title: "Get reward properties — Toloka API | Toloka documentation"
+title: "Get bonus properties — Toloka API | Toloka documentation"
 date: "2023-02-17T14:32:32.667070"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
@@ -12,11 +12,11 @@ import Announce from './subcomponents/announce.mdx'
 import GetOneBonusList1 from './get-one-bonus/subcomponents/get-one-bonus-list-1.mdx'
 import GetOneBonusList2 from './get-one-bonus/subcomponents/get-one-bonus-list-2.mdx'
 
-# Get reward properties
+# Get bonus properties
 
 <Announce/>
 
-Gets the properties of the reward issued.
+Gets the properties of the bonus issued.
 
 ## Request {#request}
 
@@ -29,7 +29,7 @@ Gets the properties of the reward issued.
 
 Parameter | Overview
 ----- | -----
-**bonus_id** | ID of the reward issued.
+**bonus_id** | ID of the bonus issued.
 
 ## Headers {#headers}
 
@@ -39,7 +39,7 @@ Title | Overview
 
 ## Response {#response}
 
-Information about a reward.
+Information about a bonus.
 
 ```json
 {
@@ -62,13 +62,13 @@ Information about a reward.
 Parameter | Overview
 ----- | -----
 **user_id** | **string**<br/><br/>Toloker ID.
-**amount** | **float**<br/><br/>The dollar amount of the reward.
-**assignment_id** | **string**<br/><br/>ID of the Toloker's response to the task a reward is issued for.
+**amount** | **float**<br/><br/>The dollar amount of the bonus.
+**assignment_id** | **string**<br/><br/>ID of the Toloker's response to the task a bonus is issued for.
 **private_comment** | **string**<br/><br/>Comments that are only visible to the requester.
 **public_title** | **object**<br/><br/>The subject of the message for the Toloker. You can enter it in multiple languages (the message will be sent in the Toloker's language). Format: `"<language RU/EN/TR/ID/FR>": "<title text>"`.
 **public_message** | **object**<br/><br/>Message text for the Toloker. You can enter it in multiple languages (the message will be sent in the Toloker's language). Format: `"<language RU/EN/TR/ID/FR>": "<message text>"`.
-**without_message** | **boolean**<br/><br/>Allows you not to send a reward message to the Toloker. The default value is `false`.<br/><br/>To issue a reward without a message, specify `null` for `public_title` and `public_message` and `true` for `without_message`.
-**id** | **string**<br/><br/>Reward ID.
-**created** | **string**<br/><br/>Date the reward was awarded, in UTC using ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`
+**without_message** | **boolean**<br/><br/>Allows you not to send a bonus message to the Toloker. The default value is `false`.<br/><br/>To issue a bonus without a message, specify `null` for `public_title` and `public_message` and `true` for `without_message`.
+**id** | **string**<br/><br/>Bonus ID.
+**created** | **string**<br/><br/>Date the bonus was awarded, in UTC using ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-get-one-bonus">Contact support</Button>
