@@ -1,6 +1,6 @@
 ---
 title: "Get a list of Tolokers who have skills — Toloka API | Toloka documentation"
-date: "2023-03-15T11:24:19.007204"
+date: "2023-04-19T11:35:52.855937"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -27,17 +27,23 @@ Gets a list of Tolokers who have skills. With the [query parameters](#query-para
 
 - Get the list of all the Tolokers who have the specific skill using the `skill_id` query parameter:
 
-  ```bash
-  GET https://toloka.dev/api/v1/user-skills?skill_id=<skill_id>
-  ```
+    ```bash
+    GET https://toloka.dev/api/v1/user-skills?skill_id=<skill_id>
+    ```
 
 - Get the list of all the skills assigned to the specific Toloker using the `user_id` query parameter:
 
-  ```bash
-  GET https://toloka.dev/api/v1/user-skills?user_id=<user_id>
-  ```
+    ```bash
+    GET https://toloka.dev/api/v1/user-skills?user_id=<user_id>
+    ```
 
 ## Request {#request}
+
+<Note mode="tip" title="Tip">
+
+**Try our [new API reference](https://toloka.ai/docs/api/api-reference/#get-/user-skills):** more parameter details, request/response examples, and code samples in various programming languages, including the [Toloka-Kit](/docs/toloka-kit/) usage samples.
+
+</Note>
 
 <Tabs tabs={[
   { title: 'Production version', value: <GetUserSkillListList1/> },
