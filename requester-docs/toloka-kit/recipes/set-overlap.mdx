@@ -76,15 +76,15 @@ Refer to the [Group tasks in task suites](/docs/toloka-kit/recipes/create-task-s
     <HighlightChildren language="python">
       {`tasks = [`}
       {``}
-    {`    toloka.task.`}<Term term="Task">1</Term>{`(input_values={'image': 'https://example.com/image_1.png'}),`}
+    {`    toloka.task.`}<Term term="Task"><Task/></Term>{`(input_values={'image': 'https://example.com/image_1.png'}),`}
     {``}
-    {`    toloka.task.`}<Term term="Task">1</Term>{`(input_values={'image': 'https://example.com/image_2.png'}),`}
+    {`    toloka.task.`}<Term term="Task"><Task/></Term>{`(input_values={'image': 'https://example.com/image_2.png'}),`}
     {``}
-    {`    toloka.task.`}<Term term="Task">1</Term>{`(input_values={'image': 'https://example.com/image_3.png'})`}
+    {`    toloka.task.`}<Term term="Task"><Task/></Term>{`(input_values={'image': 'https://example.com/image_3.png'})`}
 {`]`}
-{`new_task_suite = toloka.task_suite.`}<Term term="TaskSuite">1</Term>{`(pool_id=new_pool.id, tasks=tasks, overlap=3)`}
+{`new_task_suite = toloka.task_suite.`}<Term term="TaskSuite"><TaskSuite/></Term>{`(pool_id=new_pool.id, tasks=tasks, overlap=3)`}
 {``}
-{`toloka_client.`}<Term term="create_task_suite">1</Term>{`(new_task_suite)`}
+{`toloka_client.`}<Term term="create_task_suite"><CreateTaskSuite/></Term>{`(new_task_suite)`}
     </HighlightChildren>
   }
   textToCopy={`tasks = [
