@@ -1,6 +1,6 @@
 ---
 title: "Property types — Template Builder | Toloka documentation"
-date: "2023-02-10T09:15:36.028329"
+date: "2023-04-20T17:25:13.478581"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -10,13 +10,14 @@ docsMenu: "defaultMenu"
 
 # Property types
 
-In the component descriptions, each property has a type. This page contains explanations for these types.
+In the [component](/docs/template-builder/reference/) descriptions, each property has a type. This page contains explanations for these types.
 
 ## "component.name"
 
 For the `type` property, the name of the component is indicated everywhere. If you specify a different name, that would be a different component.
 
 ## action
+
 Any [action component](/docs/template-builder/reference/actions). Components with the name `actions.*` let you perform various actions, such as show notifications.
 
 ## any
@@ -30,20 +31,14 @@ Any value. Those might be:
 
 ## array
 
-Array of comma-separated elements. You can use
-
-<Cut title="anything you want">
-
-Any value. Those might be:
+Array of comma-separated elements. You can use as an array element:
 
 - Standard JSON elements: string, number, `true`, `false`, object, or array.
 - [Helpers](/docs/template-builder/reference/helpers) that return a value.
 - Other components, if allowed in the configuration.
 - References to other places in the configuration using the structure `{ "$ref": "path.to.element" }`. Use this type of linking for [code reuse](/docs/template-builder/best-practices/reuse).
 
-</Cut>
-
-as an element. An array is enclosed in square brackets, `[]`:
+An array is enclosed in square brackets, `[]`:
 
 ```json
 "cities": ["London", "Tokyo", "New York"]
@@ -63,7 +58,7 @@ An integer without quotation marks, for example, `25`.
 
 ## number
 
-A number without quotation marks, for example, `25.5`.
+A number without quotation marks. The separator of the fractional and integer parts is the dot. For example, `25.5`.
 
 ## object
 
@@ -79,6 +74,8 @@ A list of `"key":value` pairs separated by commas. Enclosed in curly brackets `{
 ## ref
 
 A pointer to a visual component using the construction `{ "$ref": "path.to.element" }`.
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/AiIEBqw-3YbMBH">View example</Button>
 
 <Note mode="note" title="Note">
 
@@ -97,3 +94,5 @@ Component you can write the data to: `data.internal` or `data.output`. In some c
 ## visual
 
 A visual component (`layout.*`, `view.*`, `field.*`) or [helper](/docs/template-builder/reference/helpers) that returns it. See the list in the [component reference guide](/docs/template-builder/reference/).
+
+<Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=template-builder-types">Contact support</Button>
