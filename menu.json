@@ -6703,6 +6703,23 @@
       ]
     },
     {
+      "title": "Tips and recommendations",
+      "subItems": [
+        {
+          "title": "How to clear the cache",
+          "href": "/en/docs/web/usefull-tips/cache"
+        },
+        {
+          "title": "How to take a screenshot",
+          "href": "/en/docs/web/usefull-tips/screenshot"
+        },
+        {
+          "title": "How to configure cookie storage",
+          "href": "/en/docs/web/usefull-tips/cookie"
+        }
+      ]
+    },
+    {
       "title": "Troubleshooting",
       "href": "/en/docs/web/troubleshooting/troubleshooting"
     },
@@ -6803,6 +6820,23 @@
         {
           "title": "QIWI",
           "href": "/en/docs/android/pay/qiwi-wallet"
+        }
+      ]
+    },
+    {
+      "title": "Tips and recommendations",
+      "subItems": [
+        {
+          "title": "How to clear the cache",
+          "href": "/en/docs/android/usefull-tips/cache"
+        },
+        {
+          "title": "How to take a screenshot",
+          "href": "/en/docs/android/usefull-tips/screenshot"
+        },
+        {
+          "title": "How to configure cookie storage",
+          "href": "/en/docs/android/usefull-tips/cookie"
         }
       ]
     },
@@ -6911,6 +6945,23 @@
       ]
     },
     {
+      "title": "Tips and recommendations",
+      "subItems": [
+        {
+          "title": "How to clear the cache",
+          "href": "/en/docs/ios/usefull-tips/cache"
+        },
+        {
+          "title": "How to take a screenshot",
+          "href": "/en/docs/ios/usefull-tips/screenshot"
+        },
+        {
+          "title": "How to configure cookie storage",
+          "href": "/en/docs/ios/usefull-tips/cookie"
+        }
+      ]
+    },
+    {
       "title": "Troubleshooting",
       "href": "/en/docs/ios/troubleshooting/troubleshooting"
     },
@@ -7007,6 +7058,23 @@
         {
           "href": "/ru/docs/web/pay/qiwi-wallet",
           "title": "QIWI"
+        }
+      ]
+    },
+    {
+      "title": "Советы и рекомендации",
+      "subItems": [
+        {
+          "title": "Как очистить кеш",
+          "href": "/ru/docs/web/usefull-tips/cache"
+        },
+        {
+          "title": "Как сделать скриншот",
+          "href": "/ru/docs/web/usefull-tips/screenshot"
+        },
+        {
+          "title": "Как настроить прием файлов cookie",
+          "href": "/ru/docs/web/usefull-tips/cookie"
         }
       ]
     },
@@ -7140,6 +7208,23 @@
       ]
     },
     {
+      "title": "Советы и рекомендации",
+      "subItems": [
+        {
+          "title": "Как очистить кеш",
+          "href": "/ru/docs/android/usefull-tips/cache"
+        },
+        {
+          "title": "Как сделать скриншот",
+          "href": "/ru/docs/android/usefull-tips/screenshot"
+        },
+        {
+          "title": "Как настроить прием файлов cookie",
+          "href": "/ru/docs/android/usefull-tips/cookie"
+        }
+      ]
+    },
+    {
       "title": "Стать самозанятым",
       "subItems": [
         {
@@ -7265,6 +7350,23 @@
         {
           "href": "/ru/docs/ios/pay/qiwi-wallet",
           "title": "QIWI"
+        }
+      ]
+    },
+    {
+      "title": "Советы и рекомендации",
+      "subItems": [
+        {
+          "title": "Как очистить кеш",
+          "href": "/ru/docs/ios/usefull-tips/cache"
+        },
+        {
+          "title": "Как сделать скриншот",
+          "href": "/ru/docs/ios/usefull-tips/screenshot"
+        },
+        {
+          "title": "Как настроить прием файлов cookie",
+          "href": "/ru/docs/ios/usefull-tips/cookie"
         }
       ]
     },
