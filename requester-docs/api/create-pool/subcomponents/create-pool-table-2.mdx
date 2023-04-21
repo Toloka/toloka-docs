@@ -1,4 +1,7 @@
-**string \| required if**<br/><br/>Required if selective review is used.<br/><br/>How to count tasks completed by the Toloker:
+**integer**<br/><br/>The overlap for tasks that are uploaded to the pool (used if the `allow_defaults=true` parameter is set at upload).
 
-- `POOL` — Count completed pool tasks.
-- `PROJECT` — Count completed project tasks.
+<Note mode="warning" title="Warning">
+
+Please note that overlap you set when [uploading tasks](/docs/api/create-task) has priority over the overlap you set during the pool creation.
+
+</Note>

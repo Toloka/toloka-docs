@@ -1,5 +1,4 @@
-**integer**<br/><br/>Waiting time (in seconds) before automatic closure of the pool after all tasks are completed. Minimum — 0, maximum — 259 200 seconds (three days). The default value is 0.<br/><br/>Use it if:
+**string \| required if**<br/><br/>Required if training tasks are assigned at a variable rate.<br/><br/>How to count tasks completed by the Toloker:
 
-- Your data processing is close to real time.
-- You need an open pool where you upload tasks.
-- Dynamic overlap is enabled in the pool (`dynamic_overlap_config`).
+- `POOL` — Count completed pool tasks.
+- `PROJECT` — Count completed project tasks.

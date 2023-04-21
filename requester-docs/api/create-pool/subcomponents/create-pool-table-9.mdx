@@ -1,4 +1,5 @@
-**string**<br/><br/>Balance type. Possible values:
+**integer**<br/><br/>Waiting time (in seconds) before automatic closure of the pool after all tasks are completed. Minimum — 0, maximum — 259 200 seconds (three days). The default value is 0.<br/><br/>Use it if:
 
-- `TOP_PERCENTAGE_BY_QUALITY` — Tolokers with the best task completion quality.
-- `BEST_CONCURRENT_USERS_BY_QUALITY` — Active Tolokers with access to the task.
+- Your data processing is close to real time.
+- You need an open pool where you upload tasks.
+- Dynamic overlap is enabled in the pool (`dynamic_overlap_config`).

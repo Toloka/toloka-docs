@@ -1,4 +1,4 @@
-**boolean**<br/><br/>The order used to add tasks to suites:
+**string**<br/><br/>Balance type. Possible values:
 
-- `true` — Add tasks to suites in the order in which they were uploaded. For example, in a pool with an overlap of 5, the first uploaded task will be included in the first 5 task suites. They will be assigned to 5 Tolokers.
-- `false` — Add tasks to suites in random order.<br/><br/>The default value is `false`.
+- `TOP_PERCENTAGE_BY_QUALITY` — Tolokers with the best task completion quality.
+- `BEST_CONCURRENT_USERS_BY_QUALITY` — Active Tolokers with access to the task.

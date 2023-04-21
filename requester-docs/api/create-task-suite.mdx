@@ -1,6 +1,6 @@
 ---
 title: "Create one or multiple task suites — Toloka API | Toloka documentation"
-date: "2023-04-19T10:46:41.614473"
+date: "2023-04-20T19:09:47.918742"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -21,6 +21,7 @@ import CreateTaskSuiteTable7 from './create-task-suite/subcomponents/create-task
 import CreateTaskSuiteTable8 from './create-task-suite/subcomponents/create-task-suite-table-8.mdx'
 import CreateTaskSuiteList3 from './create-task-suite/subcomponents/create-task-suite-list-3.mdx'
 import CreateTaskSuiteList4 from './create-task-suite/subcomponents/create-task-suite-list-4.mdx'
+import CreateTaskSuiteTable11 from './create-task-suite/subcomponents/create-task-suite-table-11.mdx'
 
 # Create one or multiple task suites
 
@@ -110,7 +111,6 @@ Parameter | Overview
       "message_on_unknown_solution": "The elephant is white"
     }
   ],
-  "overlap": 5,
   "infinite_overlap": false,
   "remaining_overlap": 3,
   "reserved_for": [],
@@ -127,7 +127,7 @@ Parameter | Overview
 **pool_id** | **string \| required**<br/><br/>The ID of the pool that tasks are uploaded to.
 **tasks[]** | **array of object \| required**<br/><br/>Data for the tasks.
 **tasks[].input_values** | <CreateTaskSuiteTable4/>
-**overlap** | **integer \| required if**<br/><br/>Required if the parameter is not used when creating a task suite `allow_defaults=true`, and the overlap is not specified in the pool parameters (in the [`defaults.​default_​overlap_for_​new_task_suites`](/docs/api/create-pool#default_overlap_for_new_task_suites) key).<br/><br/>Task suite overlap.
+**overlap** {#overlap} | <CreateTaskSuiteTable11/>
 **longitude** | **float \| required if**<br/><br/>Required if tasks are selected on the map. Otherwise, not used.<br/><br/>The longitude of the point on the map for the task suite.
 **latitude** | **float \| required if**<br/><br/>Required if tasks are selected on the map. Otherwise, not used.<br/><br/>The latitude of the point on the map for the task suite.
 **tasks[].known_solutions** | **object**<br/><br/>Responses and hints for control tasks and training tasks.
