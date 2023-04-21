@@ -1,0 +1,9 @@
+**string**<br/><br/>The reason for closing the pool the last time:
+
+- `MANUAL` — Closed by the requester.
+- `EXPIRED` — Reached the date and time set in `will_expire`.
+- `COMPLETED` — Closed automatically because all the pool tasks were completed.
+- `NOT_ENOUGH_BALANCE` — Closed automatically because the Toloka account ran out of funds.
+- `ASSIGNMENTS_LIMIT_EXCEEDED` — Closed automatically because it exceeded the limit on assigned task suites (2 million maximum).
+- `BLOCKED` — Closed automatically because the requester's account was blocked by a Toloka administrator.
+- `FOR_UPDATE` — The pool is closed for editing.
