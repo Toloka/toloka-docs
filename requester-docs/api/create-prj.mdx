@@ -1,6 +1,6 @@
 ---
 title: "Create a project — Toloka API | Toloka documentation"
-date: "2023-04-19T10:46:45.679547"
+date: "2023-04-28T14:17:46.841191"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -163,6 +163,7 @@ Parameter | Overview
 **styles** | **string**<br/><br/>CSS styles of the task.<br/><br/>For more information, see the [CSS block](/docs/guide/spec#css) section.
 **settings** | **object \| required**<br/><br/>Whether to display common interface elements in the task.
 **config[]** | **array of objects**<br/><br/>[Configuration for Template Builder](/docs/api/tb-config)
+**lock**| **object \| required if**<br/><br/>Required if `type` is set to `tb`.<br/><br/>The set of the Template Builder component versions that will be used to create the project task interface.
 **assets** | <CreatePrjTable4/>
 **assets.script_urls[]** | <CreatePrjTable5/>
 **assets.style_urls[]** | **array of strings**<br/><br/>Links to CSS libraries.
