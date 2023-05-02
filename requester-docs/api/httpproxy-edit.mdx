@@ -1,6 +1,6 @@
 ---
 title: "Edit proxy server data — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:36.942761"
+date: "2023-05-02T16:13:19.183738"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -38,13 +38,13 @@ $.ajax({
 
 Parameter | Overview
 ----- | -----
-**id** | **string \| required**<br/><br/>The requester's server ID.
-**accessRights** | <HttpproxyEditTable1/>
-**type** | **string \| required**<br/><br/>Data transfer protocol. Possible value: `HTTP`.
-**baseUrl** | **string \| required**<br/><br/>The requester's server URL.<br/><br/>For example, a server [named](#name) "test-proxy" is hosted at `example.com/some-path`.<br/><br/>In this case, when calling an HTTP method in Toloka at the URL `toloka.dev/api/proxy/test-proxy/test-path`, a request to the requester's server will be sent to the URL `example.com/some-path/test-path`.<br/><br/>If a method call is made within a template, [assignmentId](#assignmentId) will be added to the URL. This ensures that information about the task the request was made within is also passed to the requester's server. Example: `example.com/some-path/test-path?assignmentId=12831298712937213`.
-**name** {#name} | **string \| required**<br/><br/>The name of the requester's server. The name will be inserted in the request URL. Allowed characters in the name: Latin letters, numbers, and dashes ("-").<br/><br/>Must be unique within Toloka.<br/><br/>For example, a server named "test-proxy" can be accessed in Toloka at: `toloka.dev/api/proxy/test-proxy`.
-**additionalHeaders[]** | <HttpproxyEditTable2/>
-**additionalQueryArgs[]** | <HttpproxyEditTable3/>
+`id` | _string_ \| **required**<br/><br/>The requester's server ID.
+`accessRights` | <HttpproxyEditTable1/>
+`type` | _string_ \| **required**<br/><br/>Data transfer protocol. Possible value: `HTTP`.
+`baseUrl` | _string_ \| **required**<br/><br/>The requester's server URL.<br/><br/>For example, a server [named](#name) "test-proxy" is hosted at `example.com/some-path`.<br/><br/>In this case, when calling an HTTP method in Toloka at the URL `toloka.dev/api/proxy/test-proxy/test-path`, a request to the requester's server will be sent to the URL `example.com/some-path/test-path`.<br/><br/>If a method call is made within a template, [assignmentId](#assignmentId) will be added to the URL. This ensures that information about the task the request was made within is also passed to the requester's server. Example: `example.com/some-path/test-path?assignmentId=12831298712937213`.
+`name` | _string_ \| **required**<br/><br/>The name of the requester's server. The name will be inserted in the request URL. Allowed characters in the name: Latin letters, numbers, and dashes ("-").<br/><br/>Must be unique within Toloka.<br/><br/>For example, a server named "test-proxy" can be accessed in Toloka at: `toloka.dev/api/proxy/test-proxy`.
+`additionalHeaders[]` | <HttpproxyEditTable2/>
+`additionalQueryArgs[]` | <HttpproxyEditTable3/>
 
 ## Response {#response}
 

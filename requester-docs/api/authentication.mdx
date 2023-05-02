@@ -1,13 +1,12 @@
 ---
 title: "Event authentication — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:35.188428"
+date: "2023-05-02T13:35:54.792522"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
 ogDescription: ""
 docsMenu: "apiMenu"
 ---
-
 
 # Event authentication
 
@@ -17,7 +16,7 @@ An additional header — **Toloka-Signature** — is used to confirm that the To
 
 ## Creating a secure subscription {#secure-subscription}
 
-When [creating a subscription](/docs/api/put-webhook-subscriptions), add the **secret_key** parameter to the request body. It checks whether incoming requests were sent through the Toloka API. If the parameter was added, the additional **Toloka-Signature** header appears in the event notification.
+When [creating a subscription](https://toloka.ai/docs/api/api-reference/#put-/webhook-subscriptions), add the **secret_key** parameter to the request body. It checks whether incoming requests were sent through the Toloka API. If the parameter was added, the additional **Toloka-Signature** header appears in the event notification.
 
 ## Validating the notification sender {#validation}
 

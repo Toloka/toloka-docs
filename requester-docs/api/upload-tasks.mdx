@@ -1,6 +1,6 @@
 ---
 title: "Ways to upload tasks — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:33.019600"
+date: "2023-05-02T16:13:17.075001"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -22,11 +22,11 @@ Toloka provides two ways of uploading tasks using the API:
 
 Choose this method if:
 
-- You [created a pool](/docs/api/create-pool) using ["smart mixing"](/docs/guide/distribute-tasks-by-pages#distribute-tasks-by-pages__smart-mixing) (the `mixer_config` parameter).
+- You [created a pool](https://toloka.ai/docs/api/api-reference/#post-/pools) using ["smart mixing"](/docs/guide/distribute-tasks-by-pages#distribute-tasks-by-pages__smart-mixing) (the `mixer_config` parameter).
 
 - Apart from the general tasks, the pool will contain control or training tasks.
 
-With this method, Toloka will split tasks into suites according to the "smart mixing" settings. When uploading tasks this way, use the [POST /tasks](/docs/api/create-task) request.
+With this method, Toloka will split tasks into suites according to the "smart mixing" settings. When uploading tasks this way, use the [POST /tasks](https://toloka.ai/docs/api/api-reference/#post-/tasks) request.
 
 <Cut title="Sample request">
 
@@ -98,7 +98,7 @@ Choose this method if you:
 - Create task suites yourself.
 - Determine yourself which tasks to include in each suite.
 
-This method won't work if you created a pool using [smart mixing](/docs/guide/distribute-tasks-by-pages#distribute-tasks-by-pages__smart-mixing). When uploading tasks this way, use the [POST /task-suites](/docs/api/create-task-suite) request.
+This method won't work if you created a pool using [smart mixing](/docs/guide/distribute-tasks-by-pages#distribute-tasks-by-pages__smart-mixing). When uploading tasks this way, use the [POST /task-suites](https://toloka.ai/docs/api/api-reference/#post-/task-suites) request.
 
 <Cut title="Sample request">
 

@@ -1,9 +1,0 @@
-**JSON**<br/><br/>Output values at the operation step.<br/><br/>The data in the `output` for a successful operation:
-
-- For the action `USER_BONUS_PERSIST` — `user_bonus_id` (the `ID` of the issued bonus).
-- For the action `TASK_CREATE` — `task_id` (the `ID` of the created task).
-- For the action `TASK_SUITE_CREATE` — `task_suite_id` (the `ID` of the created task suite).<br/><br/>Data in the `output` for a failed operation:
-
-- `code` — Name of the error.
-- `message` — Explanation of how to fix the error.
-- `payload` — Specifies the error reason if `code = VALIDATION_ERROR`.

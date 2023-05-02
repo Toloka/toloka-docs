@@ -1,6 +1,6 @@
 ---
 title: "Number of tasks completed — Toloka API | Toloka documentation"
-date: "2023-04-06T13:56:13.512020"
+date: "2023-05-02T16:13:16.744427"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -24,8 +24,6 @@ import CompletedTable7 from './completed/subcomponents/completed-table-7.mdx'
 import CompletedTable8 from './completed/subcomponents/completed-table-8.mdx'
 
 # Number of tasks completed
-
-## Overview {#about}
 
 You can limit the number of tasks in the pool per Toloker, in order to:
 
@@ -82,28 +80,28 @@ To set a different ban period, change the <Term term="duration-unit"><DurationUn
 
 Parameter | Overview
 ----- | -----
-**configs[]** | **array of objects \| required**<br/><br/>Array of quality control settings.
-**configs[].collector_config** | **object \| required**<br/><br/>Parameters for collecting statistics (for example, the number of tasks skipped in the pool).
-**configs[].collector_config.type** | <CompletedTable1/>
-**configs[].collector_config. parameters** | <CompletedTable2/>
-**configs[].rules** | **object \| required**<br/><br/><ConfigsRules/>
-**configs[].rules.conditions** | **object \| required**<br/><br/>Conditions (for example, 10 task suites skipped in a row). Multiple conditions are combined with the "OR" operator.
-**configs[].rules.conditions.key** | <CompletedTable3/>
-**configs[].rules.conditions. operator** | <CompletedTable4/>
-**configs[].rules.conditions. value** | **integer \| required**<br/><br/>The threshold value of the variable specified in `key`.
-**configs[].rules.action** | **object \| required**<br/><br/>The action to perform if conditions are met (for example, block access to the project).
-**configs[].rules.action.type** | <CompletedTable5/>
-**configs[].rules.action. parameters** | **object \| required**<br/><br/>Action parameters.
-**configs[].rules.action. parameters.scope** | <CompletedTable6/>
-**configs[].rules.action. parameters.skill_id** | **string \| required if**<br/><br/>Required if `type=SET_SKILL_FROM_OUTPUT_FIELD`.<br/><br/>ID of the skill to update as tasks are completed.
-**configs[].rules.action. parameters.from_field** | <CompletedTable7/>
-**configs[].rules.action. parameters.skill_value** | **integer \| required if**<br/><br/>Required if `type=SET_SKILL_FROM_OUTPUT_FIELD`.<br/><br/>A fixed value to assign to the skill (a number from 0 to 100).
-**configs[].rules.action. parameters.delta** | **integer \| required if**<br/><br/>Required if `type=CHANGE_OVERLAP`.<br/><br/>The value determines the amount to change the overlap by.
-**configs[].rules.action. parameters.public_comment** | **string \| required if**<br/><br/>Required if `type=REJECT_ALL_ASSIGNMENTS`.<br/><br/>Comments (the reason for rejecting responses). Available to the requester and the Toloker.
-**configs[].rules.action. parameters.duration_unit** | **string**<br/><br/><DurationUnit/>
-**configs[].rules.action.parameters.duration**  | **integer**<br/><br/><Duration/>
-**configs[].rules. action.parameters. private_comment** | **string**<br/><br/>Comments (the reason for blocking access). Visible only to the requester.
-**configs[].rules.action. parameters.open_pool** | <CompletedTable8/>
+`configs[]` | _array of objects_ \| **required**<br/><br/>Array of quality control settings.
+`configs[].collector_config` | _object_ \| **required**<br/><br/>Parameters for collecting statistics (for example, the number of tasks skipped in the pool).
+`configs[].collector_config.type` | <CompletedTable1/>
+`configs[].collector_config.parameters` | <CompletedTable2/>
+`configs[].rules` | _object_ \| **required**<br/><br/><ConfigsRules/>
+`configs[].rules.conditions` | _object_ \| **required**<br/><br/>Conditions (for example, 10 task suites skipped in a row). Multiple conditions are combined with the "OR" operator.
+`configs[].rules.conditions.key` | <CompletedTable3/>
+`configs[].rules.conditions.operator` | <CompletedTable4/>
+`configs[].rules.conditions.value` | _integer_ \| **required**<br/><br/>The threshold value of the variable specified in `key`.
+`configs[].rules.action` | _object_ \| **required**<br/><br/>The action to perform if conditions are met (for example, block access to the project).
+`configs[].rules.action.type` | <CompletedTable5/>
+`configs[].rules.action.parameters` | _object_ \| **required**<br/><br/>Action parameters.
+`configs[].rules.action.parameters.scope` | <CompletedTable6/>
+`configs[].rules.action.parameters.skill_id` | _string_ \| **required if**<br/><br/>Required if `type=SET_SKILL_FROM_OUTPUT_FIELD`.<br/><br/>ID of the skill to update as tasks are completed.
+`configs[].rules.action.parameters.from_field` | <CompletedTable7/>
+`configs[].rules.action.parameters.skill_value` | _integer_ \| **required if**<br/><br/>Required if `type=SET_SKILL_FROM_OUTPUT_FIELD`.<br/><br/>A fixed value to assign to the skill (a number from 0 to 100).
+`configs[].rules.action.parameters.delta` | _integer_ \| **required if**<br/><br/>Required if `type=CHANGE_OVERLAP`.<br/><br/>The value determines the amount to change the overlap by.
+`configs[].rules.action.parameters.public_comment` | _string_ \| **required if**<br/><br/>Required if `type=REJECT_ALL_ASSIGNMENTS`.<br/><br/>Comments (the reason for rejecting responses). Available to the requester and the Toloker.
+`configs[].rules.action.parameters.duration_unit` | _string_<br/><br/><DurationUnit/>
+`configs[].rules.action.parameters.duration` | _integer_<br/><br/><Duration/>
+`configs[].rules.action.parameters.private_comment` | _string_<br/><br/>Comments (the reason for blocking access). Visible only to the requester.
+`configs[].rules.action.parameters.open_pool` | <CompletedTable8/>
 
 ## See also {#see-also}
 
