@@ -1,6 +1,6 @@
 ---
 title: "Generating API tokens | Toloka documentation"
-date: "2023-02-15T15:15:14.577926"
+date: "2023-05-24T13:46:47.727020"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -10,17 +10,17 @@ docsMenu: "defaultMenu"
 
 # Generating API tokens
 
-After you login to the platform with [single sign-on](/docs/guide/sso/authentication) (SSO) authentication method, you can generate new tokens. You can use them for API requests or for the integration applications. The previously generated tokens will continue to work, but will be deprecated with time.
+After you login to the platform using [social authorization](/docs/guide/access#social-auth) or [single sign-on](/docs/guide/sso/authentication) (SSO) authentication method, you can generate new tokens. You can use them for API requests or for the integration applications. The previously generated tokens will continue to work, but will be deprecated with time.
 
-<Note mode="tip" title="Tip">
+<Note mode="note" title="Note">
 
-You can generate up to **50** tokens. We recommend that you generate and use a separate token for each of the integrations you have.
+If your company uses SSO authentication method, each SSO user can generate their own tokens.
 
 </Note>
 
 ## Generating tokens
 
-1. Go to **Profile → Integrations** or follow [this link](https://platform.toloka.ai/requester/profile/integration). Click **<img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425166901/1675425166901_original_svg.svg" alt="Plus sign" /> Add token**:
+1. Go to **Profile → Integrations** (or click [this link](https://platform.toloka.ai/requester/profile/integration)). Click **<img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425166901/1675425166901_original_svg.svg" alt="Plus sign" /> Add token**:
 
     <Image withBackground imageId="1675426516899" alt="Add token" />
 
@@ -45,6 +45,12 @@ You can generate up to **50** tokens. We recommend that you generate and use a s
     Here you can view the details about your generated tokens: their names, first characters, creation date, and usage information.
 
     Click <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425169249/1675425169249_original_svg.svg" alt="Delete button" /> in the token upper-right area to delete it.
+
+<Note mode="note" title="Note">
+
+You can generate up to **50** tokens.
+
+</Note>
 
 ## Testing tokens
 
@@ -72,8 +78,10 @@ If you entered a correct value, you will receive a response like this with the `
 }
 ```
 
-Now you can use the created API token to send other API requests: get the list of the existing [projects](/docs/api/get-prj-list), [pools](/docs/api/get-pool-list), [upload tasks](/docs/api/upload-tasks), and other requests.
+Now you can use the created API token to send other API requests: get the list of the existing [projects](https://toloka.ai/docs/api/api-reference/#get-/projects), [pools](https://toloka.ai/docs/api/api-reference/#get-/pools), [upload tasks](https://toloka.ai/docs/api/api-reference/#post-/tasks), and other requests.
 
 ## Further reading
 
-- [Toloka API](/docs/api/)
+- [Toloka API](https://toloka.ai/docs/api/api-reference/)
+
+<Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=guide-api-token">Contact support</Button>

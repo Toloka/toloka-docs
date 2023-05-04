@@ -1,6 +1,6 @@
 ---
 title: "Toloka SSO authentication | Toloka documentation"
-date: "2023-03-10T16:13:41.797524"
+date: "2023-05-22T10:42:53.657078"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -36,7 +36,7 @@ Toloka allows its clients to use a single sign-on (SSO) authentication method to
 
 - Toloka gives access to SSO authentication to **enterprise** clients only.
 
-- You need to register as a company, not as an individual, and have a created company in Toloka platform. Please [contact our support team](/docs/guide/troubleshooting/support.md?form-topic1=other) to learn how you can do this.
+- You need to register as a company, not as an individual, and have a created company in Toloka platform. Please [contact our support team](/docs/guide/troubleshooting/support?form-source=guide-sso-authentication&form-topic1=other) to learn how you can do this.
 
 - Currently, Toloka supports only SAML protocol for SSO authentication. OpenID Connect (OIDC) is not supported.
 
@@ -72,22 +72,24 @@ Please note, that any user with full access rights to the account can manage the
 
 If your account has SSO authentication enabled, you can log in using your business email address.
 
-1. Go to the Toloka login page [here](https://passport.toloka.ai/auth/list?origin=toloka_requesters&retpath=https%3A%2F%2Fplatform.toloka.ai%2Fsignup%2Frequester%3FauthRole%3Drequester).
+1. Go to the Toloka login page [here](https://platform.toloka.ai/auth?role=REQUESTER).
 
-1. Click **Login with SSO**:
+1. Click **Continue with SSO**:
 
-    <Image withBackground imageId="1675426511502" alt="Login with SSO" />
+    <Image width="465px" withBackground imageId="c691148ce33feb3df62189d5f82ee460" alt="Continue with SSO" />
 
 1. At the next screen, enter your business email address (for example, `john.smith@microsoft.com`) and click **Log in**:
 
-    <Image withBackground imageId="1675426506805" alt="Enter email and log in" />
+    <Image width="465px" withBackground imageId="d814101992e3ea51df2a65ff58c8ee52" alt="Enter email and log in" />
 
 1. You will be redirected to your company SSO sign-in page. Follow the page steps to sign in using your business email address.
 
 Once you pass the company authentication, you will be redirected back to Toloka.
 
-Now you can create projects, pools, and upload tasks. You can also [generate API tokens](/docs/guide/sso/api-token) for your applications.
+Now you can create projects, pools, and upload tasks. You can also [generate API tokens](/docs/guide/api-token) for your applications.
 
 ## What's next {#what-next}
 
-- [Generate API tokens](/docs/guide/sso/api-token)
+- [Generate API tokens](/docs/guide/api-token)
+
+<Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=guide-sso-authentication">Contact support</Button>

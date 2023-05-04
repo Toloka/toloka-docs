@@ -1,0 +1,62 @@
+---
+title: "Migrating to new social authorization | Toloka documentation"
+date: "2023-05-05T10:12:21.921156"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "defaultMenu"
+---
+
+import RemoveSocialAccount from '../subcomponents/remove-social-account.mdx'
+import MigrateNewAuthList1 from './migrate-new-auth/subcomponents/migrate-new-auth-list-1.mdx'
+import MigrateNewAuthList2 from './migrate-new-auth/subcomponents/migrate-new-auth-list-2.mdx'
+
+# Migrating to new social authorization
+
+If you have previously registered using Yandex ID, you need to confirm it or connect another social account to continue using Toloka. You can connect a single social account or choose to connect them all to your Toloka profile and use any of them to sign in to Toloka.
+
+## Connecting social accounts {#connect-account}
+
+Follow the steps below to connect a new social account to your Toloka profile.
+
+<Tabs tabs={[
+  { title: 'In the popup window', value: <MigrateNewAuthList1/> },
+  { title: 'In the settings', value: <MigrateNewAuthList2/> },
+]}/>
+
+Next time you log in, use the connected social account to do that.
+
+<Note mode="note" title="Note">
+
+Please [contact our support team](/docs/guide/troubleshooting/support?form-source=guide-migrate-new-auth) if you have any issues with social accounts connection.
+
+</Note>
+
+## Logging in to existing account using social authorization {#login-old-auth}
+
+You can log in to your existing Toloka account which you registered with Yandex ID using the new social authorization. For this, choose one of the following options when logging in:
+
+- Choose Yandex social authorization and select the same account which you used when registered.
+
+- Choose Google social authorization if you registered in Yandex ID using it.
+
+- Choose Facebook social authorization if you registered in Yandex ID using it.
+
+You can switch to the old authorization page using the **Use legacy Toloka account** link and [migrate](#connect-account) to the new authorization after that.
+
+## Removing social accounts {#remove-auth}
+
+<RemoveSocialAccount/>
+
+## Updating OAuth tokens {#update-token}
+
+After you migrate to the new authorization scheme, the existing OAuth tokens will continue to work until they expire. After that, you can issue new authentication tokens.
+
+New tokens have no TTL and don't expire, you don't need to reissue them. One account can have up to 50 new OAuth tokens.
+
+[Toloka API](/docs/api/), [Toloka-Kit](/docs/toloka-kit/), and [Toloka Java SDK](https://github.com/toloka/toloka-java-sdk/) support both old and new OAuth tokens.
+
+Refer to the [Generating API tokens](/docs/guide/api-token) section to learn how to issue OAuth tokens.
+
+<Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=guide-migrate-new-auth">Contact support</Button>
