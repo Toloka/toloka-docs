@@ -1,10 +1,7 @@
 ---
 title: "Dynamic overlap | Toloka documentation"
 date: "2023-02-15T15:15:25.995210"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -13,8 +10,7 @@ import FaqDynamicOverlap from '../subcomponents/faq/pool-setup/dynamic-overlap.m
 
 # Dynamic overlap
 
-## Theory {#theory}
-
+## Theory `{#theory}`
 Dynamic overlap lets you change overlap depending on:
 
 - How well the Tolokers do on the task.
@@ -106,8 +102,7 @@ Next, we look at <Formula withoutContainer={true} content="$EPS,$"/>. If the exp
 
 </Cut>
 
-## Practice {#practice}
-
+## Practice `{#practice}`
 Before setting up dynamic overlap, you need to prepare the output data fields.
 
 <Cut title="You can use the following fields:">
@@ -191,8 +186,7 @@ The confidence in the aggregated `OK` response is 96.2. The task is considered c
 
 </Cut>
 
-## Tips and recommendations {#help}
-
+## Tips and recommendations `{#help}`
 - Don't use the [Recompletion of assignments from banned users](/docs/guide/restore-task-overlap) quality control rule together with dynamic overlap. This increases the maximum overlap value.
 
 - Set confidence in the aggregated response at between 70 and 95 percent.
@@ -211,7 +205,7 @@ The confidence in the aggregated `OK` response is 96.2. The task is considered c
 
 - If you edit a required field, the changes apply only to new pools. Existing pools will continue using the previous version of the project.
 
-## What's next {#what-next}
+## What's next `{#what-next}`
 
 - [Adding tasks](/docs/guide/pool) in the pool.
 
@@ -219,17 +213,17 @@ The confidence in the aggregated `OK` response is 96.2. The task is considered c
 
     - Selective [majority vote](/docs/guide/selective-mvote) control.
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [Ways to group tasks in suites](/docs/guide/distribute-tasks-by-pages)
 - [Creating a pool](/docs/guide/pool-main)
 - [Aggregation of results](/docs/guide/result-aggregation)
 
-## For developers {#for-developers}
+## For developers `{#for-developers}`
 
 - [Toloka-Kit: Dynamic overlap setting](/docs/toloka-kit/reference/toloka.client.pool.dynamic_overlap_config.DynamicOverlapConfig)
 
-## Troubleshooting {#troubleshooting}
+## Troubleshooting `{#troubleshooting}`
 
 <FaqChangeOverlap/>
 

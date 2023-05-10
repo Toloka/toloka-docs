@@ -1,10 +1,7 @@
 ---
 title: "Get pool details — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:39.172060"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -22,7 +19,7 @@ _Get the detailed information about the pool with the ID specified in the reques
 
 <Instantiate/>
 
-### 3. Get pool information {#step-three}
+### 3. Get pool information `{#step-three}`
 
 [Find out](/docs/toloka-kit/recipes/get-pools) the ID of the pool for which you want to get the detailed information. Then get this info calling the `get_pool()` method.
 
@@ -37,7 +34,7 @@ _Get the detailed information about the pool with the ID specified in the reques
   textToCopy={`pool = toloka_client.get_pool('36545959')`}
 />
 
-### 4. Print pool private name, status, and last close reason {#step-four}
+### 4. Print pool private name, status, and last close reason `{#step-four}`
 
 The `get_pool()` request will return the [Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
 
@@ -51,7 +48,7 @@ You should get an output with the pool private name, status, and last close reas
 Image classification Status.CLOSED CloseReason.NOT_ENOUGH_BALANCE
 ```
 
-## Complete code: Get pool details {#complete-code}
+## Complete code: Get pool details `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -69,7 +66,7 @@ print(pool.private_name, pool.status, pool.last_close_reason)
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

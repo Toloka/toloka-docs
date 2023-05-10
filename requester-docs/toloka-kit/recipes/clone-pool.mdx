@@ -1,10 +1,7 @@
 ---
 title: "Clone pool — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:39.562614"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -22,7 +19,7 @@ _Create a copy of an existing pool preserving the main parameters._
 
 <Instantiate/>
 
-### 3. Clone pool {#step-three}
+### 3. Clone pool `{#step-three}`
 
 [Find out](/docs/toloka-kit/recipes/get-pools) the ID of the pool which you want to clone. Then clone this pool calling the `clone_pool()` method.
 
@@ -37,7 +34,7 @@ _Create a copy of an existing pool preserving the main parameters._
   textToCopy={`cloned_pool = toloka_client.clone_pool('32267581')`}
 />
 
-### 4. Print created pool ID {#step-four}
+### 4. Print created pool ID `{#step-four}`
 
 The `clone_pool()` request will return the [Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
 
@@ -51,7 +48,7 @@ You should get an output with the created pool ID which looks like this.
 1440972
 ```
 
-## Complete code: Clone pool {#complete-code}
+## Complete code: Clone pool `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -69,7 +66,7 @@ print(cloned_pool.id)
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

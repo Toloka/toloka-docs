@@ -1,10 +1,7 @@
 ---
 title: "Reuse code — Template Builder | Toloka documentation"
 date: "2023-02-10T09:15:29.308320"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -12,8 +9,7 @@ docsMenu: "defaultMenu"
 
 If you need to insert the same or similar code snippets many times, reuse them. This helps make your configuration shorter and makes it easier for you to edit duplicate chunks of code.
 
-## $ref to any snippet inside the configuration {#ref}
-
+## $ref to any snippet inside the configuration `{#ref}`
 You can insert a code snippet from another part of the configuration anywhere inside the configuration. To do this, use the structure `{ "$ref": "path.to.element" }`.
 
 This is useful when you need to insert the same snippet at multiple places in your code. For example, if you need to run the same action using multiple buttons, put this action in a variable and call it using `$ref`.
@@ -50,7 +46,7 @@ The list of components you can link to might be limited. For example, [action.pl
 
 </Note>
 
-## helper.transform {#helper-transform}
+## helper.transform `{#helper-transform}`
 
 The [helper.transform](/docs/template-builder/reference/helper.transform) component lets you convert one array into another. This is useful if you don't know the number of elements in the array, or the array is very big.
 

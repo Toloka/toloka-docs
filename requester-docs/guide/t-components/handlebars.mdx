@@ -1,10 +1,7 @@
 ---
 title: "Expressions and helpers | Toloka documentation"
 date: "2023-02-15T15:15:28.336211"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -23,8 +20,7 @@ Templates look like regular HTML code with [Handlebars expressions](#expressions
 
 The `toloka-handlebars-templates` library is connected to the project by default. It contains a set of components and the `TolokaHandlebarsTask` and `TolokaHandlebarsTaskSuite` classes that are added to the basic [Task](/docs/guide/js/task) and [TaskSuite](/docs/guide/js/tasksuite) classes and extend them.
 
-## Expressions {#expressions}
-
+## Expressions `{#expressions}`
 Expressions are enclosed in double curly brackets. In this case, their value is automatically escaped.
 
 ```html
@@ -65,8 +61,7 @@ id: {{id}}<a href="{{link.url}}">{{link.title}}</a>
 
 Comments are also Handlebars expressions: `{{!comment}}` or `{{!-- comment --}}`.
 
-## Helpers {#helpers}
-
+## Helpers `{#helpers}`
 Helpers are functions that you can use to pass any number of expressions. After processing the result, they return HTML code.
 
 You can register your helper using the `Handlebars.registerHelper` method. Example:
@@ -105,7 +100,7 @@ Before creating your own Handlebars helper, look it up:
 
 </Note>
 
-## Block helpers {#block-helpers}
+## Block helpers `{#block-helpers}`
 
 Block helpers contain the functions for calling a passed block in a new context.
 
@@ -115,8 +110,7 @@ Handlebars already has built-in block helpers: [If](#if), [Unless](#unless), [Ea
 
 [Learn more about block helpers](https://handlebarsjs.com/guide/block-helpers.html#the-with-helper)
 
-### If {#if}
-
+### If `{#if}`
 Block output by condition. If the argument of this helper returns "false," the block inside the helper will not be executed:
 
 ```html
@@ -127,8 +121,7 @@ Block output by condition. If the argument of this helper returns "false," the b
 {{/if}}
 ```
 
-### Unless {#unless}
-
+### Unless `{#unless}`
 The opposite of the `if` helper. Outputs the block if the argument returns "false."
 
 ```html
@@ -139,8 +132,7 @@ The opposite of the `if` helper. Outputs the block if the argument returns "fals
 {{/unless}}
 ```
 
-### Each {#each}
-
+### Each `{#each}`
 The helper for sorting lists. To access the current item in the list, use `this`.
 
 <Note mode="note" title="Note">
@@ -192,8 +184,7 @@ will display links.
 - The links will be numbered.
 - A horizontal separator will be added after each link, except the last one.
 
-### With {#with}
-
+### With `{#with}`
 Rebinds the context.
 
 For example, for code
@@ -217,8 +208,7 @@ ID: {{id}}
 {{/with}}
 ```
 
-## Reusing templates (partials) {#partials}
-
+## Reusing templates (partials) `{#partials}`
 Partials allow you to reuse sections of code. They are regular templates that can be called by other templates. Example:
 
 You need to display the same type of layout in several places:

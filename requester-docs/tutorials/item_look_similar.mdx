@@ -1,35 +1,32 @@
 ---
 title: "Project 3. Does the item found look similar to the original? — Tutorials | Toloka documentation"
 date: "2023-06-26T17:59:26.632449"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tutorialsMenu"
 ---
 
-import TutorialsCreateProjectButton from './subcomponents/create-project-button.mdx'
-import TutorialsChoosePresetImage from './subcomponents/choose-preset-image.mdx'
-import TutorialsAddNameDescription from './subcomponents/add-name-description.mdx'
-import TolokaRequesterSourceInstructions from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instructions.mdx'
-import SaveProject from './subcomponents/save-project.mdx'
-import TolokaRequesterPoolType from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx'
-import TolokaRequesterPoolName from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
-import TolokaRequesterPoolDescription from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
-import TolokaRequesterSourceAudienceSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/audience-settings.mdx'
-import TutorialsLanguageFilter from './subcomponents/language-filter.mdx'
-import TutorialsShockingContent from './subcomponents/shocking-content-filter.mdx'
-import TutorialsPlatformFilter from './subcomponents/platform-filter.mdx'
-import TolokaRequesterSourcePriceSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/price-settings.mdx'
-import TutorialsQualityControl from './subcomponents/quality-control.mdx'
-import TutorialsTimePerTaskSuite from './subcomponents/time-per-task-suite.mdx'
-import TutorialsUploadTasks from './subcomponents/upload-tasks.mdx'
-import TolokaRequesterSourceAddControlTasks from '../subcomponents/toloka-requester-source/id-toloka-requester-source/add-control-tasks.mdx'
-import TutorialsDoubleCheck from './subcomponents/double-check.mdx'
-import TolokaRequesterSourceStepEnabled from '../subcomponents/toloka-requester-source/id-toloka-requester-source/step-enabled.mdx'
-import TolokaRequesterSourcePoolIsReady from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-is-ready.mdx'
-import ItemLookSimilarList1 from './item_look_similar/subcomponents/item_look_similar-list-1.mdx'
-import ItemLookSimilarList2 from './item_look_similar/subcomponents/item_look_similar-list-2.mdx'
+import TutorialsCreateProjectButton from "./subcomponents/create-project-button.mdx";
+import TutorialsChoosePresetImage from "./subcomponents/choose-preset-image.mdx";
+import TutorialsAddNameDescription from "./subcomponents/add-name-description.mdx";
+import TolokaRequesterSourceInstructions from "../subcomponents/toloka-requester-source/id-toloka-requester-source/instructions.mdx";
+import SaveProject from "./subcomponents/save-project.mdx";
+import TolokaRequesterPoolType from "../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx";
+import TolokaRequesterPoolName from "../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx";
+import TolokaRequesterPoolDescription from "../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx";
+import TolokaRequesterSourceAudienceSettings from "../subcomponents/toloka-requester-source/id-toloka-requester-source/audience-settings.mdx";
+import TutorialsLanguageFilter from "./subcomponents/language-filter.mdx";
+import TutorialsShockingContent from "./subcomponents/shocking-content-filter.mdx";
+import TutorialsPlatformFilter from "./subcomponents/platform-filter.mdx";
+import TolokaRequesterSourcePriceSettings from "../subcomponents/toloka-requester-source/id-toloka-requester-source/price-settings.mdx";
+import TutorialsQualityControl from "./subcomponents/quality-control.mdx";
+import TutorialsTimePerTaskSuite from "./subcomponents/time-per-task-suite.mdx";
+import TutorialsUploadTasks from "./subcomponents/upload-tasks.mdx";
+import TolokaRequesterSourceAddControlTasks from "../subcomponents/toloka-requester-source/id-toloka-requester-source/add-control-tasks.mdx";
+import TutorialsDoubleCheck from "./subcomponents/double-check.mdx";
+import TolokaRequesterSourceStepEnabled from "../subcomponents/toloka-requester-source/id-toloka-requester-source/step-enabled.mdx";
+import TolokaRequesterSourcePoolIsReady from "../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-is-ready.mdx";
+import ItemLookSimilarList1 from "./item_look_similar/subcomponents/item_look_similar-list-1.mdx";
+import ItemLookSimilarList2 from "./item_look_similar/subcomponents/item_look_similar-list-2.mdx";
 
 # Project 3. Does the item found look similar to the original?
 
@@ -41,7 +38,7 @@ Since the **Assignment review** option is enabled in the [pool](/docs/glossary#p
 
 </Note>
 
-## Create a project {#create_project}
+## Create a project `{#create_project}`
 
 To create a project, open [Toloka for requesters](https://platform.toloka.ai/auth?role=REQUESTER).
 
@@ -49,43 +46,45 @@ In the interface:
 
 1. Choose a preset:
 
-    1. <TutorialsCreateProjectButton/>
+   1. <TutorialsCreateProjectButton />
 
-        <TutorialsChoosePresetImage/>
+      <TutorialsChoosePresetImage />
 
-    1. Click **Do it myself**.
+   1. Click **Do it myself**.
 
-    1. Select the **Image classification** preset.
+   1. Select the **Image classification** preset.
 
-1. <TutorialsAddNameDescription/>
+1. <TutorialsAddNameDescription />
 
-    1. In the **Name for Tolokers** field, enter `Are these shoes similar to each other?`.
+   1. In the **Name for Tolokers** field, enter `Are these shoes similar to each other?`.
 
-    1. In the **Description for Tolokers** field, enter `Take a look at two pairs of shoes and decide whether they look similar or not.`.
+   1. In the **Description for Tolokers** field, enter `Take a look at two pairs of shoes and decide whether they look similar or not.`.
 
-    1. Optionally add a **Private comment**.
+   1. Optionally add a **Private comment**.
 
 1. Edit the [task interface](/docs/glossary#task-interface) in the editor you selected:
 
-   <Tabs tabs={[
-      { title: 'Template Builder', value: <ItemLookSimilarList1/> },
-      { title: 'HTML/CSS/JS editor', value: <ItemLookSimilarList2/> },
-    ]}/>
+   <Tabs
+     tabs={[
+       { title: "Template Builder", value: <ItemLookSimilarList1 /> },
+       { title: "HTML/CSS/JS editor", value: <ItemLookSimilarList2 /> },
+     ]}
+   />
 
-1. <TolokaRequesterSourceInstructions/>
+1. <TolokaRequesterSourceInstructions />
 
-    Instructions text:
+   Instructions text:
 
-    ```plaintext
-    Take a look at the pictures that show two pairs of shoes. Decide whether they look similar or not.
+   ```plaintext
+   Take a look at the pictures that show two pairs of shoes. Decide whether they look similar or not.
 
-    Shoes are considered similar if they have a similar color, fabric, length, and style.
-    If you don't see a pair of shoes in any of the pictures, click "Yes".
-    ```
+   Shoes are considered similar if they have a similar color, fabric, length, and style.
+   If you don't see a pair of shoes in any of the pictures, click "Yes".
+   ```
 
-1. <SaveProject/>
+1. <SaveProject />
 
-## Create a pool {#create_pool}
+## Create a pool `{#create_pool}`
 
 To create a pool:
 
@@ -93,143 +92,143 @@ To create a pool:
 
 1. Click **Create new pool** on the project page.
 
-1. <TolokaRequesterPoolType/>
+1. <TolokaRequesterPoolType />
 
-1. <TolokaRequesterPoolName/>
+1. <TolokaRequesterPoolName />
 
-1. <TolokaRequesterPoolDescription/>
+1. <TolokaRequesterPoolDescription />
 
 1. Click **Create**.
 
-1. <TolokaRequesterSourceAudienceSettings/>
+1. <TolokaRequesterSourceAudienceSettings />
 
-    1. <TutorialsLanguageFilter/>
+   1. <TutorialsLanguageFilter />
 
-    1. <TutorialsShockingContent/>
+   1. <TutorialsShockingContent />
 
-    1. <TutorialsPlatformFilter/>
+   1. <TutorialsPlatformFilter />
 
-    1. Add another filter. Click **Add filter**.
+   1. Add another filter. Click **Add filter**.
 
-    1. Find the **Skills** block in the list and click **Choose your skill**.
+   1. Find the **Skills** block in the list and click **Choose your skill**.
 
-    1. In the **Skill** field, select **Found_shoes**.
+   1. In the **Skill** field, select **Found_shoes**.
 
-    1. In the **?** field specify `=`.
+   1. In the **?** field specify `=`.
 
-    1. Leave the **Absent** field empty.
+   1. Leave the **Absent** field empty.
 
 1. (optional) In the **Speed/quality balance** section, specify the desired quality level. Improving quality may reduce the speed of task completion because the pool will be available to fewer Tolokers. Learn more in the [Speed/quality balance](/docs/guide/adjust) section.
 
-1. <TolokaRequesterSourcePriceSettings/>
+1. <TolokaRequesterSourcePriceSettings />
 
-    1. In **Price per task suite, $**, set the amount of money to pay per task suite done by one Toloker. For example, `0.01`.
+   1. In **Price per task suite, $**, set the amount of money to pay per task suite done by one Toloker. For example, `0.01`.
 
-    1. Enter `3` in the **Overlap** field.
+   1. Enter `3` in the **Overlap** field.
 
-1. <TutorialsQualityControl/>
+1. <TutorialsQualityControl />
 
-    1. Click **Add a quality control rule**.
+   1. Click **Add a quality control rule**.
 
-    1. Find the **Rules** block in the list and choose **Control tasks**.
+   1. Find the **Rules** block in the list and choose **Control tasks**.
 
-    1. Set a rule for [control tasks](/docs/glossary#control-task): If the **number of responses** to control questions **is greater than or equal to 3** and the **percentage of correct responses** to control questions **is less than 60**, then **restrict the Toloker's access** to the **project for 10 days**. Specify the **Control task** as a reason.
+   1. Set a rule for [control tasks](/docs/glossary#control-task): If the **number of responses** to control questions **is greater than or equal to 3** and the **percentage of correct responses** to control questions **is less than 60**, then **restrict the Toloker's access** to the **project for 10 days**. Specify the **Control task** as a reason.
 
-        <Image width="700px" withBackground imageId="1675426046741" alt="" />
+      <Image width="700px" withBackground imageId="1675426046741" alt="" />
 
-    1. (optional) Add another quality control rule. Click **Add a quality control rule**.
+   1. (optional) Add another quality control rule. Click **Add a quality control rule**.
 
-    1. Find the **Rules** block in the list and choose **Fast responses**.
+   1. Find the **Rules** block in the list and choose **Fast responses**.
 
-    1. In the **Minimum time per task suite** field, specify `60`.
+   1. In the **Minimum time per task suite** field, specify `60`.
 
-    1. Set a rule for fast responses: if the **number of fast responses is more than 1**, then **restrict the Toloker's access** to **the project for 10 days**. Specify **Fast responses** as the reason.
+   1. Set a rule for fast responses: if the **number of fast responses is more than 1**, then **restrict the Toloker's access** to **the project for 10 days**. Specify **Fast responses** as the reason.
 
-        <Image width="700px" withBackground imageId="1675426043351" alt="" />
+      <Image width="700px" withBackground imageId="1675426043351" alt="" />
 
-    Learn more in [Quality control](/docs/guide/control).
+   Learn more in [Quality control](/docs/guide/control).
 
 1. At the **Add optional pool settings** step:
 
-    1. <TutorialsTimePerTaskSuite/>
+   1. <TutorialsTimePerTaskSuite />
 
-        The time should be long enough to read the instructions and wait for task data to load. For example, `300` seconds.
+      The time should be long enough to read the instructions and wait for task data to load. For example, `300` seconds.
 
-1. <TutorialsUploadTasks/>
+1. <TutorialsUploadTasks />
 
-    1. Wait for the pool from project 2 to complete.
+   1. Wait for the pool from project 2 to complete.
 
-    1. Open the pool page from [project 2](/docs/tutorials/find_an_item_in_store).
+   1. Open the pool page from [project 2](/docs/tutorials/find_an_item_in_store).
 
-    1. Click **Download results**.
+   1. Click **Download results**.
 
-        1. In the **Status** block, only leave the **Not checked** option enabled.
+      1. In the **Status** block, only leave the **Not checked** option enabled.
 
-        1. In the **Fields** block, only leave the **response ID** option enabled.
+      1. In the **Fields** block, only leave the **response ID** option enabled.
 
-        1. Disable the **Separate assignments with empty row** option.
+      1. Disable the **Separate assignments with empty row** option.
 
-            <Image width="400px" withBackground imageId="1675426068747" alt="" />
+         <Image width="400px" withBackground imageId="1675426068747" alt="" />
 
-        1. Click **Download results**.
+      1. Click **Download results**.
 
-    1. Prepare a [file](/docs/glossary#tsv) with tasks.
+   1. Prepare a [file](/docs/glossary#tsv) with tasks.
 
-        1. Leave the `INPUT:image` column unchanged.
+      1. Leave the `INPUT:image` column unchanged.
 
-        1. Rename the `OUTPUT:found_link` column to `INPUT:found_link`.
+      1. Rename the `OUTPUT:found_link` column to `INPUT:found_link`.
 
-        1. Rename the `ASSIGNMENT:assignment_id` column to `INPUT:assignment_id`.
+      1. Rename the `ASSIGNMENT:assignment_id` column to `INPUT:assignment_id`.
 
-        1. Delete all the other columns.
+      1. Delete all the other columns.
 
-        1. Save the file.
+      1. Save the file.
 
-    1. Upload the resulting file to the **Are these shoes similar to each other?** pool.
+   1. Upload the resulting file to the **Are these shoes similar to each other?** pool.
 
-        1. Open the **Are these shoes similar to each other?** pool.
+      1. Open the **Are these shoes similar to each other?** pool.
 
-        1. Click **Upload**.
+      1. Click **Upload**.
 
-        1. Click **Drop file here or select**, and upload the file you’ve just made.
+      1. Click **Drop file here or select**, and upload the file you’ve just made.
 
-        1. Choose **Smart mixing**.
+      1. Choose **Smart mixing**.
 
-        1. In the **General tasks** field, specify `9`.
+      1. In the **General tasks** field, specify `9`.
 
-        1. In the **Training tasks** field, specify `0`.
+      1. In the **Training tasks** field, specify `0`.
 
-        1. In the **Control tasks** field, specify `1`.
+      1. In the **Control tasks** field, specify `1`.
 
-        1. Turn on the **Keep task order from uploaded data** option.
+      1. Turn on the **Keep task order from uploaded data** option.
 
-        1. Click **Upload**.
+      1. Click **Upload**.
 
-        1. Click **Combine tasks into suites**.
+      1. Click **Combine tasks into suites**.
 
-1. <TolokaRequesterSourceAddControlTasks/>
+1. <TolokaRequesterSourceAddControlTasks />
 
-    1. In the left column, turn on the **result** option.
+   1. In the left column, turn on the **result** option.
 
-    1. Choose the correct answer to the question.
+   1. Choose the correct answer to the question.
 
-    1. Click **Save and go to next**.
+   1. Click **Save and go to next**.
 
-    1. Click **Are these shoes similar to each other?** to exit [task markup](/docs/glossary#task-markup) mode.
+   1. Click **Are these shoes similar to each other?** to exit [task markup](/docs/glossary#task-markup) mode.
 
-        <Note mode="note" title="Note">
+      <Note mode="note" title="Note">
 
-        In small pools, [control tasks](/docs/guide/troubleshooting/troubleshooting#how-many-control-tasks) should be 5–10% of all tasks. Include different versions of correct responses in equal amounts. See the distribution of responses on the **Edit tasks** page, **Control tasks** tab.
+      In small pools, [control tasks](/docs/guide/troubleshooting/troubleshooting#how-many-control-tasks) should be 5–10% of all tasks. Include different versions of correct responses in equal amounts. See the distribution of responses on the **Edit tasks** page, **Control tasks** tab.
 
-        </Note>
+      </Note>
 
-1. <TutorialsDoubleCheck/>
+1. <TutorialsDoubleCheck />
 
-    <TolokaRequesterSourceStepEnabled/>
+   <TolokaRequesterSourceStepEnabled />
 
-<TolokaRequesterSourcePoolIsReady/>
+<TolokaRequesterSourcePoolIsReady />
 
-## Download the reviewed results {#get_results}
+## Download the reviewed results `{#get_results}`
 
 To get the results:
 
@@ -241,17 +240,17 @@ To get the results:
 
 1. At the top of the page, click **View operations list**.
 
-    <Note mode="note" title="Note">
+   <Note mode="note" title="Note">
 
-    To track the progress, refresh the page from time to time. Aggregation takes from 5 to 20 minutes. You can start designing another project meanwhile.
+   To track the progress, refresh the page from time to time. Aggregation takes from 5 to 20 minutes. You can start designing another project meanwhile.
 
-    </Note>
+   </Note>
 
 1. When the operation is complete, download the file with the results. To do this, click **Download** in the **Files** column.
 
 1. Use the file with the results from [project 2](/docs/tutorials/find_an_item_in_store#upload_file).
 
-## Check the completed tasks {#check_results}
+## Check the completed tasks `{#check_results}`
 
 You can check the results in two ways:
 
@@ -266,17 +265,17 @@ To review the [submitted assignments](/docs/glossary#completed-tasks):
 
 1. Prepare the file:
 
-    1. Add a column named `ACCEPT:verdict` with the review results.
+   1. Add a column named `ACCEPT:verdict` with the review results.
 
-    1. Add a column named `ACCEPT:comment` with comments for Tolokers if responses were rejected. For example, comment on which part of the instructions wasn't followed.
+   1. Add a column named `ACCEPT:comment` with comments for Tolokers if responses were rejected. For example, comment on which part of the instructions wasn't followed.
 
-    1. Rename the `INPUT:assignment_id` column to `ASSIGNMENT:assignment_id`.
+   1. Rename the `INPUT:assignment_id` column to `ASSIGNMENT:assignment_id`.
 
 1. Fill in the `ACCEPT:verdict:` and `ACCEPT:comment:` columns:
 
-    - If the aggregate result of the assignment is OK, put `+` to accept it.
+   - If the aggregate result of the assignment is OK, put `+` to accept it.
 
-    - If the aggregate result of the assignment is incorrect or it doesn't open, put `-` to reject it. Specify the reason for assignment rejection in the `ACCEPT:comment:` field (for example, `The item provided is incorrect or doesn't open.`).
+   - If the aggregate result of the assignment is incorrect or it doesn't open, put `-` to reject it. Specify the reason for assignment rejection in the `ACCEPT:comment:` field (for example, `The item provided is incorrect or doesn't open.`).
 
 1. Delete all the other columns.
 
@@ -298,7 +297,7 @@ To review the [submitted assignments](/docs/glossary#completed-tasks):
 
 1. When setting up the pool in project 2, you enabled the **Recompletion of the rejected tasks** option.
 
-    In this case, the pool automatically reopens and the assignments are reassigned to other Tolokers. When they're completed, send the results for verification. Then download the results, check them, and upload the reviewed results. You can reject assignments as many times as you want to get more accurate results.
+   In this case, the pool automatically reopens and the assignments are reassigned to other Tolokers. When they're completed, send the results for verification. Then download the results, check them, and upload the reviewed results. You can reject assignments as many times as you want to get more accurate results.
 
 #### Review assignments in the pool interface
 
@@ -312,8 +311,16 @@ To check submitted assignments:
 
 1. In the **Status** column, you'll see the buttons for accepting (<img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425175810/1675425175810_original_svg.svg" alt="" />) or rejecting (<img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425174274/1675425174274_original_svg.svg" alt="" />) the completed assignment. If you reject the assignment, enter a comment in the window that opens and click **Done**.
 
-## What's next {#what-next}
+## What's next `{#what-next}`
 
 - Create [Project 4](/docs/tutorials/item_more_similar) to compare matching images.
 
-<Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=tutorials-item-look-similar">Contact support</Button>
+<Button
+  themeColor="light"
+  view="default"
+  size="l"
+  type="link"
+  url="/docs/guide/troubleshooting/support?form-source=tutorials-item-look-similar"
+>
+  Contact support
+</Button>

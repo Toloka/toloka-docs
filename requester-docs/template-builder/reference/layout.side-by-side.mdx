@@ -1,10 +1,7 @@
 ---
 title: "layout.side-by-side — Template Builder | Toloka documentation"
 date: "2023-03-29T11:05:09.506995"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -34,13 +31,13 @@ Differences from the [layout.compare](/docs/template-builder/reference/layout.co
 - You can add buttons which allow hiding the elements. Use it if you need to compare, for example, 5 photos at once and need to choose between two.
 - You can configure only common control elements. You can't add separate buttons under each of the compared element.
 
-## Component properties {#properties}
+## Component properties `{#properties}`
 
 **Name** | **Type** | **Description**
 ----- | ----- | -----
-`type`<span style="color: red">\*</span> | "layout.side-by-side" | Set component type.
-`controls`<span style="color: red">\*</span> | _view_ | Components that let Tolokers perform the required actions.<br/><br/>For example: [field.checkbox-group](/docs/template-builder/reference/field.checkbox-group) or [field.button-radio-group](/docs/template-builder/reference/field.button-radio-group).
-`items`<span style="color: red">\*</span> | _array_ | An array of data blocks.
+`type`<span style={{color: "red"}}>\*</span> | "layout.side-by-side" | Set component type.
+`controls`<span style={{color: "red"}}>\*</span> | _view_ | Components that let Tolokers perform the required actions.<br/><br/>For example: [field.checkbox-group](/docs/template-builder/reference/field.checkbox-group) or [field.button-radio-group](/docs/template-builder/reference/field.button-radio-group).
+`items`<span style={{color: "red"}}>\*</span> | _array_ | An array of data blocks.
 `items[]` | _view_ | A component for data output or input. For example, [view.image](/docs/template-builder/reference/view.image).
 `minItemWidth` | _number_ | The minimum width of a data block, at least 400 pixels.
 `validation` | _condition_ | Validation based on condition.

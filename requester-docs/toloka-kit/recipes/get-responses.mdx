@@ -1,10 +1,7 @@
 ---
 title: "Get list of responses — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:41:31.591020"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -22,7 +19,7 @@ _Get all the Toloker responses present in the pool with the ID specified in the 
 
 <Instantiate/>
 
-### 3. Print responses IDs and statuses {#step-three}
+### 3. Print responses IDs and statuses `{#step-three}`
 
 Iterate through all the Toloker responses present in the pool with the ID specified in the request calling the `get_assignments()` method.
 
@@ -47,7 +44,7 @@ You should get an output with the response IDs and statuses which looks like thi
 000015fccc--63bfc4ea99e537000bac4015 Status.SUBMITTED
 ```
 
-## Complete code: Get list of responses {#complete-code}
+## Complete code: Get list of responses `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -65,7 +62,7 @@ for assignment in toloka_client.get_assignments(pool_id='1085757'):
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

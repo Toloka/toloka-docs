@@ -1,10 +1,7 @@
 ---
 title: "Filter Tolokers — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:36.620350"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -32,7 +29,7 @@ _Use pool filters to specify the Toloker groups you want to pick your tasks._
 
 <Instantiate/>
 
-### 3. Specify pool parameters {#step-three}
+### 3. Specify pool parameters `{#step-three}`
 
 First, specify the parameters you want your pool to have. You can choose your own values or have your own set of the pool parameters. Refer to the [Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class page for more details.
 
@@ -62,7 +59,7 @@ First, specify the parameters you want your pool to have. You can choose your ow
       <br/>        (toloka.filter.<Term term="Gender"><Gender/></Term>=='MALE') &
       <br/>        (toloka.filter.<Term term="Languages"><Languages/></Term>.in_(['EN','DE','FR'])) &
       <br/>        (toloka.filter.<Term term="OSFamily"><OSFamily/></Term>=='IOS') &
-      <br/>        (toloka.filter.<Term term="Skill"><Skill/></Term>('12648')>70)
+      <br/>        (toloka.filter.<Term term="Skill"><Skill/></Term>('12648')&gt;70)
       <br/>    )
       <br/>)
     </HighlightChildren>
@@ -123,7 +120,7 @@ The image below shows how the selected filters look in the pool interface.
 
 </Cut>
 
-### 4. Create pool on platform {#step-four}
+### 4. Create pool on platform `{#step-four}`
 
 This actually creates a pool in Toloka.
 
@@ -138,7 +135,7 @@ This actually creates a pool in Toloka.
   textToCopy={`new_pool = toloka_client.create_pool(new_pool)`}
 />
 
-### 5. Print created pool ID {#step-five}
+### 5. Print created pool ID `{#step-five}`
 
 The `create_pool()` request will return the [Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
 
@@ -152,7 +149,7 @@ You should get an output with the created pool ID which looks like this.
 1443815
 ```
 
-## Complete code: Filter Tolokers {#complete-code}
+## Complete code: Filter Tolokers `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -198,7 +195,7 @@ print(new_pool.id)
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

@@ -1,10 +1,7 @@
 ---
 title: "Archive pool — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:37.371612"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -22,7 +19,7 @@ _Move the pool which you no longer use into archive._
 
 <Instantiate/>
 
-### 3. Archive pool {#step-three}
+### 3. Archive pool `{#step-three}`
 
 [Find out](/docs/toloka-kit/recipes/get-pools) the ID of the pool you want to archive. Then call the `archive_pool()` method.
 
@@ -37,7 +34,7 @@ _Move the pool which you no longer use into archive._
   textToCopy={`archived_pool = toloka_client.archive_pool('1443992')`}
 />
 
-### 4. Print pool ID and status {#step-four}
+### 4. Print pool ID and status `{#step-four}`
 
 The `archive_pool()` request will return the [Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
 
@@ -51,7 +48,7 @@ You should get an output with the pool ID and the updated status which looks lik
 1443992 Status.ARCHIVED
 ```
 
-## Complete code: Archive pool {#complete-code}
+## Complete code: Archive pool `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -69,7 +66,7 @@ print(archived_pool.id, archived_pool.status)
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

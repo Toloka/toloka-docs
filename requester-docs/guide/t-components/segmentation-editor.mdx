@@ -1,10 +1,7 @@
 ---
 title: "Text segmentation editor | Toloka documentation"
 date: "2023-02-15T15:15:28.956703"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -27,8 +24,7 @@ The text segmentation editor doesn't work on mobile devices.
 
 To make your task available only to Tolokers who log in via a browser, add the **Client** filter and select **Toloka web version**. This way, Tolokers won't see the task in the mobile app but will be able to log in using a mobile browser. To prevent Tolokers from accessing the task through mobile browsers, add another filter: **Device type** = **Personal computer**.
 
-## Text editor features {#what}
-
+## Text editor features `{#what}`
 The editor supports 10 colors for [category tags](#adding_editor). You can add more than 10 tags, but then the colors will repeat. The first of the specified tags is active.
 
 Figure 1. Example of work in the editor
@@ -41,7 +37,7 @@ Think about [decomposing the task](/docs/guide/solution-architecture). The more 
 
 </Note>
 
-## How do I set it up? {#whats-inside}
+## How do I set it up? `{#whats-inside}`
 
 To enable Tolokers to use the editor, import the necessary libraries and add the JS code and CSS styles.
 
@@ -184,8 +180,7 @@ If you're using an empty template:
 
 </Cut>
 
-## Tag descriptions {#adding_editor}
-
+## Tag descriptions `{#adding_editor}`
 The editor uses category tags for text segmentation. Each tag has three parameters:
 
 - tag_color — The color the text will be repainted. The editor supports 10 colors for tags.
@@ -270,7 +265,7 @@ var tagsData = [
 
 </Cut>
 
-## Input and output data {#data-platforms}
+## Input and output data `{#data-platforms}`
 
 The editor's output fields need to be marked as optional because JS checks that at least one word is selected and has a tag. The Toloker can't submit a task that doesn't contain markup.
 
@@ -290,7 +285,7 @@ Don't change the input and output field names, otherwise the editor won't work.
 
 </Note>
 
-## How do I work with the editor? {#how-to}
+## How do I work with the editor? `{#how-to}`
 
 Use this information for the task instructions. Let the Tolokers understand everything at once:
 

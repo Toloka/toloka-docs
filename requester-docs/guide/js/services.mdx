@@ -1,10 +1,7 @@
 ---
 title: "Services for specific purposes | Toloka documentation"
 date: "2023-02-15T15:15:29.400019"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -17,28 +14,23 @@ The task interface configuration guide describes the features of the HTML/JS/CSS
 
 </Note>
 
-## Geolocation {#geolocation}
-
+## Geolocation `{#geolocation}`
 Gets the GPS coordinates of the Toloker, if they are available. In the [TaskSuite](/docs/guide/tasksuite) and [Task](/docs/guide/task) classes, it is available via `this.geolocation`.
 
 Methods:
 
-### getCurrentPosition(success, error, options) {#getcurrentposition}
-
+### getCurrentPosition(success, error, options) `{#getcurrentposition}`
 Duplicates the [navigator.geolocation.getCurrentPosition()](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition) functionality.
 
-### watchPosition(success, error, options) {#watchposition}
-
+### watchPosition(success, error, options) `{#watchposition}`
 Duplicates the [navigator.geolocation.watchPosition()](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition) functionality.
 
-## Storage {#storage}
-
+## Storage `{#storage}`
 Storing data on the client. In the [TaskSuite](/docs/guide/tasksuite) and [Task](/docs/guide/task) classes, it is available via `this.storage`.
 
 Methods:
 
-### setItem(key, value, expiration) {#setitem}
-
+### setItem(key, value, expiration) `{#setitem}`
 Save the value under a specific key. Parameters:
 
 - `key`
@@ -47,36 +39,29 @@ Save the value under a specific key. Parameters:
 
 - `expiration` — Storage date (`Date` or `number`). The default value is 24 hours.
 
-### getItem(key) {#getitem}
-
+### getItem(key) `{#getitem}`
 Returns the value by key.
 
-### removeItem(key) {#removeitem}
-
+### removeItem(key) `{#removeitem}`
 Deletes a value by key.
 
-## TaskInterface {#taskinterface}
-
+## TaskInterface `{#taskinterface}`
 [Task interface](/docs/glossary#task-interface). In the [TaskSuite](/docs/guide/tasksuite) and [Task](/docs/guide/task) classes, it is available via `this.taskInterface`.
 
 Methods:
 
-### showInstructionPopup() {#showinstructionpopup}
-
+### showInstructionPopup() `{#showinstructionpopup}`
 Opens the [instructions](/docs/guide/instruction).
 
-### toggleFullscreen() {#togglefullscreen}
-
+### toggleFullscreen() `{#togglefullscreen}`
 Expands the task to full screen if it is collapsed. Otherwise minimizes the task.
 
-## Hotkey {#hotkey}
-
+## Hotkey `{#hotkey}`
 Lets you subscribe to pressed keys. In the [TaskSuite](/docs/guide/tasksuite) and [Task](/docs/guide/task) classes, it is available via `this.hotkey`.
 
 Method:
 
-### on(event, handler, context) {#on}
-
+### on(event, handler, context) `{#on}`
 Subscribes the passed handler to a specific event. Tracks events from the `event` parameter. Parameters:
 
 - `event`:
@@ -93,18 +78,15 @@ Subscribes the passed handler to a specific event. Tracks events from the `event
 
 - `context` — `this` for the handler.
 
-### reset() {#reset}
-
+### reset() `{#reset}`
 Cancels all previously made links and reinitializes the service.
 
-## ClientInfo {#clientInfo}
-
+## ClientInfo `{#clientInfo}`
 Gets information about the device on which tasks are performed. In the [TaskSuite](/docs/guide/tasksuite) and [Task](/docs/guide/task) classes, it is available via `this.clientInfo`.
 
 Method:
 
-### getClientInfo() {#getclientinfo}
-
+### getClientInfo() `{#getclientinfo}`
 Returns information about the device if the Toloker is using the mobile app:
 
 - `deviceModel` — Mobile device model.

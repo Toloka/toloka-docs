@@ -1,10 +1,7 @@
 ---
 title: "Recompletion of assignments from banned users | Toloka documentation"
 date: "2023-03-02T19:39:11.324173"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -29,7 +26,7 @@ Don't use this rule in [pools](/docs/glossary#pool) with [dynamic overlap](/docs
 
 </Note>
 
-## When to use {#when-use}
+## When to use `{#when-use}`
 
 <Note mode="restriction" title="Alert">
 
@@ -59,8 +56,7 @@ Don't use it if:
 - You don't want the final budget for pool labeling to exceed the initial budget.
 - You set up [dynamic overlap](/docs/guide/dynamic-overlap). This increases the maximum overlap value.
 
-## How to configure {#rule}
-
+## How to configure `{#rule}`
 <Note mode="restriction" title="Alert">
 
 All fields in this rule are required. If you don't fill in at least one of them, you won't be able to save the rule.
@@ -72,8 +68,7 @@ All fields in this rule are required. If you don't fill in at least one of them,
 **If** | <RestoreTaskOverlapTable1/>
 **then** | <RestoreTaskOverlapTable2/>
 
-## Examples {#examples}
-
+## Examples `{#examples}`
 Task: classify photos for a dataset across different categories. If a Toloker is banned by a quality control rule (for example, [fast resposes](/docs/guide/quick-answers)) or no longer matches the skill, their responses aren't counted and their tasks are sent for re-completion to another Toloker.
 
 <Tabs tabs={[
@@ -81,12 +76,12 @@ Task: classify photos for a dataset across different categories. If a Toloker is
   { title: 'Incorrect settings', value: <RestoreTaskOverlapList2/> },
 ]}/>
 
-## For developers {#for-developers}
+## For developers `{#for-developers}`
 
 - [Toloka API: Recompletion of assignments](/docs/api/restore-task-overlap)
 - [Toloka-Kit: UsersAssessment collector class](/docs/toloka-kit/reference/toloka.client.collectors.UsersAssessment)
 
-## Troubleshooting {#troubleshooting}
+## Troubleshooting `{#troubleshooting}`
 
 <FaqOverlap/>
 

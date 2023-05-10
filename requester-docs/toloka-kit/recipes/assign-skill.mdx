@@ -1,10 +1,7 @@
 ---
 title: "Assign skill to Toloker — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:37.087559"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -22,7 +19,7 @@ _Assign an existing skill to Tolokers and set its level._
 
 <Instantiate/>
 
-### 3. Assign skill to Toloker {#step-three}
+### 3. Assign skill to Toloker `{#step-three}`
 
 <CodeCopy
   isSmall
@@ -43,7 +40,7 @@ user_skill = toloka_client.set_user_skill(
 )`}
 />
 
-### 4. Print created skill information {#step-four}
+### 4. Print created skill information `{#step-four}`
 
 The `set_user_skill()` request will return the [UserSkill](/docs/toloka-kit/reference/toloka.client.user_skill.UserSkill) class object. You can use its attributes to print the information you need.
 
@@ -57,7 +54,7 @@ You should get an output with the ID of the skill-Toloker pair (this allows [rem
 54132692 12648 1ad097faba0eff85a04fe30bc04d53db 50
 ```
 
-## Complete code: Create skill {#complete-code}
+## Complete code: Create skill `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -79,7 +76,7 @@ print(user_skill.id, user_skill.skill_id, user_skill.user_id, user_skill.value)
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

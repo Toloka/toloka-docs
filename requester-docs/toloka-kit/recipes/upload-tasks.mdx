@@ -1,10 +1,7 @@
 ---
 title: "Upload tasks — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:39.407037"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -26,7 +23,7 @@ _Create and upload control and general tasks to the pool._
 
 <Instantiate/>
 
-### 3. Create control task {#step-three}
+### 3. Create control task `{#step-three}`
 
 In this recipe we create a control task first. The main difference between a control and general task in Toloka is that a control task has a known answer to it. For this answer, the `known_solutions` parameter of the [Task](/docs/toloka-kit/reference/toloka.client.task.Task) class object is used.
 
@@ -76,7 +73,7 @@ In the platform, we create the control task using the `create_task()` method.
   textToCopy={`toloka_client.create_task(control_task)`}
 />
 
-### 4. Specify image URLs and form tasks {#step-four}
+### 4. Specify image URLs and form tasks `{#step-four}`
 
 Now, let's enumerate the URLs of the images in an array. We are going to use these images for our general tasks.
 
@@ -104,7 +101,7 @@ Populate tasks with images, use the same `pool_id` as at [step 3](#step-three).
             for url in image_urls]`}
 />
 
-### 5. Upload tasks to Toloka {#step-five}
+### 5. Upload tasks to Toloka `{#step-five}`
 
 This actually uploads tasks to Toloka.
 
@@ -127,7 +124,7 @@ The task uploading progress will look like this.
 100%|████████████████████████████████████████████| 100/100 [00:01<00:00, 52.35it/s]
 ```
 
-### 6. Print number of created tasks {#step-six}
+### 6. Print number of created tasks `{#step-six}`
 
 The `create_tasks()` request will return the [TaskBatchCreateResult](/docs/toloka-kit/reference/toloka.client.batch_create_results.TaskBatchCreateResult) class object. You can use its attributes to print the information you need.
 
@@ -141,7 +138,7 @@ You should get an output with the number of the created tasks which looks like t
 3
 ```
 
-## Complete code: Upload tasks {#complete-code}
+## Complete code: Upload tasks `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -181,7 +178,7 @@ print(len(result.items))
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

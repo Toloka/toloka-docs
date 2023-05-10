@@ -1,10 +1,7 @@
 ---
 title: "Adding a training | Toloka documentation"
 date: "2023-02-15T15:15:17.885489"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -46,7 +43,7 @@ If the training pool functionality doesn't meet your needs, create a main pool a
 
 </Note>
 
-## How does it work? {#how-it-works}
+## How does it work? `{#how-it-works}`
 
 1. You create a training pool. A [training skill](/docs/glossary#training-skill) is created automatically. Newly created training pools use a skill that was already created.
 
@@ -74,7 +71,7 @@ If the training pool functionality doesn't meet your needs, create a main pool a
 
     </Note>
 
-## How do I create a training pool? {#create-train}
+## How do I create a training pool? `{#create-train}`
 
 1. Open the [project](/docs/glossary#project) page.
 
@@ -88,7 +85,7 @@ If the training pool functionality doesn't meet your needs, create a main pool a
 
 1. Click **Save training**.
 
-## After you created a training pool {#after-creating}
+## After you created a training pool `{#after-creating}`
 
 1. [Upload tasks to the pool and mark them up](/docs/guide/pool) (add correct responses and hints). All tasks must be [training](/docs/glossary#training-task). You can upload tasks that are already marked up.
 
@@ -106,8 +103,7 @@ If the training pool functionality doesn't meet your needs, create a main pool a
 
     - **Level required** — Percentage of correct responses in training tasks (from 5 to 100) required to be admitted to the main pool. The calculation is based on the first response the Toloker gave in each task.
 
-## Training settings {#parameters}
-
+## Training settings `{#parameters}`
 **Field** | **Overview**
 ----- | -----
 **Guidelines** | [Instructions](/docs/glossary#instructions) for the training tasks.<br/><br/>By default, the [project instructions](/docs/guide/instruction) are displayed. To write separate instructions for training, deselect the **Use project instructions** box.
@@ -120,7 +116,7 @@ If the training pool functionality doesn't meet your needs, create a main pool a
 **Complete passing** | If this option is enabled, the Toloker must complete all the tasks in this pool to pass the training.<br/><br/>You can load more training tasks than required for passing the training and specify the number of pages required for setting the skill and accessing the linked pools.
 **Required for passing** | The number of assignments the Toloker must complete to pass the training.
 
-## Repeated training {#repeat-train}
+## Repeated training `{#repeat-train}`
 
 After completing the training (successfully or not), the Toloker is assigned a [training skill](/docs/glossary#training-skill), and the value is fixed.
 
@@ -190,7 +186,7 @@ Tolokers will get access only to those pools for which their skill value is high
 
 </Cut>
 
-## How to archive a training pool {#archive-train}
+## How to archive a training pool `{#archive-train}`
 
 A pool with the “Archived” status can't be started or edited.
 
@@ -206,22 +202,21 @@ To archive a training pool manually, click **<img src="https://tlkfrontprod.azur
 
 If these buttons don't work, make sure that all the main pools that the training pool is linked to are [sent to the archive](/docs/guide/pool-archive).
 
-## What's next {#what_next}
-
+## What's next `{#what_next}`
 - [Top up your account](/docs/guide/refill).
 - [Start the pool](/docs/guide/pool-run-and-stop).
 - To view the training statistics, go to the [Skills](https://platform.toloka.ai/requester/quality) page and choose a skill named `<project name> - training`.
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [Ways to group tasks in suites](/docs/guide/distribute-tasks-by-pages)
 
-## For developers {#for-developers}
+## For developers `{#for-developers}`
 
 - [Toloka API: Training](https://toloka.ai/docs/api/api-reference/#tag--training)
 - [Toloka-Kit: Creating training](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_training)
 
-## Troubleshooting {#troubleshooting}
+## Troubleshooting `{#troubleshooting}`
 
 <Cut title="Setting up training">
 

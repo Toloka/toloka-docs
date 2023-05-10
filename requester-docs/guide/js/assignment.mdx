@@ -1,10 +1,7 @@
 ---
 title: "Assignment class | Toloka documentation"
 date: "2023-02-15T15:15:29.337031"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -23,8 +20,7 @@ The `Assignment` base class is available in the `window.TolokaAssignment` global
 
 Methods:
 
-## constructor(options) {#constructor}
-
+## constructor(options) `{#constructor}`
 Task list base class builder.
 
 Parameters:
@@ -35,24 +31,20 @@ Parameters:
 
 - `options.workspaceOptions` — Toloker's workspace initialization parameters.
 
-## destroy() {#destroy}
-
+## destroy() `{#destroy}`
 Calls [TaskSuite.destroy()](/docs/guide/tasksuite#destroy), removes all template elements from the DOM, closes the messaging channel, stops hotkey polling and location detection, calls `onDestroy`.
 
-## initHotkeys() {#inithotkeys}
-
+## initHotkeys() `{#inithotkeys}`
 Hotkey handler initializer:
 
 - Resets all hotkeys ([hotkeys.reset](/docs/guide/services#reset)).
 
 - Calls [submit()](#submit) when the Enter key is pressed.
 
-## getId() {#getid}
-
+## getId() `{#getid}`
 Returns `assignmentId` as a string or `undefined` if you are debugging the task in preview mode or using pool preview.
 
-## getOptions() {#getoptions}
-
+## getOptions() `{#getoptions}`
 Returns an object with a set of parameters passed to the [constructor()](#constructor) method during initialization.
 
 <Cut title="Example">
@@ -67,8 +59,7 @@ let outputSpec = this.getOptions().specs.output_spec,
 
 </Cut>
 
-## getSandboxChannel() {#getsandboxchannel}
-
+## getSandboxChannel() `{#getsandboxchannel}`
 Returns the link to an active messaging channel between the parent page and the task frame. If there is no channel, the method creates it.
 
 <Cut title="Example">
@@ -83,16 +74,13 @@ this.getSandboxChannel().triggerOut('task:interface:show:instruction');
 
 </Cut>
 
-## getTaskSuite() {#gettasksuite}
-
+## getTaskSuite() `{#gettasksuite}`
 Returns a link to a [TaskSuite](/docs/guide/tasksuite) instance.
 
-## getTaskSuiteContainer() {#gettasksuitecontainer}
-
+## getTaskSuiteContainer() `{#gettasksuitecontainer}`
 Returns `document.body` for the Toloker's workspace.
 
-## getWorkspaceOptions() {#getworkspaceoptions}
-
+## getWorkspaceOptions() `{#getworkspaceoptions}`
 Returns an object with the Toloker's workspace settings.
 
 The most important settings:
@@ -107,12 +95,10 @@ The most important settings:
 
 - `origin` — Parent page FQDN.
 
-## pause() {#pause}
-
+## pause() `{#pause}`
 Pauses task execution (for example, upon a `request:assignment:pause` command from the main page), calls `onPause`.
 
-## provideSolutions(strategy) {#providesolutions}
-
+## provideSolutions(strategy) `{#providesolutions}`
 Collects answers to all tasks ([TolokaTaskSuite.getSolutions()](/docs/guide/tasksuite#getSolutions)), validates them ([TolokaTaskSuite.validate()](/docs/guide/tasksuite#validate)). If validation is successful, calls `strategy`, otherwise sends an `assignment:validation:fail` request and an object with a list of errors returned by the validator. Parameter:
 
 - `strategy` — A function that sends a message about sending results (`assignment:submit`), a response array, and an `assignmentId` to the parent page.
@@ -141,15 +127,13 @@ provideSolutions(strategy = function(solutions) {
 
 </Cut>
 
-## resume() {#resume}
-
+## resume() `{#resume}`
 Continues task execution, calls `onResume` and [start()](#start).
 
-## skip() {#skip}
-
+## skip() `{#skip}`
 Lets you skip the current task, the same as clicking the **Skip** button.
 
-## start() {#start}
+## start() `{#start}`
 
 Performs all the necessary actions when starting a task suite:
 
@@ -159,8 +143,7 @@ Performs all the necessary actions when starting a task suite:
 
 - Calls `onStart`.
 
-## submit() {#submit}
-
+## submit() `{#submit}`
 Collects, validates and sends completed tasks by calling [provideSolutions](#providesolutions).
 
 <Cut title="Example">

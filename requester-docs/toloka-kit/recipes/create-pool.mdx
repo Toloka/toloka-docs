@@ -1,10 +1,7 @@
 ---
 title: "Create pool — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:39.781430"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -23,7 +20,7 @@ _Create a pool in a project in Toloka._
 
 <Instantiate/>
 
-### 3. Specify pool parameters {#step-three}
+### 3. Specify pool parameters `{#step-three}`
 
 First, specify the parameters you want your pool to have. In this example, we use the following pool settings:
 
@@ -75,7 +72,7 @@ All the code manipulations at step 3 occur in your device memory. The data will 
 
 </Note>
 
-### 4. Create pool on platform {#step-four}
+### 4. Create pool on platform `{#step-four}`
 
 This actually creates a pool in Toloka.
 
@@ -90,7 +87,7 @@ This actually creates a pool in Toloka.
   textToCopy={`new_pool = toloka_client.create_pool(new_pool)`}
 />
 
-### 5. Print created pool ID {#step-five}
+### 5. Print created pool ID `{#step-five}`
 
 The `create_pool()` request will return the [Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
 
@@ -104,7 +101,7 @@ You should get an output with the created pool ID which looks like this.
 1440972
 ```
 
-## Complete code: Create pool {#complete-code}
+## Complete code: Create pool `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -134,7 +131,7 @@ print(new_pool.id)
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

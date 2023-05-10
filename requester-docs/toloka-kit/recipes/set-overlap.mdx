@@ -1,10 +1,7 @@
 ---
 title: "Set overlap — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:38.415566"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -30,7 +27,7 @@ _Set overlap for tasks at pool, task suite, and task levels._
 
 <Instantiate/>
 
-### 3. Set overlap at pool level {#step-three}
+### 3. Set overlap at pool level `{#step-three}`
 
 Create a pool and set the default overlap value for all the tasks which will be uploaded without additionally specifying it. Use the `default_overlap_for_new_task_suites` value of the [Defaults](/docs/toloka-kit/reference/toloka.client.pool.Pool.Defaults) class for that.
 
@@ -63,7 +60,7 @@ Refer to the [Create pool](/docs/toloka-kit/recipes/create-pool) recipe for more
 new_pool = toloka_client.create_pool(new_pool)`}
 />
 
-### 4. Set overlap at task suite level {#step-four}
+### 4. Set overlap at task suite level `{#step-four}`
 
 Another way to set overlap is specify it when creating a task suite. Use the `overlap` parameter of the [TaskSuite](/docs/toloka-kit/reference/toloka.client.task_suite.TaskSuite) class object to set a specific overlap value to the tasks inside a task suite.
 
@@ -96,7 +93,7 @@ new_task_suite = toloka.task_suite.TaskSuite(pool_id=new_pool.id, tasks=tasks, o
 toloka_client.create_task_suite(new_task_suite)`}
 />
 
-### 5. Set overlap at task level {#step-five}
+### 5. Set overlap at task level `{#step-five}`
 
 Now, create and upload two tasks: one without the `overlap` parameter (it will be equal to the default value, set at [step 3](#step-three)) and one with the `overlap` parameter set to `2`.
 
@@ -131,7 +128,7 @@ The task uploading progress will look like this.
 100%|████████████████████████████████████████████| 100/100 [00:01<00:00, 52.35it/s]
 ```
 
-### 6. Print tasks with different overlap {#step-six}
+### 6. Print tasks with different overlap `{#step-six}`
 
 Use the `get_task_suites()` request to get the information about the tasks in the [task suite you created](#step-four). For information about [tasks uploaded without grouping](#step-five), use the `get_tasks()` method. Use the attributes of the returned objects ([TaskSuite](/docs/toloka-kit/reference/toloka.client.task_suite.TaskSuite) and [Task](/docs/toloka-kit/reference/toloka.client.task.Task) accordingly) to print the information you need.
 
@@ -164,7 +161,7 @@ aaf9b554-cb3b-477e-ba48-d2581004a7ac 3
 0000160899--63c5414799e537000bb21141 2
 ```
 
-## Complete code: Set overlap {#complete-code}
+## Complete code: Set overlap `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -217,7 +214,7 @@ for task in toloka_client.get_tasks(pool_id=new_pool.id):
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

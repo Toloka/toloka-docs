@@ -1,10 +1,7 @@
 ---
 title: "Additional helpers | Toloka documentation"
 date: "2023-02-15T15:15:28.389776"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -19,8 +16,7 @@ The task interface configuration guide describes the features of the HTML/JS/CSS
 
 Helpers are functions that you can use to pass any number of expressions. After processing the result, they return HTML code.
 
-## Concatenation {#concat}
-
+## Concatenation `{#concat}`
 To concatenate two or more strings into a single string, use the `{{concat "<string 1> " ... " <string _n_>"}}` helper. Example:
 
 ```html
@@ -29,16 +25,14 @@ To concatenate two or more strings into a single string, use the `{{concat "<str
 {{/each}}
 ```
 
-## Object operations {#object}
-
+## Object operations `{#object}`
 To get the key value from an object, use the `{{get <object> "<key>"}}` helper. Example:
 
 ```html
 {{get inputValuesObj "key"}}
 ```
 
-## Logical operations and comparisons {#equal}
-
+## Logical operations and comparisons `{#equal}`
 Logical operations and comparison operations return either `true` or `false`.
 
 To apply a logical operation to boolean values, use the helpers:
@@ -61,8 +55,7 @@ To compare numeric values, use the helpers:
 
     </Note>
 
-## Recording output data field values in JSON {#js_fields}
-
+## Recording output data field values in JSON `{#js_fields}`
 The values of multiple components can be written to the [output data field](/docs/guide/incoming) in JSON format.
 
 To do this, specify the output data field in the `name` attribute of the component and add a unique ID separated by a dot.

@@ -1,10 +1,7 @@
 ---
 title: "Sample project recipe — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:38.702658"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -24,7 +21,7 @@ Before you start using the Toloka-Kit library in your own Python code, you need 
 
 To use Toloka-Kit for data labeling, follow the steps below.
 
-### First steps {#first-step}
+### First steps `{#first-step}`
 
 First, you need to import the necessary libraries into your Python script and set up logging:
 
@@ -341,8 +338,7 @@ new_pool.filter = toloka.filter.Languages.in_('EN')
 
 </Note>
 
-#### Quality control rules {#quality_control_rules}
-
+#### Quality control rules `{#quality_control_rules}`
 [Quality control rules](/docs/guide/check-performers) regulate task completion and Toloker access.
 
 Quality control lets you get more accurate responses and restrict access to tasks for cheating users. All rules work independently. Learn more about [settting up quality control](/docs/guide/qa-pool-settings).
@@ -695,8 +691,7 @@ An `assignment` value is one Toloker's responses to all the tasks on a task suit
 
 If a Toloker completed several task suites, then `toloka_client.get_assignments_df` will contain several `assignment` values.
 
-### Aggregation {#aggregation}
-
+### Aggregation `{#aggregation}`
 You should run the [results aggregation](/docs/guide/result-aggregation) only if you set the overlap for the tasks to 2 or higher.
 
 The [majority vote](/docs/guide/mvote) method is a quality control method based on matching responses from the majority of Tolokers who complete the same task. For example, if 2 out of 3 Tolokers selected the `cat` label, then the final label for this task will be `cat`.

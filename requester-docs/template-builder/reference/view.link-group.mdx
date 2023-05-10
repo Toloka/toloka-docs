@@ -1,10 +1,7 @@
 ---
 title: "view.link-group — Template Builder | Toloka documentation"
 date: "2023-03-29T11:05:05.985725"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -18,18 +15,18 @@ This only groups links, unlike [view.group](/docs/template-builder/reference/vie
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/2IwCYi-S3xPSL9">View example</Button>
 
-## Component properties {#properties}
+## Component properties `{#properties}`
 
 **Name** | **Type** | **Description**
 ----- | ----- | -----
-`type`<span style="color: red">\*</span> | "view.link-group" | Set component type.
+`type`<span style={{color: "red"}}>\*</span> | "view.link-group" | Set component type.
 `label` | _string_ | Label above the component.
 `hint` | _string_ | Hint text.
-`links`<span style="color: red">\*</span> | _array_ | Array of links that make up a group.
+`links`<span style={{color: "red"}}>\*</span> | _array_ | Array of links that make up a group.
 `links[]` | _object_ | Link parameters.
-`links[].content`<span style="color: red">\*</span> | _string_ | Link text displayed to a Toloker. Unviewed links are blue and underlined, and clicked links are purple.
+`links[].content`<span style={{color: "red"}}>\*</span> | _string_ | Link text displayed to a Toloker. Unviewed links are blue and underlined, and clicked links are purple.
 `links[].theme` | _string_ | Defines the appearance of the link. If you specify `"theme": "primary"`, it's a button, otherwise it's a text link.
-`links[].url`<span style="color: red">\*</span> | _string_ | Link address. Inserts a link with the search query when [helper. search-query](/docs/template-builder/reference/helper.search-query) is used.
+`links[].url`<span style={{color: "red"}}>\*</span> | _string_ | Link address. Inserts a link with the search query when [helper. search-query](/docs/template-builder/reference/helper.search-query) is used.
 `validation` | _condition_ | Validation based on condition.
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=template-builder-reference-view-link-group">Contact support</Button>

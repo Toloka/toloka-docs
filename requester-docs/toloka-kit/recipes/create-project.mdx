@@ -1,10 +1,7 @@
 ---
 title: "Create project — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:40.018816"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -33,7 +30,7 @@ Normally, it's more convenient to create a project using [Toloka interface](/doc
 
 <Instantiate/>
 
-### 3. Configure task interface {#step-three}
+### 3. Configure task interface `{#step-three}`
 
 Configure the task interface using the `view_spec` parameter of the [TaskSpec](/docs/toloka-kit/reference/toloka.client.project.task_spec.TaskSpec) class, define input and output data. See comments in the code below and the [Task interface](/docs/guide/spec) section for more information.
 
@@ -121,7 +118,7 @@ All the code manipulations at steps 3–4 occur in your device memory. The data 
 
 </Note>
 
-### 4. Create project object {#step-four}
+### 4. Create project object `{#step-four}`
 
 Specify a public name, description, and instructions that the Tolokers will see.
 
@@ -131,9 +128,9 @@ Specify a public name, description, and instructions that the Tolokers will see.
   code={
     <HighlightChildren language="python">
       new_project = toloka.<Term term="Project"><Project/></Term>(
-      <br/>    public_name = '&lt;your_project_public_name>',
-      <br/>    public_description = '&lt;your_project_public_description>',
-      <br/>    public_instructions = '&lt;your_project_instructions_for_Tolokers>',
+      <br/>    public_name = '&lt;your_project_public_name&gt;',
+      <br/>    public_description = '&lt;your_project_public_description&gt;',
+      <br/>    public_instructions = '&lt;your_project_instructions_for_Tolokers&gt;',
       <br/>    task_spec = task_spec
       <br/>)
     </HighlightChildren>
@@ -146,7 +143,7 @@ Specify a public name, description, and instructions that the Tolokers will see.
 )`}
 />
 
-### 5. Create project on platform {#step-five}
+### 5. Create project on platform `{#step-five}`
 
 This actually creates a project in Toloka.
 
@@ -161,7 +158,7 @@ This actually creates a project in Toloka.
   textToCopy={`new_project = toloka_client.create_project(new_project)`}
 />
 
-### 6. Print created project ID {#step-six}
+### 6. Print created project ID `{#step-six}`
 
 The `create_project()` request will return the [Project](/docs/toloka-kit/reference/toloka.client.project.Project) class object. You can use its attributes to print the information you need.
 
@@ -175,7 +172,7 @@ You should get an output with the created project ID which looks like this.
 120798
 ```
 
-## Complete code: Create project {#complete-code}
+## Complete code: Create project `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -231,7 +228,7 @@ print(new_project.id)
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

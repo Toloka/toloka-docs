@@ -1,10 +1,7 @@
 ---
 title: "field.image-annotation — Template Builder | Toloka documentation"
 date: "2023-05-26T15:52:01.705587"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -24,21 +21,21 @@ You can disable labeling using the `disabled` property. For example, use this if
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/rDD6zD5S3tyzeb">View example</Button>
 
-## Component properties {#properties}
+## Component properties `{#properties}`
 
 **Name** | **Type** | **Description**
 ----- | ----- | -----
-`type`<span style="color: red">\*</span> | "field.image-annotation" | Set component type.
-`data`<span style="color: red">\*</span> | _writable_ | <TolokaTbSourceDataWithValues/>
+`type`<span style={{color: "red"}}>\*</span> | "field.image-annotation" | Set component type.
+`data`<span style={{color: "red"}}>\*</span> | _writable_ | <TolokaTbSourceDataWithValues/>
 `label` | _string_ | Label above the component.
 `disabled` | _boolean_ | <FieldImageAnnotationTable1/>
 `fullHeight` | _boolean_ | If `true`, the element takes up all the vertical free space. The element is set to a minimum height of 400 pixels.
 `hint` | _string_ | Hint text.
-`image`<span style="color: red">\*</span> | _string_ | The image you want to select areas in.
+`image`<span style={{color: "red"}}>\*</span> | _string_ | The image you want to select areas in.
 `labels` | _array_ | Labels for classifying areas.<br/><br/>Each array element creates a button in the interface for selecting a label.<br/><br/>If you use labels, you need to add at least two.
 `labels[]` | _object_ | <FieldImageAnnotationTable2/>
-`labels[].label`<span style="color: red">\*</span> | _string_ | Text on the label selection button.
-`labels[].value`<span style="color: red">\*</span> | _string_ | A value that corresponds to the label and is sent in the output.
+`labels[].label`<span style={{color: "red"}}>\*</span> | _string_ | Text on the label selection button.
+`labels[].value`<span style={{color: "red"}}>\*</span> | _string_ | A value that corresponds to the label and is sent in the output.
 `minWidth` | _number_ | Minimum width of the element in pixels. Takes priority over `maxWidth`.
 `ratio` | _array_ | An array of two numbers that sets the relative dimensions of the sides: width (first number) to height (second number).<br/><br/>Not valid if `"fullHeight": true`.
 `ratio[]` | _number_ | Relative size of one side.

@@ -1,10 +1,7 @@
 ---
 title: "Reviewing assignments automatically — Template Builder | Toloka documentation"
 date: "2023-02-10T09:15:29.211993"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -14,8 +11,7 @@ Define clear conditions for your task to ensure that you get the desired output.
 
 In [Toloka](https://toloka.ai/), you can use conditions to automate the manual review process. For example, a Toloker can't submit an assignment before they meet your required conditions.
 
-## Review features {#features}
-
+## Review features `{#features}`
 - What can be reviewed:
     - Output data in [fields.*](/docs/template-builder/reference/fields);
     - Input data in [views.*](/docs/template-builder/reference/views) and [layouts.*](/docs/template-builder/reference/layouts).
@@ -27,7 +23,7 @@ In [Toloka](https://toloka.ai/), you can use conditions to automate the manual r
 - A link to the reviewed data is specified in the `data` property.
 - Some components don't have the `data` property, and you can only access them from the `validation` property of the parent component (for example, [condition.played](/docs/template-builder/reference/condition.played) and [condition.played-fully](/docs/template-builder/reference/condition.played-fully)).
 
-## Making a field required {#condition-required}
+## Making a field required `{#condition-required}`
 
 To check that the data is filled in, add the [condition.required](/docs/template-builder/reference/condition.required) component.
 
@@ -35,7 +31,7 @@ In this example, a Toloker must fill in the text field, otherwise the “Submit�
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/VaKRkzm-3ttEim">View example</Button>
 
-## Comparing values {#condition-equals-or-not}
+## Comparing values `{#condition-equals-or-not}`
 
 #### Checking that values are equal
 
@@ -61,7 +57,7 @@ In this example, the component checks that the values `animal` and `human` are p
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/hKrpY1DO3xEBoC">View example</Button>
 
-## Checking multiple conditions {#multiple-conditions}
+## Checking multiple conditions `{#multiple-conditions}`
 
 #### Meeting all conditions
 
@@ -79,16 +75,14 @@ In this example, a Toloker has to perform at least one of the two actions: to se
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/UGnbki-73xPDHm">View example</Button>
 
-## Checking conditions for specific components {#component}
-
+## Checking conditions for specific components `{#component}`
 Some conditions work only with certain [components](/docs/glossary#component). For example, [condition.link-opened](/docs/template-builder/reference/condition.link-opened) works only with `view.link`.
 
 In this example, a Toloker has to click the link in the interface, otherwise the “Submit” button won't work.
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/DNok6Tun3ttEpZ">View example</Button>
 
-## Can't find the desired component? {#schema}
-
+## Can't find the desired component? `{#schema}`
 In the [list of conditions](/docs/template-builder/reference/conditions), you can see all the available components with the name `conditions.*`. If you can't find the desired component in the list or want to use a preset [configuration](/docs/glossary#configuration), define a review in the [JSON Schema](https://json-schema.org/learn/getting-started-step-by-step.html) format using [condition.schema](/docs/template-builder/reference/condition.schema).
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=template-builder-best-practices-conditions">Contact support</Button>

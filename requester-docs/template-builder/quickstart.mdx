@@ -1,10 +1,7 @@
 ---
 title: "Quick start — Template Builder | Toloka documentation"
 date: "2023-02-09T18:49:31.641166"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -15,7 +12,7 @@ import QuickstartList2 from './quickstart/subcomponents/quickstart-list-2.mdx'
 
 In this section, you will learn how to use Template Builder. As an example, you will create a task interface for a picture with multiple response options.
 
-## Before you start {#before-begin}
+## Before you start `{#before-begin}`
 
 Open Template Builder.
 
@@ -24,12 +21,10 @@ Open Template Builder.
   { title: 'In the Template Builder sandbox', value: <QuickstartList2/> },
 ]}/>
 
-## Theory {#theory}
-
+## Theory `{#theory}`
 We recommend that you read these sections to get familiar with Template Builder:
 
-### Template Builder interface {#interface}
-
+### Template Builder interface `{#interface}`
 The Template Builder interface consists of four vertical panels:
 
 1. **Configuration**: for editing the task interface in JSON format. It supports auto-completion with hints and preset code snippets.
@@ -52,8 +47,7 @@ For some Toloka presets, the visual editor is available. Refer to the [Visual ed
 
 If you opened Template Builder in Toloka, click <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425155125/1675425155125_original_svg.svg" alt="" /> in the upper-right corner to switch to full-screen mode. If you opened the Template Builder sandbox, it is already displayed full-screen.
 
-### Shortcuts {#editor}
-
+### Shortcuts `{#editor}`
 To view all the available commands and shortcuts, click **F1**. Main shortcuts:
 
 - **Tab**: Get auto-completion hints.
@@ -65,7 +59,7 @@ If you use [VS Code](https://code.visualstudio.com/), the editor will be familia
 
 </Note>
 
-### If you're not familiar with JSON {#json-guide}
+### If you're not familiar with JSON `{#json-guide}`
 
 If you haven't written in JSON before, you might have some difficulties like unclosed brackets or missing commas and quotation marks.
 
@@ -131,7 +125,7 @@ If you have more questions, see the documentation on the [json.org](https://www.
 
 </Cut>
 
-### Configuration format {#config-format}
+### Configuration format `{#config-format}`
 
 ```json
 {
@@ -176,8 +170,7 @@ There are 3 elements at the top configuration level:
     }
     ```
 
-## Practice {#practice}
-
+## Practice `{#practice}`
 In this section, you will create a task interface for an image. The interface will consist of three elements: a title with the task description, a picture, and a group of three buttons with answer options.
 
 <Note mode="tip" title="Tip">
@@ -186,7 +179,7 @@ If something goes wrong during the creation process, you can [view the correct c
 
 </Note>
 
-### Creating a task interface {#create-interface}
+### Creating a task interface `{#create-interface}`
 
 1. The configuration editor will display an empty code template with two blocks: `view` and `plugins`.
 
@@ -301,7 +294,7 @@ To view the list of snippets for a property, delete the property value, position
 
 </Note>
 
-### Adding shortcuts {#add-hotkeys}
+### Adding shortcuts `{#add-hotkeys}`
 
 To help Tolokers complete your tasks faster, add shortcuts to the interface.
 
@@ -415,7 +408,7 @@ Shortcuts are not part of visual components. They are added via a separate plugi
 
 </Cut>
 
-### Configuring validation {#validation}
+### Configuring validation `{#validation}`
 
 Validation lets you check the values that Tolokers enter. The next part of the code in this section checks that Tolokers select one of the options.
 
@@ -436,13 +429,13 @@ Go to the **Preview** panel and try submitting the task without selecting any of
 
 Learn more about automated checks in [Reviewing assignments automatically](/docs/template-builder/best-practices/conditions).
 
-### Checking the data specifications {#check-specs}
+### Checking the data specifications `{#check-specs}`
 
 After you configure the task interface, check the input and output data specifications in the **Data specification** field. It's located right below the field for choosing an editor. Specifications are generated automatically, but errors are possible.
 
 After that, you can continue creating or editing the project in Toloka.
 
-## What's next {#what-next}
+## What's next `{#what-next}`
 
 - See [instructions](/docs/template-builder/operations/all) for popular tasks.
 - Check the [list of available components](/docs/template-builder/reference/).

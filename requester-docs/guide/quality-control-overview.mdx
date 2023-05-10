@@ -1,10 +1,7 @@
 ---
 title: "Overview | Toloka documentation"
 date: "2023-02-15T15:15:15.224479"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -47,11 +44,11 @@ import FaqSpeedUpCompletion from '../subcomponents/faq/pool-setup/speed-up-compl
 
 To improve quality of answers, you must [select the audience](/docs/guide/filters) you need and [train](/docs/guide/train) it.
 
-<img style="max-width: 100%;" src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425180213/1675425180213_original_svg.svg" alt="" />
+<img style={{maxWidth: "100%"}} src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425180213/1675425180213_original_svg.svg" alt="" />
 
-## Selecting the audience {#audience-select}
+## Selecting the audience `{#audience-select}`
 
-### Filters {#audience-filters}
+### Filters `{#audience-filters}`
 
 - [Demographics](/docs/guide/filters#filter-user-profile) (age, gender, education, languages, region, citizenship).
 
@@ -67,21 +64,21 @@ To improve quality of answers, you must [select the audience](/docs/guide/filter
 
 </Cut>
 
-### Training and onboarding {#audience-training}
+### Training and onboarding `{#audience-training}`
 
 - Correct answers + hints.
 
 - High scores continue on to the [exam](/docs/glossary#exam).
 
-### Exam {#audience-exam}
+### Exam `{#audience-exam}`
 
 - Scored by % correct answers.
 
 - Best scores grant access to paid tasks.
 
-## Multi-level quality checks {#quality-checks}
+## Multi-level quality checks `{#quality-checks}`
 
-### Quality control {#quality-control}
+### Quality control `{#quality-control}`
 
 - [Overlap](/docs/guide/overlap-faq) (including dynamic overlap).
 
@@ -91,7 +88,7 @@ To improve quality of answers, you must [select the audience](/docs/guide/filter
 
 - Validation by other annotators.
 
-### [Anti-fraud system](https://toloka.ai/anti-fraud/) {#anti-fraud}
+### [Anti-fraud system](https://toloka.ai/anti-fraud/) `{#anti-fraud}`
 
 - Platform-wide ban for fraudulent Tolokers.
 
@@ -99,7 +96,7 @@ To improve quality of answers, you must [select the audience](/docs/guide/filter
 
 - Multilayer technologies to detect and prevent all types of fraud.
 
-### Protect your project {#protection-from-cheaters}
+### Protect your project `{#protection-from-cheaters}`
 
 <TolokaRequesterSourceAntiFraud/>
 
@@ -131,11 +128,11 @@ A Toloker who skips 2 task suites in a row is restricted from accessing the pool
 
 </Cut>
 
-## Obtaining quality results after data labeling {#obtaining-results}
+## Obtaining quality results after data labeling `{#obtaining-results}`
 
 <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425177697/1675425177697_original_svg.svg" alt="" />
 
-### Aggregating results {#aggregating-results}
+### Aggregating results `{#aggregating-results}`
 
 - Using [majority vote](/docs/guide/mvote).
 
@@ -143,7 +140,7 @@ A Toloker who skips 2 task suites in a row is restricted from accessing the pool
 
 - [By skill level](/docs/guide/result-aggregation#aggr-by-skill).
 
-### Evaluating metrics {#evaluating-metrics}
+### Evaluating metrics `{#evaluating-metrics}`
 
 - Accuracy/completeness/F1/MCC, etc.
 
@@ -151,7 +148,7 @@ A Toloker who skips 2 task suites in a row is restricted from accessing the pool
 
 - Confidence.
 
-### Reassigning tasks {#reassigning-tasks}
+### Reassigning tasks `{#reassigning-tasks}`
 
 - If the submitted task is rejected.
 
@@ -159,9 +156,9 @@ A Toloker who skips 2 task suites in a row is restricted from accessing the pool
 
 - If answers from banned Tolokers are thrown out.
 
-## Main project scenarios {#main-project-scenarios}
+## Main project scenarios `{#main-project-scenarios}`
 
-### Validate results {#validate-results}
+### Validate results `{#validate-results}`
 
 - [Control tasks](/docs/guide/goldenset) — set the Toloker’s skill level based on answers in control tasks and exclude Tolokers who give the wrong answers.
 
@@ -169,29 +166,29 @@ A Toloker who skips 2 task suites in a row is restricted from accessing the pool
 
 - Manually check results — evaluate Tolokers by the number of accepted and rejected tasks.
 
-### Diversify the audience {#diversify-audience}
+### Diversify the audience `{#diversify-audience}`
 
 - [Earnings](/docs/guide/income) — limit the earnings per person in your [pool](/docs/glossary#pool) in 24 hours.
 
 - Completed tasks — limit the number of tasks per person in your pool in 24 hours.
 
-### Prevent random clicking and bots {#random-clicking}
+### Prevent random clicking and bots `{#random-clicking}`
 
 - [Fast responses](/docs/guide/quick-answers) — monitor the minimum time to complete a [task suite](/docs/glossary#task-suite).
 
 - [Skipped assignments](/docs/guide/skipped-assignments) — exclude Tolokers who skip too many tasks in a row.
 
-### Redo certain tasks {#redo-tasks}
+### Redo certain tasks `{#redo-tasks}`
 
 - [Re-assign tasks](/docs/guide/restore-task-overlap) completed by someone who was banned — if a Toloker gets banned, all their completed tasks can be automatically assigned to other people.
 
 - [Rejected and accepted task processing](/docs/guide/reassessment-after-accepting) — set the rules for assigning rejected tasks to other people.
 
-## Technologies for quality management {#quality-management-tech}
+## Technologies for quality management `{#quality-management-tech}`
 
 Transform the crowd into computing power with advanced technologies for quality management.
 
-### Multiple quality control methods {#multiple-quality}
+### Multiple quality control methods `{#multiple-quality}`
 
 Toloka offers different approaches to achieve the best quality for each [project](/docs/glossary#project).
 
@@ -205,7 +202,7 @@ Toloka offers different approaches to achieve the best quality for each [project
 
 - Platform-wide anti-fraud system.
 
-### Adaptive selection of Tolokers {#adaptive-selection}
+### Adaptive selection of Tolokers `{#adaptive-selection}`
 
 Multi-stage selection of a distributed crowd.
 
@@ -213,7 +210,7 @@ Multi-stage selection of a distributed crowd.
 
 - [Training](/docs/guide/train), [exams](/docs/guide/how-to-use-exams), and retraining to find Tolokers for your exact task.
 
-### Smart matching mechanisms {#smart-matching}
+### Smart matching mechanisms `{#smart-matching}`
 
 Patent-pending matching system that honors the preferences of requesters and Tolokers for mutual benefit.
 
@@ -221,7 +218,7 @@ Patent-pending matching system that honors the preferences of requesters and To
 
 - Offer Tolokers personalized recommendations of interesting projects they will enjoy.
 
-### Autolabeling & verification (on demand) {#autolabeling-verification}
+### Autolabeling & verification (on demand) `{#autolabeling-verification}`
 
 Autolabeling and pretrained models with quality control built in.
 
@@ -229,17 +226,16 @@ Autolabeling and pretrained models with quality control built in.
 
 - Human in the loop workflows.
 
-## What's next {#what_next}
-
+## What's next `{#what_next}`
 - [Set up quality control](/docs/guide/qa-pool-settings).
 - [Add tasks](/docs/guide/pool) to the pool.
 - [Start the pool](/docs/guide/pool-run-and-stop).
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [Crowdsourcing concepts: Quality control](https://toloka.ai/knowledgebase/quality-control/)
 
-## Troubleshooting {#troubleshooting}
+## Troubleshooting `{#troubleshooting}`
 
 <Cut title="Setting up quality control">
 

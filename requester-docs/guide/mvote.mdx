@@ -1,10 +1,7 @@
 ---
 title: "Majority vote | Toloka documentation"
 date: "2023-06-26T17:55:35.520388"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -53,7 +50,7 @@ The number of tasks per suite doesn't affect how the rule works. Responses are e
 
 </Cut>
 
-## When to use {#when-use}
+## When to use `{#when-use}`
 
 Use the **Majority vote** rule if:
 
@@ -68,8 +65,7 @@ Don't use it if:
 - Tolokers need to select objects in a photo.
 - Tasks don't have a correct or incorrect response. For example: “Which image do you like best?” or “Choose the page design option that you like best”.
 
-## Usage recommendations {#advice}
-
+## Usage recommendations `{#advice}`
 - Don't use too many response options or too many questions in the task.
 
     The more options you have, the lower the probability that **majority vote** will be calculated correctly.
@@ -96,8 +92,7 @@ Don't use it if:
 
     - Tolokers need to transcribe text or select objects in a photo, or other tasks where the Tolokers can't possibly provide the same responses.
 
-## Rule settings {#rule}
-
+## Rule settings `{#rule}`
 <Note mode="warning" title="Warning">
 
 In this rule, all fields are required except **Recent tasks to use**. If you don't fill in at least one of them, you won't be able to save the rule.
@@ -111,8 +106,7 @@ In this rule, all fields are required except **Recent tasks to use**. If you don
 **If** | <MvoteTable1/>
 **then** | <MvoteTable2/>
 
-## Examples of rules {#examples}
-
+## Examples of rules `{#examples}`
 Examples are provided for simple [classification](/docs/tutorials/image-classification). There are 10 tasks per suite.
 
 <Note mode="warning" title="Warning">
@@ -143,16 +137,16 @@ The assignments submitted by banned Tolokers will be taken into account if they 
   { title: 'Incorrect settings', value: <MvoteList7/> },
 ]}/>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How to check Tolokers: quality control rules](/docs/guide/check-performers)
 
-## For developers {#for-developers}
+## For developers `{#for-developers}`
 
 - [Toloka API: Majority vote](/docs/api/mv)
 - [Toloka-Kit: MajorityVote collector class](/docs/toloka-kit/reference/toloka.client.collectors.MajorityVote)
 
-## Troubleshooting {#troubleshooting}
+## Troubleshooting `{#troubleshooting}`
 
 <FaqSkillForEveryPool/>
 

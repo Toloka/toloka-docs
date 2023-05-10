@@ -1,10 +1,7 @@
 ---
 title: "Get list of pools — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:37.026737"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -22,7 +19,7 @@ _Get the list of the pools with the `CLOSED` status in your project._
 
 <Instantiate/>
 
-### 3. List pools {#step-three}
+### 3. List pools `{#step-three}`
 
 [Find out](/docs/toloka-kit/recipes/get-projects) the ID of the project for which you want to get all the pools with the `CLOSED` status. Then iterate through all the pools calling the `get_pools()` method.
 
@@ -46,7 +43,7 @@ You should get an output that contains the IDs of the pools, their statuses, and
 36756115 Status.CLOSED Pool 2
 ```
 
-## Complete code: Get list of pools {#complete-code}
+## Complete code: Get list of pools `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -64,7 +61,7 @@ for pool in toloka_client.get_pools(project_id='118252', status='CLOSED'):
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

@@ -1,10 +1,7 @@
 ---
 title: "How does Toloka work? | Toloka documentation"
 date: "2023-02-15T15:15:17.571987"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -57,7 +54,7 @@ No matter what type of data you intend to collect as a requester, you always nee
 
 <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425181143/1675425181143_original_svg.svg" alt="Toloka three main entities" />
 
-## Project {#project}
+## Project `{#project}`
 
 A project in Toloka represents a specific data labeling goal. This could be to moderate comments, to classify images, to transcribe audio recordings, or something else.
 
@@ -65,7 +62,7 @@ All tasks in a project share the same interface and instructions for Tolokers. Y
 
 To learn about projects and settings, see [Project](/docs/guide/project).
 
-## Pool {#pool}
+## Pool `{#pool}`
 
 A pool represents a set of data to label in a project. You can use the pool settings to select Tolokers, set the price for tasks, and add various quality control rules.
 
@@ -73,7 +70,7 @@ Having multiple pools in the same project is useful because you can reuse the sa
 
 To learn about pools and their settings, see [Pool](/docs/guide/pool-main).
 
-## Task {#task}
+## Task `{#task}`
 
 A task is created for a single data unit that requires labeling, like a photo to classify, or a comment to review.
 
@@ -83,21 +80,20 @@ You upload task data to Toloka in a file. Toloka currently supports XLSX, TSV, a
 
 To learn about tasks, supported task files, and their structure, see [Task](/docs/guide/pool_csv).
 
-## Task suite {#tasks-page}
+## Task suite `{#tasks-page}`
 
 A task suite is a group of several tasks given to a Toloker to submit all at once. For example, you can show four images on the same page.
 
 To learn about task suites and how to use them, see [Task suite](/docs/guide/distribute-tasks-by-pages).
 
-## What does it look like for Tolokers? {#appearance}
-
+## What does it look like for Tolokers? `{#appearance}`
 Tolokers have their own version of the platform with a browser interface and a mobile app. They see a list of tasks they can choose from. Your tasks become available to Tolokers when you launch a pool.
 
 Note that Tolokers don't know the difference between projects, pools, tasks, or task suites — and they don't need to. They usually refer to all of it as “tasks”.
 
 To learn more, see [How Tolokers see pools](/docs/guide/pool-main).
 
-## Toloka API and SDK {#api}
+## Toloka API and SDK `{#api}`
 
 If you need to post similar tasks on a regular basis, you can automate working with Toloka by using the [Toloka API](https://toloka.ai/docs/api/api-reference/) and [Python SDK](/docs/toloka-kit/python-sdk).
 
@@ -105,14 +101,14 @@ The Toloka API has some features that are not yet available in the web interface
 
 You can use the Python SDK to integrate the Toloka API into applications written in Python. It already contains all the API classes and methods and there's no need to write new functions for them.
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [Crowdsourcing concepts](https://toloka.ai/knowledgebase/crowdsourcing-concepts/)
 - [What tasks can't be placed in Toloka?](/docs/guide/unwanted)
 - [Common mistakes made by requesters](/docs/guide/frequent-customer-errors)
 - [Where to store media files](/docs/guide/cloud-storage)
 
-## Troubleshooting {#troubleshooting}
+## Troubleshooting `{#troubleshooting}`
 
 <FaqTaskSuitable/>
 

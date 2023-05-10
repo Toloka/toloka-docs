@@ -1,10 +1,7 @@
 ---
 title: "Datasets — Toloka ML platform | Toloka documentation"
 date: "2023-02-20T16:24:21.619386"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "mlMenu"
 ---
 
@@ -34,7 +31,7 @@ Dataset methods:
 * `update()`: Saving dataset parameter changes without files, no new version is created.
 * `new_version()`: Saving file changes and creating a new version. The version number is increased automatically.
 
-## Before you start {#before-you-begin}
+## Before you start `{#before-you-begin}`
 
 Enable the modules and add your token:
 
@@ -45,8 +42,7 @@ from pulsar.datasets import Dataset, DatasetFile
 client = PulsarClient(token='your_token')
 ```
 
-## Adding a dataset {#create}
-
+## Adding a dataset `{#create}`
 Create an object named `Dataset` and add the dataset to the Toloka ML platform database using the `add()` method:
 
 ```py
@@ -81,7 +77,7 @@ dataset = Dataset(
 dataset.uid = client.datasets.add(dataset)
 ```
 
-## Adding files {#add-files}
+## Adding files `{#add-files}`
 
 You can add and update files only when a new version is created. This way, you can refer to files in a specific dataset version without fearing that they might disappear.
 
@@ -92,8 +88,7 @@ dataset.files.append(
 dataset.version = client.datasets.new_version(dataset)
 ```
 
-## Getting a dataset {#get}
-
+## Getting a dataset `{#get}`
 By default, the `get()` method returns the latest dataset version. To get a specific dataset version, pass the `version` parameter to the method:
 
 ```py
@@ -107,8 +102,7 @@ To get the path to a dataset file, use the `get_file()` method:
 train = dataset_v1.get_file('data/train')
 ```
 
-## Updating a dataset {#update}
-
+## Updating a dataset `{#update}`
 The `update()` method only updates the parameters of the version received:
 
 ```py
@@ -121,8 +115,7 @@ dataset_v1.info = {
 client.datasets.update(dataset_v1)
 ```
 
-## Datasets in runs {#runs}
-
+## Datasets in runs `{#runs}`
 Runs contain the `dataset` field which requires an object of the `DatasetInfo` class that is not equal to `Dataset`. The `Dataset` object contains all details of the dataset and its files. The `DatasetInfo` object contains minimum information for a link to the dataset for a sample or run.
 
 ```py

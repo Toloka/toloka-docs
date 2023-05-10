@@ -1,10 +1,7 @@
 ---
 title: "view.video — Template Builder | Toloka documentation"
 date: "2023-03-29T11:05:05.457056"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -16,11 +13,11 @@ The player is a rectangular block with a frame and buttons to control the video.
 
 The video resolution does not affect the size of the block — the video will fit into the block and will not be cropped.
 
-## Component properties {#properties}
+## Component properties `{#properties}`
 
 **Name** | **Type** | **Description**
 ----- | ----- | -----
-`type`<span style="color: red">\*</span> | "view.video" | Set component type.
+`type`<span style={{color: "red"}}>\*</span> | "view.video" | Set component type.
 `label` | _string_ | Label above the component.
 `fullHeight` | _boolean_ | If `true`, the element takes up all the vertical free space. The element is set to a minimum height of 400 pixels.
 `hint` | _string_ | Hint text.
@@ -28,7 +25,7 @@ The video resolution does not affect the size of the block — the video will fi
 `minWidth` | _number_ | Minimum width of the element in pixels. Takes priority over `maxWidth`.
 `ratio` | _array_ | The aspect ratio of the video block. An array of two numbers: the first sets the width of the block and the second sets the height.
 `ratio[]` | _number_ | Relative size of one side.
-`url`<span style="color: red">\*</span> | _string_ | Link to the video file.
+`url`<span style={{color: "red"}}>\*</span> | _string_ | Link to the video file.
 `validation` | _condition_ | Validation based on condition.
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=template-builder-reference-view-video">Contact support</Button>

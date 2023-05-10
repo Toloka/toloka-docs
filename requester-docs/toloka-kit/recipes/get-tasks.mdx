@@ -1,10 +1,7 @@
 ---
 title: "Get list of tasks — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:39.612264"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -22,7 +19,7 @@ _Get all the tasks in the pool with the ID specified in the request._
 
 <Instantiate/>
 
-### 3. Print task IDs, creation date, and overlap {#step-three}
+### 3. Print task IDs, creation date, and overlap `{#step-three}`
 
 [Find out](/docs/toloka-kit/recipes/get-pools) the ID of the pool you want to view the tasks in. Then, iterate through all the tasks in the pool calling the `get_tasks()` method.
 
@@ -50,7 +47,7 @@ You should get an output with the skill IDs, names, and private comments which l
 00022da5a7--6388b40547c84000494cdc6b 2022-12-01 3
 ```
 
-## Complete code: Get list of tasks {#complete-code}
+## Complete code: Get list of tasks `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -68,7 +65,7 @@ for task in toloka_client.get_tasks(pool_id='1227652'):
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

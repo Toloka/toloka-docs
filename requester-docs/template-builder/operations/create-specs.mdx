@@ -1,10 +1,7 @@
 ---
 title: "Creating specifications — Template Builder | Toloka documentation"
 date: "2023-02-10T09:15:36.426111"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -35,7 +32,7 @@ Specifications are currently created in test mode. After saving the project, che
 
 </Note>
 
-## Specification setting modes {#create_specs__data-spec-mode}
+## Specification setting modes `{#create_specs__data-spec-mode}`
 
 You can configure the specification automatically or manually. You can change the way the specification is configured using the **Define data specification manually** option. This option is disabled by default.
 
@@ -44,7 +41,7 @@ You can configure the specification automatically or manually. You can change th
   { title: 'Option enabled', value: <CreateSpecsList2/> },
 ]}/>
 
-## Filling in input data {#input-data-create}
+## Filling in input data `{#input-data-create}`
 
 If automatic generation of specifications is enabled, the input data fields are created from the configuration code. Provide a detailed example to get a ready-to-use specification. If you have optional fields, include them also.
 
@@ -64,7 +61,7 @@ By default, all the input data fields are marked as required in the specificatio
 
 </Note>
 
-## Filling in output data {#output-data-create}
+## Filling in output data `{#output-data-create}`
 
 If automatic generation of specifications is enabled, the output data fields are created from the configuration code. It takes into account the components that use `data.output` as well as the values supported by it.
 
@@ -84,7 +81,7 @@ If there are different types of values in the output, the **JSON** type will be 
 
 </Note>
 
-## How to edit the specification {#manual-setting}
+## How to edit the specification `{#manual-setting}`
 
 <Note mode="note" title="Note">
 
@@ -120,8 +117,7 @@ There are two ways to edit the specification in project settings: using either r
 
 </Cut>
 
-## Recommendations {#recomendations}
-
+## Recommendations `{#recomendations}`
 - If you edit a required field, the changes apply only to new task [pools](/docs/glossary#pool). For example, if you need to fix an error in a project, [clone the pool](/docs/guide/pool-main) or [create a new one](/docs/guide/pool-main). Existing task pools will continue using the previous version of the project.
 
 - In the output, use value validation and don't forget to mark the field as required if a Toloker has to fill it in.
@@ -131,7 +127,7 @@ There are two ways to edit the specification in project settings: using either r
 
     To create a hidden field, add it to the specification yourself and then add the `"hidden": true` parameter to this field in JSON mode. You should do this in Toloka when configuring your project. The hidden field remains when the specification is re-generated using the Template Builder.
 
-## What's next {#what-next}
+## What's next `{#what-next}`
 
 - [See examples of data read and write](/docs/template-builder/operations/input-output-data).
 - [Learn how to clear the entered data](/docs/template-builder/operations/clear-data).

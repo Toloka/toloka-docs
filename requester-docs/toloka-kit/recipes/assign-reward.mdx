@@ -1,10 +1,7 @@
 ---
 title: "Issue bonuses to Tolokers — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:39.511859"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -23,7 +20,7 @@ _Additionally reward Tolokers who completed their tasks better than others._
 
 <Instantiate/>
 
-### 3. Issue bonus to Toloker {#step-three}
+### 3. Issue bonus to Toloker `{#step-three}`
 
 Now create the bonus for the Toloker. For this, you need the following information:
 
@@ -58,7 +55,7 @@ new_bonus = toloka_client.create_user_bonus(toloka.user_bonus.UserBonus(
 ))`}
 />
 
-### 4. Display issued bonus info {#step-four}
+### 4. Display issued bonus info `{#step-four}`
 
 The `create_user_bonus()` request will return the [UserBonus](/docs/toloka-kit/reference/toloka.client.user_bonus.UserBonus) class object. You can use its attributes to print the information you need.
 
@@ -72,7 +69,7 @@ You should get an output with the date and time when you issued the bonus which 
 2023-01-12 13:45:36.767000+00:00
 ```
 
-## Complete code: Issue bonuses to Tolokers {#complete-code}
+## Complete code: Issue bonuses to Tolokers `{#complete-code}`
 
 ```python
 from decimal import Decimal
@@ -98,7 +95,7 @@ print(new_bonus.created)
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

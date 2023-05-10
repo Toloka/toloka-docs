@@ -1,10 +1,7 @@
 ---
 title: "Processing rejected and accepted assignments | Toloka documentation"
 date: "2023-03-02T19:39:14.460878"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -25,7 +22,7 @@ Once the review period in the **Review period in days** field runs out, tasks ar
 
 </Note>
 
-## When to use {#when-use}
+## When to use `{#when-use}`
 
 This rule is helpful when you need to:
 - Resend rejected assignments for re-completion to other Tolokers.
@@ -36,8 +33,7 @@ This rule is helpful when you need to:
 
     If you've reviewed and accepted a task, it may not make sense for other Tolokers to also complete it. To avoid this, you can reduce the overlap for accepted assignments only.
 
-## How to configure {#rule}
-
+## How to configure `{#rule}`
 <Note mode="warning" title="Warning">
 
 All fields in this rule are required. If you don't fill in at least one of them, you won't be able to save the rule.
@@ -49,8 +45,7 @@ All fields in this rule are required. If you don't fill in at least one of them,
 **If** | <ReassessmentAfterAcceptingTable1/>
 **then** | <ReassessmentAfterAcceptingTable2/>
 
-## Examples {#examples}
-
+## Examples `{#examples}`
 The task is to send rejected and recompleted assignments for review. Or assign them to new Tolokers after rejection.
 
 <Tabs tabs={[
@@ -58,11 +53,11 @@ The task is to send rejected and recompleted assignments for review. Or assign t
   { title: 'Incorrect settings', value: <ReassessmentAfterAcceptingList2/> },
 ]}/>
 
-## For developers {#for-developers}
+## For developers `{#for-developers}`
 
 - [Toloka API: Processing rejected and accepted assignments](/docs/api/reassessment)
 
-## Frequently asked questions {#troubleshooting}
+## Frequently asked questions `{#troubleshooting}`
 
 <FaqOverlap/>
 

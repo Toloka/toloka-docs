@@ -1,10 +1,7 @@
 ---
 title: "Experiments — Toloka ML platform | Toloka documentation"
 date: "2023-02-20T16:24:21.893673"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "mlMenu"
 ---
 
@@ -21,7 +18,7 @@ Experiment parameters:
 * `tags`: tags. They are added for all experiment runs.
 * `description`: Experiment description.
 
-## Before you start {#before-you-begin}
+## Before you start `{#before-you-begin}`
 
 Before you start:
 
@@ -45,8 +42,7 @@ Before you start:
     client = PulsarClient(token='your_token')
     ```
 
-## Creating an experiment {#create}
-
+## Creating an experiment `{#create}`
 To add an experiment, set the `ModelInfo`, `DatasetInfo`, and `MetricEvaluatorInfo` objects:
 
 ```py
@@ -122,8 +118,7 @@ experiment = client.submit_experiment(
 )
 ```
 
-## Viewing an experiment {#view}
-
+## Viewing an experiment `{#view}`
 Get the experiment results using the `experiment.get_results(prettified=True)` function:
 
 ```py
@@ -169,7 +164,7 @@ bad_experiment = client.submit_experiment(
 print(bad_experiment.wait().get_results()[0].error_message)
 ```
 
-## Removing runs from an experiment {#delete-run}
+## Removing runs from an experiment `{#delete-run}`
 
 Delete a run using the `delete()` function:
 

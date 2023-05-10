@@ -1,10 +1,7 @@
 ---
 title: "Inserting images — Template Builder | Toloka documentation"
 date: "2023-02-10T09:15:36.832192"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -16,7 +13,7 @@ This section describes how to insert [one image](/docs/template-builder/operatio
 
 <TolokaTbSourceAddMedia/>
 
-## One image {#single-picture}
+## One image `{#single-picture}`
 
 To display an image, you need a direct link to the image and the [view.image](/docs/template-builder/reference/view.image) component. You can change the height, width, frame, and other parameters of the image. For more information, see the component description.
 
@@ -24,7 +21,7 @@ To insert an image passed in the input data, use the `data.input` component in t
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/zDwELDM23ttBiT">View example</Button>
 
-## Two images side-by-side {#side-by-side}
+## Two images side-by-side `{#side-by-side}`
 
 To place two images side-by-side, use the [layout.side-by-side](/docs/template-builder/reference/layout.side-by-side) component.
 
@@ -32,8 +29,7 @@ To place two images side-by-side, use the [layout.side-by-side](/docs/template-b
 
  For a detailed analysis of the example, see [Quick start](/docs/template-builder/quickstart).
 
-## Array of images {#array}
-
+## Array of images `{#array}`
 To get a value from a specific element in an array, use the path to specify its sequence number, starting from zero.
 
 Let's say the input data contains an array of links to images:
@@ -59,7 +55,7 @@ You can reference a specific array element like this:
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/V44snIfa3ttBb2">View example</Button>
 
-### Components for displaying a group of images {#additional-components}
+### Components for displaying a group of images `{#additional-components}`
 
 To display multiple images, you need a component that you can add your images to. To do this, you can use components that implement a list or table:
 
@@ -81,13 +77,13 @@ This is relevant for creating an interface in Toloka for one task that uses mult
 
 </Note>
 
-### Many images or unknown number of images {#unknown-size}
+### Many images or unknown number of images `{#unknown-size}`
 
 If you don't know the size of your array with images in advance or you have so many images that the code is too large, use one of the components described above and add the [helper.transform](/docs/template-builder/reference/helper.transform) component into the `items` property. This component lets you convert an array of links to an array of [view.image](/docs/template-builder/reference/view.image) components to display them in the interface.
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/IqTqGpfg3ttBtA">View example</Button>
 
-## Zooming in on an image {#zoom-image}
+## Zooming in on an image `{#zoom-image}`
 
 To zoom in on an image by pressing a shortcut key, use the [plugin.hotkeys](/docs/template-builder/reference/plugin.hotkeys) component. Specify which key triggers [action.open-close](/docs/template-builder/reference/action.open-close). The image is specified in the `view` property using the [$ref](/docs/template-builder/best-practices/reuse) structure. The action is performed when a Toloker presses the selected key.
 

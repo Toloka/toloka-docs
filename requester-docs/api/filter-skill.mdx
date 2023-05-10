@@ -1,10 +1,7 @@
 ---
 title: "Filter by skills — Toloka API | Toloka documentation"
 date: "2023-07-04T17:43:01.231595"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "apiMenu"
 ---
 
@@ -18,20 +15,20 @@ To use a skill value for selecting Tolokers, define the `assignments_issuing_con
 
 To filter Tolokers without a skill set the `"operator": "EQ"` parameter and exclude the `value` parameter.
 
-## Sample filter in JSON {#request-example}
+## Sample filter in JSON `{#request-example}`
 
 <Tabs tabs={[
   { title: 'Filter Tolokers with skill', value: <FilterSkillList1/> },
   { title: 'Filter Tolokers without skill', value: <FilterSkillList2/> },
 ]}/>
 
-## Key, value parameters {#params}
+## Key, value parameters `{#params}`
 
 Key parameter | Value description
 ----- | -----
 _integer_<br/><br/>The ID of the skill you want to use to filter Tolokers.<br/><br/>You can get the list of all available skills using the [Get list of skills](https://toloka.ai/docs/api/api-reference/#get-/skills) method. | <FilterSkillTable1/>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [Filters](/docs/guide/filters)
 - [Toloka-Kit recipe: Filter Tolokers](/docs/toloka-kit/recipes/filter-tolokers/)

@@ -1,10 +1,7 @@
 ---
 title: "Number of tasks completed — Toloka API | Toloka documentation"
 date: "2023-07-04T17:43:01.446173"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "apiMenu"
 ---
 
@@ -33,7 +30,7 @@ You can limit the number of tasks in the pool per Toloker, in order to:
 
 Set key values in the `quality_control.configs` array in the [pool settings](https://toloka.ai/docs/api/api-reference/#tag--pool).
 
-## Request body {#body}
+## Request body `{#body}`
 
 If a Toloker completes **12** task suites, you can ban them from your project for a given number of days, hours, minutes (at a time or in total), or permanently.
 
@@ -104,7 +101,7 @@ Parameter | Overview
 `configs[].rules.action.parameters.private_comment` | _string_<br/><br/>Comments (the reason for blocking access). Visible only to the requester.
 `configs[].rules.action.parameters.open_pool` | <CompletedTable8/>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [Submitted responses](/docs/guide/submitted-answers)
 - [Toloka-Kit recipe: Use quality control rules](/docs/toloka-kit/recipes/use-quality-control-rules/)

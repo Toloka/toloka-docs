@@ -1,10 +1,7 @@
 ---
 title: "condition.all — Template Builder | Toloka documentation"
 date: "2023-03-30T10:05:23.817807"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -16,11 +13,11 @@ Checks that **all** child conditions are met. If any of the conditions is not me
 
 If you only need one out of several conditions to be met, use the [condition.any](/docs/template-builder/reference/condition.any) component. You can also combine these components.
 
-## Component properties {#properties}
+## Component properties `{#properties}`
 
 **Name** | **Type** | **Description**
 ----- | ----- | -----
-`type`<span style="color: red">\*</span> | "condition.all" | Set component type.
+`type`<span style={{color: "red"}}>\*</span> | "condition.all" | Set component type.
 `conditions` | _array_ | A set of conditions that must be met.
 `conditions[]` | _condition_ | Required condition.
 `hint` | _string_ | Validation error message that a Toloker will see.

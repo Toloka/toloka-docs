@@ -1,10 +1,7 @@
 ---
 title: "Control tasks — Toloka API | Toloka documentation"
 date: "2023-07-04T17:43:03.202806"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "apiMenu"
 ---
 
@@ -29,7 +26,7 @@ Control tasks contain correct responses. They are used for calculating the Tolok
 
 Add [tasks](https://toloka.ai/docs/api/api-reference/#tag--task) with correct responses to the pool. Set key values in the `quality_control.configs` array in the [pool settings](https://toloka.ai/docs/api/api-reference/#tag--pool).
 
-## Request body {#body}
+## Request body `{#body}`
 
 Let's say that the following settings are made in the project:
 
@@ -133,7 +130,7 @@ Parameter | Overview
 `configs[].rules.action.parameters.duration` | _integer_<br/><br/><Duration/>
 `configs[].rules.action.parameters.private_comment` | _string_<br/><br/>Comments (the reason for blocking access). Visible only to the requester.
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [Control tasks](/docs/guide/goldenset)
 - [Toloka-Kit recipe: Use quality control rules](/docs/toloka-kit/recipes/use-quality-control-rules/)
