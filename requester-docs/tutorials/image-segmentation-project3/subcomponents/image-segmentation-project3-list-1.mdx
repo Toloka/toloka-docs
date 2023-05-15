@@ -1,4 +1,4 @@
-1. Create a template based on the [Checking the selected area](https://ya.cc/t/Z9GC6HzT3ttEf6) example that uses [Component for image labeling](/docs/template-builder/reference/field.image-annotation).
+1. Create a template based on the [Checking the selected area](https://ya.cc/t/AKDvkBw44CFb73) example that uses [Component for image labeling](/docs/template-builder/reference/field.image-annotation).
 
 1. To see the input and output data fields, click **Show specifications** in the **Data specification** section.
 
@@ -6,7 +6,7 @@
 
     - `image` — image address;
 
-    - `result` — an array with the selected area coordinates;
+    - `selection` — an array with the selected area coordinates;
 
     - `assignment_id` — task ID.
 
@@ -25,7 +25,7 @@
             "hidden": false,
             "required": true
         },
-        "result": {
+        "selection": {
             "type": "array_json",
             "hidden": false,
             "required": false
