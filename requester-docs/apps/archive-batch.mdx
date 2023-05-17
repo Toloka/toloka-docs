@@ -1,0 +1,58 @@
+---
+title: "Archiving batches — Toloka apps | Toloka documentation"
+date: "2023-05-17T10:24:23.436752"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "appsMenu"
+---
+
+import ArchiveBatchList1 from './archive-batch/subcomponents/archive-batch-list-1.mdx'
+import ArchiveBatchList2 from './archive-batch/subcomponents/archive-batch-list-2.mdx'
+import ArchiveBatchList3 from './archive-batch/subcomponents/archive-batch-list-3.mdx'
+
+# Archiving batches
+
+You can [archive](#archive-batch) the batch with the data to hide it. The data will not be deleted or lost in this case. To restore it later, [unarchive](#unarchive-batch) the previously archived batch.
+
+## Archiving batches {#archive-batch}
+
+<Note mode="note" title="Note">
+
+You can archive only batches which are currently in statuses other than **Processing**.
+
+</Note>
+
+<Tabs tabs={[
+  { title: 'From a project', value: <ArchiveBatchList1/> },
+  { title: 'From a batch', value: <ArchiveBatchList2/> },
+  { title: 'Using the apps API', value: <ArchiveBatchList3/> },
+]}/>
+
+After this, both the uploaded items and the batch itself get the **Archived** status.
+
+The only action available for the archived batches in the interface is to [download the results](/docs/apps/download-results).
+
+## Unarchiving batches {#unarchive-batch}
+
+You can't restore archived data using the platform interface. Use the apps API instead.
+
+Send the following `POST` request:
+
+```bash
+curl -X POST 'https://toloka.dev/api/app/v0/app-projects/{project_id}/batches/{batch_id}/unarchive' \
+     -H 'Authorization: OAuth AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE'
+```
+
+Where `{project_id}` is the ID of the project with which the batch is associated, and `{batch_id}` is the ID of the batch you want to unarchive.
+
+<Note mode="tip" title="Visit apps API reference">
+
+Refer to the [Unarchive batch](https://toloka.ai/docs/api/apps-reference/#post-/app-projects/-app_project_id-/batches/-batch_id-/unarchive) section of the apps API documentation for more details about the request, its parameters, and possible responses. You will find examples of the requests for [Toloka-Kit](/docs/toloka-kit/) and other code samples there.
+
+</Note>
+
+After the operation, the batch gets the status it had before archiving. You can continue interacting with it.
+
+<Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=apps-archive-batch">Contact support</Button>

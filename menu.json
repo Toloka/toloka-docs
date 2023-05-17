@@ -1562,43 +1562,47 @@
       "title": "Bespoke solutions"
     },
     {
-      "href": "/docs/apps",
-      "title": "Overview"
+      "title": "Overview",
+      "href": "/docs/apps"
     },
     {
-      "href": "/docs/apps/unwanted",
-      "title": "What tasks can't be placed in Toloka?"
+      "title": "What tasks can't be placed in Toloka?",
+      "href": "/docs/apps/unwanted"
     },
     {
-      "href": "/docs/apps/quickstart",
-      "title": "Getting started"
+      "title": "Getting started",
+      "href": "/docs/apps/quickstart"
     },
     {
-      "href": "/docs/apps/add-task",
-      "title": "Uploading task items"
+      "title": "Uploading task items",
+      "href": "/docs/apps/add-task"
     },
     {
-      "href": "/docs/apps/view-progress",
-      "title": "Starting and stopping labeling"
+      "title": "Starting and stopping labeling",
+      "href": "/docs/apps/view-progress"
     },
     {
-      "href": "/docs/apps/download-results",
-      "title": "Downloading the results"
+      "title": "Downloading the results",
+      "href": "/docs/apps/download-results"
     },
     {
-      "href": "/docs/apps/glossary",
-      "title": "Glossary"
+      "title": "Archiving batches",
+      "href": "/docs/apps/archive-batch"
     },
     {
-      "href": "/docs/apps/troubleshooting",
-      "title": "Troubleshooting"
+      "title": "Glossary",
+      "href": "/docs/apps/glossary"
+    },
+    {
+      "title": "Troubleshooting",
+      "href": "/docs/apps/troubleshooting"
     },
     {
       "title": "List of solutions"
     },
     {
-      "href": "/docs/apps/product-search-relevance",
-      "title": "Product search relevance"
+      "title": "Product search relevance",
+      "href": "/docs/apps/product-search-relevance"
     }
   ],
   "apiMenu": [
