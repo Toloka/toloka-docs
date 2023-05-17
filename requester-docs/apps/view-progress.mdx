@@ -1,6 +1,6 @@
 ---
 title: "Starting and stopping labeling — Toloka apps | Toloka documentation"
-date: "2023-02-03T19:18:58.975727"
+date: "2023-05-17T10:24:23.725907"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,6 +8,9 @@ ogDescription: ""
 docsMenu: "appsMenu"
 ---
 
+import ViewProgressList1 from './view-progress/subcomponents/view-progress-list-1.mdx'
+import ViewProgressList2 from './view-progress/subcomponents/view-progress-list-2.mdx'
+import ViewProgressList3 from './view-progress/subcomponents/view-progress-list-3.mdx'
 
 # Starting and stopping labeling
 
@@ -37,16 +40,11 @@ To send a batch of data for labeling:
 
 You can stop labeling if it isn't completed.
 
-#### From a project
-
-1. Open the project.
-1. Click <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425164342/1675425164342_original_svg.svg" alt="Pause" /> on the right, next to the project name.
-
-#### From a batch
-
-1. Open the project.
-1. Go to the desired batch.
-1. Click **Pause labeling**.
+<Tabs tabs={[
+  { title: 'From a project', value: <ViewProgressList1/> },
+  { title: 'From a batch', value: <ViewProgressList2/> },
+  { title: 'Using the apps API', value: <ViewProgressList3/> },
+]}/>
 
 <Note mode="note" title="Note">
 
