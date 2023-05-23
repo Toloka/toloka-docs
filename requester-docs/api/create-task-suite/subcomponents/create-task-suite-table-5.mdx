@@ -1,10 +1,11 @@
-**object**
+**integer \| required if**
 
-Correct responses in a task (for control tasks). If multiple correct responses are possible, define `output_values` for each possible response and set the weight for the correct response (the `correctness_weight` key).
+Required if the parameter is not used when creating a task suite `allow_defaults=true`, and the overlap is not specified in the pool parameters (in the [defaults.​default_​overlap_for_​new_task_suites](/docs/api/create-pool#default_overlap_for_new_task_suites) key).
 
-```json
-    "<ID of field 1>": "<correct response>",
-    "<ID of field 2>": "<correct response>",
-    ...
-    "<ID of field N>": "<correct response N>"
-```
+Task suite overlap.
+
+<Note mode="warning" title="Warning">
+
+Please note that overlap you set when creating task suites has priority over the overlap you set during the [pool creation](/docs/api/create-pool).
+
+</Note>

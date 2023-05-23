@@ -1,6 +1,6 @@
 ---
 title: "Create one or multiple task suites — Toloka API | Toloka documentation"
-date: "2023-04-20T19:09:47.918742"
+date: "2023-05-23T11:57:13.350847"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,19 +9,23 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import KnownSolutions from './subcomponents/known-solutions.mdx'
+import OutputValues from './subcomponents/output-values.mdx'
+import CorrectnessWeight from './subcomponents/correctness-weight.mdx'
 import CreateTaskSuiteList1 from './create-task-suite/subcomponents/create-task-suite-list-1.mdx'
 import CreateTaskSuiteList2 from './create-task-suite/subcomponents/create-task-suite-list-2.mdx'
 import CreateTaskSuiteTable1 from './create-task-suite/subcomponents/create-task-suite-table-1.mdx'
 import CreateTaskSuiteTable2 from './create-task-suite/subcomponents/create-task-suite-table-2.mdx'
 import CreateTaskSuiteTable3 from './create-task-suite/subcomponents/create-task-suite-table-3.mdx'
+import CreateTaskSuiteList3 from './create-task-suite/subcomponents/create-task-suite-list-3.mdx'
+import CreateTaskSuiteList4 from './create-task-suite/subcomponents/create-task-suite-list-4.mdx'
 import CreateTaskSuiteTable4 from './create-task-suite/subcomponents/create-task-suite-table-4.mdx'
 import CreateTaskSuiteTable5 from './create-task-suite/subcomponents/create-task-suite-table-5.mdx'
 import CreateTaskSuiteTable6 from './create-task-suite/subcomponents/create-task-suite-table-6.mdx'
 import CreateTaskSuiteTable7 from './create-task-suite/subcomponents/create-task-suite-table-7.mdx'
 import CreateTaskSuiteTable8 from './create-task-suite/subcomponents/create-task-suite-table-8.mdx'
-import CreateTaskSuiteList3 from './create-task-suite/subcomponents/create-task-suite-list-3.mdx'
-import CreateTaskSuiteList4 from './create-task-suite/subcomponents/create-task-suite-list-4.mdx'
-import CreateTaskSuiteTable11 from './create-task-suite/subcomponents/create-task-suite-table-11.mdx'
+import CreateTaskSuiteList5 from './create-task-suite/subcomponents/create-task-suite-list-5.mdx'
+import CreateTaskSuiteList6 from './create-task-suite/subcomponents/create-task-suite-list-6.mdx'
 
 # Create one or multiple task suites
 
@@ -69,70 +73,22 @@ Parameter | Overview
 
 ## Request body {#body}
 
-```json
-{
-  "id": "63614047-38c3-4ad4-8a86-99c5c651a9b8",
-  "pool_id": "1",
-  "tasks": [
-    {
-      "id": "49a333ea-2728-4c1c-ab1f-8ab1bfe4ee7e",
-      "origin_task_id": "e3da7fe1-828d-4d9c-b49d-42c0eb5fcfde",
-      "input_values": {
-        "image_url": "www.image1.ru"
-      },
-      "known_solutions": [
-        {
-          "correctness_weight": 0.95,
-          "output_values": {
-            "colour": "black"
-          }
-        },
-        {
-          "correctness_weight": 0.7,
-          "output_values": {
-            "colour": "gray"
-          }
-        }
-      ],
-      "message_on_unknown_solution": "The elephant is black"
-    },
-    {
-      "input_values": {
-        "image_url": "www.image2.ru"
-      },
-      "known_solutions": [
-        {
-          "correctness_weight": 1,
-          "output_values": {
-            "colour": "white"
-          }
-        }
-      ],
-      "message_on_unknown_solution": "The elephant is white"
-    }
-  ],
-  "infinite_overlap": false,
-  "remaining_overlap": 3,
-  "reserved_for": [],
-  "unavailable_for": [],
-  "issuing_order_override": 3,
-  "mixed": true,
-  "automerged": false,
-  "created": "2016-04-18T12:43:04.988"
-}
-```
+<Tabs tabs={[
+  { title: 'One task suite', value: <CreateTaskSuiteList3/> },
+  { title: 'Multiple task suites', value: <CreateTaskSuiteList4/> },
+]}/>
 
 Parameter | Overview
 ----- | -----
 **pool_id** | **string \| required**<br/><br/>The ID of the pool that tasks are uploaded to.
 **tasks[]** | **array of object \| required**<br/><br/>Data for the tasks.
 **tasks[].input_values** | <CreateTaskSuiteTable4/>
-**overlap** | <CreateTaskSuiteTable11/>
+**overlap** | <CreateTaskSuiteTable5/>
 **longitude** | **float \| required if**<br/><br/>Required if tasks are selected on the map. Otherwise, not used.<br/><br/>The longitude of the point on the map for the task suite.
 **latitude** | **float \| required if**<br/><br/>Required if tasks are selected on the map. Otherwise, not used.<br/><br/>The latitude of the point on the map for the task suite.
-**tasks[].known_solutions** | **object**<br/><br/>Responses and hints for control tasks and training tasks.
-**tasks[].known_solutions.output_values** | <CreateTaskSuiteTable5/>
-**tasks[].known_solutions.correctness_weight** | **float**<br/><br/>The weight of a correct response. Allows you to set multiple versions of correct responses and rank them by correctness. For example, if a correct response is weighted 0.5, it counts as half of a mistake for the Toloker. The more correct the response in `correctValues`, the higher its weight.
+**tasks[].known_solutions[]** | **array of objects**<br/><br/><KnownSolutions/>
+**tasks[].known_solutions[].output_values** | **object**<br/><br/><OutputValues/>
+**tasks[].known_solutions[].correctness_weight** | **float**<br/><br/><CorrectnessWeight/>
 **tasks[].message_on_unknown_solution** | **string**<br/><br/>Hint for the task (for training tasks).
 **infinite_overlap** | <CreateTaskSuiteTable6/>
 **reserved_for[]** | **array of strings**<br/><br/>IDs of Tolokers who will have access to the task suites.
@@ -165,8 +121,8 @@ Parameter | Overview
 The response format depends on the value of [async_mode](#async_mode).
 
 <Tabs tabs={[
-  { title: 'The task suites (async_mode=false)', value: <CreateTaskSuiteList3/> },
-  { title: 'Information about the operation (async_mode=true)', value: <CreateTaskSuiteList4/> },
+  { title: 'The task suites (async_mode=false)', value: <CreateTaskSuiteList5/> },
+  { title: 'Information about the operation (async_mode=true)', value: <CreateTaskSuiteList6/> },
 ]}/>
 
 </Cut>

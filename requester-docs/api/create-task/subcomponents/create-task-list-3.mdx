@@ -1,7 +1,44 @@
-Information about the created task. Besides [parameters](#body) that are set when creating a task, it includes parameters that are assigned to the task automatically:
-
-Parameter | Overview
------ | -----
-**id** | **string**<br/><br/>  Task ID.
-**origin_task_id** | **string**<br/><br/>  The ID of a task from another pool from which this task was copied for majority vote verification.
-**created** | **string**<br/><br/>  The UTC date and time when the task suite was created, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+```json
+{
+  "pool_id": "1",
+  "input_values": {
+    "image_url": "www.site.com/image1.png"
+  },
+  "known_solutions": [
+    {
+      "output_values": {
+        "result": "OK",
+        "like": false
+      },
+      "correctness_weight": 0.8
+    },
+    {
+      "output_values": {
+        "result": "OK",
+        "like": true
+      },
+      "correctness_weight": 1
+    }
+  ],
+  "baseline_solutions": [
+    {
+      "output_values": {
+        "result": "OK",
+        "like": false
+      },
+      "confidence_weight": 0.8
+    },
+    {
+      "output_values": {
+        "result": "OK",
+        "like": true
+      },
+      "confidence_weight": 1
+    }
+  ],
+  "message_on_unknown_solution": "The cat is in a good mood.",
+  "infinite_overlap": false,
+  "reserved_for": [],
+  "unavailable_for": []
+}
+```

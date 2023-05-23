@@ -1963,10 +1963,6 @@
           "href": "/docs/api/create-task"
         },
         {
-          "title": "Create multiple tasks",
-          "href": "/docs/api/create-tasks-batch"
-        },
-        {
           "title": "Get the list of tasks",
           "href": "/docs/api/get-tasks-list"
         },
@@ -1994,10 +1990,6 @@
         {
           "title": "Create one or multiple task suites",
           "href": "/docs/api/create-task-suite"
-        },
-        {
-          "title": "Create multiple task suites",
-          "href": "/docs/api/create-task-suite-batch"
         },
         {
           "title": "Get the list of task suites",
