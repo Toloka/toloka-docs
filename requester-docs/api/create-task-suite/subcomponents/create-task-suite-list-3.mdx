@@ -1,20 +1,49 @@
 ```json
 {
-  "items": {
-    "0": {<task suite>},
-    "2": {<task suite>}, ...
-    "<n>": {<task suite N>}
-  },
-  "validation_errors": {
-    "1": {<validation errors for the task suite>},
-    "3": {<validation errors for the task suite>}, ...
-    "<n>": {<validation errors for task suite N>}
-  }
+  "pool_id": "1",
+  "tasks": [
+    {
+      "input_values": {
+        "image_url": "www.site.com/image1.png"
+      },
+      "known_solutions": [
+        {
+          "output_values": {
+            "colour": "black"
+          },
+          "correctness_weight": 0.95
+        },
+        {
+          "output_values": {
+            "colour": "gray"
+          },
+          "correctness_weight": 0.7
+        }
+      ],
+      "message_on_unknown_solution": "The elephant is black"
+    },
+    {
+      "input_values": {
+        "image_url": "www.site.com/image2.png"
+      },
+      "known_solutions": [
+        {
+          "correctness_weight": 1,
+          "output_values": {
+            "colour": "white"
+          }
+        }
+      ],
+      "message_on_unknown_solution": "The elephant is white"
+    }
+  ],
+  "infinite_overlap": false,
+  "remaining_overlap": 3,
+  "reserved_for": [],
+  "unavailable_for": [],
+  "issuing_order_override": 3,
+  "mixed": true,
+  "automerged": false,
+  "created": "2016-04-18T12:43:04.988"
 }
 ```
-
-Parameter | Overview
------ | -----
-**items** | **object**<br/><br/>    An object with the created task suites.
-**validation_errors** | **object**<br/><br/>    An object with the errors in task suites. Returned if the request has the parameter `skip_invalid_items=true`.
-**<n\>** | **object**<br/><br/>    Sequential number of the task suite in the array (starting from 0).

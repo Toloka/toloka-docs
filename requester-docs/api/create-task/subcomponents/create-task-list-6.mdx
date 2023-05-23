@@ -1,40 +1,30 @@
-import CreateTaskTable11 from './create-task-table-11.mdx'
-import CreateTaskTable12 from './create-task-table-12.mdx'
+import CreateTaskTable2 from './create-task-table-2.mdx'
+import CreateTaskTable3 from './create-task-table-3.mdx'
+import CreateTaskTable8 from './create-task-table-8.mdx'
 
 ```json
 {
-  "id": "26e130ad3652443a3dc5094791e48ef9",
+  "id": "2ed92b7f-75c0-4771-ae2f-3911232d6d4e",
   "type": "TASK.BATCH_CREATE",
-  "status": "FAIL",
-  "submitted": "2015-12-13T23:32:01",
-  "started": "2015-12-13T23:33:00",
-  "finished": "2015-12-13T23:34:12",
+  "status": "RUNNING",
+  "submitted": "2020-12-23T16:26:20.131",
+  "progress": 0,
   "parameters": {
+    "open_pool": false,
     "allow_defaults": false,
-    "skip_invalid_items": false,
-    "open_pool": false
-  },
-  "details": {
-    "total_count": 2,
-    "valid_count": 1,
-    "not_valid_count": 1,
-    "success_count": 0,
-    "failed_count": 2
+    "skip_invalid_items": false
   }
 }
 ```
 
 Parameter | Overview
 ----- | -----
-**id** | **string**<br/><br/>  Operation ID.
-**type** | **string**<br/><br/>  Type of operation: `TASK.BATCH_CREATE` — Creating multiple tasks.
-**status** | <CreateTaskTable11/>
-**submitted** | **string**<br/><br/>  The UTC date and time the request was sent, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
-**started** | **string**<br/><br/>  The UTC date and time the operation started, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
-**finished** | **string**<br/><br/>  The UTC date and time the operation was completed, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
-**parameters.skip_invalid_items** | <CreateTaskTable12/>
-**details.total_count** | **string**<br/><br/>  The number of tasks in the request.
-**details.valid_count** | **integer**<br/><br/>  The number of tasks that passed validation.
-**details.not_valid_count** | **integer**<br/><br/>  The number of tasks that failed validation.
-**details.success_count** | **integer**<br/><br/>  The number of tasks uploaded.
-**details.failed_count** | **integer**<br/><br/>  The number of tasks that didn't upload.
+**id** | **string**<br/><br/>Operation ID.
+**type** | **string**<br/><br/>Type of operation: `TASK.BATCH_CREATE` — Creating multiple tasks.
+**status** | <CreateTaskTable8/>
+**submitted** | **string**<br/><br/>The UTC date and time the request was sent, in ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`.
+**progress** | **integer**<br/><br/>The percentage of the operation completed.
+**parameters** | **object**<br/><br/>The operation parameters.
+**parameters.open_pool** | **boolean**<br/><br/>Open the pool immediately after creating the tasks, if the pool is closed. The default value is `false`.
+**parameters.allow_defaults** | <CreateTaskTable2/>
+**parameters.skip_invalid_items** | <CreateTaskTable3/>

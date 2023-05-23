@@ -1,6 +1,6 @@
 ---
 title: "Create one or multiple tasks — Toloka API | Toloka documentation"
-date: "2023-04-20T19:09:42.723006"
+date: "2023-05-23T11:57:08.443981"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,9 @@ docsMenu: "apiMenu"
 ---
 
 import Announce from './subcomponents/announce.mdx'
+import KnownSolutions from './subcomponents/known-solutions.mdx'
+import OutputValues from './subcomponents/output-values.mdx'
+import CorrectnessWeight from './subcomponents/correctness-weight.mdx'
 import TroubleshootingTasksNotCreated from '../subcomponents/troubleshooting/api/tasks-not-created.mdx'
 import TroubleshootingInsertLinksError from '../subcomponents/troubleshooting/api/insert-links-error.mdx'
 import CreateTaskList1 from './create-task/subcomponents/create-task-list-1.mdx'
@@ -16,15 +19,16 @@ import CreateTaskList2 from './create-task/subcomponents/create-task-list-2.mdx'
 import CreateTaskTable1 from './create-task/subcomponents/create-task-table-1.mdx'
 import CreateTaskTable2 from './create-task/subcomponents/create-task-table-2.mdx'
 import CreateTaskTable3 from './create-task/subcomponents/create-task-table-3.mdx'
+import CreateTaskList3 from './create-task/subcomponents/create-task-list-3.mdx'
+import CreateTaskList4 from './create-task/subcomponents/create-task-list-4.mdx'
 import CreateTaskTable4 from './create-task/subcomponents/create-task-table-4.mdx'
 import CreateTaskTable5 from './create-task/subcomponents/create-task-table-5.mdx'
 import CreateTaskTable6 from './create-task/subcomponents/create-task-table-6.mdx'
 import CreateTaskTable7 from './create-task/subcomponents/create-task-table-7.mdx'
-import CreateTaskList3 from './create-task/subcomponents/create-task-list-3.mdx'
-import CreateTaskList4 from './create-task/subcomponents/create-task-list-4.mdx'
 import CreateTaskList5 from './create-task/subcomponents/create-task-list-5.mdx'
 import CreateTaskList6 from './create-task/subcomponents/create-task-list-6.mdx'
-import CreateTaskTable13 from './create-task/subcomponents/create-task-table-13.mdx'
+import CreateTaskList7 from './create-task/subcomponents/create-task-list-7.mdx'
+import CreateTaskList8 from './create-task/subcomponents/create-task-list-8.mdx'
 
 # Create one or multiple tasks
 
@@ -72,62 +76,22 @@ Parameter | Overview
 
 ## Request body {#body}
 
-```json
-{
-  "pool_id": "1",
-  "input_values": {
-    "image_url": "www.images/image1.ru"
-  },
-  "known_solutions": [
-    {
-      "output_values": {
-        "result": "OK",
-        "like": false
-      },
-      "correctness_weight": 0.8
-    },
-    {
-      "output_values": {
-        "result": "OK",
-        "like": true
-      },
-      "correctness_weight": 1
-    }
-  ],
-  "baseline_solutions": [
-    {
-      "output_values": {
-        "result": "OK",
-        "like": false
-      },
-      "confidence_weight": 0.8
-    },
-    {
-      "output_values": {
-        "result": "OK",
-        "like": true
-      },
-      "confidence_weight": 1
-    }
-  ],
-  "message_on_unknown_solution": "The cat is in a good mood.",
-  "infinite_overlap": false,
-  "reserved_for": [],
-  "unavailable_for": []
-}
-```
+<Tabs tabs={[
+  { title: 'One task', value: <CreateTaskList3/> },
+  { title: 'Multiple tasks', value: <CreateTaskList4/> },
+]}/>
 
 Key | Overview
 ----- | -----
 **pool_id** | **string \| required**<br/><br/>ID of the pool that the task is uploaded to.
 **input_values** | <CreateTaskTable4/>
-**known_solutions[].output_values** | <CreateTaskTable5/>
-**baseline_solutions[].output_values** | <CreateTaskTable6/>
+**known_solutions[]** | **array of objects**<br/><br/><KnownSolutions/>
+**known_solutions[].output_values** | **object \| required**<br/><br/><OutputValues/>
+**known_solutions[].correctness_weight** | **float**<br/><br/><CorrectnessWeight/>
+**baseline_solutions[]** | **array of objects**<br/><br/>Preliminary responses. This data simulates Toloker responses when calculating `confidence` in a response. It is used in [dynamic overlap](/docs/glossary#dynamic-overlap) (also known as incremental relabeling or IRL) and [aggregation of results by skill](/docs/guide/result-aggregation#aggr-by-skill).<br/><br/>Define `output_values` and `confidence_weight` for each preliminary response.<br/><br/>For example, you ask Tolokers to label whether an image shows a cat or a dog. Suppose your neural network already determined that the image might show a dog with a probability of 80% and a cat with a probability of 40%. Let's say you set dynamic overlap from 1 to 3 and the minimum response confidence at 85%.<br/><br/>If the Toloker answers "Dog" and the confidence in their response is high, the overlap most likely won't increase because one response is enough. If the Toloker answers "Cat", the confidence is most likely not high enough and the overlap will increase further.<br/><br/>Can't be used when creating a task suite: an error with code 400 saying `VALUE_NOT_ALLOWED` will be returned to your request.
+**baseline_solutions[].output_values** | <CreateTaskTable5/>
 **baseline_solutions[].confidence_weight** | **float \| required**<br/><br/>Confidence in a response, from 0 to 1.<br/><br/>The default value is 1.
-**overlap** | <CreateTaskTable13/>
-**known_solutions[]** | **array of objects**<br/><br/>Correct responses to [control](/docs/glossary#control-task) and [training](/docs/glossary#training-task) tasks.<br/><br/>You can specify several options for a correct task response.<br/><br/>If one option is more correct than another, you can assign different weights to the response options. To do this, use the `correctness_weight` key.
-**known_solutions[].correctness_weight** | **float**<br/><br/>The weight of a correct response in the range from 0 to 1.<br/><br/>Lets you count a response as partially correct. This is convenient when there is no single right response to the task.<br/><br/>This works like awarding points: if you need to complete one control task correctly to get a skill (receive 1 point), you may complete one task with a weight of 1 or two tasks with a weight of 0.5 or higher.<br/><br/>The default value is 1.
-**baseline_solutions[]** | **array of objects**<br/><br/>Preliminary responses. This data simulates Toloker responses when calculating `confidence` in a response. It is used in dynamic overlap (also known as incremental relabeling or IRL) and aggregation of results by skill.<br/><br/>Define `output_values` and `confidence_weight` for each preliminary response.<br/><br/>For example, you ask Tolokers to label whether an image shows a cat or a dog. Suppose your neural network already determined that the image might show a dog with a probability of 80% and a cat with a probability of 40%. Let's say you set dynamic overlap from 1 to 3 and the minimum response confidence at 85%.<br/><br/>If the Toloker answers "Dog" and the confidence in their response is high, the overlap most likely won't increase because one response is enough. If the Toloker answers "Cat", the confidence is most likely not high enough and the overlap will increase further.<br/><br/>Can't be used when creating a task suite: an error with code 400 saying `VALUE_NOT_ALLOWED` will be returned to your request.
+**overlap** | <CreateTaskTable6/>
 **message_on_unknown_solution** | **string**<br/><br/>Hint for the task (for training tasks).
 **infinite_overlap** | <CreateTaskTable7/>
 **origin_task_id** | **string**<br/><br/>ID of the task it was copied from.
@@ -141,8 +105,8 @@ Key | Overview
 Depending on the [async_mode](#async_mode) value in the request, the response contains:
 
 <Tabs tabs={[
-  { title: 'Task data(async_mode=false)', value: <CreateTaskList3/> },
-  { title: 'Information about the operation (async_mode=true)', value: <CreateTaskList4/> },
+  { title: 'Task data (async_mode=false)', value: <CreateTaskList5/> },
+  { title: 'Information about the operation (async_mode=true)', value: <CreateTaskList6/> },
 ]}/>
 
 </Cut>
@@ -150,8 +114,8 @@ Depending on the [async_mode](#async_mode) value in the request, the response co
 <Cut title="Multiple tasks">
 
 <Tabs tabs={[
-  { title: 'Data for the tasks (async_mode=false)', value: <CreateTaskList5/> },
-  { title: 'Information about the operation (async_mode=true)', value: <CreateTaskList6/> },
+  { title: 'Data for the tasks (async_mode=false)', value: <CreateTaskList7/> },
+  { title: 'Information about the operation (async_mode=true)', value: <CreateTaskList8/> },
 ]}/>
 
 </Cut>
