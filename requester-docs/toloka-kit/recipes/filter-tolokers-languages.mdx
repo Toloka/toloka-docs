@@ -103,7 +103,7 @@ Parameter | Description
 import toloka.client as toloka
 from toloka.client.primitives.operators import InclusionOperator
 
-toloka_client = toloka.TolokaClient('PlaceYourRealOAuthToken_Here', 'PRODUCTION')
+toloka_client = toloka.TolokaClient('PlaceYourRealApiKey_Here', 'PRODUCTION')
 
 updated_pool = toloka_client.get_pool('38955320')
 updated_pool.filter=(
