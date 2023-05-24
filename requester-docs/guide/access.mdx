@@ -1,6 +1,6 @@
 ---
 title: "Registration | Toloka documentation"
-date: "2023-02-15T15:15:27.226732"
+date: "2023-05-22T10:43:13.567911"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,77 +8,118 @@ ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
-import TroubleshootingNoSms from '../subcomponents/troubleshooting/register-and-start/no-sms.mdx'
-import TroubleshootingPhoneBelongsAnotherUser from '../subcomponents/troubleshooting/register-and-start/phone-belongs-another-user.mdx'
-import TroubleshootingAccountTypeMistake from '../subcomponents/troubleshooting/register-and-start/account-type-mistake.mdx'
 import FaqTaskSuitable from '../subcomponents/faq/register-and-start/task-suitable.mdx'
-import FaqStartNewProject from '../subcomponents/faq/register-and-start/start-new-project.mdx'
-import FaqChangePhoneNumber from '../subcomponents/faq/register-and-start/change-phone-number.mdx'
 import FaqChangeAccountType from '../subcomponents/faq/register-and-start/change-account-type.mdx'
-import FaqPartnership from '../subcomponents/faq/register-and-start/partnership.mdx'
+import FaqEmailAuthorization from '../subcomponents/faq/register-and-start/email-authorization.mdx'
+import FaqSameEmailRegistration from '../subcomponents/faq/register-and-start/same-email-registration.mdx'
+import TroubleshootingMicrosoftSso from '../subcomponents/troubleshooting/register-and-start/microsoft-sso.mdx'
+import TroubleshootingFacebookProblem from '../subcomponents/troubleshooting/register-and-start/facebook-problem.mdx'
+import FaqStartNewProject from '../subcomponents/faq/register-and-start/start-new-project.mdx'
+import AccessList1 from './access/subcomponents/access-list-1.mdx'
+import AccessList2 from './access/subcomponents/access-list-2.mdx'
 
 # Registration
 
-## Before you start {#concept_ntn_h5l_vlb}
+## Registering in Toloka {#concept_ntn_h5l_vlb}
 
-To register, you need a Yandex ID with a linked and confirmed phone number. If you don't have a Yandex ID, sign up for one.
+Most clients currently need a Yandex ID with a linked and confirmed phone number to register in Toloka. If you don't have a Yandex ID, [sign up for one](https://passport.toloka.ai/).
 
 <Note mode="restriction" title="Restriction">
 
 - If you're already registered as a Toloker, you'll need another Yandex ID.
 
-- You can only register one requester account and one Toloker account per phone number in each version of Toloka.
+- You can only register one requester account and one Toloker account per phone number in [each version](#register) of Toloka.
 
 </Note>
 
+Once you have a Yandex ID,
+
+1. Go to the [Toloka website](https://toloka.ai/) and click the **Log in** link in the upper-right corner.
+
+1. Choose **Log in as a Requester** button and enter your Yandex ID credentials.
+
+1. At the **Tell us a little about yourself** page, the system will invite you to enter some additional information (email address used for notifications, company name, country of origin, and some other optional information).
+
+1. When done, accept the Toloka Terms of Use and click **Get started**.
+
+## Social authorization registration (currently in beta) {#social-auth}
+
+Some Toloka clients have an option to register and access Toloka using social authorization. If you are one of these clients and registered in Toloka using Yandex ID, please [migrate to the new social authorization](/docs/guide/migrate-new-auth) scheme.
+
+To register in Toloka as a client and post tasks for Tolokers, you need to have one of the following supported social accounts:
+
+- Google
+- Facebook
+- GitHub
+- Microsoft
+
+<Note mode="note" title="Note">
+
+Depending on your current location the list of the available social accounts might differ and include or exclude some of the social services.
+
+</Note>
+
+Some of the clients can also authorize in Toloka using SSO authentication. Read the [Toloka SSO authentication](/docs/guide/sso/authentication) section which contains the detailed description of this method and its restrictions.
+
 ## Where should I register? {#register}
 
-There are two versions of Toloka. You need to register separately in each of them:
+Toloka has two versions: production and sandbox. You need to register in each one separately to get access to them:
 
-- [Production version](https://toloka.ai) of Toloka for requesters.
+- **[Production version](https://platform.toloka.ai/auth?role=REQUESTER)**
 
-- [Sandbox](https://sandbox.toloka.yandex.com/for-requesters). You don't have to register in the sandbox, but it's useful for testing complex [projects](/docs/glossary#project) before launching them. Learn more about [working in the sandbox](/docs/guide/sandbox).
+    This is your usual workspace in Toloka. Here you [create projects](/docs/guide/project), [upload tasks](/docs/guide/task_upload) for Tolokers, and [get results](/docs/guide/result-of-eval).
+
+- **[Sandbox](https://sandbox.toloka.yandex.com/for-requesters)**
+
+    This is a place to test your projects and tasks. It can be useful to test complex projects before launching them. Learn more about [working in the sandbox](/docs/guide/sandbox).
+
+    <Note mode="warning" title="Warning">
+
+    Starting March 2023, **new clients** get access to Toloka sandbox **upon request**. Please [contact our support team](/docs/guide/troubleshooting/support?form-source=guide-access&form-topic1=sandbox) describing the projects you plan to use the sandbox for, types of tasks you plan to upload, the approximate number of trusted Tolokers who are going to complete tasks for you there, and other details.
+
+    </Note>
+
+The registration and sign-in processes are similar for both versions.
+
+## Authorizing in Toloka with social services (currently in beta) {#authorize}
+
+Toloka uses social authorization both for the **registration** and **signing in**.
+
+To authorize in Toloka production version using one of the social accounts, go to the [sign-in page](https://platform.toloka.ai/auth?role=REQUESTER).
+
+<Tabs tabs={[
+  { title: 'Registering', value: <AccessList1/> },
+  { title: 'Signing in', value: <AccessList2/> },
+]}/>
 
 ## Recommendations {#concept_pkf_nks_vlb}
 
-- To avoid confusion, use the same Yandex ID to register as a requester both in the production version and sandbox.
+- To avoid confusion, use the same social service to register as a requester both in the production version and sandbox.
 
-- We recommend setting up notifications immediately after registration. To do this, go to **Profile** and then **Notifications**.
-
-- Use [shared access](/docs/guide/multiple-access) if:
-
-    - You want to be able to quickly switch from the Toloker account to the requester account.
-
-    - You are planning to share projects with coworkers.
-
-    - You need help setting up the project.
-
-## What's next {#what-next}
-
-- [Learn how to post tasks](/docs/guide/first-project)
+- If you plan to share projects with coworkers or need help setting up your account, read our [Shared access to the account](/docs/guide/multiple-access) instructions.
 
 ## See also {#see-also}
 
+- [Migrating to new social authorization](/docs/guide/migrate-new-auth)
 - [How does Toloka work?](/docs/guide/overview)
 - [Shared access to the requester's account](/docs/guide/multiple-access)
 - [Sandbox](/docs/guide/sandbox)
+- [Learn how to post tasks](/docs/guide/first-project)
 
 ## Troubleshooting {#troubleshooting}
 
-<TroubleshootingNoSms/>
-
-<TroubleshootingPhoneBelongsAnotherUser/>
-
-<TroubleshootingAccountTypeMistake/>
-
 <FaqTaskSuitable/>
-
-<FaqStartNewProject/>
-
-<FaqChangePhoneNumber/>
 
 <FaqChangeAccountType/>
 
-<FaqPartnership/>
+<FaqEmailAuthorization/>
+
+<FaqSameEmailRegistration/>
+
+<TroubleshootingMicrosoftSso/>
+
+<TroubleshootingFacebookProblem/>
+
+<FaqStartNewProject/>
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=guide-access">Contact support</Button>
