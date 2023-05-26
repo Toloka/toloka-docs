@@ -1,6 +1,6 @@
 ---
 title: "Notification format — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:33.373295"
+date: "2023-05-26T15:50:17.352098"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -76,7 +76,7 @@ Parameter | Overview
 **project_id** | **string**<br/><br/>ID of the project that the pool was created for.
 **pool_id** | **string**<br/><br/>ID of the pool that the subscription was created for.
 **task_suite_id** | **string**<br/><br/>ID of a task suite.
-**assignment_id** | **string**<br/><br/>ID of the task suite assignment to a Toloker.
+**assignment_id** | **string**<br/><br/>ID of the assignment to a Toloker.
 **webhook_subscription_id** | **string**<br/><br/>ID of the subscription.
 **type** | <UsingWebhookSubscriptionsTable1/>
 
@@ -109,7 +109,7 @@ Parameter | Overview
 **confidence** | **integer**<br/><br/>Confidence in the aggregate response.
 **webhook_subscription_id** | **string**<br/><br/>ID of the subscription.
 **type** | **string**<br/><br/>Event type.<br/><br/>Possible value: `DYNAMIC_OVERLAP_COMPLETED` — An aggregated score appeared after dynamic overlap.
-**assignment_ids[]** | **array of strings**<br/><br/>IDs of task suite assignments to Tolokers.
+**assignment_ids[]** | **array of strings**<br/><br/>IDs of assignments to Tolokers.
 **output_values[]** | **array of objects**<br/><br/>Output data fields that contain the task text (`field_one`) and response.
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-using-webhook-subscriptions">Contact support</Button>
