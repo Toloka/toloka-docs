@@ -1,6 +1,6 @@
 ---
 title: "field.media-file — Template Builder | Toloka documentation"
-date: "2023-03-29T11:05:09.952930"
+date: "2023-05-26T15:52:01.329765"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,6 +8,7 @@ ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
+import TolokaTbSourceDataWithValues from '../subcomponents/toloka-tb-source/id-toloka-tb-source/data-with-values.mdx'
 import FieldMediaFileTable1 from './field.media-file/subcomponents/field.media-file-table-1.mdx'
 
 # field.media-file
@@ -33,7 +34,7 @@ After a Toloker submits the task, the files are saved in the app and gradually u
 **Name** | **Type** | **Description**
 ----- | ----- | -----
 `type`<span style="color: red">\*</span> | "field.media-file" | Set component type.
-`data`<span style="color: red">\*</span> | _writable_ | Data with values that will be processed or changed.
+`data`<span style="color: red">\*</span> | _writable_ | <TolokaTbSourceDataWithValues/>
 `label` | _string_ | Label above the component.
 `accept`<span style="color: red">\*</span> | _object_ | Adds different buttons for four types of uploads. Pass the `true` value for the ones that you need.<br/><br/>For example, if you need a button for uploading files from the gallery, add the `"gallery": true` property.
 `accept.fileSystem` | _boolean_ | Adds a button for uploading files from the file manager.

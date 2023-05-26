@@ -1,12 +1,14 @@
 ---
 title: "field.radio-group — Template Builder | Toloka documentation"
-date: "2023-03-29T11:05:07.130938"
+date: "2023-05-26T15:51:58.898413"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
 ogDescription: ""
 docsMenu: "defaultMenu"
 ---
+
+import TolokaTbSourceDataWithValues from '../subcomponents/toloka-tb-source/id-toloka-tb-source/data-with-values.mdx'
 
 # field.radio-group
 
@@ -21,7 +23,7 @@ The minimum number of buttons is one. Any type of data can be returned.
 **Name** | **Type** | **Description**
 ----- | ----- | -----
 `type`<span style="color: red">\*</span> | "field.radio-group" | Set component type.
-`data`<span style="color: red">\*</span> | _writable_ | Data with values that will be processed or changed.
+`data`<span style="color: red">\*</span> | _writable_ | <TolokaTbSourceDataWithValues/>
 `label` | _string_ | Label above the component.
 `disabled` | _boolean_ | This property prevents clicking the button. If the value is `true`, the button is not active (a Toloker will not be able to click it).
 `hint` | _string_ | Hint text.

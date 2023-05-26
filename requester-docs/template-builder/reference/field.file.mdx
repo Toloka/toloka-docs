@@ -1,6 +1,6 @@
 ---
 title: "field.file — Template Builder | Toloka documentation"
-date: "2023-03-29T11:05:10.326405"
+date: "2023-05-26T15:52:01.604816"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,6 +8,7 @@ ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
+import TolokaTbSourceDataWithValues from '../subcomponents/toloka-tb-source/id-toloka-tb-source/data-with-values.mdx'
 import FieldFileTable1 from './field.file/subcomponents/field.file-table-1.mdx'
 
 # field.file
@@ -27,7 +28,7 @@ In the task review mode, the uploaded images will appear automatically. You can 
 **Name** | **Type** | **Description**
 ----- | ----- | -----
 `type`<span style="color: red">\*</span> | "field.file" | Set component type.
-`data`<span style="color: red">\*</span> | _writable_ | Data with values that will be processed or changed.
+`data`<span style="color: red">\*</span> | _writable_ | <TolokaTbSourceDataWithValues/>
 `label` | _string_ | Label above the component.
 `accept` | _array_ | A list of file types that will be suggested to a Toloker when uploading. By default, you can upload any files.<br/><br/>Specify the types in the [MIME Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) format. For example, you can suggest uploading images by adding the `image/jpeg` and `image/png` types.
 `accept[]` | _string_ | File type in the [MIME Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) format.
