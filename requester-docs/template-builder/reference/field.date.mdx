@@ -1,6 +1,6 @@
 ---
 title: "field.date — Template Builder | Toloka documentation"
-date: "2023-03-29T11:05:11.367361"
+date: "2023-05-26T15:52:02.387200"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,6 +8,7 @@ ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
+import TolokaTbSourceDataWithValues from '../subcomponents/toloka-tb-source/id-toloka-tb-source/data-with-values.mdx'
 import FieldDateTable1 from './field.date/subcomponents/field.date-table-1.mdx'
 import FieldDateTable2 from './field.date/subcomponents/field.date-table-2.mdx'
 import FieldDateTable3 from './field.date/subcomponents/field.date-table-3.mdx'
@@ -23,7 +24,7 @@ You can set a list of dates that a Toloker can't select.
 **Name** | **Type** | **Description**
 ----- | ----- | -----
 `type`<span style="color: red">\*</span> | "field.date" | Set component type.
-`data`<span style="color: red">\*</span> | _writable_ | Data with values that will be processed or changed.
+`data`<span style="color: red">\*</span> | _writable_ | <TolokaTbSourceDataWithValues/>
 `label` | _string_ | Label above the component.
 `blockList` | _array_ | List of dates that a Toloker can't select.
 `blockList[]` | _string_ | Date that a Toloker cannot select.
