@@ -1,6 +1,6 @@
 ---
 title: "action.bulk — Template Builder | Toloka documentation"
-date: "2023-03-29T11:05:11.912290"
+date: "2023-06-05T10:45:35.554173"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -10,18 +10,26 @@ docsMenu: "defaultMenu"
 
 # action.bulk
 
-Use this component to call multiple actions at the same time, like to show more than one notification when a button is clicked.
+Use this component to call multiple [actions](/docs/template-builder/reference/actions) at the same time, like to show more than one notification when a button is clicked.
+
+Actions are invoked in the order in which they are listed. This means that if two actions write a value to the same variable, the variable will always have the second value.
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/jH6BvDpE3twfMn">View example</Button>
 
-Actions are invoked in the order in which they are listed. This means that if two actions write a value to the same variable, the variable will always have the second value.
+<Cut title="Components used in the example">
+
+- [view.list](/docs/template-builder/reference/view.list): Displays data in a list.
+- [view.text](/docs/template-builder/reference/view.text): Displays a text.
+- [view.action-button](/docs/template-builder/reference/view.action-button): Displays a button that calls an action.
+- [action.notify](/docs/template-builder/reference/action.notify): Adds a component that creates a message in the lower-left corner of the screen.
+
+</Cut>
 
 ## Component properties {#properties}
 
 **Name** | **Type** | **Description**
 ----- | ----- | -----
 `type`<span style="color: red">\*</span> | "action.bulk" | Set component type.
-`payload` | _array_ | An array of actions that you want to call.
-`payload[]` | _action_ | Action.
+`payload[]` | _array_ | An array of [actions](/docs/template-builder/reference/actions) that you want to call.
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=template-builder-reference-action-bulk">Contact support</Button>
