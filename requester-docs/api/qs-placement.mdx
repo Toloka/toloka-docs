@@ -71,8 +71,8 @@ You'll need the `id` to create pools in the project: specify it in the add pool 
 
 In the given code example, substitute the parameter values:
 
-- In the `project_id` parameter, replace `<project id>` with the ID of the project that the pool was created for (the ID received in response to the add project request).
-- In `will_expire`, replace `<close date>` with the UTC date and time in the ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`, specifying when the pool needs to be closed even if some task suites are not completed.
+- In the `project_id` parameter, replace `{project_id}` with the ID of the project that the pool was created for (the ID received in response to the add project request).
+- In `will_expire`, replace `{close_date}` with the UTC date and time in the ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`, specifying when the pool needs to be closed even if some task suites are not completed.
 
 Next, send a POST request to `/api/v1/pools`:
 
@@ -109,7 +109,7 @@ You'll need the `id` to add tasks to the pool: specify it in the upload tasks re
 In the given code example, substitute the parameter values:
 
 - In `input_values`, replace `<proxy name>`/`<folder name>`/`<file name N>.<type>` with specific values for the input data set in the project's `input_spec` parameter (in this example, these are paths to the images for labeling; place the image files on Yandex Disk and add it as a data source proxy).
-- In the `pool_id` parameter, replace `<pool id>` with the ID of the pool to upload the task to (the ID received in response to the add pool request).
+- In the `pool_id` parameter, replace `{pool_id}` with the ID of the pool to upload the task to (the ID received in response to the add pool request).
 
 Next, send a POST request to `/api/v1/tasks`:
 
@@ -128,7 +128,7 @@ Before you start the pool, go to the Toloka interface, select the pool, click **
 
 ### Request {#pool-run-request}
 
-In the `<pool_id>` path parameter, insert the ID of the pool to start (the ID received in response to the add pool request) and use the `POST` method:
+In the `{pool_id}` path parameter, insert the ID of the pool to start (the ID received in response to the add pool request) and use the `POST` method:
 
 <Tabs tabs={[
   { title: 'cURL', value: <QsPlacementList9/> },

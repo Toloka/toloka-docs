@@ -34,12 +34,12 @@ The sample project described under "Quick start" is for the sandbox. To set up t
     - [Create a project](/docs/api/qs-placement#project) (`POST /api/v1/projects`).
     - [Add a pool](/docs/api/qs-placement#pool) (`POST /api/v1/pools`).
     - [Upload the tasks](/docs/api/qs-placement#task) (`POST /api/v1/tasks`).
-    - [Start (open) the pool](/docs/api/qs-placement#pool-run) (`POST /api/v1/pools/<pool_id>/open`).
+    - [Start (open) the pool](/docs/api/qs-placement#pool-run) (`POST /api/v1/pools/{pool_id}/open`).
     - [Check the tasks from the Toloker's interface](/docs/api/qs-placement#check).
 
 1. Get the required results after the tasks are completed by the Tolokers.
 
-    - [Get responses](/docs/api/qs-results) (`GET /api/v1/assignments?pool_id=<pool_id>`).
+    - [Get responses](/docs/api/qs-results) (`GET /api/v1/assignments?pool_id={pool_id}`).
     - [Download attachments](https://toloka.ai/docs/api/api-reference/#get-/attachments) (`GET /api/v1/attachments`).
 
 ## What's next {#what-next}

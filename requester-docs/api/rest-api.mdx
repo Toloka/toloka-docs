@@ -15,30 +15,39 @@ import SocialMedia from '../subcomponents/social-media.mdx'
 
 Manage projects using Toloka API. Integrate Toloka methods into your own applications and automate your interaction with the Toloka platform.
 
-## [Toloka API](/docs/api/)
-
-Get access to projects with the help of Toloka API. Manage projects, pool, upload tasks, and get the results.
-
-- [Accessing the API](/docs/api/access)
-- [Quick start](/docs/api/quickstart)
-- [Projects](/docs/api/project)
-- [Pools](/docs/api/pool)
-- [Tasks](/docs/api/upload-tasks)
-
-## [Apps API](https://toloka.ai/docs/api/apps-reference)
-
-Apps API is used to power Toloka bespoke solutions. It has all the means to run your project and get the labeling results programmatically.
-
-- [Accessing the API](https://toloka.ai/docs/api/apps-reference/#overview--accessing-the-api)
-- [Quick start](/docs/apps-api/quickstart-api)
-- [Stream processing of task items](/docs/apps-api/streaming-items)
-- [Iterating results](/docs/apps-api/getting-items)
-- [API reference](https://toloka.ai/docs/api/apps-reference)
-
+<DocsCards
+  cards={[
+    {
+      title: "Toloka API",
+      description: "Get access to projects with the help of Toloka API. Manage projects, pool, upload tasks, and get the results.",
+      href: "",
+      links: [
+        { title: "Accessing the API", href: "https://toloka.ai/docs/api/api-reference/#overview--accessing-the-api" },
+        { title: "Quick start", href: "/docs/api/quickstart" },
+        { title: "Projects", href: "https://toloka.ai/docs/api/api-reference/#tag--project" },
+        { title: "Pools", href: "https://toloka.ai/docs/api/api-reference/#tag--pool" },
+        { title: "Tasks", href: "/docs/api/upload-tasks" },
+        { title: "API reference", href: "https://toloka.ai/docs/api/api-reference/" },
+      ],
+    },
+    {
+      title: "Apps API",
+      description: "Apps API is used to power Toloka bespoke solutions. It has all the means to run your project and get the labeling results programmatically.",
+      href: "",
+      links: [
+        { title: "Accessing the API", href: "https://toloka.ai/docs/api/apps-reference/#overview--accessing-the-api" },
+        { title: "Quick start", href: "/docs/apps-api/quickstart-api" },
+        { title: "Stream processing of task items", href: "/docs/apps-api/streaming-items" },
+        { title: "Iterating results", href: "/docs/apps-api/getting-items" },
+        { title: "API reference", href: "https://toloka.ai/docs/api/apps-reference/" },
+      ],
+    }
+  ]}
+/>
 
 ## Related pages
 
-<DocsMainCards
+<DocsCards
   cards={[
     {
       title: "Get started with Toloka",

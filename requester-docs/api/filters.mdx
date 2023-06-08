@@ -19,7 +19,7 @@ To set up Toloker filtering for a pool, add the `filter` JSON object to the pool
 
 <Note mode="note" title="Note">
 
-The JSON filter description must not exceed 10,000 characters.
+The JSON filter description must not exceed **10,000** characters.
 
 </Note>
 
@@ -72,5 +72,10 @@ Parameter | Overview
 `key` | _string_ \| **required**<br/><br/>Attribute to use for filtering Tolokers. For example, the country (`country`), or a skill (specify the skill ID).
 `operator` | <FiltersTable2/>
 `value` | _boolean_, _string_, _list of strings_, _integer_ \| **required**<br/><br/>The value of the attribute from the `key` field. For example, the ID of the region specified in the profile, or the minimum skill value. To choose the correct value, see the descriptions of filters in the sections [Filter by profile data](/docs/api/filter-profile), [Filter by calculated data](/docs/api/filter-computed), [Filter by skills](/docs/api/filter-skill).
+
+## See also {#see-also}
+
+- [Filters](/docs/guide/filters)
+- [Toloka-Kit recipe: Filter Tolokers](/docs/toloka-kit/recipes/filter-tolokers/)
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-filters">Contact support</Button>
