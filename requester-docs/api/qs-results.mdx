@@ -1,6 +1,6 @@
 ---
 title: "Receiving responses — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:31.057207"
+date: "2023-05-02T13:35:53.890066"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -34,7 +34,7 @@ In the example given, Tolokers were not required to upload any files as a respon
 
 ### Request {#get-responses-request}
 
-In the `pool_id` query parameter, replace `<pool id>` with the ID of the pool you want to get responses for (the ID received in response to the [add pool request](/docs/api/qs-placement#pool)).
+In the `pool_id` query parameter, replace `{pool_id}` with the ID of the pool you want to get responses for (the ID received in response to the [add pool request](/docs/api/qs-placement#pool)).
 
 Next, use the `GET` method:
 
@@ -207,9 +207,9 @@ Toloker responses are returned in the `items` array in the following format:
 
 ## Learn more {#links-qs-results}
 
-- [HTTP methods used for processing Toloker responses](/docs/api/get-response)
-- [HTTP methods used for processing files in Toloker responses](/docs/api/attachments)
-- [Response aggregation](/docs/api/aggregated-solutions)
-- [Using libraries](/docs/api/libraries)
+- [HTTP methods used for processing Toloker responses](https://toloka.ai/docs/api/api-reference/#tag--assignment)
+- [HTTP methods used for processing files in Toloker responses](https://toloka.ai/docs/api/api-reference/#tag--attachment)
+- [Response aggregation](https://toloka.ai/docs/api/api-reference/#tag--aggregated-solution)
+- [Using libraries](/docs/toloka-kit/python-sdk)
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-qs-results">Contact support</Button>

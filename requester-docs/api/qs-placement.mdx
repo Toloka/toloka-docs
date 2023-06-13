@@ -1,6 +1,6 @@
 ---
 title: "Posting tasks — Toloka API | Toloka documentation"
-date: "2023-02-17T14:32:35.848592"
+date: "2023-05-02T13:35:55.139132"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -44,7 +44,7 @@ Use the `POST /api/v1/projects` method:
   { title: 'Postman', value: <QsPlacementList4/> },
 ]}/>
 
-The example shows the basic parameters that are necessary to create a simple project. For a more detailed description of all request parameters, see [Create a project](/docs/api/create-prj).
+The example shows the basic parameters that are necessary to create a simple project. For a more detailed description of all request parameters, see [Create a project](https://toloka.ai/docs/api/api-reference/#post-/projects).
 
 ### Response {#project-response}
 
@@ -71,8 +71,8 @@ You'll need the `id` to create pools in the project: specify it in the add pool 
 
 In the given code example, substitute the parameter values:
 
-- In the `project_id` parameter, replace `<project id>` with the ID of the project that the pool was created for (the ID received in response to the add project request).
-- In `will_expire`, replace `<close date>` with the UTC date and time in the ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`, specifying when the pool needs to be closed even if some task suites are not completed.
+- In the `project_id` parameter, replace `{project_id}` with the ID of the project that the pool was created for (the ID received in response to the add project request).
+- In `will_expire`, replace `{close_date}` with the UTC date and time in the ISO 8601 format: `YYYY-MM-DDThh:mm:ss[.sss]`, specifying when the pool needs to be closed even if some task suites are not completed.
 
 Next, send a POST request to `/api/v1/pools`:
 
@@ -81,7 +81,7 @@ Next, send a POST request to `/api/v1/pools`:
   { title: 'Postman', value: <QsPlacementList6/> },
 ]}/>
 
-The example shows the basic parameters that are necessary to create a simple pool. For a more detailed description of all request parameters, see [Create a pool](/docs/api/create-pool).
+The example shows the basic parameters that are necessary to create a simple pool. For a more detailed description of all request parameters, see [Create a pool](https://toloka.ai/docs/api/api-reference/#post-/pools).
 
 ### Response {#pool-response}
 
@@ -109,7 +109,7 @@ You'll need the `id` to add tasks to the pool: specify it in the upload tasks re
 In the given code example, substitute the parameter values:
 
 - In `input_values`, replace `<proxy name>`/`<folder name>`/`<file name N>.<type>` with specific values for the input data set in the project's `input_spec` parameter (in this example, these are paths to the images for labeling; place the image files on Yandex Disk and add it as a data source proxy).
-- In the `pool_id` parameter, replace `<pool id>` with the ID of the pool to upload the task to (the ID received in response to the add pool request).
+- In the `pool_id` parameter, replace `{pool_id}` with the ID of the pool to upload the task to (the ID received in response to the add pool request).
 
 Next, send a POST request to `/api/v1/tasks`:
 
@@ -118,7 +118,7 @@ Next, send a POST request to `/api/v1/tasks`:
   { title: 'Postman', value: <QsPlacementList8/> },
 ]}/>
 
-The example shows the basic parameters that are necessary to upload simple tasks. For a more detailed description of each task parameter, see [Create one or multiple tasks](/docs/api/create-task).
+The example shows the basic parameters that are necessary to upload simple tasks. For a more detailed description of each task parameter, see [Create one or multiple tasks](https://toloka.ai/docs/api/api-reference/#post-/tasks).
 
 ## Start the pool {#pool-run}
 
@@ -128,7 +128,7 @@ Before you start the pool, go to the Toloka interface, select the pool, click **
 
 ### Request {#pool-run-request}
 
-In the `<pool_id>` path parameter, insert the ID of the pool to start (the ID received in response to the add pool request) and use the `POST` method:
+In the `{pool_id}` path parameter, insert the ID of the pool to start (the ID received in response to the add pool request) and use the `POST` method:
 
 <Tabs tabs={[
   { title: 'cURL', value: <QsPlacementList9/> },
@@ -145,8 +145,8 @@ Read the [instructions on how to get results](/docs/api/qs-results).
 
 ## Learn more {#links-qs-placement}
 
-- [HTTP methods for working with projects](/docs/api/project)
-- [HTTP methods for working with pools](/docs/api/pool)
-- [HTTP methods for uploading tasks](/docs/api/tasks)
+- [HTTP methods for working with projects](https://toloka.ai/docs/api/api-reference/#tag--project)
+- [HTTP methods for working with pools](https://toloka.ai/docs/api/api-reference/#tag--pool)
+- [HTTP methods for uploading tasks](https://toloka.ai/docs/api/api-reference/#tag--task)
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-qs-placement">Contact support</Button>

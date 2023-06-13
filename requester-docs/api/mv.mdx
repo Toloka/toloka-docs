@@ -1,6 +1,6 @@
 ---
 title: "Majority vote — Toloka API | Toloka documentation"
-date: "2023-04-06T13:56:16.927903"
+date: "2023-05-02T16:13:17.592281"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -24,8 +24,6 @@ import MvTable7 from './mv/subcomponents/mv-table-7.mdx'
 import MvTable8 from './mv/subcomponents/mv-table-8.mdx'
 
 # Majority vote
-
-## Overview {#about}
 
 Majority vote is a quality control method based on matching responses from the majority of Tolokers who complete the same task. The response chosen by the majority is considered correct, and other responses are considered incorrect. Depending on the percentage of correct responses, you can either increase the Toloker's skill value, or ban the Toloker from tasks.
 
@@ -114,33 +112,34 @@ To set a different ban period, change the <Term term="duration-unit"><DurationUn
 
 Parameter | Overview
 ----- | -----
-**configs[]** | **array of objects \| required**<br/><br/>Array of quality control settings.
-**configs[].collector_config** | **object \| required**<br/><br/>Parameters for collecting statistics (for example, the number of tasks skipped in the pool).
-**configs[].collector_config.type** | <MvTable1/>
-**configs[].collector_config. parameters** | <MvTable2/>
-**configs[].collector_config. parameters.answer_threshold** | **integer \| required**<br/><br/>The number of Tolokers considered the majority (for example, 3 out of 5).
-**configs[].collector_config. parameters.history_size** | **integer \| required**<br/><br/>The maximum number of the Toloker's recent responses in the project to use for calculating the percentage of correct responses.<br/><br/>If this field is omitted, the calculation is based on all the Toloker's responses in the pool.
-**configs[].rules** | **object \| required**<br/><br/><ConfigsRules/>
-**configs[].rules.conditions** | **object \| required**<br/><br/>Conditions (for example, 10 task suites skipped in a row). Multiple conditions are combined with the "OR" operator.
-**configs[].rules.conditions.key** | <MvTable3/>
-**configs[].rules.conditions. operator** | <MvTable4/>
-**configs[].rules.conditions. value** | **integer \| required**<br/><br/>The threshold value of the variable specified in `key`.
-**configs[].rules.action** | **object \| required**<br/><br/>The action to perform if conditions are met (for example, block access to the project).
-**configs[].rules.action.type** | <MvTable5/>
-**configs[].rules.action. parameters** | **object \| required**<br/><br/>Action parameters.
-**configs[].rules.action. parameters.scope** | <MvTable6/>
-**configs[].rules.action. parameters.skill_id** | **string \| required if**<br/><br/>Required if `type=SET_SKILL_FROM_OUTPUT_FIELD`.<br/><br/>ID of the skill to update as tasks are completed.
-**configs[].rules.action. parameters.from_field** | <MvTable7/>
-**configs[].rules.action. parameters.skill_value** | **integer \| required if**<br/><br/>Required if `type=SET_SKILL_FROM_OUTPUT_FIELD`.<br/><br/>A fixed value to assign to the skill (a number from 0 to 100).
-**configs[].rules.action. parameters.delta** | **integer \| required if**<br/><br/>Required if `type=CHANGE_OVERLAP`.<br/><br/>The value determines the amount to change the overlap by.
-**configs[].rules.action. parameters.public_comment** | **string \| required if**<br/><br/>Required if `type=REJECT_ALL_ASSIGNMENTS`.<br/><br/>Comments (the reason for rejecting responses). Available to the requester and the Toloker.
-**configs[].rules.action. parameters.duration_unit** | **string**<br/><br/><DurationUnit/>
-**configs[].rules.action.parameters.duration**  | **integer**<br/><br/><Duration/>
-**configs[].rules. action.parameters. private_comment** | **string**<br/><br/>Comments (the reason for blocking access). Visible only to the requester.
-**configs[].rules.action. parameters.open_pool** | <MvTable8/>
+`configs[]` | _array of objects_ \| **required**<br/><br/>Array of quality control settings.
+`configs[].collector_config` | _object_ \| **required**<br/><br/>Parameters for collecting statistics (for example, the number of tasks skipped in the pool).
+`configs[].collector_config.type` | <MvTable1/>
+`configs[].collector_config.parameters` | <MvTable2/>
+`configs[].collector_config.parameters.answer_threshold` | _integer_ \| **required**<br/><br/>The number of Tolokers considered the majority (for example, 3 out of 5).
+`configs[].collector_config.parameters.history_size` | _integer_ \| **required**<br/><br/>The maximum number of the Toloker's recent responses in the project to use for calculating the percentage of correct responses.<br/><br/>If this field is omitted, the calculation is based on all the Toloker's responses in the pool.
+`configs[].rules` | _object_ \| **required**<br/><br/><ConfigsRules/>
+`configs[].rules.conditions` | _object_ \| **required**<br/><br/>Conditions (for example, 10 task suites skipped in a row). Multiple conditions are combined with the "OR" operator.
+`configs[].rules.conditions.key` | <MvTable3/>
+`configs[].rules.conditions.operator` | <MvTable4/>
+`configs[].rules.conditions.value` | _integer_ \| **required**<br/><br/>The threshold value of the variable specified in `key`.
+`configs[].rules.action` | _object_ \| **required**<br/><br/>The action to perform if conditions are met (for example, block access to the project).
+`configs[].rules.action.type` | <MvTable5/>
+`configs[].rules.action.parameters` | _object_ \| **required**<br/><br/>Action parameters.
+`configs[].rules.action.parameters.scope` | <MvTable6/>
+`configs[].rules.action.parameters.skill_id` | _string_ \| **required if**<br/><br/>Required if `type=SET_SKILL_FROM_OUTPUT_FIELD`.<br/><br/>ID of the skill to update as tasks are completed.
+`configs[].rules.action.parameters.from_field` | <MvTable7/>
+`configs[].rules.action.parameters.skill_value` | _integer_ \| **required if**<br/><br/>Required if `type=SET_SKILL_FROM_OUTPUT_FIELD`.<br/><br/>A fixed value to assign to the skill (a number from 0 to 100).
+`configs[].rules.action.parameters.delta` | _integer_ \| **required if**<br/><br/>Required if `type=CHANGE_OVERLAP`.<br/><br/>The value determines the amount to change the overlap by.
+`configs[].rules.action.parameters.public_comment` | _string_ \| **required if**<br/><br/>Required if `type=REJECT_ALL_ASSIGNMENTS`.<br/><br/>Comments (the reason for rejecting responses). Available to the requester and the Toloker.
+`configs[].rules.action.parameters.duration_unit` | _string_<br/><br/><DurationUnit/>
+`configs[].rules.action.parameters.duration` | _integer_<br/><br/><Duration/>
+`configs[].rules.action.parameters.private_comment` | _string_<br/><br/>Comments (the reason for blocking access). Visible only to the requester.
+`configs[].rules.action.parameters.open_pool` | <MvTable8/>
 
 ## See also {#see-also}
 
 - [Majority vote](/docs/guide/mvote)
+- [Toloka-Kit recipe: Use quality control rules](/docs/toloka-kit/recipes/use-quality-control-rules/)
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-mv">Contact support</Button>

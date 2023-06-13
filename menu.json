@@ -1615,11 +1615,11 @@
     },
     {
       "title": "Accessing the API",
-      "href": "/docs/api/access"
+      "href": "https://toloka.ai/docs/api/api-reference/#overview--accessing-the-api"
     },
     {
       "title": "Rate limiting",
-      "href": "/docs/api/rate-limiting"
+      "href": "https://toloka.ai/docs/api/api-reference/#overview--rate-limiting"
     },
     {
       "title": "Quick start",
@@ -1639,133 +1639,89 @@
       ]
     },
     {
-      "title": "Reference"
+      "title": "Configuration for Template Builder",
+      "href": "/docs/api/tb-config"
     },
     {
-      "title": "Project",
+      "title": "Toloker selection",
+      "href": "/docs/api/my_users"
+    },
+    {
+      "title": "Quality control rules",
       "subItems": [
         {
           "title": "Overview",
-          "href": "/docs/api/project"
+          "href": "/docs/api/quality_control"
         },
         {
-          "title": "Create a project",
-          "subItems": [
-            {
-              "title": "Overview",
-              "href": "/docs/api/create-prj"
-            },
-            {
-              "title": "Configuration for Template Builder",
-              "href": "/docs/api/tb-config"
-            }
-          ]
+          "title": "Control tasks",
+          "href": "/docs/api/goldenset"
         },
         {
-          "title": "Edit a project",
-          "href": "/docs/api/edit-prj"
+          "title": "Majority vote",
+          "href": "/docs/api/mv"
         },
         {
-          "title": "Get the list of projects",
-          "href": "/docs/api/get-prj-list"
+          "title": "Compensation amount",
+          "href": "/docs/api/earn_limit"
         },
         {
-          "title": "Get project properties",
-          "href": "/docs/api/get-prj"
+          "title": "Skipped assignments",
+          "href": "/docs/api/skipped"
         },
         {
-          "title": "Archive a project",
-          "href": "/docs/api/archive-prj"
+          "title": "Number of tasks completed",
+          "href": "/docs/api/completed"
+        },
+        {
+          "title": "Fast responses",
+          "href": "/docs/api/fast"
+        },
+        {
+          "title": "Rejected tasks",
+          "href": "/docs/api/accept_ban"
+        },
+        {
+          "title": "Processing rejected and accepted assignments",
+          "href": "/docs/api/reassessment"
+        },
+        {
+          "title": "Recompletion of assignments",
+          "href": "/docs/api/restore-task-overlap"
         }
       ]
     },
     {
-      "title": "Pools",
+      "title": "Filters",
       "subItems": [
         {
           "title": "Overview",
-          "href": "/docs/api/pool"
+          "href": "/docs/api/filters"
         },
         {
-          "title": "Create a pool",
-          "href": "/docs/api/create-pool"
+          "title": "Filter by profile data",
+          "href": "/docs/api/filter-profile"
         },
         {
-          "title": "Close a pool for editing",
-          "href": "/docs/api/close-pool-for-update"
+          "title": "Filter by computed data",
+          "href": "/docs/api/filter-computed"
         },
         {
-          "title": "Edit a pool",
-          "href": "/docs/api/edit-pool"
-        },
-        {
-          "title": "Open a pool",
-          "href": "/docs/api/open-pool"
-        },
-        {
-          "title": "Close a pool",
-          "href": "/docs/api/close-pool"
-        },
-        {
-          "title": "Move a pool to the archive",
-          "href": "/docs/api/archive-pool"
-        },
-        {
-          "title": "Clone a pool",
-          "href": "/docs/api/clone-pool"
-        },
-        {
-          "title": "Get the list of pools",
-          "href": "/docs/api/get-pool-list"
-        },
-        {
-          "title": "Get properties of a pool",
-          "href": "/docs/api/get-pool"
-        },
-        {
-          "title": "Change pool priority",
-          "href": "/docs/api/set-priority-pool"
+          "title": "Filter by skills",
+          "href": "/docs/api/filter-skill"
         }
       ]
     },
     {
-      "title": "Training",
+      "title": "Task actions",
       "subItems": [
         {
-          "title": "Overview",
-          "href": "/docs/api/training"
+          "title": "Ways to upload tasks",
+          "href": "/docs/api/upload-tasks"
         },
         {
-          "title": "Create a training pool",
-          "href": "/docs/api/create-training"
-        },
-        {
-          "title": "Edit a training pool",
-          "href": "/docs/api/edit-training"
-        },
-        {
-          "title": "Open a training",
-          "href": "/docs/api/open-training"
-        },
-        {
-          "title": "Close a training",
-          "href": "/docs/api/close-training"
-        },
-        {
-          "title": "Archive a training pool",
-          "href": "/docs/api/archive-training"
-        },
-        {
-          "title": "Clone a training pool",
-          "href": "/docs/api/clone-training"
-        },
-        {
-          "title": "Get a list of training pools",
-          "href": "/docs/api/get-training-list"
-        },
-        {
-          "title": "Get training properties",
-          "href": "/docs/api/get-training"
+          "title": "Merging tasks",
+          "href": "/docs/api/tasks"
         }
       ]
     },
@@ -1773,32 +1729,8 @@
       "title": "Subscriptions to events",
       "subItems": [
         {
-          "title": "Overview",
-          "href": "/docs/api/webhook-subscriptions"
-        },
-        {
-          "title": "Create a subscription",
-          "href": "/docs/api/put-webhook-subscriptions"
-        },
-        {
-          "title": "Get a subscription",
-          "href": "/docs/api/get-webhook-subscriptions"
-        },
-        {
-          "title": "Get a list of subscriptions",
-          "href": "/docs/api/get-webhook-subscriptions-list"
-        },
-        {
-          "title": "Delete a subscription",
-          "href": "/docs/api/delete-webhook-subscriptions"
-        },
-        {
           "title": "Notification format",
           "href": "/docs/api/using-webhook-subscriptions"
-        },
-        {
-          "title": "Send a test notification",
-          "href": "/docs/api/post-webhook-subscriptions"
         },
         {
           "title": "Event authentication",
@@ -1807,370 +1739,439 @@
       ]
     },
     {
-      "title": "Toloker selection",
+      "title": "Reference"
+    },
+    {
+      "title": "Project",
       "subItems": [
         {
           "title": "Overview",
-          "href": "/docs/api/my_users"
+          "href": "https://toloka.ai/docs/api/api-reference/#tag--project"
         },
         {
-          "title": "Skills",
-          "subItems": [
-            {
-              "title": "Overview",
-              "href": "/docs/api/skill"
-            },
-            {
-              "title": "Create a skill",
-              "href": "/docs/api/create-skill"
-            },
-            {
-              "title": "Edit a skill",
-              "href": "/docs/api/edit-skill"
-            },
-            {
-              "title": "Get the list of skills",
-              "href": "/docs/api/get-skill-list"
-            },
-            {
-              "title": "Get the skill ID",
-              "href": "/docs/api/get-skill"
-            },
-            {
-              "title": "Set the skill value",
-              "href": "/docs/api/set-skill"
-            },
-            {
-              "title": "Get a list of Tolokers who have skills",
-              "href": "/docs/api/get-user-skill-list"
-            },
-            {
-              "title": "Get a Toloker's skill value",
-              "href": "/docs/api/get-user-skill"
-            },
-            {
-              "title": "Remove a skill for a Toloker",
-              "href": "/docs/api/delete-skill"
-            }
-          ]
+          "title": "Get list of projects",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/projects"
         },
         {
-          "title": "Quality control rules",
-          "subItems": [
-            {
-              "title": "Overview",
-              "href": "/docs/api/quality_control"
-            },
-            {
-              "title": "Control tasks",
-              "href": "/docs/api/goldenset"
-            },
-            {
-              "title": "Majority vote",
-              "href": "/docs/api/mv"
-            },
-            {
-              "title": "Compensation amount",
-              "href": "/docs/api/earn_limit"
-            },
-            {
-              "title": "Skipped assignments",
-              "href": "/docs/api/skipped"
-            },
-            {
-              "title": "Number of tasks completed",
-              "href": "/docs/api/completed"
-            },
-            {
-              "title": "Fast responses",
-              "href": "/docs/api/fast"
-            },
-            {
-              "title": "Rejected tasks",
-              "href": "/docs/api/accept_ban"
-            },
-            {
-              "title": "Processing rejected and accepted assignments",
-              "href": "/docs/api/reassessment"
-            },
-            {
-              "title": "Recompletion of assignments",
-              "href": "/docs/api/restore-task-overlap"
-            }
-          ]
+          "title": "Create project",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/projects"
         },
         {
-          "title": "Filters",
-          "subItems": [
-            {
-              "title": "Overview",
-              "href": "/docs/api/filters"
-            },
-            {
-              "title": "Filter by profile data",
-              "href": "/docs/api/filter-profile"
-            },
-            {
-              "title": "Filter by computed data",
-              "href": "/docs/api/filter-computed"
-            },
-            {
-              "title": "Filter by skills",
-              "href": "/docs/api/filter-skill"
-            }
-          ]
+          "title": "Get project by ID",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/projects/-id-"
+        },
+        {
+          "title": "Edit project",
+          "href": "https://toloka.ai/docs/api/api-reference/#put-/projects/-id-"
+        },
+        {
+          "title": "Archive project",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/projects/-id-/archive"
+        }
+      ]
+    },
+    {
+      "title": "Pool",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "https://toloka.ai/docs/api/api-reference/#tag--pool"
+        },
+        {
+          "title": "Get list of pools",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/pools"
+        },
+        {
+          "title": "Create pool",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/pools"
+        },
+        {
+          "title": "Get pool by ID",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/pools/-id-"
+        },
+        {
+          "title": "Edit pool",
+          "href": "https://toloka.ai/docs/api/api-reference/#put-/pools/-id-"
+        },
+        {
+          "title": "Change pool priority",
+          "href": "https://toloka.ai/docs/api/api-reference/#patch-/pools/-id-"
+        },
+        {
+          "title": "Archive pool",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/pools/-id-/archive"
+        },
+        {
+          "title": "Clone pool",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/pools/-id-/clone"
+        },
+        {
+          "title": "Close pool",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/pools/-id-/close"
+        },
+        {
+          "title": "Close pool for editing",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/pools/-id-/close-for-update"
+        },
+        {
+          "title": "Open pool",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/pools/-id-/open"
+        }
+      ]
+    },
+    {
+      "title": "Training",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "https://toloka.ai/docs/api/api-reference/#tag--training"
+        },
+        {
+          "title": "Get list of training pools",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/trainings"
+        },
+        {
+          "title": "Create training pool",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/trainings"
+        },
+        {
+          "title": "Get training by ID",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/trainings/-id-"
+        },
+        {
+          "title": "Edit training pool",
+          "href": "https://toloka.ai/docs/api/api-reference/#put-/trainings/-id-"
+        },
+        {
+          "title": "Archive training pool",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/trainings/-id-/archive"
+        },
+        {
+          "title": "Clone training pool",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/trainings/-id-/clone"
+        },
+        {
+          "title": "Close training",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/trainings/-id-/close"
+        },
+        {
+          "title": "Close training for editing",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/trainings/-id-/close-for-update"
+        },
+        {
+          "title": "Open training",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/trainings/-id-/open"
+        }
+      ]
+    },
+    {
+      "title": "Webhook-subscription",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "https://toloka.ai/docs/api/api-reference/#tag--webhook-subscription"
+        },
+        {
+          "title": "Get list of subscriptions",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/webhook-subscriptions"
+        },
+        {
+          "title": "Create subscription",
+          "href": "https://toloka.ai/docs/api/api-reference/#put-/webhook-subscriptions"
+        },
+        {
+          "title": "Get subscription by ID",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/webhook-subscriptions/-id-"
+        },
+        {
+          "title": "Delete subscription",
+          "href": "https://toloka.ai/docs/api/api-reference/#delete-/webhook-subscriptions/-id-"
+        },
+        {
+          "title": "Send test notification",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/webhook-subscriptions/-id-/test"
+        }
+      ]
+    },
+    {
+      "title": "Skill",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "https://toloka.ai/docs/api/api-reference/#tag--skill"
+        },
+        {
+          "title": "Get list of skills",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/skills"
+        },
+        {
+          "title": "Create skill",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/skills"
+        },
+        {
+          "title": "Get skill by ID",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/skills/-id-"
+        },
+        {
+          "title": "Edit skill",
+          "href": "https://toloka.ai/docs/api/api-reference/#put-/skills/-id-"
+        },
+        {
+          "title": "Get list of Toloker skills",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/user-skills"
+        },
+        {
+          "title": "Set skill",
+          "href": "https://toloka.ai/docs/api/api-reference/#put-/user-skills"
+        },
+        {
+          "title": "Get Toloker skill by ID",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/user-skills/-id-"
+        },
+        {
+          "title": "Remove skill from Toloker",
+          "href": "https://toloka.ai/docs/api/api-reference/#delete-/user-skills/-id-"
+        }
+      ]
+    },
+    {
+      "title": "User-restriction",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "https://toloka.ai/docs/api/api-reference/#tag--user-restriction"
+        },
+        {
+          "title": "Get list of bans",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/user-restrictions"
         },
         {
           "title": "Block access to tasks",
-          "subItems": [
-            {
-              "title": "Overview",
-              "href": "/docs/api/ban"
-            },
-            {
-              "title": "Block access to tasks",
-              "href": "/docs/api/ban-create"
-            },
-            {
-              "title": "Get a list of bans",
-              "href": "/docs/api/ban-get-list"
-            },
-            {
-              "title": "Get information about a ban",
-              "href": "/docs/api/ban-get-info"
-            },
-            {
-              "title": "Unblock access",
-              "href": "/docs/api/ban-delete"
-            }
-          ]
+          "href": "https://toloka.ai/docs/api/api-reference/#put-/user-restrictions"
+        },
+        {
+          "title": "Get ban by ID",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/user-restrictions/-id-"
+        },
+        {
+          "title": "Unblock access",
+          "href": "https://toloka.ai/docs/api/api-reference/#delete-/user-restrictions/-id-"
         }
       ]
     },
     {
-      "title": "Ways to upload tasks",
-      "href": "/docs/api/upload-tasks"
-    },
-    {
-      "title": "Tasks",
+      "title": "Task",
       "subItems": [
         {
           "title": "Overview",
-          "href": "/docs/api/tasks"
+          "href": "https://toloka.ai/docs/api/api-reference/#tag--task"
         },
         {
-          "title": "Create one or multiple tasks",
-          "href": "/docs/api/create-task"
+          "title": "Get list of tasks",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/tasks"
         },
         {
-          "title": "Get the list of tasks",
-          "href": "/docs/api/get-tasks-list"
+          "title": "Create single/multiple tasks",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/tasks"
         },
         {
-          "title": "Get a task",
-          "href": "/docs/api/get-task"
+          "title": "Get task by ID",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/tasks/-id-"
         },
         {
-          "title": "Edit a task",
-          "href": "/docs/api/edit-task-overlap"
+          "title": "Edit task",
+          "href": "https://toloka.ai/docs/api/api-reference/#patch-/tasks/-id-"
         },
         {
-          "title": "Stop assigning a task",
-          "href": "/docs/api/set-min-task-overlap"
+          "title": "Stop assigning task",
+          "href": "https://toloka.ai/docs/api/api-reference/#patch-/tasks/-id-/set-overlap-or-min"
         }
       ]
     },
     {
-      "title": "Task suites",
+      "title": "Task-suite",
       "subItems": [
         {
           "title": "Overview",
-          "href": "/docs/api/task-suite"
+          "href": "https://toloka.ai/docs/api/api-reference/#tag--task-suite"
         },
         {
-          "title": "Create one or multiple task suites",
-          "href": "/docs/api/create-task-suite"
+          "title": "Get list of task suites",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/task-suites"
         },
         {
-          "title": "Get the list of task suites",
-          "href": "/docs/api/get-task-suite-list"
+          "title": "Create single/multiple task suites",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/task-suites"
         },
         {
-          "title": "Get a task suite",
-          "href": "/docs/api/get-task-suite"
+          "title": "Get task suite by ID",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/task-suites/-id-"
         },
         {
-          "title": "Change the task suite overlap",
-          "href": "/docs/api/edit-overlap"
+          "title": "Edit task suite overlap or priority",
+          "href": "https://toloka.ai/docs/api/api-reference/#patch-/task-suites/-id-"
         },
         {
-          "title": "Change task suite priority",
-          "href": "/docs/api/edit-order"
-        },
-        {
-          "title": "Stop assigning a task suite",
-          "href": "/docs/api/set-min-suite-overlap"
+          "title": "Stop assigning task suite",
+          "href": "https://toloka.ai/docs/api/api-reference/#patch-/task-suites/-id-/set-overlap-or-min"
         }
       ]
     },
     {
-      "title": "Tracking operations",
+      "title": "Operation",
       "subItems": [
         {
           "title": "Overview",
-          "href": "/docs/api/operations"
+          "href": "https://toloka.ai/docs/api/api-reference/#tag--operation"
         },
         {
-          "title": "Get the list of operations",
-          "href": "/docs/api/get-operations-list"
+          "title": "Get list of operations",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/operations"
         },
         {
-          "title": "Get operation details",
-          "href": "/docs/api/get-operation"
+          "title": "Get operation by ID",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/operations/-id-"
         },
         {
-          "title": "Get the operation log",
-          "href": "/docs/api/get-operation-log"
+          "title": "Get operation log",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/operations/-id-/log"
         }
       ]
     },
     {
-      "title": "Getting responses",
+      "title": "Assignment",
       "subItems": [
         {
           "title": "Overview",
-          "href": "/docs/api/get-response"
+          "href": "https://toloka.ai/docs/api/api-reference/#tag--assignment"
         },
         {
-          "title": "Get responses",
-          "href": "/docs/api/result"
+          "title": "Get list of responses",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/assignments"
         },
         {
-          "title": "Get response properties",
-          "href": "/docs/api/get-assignment-id"
+          "title": "Get response by ID",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/assignments/-id-"
         },
         {
-          "title": "Files in responses",
-          "subItems": [
-            {
-              "title": "Overview",
-              "href": "/docs/api/attachments"
-            },
-            {
-              "title": "Get the list of files",
-              "href": "/docs/api/get-attachment-list"
-            },
-            {
-              "title": "Get file metadata",
-              "href": "/docs/api/get-attachment"
-            },
-            {
-              "title": "Download file",
-              "href": "/docs/api/download-attachment"
-            }
-          ]
-        },
-        {
-          "title": "Aggregated responses",
-          "subItems": [
-            {
-              "title": "Overview",
-              "href": "/docs/api/aggregated-solutions"
-            },
-            {
-              "title": "Aggregate responses in a pool",
-              "href": "/docs/api/aggregate-by-pool"
-            },
-            {
-              "title": "Aggregate responses to a single task",
-              "href": "/docs/api/aggregate-by-task"
-            },
-            {
-              "title": "Get aggregated results",
-              "href": "/docs/api/get-aggregated-result"
-            }
-          ]
+          "title": "Update response",
+          "href": "https://toloka.ai/docs/api/api-reference/#patch-/assignments/-id-"
         }
       ]
     },
     {
-      "title": "Checking completed tasks",
-      "href": "/docs/api/accept"
-    },
-    {
-      "title": "Bonuses",
+      "title": "Attachment",
       "subItems": [
         {
           "title": "Overview",
-          "href": "/docs/api/bonus"
+          "href": "https://toloka.ai/docs/api/api-reference/#tag--attachment"
+        },
+        {
+          "title": "Get list of files",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/attachments"
+        },
+        {
+          "title": "Get file metadata",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/attachments/-id-"
+        },
+        {
+          "title": "Download file",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/attachments/-id-/download"
+        }
+      ]
+    },
+    {
+      "title": "Aggregated-solution",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "https://toloka.ai/docs/api/api-reference/#tag--aggregated-solution"
+        },
+        {
+          "title": "Get list of aggregated results",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/aggregated-solutions/-operationId-"
+        },
+        {
+          "title": "Aggregate responses in pool",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/aggregated-solutions/aggregate-by-pool"
+        },
+        {
+          "title": "Aggregate responses to single task",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/aggregated-solutions/aggregate-by-task"
+        }
+      ]
+    },
+    {
+      "title": "User-bonus",
+      "subItems": [
+        {
+          "title": "Overview",
+          "href": "https://toloka.ai/docs/api/api-reference/#tag--user-bonus"
+        },
+        {
+          "title": "Get list of bonuses",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/user-bonuses"
         },
         {
           "title": "Issue bonuses",
-          "href": "/docs/api/create-bonus"
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/user-bonuses"
         },
         {
-          "title": "Get a list of bonuses issued",
-          "href": "/docs/api/get-bonus-list"
-        },
-        {
-          "title": "Get bonus properties",
-          "href": "/docs/api/get-one-bonus"
+          "title": "Get bonus by ID",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/user-bonuses/-userBonusId-"
         }
       ]
     },
     {
-      "title": "Messages for Tolokers",
+      "title": "Message-thread",
       "subItems": [
         {
           "title": "Overview",
-          "href": "/docs/api/messages"
+          "href": "https://toloka.ai/docs/api/api-reference/#tag--message-thread"
         },
         {
-          "title": "To send a message",
-          "href": "/docs/api/message-send"
+          "title": "Get list of message threads",
+          "href": "https://toloka.ai/docs/api/api-reference/#get-/message-threads"
         },
         {
-          "title": "Get a list of message threads",
-          "href": "/docs/api/get-chain-list"
+          "title": "Add message thread",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/message-threads/-id-/add-to-folders"
+        },
+        {
+          "title": "Remove message thread",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/message-threads/-id-/remove-from-folders"
         },
         {
           "title": "Reply to message thread",
-          "href": "/docs/api/reply-message"
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/message-threads/-id-/reply"
         },
         {
-          "title": "Move a message thread",
-          "href": "/docs/api/move-message"
+          "title": "Send message",
+          "href": "https://toloka.ai/docs/api/api-reference/#post-/message-threads/compose"
         }
       ]
     },
     {
-      "title": "Various parameters",
+      "title": "User-metadata",
       "subItems": [
         {
-          "title": "Get user metadata",
-          "href": "/docs/api/get-user-metadata"
-        },
-        {
-          "title": "Account balance",
-          "href": "/docs/api/balance"
-        },
-        {
-          "title": "Handling errors",
-          "href": "/docs/api/errors"
-        },
-        {
-          "title": "Standard query parameters",
-          "href": "/docs/api/standard-query-parameters"
-        },
-        {
-          "title": "Sorting the list of objects",
-          "href": "/docs/api/sorting"
+          "title": "Get Toloker metadata",
+          "href": "https://toloka.ai/docs/api/api-reference/#tag--user-metadata"
         }
       ]
     },
     {
-      "title": "Libraries",
-      "href": "/docs/api/libraries"
+      "title": "Requester",
+      "subItems": [
+        {
+          "title": "Get account balance",
+          "href": "https://toloka.ai/docs/api/api-reference/#tag--requester"
+        }
+      ]
+    },
+    {
+      "title": "All classes and methods",
+      "href": "https://toloka.ai/docs/api/api-reference/api-list.html"
     }
   ],
   "ckitMenu": [
@@ -2802,7 +2803,7 @@
     },
     {
       "title": "Accessing the API",
-      "href": "/docs/apps-api/authorization"
+      "href": "https://toloka.ai/docs/api/apps-reference/#overview--accessing-the-api"
     },
     {
       "title": "API quick start",
