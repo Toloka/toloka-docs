@@ -1,6 +1,6 @@
 ---
 title: "get_apps — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:26.708093"
+date: "2023-06-20T13:46:35.684494"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # get_apps
-`toloka.client.TolokaClient.get_apps` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/__init__.py#L3705)
+
+`toloka.client.TolokaClient.get_apps` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L3883)
 
 Finds all App solutions that match certain criteria.
 
@@ -17,7 +18,7 @@ Finds all App solutions that match certain criteria.
 
 If you need to sort solutions use the [find_apps](/docs/toloka-kit/reference/toloka.client.TolokaClient.find_apps) method.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
@@ -40,3 +41,11 @@ If you need to sort solutions use the [find_apps](/docs/toloka-kit/reference/tol
 * **Yield type:**
 
   Generator\[[App](/docs/toloka-kit/reference/toloka.client.app.App), None, None\]
+
+**Examples:**
+
+```python
+apps = toloka_client.get_apps()
+for app in apps:
+    print(app.id, app.name)
+```

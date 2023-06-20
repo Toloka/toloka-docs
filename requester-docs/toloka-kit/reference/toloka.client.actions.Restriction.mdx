@@ -1,6 +1,6 @@
 ---
 title: "Restriction — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:58.802931"
+date: "2023-06-20T13:47:21.966162"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # Restriction
-`toloka.client.actions.Restriction` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/actions.py#L38)
+
+`toloka.client.actions.Restriction` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/actions.py#L38)
 
 ```python
 Restriction(
@@ -25,10 +26,10 @@ Restricts Toloker's access to projects or pools.
 
 To have better control over restriction period use [RestrictionV2](/docs/toloka-kit/reference/toloka.client.actions.RestrictionV2).
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`scope`|**Union\[[UserRestriction.Scope](/docs/toloka-kit/reference/toloka.client.user_restriction.UserRestriction.Scope), str, None\]**|<ul> <li>`POOL` — A Toloker can&#x27;t access the pool if the action is applied.</li> <li>`PROJECT` — A Toloker can&#x27;t access the entire project containing the pool.</li> <li>`ALL_PROJECTS` — A Toloker can&#x27;t access any requester&#x27;s project.</li> </ul>
+`scope`|**Union\[[UserRestriction.Scope](/docs/toloka-kit/reference/toloka.client.user_restriction.UserRestriction.Scope), str, None\]**|<ul> <li>`POOL` — A Toloker can't access the pool if the action is applied.</li> <li>`PROJECT` — A Toloker can't access the entire project containing the pool.</li> <li>`ALL_PROJECTS` — A Toloker can't access any requester's project.</li> </ul>
 `duration_days`|**Optional\[int\]**|<p>A blocking period in days. If the `duration_days` is omitted, then the block is permanent.</p>
 `private_comment`|**Optional\[str\]**|<p>A private comment. It is visible only to the requester.</p>

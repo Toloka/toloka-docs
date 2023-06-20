@@ -4903,10 +4903,6 @@
               "href": "/docs/toloka-kit/reference/toloka.client.task.CreateTaskParameters"
             },
             {
-              "title": "CreateTaskAsyncParameters",
-              "href": "/docs/toloka-kit/reference/toloka.client.task.CreateTaskAsyncParameters"
-            },
-            {
               "title": "CreateTasksParameters",
               "href": "/docs/toloka-kit/reference/toloka.client.task.CreateTasksParameters"
             },
@@ -4939,6 +4935,10 @@
             {
               "title": "TaskSuiteCreateRequestParameters",
               "href": "/docs/toloka-kit/reference/toloka.client.task_suite.TaskSuiteCreateRequestParameters"
+            },
+            {
+              "title": "TaskSuitesCreateRequestParameters",
+              "href": "/docs/toloka-kit/reference/toloka.client.task_suite.TaskSuitesCreateRequestParameters"
             },
             {
               "title": "TaskSuiteOverlapPatch",
@@ -5380,6 +5380,10 @@
             {
               "title": "UserBonusCreateRequestParameters",
               "href": "/docs/toloka-kit/reference/toloka.client.user_bonus.UserBonusCreateRequestParameters"
+            },
+            {
+              "title": "UserBonusesCreateRequestParameters",
+              "href": "/docs/toloka-kit/reference/toloka.client.user_bonus.UserBonusesCreateRequestParameters"
             }
           ]
         },

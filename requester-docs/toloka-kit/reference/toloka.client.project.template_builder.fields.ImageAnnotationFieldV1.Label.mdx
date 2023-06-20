@@ -1,6 +1,6 @@
 ---
 title: "Label — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:48.681975"
+date: "2023-06-20T13:47:04.849669"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # Label
-`toloka.client.project.template_builder.fields.ImageAnnotationFieldV1.Label` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/project/template_builder/fields.py#L278)
+
+`toloka.client.project.template_builder.fields.ImageAnnotationFieldV1.Label` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/project/template_builder/fields.py#L269)
 
 ```python
 Label(
@@ -19,11 +20,11 @@ Label(
 )
 ```
 
-At least two objects must be added to the array.
+An image area class.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`label`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), str\]\]**|<p>Text on the button for selecting a selection color.</p>
-`value`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), str\]\]**|<p>The value to be written to the labels property data. Displayed to Tolokers as color options when selecting areas.</p>
+`label`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), str\]\]**|<p>A text on a button for selecting the area class.</p>
+`value`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), str\]\]**|<p>A value used in output data.</p>

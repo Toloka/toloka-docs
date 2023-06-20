@@ -1,6 +1,6 @@
 ---
 title: "AsyncTolokaClient — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:36.692810"
+date: "2023-06-20T13:46:48.934960"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # AsyncTolokaClient
-`toloka.async_client.client.AsyncTolokaClient` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/async_client/client.py#L27)
+
+`toloka.async_client.client.AsyncTolokaClient` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/async_client/client.py#L29)
 
 ```python
 AsyncTolokaClient(
@@ -26,17 +27,17 @@ AsyncTolokaClient(
 )
 ```
 
-Class that implements interaction with [Toloka API](/docs/api/), in an asynchronous way.
+Class that implements interaction with [Toloka API](https://toloka.ai/docs/api/api-reference/), in an asynchronous way.
 
 All methods are wrapped as async. So all methods calls must be awaited.
 All arguments, same as in TolokaClient.
 
-## Methods Summary
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|
 [accept_assignment](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.accept_assignment)| Accepts an assignment.
-[add_message_thread_to_folders](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.add_message_thread_to_folders)| Adds a message chain to one or more folders ("unread", "important" etc.)
+[add_message_thread_to_folders](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.add_message_thread_to_folders)| Adds a message thread to folders.
 [aggregate_solutions_by_pool](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.aggregate_solutions_by_pool)| Starts aggregation of responses in all completed tasks in a pool.
 [aggregate_solutions_by_task](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.aggregate_solutions_by_task)| Aggregates responses to a single task on the Toloka server.
 [archive_app_project](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.archive_app_project)| Archives an App project.
@@ -57,7 +58,7 @@ All arguments, same as in TolokaClient.
 [close_pool_for_update_async](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.close_pool_for_update_async)| Closes a pool that is to be updated. Sends an asynchronous request to Toloka.
 [close_training](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.close_training)| Closes a training.
 [close_training_async](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.close_training_async)| Closes a training. Sends an asynchronous request to Toloka.
-[compose_message_thread](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.compose_message_thread)| Sends a message to a Toloker.
+[compose_message_thread](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.compose_message_thread)| Creates a message thread and sends the first thread message to Tolokers.
 [create_app_batch](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_app_batch)| Creates a batch with task items in an App project in Toloka.
 [create_app_item](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_app_item)| Creates an App task item in Toloka.
 [create_app_items](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_app_items)| Creates task items in an App project in Toloka and adds them to an existing batch.
@@ -73,7 +74,7 @@ All arguments, same as in TolokaClient.
 [create_tasks_async](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_tasks_async)| Creates tasks in Toloka asynchronously.
 [create_training](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_training)| Creates a new training in Toloka.
 [create_user_bonus](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_user_bonus)| Issues payments directly to a Toloker.
-[create_user_bonuses](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_user_bonuses)| Creates rewards for Tolokers.
+[create_user_bonuses](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_user_bonuses)| Creates bonuses for Tolokers.
 [create_user_bonuses_async](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.create_user_bonuses_async)| Issues payments directly to Tolokers, asynchronously creates many `UserBonus` instances.
 [delete_user_restriction](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.delete_user_restriction)| Unlocks existing restriction
 [delete_user_skill](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.delete_user_skill)| Drop specific UserSkill
@@ -94,13 +95,13 @@ All arguments, same as in TolokaClient.
 [find_task_suites](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_task_suites)| Finds task suites that match certain criteria.
 [find_tasks](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_tasks)| Finds tasks that match certain criteria.
 [find_trainings](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_trainings)| Finds trainings that match certain criteria.
-[find_user_bonuses](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_user_bonuses)| Finds Tolokers' rewards that match certain criteria.
+[find_user_bonuses](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_user_bonuses)| Finds Tolokers' bonuses that match certain criteria.
 [find_user_restrictions](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_user_restrictions)| Finds Toloker restrictions that match certain criteria.
 [find_user_skills](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_user_skills)| Finds Toloker's skills that match certain criteria.
 [find_webhook_subscriptions](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.find_webhook_subscriptions)| Finds webhook subscriptions that match certain criteria.
 [from_sync_client](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.from_sync_client)| None
 [get_aggregated_solutions](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_aggregated_solutions)| Finds all aggregated responses that match certain criteria.
-[get_analytics](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_analytics)| Sends analytics queries, for example, to estimate the percentage of completed tasks in the pool
+[get_analytics](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_analytics)| Sends analytics requests to Toloka.
 [get_app](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_app)| Gets information from Toloka about an App solution.
 [get_app_batch](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_app_batch)| Gets information from Toloka about a batch in an App project.
 [get_app_batches](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_app_batches)| Finds all batches that match certain criteria in an App project.
@@ -132,8 +133,8 @@ All arguments, same as in TolokaClient.
 [get_training](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_training)| Gets information about a training from Toloka.
 [get_trainings](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_trainings)| Finds all trainings that match certain criteria.
 [get_user](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_user)| Gets Toloker metadata by `user_id`.
-[get_user_bonus](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_user_bonus)| Gets information about a Toloker's reward.
-[get_user_bonuses](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_user_bonuses)| Finds all Tolokers' rewards that match certain rules and returns them in an iterable object
+[get_user_bonus](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_user_bonus)| Gets information about a Toloker's bonus.
+[get_user_bonuses](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_user_bonuses)| Finds all Tolokers' bonuses that match certain rules and returns them in an iterable object
 [get_user_restriction](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_user_restriction)| Gets information about a Toloker restriction.
 [get_user_restrictions](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_user_restrictions)| Finds all Toloker restrictions that match certain criteria.
 [get_user_skill](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.get_user_skill)| Gets the value of a Toloker's skill
@@ -144,7 +145,7 @@ All arguments, same as in TolokaClient.
 [open_pool_async](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.open_pool_async)| Opens a pool. Sends an asynchronous request to Toloka.
 [open_training](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.open_training)| Opens a training.
 [open_training_async](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.open_training_async)| Opens a training. Sends an asynchronous request to Toloka.
-[patch_app_batch](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.patch_app_batch)| Updates an App batch name.
+[patch_app_batch](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.patch_app_batch)| Updates an App batch.
 [patch_assignment](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.patch_assignment)| Changes an assignment status and associated public comment.
 [patch_pool](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.patch_pool)| Changes pool parameters in Toloka.
 [patch_task](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.patch_task)| Changes a task overlap value.
@@ -152,8 +153,8 @@ All arguments, same as in TolokaClient.
 [patch_task_suite](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.patch_task_suite)| Changes task suite parameter values in Toloka.
 [patch_task_suite_overlap_or_min](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.patch_task_suite_overlap_or_min)| Stops issuing the task suites
 [reject_assignment](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.reject_assignment)| Rejects an assignment.
-[remove_message_thread_from_folders](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.remove_message_thread_from_folders)| Deletes a message chain from one or more folders ("unread", "important" etc.)
-[reply_message_thread](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.reply_message_thread)| Replies to a message in thread
+[remove_message_thread_from_folders](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.remove_message_thread_from_folders)| Removes a message thread from folders.
+[reply_message_thread](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.reply_message_thread)| Sends a reply message in a thread.
 [resume_app_batch](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.resume_app_batch)| Resumes annotation of a batch of task items in an App project.
 [set_user_restriction](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.set_user_restriction)| Restricts access to projects or pools for a Toloker.
 [set_user_skill](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.set_user_skill)| Assigns a skill to a Toloker.
@@ -164,5 +165,5 @@ All arguments, same as in TolokaClient.
 [update_project](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.update_project)| Updates all project parameters in Toloka.
 [update_skill](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.update_skill)| Makes changes to the skill
 [update_training](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.update_training)| Updates parameters of a training in Toloka.
-[upsert_webhook_subscriptions](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.upsert_webhook_subscriptions)| Creates (upsert) many webhook-subscriptions.
+[upsert_webhook_subscriptions](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.upsert_webhook_subscriptions)| Creates (upsert) webhook subscriptions.
 [wait_operation](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient.wait_operation)| Asynchronous version of wait_operation

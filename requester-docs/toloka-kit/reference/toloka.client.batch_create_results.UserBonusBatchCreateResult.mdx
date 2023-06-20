@@ -1,6 +1,6 @@
 ---
 title: "UserBonusBatchCreateResult — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:38.750692"
+date: "2023-06-20T13:46:51.795977"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,7 @@ docsMenu: "tkitMenu"
 ---
 
 # UserBonusBatchCreateResult
+
 `toloka.client.batch_create_results.UserBonusBatchCreateResult`
 
 ```python
@@ -20,11 +21,13 @@ UserBonusBatchCreateResult(
 )
 ```
 
-The results of the creating rewards for Tolokers.
+The result of issuing bonuses for Tolokers.
 
-## Parameters Description
+`UserBonusBatchCreateResult` is returned by the [create_user_bonuses](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_user_bonuses) method.
+
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`items`|**Optional\[Dict\[str, [UserBonus](/docs/toloka-kit/reference/toloka.client.user_bonus.UserBonus)\]\]**|<p>A list of created rewards.</p>
-`validation_errors`|**Optional\[Dict\[str, Dict\[str, [FieldValidationError](/docs/toloka-kit/reference/toloka.client.batch_create_results.FieldValidationError)\]\]\]**|<p>A list with validation errors. The list is filled if the request parameter `skip_invalid_items` is `True`.</p>
+`items`|**Optional\[Dict\[str, [UserBonus](/docs/toloka-kit/reference/toloka.client.user_bonus.UserBonus)\]\]**|<p>A dictionary with created bonuses. The indexes of a `create_user_bonuses` input list are used as keys in the dictionary.</p>
+`validation_errors`|**Optional\[Dict\[str, Dict\[str, [FieldValidationError](/docs/toloka-kit/reference/toloka.client.batch_create_results.FieldValidationError)\]\]\]**|<p>A dictionary with validation errors. It is filled if the request parameter `skip_invalid_items` is `True`.</p>

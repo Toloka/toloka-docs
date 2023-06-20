@@ -1,6 +1,6 @@
 ---
 title: "FailedOperation — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:29.661430"
+date: "2023-06-20T13:46:39.123430"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,18 +9,19 @@ docsMenu: "tkitMenu"
 ---
 
 # FailedOperation
-`toloka.client.exceptions.FailedOperation` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/exceptions.py#L40)
+
+`toloka.client.exceptions.FailedOperation` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/exceptions.py#L41)
 
 ```python
 FailedOperation(self, *, operation: Optional[Any] = None)
 ```
 
-Raised when an operation failed.
+An exception that is raised when an operation fails.
 
-Could be raised when an inner operation failed.
+It could be raised when an inner operation fails.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`operation`|**Optional\[Any\]**|<p>Instance of failed operation.</p>
+`operation`|**Optional\[Any\]**|<p>The instance of the failed operation.</p>

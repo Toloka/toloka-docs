@@ -1,6 +1,6 @@
 ---
 title: "Pipeline — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:27.904574"
+date: "2023-06-20T13:46:37.003637"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # Pipeline
-`toloka.streaming.pipeline.Pipeline` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/streaming/pipeline.py#L80)
+
+`toloka.streaming.pipeline.Pipeline` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/streaming/pipeline.py#L80)
 
 ```python
 Pipeline(
@@ -27,12 +28,12 @@ An entry point for toloka streaming pipelines.
 Allow you to register multiple observers and call them periodically
 while at least one of them may resume.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `period`|**timedelta**|<p>Period of observers calls. By default, 60 seconds.</p>
-`storage`|**Optional\[[BaseStorage](/docs/toloka-kit/reference/toloka.streaming.storage.BaseStorage)\]**|<p>Optional storage object to save pipeline&#x27;s state. Allow to recover from previous state in case of failure.</p>
+`storage`|**Optional\[[BaseStorage](/docs/toloka-kit/reference/toloka.streaming.storage.BaseStorage)\]**|<p>Optional storage object to save pipeline's state. Allow to recover from previous state in case of failure.</p>
 `iteration_mode`|**[IterationMode](/docs/toloka-kit/reference/toloka.streaming.pipeline.IterationMode)**|<p>When to start new iteration. Default is `FIRST_COMPLETED`</p>
 
 **Examples:**
@@ -79,7 +80,8 @@ storage = S3Storage(locker=locker, ...)
 pipeline = Pipeline(storage=storage)
 await pipeline.run()  # Save state after each iteration. Try to load saved at start.
 ```
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|

@@ -1,6 +1,6 @@
 ---
 title: "PoolStatusObserver — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:39.362317"
+date: "2023-06-20T13:46:52.587159"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # PoolStatusObserver
-`toloka.streaming.observer.PoolStatusObserver` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/streaming/observer.py#L151)
+
+`toloka.streaming.observer.PoolStatusObserver` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/streaming/observer.py#L154)
 
 ```python
 PoolStatusObserver(
@@ -26,15 +27,16 @@ Observer for pool status change.
 For usage with Pipeline.
 
 Allow to register callbacks using the following methods:
-    * on_open
-    * on_closed
-    * on_archieved
-    * on_locked
-    * on_status_change
+
+* on_open
+* on_closed
+* on_archieved
+* on_locked
+* on_status_change
 
 The Pool object will be passed to the triggered callbacks.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
@@ -59,10 +61,12 @@ Call something at any status change.
 ```python
 observer.on_status_change(lambda pool: ...)
 ```
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|
+[get_unique_key](/docs/toloka-kit/reference/toloka.streaming.observer.PoolStatusObserver.get_unique_key)| None
 [inject](/docs/toloka-kit/reference/toloka.streaming.observer.PoolStatusObserver.inject)| None
 [on_archieved](/docs/toloka-kit/reference/toloka.streaming.observer.PoolStatusObserver.on_archieved)| None
 [on_closed](/docs/toloka-kit/reference/toloka.streaming.observer.PoolStatusObserver.on_closed)| None

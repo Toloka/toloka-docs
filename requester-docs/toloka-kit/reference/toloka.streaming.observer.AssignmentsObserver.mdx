@@ -1,6 +1,6 @@
 ---
 title: "AssignmentsObserver — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:19.147757"
+date: "2023-06-20T13:46:26.436052"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,13 +9,15 @@ docsMenu: "tkitMenu"
 ---
 
 # AssignmentsObserver
-`toloka.streaming.observer.AssignmentsObserver` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/streaming/observer.py#L306)
+
+`toloka.streaming.observer.AssignmentsObserver` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/streaming/observer.py#L309)
 
 ```python
 AssignmentsObserver(
     self,
     toloka_client: Union[TolokaClient, AsyncTolokaClient],
     pool_id: str,
+    cursor_time_lag: timedelta = ...,
     *,
     name: Optional[str] = None
 )
@@ -26,21 +28,23 @@ Observer for the pool's assignment events.
 For usage with Pipeline.
 
 Allow to register callbacks using the following methods:
-    * on_created
-    * on_submitted
-    * on_accepted
-    * on_rejected
-    * on_skipped
-    * on_expired
+
+* on_created
+* on_submitted
+* on_accepted
+* on_rejected
+* on_skipped
+* on_expired
 
 Corresponding assignment events will be passed to the triggered callbacks.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `toloka_client`|**[AsyncInterfaceWrapper](/docs/toloka-kit/reference/toloka.util.async_utils.AsyncInterfaceWrapper)\[Union\[[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient), [AsyncTolokaClient](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient)\]\]**|<p>TolokaClient instance or async wrapper around it.</p>
 `pool_id`|**str**|<p>Pool ID.</p>
+`cursor_time_lag`|**timedelta**|<p>Time lag for cursor. This controls time lag between assignments being added and them being seen by this observer. See BaseCursor.time_lag for details and reasoning behind this.</p>
 
 **Examples:**
 
@@ -54,10 +58,12 @@ def handle_submitted(evets: List[AssignmentEvent]) -> None:
 observer = AssignmentsObserver(toloka_client, pool_id='123')
 observer.on_submitted(handle_submitted)
 ```
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|
+[get_unique_key](/docs/toloka-kit/reference/toloka.streaming.observer.AssignmentsObserver.get_unique_key)| None
 [inject](/docs/toloka-kit/reference/toloka.streaming.observer.AssignmentsObserver.inject)| None
 [on_accepted](/docs/toloka-kit/reference/toloka.streaming.observer.AssignmentsObserver.on_accepted)| None
 [on_any_event](/docs/toloka-kit/reference/toloka.streaming.observer.AssignmentsObserver.on_any_event)| None

@@ -1,6 +1,6 @@
 ---
 title: "Accept — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:48.883041"
+date: "2023-06-20T13:47:05.102732"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # Accept
-`toloka.client.project.template_builder.fields.MediaFileFieldV1.Accept` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/project/template_builder/fields.py#L367)
+
+`toloka.client.project.template_builder.fields.MediaFileFieldV1.Accept` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/project/template_builder/fields.py#L359)
 
 ```python
 Accept(
@@ -22,13 +23,13 @@ Accept(
 )
 ```
 
-Adds different buttons for four types of uploads.
+A choice of buttons for uploading media files from different sources.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`file_system`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), bool\]\]**|<p>Adds a button for uploading files from the file manager.</p>
-`gallery`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), bool\]\]**|<p>Adds a button for uploading files from the gallery.</p>
-`photo`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), bool\]\]**|<p>Adds a button for uploading images.</p>
-`video`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), bool\]\]**|<p>Adds a button for uploading videos.</p>
+`file_system`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), bool\]\]**|<p>Files from a file manager.</p>
+`gallery`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), bool\]\]**|<p>Files from a gallery.</p>
+`photo`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), bool\]\]**|<p>Taking photos.</p>
+`video`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), bool\]\]**|<p>Taking videos.</p>

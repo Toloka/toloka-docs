@@ -1,6 +1,6 @@
 ---
 title: "RadioGroupFieldV1 — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:43:05.897947"
+date: "2023-06-20T13:47:34.156910"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # RadioGroupFieldV1
-`toloka.client.project.template_builder.fields.RadioGroupFieldV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/project/template_builder/fields.py#L421)
+
+`toloka.client.project.template_builder.fields.RadioGroupFieldV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/project/template_builder/fields.py#L408)
 
 ```python
 RadioGroupFieldV1(
@@ -25,31 +26,27 @@ RadioGroupFieldV1(
 )
 ```
 
-A component for selecting one value out of several options. It is designed as a group of circles arranged vertically.
+A component for selecting one value out of several options.
 
-If you want it to look like normal buttons, use field.button-radio-group.
+For more information, see [field.radio-group](/docs/template-builder/reference/field.radio-group).
 
-The minimum number of buttons is one. Any type of data can be returned.
-
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`data`|**Optional\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>Data with values that will be processed or changed.</p>
-`options`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), List\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [GroupFieldOption](/docs/toloka-kit/reference/toloka.client.project.template_builder.fields.GroupFieldOption)\]\]\]\]**|<p>List of options to choose from</p>
-`disabled`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), bool\]\]**|<p>This property prevents clicking the button. If the value is `True`, the button is not active (the Toloker will not be able to click it).</p>
-`hint`|**Optional\[Any\]**|<p>Hint text.</p>
-`label`|**Optional\[Any\]**|<p>Label above the component.</p>
-`validation`|**Optional\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>Validation based on condition.</p>
+`data`|**Optional\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>A data path.</p>
+`options`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), List\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [GroupFieldOption](/docs/toloka-kit/reference/toloka.client.project.template_builder.fields.GroupFieldOption)\]\]\]\]**|<p>A list of options.</p>
+`disabled`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), bool\]\]**|<p>Disabling the component:</p> <ul> <li>`False` — Selecting an option is allowed.</li> <li>`True` — Selecting an option is disabled.</li> </ul> <p></p><p>Default value: `False`.</p>
+`hint`|**Optional\[Any\]**|<p>A hint.</p>
+`label`|**Optional\[Any\]**|<p>A label above the component.</p>
+`validation`|**Optional\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>Validation rules.</p>
 
 **Examples:**
 
-How to add label selector to interface.
-
 ```python
 radio_group_field = tb.fields.RadioGroupFieldV1(
-    tb.data.OutputData(path='result'),
-    [
+    data=tb.data.OutputData(path='result'),
+    options=[
         tb.fields.GroupFieldOption('Cat', 'cat'),
         tb.fields.GroupFieldOption('Dog', 'dog'),
     ],

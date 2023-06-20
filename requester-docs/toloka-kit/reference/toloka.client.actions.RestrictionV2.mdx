@@ -1,6 +1,6 @@
 ---
 title: "RestrictionV2 — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:31.674454"
+date: "2023-06-20T13:46:42.108399"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # RestrictionV2
-`toloka.client.actions.RestrictionV2` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/actions.py#L58)
+
+`toloka.client.actions.RestrictionV2` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/actions.py#L58)
 
 ```python
 RestrictionV2(
@@ -24,11 +25,11 @@ RestrictionV2(
 
 Restricts Toloker's access to projects or pools.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`scope`|**Union\[[UserRestriction.Scope](/docs/toloka-kit/reference/toloka.client.user_restriction.UserRestriction.Scope), str, None\]**|<ul> <li>`POOL` — A Toloker can&#x27;t access the pool if the action is applied.</li> <li>`PROJECT` — A Toloker can&#x27;t access the entire project containing the pool.</li> <li>`ALL_PROJECTS` — A Toloker can&#x27;t access any requester&#x27;s project.</li> </ul>
+`scope`|**Union\[[UserRestriction.Scope](/docs/toloka-kit/reference/toloka.client.user_restriction.UserRestriction.Scope), str, None\]**|<ul> <li>`POOL` — A Toloker can't access the pool if the action is applied.</li> <li>`PROJECT` — A Toloker can't access the entire project containing the pool.</li> <li>`ALL_PROJECTS` — A Toloker can't access any requester's project.</li> </ul>
 `duration`|**Optional\[int\]**|<p>The duration of the blocking period measured in `duration_unit`.</p>
 `duration_unit`|**Union\[[DurationUnit](/docs/toloka-kit/reference/toloka.client.user_restriction.DurationUnit), str, None\]**|<ul> <li>`MINUTES`;</li> <li>`HOURS`;</li> <li>`DAYS`;</li> <li>`PERMANENT` — blocking is permanent. In this case the `duration` is ignored and may be omitted.</li> </ul>
 `private_comment`|**Optional\[str\]**|<p>A private comment. It is visible only to the requester.</p>

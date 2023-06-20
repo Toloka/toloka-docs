@@ -1,6 +1,6 @@
 ---
 title: "find_apps — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:54.102608"
+date: "2023-06-20T13:47:13.260826"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # find_apps
-`toloka.client.TolokaClient.find_apps` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/__init__.py#L3676)
+
+`toloka.client.TolokaClient.find_apps` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L3845)
 
 Finds App solutions that match certain criteria.
 
@@ -17,7 +18,7 @@ The number of returned solutions is limited. To find remaining solutions call `f
 
 To iterate over all matching solutions you may use the [get_apps](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_apps) method.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
@@ -41,3 +42,14 @@ To iterate over all matching solutions you may use the [get_apps](/docs/toloka-k
 * **Return type:**
 
   [AppSearchResult](/docs/toloka-kit/reference/toloka.client.search_results.AppSearchResult)
+
+**Examples:**
+
+```python
+search = toloka_client.find_apps()
+for app in search.content:
+    print(app.id, app.name)
+
+if search.has_more:
+    print('There are more App solutions...')
+```

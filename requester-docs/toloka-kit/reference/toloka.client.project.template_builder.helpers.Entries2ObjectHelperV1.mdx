@@ -1,6 +1,6 @@
 ---
 title: "Entries2ObjectHelperV1 — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:40.959848"
+date: "2023-06-20T13:46:54.341448"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # Entries2ObjectHelperV1
-`toloka.client.project.template_builder.helpers.Entries2ObjectHelperV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/project/template_builder/helpers.py#L45)
+
+`toloka.client.project.template_builder.helpers.Entries2ObjectHelperV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/project/template_builder/helpers.py#L42)
 
 ```python
 Entries2ObjectHelperV1(
@@ -20,28 +21,16 @@ Entries2ObjectHelperV1(
 )
 ```
 
-Creating an object from a specified array of key-value pairs.
+Creates an object from an array of key-value pairs.
 
-For example, let's say you have an array like this:
+For example,
+`[ {"key":"foo", "value":"hello"}, {"key":"bar","value":"world"} ]`
+is converted to `{ "foo": "hello", "bar": "world" }`.
 
-```python
-[
-    {
-        "key": "foo",
-        "value": "hello"
-    },
-    {
-        "key": "bar",
-        "value": "world"
-    }
-]
-```
+For more information, see [helper.entries2object](/docs/template-builder/reference/helper.entries2object).
 
-It is converted to an object whose elements consist of the values of the original array:
-`{ "foo": "hello", "bar": "world" }`
-
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`entries`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), List\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [Entry](/docs/toloka-kit/reference/toloka.client.project.template_builder.helpers.Entries2ObjectHelperV1.Entry)\]\]\]\]**|<p>Source array of key-value pairs.</p>
+`entries`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), List\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [Entry](/docs/toloka-kit/reference/toloka.client.project.template_builder.helpers.Entries2ObjectHelperV1.Entry)\]\]\]\]**|<p>A source array of key-value pairs.</p>

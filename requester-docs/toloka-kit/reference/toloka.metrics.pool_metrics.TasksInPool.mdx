@@ -1,6 +1,6 @@
 ---
 title: "TasksInPool — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:22.347088"
+date: "2023-06-20T13:46:30.972113"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # TasksInPool
-`toloka.metrics.pool_metrics.TasksInPool` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/metrics/pool_metrics.py#L295)
+
+`toloka.metrics.pool_metrics.TasksInPool` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/metrics/pool_metrics.py#L300)
 
 ```python
 TasksInPool(
@@ -25,7 +26,7 @@ TasksInPool(
 
 The number of tasks in the pool. Not new tasks. All tasks on each step.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
@@ -35,6 +36,7 @@ The number of tasks in the pool. Not new tasks. All tasks on each step.
 **Examples:**
 
 How to collect this metrics:
+
 ```python
 def print_metric(metric_dict):
     print(metric_dict)
@@ -49,7 +51,7 @@ asyncio.run(collector.run())
 }
 ```
 
-## Methods Summary
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|

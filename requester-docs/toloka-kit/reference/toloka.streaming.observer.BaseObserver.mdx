@@ -1,6 +1,6 @@
 ---
 title: "BaseObserver — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:54.221124"
+date: "2023-06-20T13:47:13.516203"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,19 +9,21 @@ docsMenu: "tkitMenu"
 ---
 
 # BaseObserver
-`toloka.streaming.observer.BaseObserver` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/streaming/observer.py#L25)
+
+`toloka.streaming.observer.BaseObserver` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/streaming/observer.py#L25)
 
 ```python
 BaseObserver(self, *, name: Optional[str] = None)
 ```
 
-## Methods Summary
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|
 [delete](/docs/toloka-kit/reference/toloka.streaming.observer.BaseObserver.delete)| Schedule observer to be removed from the pipeline.
 [disable](/docs/toloka-kit/reference/toloka.streaming.observer.BaseObserver.disable)| Prevent observer from being called.
 [enable](/docs/toloka-kit/reference/toloka.streaming.observer.BaseObserver.enable)| Enable observer to be called during pipeline execution.
+[get_unique_key](/docs/toloka-kit/reference/toloka.streaming.observer.BaseObserver.get_unique_key)| This method should return identifier for this observer that is unique in the current pipeline context.
 [inject](/docs/toloka-kit/reference/toloka.streaming.observer.BaseObserver.inject)| None
 [run](/docs/toloka-kit/reference/toloka.streaming.observer.BaseObserver.run)| For standalone usage (out of a Pipeline).
 [should_resume](/docs/toloka-kit/reference/toloka.streaming.observer.BaseObserver.should_resume)| None

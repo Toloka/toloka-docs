@@ -1,6 +1,6 @@
 ---
 title: "Balance — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:48.214545"
+date: "2023-06-20T13:47:04.211074"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # Balance
-`toloka.metrics.metrics.Balance` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/metrics/metrics.py#L145)
+
+`toloka.metrics.metrics.Balance` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/metrics/metrics.py#L145)
 
 ```python
 Balance(
@@ -26,15 +27,16 @@ Traking your Toloka balance.
 
 Returns only one metric: don't spend and don't reserved money on your acount.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`balance_name`|**Optional\[str\]**|<p>Metric name. Default &#x27;toloka_requester_balance&#x27;.</p>
+`balance_name`|**Optional\[str\]**|<p>Metric name. Default 'toloka_requester_balance'.</p>
 
 **Examples:**
 
 How to collect this metrics:
+
 ```python
 def print_metric(metric_dict):
     print(metric_dict)
@@ -48,7 +50,8 @@ asyncio.run(collector.run())
     toloka_requester_balance: [(datetime.datetime(2021, 8, 30, 10, 30, 59, 628239), Decimal('123.4500'))],
 }
 ```
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|

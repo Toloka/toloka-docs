@@ -1,6 +1,6 @@
 ---
 title: "AppProjectSearchRequest — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:42.150450"
+date: "2023-06-20T13:46:56.053755"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # AppProjectSearchRequest
-`toloka.client.search_requests.AppProjectSearchRequest` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/search_requests.py#L953)
+
+`toloka.client.search_requests.AppProjectSearchRequest` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/search_requests.py#L953)
 
 ```python
 AppProjectSearchRequest(
@@ -37,7 +38,7 @@ AppProjectSearchRequest(
 
 Parameters for searching App projects.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
@@ -45,7 +46,7 @@ Parameters for searching App projects.
 `parent_app_project_id`|**Optional\[str\]**|<p>Projects cloned from the project with the specified ID. Projects can be cloned in the web version of Toloka.</p>
 `status`|**Optional\[[AppProject.Status](/docs/toloka-kit/reference/toloka.client.app.AppProject.Status)\]**|<p>App project status. Refer to the [AppProject.Status](/docs/toloka-kit/reference/toloka.client.app.AppProject.Status) page for more information on the available `status` values.</p>
 `after_id`|**Optional\[str\]**|<p>The ID of a project used for cursor pagination.</p>
-`scope`|**Optional\[[Scope](/docs/toloka-kit/reference/toloka.client.search_requests.AppProjectSearchRequest.Scope)\]**|<p>Values:</p> <ul> <li>`&#x27;MY&#x27;` — Projects created by you.</li> <li>`&#x27;COMPANY&#x27;` — Projects created by requesters from your company.</li> <li>`&#x27;REQUESTER_LIST&#x27;` — Projects created by requesters in the `requester_ids` list.</li> </ul>
+`scope`|**Optional\[[Scope](/docs/toloka-kit/reference/toloka.client.search_requests.AppProjectSearchRequest.Scope)\]**|<p>Values:</p> <ul> <li>`'MY'` — Projects created by you.</li> <li>`'COMPANY'` — Projects created by requesters from your company.</li> <li>`'REQUESTER_LIST'` — Projects created by requesters in the `requester_ids` list.</li> </ul>
 `requester_ids`|**Optional\[List\[str\]\]**|<p>A list with requester IDs separated by a comma. Use the list with parameter `scope = REQUESTER_LIST`.</p>
 `id_gt`|**Optional\[str\]**|<p>Projects with IDs greater than the specified value.</p>
 `id_gte`|**Optional\[str\]**|<p>Projects with IDs greater than or equal to the specified value.</p>

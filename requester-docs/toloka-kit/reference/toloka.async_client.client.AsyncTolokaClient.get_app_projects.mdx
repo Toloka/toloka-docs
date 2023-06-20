@@ -1,6 +1,6 @@
 ---
 title: "get_app_projects — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:45.993159"
+date: "2023-06-20T13:47:01.059437"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # get_app_projects
-`toloka.async_client.client.AsyncTolokaClient.get_app_projects` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/__init__.py#L0)
+
+`toloka.async_client.client.AsyncTolokaClient.get_app_projects` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L0)
 
 Finds all App projects that match certain criteria.
 
@@ -17,7 +18,7 @@ Finds all App projects that match certain criteria.
 
 If you need to sort App projects use the [find_app_projects](/docs/toloka-kit/reference/toloka.client.TolokaClient.find_app_projects) method.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
@@ -25,7 +26,7 @@ If you need to sort App projects use the [find_app_projects](/docs/toloka-kit/re
 `parent_app_project_id`|**Optional\[str\]**|<p>Projects cloned from the project with the specified ID. Projects can be cloned in the web version of Toloka.</p>
 `status`|**Optional\[[AppProject.Status](/docs/toloka-kit/reference/toloka.client.app.AppProject.Status)\]**|<p>App project status. Refer to the [AppProject.Status](/docs/toloka-kit/reference/toloka.client.app.AppProject.Status) page for more information on the available `status` values.</p>
 `after_id`|**Optional\[str\]**|<p>The ID of a project used for cursor pagination.</p>
-`scope`|**Optional\[[AppProjectSearchRequest.Scope](/docs/toloka-kit/reference/toloka.client.search_requests.AppProjectSearchRequest.Scope)\]**|<p>Values:</p> <ul> <li>`&#x27;MY&#x27;` — Projects created by you.</li> <li>`&#x27;COMPANY&#x27;` — Projects created by requesters from your company.</li> <li>`&#x27;REQUESTER_LIST&#x27;` — Projects created by requesters in the `requester_ids` list.</li> </ul>
+`scope`|**Optional\[[AppProjectSearchRequest.Scope](/docs/toloka-kit/reference/toloka.client.search_requests.AppProjectSearchRequest.Scope)\]**|<p>Values:</p> <ul> <li>`'MY'` — Projects created by you.</li> <li>`'COMPANY'` — Projects created by requesters from your company.</li> <li>`'REQUESTER_LIST'` — Projects created by requesters in the `requester_ids` list.</li> </ul>
 `requester_ids`|**Union\[str, List\[str\], None\]**|<p>A list with requester IDs separated by a comma. Use the list with parameter `scope = REQUESTER_LIST`.</p>
 `id_gt`|**Optional\[str\]**|<p>Projects with IDs greater than the specified value.</p>
 `id_gte`|**Optional\[str\]**|<p>Projects with IDs greater than or equal to the specified value.</p>
@@ -48,3 +49,11 @@ If you need to sort App projects use the [find_app_projects](/docs/toloka-kit/re
 * **Yield type:**
 
   [AsyncGenAdapter](/docs/toloka-kit/reference/toloka.util.async_utils.AsyncGenAdapter)\[[AppProject](/docs/toloka-kit/reference/toloka.client.app.AppProject), None\]
+
+**Examples:**
+
+```python
+app_projects = toloka_client.get_app_projects(scope='MY')
+for app_project in app_projects:
+    print(app_project.id, app_project.status, app_project.name)
+```

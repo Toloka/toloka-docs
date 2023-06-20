@@ -1,6 +1,6 @@
 ---
 title: "AssignmentAttachment — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:45.002590"
+date: "2023-06-20T13:46:59.733399"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # AssignmentAttachment
-`toloka.client.attachment.AssignmentAttachment` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/attachment.py#L55)
+
+`toloka.client.attachment.AssignmentAttachment` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/attachment.py#L56)
 
 ```python
 AssignmentAttachment(
@@ -24,15 +25,15 @@ AssignmentAttachment(
 )
 ```
 
-Assignment Attachment.
+An attachment to an assignment.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`id`|**Optional\[str\]**|<p>File ID.</p>
-`name`|**Optional\[str\]**|<p>File name.</p>
-`details`|**Optional\[[Attachment.Details](/docs/toloka-kit/reference/toloka.client.attachment.Attachment.Details)\]**|<p>Information about the pool, the task, and the Toloker who uploaded the file.</p>
-`created`|**Optional\[datetime\]**|<p>Date the file was uploaded to Toloka.</p>
-`media_type`|**Optional\[str\]**|<p>MIME data type.</p>
-`owner`|**Optional\[[Owner](/docs/toloka-kit/reference/toloka.client.owner.Owner)\]**|<p>Owner</p>
+`id`|**Optional\[str\]**|<p>The file ID.</p>
+`name`|**Optional\[str\]**|<p>The file name.</p>
+`details`|**Optional\[[Attachment.Details](/docs/toloka-kit/reference/toloka.client.attachment.Attachment.Details)\]**|<p>Attachment details: a pool, task, and Toloker who uploaded the file.</p>
+`created`|**Optional\[datetime\]**|<p>The date and time when the file was uploaded.</p>
+`media_type`|**Optional\[str\]**|<p>The file [MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) data type.</p>
+`owner`|**Optional\[[Owner](/docs/toloka-kit/reference/toloka.client.owner.Owner)\]**|<p>The owner of the attachment.</p>

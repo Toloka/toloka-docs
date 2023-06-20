@@ -1,6 +1,6 @@
 ---
 title: "Skill — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:43:05.126933"
+date: "2023-06-20T13:47:33.102709"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # Skill
-`toloka.client.filter.Skill` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/filter.py#L227)
+
+`toloka.client.filter.Skill` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/filter.py#L227)
 
 ```python
 Skill(
@@ -25,7 +26,7 @@ Filtering Tolokers by skills.
 Pass the ID of a skill to the filter constructor.
 To select Tolokers without a skill, compare created filter with `None`.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
@@ -36,6 +37,7 @@ To select Tolokers without a skill, compare created filter with `None`.
 **Examples:**
 
 Selecting Tolokers with a skill with ID '224' greater than 70.
+
 ```python
 filter = toloka.client.filter.Skill('224') > 70
 ```

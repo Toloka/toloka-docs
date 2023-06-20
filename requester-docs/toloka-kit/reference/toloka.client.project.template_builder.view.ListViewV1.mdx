@@ -1,6 +1,6 @@
 ---
 title: "ListViewV1 — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:41.530050"
+date: "2023-06-20T13:46:55.113345"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # ListViewV1
-`toloka.client.project.template_builder.view.ListViewV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/project/template_builder/view.py#L343)
+
+`toloka.client.project.template_builder.view.ListViewV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/project/template_builder/view.py#L360)
 
 ```python
 ListViewV1(
@@ -25,15 +26,17 @@ ListViewV1(
 )
 ```
 
-Block for displaying data in a list.
+A list of components.
 
-## Parameters Description
+For more information, see [view.list](/docs/template-builder/reference/view.list).
+
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`items`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), List\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]\]\]**|<p>Array of list items.</p>
-`direction`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [ListDirection](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.ListDirection)\]\]**|<p>Determines the direction of the list.</p>
-`size`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [ListSize](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.ListSize)\]\]**|<p>Specifies the size of the margins between elements. Acceptable values in ascending order: s, m (default value).</p>
-`hint`|**Optional\[Any\]**|<p>Hint text.</p>
-`label`|**Optional\[Any\]**|<p>Label above the component.</p>
-`validation`|**Optional\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>Validation based on condition.</p>
+`items`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), List\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]\]\]**|<p>List items.</p>
+`direction`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [ListDirection](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.ListDirection)\]\]**|<p>The direction of the list:</p> <ul> <li>`vertical`</li> <li>`horizontal`</li> </ul> <p></p><p>Default value: `vertical`.</p>
+`size`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [ListSize](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.ListSize)\]\]**|<p>A spacing between list items: `m` — The default spacing. `s` — Narrower spacing.</p>
+`hint`|**Optional\[Any\]**|<p>A hint text.</p>
+`label`|**Optional\[Any\]**|<p>A label above the component.</p>
+`validation`|**Optional\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>Validation rules.</p>

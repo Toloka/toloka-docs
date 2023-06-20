@@ -1,6 +1,6 @@
 ---
 title: "PlayPauseActionV1 — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:31.737723"
+date: "2023-06-20T13:46:42.187921"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # PlayPauseActionV1
-`toloka.client.project.template_builder.actions.PlayPauseActionV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/project/template_builder/actions.py#L115)
+
+`toloka.client.project.template_builder.actions.PlayPauseActionV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/project/template_builder/actions.py#L115)
 
 ```python
 PlayPauseActionV1(
@@ -20,14 +21,12 @@ PlayPauseActionV1(
 )
 ```
 
-This component controls audio or video playback. It stops playback in progress or starts if it is stopped.
+The action pauses an audio or video player or resumes it.
 
-For example, this component will allow you to play two videos simultaneously.
+For more information, see [action.play-pause](/docs/template-builder/reference/action.play-pause).
 
-You can also stop or start playback for some event (plugin. trigger) or by pressing the hotkey (plugin.hotkeys).
-
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`view`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [RefComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.RefComponent)\]\]**|<p>Points to the component that plays audio or video.</p>
+`view`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [RefComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.RefComponent)\]\]**|<p>A reference to the audio or video player.</p>

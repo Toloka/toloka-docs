@@ -1,6 +1,6 @@
 ---
 title: "ChangeOverlap — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:39.311155"
+date: "2023-06-20T13:46:52.521718"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # ChangeOverlap
-`toloka.client.actions.ChangeOverlap` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/actions.py#L131)
+
+`toloka.client.actions.ChangeOverlap` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/actions.py#L131)
 
 ```python
 ChangeOverlap(
@@ -24,12 +25,12 @@ Increases the overlap of a task.
 
 You can use this rule only with [UsersAssessment](/docs/toloka-kit/reference/toloka.client.collectors.UsersAssessment) and [AssignmentsAssessment](/docs/toloka-kit/reference/toloka.client.collectors.AssignmentsAssessment) collectors.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `delta`|**Optional\[int\]**|<p>An overlap increment.</p>
-`open_pool`|**Optional\[bool\]**|<ul> <li>`True` — Open the pool after changing the overlap value.</li> <li>`False` — Don&#x27;t reopen the pool if it is closed.</li> </ul>
+`open_pool`|**Optional\[bool\]**|<ul> <li>`True` — Open the pool after changing the overlap value.</li> <li>`False` — Don't reopen the pool if it is closed.</li> </ul>
 
 **Examples:**
 

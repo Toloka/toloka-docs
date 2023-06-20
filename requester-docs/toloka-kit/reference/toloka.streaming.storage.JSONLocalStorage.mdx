@@ -1,6 +1,6 @@
 ---
 title: "JSONLocalStorage — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:43:04.441073"
+date: "2023-06-20T13:47:32.081729"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # JSONLocalStorage
-`toloka.streaming.storage.JSONLocalStorage` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/streaming/storage.py#L58)
+
+`toloka.streaming.storage.JSONLocalStorage` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/streaming/storage.py#L58)
 
 ```python
 JSONLocalStorage(
@@ -22,11 +23,11 @@ JSONLocalStorage(
 
 Simplest local storage to dump state of a pipeline and restore in case of restart.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`dirname`|**str**|<p>Directory to store pipeline&#x27;s state files. By default, &quot;/tmp&quot;.</p>
+`dirname`|**str**|<p>Directory to store pipeline's state files. By default, &quot;/tmp&quot;.</p>
 `locker`|**Optional\[[BaseLocker](/docs/toloka-kit/reference/toloka.streaming.locker.BaseLocker)\]**|<p>Optional locker object. By default, FileLocker with the same dirname is used.</p>
 
 **Examples:**
@@ -44,7 +45,8 @@ Set locker explicitly.
 ```python
 storage = JSONLocalStorage('/store-data-here', locker=FileLocker('/store-locks-here'))
 ```
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|
