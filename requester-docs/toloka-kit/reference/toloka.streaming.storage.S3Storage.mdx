@@ -1,6 +1,6 @@
 ---
 title: "S3Storage — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:43:01.724231"
+date: "2023-06-20T13:47:27.345520"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # S3Storage
-`toloka.streaming.storage.S3Storage` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/streaming/storage.py#L158)
+
+`toloka.streaming.storage.S3Storage` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/streaming/storage.py#L158)
 
 ```python
 S3Storage(
@@ -32,7 +33,7 @@ pip install toloka-kit[s3]
 
 </Note>
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
@@ -48,10 +49,8 @@ Create new instance.
 import boto3
 import os
 session = boto3.Session(
-```
-...     aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY')
-... )
-```python
+    aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY')
+)
 resource = session.resource('s3', region_name=os.getenv('AWS_DEFAULT_REGION', 'us-east-2'))
 bucket = resource.Bucket('my-bucket')
 storage = S3Storage(bucket)
@@ -65,7 +64,8 @@ pipeline = Pipeline(storage=storage)
 ...
 await pipeline.run()  # Will load from storage at the start and save after each iteration.
 ```
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|

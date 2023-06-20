@@ -1,6 +1,6 @@
 ---
 title: "get_app — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:22.971230"
+date: "2023-06-20T13:46:31.720168"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # get_app
-`toloka.client.TolokaClient.get_app` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/__init__.py#L3732)
+
+`toloka.client.TolokaClient.get_app` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L3916)
 
 ```python
 get_app(
@@ -21,7 +22,7 @@ get_app(
 
 Gets information from Toloka about an App solution.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
@@ -35,3 +36,11 @@ Gets information from Toloka about an App solution.
 * **Return type:**
 
   [App](/docs/toloka-kit/reference/toloka.client.app.App)
+
+**Examples:**
+
+```python
+app = toloka_client.get_app('2eN4l59qL2xHB5b8Jqp6')
+print(app.id, app.name)
+print(app.description)
+```

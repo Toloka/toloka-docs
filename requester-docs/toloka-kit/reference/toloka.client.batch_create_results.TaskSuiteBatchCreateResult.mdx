@@ -1,6 +1,6 @@
 ---
 title: "TaskSuiteBatchCreateResult — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:37.096709"
+date: "2023-06-20T13:46:49.469651"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,6 +9,7 @@ docsMenu: "tkitMenu"
 ---
 
 # TaskSuiteBatchCreateResult
+
 `toloka.client.batch_create_results.TaskSuiteBatchCreateResult`
 
 ```python
@@ -20,11 +21,13 @@ TaskSuiteBatchCreateResult(
 )
 ```
 
-The results of the task suites creation operation.
+The result of a task suite creation.
 
-## Parameters Description
+`TaskSuiteBatchCreateResult` is returned by the [create_task_suites](/docs/toloka-kit/reference/toloka.client.TolokaClient.create_task_suites) method.
+
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`items`|**Optional\[Dict\[str, [TaskSuite](/docs/toloka-kit/reference/toloka.client.task_suite.TaskSuite)\]\]**|<p>A list of created task suites.</p>
-`validation_errors`|**Optional\[Dict\[str, Dict\[str, [FieldValidationError](/docs/toloka-kit/reference/toloka.client.batch_create_results.FieldValidationError)\]\]\]**|<p>A list with validation errors in input task suites. The list is filled if the request parameter `skip_invalid_items` is `True`.</p>
+`items`|**Optional\[Dict\[str, [TaskSuite](/docs/toloka-kit/reference/toloka.client.task_suite.TaskSuite)\]\]**|<p>A dictionary with created task suites. The indexes of a `create_task_suites` input list are used as keys in the dictionary.</p>
+`validation_errors`|**Optional\[Dict\[str, Dict\[str, [FieldValidationError](/docs/toloka-kit/reference/toloka.client.batch_create_results.FieldValidationError)\]\]\]**|<p>A dictionary with validation errors in input task suites. It is filled if the request parameter `skip_invalid_items` is `True`.</p>

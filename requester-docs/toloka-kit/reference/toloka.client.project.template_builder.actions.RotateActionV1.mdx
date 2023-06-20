@@ -1,6 +1,6 @@
 ---
 title: "RotateActionV1 — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:27.553232"
+date: "2023-06-20T13:46:36.609794"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # RotateActionV1
-`toloka.client.project.template_builder.actions.RotateActionV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/project/template_builder/actions.py#L128)
+
+`toloka.client.project.template_builder.actions.RotateActionV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/project/template_builder/actions.py#L127)
 
 ```python
 RotateActionV1(
@@ -21,13 +22,13 @@ RotateActionV1(
 )
 ```
 
-Rotates the specified component by 90 degrees.
+The action rotates a component by 90 degrees.
 
-By default it rotates to the right, but you can specify the direction in the payload property.
+For more information, see [action.rotate](/docs/template-builder/reference/action.rotate).
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`view`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [RefComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.RefComponent)\]\]**|<p>Points to the component to perform the action with.</p>
-`payload`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [Payload](/docs/toloka-kit/reference/toloka.client.project.template_builder.actions.RotateActionV1.Payload)\]\]**|<p>Sets the direction of rotation.</p>
+`view`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [RefComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.RefComponent)\]\]**|<p>A reference to the component.</p>
+`payload`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [Payload](/docs/toloka-kit/reference/toloka.client.project.template_builder.actions.RotateActionV1.Payload)\]\]**|<p>The direction of rotation.</p>

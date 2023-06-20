@@ -1,6 +1,6 @@
 ---
 title: "AssignmentsInPool — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:29.122645"
+date: "2023-06-20T13:46:38.455370"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # AssignmentsInPool
-`toloka.metrics.pool_metrics.AssignmentsInPool` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/metrics/pool_metrics.py#L207)
+
+`toloka.metrics.pool_metrics.AssignmentsInPool` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/metrics/pool_metrics.py#L212)
 
 ```python
 AssignmentsInPool(
@@ -30,19 +31,20 @@ Tracking the count of assignments in different states in the pool.
 
 Metrics starts gathering if they name are set. If the metric name is set to None, they don't gathering.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `pool_id`|**str**|<p>From which pool track metrics.</p>
-`submitted_name`|**Optional\[str\]**|<p>Metric name for a count of submitted assignments. Default &#x27;submitted_assignments_in_pool&#x27;.</p>
-`accepted_name `|**-**|<p>Metric name for a count of accepted assignments. Default &#x27;accepted_assignments_in_pool&#x27;.</p>
-`rejected_name `|**-**|<p>Metric name for a count of rejected assignments. Default &#x27;rejected_assignments_in_pool&#x27;.</p>
+`submitted_name`|**Optional\[str\]**|<p>Metric name for a count of submitted assignments. Default 'submitted_assignments_in_pool'.</p>
+`accepted_name `|**-**|<p>Metric name for a count of accepted assignments. Default 'accepted_assignments_in_pool'.</p>
+`rejected_name `|**-**|<p>Metric name for a count of rejected assignments. Default 'rejected_assignments_in_pool'.</p>
 `skipped_name`|**Optional\[str\]**|<p>Metric name for a count of skipped assignments. Default None.</p>
 
 **Examples:**
 
 How to collect this metrics:
+
 ```python
 def print_metric(metric_dict):
     print(metric_dict)
@@ -58,7 +60,8 @@ asyncio.run(collector.run())
     'accepted_assignments_in_pool': [(datetime.datetime(2021, 8, 12, 10, 4, 45, 951156), 75)],
 }
 ```
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|

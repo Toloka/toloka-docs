@@ -1,6 +1,6 @@
 ---
 title: "HotkeysPluginV1 — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:19.295548"
+date: "2023-06-20T13:46:26.683250"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # HotkeysPluginV1
-`toloka.client.project.template_builder.plugins.HotkeysPluginV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/project/template_builder/plugins.py#L79)
+
+`toloka.client.project.template_builder.plugins.HotkeysPluginV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/project/template_builder/plugins.py#L75)
 
 ```python
 HotkeysPluginV1(
@@ -57,17 +58,18 @@ HotkeysPluginV1(
 )
 ```
 
-Lets you set keyboard shortcuts for actions.
+Hotkeys for actions.
 
-## Parameters Description
+You can use as hotkeys:
+* Letters
+* Numbers
+* Up and down arrows
 
-| Parameters | Type | Description |
-| :----------| :----| :-----------|
-`key_ + [a-z|0-9|up|down]`|**-**|<p>An action that is triggered when you press the specified keyboard key. The keyboard shortcut is set in the key, and the action is specified in the value</p>
+Choose a hotkey using a named parameter of the `HotkeysPluginV1` and assign an action to it.
 
 **Examples:**
 
-How to create hotkeys for classification buttons.
+Creating hotkeys for classification buttons.
 
 ```python
 hot_keys_plugin = tb.HotkeysPluginV1(

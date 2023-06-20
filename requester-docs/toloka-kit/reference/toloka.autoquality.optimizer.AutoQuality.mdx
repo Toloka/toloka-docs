@@ -1,6 +1,6 @@
 ---
 title: "AutoQuality — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:41.099724"
+date: "2023-06-20T13:46:54.552663"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # AutoQuality
-`toloka.autoquality.optimizer.AutoQuality` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/autoquality/optimizer.py#L212)
+
+`toloka.autoquality.optimizer.AutoQuality` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/autoquality/optimizer.py#L212)
 
 ```python
 AutoQuality(
@@ -33,11 +34,11 @@ This class implements a tool to help set up quality control for Toloka project.
 
 To use `toloka.autoquality` install toloka-kit via `pip install toloka-kit[autoquality]`
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`toloka_client`|**[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient)**|<p>TolokaClient instance to interact with requester&#x27;s account</p>
+`toloka_client`|**[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient)**|<p>TolokaClient instance to interact with requester's account</p>
 `project_id`|**str**|<p>Toloka project ID</p>
 `base_pool_id`|**str**|<p>Template Pool for autoquality pools</p>
 `training_pool_id`|**str**|<p>Training Pool ID</p>
@@ -67,7 +68,8 @@ aq.create_tasks(aq_tasks)
 aq.run()
 aq.best_pool_params
 ```
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|

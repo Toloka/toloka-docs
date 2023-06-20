@@ -1,6 +1,6 @@
 ---
 title: "DividerViewV1 — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:47.287567"
+date: "2023-06-20T13:47:02.786274"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # DividerViewV1
-`toloka.client.project.template_builder.view.DividerViewV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/project/template_builder/view.py#L164)
+
+`toloka.client.project.template_builder.view.DividerViewV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/project/template_builder/view.py#L170)
 
 ```python
 DividerViewV1(
@@ -22,14 +23,14 @@ DividerViewV1(
 )
 ```
 
-Horizontal delimiter.
+A horizontal delimiter.
 
-You can place extra elements in the center of the delimiter, like a popup hint and label.
+For more information, see [view.divider](/docs/template-builder/reference/view.divider).
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`hint`|**Optional\[Any\]**|<p>Hint text.</p>
-`label`|**Optional\[Any\]**|<p>A label in the center of the delimiter. Line breaks are not supported.</p>
-`validation`|**Optional\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>Validation based on condition.</p>
+`hint`|**Optional\[Any\]**|<p>A hint text.</p>
+`label`|**Optional\[Any\]**|<p>A label in the center of the delimiter. Note, that line breaks are not supported.</p>
+`validation`|**Optional\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>Validation rules.</p>

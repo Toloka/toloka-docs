@@ -1,6 +1,6 @@
 ---
 title: "aggregate_solutions_by_pool — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:47.635340"
+date: "2023-06-20T13:47:03.263547"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # aggregate_solutions_by_pool
-`toloka.client.TolokaClient.aggregate_solutions_by_pool` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/__init__.py#L481)
+
+`toloka.client.TolokaClient.aggregate_solutions_by_pool` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L563)
 
 Starts aggregation of responses in all completed tasks in a pool.
 
@@ -21,13 +22,13 @@ Try [crowd-kit library](/docs/crowd-kit). It has many aggregation methods and ex
 
 </Note>
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`type`|**Union\[[AggregatedSolutionType](/docs/toloka-kit/reference/toloka.client.aggregation.AggregatedSolutionType), str, None\]**|<p>Aggregation model:</p> <ul> <li>`WEIGHTED_DYNAMIC_OVERLAP` — [Aggregation](/docs/guide/result-aggregation#aggr-by-skill) based on Tolokers&#x27; skill in a pool with a dynamic overlap.</li> <li>`DAWID_SKENE` — [Dawid-Skene aggregation model](/docs/guide/result-aggregation#dawid-skene). It is used in pools without a dynamic overlap.</li> </ul>
+`type`|**Union\[[AggregatedSolutionType](/docs/toloka-kit/reference/toloka.client.aggregation.AggregatedSolutionType), str, None\]**|<p>Aggregation model:</p> <ul> <li>`WEIGHTED_DYNAMIC_OVERLAP` — [Aggregation](/docs/guide/result-aggregation#aggr-by-skill) based on Tolokers' skill in a pool with a dynamic overlap.</li> <li>`DAWID_SKENE` — [Dawid-Skene aggregation model](/docs/guide/result-aggregation#dawid-skene). It is used in pools without a dynamic overlap.</li> </ul>
 `pool_id`|**Optional\[str\]**|<p>The ID of the pool.</p>
-`answer_weight_skill_id`|**Optional\[str\]**|<p>The ID of the skill that determines the weight of the Toloker&#x27;s responses.</p>
+`answer_weight_skill_id`|**Optional\[str\]**|<p>The ID of the skill that determines the weight of the Toloker's responses.</p>
 `fields`|**Optional\[List\[[PoolAggregatedSolutionRequest.Field](/docs/toloka-kit/reference/toloka.client.aggregation.PoolAggregatedSolutionRequest.Field)\]\]**|<p>Output data fields to aggregate. For the best results, each of these fields should have limited number of response options. If the `DAWID_SKENE` aggregation type is selected, you can only specify one value.</p>
 
 * **Returns:**

@@ -1,6 +1,6 @@
 ---
 title: "FileLocker — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:38.466792"
+date: "2023-06-20T13:46:51.402350"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # FileLocker
-`toloka.streaming.locker.FileLocker` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/streaming/locker.py#L54)
+
+`toloka.streaming.locker.FileLocker` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/streaming/locker.py#L54)
 
 ```python
 FileLocker(
@@ -24,7 +25,7 @@ Simplest filesystem-based locker to use with a storage.
 Two locks cannot be taken simultaneously with the same key.
 If the instance detects that the lock was taken by a newer version, it throws an error.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
@@ -56,7 +57,7 @@ with locker_1('some_key'):  # raise an error: NewerInstanceDetectedError
     pass
 ```
 
-## Methods Summary
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|

@@ -1,6 +1,6 @@
 ---
 title: "Task — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:42.771846"
+date: "2023-06-20T13:46:56.865426"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # Task
-`toloka.client.task.Task` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/task.py#L57)
+
+`toloka.client.task.Task` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/task.py#L54)
 
 ```python
 Task(
@@ -38,7 +39,7 @@ A task that is assigned to Tolokers.
 
 Tasks are grouped into [TaskSuites](/docs/toloka-kit/reference/toloka.client.task_suite.TaskSuite).
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
@@ -49,7 +50,7 @@ Tasks are grouped into [TaskSuites](/docs/toloka-kit/reference/toloka.client.tas
 `pool_id`|**Optional\[str\]**|<p>The ID of the pool that the task belongs to.</p>
 `remaining_overlap`|**Optional\[int\]**|<p>The number of times left for this task to be assigned to Tolokers. Read-only field.</p>
 `reserved_for`|**Optional\[List\[str\]\]**|<p>IDs of Tolokers who have access to the task.</p>
-`unavailable_for`|**Optional\[List\[str\]\]**|<p>IDs of Tolokers who don&#x27;t have access to the task.</p>
+`unavailable_for`|**Optional\[List\[str\]\]**|<p>IDs of Tolokers who don't have access to the task.</p>
 `traits_all_of`|**Optional\[List\[str\]\]**|<p>The task can be assigned to Tolokers who have all of the specified traits.</p>
 `traits_any_of`|**Optional\[List\[str\]\]**|<p>The task can be assigned to Tolokers who have any of the specified traits.</p>
 `traits_none_of_any`|**Optional\[List\[str\]\]**|<p>The task can not be assigned to Tolokers who have any of the specified traits.</p>

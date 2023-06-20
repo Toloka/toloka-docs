@@ -1,6 +1,6 @@
 ---
 title: "get_assignments_df — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:20.199899"
+date: "2023-06-20T13:46:28.236108"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # get_assignments_df
-`toloka.client.TolokaClient.get_assignments_df` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/__init__.py#L3497)
+
+`toloka.client.TolokaClient.get_assignments_df` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L3596)
 
 Downloads assignments as pandas.DataFrame.
 
@@ -26,7 +27,7 @@ pip install toloka-kit[pandas]
 Experimental method.
 Implements the same behavior as if you download results in web-interface and then read it by pandas.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
@@ -54,7 +55,7 @@ Implements the same behavior as if you download results in web-interface and the
 **Examples:**
 
 Get all assignments from the specified pool by `pool_id` to [pandas.DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html).
-And apply the native pandas `rename` method to change columns names.
+And apply the native pandas `rename` method to change columns' names.
 
 ```python
 answers_df = toloka_client.get_assignments_df(pool_id='1')

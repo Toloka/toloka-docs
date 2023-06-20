@@ -1,6 +1,6 @@
 ---
 title: "AssignmentEventsInPool — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:38.649760"
+date: "2023-06-20T13:46:51.687097"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # AssignmentEventsInPool
-`toloka.metrics.pool_metrics.AssignmentEventsInPool` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/metrics/pool_metrics.py#L56)
+
+`toloka.metrics.pool_metrics.AssignmentEventsInPool` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/metrics/pool_metrics.py#L56)
 
 ```python
 AssignmentEventsInPool(
@@ -21,6 +22,7 @@ AssignmentEventsInPool(
     rejected_name: Optional[str] = None,
     skipped_name: Optional[str] = None,
     expired_name: Optional[str] = None,
+    cursor_time_lag: timedelta = ...,
     join_events: bool = False,
     *,
     toloka_client: Optional[TolokaClient] = None,
@@ -36,22 +38,24 @@ If you want to track assignments counts, it's better to use AssignmentsInPool.
 
 Metrics starts gathering if they name are set. If the metric name is set to None, they don't gathering.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `pool_id`|**str**|<p>From which pool track metrics.</p>
 `created_name`|**Optional\[str\]**|<p>Metric name for a count of created events. Default None.</p>
-`submitted_name`|**Optional\[str\]**|<p>Metric name for a count of submitted events. Default &#x27;submitted_events_in_pool&#x27;.</p>
-`accepted_name `|**-**|<p>Metric name for a count of accepted events. Default &#x27;accepted_events_in_pool&#x27;.</p>
-`rejected_name `|**-**|<p>Metric name for a count of rejected events. Default &#x27;rejected_events_in_pool&#x27;.</p>
+`submitted_name`|**Optional\[str\]**|<p>Metric name for a count of submitted events. Default 'submitted_events_in_pool'.</p>
+`accepted_name `|**-**|<p>Metric name for a count of accepted events. Default 'accepted_events_in_pool'.</p>
+`rejected_name `|**-**|<p>Metric name for a count of rejected events. Default 'rejected_events_in_pool'.</p>
 `skipped_name`|**Optional\[str\]**|<p>Metric name for a count of skipped events. Default None.</p>
 `expired_name`|**Optional\[str\]**|<p>Metric name for a count of expired events. Default None.</p>
 `join_events`|**bool**|<p>Count all events in one point.  Default `False`.</p>
+`cursor_time_lag`|**timedelta**|<p>Time lag for cursor. This controls time lag between assignments being added and this metric being updated. See BaseCursor.time_lag for details and reasoning behind this.</p>
 
 **Examples:**
 
 How to collect this metrics:
+
 ```python
 def print_metric(metric_dict):
     print(metric_dict)
@@ -67,7 +71,8 @@ asyncio.run(collector.run())
     'rejected_events_in_pool': [],
 }
 ```
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|

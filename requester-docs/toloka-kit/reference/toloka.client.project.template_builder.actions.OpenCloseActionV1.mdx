@@ -1,6 +1,6 @@
 ---
 title: "OpenCloseActionV1 — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:38.229106"
+date: "2023-06-20T13:46:50.947370"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # OpenCloseActionV1
-`toloka.client.project.template_builder.actions.OpenCloseActionV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/project/template_builder/actions.py#L91)
+
+`toloka.client.project.template_builder.actions.OpenCloseActionV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/project/template_builder/actions.py#L88)
 
 ```python
 OpenCloseActionV1(
@@ -20,14 +21,15 @@ OpenCloseActionV1(
 )
 ```
 
-This component changes the display mode of another component by opening or closing it.
+The action changes the display mode of another component.
 
-What happens to the component depends on the type of component:
-    view.image — expands the image to full screen.
-    view.collapse — expands or collapses a collapsible section of content.
+It can expand an [image](/docs/toloka-kit/reference/toloka.client.project.template_builder.view.ImageViewV1) to a full screen
+or collapse a [section](/docs/toloka-kit/reference/toloka.client.project.template_builder.view.CollapseViewV1).
 
-## Parameters Description
+For more information, see [action.open-close](/docs/template-builder/reference/action.open-close).
+
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`view`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [RefComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.RefComponent)\]\]**|<p>Points to the component to perform the action with.</p>
+`view`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [RefComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.RefComponent)\]\]**|<p>References the component to perform the action with.</p>

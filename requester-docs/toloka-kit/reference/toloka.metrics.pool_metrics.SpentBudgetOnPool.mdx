@@ -1,6 +1,6 @@
 ---
 title: "SpentBudgetOnPool — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:38.800089"
+date: "2023-06-20T13:46:51.850001"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # SpentBudgetOnPool
-`toloka.metrics.pool_metrics.SpentBudgetOnPool` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/metrics/pool_metrics.py#L342)
+
+`toloka.metrics.pool_metrics.SpentBudgetOnPool` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/metrics/pool_metrics.py#L347)
 
 ```python
 SpentBudgetOnPool(
@@ -25,7 +26,7 @@ SpentBudgetOnPool(
 
 How much money has already been spent on this pool, excluding fee.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
@@ -35,6 +36,7 @@ How much money has already been spent on this pool, excluding fee.
 **Examples:**
 
 How to collect this metrics:
+
 ```python
 def print_metric(metric_dict):
     print(metric_dict)
@@ -49,7 +51,7 @@ asyncio.run(collector.run())
 }
 ```
 
-## Methods Summary
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|

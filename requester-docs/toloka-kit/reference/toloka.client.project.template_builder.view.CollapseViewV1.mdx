@@ -1,6 +1,6 @@
 ---
 title: "CollapseViewV1 — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:44.017866"
+date: "2023-06-20T13:46:58.539395"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # CollapseViewV1
-`toloka.client.project.template_builder.view.CollapseViewV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/project/template_builder/view.py#L121)
+
+`toloka.client.project.template_builder.view.CollapseViewV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/project/template_builder/view.py#L126)
 
 ```python
 CollapseViewV1(
@@ -24,20 +25,16 @@ CollapseViewV1(
 )
 ```
 
-Expandable block.
+An expandable block.
 
-Lets you add hidden content that doesn't need to be shown initially or that takes up a large space.
+For more information, see [view.collapse](/docs/template-builder/reference/view.collapse).
 
-The block heading is always visible.
-
-If you set the defaultOpened property to true, the block is expanded immediately, but it can be collapsed.
-
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`content`|**Optional\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>Content hidden in the block.</p>
-`label`|**Optional\[Any\]**|<p>Block heading.</p>
-`default_opened`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), bool\]\]**|<p>If true, the block is immediately displayed in expanded form. By default, false (the block is collapsed).</p>
-`hint`|**Optional\[Any\]**|<p>Hint text.</p>
-`validation`|**Optional\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>Validation based on condition.</p>
+`content`|**Optional\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>The block content.</p>
+`label`|**Optional\[Any\]**|<p>The block heading.</p>
+`default_opened`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), bool\]\]**|<p>Initial state of the block: `True` — Expanded `False` — Collapsed</p> <p></p><p>Default value: `False`.</p>
+`hint`|**Optional\[Any\]**|<p>A hint text.</p>
+`validation`|**Optional\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>Validation rules.</p>

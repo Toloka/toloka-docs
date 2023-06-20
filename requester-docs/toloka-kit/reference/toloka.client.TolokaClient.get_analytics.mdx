@@ -1,6 +1,6 @@
 ---
 title: "get_analytics — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:34.313565"
+date: "2023-06-20T13:46:45.234149"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,40 +9,41 @@ docsMenu: "tkitMenu"
 ---
 
 # get_analytics
-`toloka.client.TolokaClient.get_analytics` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/__init__.py#L2196)
+
+`toloka.client.TolokaClient.get_analytics` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L2279)
 
 ```python
 get_analytics(self, stats: List[AnalyticsRequest])
 ```
 
-Sends analytics queries, for example, to estimate the percentage of completed tasks in the pool
+Sends analytics requests to Toloka.
 
-Only pool analytics queries are available.
-The values of different analytical metrics will be returned in the "details" field of the operation when it is
-completed. See the example.
 You can request up to 10 metrics at a time.
 
-## Parameters Description
+The values of different analytical metrics are returned in the `details` field of the operation when it is completed.
+
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`stats`|**List\[[AnalyticsRequest](/docs/toloka-kit/reference/toloka.client.analytics_request.AnalyticsRequest)\]**|<p>Analytics queries list.</p>
+`stats`|**List\[[AnalyticsRequest](/docs/toloka-kit/reference/toloka.client.analytics_request.AnalyticsRequest)\]**|<p>A list of analytics requests.</p>
 
 * **Returns:**
 
-  An operation that you can wait for to get the required statistics.
+  An object to track the progress of the operation.
 
 * **Return type:**
 
-  [Operation](/docs/toloka-kit/reference/toloka.client.operations.Operation)
+  [AnalyticsOperation](/docs/toloka-kit/reference/toloka.client.operations.AnalyticsOperation)
 
 **Examples:**
 
-How to get task completion percentage for one pool.
+The example shows how get the percentage of completed tasks in the pool.
 
 ```python
 from toloka.client.analytics_request import CompletionPercentagePoolAnalytics
-operation = toloka_client.get_analytics([CompletionPercentagePoolAnalytics(subject_id=pool_id)])
+operation = toloka_client.get_analytics([CompletionPercentagePoolAnalytics(subject_id='1080020')])
 operation = toloka_client.wait_operation(operation)
-print(operation.details['value'][0]['result']['value'])
+print(operation.details['value'][0])
+completed_task_percentage = operation.details['value'][0]['result']['value']
 ```

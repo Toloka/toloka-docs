@@ -1,6 +1,6 @@
 ---
 title: "Pool — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:52.432017"
+date: "2023-06-20T13:47:10.093389"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # Pool
-`toloka.client.pool.Pool` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/pool/__init__.py#L35)
+
+`toloka.client.pool.Pool` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/pool/__init__.py#L35)
 
 ```python
 Pool(
@@ -59,7 +60,7 @@ Learn more about:
 * [Pools](/docs/guide/pool-main)
 * [Pricing](/docs/guide/dynamic-pricing)
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
@@ -71,8 +72,8 @@ Learn more about:
 `defaults`|**Optional\[[Defaults](/docs/toloka-kit/reference/toloka.client.pool.Pool.Defaults)\]**|<p>Default settings that are applied to new tasks in the pool.</p>
 `will_expire`|**Optional\[datetime\]**|<p>The UTC date and time when the pool is closed automatically, even if not all tasks are completed.</p>
 `private_comment`|**Optional\[str\]**|<p>A comment about the pool. It is visible to the requester and is not visible to Tolokers.</p>
-`public_description`|**Optional\[str\]**|<p>The pool description. If pool&#x27;s `public_description` is not set, then project&#x27;s `public_description` is used.</p>
-`public_instructions`|**Optional\[str\]**|<p>The pool instructions for Tolokers. If pool&#x27;s `public_instructions` is not set, then project&#x27;s `public_instructions` is used.</p>
+`public_description`|**Optional\[str\]**|<p>The pool description. If pool's `public_description` is not set, then project's `public_description` is used.</p>
+`public_instructions`|**Optional\[str\]**|<p>The pool instructions for Tolokers. If pool's `public_instructions` is not set, then project's `public_instructions` is used.</p>
 `auto_close_after_complete_delay_seconds`|**Optional\[int\]**|<p>The pool remains open after all tasks are completed during the specified time in seconds. Use non zero value if:</p> <ul> <li>You process data in real time.</li> <li>The pool must stay open so that you can upload new tasks.</li> <li>Dynamic overlap is enabled in the pool.</li> </ul> <p>Allowed range: from 0 to 259200 seconds (3 days). The default value is 0.</p>
 `dynamic_pricing_config`|**Optional\[[DynamicPricingConfig](/docs/toloka-kit/reference/toloka.client.pool.dynamic_pricing_config.DynamicPricingConfig)\]**|<p>The dynamic pricing settings.</p>
 `auto_accept_solutions`|**Optional\[bool\]**|<ul> <li>`True` — Responses from Tolokers are accepted or rejected automatically based on some rules.</li> <li>`False` — Responses are checked manually. Time reserved for checking is limited by the `auto_accept_period_day` parameter.   Learn more about [non-automatic acceptance](/docs/guide/offline-accept).</li> </ul>
@@ -114,7 +115,8 @@ new_pool.set_mixer_config(real_tasks_count=10)
 new_pool = toloka_client.create_pool(new_pool)
 print(new_pool.id)
 ```
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|

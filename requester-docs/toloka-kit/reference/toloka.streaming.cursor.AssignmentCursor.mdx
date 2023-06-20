@@ -1,6 +1,6 @@
 ---
 title: "AssignmentCursor — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:23.385749"
+date: "2023-06-20T13:46:32.166798"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # AssignmentCursor
-`toloka.streaming.cursor.AssignmentCursor` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/streaming/cursor.py#L217)
+
+`toloka.streaming.cursor.AssignmentCursor` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/streaming/cursor.py#L245)
 
 ```python
 AssignmentCursor(
@@ -48,19 +49,21 @@ AssignmentCursor(
     expired_lt: Optional[datetime] = None,
     expired_lte: Optional[datetime] = None,
     expired_gt: Optional[datetime] = None,
-    expired_gte: Optional[datetime] = None
+    expired_gte: Optional[datetime] = None,
+    time_lag: timedelta = ...
 )
 ```
 
-Iterator over Assignment objects of seleted AssignmentEventType.
+Iterator over Assignment objects of selected AssignmentEventType.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `toloka_client`|**Union\[[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient), [AsyncTolokaClient](/docs/toloka-kit/reference/toloka.async_client.client.AsyncTolokaClient)\]**|<p>TolokaClient object that is being used to search assignments.</p>
+`event_type`|**Any**|<p>Assignments event's type to search.</p>
 `request`|**[AssignmentSearchRequest](/docs/toloka-kit/reference/toloka.client.search_requests.AssignmentSearchRequest)**|<p>Base request to search assignments by.</p>
-`event_type`|**Any**|<p>Assignments event&#x27;s type to search.</p>
+`_time_lag`|**-**|<p>Time lag between cursor time field upper bound and real time. Default is 1 minute. This lag is required to keep cursor consistent. Lowering this value will make cursor process events faster, but raises probability of missing some events in case of concurrent operations.</p>
 
 **Examples:**
 

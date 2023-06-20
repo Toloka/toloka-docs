@@ -1,6 +1,6 @@
 ---
 title: "DistanceConditionV1 — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:43.878798"
+date: "2023-06-20T13:46:58.356554"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # DistanceConditionV1
-`toloka.client.project.template_builder.conditions.DistanceConditionV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/project/template_builder/conditions.py#L93)
+
+`toloka.client.project.template_builder.conditions.DistanceConditionV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/project/template_builder/conditions.py#L86)
 
 ```python
 DistanceConditionV1(
@@ -23,23 +24,23 @@ DistanceConditionV1(
 )
 ```
 
-This component checks whether the sent coordinates match the ones that you specified
+Checks a distance between two coordinates.
 
-For example, you want a Toloker to take a photo of a specific place. The condition.distance component checks whether
-the photo was taken at the location that you specified.
+For more information, see [condition.distance](/docs/template-builder/reference/condition.distance).
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`from_`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), str\]\]**|<p>First point.</p>
-`to_`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), str\]\]**|<p>Second point.</p>
-`max`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), float\]\]**|<p>The distance in meters by which the X and Y coordinates may differ.</p>
-`hint`|**Optional\[Any\]**|<p>Validation error message that a Toloker will see.</p>
+`from_`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), str\]\]**|<p>The first point.</p>
+`to_`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), str\]\]**|<p>The second point.</p>
+`max`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), float\]\]**|<p>The maximum distance in meters.</p>
+`hint`|**Optional\[Any\]**|<p>A hint that is shown if the condition is not met.</p>
 
 **Examples:**
 
-How to check that a Toloker is in the right place.
+The following condition gets Toloker's [location](/docs/toloka-kit/reference/toloka.client.project.template_builder.data.LocationData)
+and checks that it is near the task location.
 
 ```python
 distance_condition = tb.conditions.DistanceConditionV1(

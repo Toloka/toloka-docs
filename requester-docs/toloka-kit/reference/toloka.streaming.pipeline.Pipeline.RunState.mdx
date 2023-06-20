@@ -1,6 +1,6 @@
 ---
 title: "RunState — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:49.895262"
+date: "2023-06-20T13:47:06.512609"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # RunState
-`toloka.streaming.pipeline.Pipeline.RunState` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/streaming/pipeline.py#L255)
+
+`toloka.streaming.pipeline.Pipeline.RunState` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/streaming/pipeline.py#L259)
 
 ```python
 RunState(
@@ -23,15 +24,16 @@ RunState(
 
 State of a single Pipeline run.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `workers`|**Dict\[[_Worker](/docs/toloka-kit/reference/toloka.streaming.pipeline._Worker), None\]**|<p>all known workers</p>
 `waiting`|**Dict\[[_Worker](/docs/toloka-kit/reference/toloka.streaming.pipeline._Worker), Task\]**|<p>currently running workers</p>
 `pending`|**Dict\[[_Worker](/docs/toloka-kit/reference/toloka.streaming.pipeline._Worker), datetime\]**|<p>currently not running workers</p>
-## Methods Summary
+
+## Methods summary
 
 | Method | Description |
 | :------| :-----------|
-[add_new_observers](/docs/toloka-kit/reference/toloka.streaming.pipeline.Pipeline.RunState.add_new_observers)| None
+[update_observers](/docs/toloka-kit/reference/toloka.streaming.pipeline.Pipeline.RunState.update_observers)| None

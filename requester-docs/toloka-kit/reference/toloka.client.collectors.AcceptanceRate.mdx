@@ -1,6 +1,6 @@
 ---
 title: "AcceptanceRate — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:35.102114"
+date: "2023-06-20T13:46:46.566120"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # AcceptanceRate
-`toloka.client.collectors.AcceptanceRate` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/collectors.py#L74)
+
+`toloka.client.collectors.AcceptanceRate` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/collectors.py#L74)
 
 ```python
 AcceptanceRate(
@@ -38,12 +39,12 @@ The collector can be used with actions:
 * [SetSkill](/docs/toloka-kit/reference/toloka.client.actions.SetSkill) sets Toloker's skill value.
 * [SetSkillFromOutputField](/docs/toloka-kit/reference/toloka.client.actions.SetSkillFromOutputField) sets Toloker's skill value using an output field.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
 `uuid`|**Optional\[UUID\]**|<p>The ID of a collector. Note that when you clone a pool, both pools start using the same collector, because it is not cloned. Usually, it is not an intended behavior. For example, in this case one collector gathers history size from both pools.</p>
-`history_size`|**Optional\[int\]**|<p>The maximum number of recent assignments used to calculate the statistics. If `history_size` is omitted, all Toloker&#x27;s assignments are counted.</p>
+`history_size`|**Optional\[int\]**|<p>The maximum number of recent assignments used to calculate the statistics. If `history_size` is omitted, all Toloker's assignments are counted.</p>
 
 **Examples:**
 

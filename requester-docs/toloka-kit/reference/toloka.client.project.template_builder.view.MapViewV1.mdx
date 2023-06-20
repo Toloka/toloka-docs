@@ -1,6 +1,6 @@
 ---
 title: "MapViewV1 — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:31.952807"
+date: "2023-06-20T13:46:42.468179"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # MapViewV1
-`toloka.client.project.template_builder.view.MapViewV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/project/template_builder/view.py#L429)
+
+`toloka.client.project.template_builder.view.MapViewV1` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/project/template_builder/view.py#L444)
 
 ```python
 MapViewV1(
@@ -26,21 +27,18 @@ MapViewV1(
 )
 ```
 
-Adds a map to your task.
+A component for displaying a map.
 
-Use this component to set the targets for the tasks with the markers, select the areas with polygons.
-Specify the position and colors for the elements on the map.
+For more information, see [view.map](/docs/template-builder/reference/view.map).
 
-You can set the following map properties: scale, position of the map center, label, and hint for Tolokers.
-
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`center`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), str\]\]**|<p>Determines the position of the map center. Specify the coordinates in the string format, for example, &quot;29.748713,-95.404287&quot;, or use the data.location component to set the center of the map to the Toloker&#x27;s current position.</p>
-`markers`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), List\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [Marker](/docs/toloka-kit/reference/toloka.client.project.template_builder.view.MapViewV1.Marker)\]\]\]\]**|<p>Specifies the markers present on the map.</p>
-`polygons`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), List\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [Polygon](/docs/toloka-kit/reference/toloka.client.project.template_builder.view.MapViewV1.Polygon)\]\]\]\]**|<p>Specifies the polygonal objects that you can use to select areas on the map.</p>
-`zoom`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), int\]\]**|<p>The map initial scale. Use the values from 0 to 19. Bigger values give a more detailed map view.</p>
-`hint`|**Optional\[Any\]**|<p>Hint text.</p>
-`label`|**Optional\[Any\]**|<p>Label above the component.</p>
-`validation`|**Optional\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>Validation based on condition.</p>
+`center`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), str\]\]**|<p>The coordinates of the map center. You can use:</p> <ul> <li>A string. For example, `29.748713,-95.404287`</li> <li>The [LocationData](/docs/toloka-kit/reference/toloka.client.project.template_builder.data.LocationData) to set Toloker's current position.</li> </ul>
+`markers`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), List\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [Marker](/docs/toloka-kit/reference/toloka.client.project.template_builder.view.MapViewV1.Marker)\]\]\]\]**|<p>A list of map markers.</p>
+`polygons`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), List\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), [Polygon](/docs/toloka-kit/reference/toloka.client.project.template_builder.view.MapViewV1.Polygon)\]\]\]\]**|<p>A list of areas highlighted on the map.</p>
+`zoom`|**Optional\[Union\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent), int\]\]**|<p>An initial map scale. Use values from 0 to 19. Higher values zoom in the map.</p>
+`hint`|**Optional\[Any\]**|<p>A hint text.</p>
+`label`|**Optional\[Any\]**|<p>A label above the component.</p>
+`validation`|**Optional\[[BaseComponent](/docs/toloka-kit/reference/toloka.client.project.template_builder.base.BaseComponent)\]**|<p>Validation rules.</p>

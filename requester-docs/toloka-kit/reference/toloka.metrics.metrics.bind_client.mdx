@@ -1,6 +1,6 @@
 ---
 title: "bind_client — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:57.857813"
+date: "2023-06-20T13:47:19.923577"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # bind_client
-`toloka.metrics.metrics.bind_client` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/metrics/metrics.py#L35)
+
+`toloka.metrics.metrics.bind_client` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/metrics/metrics.py#L35)
 
 ```python
 bind_client(metrics: List[BaseMetric], toloka_client: Union[TolokaClient, AsyncTolokaClient])
@@ -20,6 +21,7 @@ Sets/updates toloka_client for all metrics in list.
 **Examples:**
 
 How to bind same client for all metrics:
+
 ```python
 import toloka.client as toloka
 from toloka.metrics import AssignmentsInPool, Balance, bind_client, MetricCollector
@@ -36,6 +38,7 @@ bind_client(collector.metrics, toloka_client)
 ```
 
 How to bind several clients:
+
 ```python
 metrics_1 = bind_client([Balance(), AssignmentsInPool(pool_id_1)], toloka_client_1)
 metrics_2 = bind_client([Balance(), AssignmentsInPool(pool_id_2)], toloka_client_2)

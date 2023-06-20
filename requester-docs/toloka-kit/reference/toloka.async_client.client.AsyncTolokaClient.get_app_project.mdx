@@ -1,6 +1,6 @@
 ---
 title: "get_app_project — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:41.916795"
+date: "2023-06-20T13:46:55.705908"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # get_app_project
-`toloka.async_client.client.AsyncTolokaClient.get_app_project` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/async_client/client.py#L0)
+
+`toloka.async_client.client.AsyncTolokaClient.get_app_project` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/async_client/client.py#L0)
 
 ```python
 async get_app_project(self, app_project_id: str)
@@ -17,7 +18,7 @@ async get_app_project(self, app_project_id: str)
 
 Gets information from Toloka about an App project.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
@@ -30,3 +31,10 @@ Gets information from Toloka about an App project.
 * **Return type:**
 
   [AppProject](/docs/toloka-kit/reference/toloka.client.app.AppProject)
+
+**Examples:**
+
+```python
+app_project = toloka_client.get_app_project('Q2d15QBjpwWuDz8Z321g')
+print(app_project.created, app_project.name)
+```

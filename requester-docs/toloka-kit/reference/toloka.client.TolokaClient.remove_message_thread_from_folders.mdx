@@ -1,6 +1,6 @@
 ---
 title: "remove_message_thread_from_folders — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:48.743265"
+date: "2023-06-20T13:47:04.915485"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,7 +9,8 @@ docsMenu: "tkitMenu"
 ---
 
 # remove_message_thread_from_folders
-`toloka.client.TolokaClient.remove_message_thread_from_folders` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/__init__.py#L1013)
+
+`toloka.client.TolokaClient.remove_message_thread_from_folders` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L1096)
 
 ```python
 remove_message_thread_from_folders(
@@ -19,18 +20,18 @@ remove_message_thread_from_folders(
 )
 ```
 
-Deletes a message chain from one or more folders ("unread", "important" etc.)
+Removes a message thread from folders.
 
-## Parameters Description
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`message_thread_id`|**str**|<p>ID of message chain.</p>
-`folders`|**Union\[List\[[Folder](/docs/toloka-kit/reference/toloka.client.message_thread.Folder)\], [MessageThreadFolders](/docs/toloka-kit/reference/toloka.client.message_thread.MessageThreadFolders)\]**|<p>List of folders, where from to remove chain.</p>
+`message_thread_id`|**str**|<p>The ID of the message thread.</p>
+`folders`|**Union\[List\[[Folder](/docs/toloka-kit/reference/toloka.client.message_thread.Folder)\], [MessageThreadFolders](/docs/toloka-kit/reference/toloka.client.message_thread.MessageThreadFolders)\]**|<p>A list of folders.</p>
 
 * **Returns:**
 
-  Full object by ID with updated folders.
+  The updated message thread.
 
 * **Return type:**
 

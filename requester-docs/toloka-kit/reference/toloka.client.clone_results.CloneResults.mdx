@@ -1,6 +1,6 @@
 ---
 title: "CloneResults — Toloka-Kit | Toloka documentation"
-date: "2023-02-27T17:42:59.795529"
+date: "2023-06-20T13:47:23.648652"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,14 +9,17 @@ docsMenu: "tkitMenu"
 ---
 
 # CloneResults
-`toloka.client.clone_results.CloneResults` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.1.4/src/client/clone_results.py#L8)
 
-Objects created as a result of deep cloning of the project
+`toloka.client.clone_results.CloneResults` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/clone_results.py#L8)
 
-## Parameters Description
+The result of a project deep cloning.
+
+`CloneResults` is returned by the [clone_project](/docs/toloka-kit/reference/toloka.client.TolokaClient.clone_project) method.
+
+## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`project`|**[Project](/docs/toloka-kit/reference/toloka.client.project.Project)**|<p>New project</p>
-`pools`|**List\[[Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool)\]**|<p>New pools. Can be empty.</p>
-`trainings`|**List\[[Training](/docs/toloka-kit/reference/toloka.client.training.Training)\]**|<p>New trainings. Can be empty.</p>
+`project`|**[Project](/docs/toloka-kit/reference/toloka.client.project.Project)**|<p>The cloned project.</p>
+`pools`|**List\[[Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool)\]**|<p>A list of cloned pools.</p>
+`trainings`|**List\[[Training](/docs/toloka-kit/reference/toloka.client.training.Training)\]**|<p>A list of cloned trainings.</p>
