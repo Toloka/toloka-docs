@@ -38,7 +38,7 @@ annotates a task, they are spamming with probability <Formula withoutContainer={
 Thus, if the worker is not spamming on the task, i.e. <Formula withoutContainer={true} content="$S_{ij} = 0$"/>, their response is the true label, i.e. <Formula withoutContainer={true} content="$A_{ij} = T_i$"/>.
 Otherwise, their response <Formula withoutContainer={true} content="$A_{ij}$"/> is drawn from a multinomial distribution with parameter vector <Formula withoutContainer={true} content="$\xi_j$"/>.
 
-<Image withBackground width="500px" imageId="635aa4f8628e000c0dc8c86340001ddf" alt="MACE latent label model" />
+<Image width="500px" withBackground imageId="635aa4f8628e000c0dc8c86340001ddf" alt="MACE latent label model" />
 
 The model can be enhanced by adding the Beta prior on <Formula withoutContainer={true} content="$\theta_j$"/> and the Diriclet
 prior on <Formula withoutContainer={true} content="$\xi_j$"/>.

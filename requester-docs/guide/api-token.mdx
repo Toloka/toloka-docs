@@ -1,12 +1,16 @@
 ---
 title: "Generating API tokens | Toloka documentation"
-date: "2023-05-24T15:06:01.861999"
+date: "2023-06-22T18:26:53.773819"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
 ogDescription: ""
 docsMenu: "defaultMenu"
 ---
+
+import FaqTolokaKitNewToken from '../subcomponents/faq/api/toloka-kit-new-token.mdx'
+import FaqJavaSdkNewToken from '../subcomponents/faq/api/java-sdk-new-token.mdx'
+import FaqReissueToken from '../subcomponents/faq/api/reissue-token.mdx'
 
 # Generating API tokens
 
@@ -22,15 +26,15 @@ If your company uses SSO authentication method, each SSO user can generate their
 
 1. Go to [Profile → Integrations](https://platform.toloka.ai/requester/profile/integration). Click **<img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425166901/1675425166901_original_svg.svg" alt="Plus sign" /> Generate token**:
 
-    <Image withBackground imageId="1607657d66218b0c6c251dcd523e3057" alt="Generate token" />
+    <Image width="700px" withBackground imageId="1607657d66218b0c6c251dcd523e3057" alt="Generate token" />
 
 1. Enter a unique name or description for the token. Uniqueness is not required, but it will allow you to distinguish this token in case you have several ones. Click **Generate**:
 
-    <Image withBackground imageId="5ac72a4928a0d17cd416a55460a6522f" alt="Enter token name" />
+    <Image width="700px" withBackground imageId="5ac72a4928a0d17cd416a55460a6522f" alt="Enter token name" />
 
 1. A new token will be generated. Click **Copy and close** to copy the token into the clipboard and close the dialog window:
 
-    <Image withBackground imageId="c5e71330b80ad2f81ea629b43959826c" alt="Copy and close" />
+    <Image width="700px" withBackground imageId="c5e71330b80ad2f81ea629b43959826c" alt="Copy and close" />
 
     <Note mode="warning" title="Warning">
 
@@ -40,7 +44,7 @@ If your company uses SSO authentication method, each SSO user can generate their
 
 1. Your newly generated token will be added to the list of the tokens associated with your account:
 
-    <Image withBackground imageId="e12badf3c4c7296d99750b5ba887635a" alt="List of tokens" />
+    <Image width="700px" withBackground imageId="e12badf3c4c7296d99750b5ba887635a" alt="List of tokens" />
 
     Here you can view the details about your generated tokens: their names, first characters, creation date, and usage information.
 
@@ -79,6 +83,20 @@ If you entered a correct value, you will receive a response like this with the `
 ```
 
 Now you can use the created API token to send other API requests: get the list of the existing [projects](https://toloka.ai/docs/api/api-reference/#get-/projects), [pools](https://toloka.ai/docs/api/api-reference/#get-/pools), [upload tasks](https://toloka.ai/docs/api/api-reference/#post-/tasks), and other requests.
+
+<Note mode="note" title="Note">
+
+The new API tokens work when you send requests to the `toloka.dev` domain and require [Toloka Java SDK](https://github.com/Toloka/toloka-java-sdk/releases) version 0.0.6 or later and [Toloka-Kit](https://github.com/Toloka/toloka-kit/releases) version 1.2.0 or later.
+
+</Note>
+
+## Troubleshooting
+
+<FaqTolokaKitNewToken/>
+
+<FaqJavaSdkNewToken/>
+
+<FaqReissueToken/>
 
 ## Further reading
 

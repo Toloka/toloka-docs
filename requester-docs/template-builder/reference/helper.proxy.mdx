@@ -1,6 +1,6 @@
 ---
 title: "@toloka/helper.proxy — Template Builder | Toloka documentation"
-date: "2023-03-30T10:05:26.179293"
+date: "2023-06-22T18:26:22.850249"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,15 +8,19 @@ ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
+import YandexDiskWarning from '../../subcomponents/yandex-disk-warning.mdx'
+
 # @toloka/helper.proxy
 
 You can use this component to download files from Yandex Disk.
 
-To use `@toloka/helper.proxy`, connect Yandex Disk to your Toloka account and add the proxy by following [the instructions](/docs/guide/prepare-data).
+<YandexDiskWarning/>
+
+To use `@toloka/helper.proxy`, you must have Yandex Disk connected to your Toloka account and proxy added. See the [instructions](/docs/guide/prepare-data) for more details.
 
 Select the component that you want to add, such as [view.image](/docs/template-builder/reference/view.image) for an image or [view.audio](/docs/template-builder/reference/view.audio) for an audio file. In the `url` property of this component, select the `@toloka/helper.proxy` type.
 
-<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/V8WEk0kF3twYd3">View example</Button>
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/CGsrA8bO4FAepj">View example</Button>
 
 ## Component properties {#properties}
 
