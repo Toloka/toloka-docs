@@ -89,7 +89,7 @@ Before you begin:
 
     - **Description for Tolokers**: In a couple of sentences, explain what you expect Tolokers to do. This is just an overview. You will write instructions later.
 
-    <Image withBackground imageId="1675425930504" alt="Create a project. Step 1" />
+    <Image width="700px" withBackground imageId="1675425930504" alt="Create a project. Step 1" />
 
 1. In the **Task interface** section, set up what your tasks will look like. This preset has a task template with layout and validation pre-configured. The Toloker won't be able to submit the response without listening to the audio recording and adding the text.
 
@@ -97,7 +97,7 @@ Before you begin:
 
     1. In the **Config** section, you can change the texts Tolokers will see in your task. All tasks in a project use the same texts.
 
-        <Image withBackground imageId="1675425942781" alt="Create a project. Config texts" />
+        <Image width="700px" withBackground imageId="1675425942781" alt="Create a project. Config texts" />
 
         <Note mode="note" title="Note">
 
@@ -107,7 +107,7 @@ Before you begin:
 
     1. In the **Input data example** section, add a link to a sample audio. This audio is only used to display the task interface preview on the right.
 
-        <Image withBackground imageId="1675425935217" alt="Create a project. Input data example" />
+        <Image width="700px" withBackground imageId="1675425935217" alt="Create a project. Input data example" />
 
     1. <TolokaRequesterSourceSpecificationDefinition/>
 
@@ -149,7 +149,7 @@ Before you begin:
 
         - For example, add the **Languages** filter:
 
-            <Image withBackground imageId="1675425945827" alt="Create a pool. Language filter" />
+            <Image width="700px" withBackground imageId="1675425945827" alt="Create a pool. Language filter" />
 
         - It is best to launch transcription tasks in the Toloka web version so that Tolokers can use the keyboard for typing. Add the **Device type** filter, and set its value to **Personal computer**.
 
@@ -175,7 +175,7 @@ Before you begin:
 
         To catch bots, set 10–15 seconds per response. Ban Tolokers after two fast responses.
 
-        <Image withBackground imageId="1675425922263" alt="Create a pool. Fast answers filter" />
+        <Image width="700px" withBackground imageId="1675425922263" alt="Create a pool. Fast answers filter" />
 
         This means that a user who completes two or more task suites in less than 10 seconds will be banned for 10 days and won't be able to access your tasks.
 
@@ -187,19 +187,19 @@ Before you begin:
 
             In this case, the **Minimum time per task suite** value depends on the length of recordings and their number per task suite, as well as on how difficult the task is (it's hard to hear, it contains jargon, it has special rules for transcribing, and so on). Ban Tolokers after three fast responses.
 
-            <Image withBackground imageId="1675425939720" alt="Create a pool. Fast answers control rule" />
+            <Image width="700px" withBackground imageId="1675425939720" alt="Create a pool. Fast answers control rule" />
 
             This means that a user who gives a minimum of 3 responses in less than 30 seconds will be banned for 5 days and won't be able to complete your tasks.
 
         1. Add the **Results of manual review** quality control rule and enter the following values:
 
-            <Image withBackground imageId="1675425927432" alt="Create a pool. Assignments review control rule" />
+            <Image width="700px" withBackground imageId="1675425927432" alt="Create a pool. Assignments review control rule" />
 
             This means that if 35% or more of a Toloker's responses are rejected, the Toloker is banned and can't access your tasks for 15 days. The rule takes effect after 3 responses of the Toloker are reviewed.
 
         1. Add the [Processing rejected and accepted assignments](/docs/guide/reassessment-after-accepting) rule:
 
-            <Image withBackground imageId="1675425925495" alt="Create a pool. Processing rejected and accepted assignments control rule" />
+            <Image width="700px" withBackground imageId="1675425925495" alt="Create a pool. Processing rejected and accepted assignments control rule" />
 
             This means that if you reject assignments during the review, they'll be sent for re-completion, but to another Toloker.
 
@@ -244,7 +244,7 @@ Before you begin:
 
         For example, you can add 5 general tasks per suite:
 
-        <Image withBackground imageId="1675425947924" alt="Upload data. Tasks per suite" />
+        <Image width="700px" withBackground imageId="1675425947924" alt="Upload data. Tasks per suite" />
 
         This means that there will be 5 audio recordings per suit, each recording with a text field for transcription.
 
@@ -262,7 +262,7 @@ Before you begin:
 
 1. <TolokaRequesterSourceStartButton/>
 
-    <Image withBackground imageId="1675425933474" alt="Start labeling. Step 2" />
+    <Image width="700px" withBackground imageId="1675425933474" alt="Start labeling. Step 2" />
 
 1. In the pop-up panel, review the budget and click **Launch**.
 
@@ -274,7 +274,7 @@ After the specified time period, all responses are automatically accepted, regar
 
 1. Go to the pool, and click **Review assignments**.
 
-    <Image withBackground imageId="1675425919752" alt="See the results. Review assignments" />
+    <Image width="700px" withBackground imageId="1675425919752" alt="See the results. Review assignments" />
 
 1. Choose an assignment.
 
@@ -288,7 +288,7 @@ After the specified time period, all responses are automatically accepted, regar
 
 1. After checking all the assignments, click **Download results**.
 
-    <Image withBackground imageId="1675425937496" alt="See the results. Download results" />
+    <Image width="700px" withBackground imageId="1675425937496" alt="See the results. Download results" />
 
     You will get the TSV file with the labeling results.
 

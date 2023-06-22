@@ -1,12 +1,16 @@
 ---
 title: "API migration — Toloka API | Toloka documentation"
-date: "2023-02-03T19:53:23.918646"
+date: "2023-06-22T18:26:00.651566"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
 ogDescription: ""
 docsMenu: "apiMenu"
 ---
+
+import FaqTolokaKitNewDomain from '../subcomponents/faq/api/toloka-kit-new-domain.mdx'
+import FaqJavaSdkNewDomain from '../subcomponents/faq/api/java-sdk-new-domain.mdx'
+import FaqReissueToken from '../subcomponents/faq/api/reissue-token.mdx'
 
 # API migration
 
@@ -31,47 +35,11 @@ curl -X GET 'https://toloka.dev/api/v1/requester' \
 
 </Cut>
 
-<Cut title="I use Toloka-Kit. Do I have to do anything?">
+<FaqTolokaKitNewDomain/>
 
-If you are a user of Toloka-Kit version 1.0.0 and later, you are good to go, no need to do anything.
+<FaqJavaSdkNewDomain/>
 
-If your Toloka-Kit version is older than 1.0.0, please update it. You can do this with the help of the following command:
-
-```bash
-pip install toloka-kit --upgrade
-```
-
-Your Toloka-Kit library version will be updated to the latest version together with all the dependencies it requires.
-
-Refer to our [GitHub repository](https://github.com/Toloka/toloka-kit/releases) for the list of available releases.
-
-</Cut>
-
-<Cut title="I use Toloka Java SDK. Do I have to do anything?">
-
-If you are a user of Toloka Java SDK version 0.0.6 and later, you are good to go, no need to do anything.
-
-If your Toloka Java SDK version is older than 0.0.6, please rebuild your Java application using the latest available Toloka Java SDK version.
-
-Go to the [Toloka Java SDK page](https://mvnrepository.com/artifact/ai.toloka/toloka-java-sdk) at the MVN repository and click the latest SDK version number.
-
-<Image withBackground imageId="1675427163200" alt="Toloka Java SDK version" />
-
-Then select your Java project type and copy the connection string.
-
-<Image withBackground imageId="1675427165904" alt="Toloka Java SDK connection string" />
-
-If you already use Toloka Java SDK, in most cases you will only need to change the version number.
-
-Refer to our [GitHub repository](https://github.com/Toloka/toloka-java-sdk/releases) for the list of available releases.
-
-</Cut>
-
-<Cut title="Do I have to reissue my API token to get access to the API when I change the URL or update my app to the latest version?">
-
-You don't need to reissue API tokens — they will continue to work. Once you use the new domain to connect to the API (or upgrade your Toloka-Kit or Toloka Java SDK version), you can continue where you left off. You'll still have access to all your projects, pools, and settings.
-
-</Cut>
+<FaqReissueToken/>
 
 <Cut title="I have a question not answered here. Where can I ask it?">
 
