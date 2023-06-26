@@ -78,7 +78,7 @@ Parameter | Overview
 `configs[].collector_config.parameters` | <ReassessmentTable2/>
 `configs[].collector_config.parameters.history_size` | _integer_ \| **required**<br/><br/>The maximum number of the Toloker's recent responses in the project to use for calculating the percentage of correct responses.<br/><br/>If this field is omitted, the calculation is based on all the Toloker's responses in the pool.
 `configs[].rules` | _object_ \| **required**<br/><br/><ConfigsRules/>
-`configs[].rules.conditions` | _object_ \| **required**<br/><br/>Conditions (for example, 10 task suites skipped in a row). Multiple conditions are combined with the "OR" operator.
+`configs[].rules.conditions` | _object_ \| **required**<br/><br/>Conditions (for example, 10 task suites skipped in a row). Multiple conditions are combined with the `AND` operator.
 `configs[].rules.conditions.key` | <ReassessmentTable3/>
 `configs[].rules.conditions.operator` | <ReassessmentTable4/>
 `configs[].rules.conditions.value` | _string_ \| **required**<br/><br/>The number of task suites with a specific status.

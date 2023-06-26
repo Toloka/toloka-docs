@@ -88,7 +88,7 @@ Parameter | Overview
 `configs[].collector_config.type` | <EarnLimitTable1/>
 `configs[].collector_config.parameters` | <EarnLimitTable2/>
 `configs[].rules` | _object_ \| **required**<br/><br/><ConfigsRules/>
-`configs[].rules.conditions` | _object_ \| **required**<br/><br/>Conditions (for example, 10 task suites skipped in a row). Multiple conditions are combined with the "OR" operator.
+`configs[].rules.conditions` | _object_ \| **required**<br/><br/>Conditions (for example, 10 task suites skipped in a row). Multiple conditions are combined with the `AND` operator.
 `configs[].rules.conditions.key` | <EarnLimitTable3/>
 `configs[].rules.conditions.operator` | <EarnLimitTable4/>
 `configs[].rules.conditions.value` | _integer_ \| **required**<br/><br/>The threshold value of the variable specified in `key`.
