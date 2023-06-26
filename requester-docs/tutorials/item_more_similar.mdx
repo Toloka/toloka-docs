@@ -1,6 +1,6 @@
 ---
 title: "Project 4. Which of the found items is most similar to the original? — Tutorials | Toloka documentation"
-date: "2023-03-10T16:55:56.193660"
+date: "2023-06-26T17:59:28.311386"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,11 +8,11 @@ ogDescription: ""
 docsMenu: "tutorialsMenu"
 ---
 
-import SaveProject from './subcomponents/save-project.mdx'
 import TutorialsCreateProjectButton from './subcomponents/create-project-button.mdx'
 import TutorialsChoosePresetImage from './subcomponents/choose-preset-image.mdx'
 import TutorialsAddNameDescription from './subcomponents/add-name-description.mdx'
 import TolokaRequesterSourceInstructions from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instructions.mdx'
+import SaveProject from './subcomponents/save-project.mdx'
 import TolokaRequesterPoolType from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx'
 import TolokaRequesterPoolName from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
 import TolokaRequesterPoolDescription from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
@@ -35,7 +35,7 @@ In this [project](/docs/glossary#project), Tolokers compare images of shoes with
 
 ## Create a project {#create_project}
 
-To create a project, open [Toloka for requesters](https://platform.toloka.ai/for-requesters/).
+To create a project, open [Toloka for requesters](https://platform.toloka.ai/auth?role=REQUESTER).
 
 In the interface:
 
@@ -136,8 +136,6 @@ To create a [pool](/docs/glossary#pool):
 
         The time should be long enough to read the instructions and wait for task data to load. For example, `600` seconds.
 
-    1. Turn on the **Keep task order** option.
-
 1. <TutorialsUploadTasks/>
 
     1. Download the file received in the [third project](/docs/tutorials/item_look_similar).
@@ -158,7 +156,7 @@ To create a [pool](/docs/glossary#pool):
 
     1. Choose **Set manually**.
 
-    1. In the **Tasks per suite** field, specify `1`. You can experiment with the number of tasks per suite.
+    1. In the **Number of tasks per suite** field, specify `1`. You can experiment with the number of tasks per suite.
 
     1. Click **Combine tasks into suites**.
 

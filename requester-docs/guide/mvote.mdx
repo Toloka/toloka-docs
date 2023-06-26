@@ -1,6 +1,6 @@
 ---
 title: "Majority vote | Toloka documentation"
-date: "2023-03-02T19:39:06.775998"
+date: "2023-06-26T17:55:35.520388"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -45,7 +45,7 @@ Let's say we set up this rule in a pool with `overlap=5`:
 
 <Image width="700px" withBackground imageId="1675426910375" alt="" />
 
-It is activated when at least three of the tasks completed by the Toloker reach full overlap. When responses have been received from all five task Tolokers, the system determines which response was selected by the majority. If the Toloker's responses to two out of three tasks differ from the responses of the majority, the Toloker is banned from the project for 10 days. To collect all the responses needed to trigger the rule, enable **Keep task order** in [the pool settings](/docs/guide/pool_poolparams#keeptaskorder).
+It is activated when at least three of the tasks completed by the Toloker reach full overlap. When responses have been received from all five task Tolokers, the system determines which response was selected by the majority. If the Toloker's responses to two out of three tasks differ from the responses of the majority, the Toloker is banned from the project for 10 days. To collect all the responses needed to trigger the rule, enable **Keep task order from uploaded data** in [the pool settings](/docs/guide/pool_poolparams#keeptaskorder).
 
 <Image width="700px" withBackground imageId="1675426907192" alt="" />
 
@@ -86,7 +86,7 @@ Don't use it if:
 
     If the response threshold is equal to the overlap, the rule will only use the tasks where all the Tolokers gave the same responses, ignoring tasks with mismatching votes.
 
-    <MvoteCut1/>
+    <MvoteCut2/>
 
 - Don't use the **majority vote** if:
 

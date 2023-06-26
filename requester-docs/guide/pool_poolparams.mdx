@@ -1,6 +1,6 @@
 ---
 title: "Pool parameters | Toloka documentation"
-date: "2023-02-15T15:15:23.413185"
+date: "2023-06-26T17:55:38.640667"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -9,9 +9,10 @@ docsMenu: "defaultMenu"
 ---
 
 import TolokaRequesterSourceFiltersDesc from '../subcomponents/toloka-requester-source/id-toloka-requester-source/filters-desc.mdx'
+import SmartMixingSelected from '../subcomponents/toloka-requester-source/id-toloka-requester-source/smart-mixing-selected.mdx'
+import KeepTaskOrder from '../subcomponents/toloka-requester-source/id-toloka-requester-source/keep-task-order.mdx'
 import PoolPoolparamsTable1 from './pool_poolparams/subcomponents/pool_poolparams-table-1.mdx'
 import PoolPoolparamsTable2 from './pool_poolparams/subcomponents/pool_poolparams-table-2.mdx'
-import PoolPoolparamsTable3 from './pool_poolparams/subcomponents/pool_poolparams-table-3.mdx'
 
 # Pool parameters
 
@@ -28,13 +29,19 @@ import PoolPoolparamsTable3 from './pool_poolparams/subcomponents/pool_poolparam
 **Review task responses manually** | Turn on this option to [review](/docs/guide/accept) the [completed tasks](/docs/glossary#completed-tasks) manually.<br/><br/>Set the time period when you can check the tasks and reject them if the results are poor.<br/><br/>To learn more about manual review, go to [Reviewing assignments](/docs/guide/offline-accept). | **Quality control**
 **Training** | This field is only available if you have training pools in the project.<br/><br/>[Training pool](/docs/glossary#training-pool) that will be linked to the main one. | **Quality control**
 **Level required, %** | This field is only available if you have filled in the **Training** field.<br/><br/>Percentage of correct responses in training tasks (from 0 to 100) required to be admitted to the pool tasks. The calculation is based on the first response the Toloker gave in each task.<br/><br/>The minimum required level that you can set is 5. Tolokers who complete training with apercentage below this level won't have access to tasks. | **Quality control**
+**General tasks** | The number of general tasks per suite. | **Smart mixing**
+**Control tasks** | The number of control tasks per suite. | **Smart mixing**
+**Training tasks** | The number of training tasks per suite. | **Smart mixing**
+**Min general tasks** | The minimum number of general tasks per suite. | **Smart mixing**
+**Min control tasks** | The minimum number of control tasks per suite. | **Smart mixing**
+**Min training tasks** | The minimum number of training tasks per suite. | **Smart mixing**
+**Allow partial task suites** |<SmartMixingSelected/>The setting determines the output in the last task suite if it has less than the required number of general tasks.<br/><br/>By default, the option is enabled. | **Smart mixing**
+**Keep task order from uploaded data** |<SmartMixingSelected/><KeepTaskOrder/> |**Smart mixing**
 **Review period in days** | <PoolPoolparamsTable1/>| **Quality control**
 **Dynamic pricing** | This parameter allows you to vary the task price depending on the Toloker's [skill](/docs/glossary#skill) level. [Learn more](/docs/guide/dynamic-pricing) | **Dynamic pricing and overlap**
 **Dynamic overlap** | You can use this parameter if you specify fixed values for the [input data](/docs/glossary#input-output-data) fields. It lets you save your budget and avoid setting fixed [overlap](/docs/glossary#overlap) for all pool tasks.<br/><br/>You set the range, the service analyzes the responses, their consistency, the level of Tolokers' skills and, if necessary, increases the overlap within the range you specified. | **Dynamic pricing and overlap**
-**Priority** | Number from 0 to 100. Allows you to rank a pool within a project. First, a Toloker is assigned tasks from a pool with higher priority. | **Additional settings**
+**Pool priority within the project** | Number from 0 to 100. Allows you to rank a pool within a project. First, a Toloker is assigned tasks from a pool with higher priority. | **Additional settings**
 **Time per task suite, sec** | The time allowed for completing a task suite, in seconds. Uncompleted tasks are redistributed to other Tolokers.<br/><br/>We recommend spending no more than 60 seconds per task (including the time for page loading and sending responses).<br/><br/>If you set the interval too long, the tasks will stay open for a long time. If it is too short, the tasks won't be completed and paid for. | **Additional settings**
 **Keep pool open after completion, sec** | The interval during which the pool will remain open from the moment all tasks are completed. Minimum — 0 (1 if you use dynamic overlap), maximum — 259200 seconds (three days).<br/><br/>For example, you can use this parameter if you need an open pool where you regularly upload new tasks. | **Additional settings**
 **Pool closing date** | The date the pool closes. The pool closes automatically on this date, even if the tasks aren't marked up. | **Additional settings**
 **Pool type** | <PoolPoolparamsTable2/>| **Additional settings**
-**Keep task order** | <PoolPoolparamsTable3/>|**Add optional pool settings**
-**Metafields** | To pass an array of metafields, specify key and value for each metafield. | **Add optional pool settings**
