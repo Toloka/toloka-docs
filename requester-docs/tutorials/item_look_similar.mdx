@@ -1,6 +1,6 @@
 ---
 title: "Project 3. Does the item found look similar to the original? — Tutorials | Toloka documentation"
-date: "2023-03-10T16:55:53.263036"
+date: "2023-06-26T17:59:26.632449"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,11 +8,11 @@ ogDescription: ""
 docsMenu: "tutorialsMenu"
 ---
 
-import SaveProject from './subcomponents/save-project.mdx'
 import TutorialsCreateProjectButton from './subcomponents/create-project-button.mdx'
 import TutorialsChoosePresetImage from './subcomponents/choose-preset-image.mdx'
 import TutorialsAddNameDescription from './subcomponents/add-name-description.mdx'
 import TolokaRequesterSourceInstructions from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instructions.mdx'
+import SaveProject from './subcomponents/save-project.mdx'
 import TolokaRequesterPoolType from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx'
 import TolokaRequesterPoolName from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
 import TolokaRequesterPoolDescription from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
@@ -43,7 +43,7 @@ Since the **Assignment review** option is enabled in the [pool](/docs/glossary#p
 
 ## Create a project {#create_project}
 
-To create a project, open [Toloka for requesters](https://platform.toloka.ai/for-requesters/).
+To create a project, open [Toloka for requesters](https://platform.toloka.ai/auth?role=REQUESTER).
 
 In the interface:
 
@@ -155,8 +155,6 @@ To create a pool:
 
         The time should be long enough to read the instructions and wait for task data to load. For example, `300` seconds.
 
-    1. Turn on the **Keep task order** option.
-
 1. <TutorialsUploadTasks/>
 
     1. Wait for the pool from project 2 to complete.
@@ -202,6 +200,8 @@ To create a pool:
         1. In the **Training tasks** field, specify `0`.
 
         1. In the **Control tasks** field, specify `1`.
+
+        1. Turn on the **Keep task order from uploaded data** option.
 
         1. Click **Upload**.
 
