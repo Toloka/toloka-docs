@@ -1722,6 +1722,10 @@
         {
           "title": "Merging tasks",
           "href": "/docs/api/tasks"
+        },
+        {
+          "title": "Task distribution intervals",
+          "href": "/docs/api/intervals"
         }
       ]
     },
