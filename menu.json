@@ -559,6 +559,10 @@
                   "href": "/docs/template-builder/templates/text-recognition"
                 },
                 {
+                  "title": "Product recognition in images",
+                  "href": "/docs/template-builder/templates/product-recognition-in-images"
+                },
+                {
                   "title": "Accessories recommendations",
                   "href": "/docs/template-builder/templates/accessories-recommendations"
                 }
