@@ -603,6 +603,10 @@
                 {
                   "title": "Named entity recognition",
                   "href": "/docs/template-builder/templates/named-entity-recognition"
+                },
+                {
+                  "title": "Product category classification",
+                  "href": "/docs/template-builder/templates/product-category-classification"
                 }
               ]
             },
