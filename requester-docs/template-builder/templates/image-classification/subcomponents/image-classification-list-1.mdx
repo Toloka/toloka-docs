@@ -1,3 +1,44 @@
-If there are several possible answers to the question, use [field.checkbox-group](/docs/template-builder/reference/field.checkbox-group) checkboxes.
+If there are several possible answers to the question, add a group of checkboxes using the [field.checkbox-group](/docs/template-builder/reference/field.checkbox-group) component.
 
-  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/KUpCR4gj3ttFY7">View example</Button>
+<Cut title="Show code">
+
+```json
+{
+  "type": "field.checkbox-group",
+  "label": "What do you see in the picture?",
+  "options": [
+    {
+      "label": "Crosswalk",
+      "value": "line"
+    },
+    {
+      "label": "Cars",
+      "value": "cars"
+    },
+    {
+      "label": "Pedestrians",
+      "value": "walkers"
+        },
+    {
+      "label": "Parking",
+      "value": "parking"
+    },
+    {
+      "label": "Road signs",
+      "value": "road-signs"
+    }
+  ],
+  "validation": {
+    "type": "condition.required",
+    "hint": "select at least one answer"
+  },
+  "data": {
+    "type": "data.output",
+    "path": "result"
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/KUpCR4gj3ttFY7">View example</Button>

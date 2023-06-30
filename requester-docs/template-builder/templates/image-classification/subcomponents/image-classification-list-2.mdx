@@ -1,5 +1,47 @@
 The [field.button-radio-group](/docs/template-builder/reference/field.button-radio-group) component is displayed as solid buttons. It's better to use these buttons if the question has 2–4 short answer options.
 
-  If there are more answer options, or they are long, it's better to use [field.radio-group](/docs/template-builder/reference/field.radio-group), as in the example.
+If there are more answer options, or they are long, it's better to use [field.radio-group](/docs/template-builder/reference/field.radio-group), as in the example.
 
-  <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/BQPuzqRh3ttFYX">View example</Button>
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "field.radio-group",
+  "label": "What do you see in the picture?",
+  "options": [
+    {
+      "label": "Nevsky Masquerade cat",
+      "value": "ref1"
+    },
+    {
+      "label": "Australian Mist cat",
+      "value": "ref2"
+    },
+    {
+      "label": "Russian Blue cat",
+      "value": "ref3"
+    },
+    {
+      "label": "A different breed of cat",
+      "value": "other"
+    },
+    {
+      "label": "Picture didn't load",
+      "value": "error"
+    }
+  ],
+  "validation": {
+    "type": "condition.required",
+    "hint": "select at least one answer"
+  },
+  "data": {
+    "type": "data.output",
+    "path": "result"
+  }
+}
+```
+
+</Cut>
+
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/BQPuzqRh3ttFYX">View example</Button>
