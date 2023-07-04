@@ -1,8 +1,8 @@
 Send a request from the command line using the cURL utility:
 
 ```bash
-curl -X POST \
-     -H 'Authorization: OAuth <OAuth token>' \
+curl -X POST 'https://sandbox.toloka.dev/api/v1/pools' \
+     -H 'Authorization: OAuth PlaceYourRealOAuthToken_Here' \
      -H 'Content-Type: application/json' \
      -d '{
            "project_id": "{project_id}",
@@ -71,6 +71,5 @@ curl -X POST \
            "defaults": {
              "default_overlap_for_new_task_suites": 3
            }
-         }' \
-https://sandbox.toloka.dev/api/v1/pools
+         }'
 ```

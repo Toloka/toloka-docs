@@ -1,6 +1,6 @@
 ---
 title: "Filter by computed data — Toloka API | Toloka documentation"
-date: "2023-05-02T13:35:54.255732"
+date: "2023-07-04T17:43:01.744446"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -19,9 +19,9 @@ import FilterComputedTable8 from './filter-computed/subcomponents/filter-compute
 
 # Filter by computed data
 
-You can use data received from or computed by Toloka to select Tolokers. For example, a device's technical characteristics or the type of client app.
+You can use data received from or computed by Toloka to select Tolokers. For example, a device technical characteristics or the type of client app.
 
-Define the `filter` object in the pool parameters.
+Define the `assignments_issuing_config.filter` object in the [pool parameters](https://toloka.ai/docs/api/api-reference/#tag--pool).
 
 ## Sample filter in JSON {#request-example}
 
@@ -29,18 +29,21 @@ This example selects Tolokers with the Windows OS and Chrome browser.
 
 ```json
 {
-  "filter" : {
-    "and" : [ {
-      "operator" : "EQ",
-      "category" : "computed",
-      "key" : "os_family",
-      "value" : "WINDOWS"
-    }, {
-      "operator" : "EQ",
-      "category" : "computed",
-      "key" : "user_agent_family",
-      "value" : "CHROME"
-    } ]
+  "filter": {
+    "and": [
+      {
+        "operator": "EQ",
+        "category": "computed",
+        "key": "os_family",
+        "value": "WINDOWS"
+      },
+      {
+        "operator": "EQ",
+        "category": "computed",
+        "key": "user_agent_family",
+        "value": "CHROME"
+      }
+    ]
   }
 }
 ```

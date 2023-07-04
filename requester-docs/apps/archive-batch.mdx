@@ -1,6 +1,6 @@
 ---
 title: "Archiving batches — Toloka apps | Toloka documentation"
-date: "2023-05-17T10:24:23.436752"
+date: "2023-07-04T17:33:25.941791"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -42,7 +42,7 @@ Send the following `POST` request:
 
 ```bash
 curl -X POST 'https://toloka.dev/api/app/v0/app-projects/{project_id}/batches/{batch_id}/unarchive' \
-     -H 'Authorization: OAuth AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE'
+     -H 'Authorization: OAuth PlaceYourRealOAuthToken_Here'
 ```
 
 Where `{project_id}` is the ID of the project with which the batch is associated, and `{batch_id}` is the ID of the batch you want to unarchive.
