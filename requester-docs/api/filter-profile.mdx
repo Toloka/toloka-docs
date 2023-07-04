@@ -1,6 +1,6 @@
 ---
 title: "Filter by profile data — Toloka API | Toloka documentation"
-date: "2023-05-02T13:35:54.085749"
+date: "2023-07-04T17:43:01.539194"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -19,7 +19,7 @@ import FilterProfileTable8 from './filter-profile/subcomponents/filter-profile-t
 
 # Filter by profile data
 
-To select Tolokers based on profile data, define a `filter` object in the pool parameters.
+To select Tolokers based on profile data, define a `assignments_issuing_config.filter` object in the [pool parameters](https://toloka.ai/docs/api/api-reference/#tag--pool).
 
 ## Sample filter in JSON {#request-example}
 
@@ -27,22 +27,29 @@ This example selects Tolokers who set their country as US and the city as Washin
 
 ```json
 {
-  "filter" : {
-    "and" : [ {
-      "or" : [ {
-        "category" : "profile",
-        "key" : "country",
-        "operator" : "EQ",
-        "value" : "US"
-      } ]
-    }, {
-      "or" : [ {
-        "category" : "profile",
-        "key" : "city",
-        "value" : 87,
-        "operator" : "IN"
-      } ]
-    } ]
+  "filter": {
+    "and": [
+      {
+        "or": [
+          {
+            "category": "profile",
+            "key": "country",
+            "operator": "EQ",
+            "value": "US"
+          }
+        ]
+      },
+      {
+        "or": [
+          {
+            "category": "profile",
+            "key": "city",
+            "value": 87,
+            "operator": "IN"
+          }
+        ]
+      }
+    ]
   }
 }
 ```

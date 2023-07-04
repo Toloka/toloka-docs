@@ -1,0 +1,48 @@
+```bash
+curl -X POST 'https://toloka.dev/api/v1/tasks' \
+     -H 'Authorization: OAuth PlaceYourRealOAuthToken_Here' \
+     -H 'Content-Type: application/json' \
+     -d '{
+           "pool_id": "1",
+           "input_values": {
+             "image_url": "https://example.com/image_1.jpg"
+           },
+           "known_solutions": [
+             {
+               "output_values": {
+                 "result": "OK",
+                 "like": false
+               },
+               "correctness_weight": 0.8
+             },
+             {
+               "output_values": {
+                 "result": "OK",
+                 "like": true
+               },
+               "correctness_weight": 1
+             }
+           ],
+           "baseline_solutions": [
+             {
+               "output_values": {
+                 "result": "OK",
+                 "like": false
+               },
+               "confidence_weight": 0.8
+             },
+             {
+               "output_values": {
+                 "result": "OK",
+                 "like": true
+               },
+               "confidence_weight": 1
+             }
+           ],
+           "message_on_unknown_solution": "The cat is in a good mood.",
+           "overlap": 3,
+           "infinite_overlap": false,
+           "reserved_for": [],
+           "unavailable_for": []
+         }'
+```
