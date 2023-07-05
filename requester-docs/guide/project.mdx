@@ -1,6 +1,6 @@
 ---
 title: "Creating a project | Toloka documentation"
-date: "2023-06-19T14:16:34.249025"
+date: "2023-07-05T11:19:23.811028"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,8 +8,9 @@ ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
-import PinProject from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pin-project.mdx'
+import PersonalData from '../subcomponents/toloka-requester-source/id-toloka-requester-source/personal-data.mdx'
 import ProjectModeration from '../subcomponents/toloka-requester-source/id-toloka-requester-source/project-moderation.mdx'
+import TolokaRequesterSourcePinProject from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pin-project.mdx'
 import FaqComplexTask from '../subcomponents/faq/questions-about-templates/complex-task.mdx'
 import FaqManyClasses from '../subcomponents/faq/project-settings/many-classes.mdx'
 import FaqValidationDependingCheckbox from '../subcomponents/faq/questions-about-templates/validation-depending-checkbox.mdx'
@@ -87,7 +88,11 @@ To create a project in the interface:
 
     You can prepare instructions in HTML format, then copy and paste into the editor. Click **&lt;&gt;** to switch to HTML mode.
 
-1. Optionally, add translations to other languages.
+1. Optionally, if your project assumes the collection of any personal data:
+
+    <PersonalData/>
+
+1. Optionally, add translations to other languages:
 
     1. Select the source language and the target languages.
 
@@ -115,7 +120,7 @@ If you need to change the project settings, [open edit mode](/docs/guide/edit-pr
 
 ## How to pin a project {#pin}
 
-<PinProject/>
+<TolokaRequesterSourcePinProject/>
 
 ## What's next {#what_next}
 
