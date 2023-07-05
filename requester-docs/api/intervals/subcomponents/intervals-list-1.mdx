@@ -1,28 +1,30 @@
-With the sample request below, the first, fourth, and sixth general tasks in the first task suite and the eleventh general task from the second task suite will be selected for majority vote check.
+With the sample request below, the **1st**, **4th**, and **6th** tasks in the first task suite and the **11th** task from the second task suite will be a **control task**, like in the figure above.
 
-We use the `quality_control.checkpoints_config.real_settings.intervals` parameter to set this scheme.
+Use the `mixer_config.golden_task_distribution_function.intervals` parameter to set such scheme.
+
+Additionally, set the following parameters:
+
+- Set the `mixer_config.real_tasks_count` value to **7** to specify the maximum number of general tasks in a task suite and match the scheme in the figure above.
+
+- Set the `mixer_config.golden_tasks_count` value to **0** and the `mixer_config.min_golden_tasks_count` value to **null** for the smart mixing to work.
 
 #### Sample request
 
 ```bash
-curl -X POST 'https://toloka.dev/api/v1/pools' \
- -H 'Content-Type: application/json' \
- -H 'Authorization: OAuth AQC2AGAJgyNSA8CtpdO9MWy_QEB6s6kDjHUoElE' \
- -d '{
-      "project_id": "120798",
-      "private_name": "Cat or Dog?",
-      "will_expire": "2024-06-23T07:11:19.963",
-      "reward_per_assignment": 0.02,
-      "assignment_max_duration_seconds": 600,
-      "auto_accept_solutions": false,
-      "quality_control": {
-        "checkpoints_config": {
-          "real_settings": {
-            "target_overlap": 3,
-            "task_distribution_function": {
-              "scope": "PROJECT",
+url -X POST 'https://toloka.dev/api/v1/pools' \
+    -H 'Content-Type: application/json' \
+    -H 'Authorization: OAuth PlaceYourRealOAuthToken_Here' \
+    -d '{
+          "project_id": "120798",
+          "private_name": "Cat or Dog?",
+          "will_expire": "2024-06-23T07:11:19.963",
+          "reward_per_assignment": 0.02,
+          "assignment_max_duration_seconds": 600,
+          "auto_accept_solutions": false,
+          "mixer_config": {
+            "golden_tasks_count": 0,
+            "golden_task_distribution_function": {
               "distribution": "UNIFORM",
-              "window_days": 10,
               "intervals": [
                 {
                   "from": 1,
@@ -39,12 +41,12 @@ curl -X POST 'https://toloka.dev/api/v1/pools' \
                   "frequency": 8
                 }
               ]
-            }
+            },
+            "min_golden_tasks_count": null,
+            "real_tasks_count": 7
+          },
+          "defaults": {
+            "default_overlap_for_new_task_suites": 1
           }
-        }
-      },
-      "defaults": {
-        "default_overlap_for_new_task_suites": 1
-      }
-    }'
+        }'
 ```
