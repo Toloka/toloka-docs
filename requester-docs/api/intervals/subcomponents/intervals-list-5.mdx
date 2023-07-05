@@ -1,0 +1,50 @@
+With the sample request below, the **1st**, **4th**, and **6th** training tasks in the first task suite and the **11th** training task from the second task suite will be selected for majority vote check, like in the figure above.
+
+We use the `quality_control.checkpoints_config.training_settings.intervals` parameter to set such scheme.
+
+#### Sample request
+
+```bash
+curl -X POST 'https://toloka.dev/api/v1/pools' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: OAuth PlaceYourRealOAuthToken_Here' \
+     -d '{
+           "project_id": "120798",
+           "private_name": "Cat or Dog?",
+           "will_expire": "2024-06-23T07:11:19.963",
+           "reward_per_assignment": 0.02,
+           "assignment_max_duration_seconds": 600,
+           "auto_accept_solutions": false,
+           "quality_control": {
+             "checkpoints_config": {
+               "training_settings": {
+                 "target_overlap": 3,
+                 "task_distribution_function": {
+                   "scope": "PROJECT",
+                   "distribution": "UNIFORM",
+                   "window_days": 10,
+                   "intervals": [
+                     {
+                       "from": 1,
+                       "to": 5,
+                       "frequency": 3
+                     },
+                     {
+                       "from": 6,
+                       "to": 1000,
+                       "frequency": 5
+                     },
+                     {
+                       "from": 1001,
+                       "frequency": 8
+                     }
+                   ]
+                 }
+               }
+             }
+           },
+           "defaults": {
+             "default_overlap_for_new_task_suites": 1
+           }
+         }'
+```

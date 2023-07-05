@@ -1,0 +1,76 @@
+---
+title: "Task distribution intervals — Toloka API | Toloka documentation"
+date: "2023-07-05T16:32:01.377818"
+author: ["Toloka Team"]
+coverId: F_bIcOYF9yjrxkPZrXc3
+tags: ["engineering"]
+ogDescription: ""
+docsMenu: "apiMenu"
+---
+
+import IntervalsList1 from './intervals/subcomponents/intervals-list-1.mdx'
+import IntervalsList2 from './intervals/subcomponents/intervals-list-2.mdx'
+import IntervalsList3 from './intervals/subcomponents/intervals-list-3.mdx'
+import IntervalsList4 from './intervals/subcomponents/intervals-list-4.mdx'
+import IntervalsList5 from './intervals/subcomponents/intervals-list-5.mdx'
+
+# Task distribution intervals
+
+Toloka allows you to set intervals for tasks for the following purposes:
+
+- [Distribute control or training](#smart-mixing-distribution) tasks among the general tasks in the pool when you use smart mixing.
+
+- Select general, control, or training tasks for [majority vote check](#selective-mv).
+
+<Image width="700px" withBackground imageId="51fc29e9d3d71f6d5fbe9c82db981929" alt="Task distribution intervals" />
+
+In this example, we have a pool with two task suites each containing maximum of seven tasks.
+
+In Toloka API, use the following JSON format to set the intervals:
+
+```json
+"intervals": [
+  {
+    "from": 1,
+    "to": 5,
+    "frequency": 3
+  },
+  {
+    "from": 6,
+    "to": 1000,
+    "frequency": 5
+  }
+]
+```
+
+You can change these settings with a `POST` request when you [create a pool](https://toloka.ai/docs/api/api-reference/#post-/pools) or with a `PUT` request when you [edit a pool](https://toloka.ai/docs/api/api-reference/#put-/pools/-id-).
+
+We provide samples for the `POST` request. `PUT` requests look similar, but you must send all the existing pool attributes in the request together with the ones you want to change.
+
+## Smart mixing distribution {#smart-mixing-distribution}
+
+When you use [smart mixing](/docs/guide/distribute-tasks-by-pages#smart-mixing), you can set intervals for the control and training tasks in the pool and distribute these tasks unevenly throughout the pool.
+
+<Tabs tabs={[
+  { title: 'Control task distribution intervals', value: <IntervalsList1/> },
+  { title: 'Training task distribution intervals', value: <IntervalsList2/> },
+]}/>
+
+## Selective majority vote check {#selective-mv}
+
+The sample requests below contain the intervals for the general, control, and training tasks which will be [selected for majority vote check](/docs/guide/selective-mvote). The intervals are set according to the scheme above.
+
+<Tabs tabs={[
+  { title: 'General task check intervals', value: <IntervalsList3/> },
+  { title: 'Control task check intervals', value: <IntervalsList4/> },
+  { title: 'Training task check intervals', value: <IntervalsList5/> },
+]}/>
+
+## See also {#see-also}
+
+- [Selective majority vote check](/docs/guide/selective-mvote)
+- [Smart mixing](/docs/guide/distribute-tasks-by-pages#smart-mixing)
+- [Toloka API: Create pool](https://toloka.ai/docs/api/api-reference/#post-/pools)
+- [Toloka API: Edit pool](https://toloka.ai/docs/api/api-reference/#put-/pools/-id-)
+
+<Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=api-intervals">Contact support</Button>
