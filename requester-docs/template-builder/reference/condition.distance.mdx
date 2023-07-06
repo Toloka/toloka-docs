@@ -1,6 +1,6 @@
 ---
-title: "@toloka/condition.distance — Template Builder | Toloka documentation"
-date: "2023-03-30T10:05:29.911427"
+title: "condition.distance — Template Builder | Toloka documentation"
+date: "2023-07-06T16:43:23.949617"
 author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
 tags: ["engineering"]
@@ -8,15 +8,26 @@ ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
-# @toloka/condition.distance
+# condition.distance
 
 This component checks whether the sent coordinates match the ones that you specified.
 
 For example, you want a Toloker to take a photo of a specific place. The `condition.distance` component checks whether the photo was taken at the location that you specified.
 
-The device coordinates are sent using the [data.location](/docs/template-builder/reference/data.location) component. You can use it without `condition.distance` if you need to read a Toloker's device coordinates without comparing them to the specified ones.
+The device coordinates are sent using the [data.location](/docs/template-builder/reference/data.location) component. You can use it without the `condition.distance` component if you need to read a Toloker's device coordinates without comparing them to the specified ones.
 
-<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/HFMC2_XU3y3Tps">View example</Button>
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/xyD-vvUV4K8eKb">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [view.list](/docs/template-builder/reference/view.list): Displays data in a list.
+- [field.media-file](/docs/template-builder/reference/field.media-file): Adds buttons for different types of uploads.
+- [condition.all](/docs/template-builder/reference/condition.all): Checks that all child conditions are met.
+- [condition.required](/docs/template-builder/reference/condition.required): Checks that the data is filled in.
+- [data.location](/docs/template-builder/reference/data.location): Sends the device coordinates.
+- [plugin.toloka](/docs/template-builder/reference/plugin.toloka): Customizes the task layout.
+
+</Cut>
 
 ## Component properties {#properties}
 
