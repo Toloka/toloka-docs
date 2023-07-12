@@ -1,10 +1,7 @@
 ---
 title: "List Tolokers with skills — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:36.975984"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -23,7 +20,7 @@ _Get all the skills assigned to the Toloker with the ID specified in the request
 
 <Instantiate/>
 
-### 3. Print skill names, "skill-Toloker" pair IDs, and values {#step-three}
+### 3. Print skill names, "skill-Toloker" pair IDs, and values `{#step-three}`
 
 Get all the skills assigned to the selected Toloker using the `get_user_skills()` method. Then, iterate through all these found skills calling the `get_skill()` method.
 
@@ -55,7 +52,7 @@ The "skill-Toloker" pair ID allows you to get or remove the skill assigned to a 
 
 </Note>
 
-## Complete code: List Tolokers with skills {#complete-code}
+## Complete code: List Tolokers with skills `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -75,7 +72,7 @@ for user_skill in toloka_client.get_user_skills(user_id='fac97860c7929add8048ed2
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

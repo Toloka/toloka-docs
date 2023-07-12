@@ -1,10 +1,7 @@
 ---
 title: "Group tasks in task suites — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:39.120044"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -24,7 +21,7 @@ _Create tasks and group them into task suites._
 
 <Instantiate/>
 
-### 3. Create tasks {#step-three}
+### 3. Create tasks `{#step-three}`
 
 First, create one or several tasks. In this example, we create three simple tasks with the following settings:
 
@@ -61,7 +58,7 @@ All the code manipulations at steps 3–4 occur in your device memory. The data 
 
 </Note>
 
-### 4. Create task suite object {#step-four}
+### 4. Create task suite object `{#step-four}`
 
 Specify the ID of the pool where the task suite will be created, tasks included into the task suite, and overlap.
 
@@ -76,7 +73,7 @@ Specify the ID of the pool where the task suite will be created, tasks included 
   textToCopy={`new_task_suite = toloka.task_suite.TaskSuite(pool_id='1442472', tasks=tasks, overlap=3)`}
 />
 
-### 5. Create task suite on platform {#step-five}
+### 5. Create task suite on platform `{#step-five}`
 
 This actually creates a task suite in Toloka.
 
@@ -91,7 +88,7 @@ This actually creates a task suite in Toloka.
   textToCopy={`new_task_suite = toloka_client.create_task_suite(new_task_suite)`}
 />
 
-### 6. Print created task suite ID {#step-six}
+### 6. Print created task suite ID `{#step-six}`
 
 The `create_task_suite()` request will return the [TaskSuite](/docs/toloka-kit/reference/toloka.client.task_suite.TaskSuite) class object. You can use its attributes to print the information you need.
 
@@ -105,7 +102,7 @@ You should get an output with the created task suite ID which looks like this.
 00001602a8--63c18a66ed43982367a7acc8
 ```
 
-## Complete code: Group tasks in task suites {#complete-code}
+## Complete code: Group tasks in task suites `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -133,7 +130,7 @@ print(new_task_suite.id)
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

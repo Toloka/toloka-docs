@@ -1,10 +1,7 @@
 ---
 title: "Recompletion of assignments — Toloka API | Toloka documentation"
 date: "2023-07-04T17:43:02.207774"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "apiMenu"
 ---
 
@@ -30,7 +27,7 @@ Toloka can resend tasks for completion if:
 
 Set key values in the `quality_control.configs` array in the [pool settings](https://toloka.ai/docs/api/api-reference/#tag--pool).
 
-## Request body {#body}
+## Request body `{#body}`
 
 Re-assign task suites if a quality control rule or skill filter was triggered.
 
@@ -95,7 +92,7 @@ Parameter | Overview
 `configs[].rules.action.parameters.private_comment` | _string_<br/><br/>Comments (the reason for blocking access). Visible only to the requester.
 `configs[].rules.action.parameters.open_pool` | <RestoreTaskOverlapTable8/>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [Recompletion of assignments from banned users](/docs/guide/restore-task-overlap)
 - [Toloka-Kit recipe: Use quality control rules](/docs/toloka-kit/recipes/use-quality-control-rules/)

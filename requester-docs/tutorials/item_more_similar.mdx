@@ -1,39 +1,36 @@
 ---
 title: "Project 4. Which of the found items is most similar to the original? — Tutorials | Toloka documentation"
 date: "2023-06-26T17:59:28.311386"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tutorialsMenu"
 ---
 
-import TutorialsCreateProjectButton from './subcomponents/create-project-button.mdx'
-import TutorialsChoosePresetImage from './subcomponents/choose-preset-image.mdx'
-import TutorialsAddNameDescription from './subcomponents/add-name-description.mdx'
-import TolokaRequesterSourceInstructions from '../subcomponents/toloka-requester-source/id-toloka-requester-source/instructions.mdx'
-import SaveProject from './subcomponents/save-project.mdx'
-import TolokaRequesterPoolType from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx'
-import TolokaRequesterPoolName from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
-import TolokaRequesterPoolDescription from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
-import TolokaRequesterSourceAudienceSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/audience-settings.mdx'
-import TutorialsLanguageFilter from './subcomponents/language-filter.mdx'
-import TutorialsShockingContent from './subcomponents/shocking-content-filter.mdx'
-import TutorialsPlatformFilter from './subcomponents/platform-filter.mdx'
-import TolokaRequesterSourcePriceSettings from '../subcomponents/toloka-requester-source/id-toloka-requester-source/price-settings.mdx'
-import TutorialsQualityControl from './subcomponents/quality-control.mdx'
-import TutorialsTimePerTaskSuite from './subcomponents/time-per-task-suite.mdx'
-import TutorialsUploadTasks from './subcomponents/upload-tasks.mdx'
-import TutorialsDoubleCheck from './subcomponents/double-check.mdx'
-import TolokaRequesterSourceStepEnabled from '../subcomponents/toloka-requester-source/id-toloka-requester-source/step-enabled.mdx'
-import ItemMoreSimilarList1 from './item_more_similar/subcomponents/item_more_similar-list-1.mdx'
-import ItemMoreSimilarList2 from './item_more_similar/subcomponents/item_more_similar-list-2.mdx'
+import TutorialsCreateProjectButton from "./subcomponents/create-project-button.mdx";
+import TutorialsChoosePresetImage from "./subcomponents/choose-preset-image.mdx";
+import TutorialsAddNameDescription from "./subcomponents/add-name-description.mdx";
+import TolokaRequesterSourceInstructions from "../subcomponents/toloka-requester-source/id-toloka-requester-source/instructions.mdx";
+import SaveProject from "./subcomponents/save-project.mdx";
+import TolokaRequesterPoolType from "../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx";
+import TolokaRequesterPoolName from "../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx";
+import TolokaRequesterPoolDescription from "../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx";
+import TolokaRequesterSourceAudienceSettings from "../subcomponents/toloka-requester-source/id-toloka-requester-source/audience-settings.mdx";
+import TutorialsLanguageFilter from "./subcomponents/language-filter.mdx";
+import TutorialsShockingContent from "./subcomponents/shocking-content-filter.mdx";
+import TutorialsPlatformFilter from "./subcomponents/platform-filter.mdx";
+import TolokaRequesterSourcePriceSettings from "../subcomponents/toloka-requester-source/id-toloka-requester-source/price-settings.mdx";
+import TutorialsQualityControl from "./subcomponents/quality-control.mdx";
+import TutorialsTimePerTaskSuite from "./subcomponents/time-per-task-suite.mdx";
+import TutorialsUploadTasks from "./subcomponents/upload-tasks.mdx";
+import TutorialsDoubleCheck from "./subcomponents/double-check.mdx";
+import TolokaRequesterSourceStepEnabled from "../subcomponents/toloka-requester-source/id-toloka-requester-source/step-enabled.mdx";
+import ItemMoreSimilarList1 from "./item_more_similar/subcomponents/item_more_similar-list-1.mdx";
+import ItemMoreSimilarList2 from "./item_more_similar/subcomponents/item_more_similar-list-2.mdx";
 
 # Project 4. Which of the found items is most similar to the original?
 
 In this [project](/docs/glossary#project), Tolokers compare images of shoes with the original image and decide which pair of images is most similar. To make a comparison in the project, add the results from the [second project](/docs/guide/find_an_item_in_store). To learn how, see **Prepare and upload a [file](/docs/glossary#tsv) with tasks**.
 
-## Create a project {#create_project}
+## Create a project `{#create_project}`
 
 To create a project, open [Toloka for requesters](https://platform.toloka.ai/auth?role=REQUESTER).
 
@@ -41,42 +38,44 @@ In the interface:
 
 1. Choose a preset:
 
-    1. <TutorialsCreateProjectButton/>
+   1. <TutorialsCreateProjectButton />
 
-        <TutorialsChoosePresetImage/>
+      <TutorialsChoosePresetImage />
 
-    1. Click **Do it myself**.
+   1. Click **Do it myself**.
 
-    1. Select the **Image comparison (Side-by-side)** preset.
+   1. Select the **Image comparison (Side-by-side)** preset.
 
-1. <TutorialsAddNameDescription/>
+1. <TutorialsAddNameDescription />
 
-    1. In the **Name for Tolokers** field, enter `Which object is similar to the original one?`.
+   1. In the **Name for Tolokers** field, enter `Which object is similar to the original one?`.
 
-    1. In the **Description for Tolokers** field, enter `Decide which pair of shoes is most similar to the original shoes.`.
+   1. In the **Description for Tolokers** field, enter `Decide which pair of shoes is most similar to the original shoes.`.
 
-    1. Optionally add a **Private comment**.
+   1. Optionally add a **Private comment**.
 
 1. Edit the [task interface](/docs/glossary#task-interface) in the editor you selected:
 
-   <Tabs tabs={[
-      { title: 'Template Builder', value: <ItemMoreSimilarList1/> },
-      { title: 'HTML/CSS/JS editor', value: <ItemMoreSimilarList2/> },
-    ]}/>
+   <Tabs
+     tabs={[
+       { title: "Template Builder", value: <ItemMoreSimilarList1 /> },
+       { title: "HTML/CSS/JS editor", value: <ItemMoreSimilarList2 /> },
+     ]}
+   />
 
-1. <TolokaRequesterSourceInstructions/>
+1. <TolokaRequesterSourceInstructions />
 
-    Instructions text:
+   Instructions text:
 
-    ```plaintext
-    Look at 2 pictures with different shoes and decide which pair of shoes looks most similar to the original pair.
-    Rely on your own sense of style, but also remember that the shoes look alike if
-    they are the same color, fabric, length, and style.
-    ```
+   ```plaintext
+   Look at 2 pictures with different shoes and decide which pair of shoes looks most similar to the original pair.
+   Rely on your own sense of style, but also remember that the shoes look alike if
+   they are the same color, fabric, length, and style.
+   ```
 
-1. <SaveProject/>
+1. <SaveProject />
 
-## Create a pool {#create_pool}
+## Create a pool `{#create_pool}`
 
 To create a [pool](/docs/glossary#pool):
 
@@ -84,106 +83,114 @@ To create a [pool](/docs/glossary#pool):
 
 1. Click **Create new pool** on the project page.
 
-1. <TolokaRequesterPoolType/>
+1. <TolokaRequesterPoolType />
 
-1. <TolokaRequesterPoolName/>
+1. <TolokaRequesterPoolName />
 
-1. <TolokaRequesterPoolDescription/>
+1. <TolokaRequesterPoolDescription />
 
 1. Click **Create**.
 
-1. <TolokaRequesterSourceAudienceSettings/>
+1. <TolokaRequesterSourceAudienceSettings />
 
-    1. <TutorialsLanguageFilter/>
+   1. <TutorialsLanguageFilter />
 
-    1. <TutorialsShockingContent/>
+   1. <TutorialsShockingContent />
 
-    1. <TutorialsPlatformFilter/>
+   1. <TutorialsPlatformFilter />
 
-    1. Add another filter. Click **Add filter**.
+   1. Add another filter. Click **Add filter**.
 
-    1. Find the **Skills** block in the list and click **Choose your skill**.
+   1. Find the **Skills** block in the list and click **Choose your skill**.
 
-    1. In the **Skills** field, select **Found_shoes**.
+   1. In the **Skills** field, select **Found_shoes**.
 
-    1. In the **?** field specify `=`.
+   1. In the **?** field specify `=`.
 
-    1. Leave the **Absent** field empty.
+   1. Leave the **Absent** field empty.
 
 1. (optional) In the **Speed/quality balance** section, specify the desired quality level. Improving quality may reduce the speed of task completion because the pool will be available to fewer Tolokers. Learn more in the [Speed/quality balance](/docs/guide/adjust) section.
 
-1. <TolokaRequesterSourcePriceSettings/>
+1. <TolokaRequesterSourcePriceSettings />
 
-    1. In **Price per task suite, $**, set the amount of money to pay per task suite done by one Toloker. For example, `0.01`.
+   1. In **Price per task suite, $**, set the amount of money to pay per task suite done by one Toloker. For example, `0.01`.
 
-    1. Enter `10` in the **Overlap** field.
+   1. Enter `10` in the **Overlap** field.
 
-1. <TutorialsQualityControl/>
+1. <TutorialsQualityControl />
 
-    1. Click **Add a quality control rule**.
+   1. Click **Add a quality control rule**.
 
-    1. Find the **Rules** block in the list and choose **Fast responses**.
+   1. Find the **Rules** block in the list and choose **Fast responses**.
 
-    1. Set a rule for fast responses: if the **number of fast responses is more than 3**, then **restrict the Toloker's access** to **the project for 10 days**. Specify **Fast responses** as the reason for ban.
+   1. Set a rule for fast responses: if the **number of fast responses is more than 3**, then **restrict the Toloker's access** to **the project for 10 days**. Specify **Fast responses** as the reason for ban.
 
-        <Image width="700px" withBackground imageId="1675426062542" alt="" />
+      <Image width="700px" withBackground imageId="1675426062542" alt="" />
 
-    Learn more in [Quality control](/docs/guide/control).
+   Learn more in [Quality control](/docs/guide/control).
 
 1. At the **Add optional pool settings** step:
 
-    1. <TutorialsTimePerTaskSuite/>
+   1. <TutorialsTimePerTaskSuite />
 
-        The time should be long enough to read the instructions and wait for task data to load. For example, `600` seconds.
+      The time should be long enough to read the instructions and wait for task data to load. For example, `600` seconds.
 
-1. <TutorialsUploadTasks/>
+1. <TutorialsUploadTasks />
 
-    1. Download the file received in the [third project](/docs/tutorials/item_look_similar).
+   1. Download the file received in the [third project](/docs/tutorials/item_look_similar).
 
-    1. Create pairs for each input image so that you can compare the two found images with the original one and decide which one is more similar.
+   1. Create pairs for each input image so that you can compare the two found images with the original one and decide which one is more similar.
 
-        You can create pairs manually using a text editor or automatically, like using Python or Jupyter Lab.
+      You can create pairs manually using a text editor or automatically, like using Python or Jupyter Lab.
 
-        As an example, you can use our results [https://tlk.s3.yandex.net/wsdm2020/SbS_Toloka_prep&aggr_data.ipynb](https://tlk.s3.yandex.net/wsdm2020/SbS_Toloka_prep&aggr_data.ipynb).
+      As an example, you can use our results [https://tlk.s3.yandex.net/wsdm2020/SbS_Toloka_prep&aggr_data.ipynb](https://tlk.s3.yandex.net/wsdm2020/SbS_Toloka_prep&aggr_data.ipynb).
 
-    1. Open the **Which item is more similar?** pool.
+   1. Open the **Which item is more similar?** pool.
 
-    1. Click **Upload**.
+   1. Click **Upload**.
 
-    1. Click **Drop file here or select**, and upload the file you’ve just made.
+   1. Click **Drop file here or select**, and upload the file you’ve just made.
 
-    1. Click **Continue**.
+   1. Click **Continue**.
 
-    1. Choose **Set manually**.
+   1. Choose **Set manually**.
 
-    1. In the **Number of tasks per suite** field, specify `1`. You can experiment with the number of tasks per suite.
+   1. In the **Number of tasks per suite** field, specify `1`. You can experiment with the number of tasks per suite.
 
-    1. Click **Combine tasks into suites**.
+   1. Click **Combine tasks into suites**.
 
-1. <TutorialsDoubleCheck/>
+1. <TutorialsDoubleCheck />
 
-    <TolokaRequesterSourceStepEnabled/>
+   <TolokaRequesterSourceStepEnabled />
 
 1. Click <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425184616/1675425184616_original_svg.svg" alt="" /> to start the pool.
 
-## Get the results {#get_results}
+## Get the results `{#get_results}`
 
 To get the results:
 
 1. Click **Download results**.
 
-    1. In the **Status** block, only leave the **Accepted** option enabled.
+   1. In the **Status** block, only leave the **Accepted** option enabled.
 
-    1. In the **Fields** block, leave the **link**, **response ID**, and **Toloker ID** options enabled.
+   1. In the **Fields** block, leave the **link**, **response ID**, and **Toloker ID** options enabled.
 
 1. Disable the **Separate assignments with empty row** option.
 
-    <Image width="400px" withBackground imageId="1675426032803" alt="" />
+   <Image width="400px" withBackground imageId="1675426032803" alt="" />
 
 1. Try to use the [Bradley-Terry model](https://en.wikipedia.org/wiki/Bradley–Terry_model) based on the results. As an example, you can use our [https://tlk.s3.yandex.net/wsdm2020/SbS_Toloka_prep&aggr_data.ipynb](https://tlk.s3.yandex.net/wsdm2020/SbS_Toloka_prep&aggr_data.ipynb) results.
 
-## What's next {#what-next}
+## What's next `{#what-next}`
 
 - Learn more about [decomposition](/docs/guide/solution-architecture).
 
-<Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=tutorials-item-more-similar">Contact support</Button>
+<Button
+  themeColor="light"
+  view="default"
+  size="l"
+  type="link"
+  url="/docs/guide/troubleshooting/support?form-source=tutorials-item-more-similar"
+>
+  Contact support
+</Button>

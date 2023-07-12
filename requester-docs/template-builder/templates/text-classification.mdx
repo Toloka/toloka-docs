@@ -1,10 +1,7 @@
 ---
 title: "Text classification — Template Builder | Toloka documentation"
 date: "2023-02-10T09:15:29.847896"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -134,7 +131,7 @@ Take a look at the example: the labeling interface includes a text block, and r
 
 If this template doesn't meet your needs, see other examples in the **Text** section.
 
-## Add a description {#add-description}
+## Add a description `{#add-description}`
 
 To add a detailed description to the task, use the [view.text](/docs/template-builder/reference/view.text) component.
 
@@ -151,7 +148,7 @@ To add a detailed description to the task, use the [view.text](/docs/template-bu
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/CWaULGco3ttDcv">View example</Button>
 
-## Add a response field {#add-text-area}
+## Add a response field `{#add-text-area}`
 
 To let Tolokers leave comments about the task or their response, add a text field using [field.textarea](/docs/template-builder/reference/field.textarea).
 
@@ -173,7 +170,7 @@ To let Tolokers leave comments about the task or their response, add a text fiel
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/ZkRWkjQr3ttDeN">View example</Button>
 
-## Add a layout {#add-layout}
+## Add a layout `{#add-layout}`
 
 To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs/template-builder/reference/view.alert). In this example, the description is highlighted with a blue border, and the buttons are highlighted with a yellow one.
 
@@ -228,7 +225,7 @@ To enhance Toloker's experience, you can highlight different types of data with�
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/wH3XbAFE3ttDfc">View example</Button>
 
-## Other options for buttons {#mult-ans-options}
+## Other options for buttons `{#mult-ans-options}`
 
 Decide whether a Toloker can select only one or multiple answer options:
 
@@ -237,8 +234,7 @@ Decide whether a Toloker can select only one or multiple answer options:
   { title: 'One option (a radio button)', value: <TextClassificationList2/> },
 ]}/>
 
-## Add conditions {#dependencies}
-
+## Add conditions `{#dependencies}`
 The [helper.if](/docs/template-builder/reference/helper.if) component displays an interface element after a specific response is selected.
 
 <Cut title="Show code">
@@ -291,8 +287,7 @@ The [helper.if](/docs/template-builder/reference/helper.if) component displays a
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/ODo7Fc_r3ttDiK">View example</Button>
 
-## Text and search query comparison {#search}
-
+## Text and search query comparison `{#search}`
 #### Does the text match the search query
 
 Add a button that opens the search results and generate a search query link using the [helper.search-query](/docs/template-builder/reference/helper.search-query) component. To make sure that a Toloker clicked on the link and checked its contents, configure validation, as in the example.

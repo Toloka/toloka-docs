@@ -1,10 +1,7 @@
 ---
 title: "Use quality control rules — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:41:31.474463"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -37,7 +34,7 @@ _Use quality control rules to restrict access to the tasks for the Tolokers who 
 
 <Instantiate/>
 
-### 3. Create pool object {#step-three}
+### 3. Create pool object `{#step-three}`
 
 Create a pool and set the default overlap value for all the tasks which will be uploaded without additionally specifying it. Use the `default_overlap_for_new_task_suites` value of the [Defaults](/docs/toloka-kit/reference/toloka.client.pool.Pool.Defaults) class for that.
 
@@ -78,7 +75,7 @@ Each of the quality control rules has three main components:
 
 </Note>
 
-### 4. Add 'Fast responses' quality control rule {#step-four}
+### 4. Add 'Fast responses' quality control rule `{#step-four}`
 
 Set up the **Fast responses** quality control rule using the [add_action()](/docs/toloka-kit/reference/toloka.client.quality_control.QualityControl.add_action) method to create the [AssignmentSubmitTime](/docs/toloka-kit/reference/toloka.client.collectors.AssignmentSubmitTime) collector class object with the appropriate conditions and actions.
 
@@ -89,7 +86,7 @@ Set up the **Fast responses** quality control rule using the [add_action()](/doc
     <HighlightChildren language="python">
       new_pool.quality_control.<Term term="add_action"><AddAction/></Term>(
       <br/>    collector=toloka.collectors.<Term term="AssignmentSubmitTime"><AssignmentSubmitTime/></Term>(history_size=5, fast_submit_threshold_seconds=20),
-      <br/>    conditions=[toloka.conditions.<Term term="FastSubmittedCount"><FastSubmittedCount/></Term> > 1],
+      <br/>    conditions=[toloka.conditions.<Term term="FastSubmittedCount"><FastSubmittedCount/></Term> &gt; 1],
       <br/>    action=toloka.actions.<Term term="RestrictionV2"><RestrictionV2/></Term>(
       <br/>        scope='POOL',
       <br/>        duration=10,
@@ -133,7 +130,7 @@ The image below shows how the created **Fast responses** quality control rule lo
 
 Refer to the [Fast responses](/docs/guide/quick-answers) section for more information on how to set up the **Fast responses** quality control rule and what parameters it should have for the correct settings.
 
-### 5. Add 'Majority vote' quality control rule {#step-five}
+### 5. Add 'Majority vote' quality control rule `{#step-five}`
 
 Set up the **Majority votes** quality control rule using the [add_action()](/docs/toloka-kit/reference/toloka.client.quality_control.QualityControl.add_action) method to create the [MajorityVote](/docs/toloka-kit/reference/toloka.client.collectors.MajorityVote) collector class object with the appropriate conditions and actions.
 
@@ -145,7 +142,7 @@ Set up the **Majority votes** quality control rule using the [add_action()](/doc
       new_pool.quality_control.<Term term="add_action"><AddAction/></Term>(
       <br/>    collector=toloka.collectors.<Term term="MajorityVote"><MajorityVote/></Term>(answer_threshold=2),
       <br/>    conditions=[
-      <br/>        toloka.conditions.<Term term="TotalAnswersCount"><TotalAnswersCount/></Term> > 9,
+      <br/>        toloka.conditions.<Term term="TotalAnswersCount"><TotalAnswersCount/></Term> &gt; 9,
       <br/>        toloka.conditions.<Term term="CorrectAnswersRate"><CorrectAnswersRate/></Term> &lt; 60,
       <br/>    ],
       <br/>    action=toloka.actions.<Term term="RejectAllAssignments"><RejectAllAssignments/></Term>(public_comment='Too low quality')
@@ -182,7 +179,7 @@ The image below shows how the created **Majority vote** quality control rule loo
 
 Refer to the [Majority vote](/docs/guide/mvote) section for more information on how to set up the **Majority vote** quality control rule and what parameters it should have for the correct settings.
 
-### 6. Add 'Skipped assignments' quality control rule {#step-six}
+### 6. Add 'Skipped assignments' quality control rule `{#step-six}`
 
 Set up the **Skipped assignments** quality control rule using the [add_action()](/docs/toloka-kit/reference/toloka.client.quality_control.QualityControl.add_action) method to create the [SkippedInRowAssignments](/docs/toloka-kit/reference/toloka.client.collectors.SkippedInRowAssignments) collector class object with the appropriate conditions and actions.
 
@@ -193,7 +190,7 @@ Set up the **Skipped assignments** quality control rule using the [add_action()]
     <HighlightChildren language="python">
       new_pool.quality_control.<Term term="add_action"><AddAction/></Term>(
       <br/>    collector=toloka.collectors.<Term term="SkippedInRowAssignments"><SkippedInRowAssignments/></Term>(),
-      <br/>    conditions=[toloka.conditions.<Term term="SkippedInRowCount"><SkippedInRowCount/></Term> > 3],
+      <br/>    conditions=[toloka.conditions.<Term term="SkippedInRowCount"><SkippedInRowCount/></Term> &gt; 3],
       <br/>    action=toloka.actions.<Term term="RestrictionV2"><RestrictionV2/></Term>(
       <br/>        scope='POOL',
       <br/>        duration=15,
@@ -235,7 +232,7 @@ The image below shows how the created **Skipped assignments** quality control ru
 
 Refer to the [Skipped assignments](/docs/guide/skipped-assignments) section for more information on how to set up the **Skipped assignments** quality control rule and what parameters it should have for the correct settings.
 
-### 7. Add 'Control tasks' quality control rule {#step-seven}
+### 7. Add 'Control tasks' quality control rule `{#step-seven}`
 
 Set up the **Control tasks** quality control rule using the [add_action()](/docs/toloka-kit/reference/toloka.client.quality_control.QualityControl.add_action) method to create the [GoldenSet](/docs/toloka-kit/reference/toloka.client.collectors.GoldenSet) collector class object with the appropriate conditions and actions.
 
@@ -247,8 +244,8 @@ Set up the **Control tasks** quality control rule using the [add_action()](/docs
       new_pool.quality_control.<Term term="add_action"><AddAction/></Term>(
       <br/>    collector=toloka.collectors.<Term term="GoldenSet"><GoldenSet/></Term>(history_size=5),
       <br/>    conditions=[
-      <br/>        toloka.conditions.<Term term="GoldenSetCorrectAnswersRate"><GoldenSetCorrectAnswersRate/></Term> > 80,
-      <br/>        toloka.conditions.<Term term="GoldenSetAnswersCount"><GoldenSetAnswersCount/></Term> >= 5,
+      <br/>        toloka.conditions.<Term term="GoldenSetCorrectAnswersRate"><GoldenSetCorrectAnswersRate/></Term> &gt; 80,
+      <br/>        toloka.conditions.<Term term="GoldenSetAnswersCount"><GoldenSetAnswersCount/></Term> &gt;= 5,
       <br/>    ],
       <br/>    action=toloka.actions.<Term term="ApproveAllAssignments"><ApproveAllAssignments/></Term>()
       <br/>)
@@ -289,7 +286,7 @@ See the [Collectors](/docs/toloka-kit/reference/toloka.client.collectors.Accepta
 
 </Note>
 
-### 8. Create pool on platform {#step-eight}
+### 8. Create pool on platform `{#step-eight}`
 
 This actually creates a pool in Toloka.
 
@@ -304,7 +301,7 @@ This actually creates a pool in Toloka.
   textToCopy={`new_pool = toloka_client.create_pool(new_pool)`}
 />
 
-### 9. Print created pool ID {#step-nine}
+### 9. Print created pool ID `{#step-nine}`
 
 The `create_pool()` request will return the [Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
 
@@ -318,7 +315,7 @@ You should get an output with the created pool ID which looks like this.
 1444049
 ```
 
-## Complete code: Use quality control rules {#complete-code}
+## Complete code: Use quality control rules `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -393,7 +390,7 @@ print(new_pool.id)
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

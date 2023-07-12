@@ -1,10 +1,7 @@
 ---
 title: "Processing rejected and accepted assignments — Toloka API | Toloka documentation"
 date: "2023-07-04T17:43:00.968294"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "apiMenu"
 ---
 
@@ -33,7 +30,7 @@ You can use this rule to:
 
 Set key values in the `quality_control.configs` array in the [pool settings](https://toloka.ai/docs/api/api-reference/#tag--pool).
 
-## Request body {#body}
+## Request body `{#body}`
 
 Re-assign task suites that didn't pass manual review.
 
@@ -98,7 +95,7 @@ Parameter | Overview
 `configs[].rules.action.parameters.private_comment` | _string_<br/><br/>Comments (the reason for blocking access). Visible only to the requester.
 `configs[].rules.action.parameters.open_pool` | <ReassessmentTable7/>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [Processing rejected and accepted assignments](/docs/guide/reassessment-after-accepting)
 - [Toloka-Kit recipe: Use quality control rules](/docs/toloka-kit/recipes/use-quality-control-rules/)

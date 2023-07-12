@@ -1,10 +1,7 @@
 ---
 title: "Copywriting — Template Builder | Toloka documentation"
 date: "2023-04-17T14:34:44.863554"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -194,7 +191,7 @@ Take a look at the example: the labeling interface includes an image, text data,
 
 If this template doesn't meet your needs, see other examples in the **Text** section.
 
-## Set the desired text length {#text-length}
+## Set the desired text length `{#text-length}`
 
 To set the desired text length, use the [condition.schema](/docs/template-builder/reference/condition.schema) component instead of [condition.required](/docs/template-builder/reference/condition.required). It won't let a Toloker submit a response if the text they entered is longer or shorter than specified.
 
@@ -216,7 +213,7 @@ To set the desired text length, use the [condition.schema](/docs/template-builde
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/vq9w3lrp47NtE7">View example</Button>
 
-## Use short single-line text field {#short-text-field}
+## Use short single-line text field `{#short-text-field}`
 
 For short single-line text, use the [field.text](/docs/template-builder/reference/field.text) component instead of [field.textarea](/docs/template-builder/reference/field.textarea).
 
@@ -241,7 +238,7 @@ For short single-line text, use the [field.text](/docs/template-builder/referenc
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/lFvWtPU63zeh7g">View example</Button>
 
-## Add a description {#add-description}
+## Add a description `{#add-description}`
 
 To add a detailed description to the task, use the `label` property of the [view.image](/docs/template-builder/reference/view.image) component.
 
@@ -259,7 +256,7 @@ To add a detailed description to the task, use the `label` property of the [view
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/F-uKaF6v47LVBm">View example</Button>
 
-## Add a layout {#add-layout}
+## Add a layout `{#add-layout}`
 
 To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs/template-builder/reference/view.alert).
 
@@ -284,7 +281,7 @@ In this example, the description is highlighted with a blue border.
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/U4g9kJuh3zfJy9">View example</Button>
 
-## Remove an image {#remove-image}
+## Remove an image `{#remove-image}`
 
 For tasks where images or columns are not required, use a simplified example without them.
 
@@ -332,8 +329,7 @@ For tasks where images or columns are not required, use a simplified example wit
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/uBF6lQJj48fLnK">View example</Button>
 
-## Add a condition {#dependencies}
-
+## Add a condition `{#dependencies}`
 The [helper.if](/docs/template-builder/reference/helper.if) component displays an interface element after a specific response is selected.
 
 Parameters can be displayed using: [field.radio-group](/docs/template-builder/reference/field.radio-group), [field.button-radio-group](/docs/template-builder/reference/field.button-radio-group), [field.checkbox](/docs/template-builder/reference/field.checkbox).
@@ -344,7 +340,7 @@ Parameters can be displayed using: [field.radio-group](/docs/template-builder/re
   { title: 'Checkbox', value: <CopywritingList3/> },
 ]}/>
 
-## Use multiple columns {#several-columns}
+## Use multiple columns `{#several-columns}`
 
 To compare two texts, place them in adjacent columns using the [layout.columns](/docs/template-builder/reference/layout.columns) component. It allows you to set the column width and vertical alignment.
 
@@ -396,7 +392,7 @@ The third column in the example contains two input fields for Tolokers to writ
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/EtNLEAun3ttFNK">View example</Button>
 
-## Check the link click {#link-click}
+## Check the link click `{#link-click}`
 
 Add a button that opens the search results and generate a search query link using the [helper.search-query](/docs/template-builder/reference/helper.search-query) component. To make sure that a Toloker clicked on the link and checked its contents, configure validation, as in the example.
 
@@ -417,7 +413,7 @@ Add a button that opens the search results and generate a search query link usin
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/Ruij6YJb48fZu3">View example</Button>
 
-## Allow a Toloker to add input fields {#dynamic-field-add}
+## Allow a Toloker to add input fields `{#dynamic-field-add}`
 
 This is a complex example that consists of four main parts.
 

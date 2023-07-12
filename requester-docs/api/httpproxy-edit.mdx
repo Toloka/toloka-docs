@@ -1,10 +1,7 @@
 ---
 title: "Edit proxy server data — Toloka API | Toloka documentation"
 date: "2023-05-02T16:13:19.183738"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "apiMenu"
 ---
 
@@ -16,7 +13,7 @@ import HttpproxyEditTable3 from './httpproxy-edit/subcomponents/httpproxy-edit-t
 
 To edit the server data, log in as a requester and send an AJAX request from your browser console.
 
-## Request {#request}
+## Request `{#request}`
 
 ```js
 $.ajax({
@@ -32,7 +29,7 @@ $.ajax({
             "baseUrl": "example.com/some-path"
         },
         "name": "test-proxy"
-    )
+    })
 });
 ```
 
@@ -46,7 +43,7 @@ Parameter | Overview
 `additionalHeaders[]` | <HttpproxyEditTable2/>
 `additionalQueryArgs[]` | <HttpproxyEditTable3/>
 
-## Response {#response}
+## Response `{#response}`
 
 Contains server parameters (both updated and not) in JSON format.
 

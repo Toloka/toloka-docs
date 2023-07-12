@@ -1,10 +1,7 @@
 ---
 title: "TaskSuite class | Toloka documentation"
 date: "2023-02-15T15:15:29.496531"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -25,8 +22,7 @@ The base class for `TaskSuite` is available in the `window.TolokaTaskSuite` glob
 
 Methods:
 
-## constructor(options) {#constructor}
-
+## constructor(options) `{#constructor}`
 Basic task suite class constructor.
 
 Parameters:
@@ -43,26 +39,21 @@ Parameters:
 
 - `options.solutions` — Array of responses [Solution](/docs/guide/spec-advanced#obj-solution). Can be empty.
 
-## destroy() {#destroy}
-
+## destroy() `{#destroy}`
 Destroys all tasks on the page. Releases resources, services, and event handlers used in the global space. Calls [onDestroy()](#ondestroy).
 
-## focusNextTask() {#focusnexttask}
-
+## focusNextTask() `{#focusnexttask}`
 Sets the focus on the next task.
 
-## focusPreviousTask() {#focusprevioustask}
-
+## focusPreviousTask() `{#focusprevioustask}`
 Sets the focus on the previous task.
 
-## focusTask(index) {#focustask}
-
+## focusTask(index) `{#focustask}`
 Sets the focus on the task by the index. Parameter:
 
 - `index` — Task index on the page.
 
-## getAssignment() {#getassignment}
-
+## getAssignment() `{#getassignment}`
 Returns a link to an [Assignment](/docs/guide/assignment) instance. After that, you can use all the properties and methods of that class instance.
 
 <Cut title="Example">
@@ -74,12 +65,10 @@ this.getAssignment().skip();
 
 </Cut>
 
-## getDOMElement() {#getdomeelement}
-
+## getDOMElement() `{#getdomeelement}`
 Returns the DOM element of the page (it is empty before rendering, and after rendering it is initialized and contains the interface).
 
-## getFocusedTask() {#getfocusedtask}
-
+## getFocusedTask() `{#getfocusedtask}`
 Returns a link to the active task. Gets the index of the active task from a private property `_focusedTaskIndex` and returns a link to that task using [getTasks()](#gettasks).
 
 <Cut title="Example">
@@ -92,8 +81,7 @@ elements.forEach(el => el.classList.remove('some_class'));
 
 </Cut>
 
-## getOptions() {#getoptions}
-
+## getOptions() `{#getoptions}`
 Returns an object with a set of parameters passed to the [constructor()](#constructor) method during initialization.
 
 <Cut title="Example">
@@ -108,34 +96,27 @@ let outputSpec = this.getOptions().specs.output_spec,
 
 </Cut>
 
-## getProxyUrl(path) {#getproxyurl}
-
+## getProxyUrl(path) `{#getproxyurl}`
 Returns a complete URL to access the data on the [proxy server](/docs/guide/prepare-data). Parameter:
 
 - `path` — the relative path to the file.
 
-## getSolutions() {#getsolutions}
-
+## getSolutions() `{#getsolutions}`
 Returns an array of [Solution](/docs/guide/spec-advanced#obj-solution) responses.
 
-## getStyleDOMElement() {#getstyledomeelement}
-
+## getStyleDOMElement() `{#getstyledomeelement}`
 Returns the DOM element of the page styles.
 
-## getTasks() {#gettasks}
-
+## getTasks() `{#gettasks}`
 Returns an array of [Task](/docs/guide/spec-advanced#obj-task) initialized task models.
 
-## getTasksDOMElement() {#gettaskdomeelement}
-
+## getTasksDOMElement() `{#gettaskdomeelement}`
 Returns the DOM element of the task suite (`div.task-suite`). If the DOM element is missing, the method creates it.
 
-## getTasksIndexed() {#gettasksindexed}
-
+## getTasksIndexed() `{#gettasksindexed}`
 Returns tasks indexed by their IDs: `<taskId>`: [Task](/docs/guide/spec-advanced#obj-task), …
 
-## getWorkspaceOptions() {#getworkspaceoptions}
-
+## getWorkspaceOptions() `{#getworkspaceoptions}`
 Returns an object with the Toloker's workspace settings.
 
 The most important settings:
@@ -150,8 +131,7 @@ The most important settings:
 
 - `origin` — Parent page FQDN.
 
-## initHotkeys() {#inithotkeys}
-
+## initHotkeys() `{#inithotkeys}`
 Hotkey handler initializer:
 
 - Sets the focus to the previous task when the left arrow or up arrow is pressed.
@@ -162,38 +142,30 @@ Hotkey handler initializer:
 
 - Sets the focus on the first task.
 
-## onDestroy() {#ondestroy}
-
+## onDestroy() `{#ondestroy}`
 A method you can redefine to execute your code when a task suite is deleted. Called after the page is destroyed ([destroy()](#destroy)). The best method for releasing memory, deleting global event handlers and DOM elements, and so on.
 
-## onKey(key) {#onkey}
-
+## onKey(key) `{#onkey}`
 Passes the pressed key to the active task.
 
-## onPause() {#onpause}
-
+## onPause() `{#onpause}`
 A method you can redefine to execute your code when a task suite stops working.
 
-## onRender() {#onrender}
-
+## onRender() `{#onrender}`
 A method you can redefine to execute your code when rendering a task suite. Called after page rendering ([render()](#render)). All manipulations with the DOM element of a task should be performed here.
 
-## onResume() {#onresume}
-
+## onResume() `{#onresume}`
 A method you can redefine to execute your code when a task suite resumes working.
 
-## onValidationFail(errors) {#onvalidationfail}
-
+## onValidationFail(errors) `{#onvalidationfail}`
 Called if the validation failed. Contains error descriptions in the parameter. Parameter:
 
 - `errors` — Array of errors [SolutionValidationError](/docs/guide/spec-advanced#obj-solutionvalidationerror).
 
-## pause() {#pause}
-
+## pause() `{#pause}`
 Calls the `pause()` method for each task in the suite. It also calls the [onPause()](#onpause) method.
 
-## proxy(path, options) {#proxy}
-
+## proxy(path, options) `{#proxy}`
 Makes a GET or POST request through a proxy. Returns the response as an object.
 
 Parameters:
@@ -238,12 +210,10 @@ Promise.all(promises)
 
 </Cut>
 
-## render() {#render}
-
+## render() `{#render}`
 Creates a DOM representation of the task suite: renders all tasks in the task suite. Calls [render()](/docs/guide/task#render) in the Task class for each task. Calls [onRender()](#onrender). Returns `this`.
 
-## validate(solutions) {#validate}
-
+## validate(solutions) `{#validate}`
 Validates responses according to output data parameters. Returns a `promise` object with an array of [SolutionValidationError](/docs/guide/spec-advanced#obj-solutionvalidationerror) errors if the responses are incorrect, or `null`. Parameter:
 
 - `solutions` — Array of the Toloker's task responses. If omitted, the current values are used ([getSolutions()](#getsolutions)).

@@ -1,10 +1,7 @@
 ---
 title: "Register a proxy server — Toloka API | Toloka documentation"
 date: "2023-05-02T16:13:17.997933"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "apiMenu"
 ---
 
@@ -16,7 +13,7 @@ import HttpproxyRegistrationTable3 from './httpproxy-registration/subcomponents/
 
 To register a new proxy server, log in as a requester and send an AJAX request from your browser console.
 
-## Request {#request}
+## Request `{#request}`
 
 ```js
 $.ajax({
@@ -32,7 +29,7 @@ $.ajax({
             "baseUrl": "example.com/some-path"
         },
         "name": "test-proxy"
-    )
+    })
 });
 ```
 
@@ -51,7 +48,7 @@ To get the full URL for accessing data on the created server, use the `getProxyU
 
 </Note>
 
-## Response {#response}
+## Response `{#response}`
 
 Contains the `id` and parameters in JSON format passed during server registration.
 

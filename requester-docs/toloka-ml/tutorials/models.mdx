@@ -1,10 +1,7 @@
 ---
 title: "Models — Toloka ML platform | Toloka documentation"
 date: "2023-02-20T16:24:21.723863"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "mlMenu"
 ---
 
@@ -54,7 +51,7 @@ Model methods:
 `get_model_scenarios()`: Getting the `ModelScenarios` object to run scenarios.
 `delete()`: Deleting a model and all model versions.
 
-## Before you start {#before-you-begin}
+## Before you start `{#before-you-begin}`
 
 Enable the modules and add your token:
 
@@ -65,8 +62,7 @@ from pulsar.common import LightScenario
 client = PulsarClient(token='your_token')
 ```
 
-## Adding a model {#add}
-
+## Adding a model `{#add}`
 Create an object named `Model` and add the model to the Toloka ML platform database using the `add()` method:
 
 ```py
@@ -104,8 +100,7 @@ model = Model(
 model_uid = client.models.add(model)
 ```
 
-## Updating a model {#update}
-
+## Updating a model `{#update}`
 Pass new model data in the `update()` method:
 
 ```py
@@ -113,7 +108,7 @@ model.description = 'New description'
 client.models.update(model)
 ```
 
-## Adding a new version {#new-version}
+## Adding a new version `{#new-version}`
 
 Next, use the `new_version()` method:
 
@@ -140,8 +135,7 @@ client.models.new_version(model, new_major_version=True)
 
 As a result, the model's major version is increased by `1`, while its minor version is set to `0`.
 
-## Editing parameters {#patch}
-
+## Editing parameters `{#patch}`
 Replace specific parameters with no Model object created using the `patch()` method:
 
 ```py
@@ -154,8 +148,7 @@ artifact2 = ModelArtifact(
 client.models.patch(model_uid, new_version=True, artifacts=Append([artifact2]))
 ```
 
-## Getting a model {#get}
-
+## Getting a model `{#get}`
 Use the `get()` method. To get a specific version, set it in the `version` or `major_version` parameter for the model's minor and major version, respectively.
 
 ```py
@@ -163,8 +156,7 @@ model = client.models.get(model_uid)
 model_v_0_0 = client.models.get(uid=model_uid, version=0, major_version=0)
 ```
 
-## Finding models {#find}
-
+## Finding models `{#find}`
 You can get a list of models using the `find()` method. You can use parameters such as `tags`, `user_name`, `date_from`, and `date_to`:
 
 ```py
@@ -172,7 +164,7 @@ models = client.find(tags=['test_tag_44'])
 print(models[0])
 ```
 
-## Getting scenarios {#get-scenarios}
+## Getting scenarios `{#get-scenarios}`
 
 Use the `get_model_scenarios()` method:
 
@@ -196,8 +188,7 @@ print(test_config)
 scenarios.generate.run(**test_config)
 ```
 
-## Deleting a model {#delete}
-
+## Deleting a model `{#delete}`
 Use the `delete()` method:
 
 ```py

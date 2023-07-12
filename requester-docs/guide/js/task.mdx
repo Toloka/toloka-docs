@@ -1,10 +1,7 @@
 ---
 title: "Task class | Toloka documentation"
 date: "2023-02-15T15:15:29.585494"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -21,12 +18,10 @@ The `Task` base class is responsible for the [task interface](/docs/glossary#tas
 
 Methods:
 
-## blur() {#blur}
-
+## blur() `{#blur}`
 Implements the logic for removing the focus from the task and calls the [onBlur()](#onblur) method.
 
-## constructor(options) {#constructor}
-
+## constructor(options) `{#constructor}`
 The [task UI](/docs/guide/spec) constructor.
 
 Parameters:
@@ -37,16 +32,13 @@ Parameters:
 
 - `options.workspaceOptions` — Toloker's workspace initialization parameters.
 
-## destroy() {#destroy}
-
+## destroy() `{#destroy}`
 Releases resources, services, and event handlers used in the global space. Calls [onDestroy()](#ondestroy).
 
-## focus() {#focus}
-
+## focus() `{#focus}`
 Implements the logic for setting the focus on the task by calling the [onFocus()](#onfocus) method.
 
-## getAssignment() {#getassignment}
-
+## getAssignment() `{#getassignment}`
 Returns a link to an instance of the `TolokaAssignment` class. After that, you can access all its properties and methods.
 
 <Cut title="Example">
@@ -58,12 +50,10 @@ this.getAssignment().skip()
 
 </Cut>
 
-## getDOMElement() {#getdomeelement}
-
+## getDOMElement() `{#getdomeelement}`
 Returns the DOM element of the task.
 
-## getOptions() {#getoptions}
-
+## getOptions() `{#getoptions}`
 Returns an object with a set of parameters passed to the [constructor()](#constructor) method during initialization.
 
 <Cut title="Example">
@@ -78,32 +68,26 @@ let outputSpec = this.getOptions().specs.output_spec,
 
 </Cut>
 
-## getProxyUrl(path) {#getproxyurl}
-
+## getProxyUrl(path) `{#getproxyurl}`
 Returns a complete URL to access the data on the proxy server. Parameter:
 
 - `path` — the relative path to the file.
 
-## getSavedState() {#getsavedstate}
-
+## getSavedState() `{#getsavedstate}`
 Returns the saved state of the task (object).
 
 Retrieves the saved state of the task from the browser's local storage using the `TASK_STATE:{assignmentId}:{taskId}` key.
 
-## getSolution() {#getsolution}
-
+## getSolution() `{#getsolution}`
 Returns the [Solution](/docs/guide/spec-advanced#obj-solution) task responses.
 
-## getStyleDOMElement() {#getstyledomeelement}
-
+## getStyleDOMElement() `{#getstyledomeelement}`
 Returns a DOM element for task styles that is added to `document.head` when rendering.
 
-## getTask() {#gettask}
-
+## getTask() `{#gettask}`
 Returns the [Task](/docs/guide/spec-advanced#obj-task) task model.
 
-## getTemplateData() {#gettemplatedata}
-
+## getTemplateData() `{#gettemplatedata}`
 Returns the object received by the template engine before compiling the task template.
 
 The method is available in toloka-handlebars-templates. It returns a set of fields and their values passed to the task input: `return this.getTask().input_values`.
@@ -128,16 +112,13 @@ getTemplateData: function() {
 
 </Cut>
 
-## getWorkspaceOptions() {#getworkspaceoptions}
-
+## getWorkspaceOptions() `{#getworkspaceoptions}`
 Returns the Toloker's workspace initialization parameters passed to the `constructor()` method.
 
-## hideTaskError() {#hidetaskerror}
-
+## hideTaskError() `{#hidetaskerror}`
 Hides a global error (only if the toloka-handlebars-templates library is connected).
 
-## id {#id}
-
+## id `{#id}`
 Contains the current task's `id`.
 
 <Cut title="Example">
@@ -148,48 +129,38 @@ let myId = this.getTask().id
 
 </Cut>
 
-## onBlur() {#onblur}
-
+## onBlur() `{#onblur}`
 Called after removing the focus.
 
-## onDestroy() {#ondestroy}
-
+## onDestroy() `{#ondestroy}`
 Called after the task is destroyed ([destroy()](#destroy)). The best method for releasing memory, deleting global event handlers and DOM elements, and so on.
 
-## onFocus() {#onfocus}
-
+## onFocus() `{#onfocus}`
 Called after setting the focus.
 
-## onKey(key) {#onkey}
-
+## onKey(key) `{#onkey}`
 Passes the pressed key. Parameter:
 
 - `key` — Alphanumeric character pressed on the keyboard. Can be used as a shortcut.
 
-## onPause() {#onpause}
-
+## onPause() `{#onpause}`
 Called after the task is put on pause.
 
-## onRender() {#onrender}
-
+## onRender() `{#onrender}`
 Called after the task is rendered ([render()](#render)). All manipulations with the DOM element of a task should be performed here.
 
-## onResume(savedState) {#onresume}
-
+## onResume(savedState) `{#onresume}`
 Called after the task is resumed.
 
-## onValidationFail(errors) {#onvalidationfail}
-
+## onValidationFail(errors) `{#onvalidationfail}`
 Called when the Toloker's response validation fails. Parameter:
 
 - `errors` — Validation errors in the Toloker's response [SolutionValidationError](/docs/guide/spec-advanced#obj-solutionvalidationerror).
 
-## pause() {#pause}
-
+## pause() `{#pause}`
 Pauses task completion. Saves the intermediate state of the task in the browser's local storage (`saveState`) and calls the `onPause` method.
 
-## proxy(path, options) {#proxy}
-
+## proxy(path, options) `{#proxy}`
 Makes a GET or POST request through a proxy.
 
 Parameters:
@@ -234,52 +205,43 @@ Promise.all(promises)
 
 </Cut>
 
-## render() {#render}
-
+## render() `{#render}`
 Forms the DOM representation of the task interface. Calls [onRender()](#onrender). Returns `this`.
 
-## resume() {#resume}
-
+## resume() `{#resume}`
 Resumes task completion. Retrieves the saved state of the task from the browser's local storage. Restores responses from it and re-executes the requests in the file and webview services that were not completed before. Calls `onResume`.
 
-## saveState() {#savestate}
-
+## saveState() `{#savestate}`
 Checks `assignmentId`to make sure that the task is working in Toloker mode and not in preview mode. Receives a set of responses and unprocessed requests in the file and webview services. Saves them in the browser's local storage with the `TASK_STATE:{assignmentId}:{taskId}` key using the storage service.
 
-## setSolution(solution) {#setsolution}
-
+## setSolution(solution) `{#setsolution}`
 Sets the responses. Parameter:
 
 - `solution` — The Toloker's response to the task ([Solution](/docs/guide/spec-advanced#obj-solution)).
 
-## setSolutionOutputValue(fieldName, value) {#setsolutionoutputvalue}
-
+## setSolutionOutputValue(fieldName, value) `{#setsolutionoutputvalue}`
 Writes the required value in the specified field. Parameters:
 
 - `fieldName` — A field (string) in the output specification, to which the value is passed.
 
 - `value` — The value of the type set for `fieldName` in the project specification.
 
-## setSolutionOutputValues(outputValues) {#setsolutionoutputvalues}
-
+## setSolutionOutputValues(outputValues) `{#setsolutionoutputvalues}`
 Updates the output specification by writing the passed object with responses in it. Calls `saveState` to save intermediate results in the browser's local storage. Parameter:
 
 - `outputValues` — Object with responses.
 
-## showTaskError(message) {#showtaskerror}
-
+## showTaskError(message) `{#showtaskerror}`
 Forcibly shows a global error in the task (only if the toloka-handlebars-templates library is connected). Parameters:
 
 - `message` — Error text (string).
 
-## template(data) {#template}
-
+## template(data) `{#template}`
 Template engine for the task. In the task's [HTML interface](/docs/guide/spec), it replaces occurrences such as `${fieldX}` with the corresponding value and the `fieldX` key from the `data` parameter. Returns the task's HTML interface as a string. Parameter:
 
 - `data` — Object with data to insert in the template.
 
-## validate(solution) {#validate}
-
+## validate(solution) `{#validate}`
 Validates responses according to output data parameters. Returns [SolutionValidationError](/docs/guide/spec-advanced#obj-solutionvalidationerror) if the responses are invalid, otherwise `null`. Parameter:
 
 - `solution` — The Toloker's response to the task. If omitted, the current one is used ([getSolution()](#getsolution)).

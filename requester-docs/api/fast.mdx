@@ -1,10 +1,7 @@
 ---
 title: "Fast responses — Toloka API | Toloka documentation"
 date: "2023-07-04T17:43:00.860914"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "apiMenu"
 ---
 
@@ -27,7 +24,7 @@ import FastTable8 from './fast/subcomponents/fast-table-8.mdx'
 
 You can ban a Toloker who responds too quickly. To do this, set key values in the `quality_control.configs` array in the [pool settings](https://toloka.ai/docs/api/api-reference/#tag--pool).
 
-## Request body {#body}
+## Request body `{#body}`
 
 In the example below, the Toloker is blocked from accessing the task suites if **4** out of **10** responses were given too quickly. The minimum response time is **3** seconds.
 
@@ -111,7 +108,7 @@ Parameter | Overview
 `configs[].rules.action.parameters.private_comment` | _string_<br/><br/>Comments (the reason for blocking access). Visible only to the requester.
 `configs[].rules.action.parameters.open_pool` | <FastTable8/>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [Fast responses](/docs/guide/quick-answers)
 - [Toloka-Kit recipe: Use quality control rules](/docs/toloka-kit/recipes/use-quality-control-rules/)

@@ -1,10 +1,7 @@
 ---
 title: "field.radio-group — Template Builder | Toloka documentation"
 date: "2023-05-26T15:51:58.898413"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -18,20 +15,20 @@ If you want it to look like normal buttons, use [field.button-radio-group](/docs
 
 The minimum number of buttons is one. Any type of data can be returned.
 
-## Component properties {#properties}
+## Component properties `{#properties}`
 
 **Name** | **Type** | **Description**
 ----- | ----- | -----
-`type`<span style="color: red">\*</span> | "field.radio-group" | Set component type.
-`data`<span style="color: red">\*</span> | _writable_ | <TolokaTbSourceDataWithValues/>
+`type`<span style={{color: "red"}}>\*</span> | "field.radio-group" | Set component type.
+`data`<span style={{color: "red"}}>\*</span> | _writable_ | <TolokaTbSourceDataWithValues/>
 `label` | _string_ | Label above the component.
 `disabled` | _boolean_ | This property prevents clicking the button. If the value is `true`, the button is not active (a Toloker will not be able to click it).
 `hint` | _string_ | Hint text.
-`options`<span style="color: red">\*</span> | _array_ | An array of buttons.
+`options`<span style={{color: "red"}}>\*</span> | _array_ | An array of buttons.
 `options[]` | _object_ | A button.
 `options[].hint` | _string_ | Text with additional information.
-`options[].label`<span style="color: red">\*</span> | _string_ | The title of the option.
-`options[].value`<span style="color: red">\*</span> | _any_ | Returned value.
+`options[].label`<span style={{color: "red"}}>\*</span> | _string_ | The title of the option.
+`options[].value`<span style={{color: "red"}}>\*</span> | _any_ | Returned value.
 `validation` | _condition_ | Validation based on condition.
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=template-builder-reference-field-radio-group">Contact support</Button>

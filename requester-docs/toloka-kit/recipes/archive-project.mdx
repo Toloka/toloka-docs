@@ -1,10 +1,7 @@
 ---
 title: "Archive project — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:41:31.691976"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -22,7 +19,7 @@ _Move the project which you no longer use into archive._
 
 <Instantiate/>
 
-### 3. Archive project {#step-three}
+### 3. Archive project `{#step-three}`
 
 [Find out](/docs/toloka-kit/recipes/get-projects) the ID of the project which you want to archive. Then call the `archive_project()` method.
 
@@ -37,7 +34,7 @@ _Move the project which you no longer use into archive._
   textToCopy={`archived_project = toloka_client.archive_project('117493')`}
 />
 
-### 4. Print project ID and status {#step-four}
+### 4. Print project ID and status `{#step-four}`
 
 The `archive_project()` request will return the [Project](/docs/toloka-kit/reference/toloka.client.project.Project) class object. You can use its attributes to print the information you need.
 
@@ -51,7 +48,7 @@ You should get an output with the project ID and the updated status which looks 
 117493 ProjectStatus.ARCHIVED
 ```
 
-## Complete code: Archive project {#complete-code}
+## Complete code: Archive project `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -69,7 +66,7 @@ print(archived_project.id, archived_project.status)
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

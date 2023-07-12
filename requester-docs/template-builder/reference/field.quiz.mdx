@@ -1,10 +1,7 @@
 ---
 title: "field.quiz — Template Builder | Toloka documentation"
 date: "2023-05-26T15:51:59.151538"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -25,27 +22,28 @@ Returns a key value object with any type of data as value.
 
 </Cut>
 
-## Component properties {#properties}
+## Component properties `{#properties}`
+
 
 **Name** | **Type** | **Description**
 ----- | ----- | -----
-`type`<span style="color: red">\*</span> | "field.quiz" | Set component type.
-`data`<span style="color: red">\*</span> | _writable_ | <TolokaTbSourceDataWithValues/>
+`type`<span style={{color: "red"}}>\*</span> | "field.quiz" | Set component type.
+`data`<span style={{color: "red"}}>\*</span> | _writable_ | <TolokaTbSourceDataWithValues/>
 `label` | _string_ | Label above the component.
 `hint` | _string_ | Hint text.
 `instruction` | _string_ | –
-`options`<span style="color: red">\*</span> | _array_ | An array of questions.
+`options`<span style={{color: "red"}}>\*</span> | _array_ | An array of questions.
 `options[]` | _object_ | –
 `options[].border` | _boolean_ | –
 `options[].disabled` | _boolean_ | –
-`options[].key`<span style="color: red">\*</span> | _string_ | –
+`options[].key`<span style={{color: "red"}}>\*</span> | _string_ | –
 `options[].label` | _string_ | A title of answer. Supports markdown.
-`options[].options`<span style="color: red">\*</span> | _array_ | An array of answers.
+`options[].options`<span style={{color: "red"}}>\*</span> | _array_ | An array of answers.
 `options[].options[]` | _object_ | –
 `options[].options[].correct` | _boolean_ | Whether the value is correct.
 `options[].options[].hint` | _string_ | Text that appears when answer checked. Supports markdown.
-`options[].options[].label`<span style="color: red">\*</span> | _string_ | Text of answer. Supports markdown.
-`options[].options[].value`<span style="color: red">\*</span> | _any_ | Returned value.
+`options[].options[].label`<span style={{color: "red"}}>\*</span> | _string_ | Text of answer. Supports markdown.
+`options[].options[].value`<span style={{color: "red"}}>\*</span> | _any_ | Returned value.
 `validation` | _condition_ | Validation based on condition.
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=template-builder-reference-field-quiz">Contact support</Button>

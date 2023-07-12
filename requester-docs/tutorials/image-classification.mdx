@@ -1,10 +1,7 @@
 ---
 title: "Image classification — Tutorials | Toloka documentation"
 date: "2023-03-10T16:55:47.979515"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tutorialsMenu"
 ---
 
@@ -56,15 +53,14 @@ Image classification is a type of data labeling task with a finite number of res
 
 Use Toloka to classify a set of images into categories that you define. Tolokers look at the images and choose one of the given categories. After you collect all the labeled images, you can apply your dataset for model training.
 
-## Prerequisites {#prerequisites}
-
+## Prerequisites `{#prerequisites}`
 Before you begin:
 
 - <TutorialsRegister/>
 
 - <TutorialsTopUpTutorial/>
 
-## Create a project {#project}
+## Create a project `{#project}`
 
 <TolokaRequesterSourceUsePreset/>
 
@@ -122,7 +118,7 @@ Before you begin:
 
 1. <SaveProject/>
 
-## Create a pool {#pool}
+## Create a pool `{#pool}`
 
 <TolokaRequesterSourceWhatIsPool/>
 
@@ -178,12 +174,12 @@ Before you begin:
 
         <ImageClassificationList1/>
 
-        <!--
-        <Tabs tabs={[
+
+        {/* <Tabs tabs={[
           { title: 'A prepared dataset', value: <ImageClassificationList1/> },
           { title: 'Media files', value: <MediaFiles/> },
-        ]}/>
-        -->
+        ]}/> */}
+
 
     1. Click **Continue**.
 
@@ -225,8 +221,7 @@ Before you begin:
 
 <TolokaRequesterSourcePoolIsReady/>
 
-## Start labeling {#labeling}
-
+## Start labeling `{#labeling}`
 1. Make sure you have [topped up your account](/docs/guide/refill).
 
 1. <TolokaRequesterSourceStartButton/>
@@ -235,8 +230,7 @@ Before you begin:
 
 1. In the pop-up panel, review the budget and click **Launch**.
 
-## See the results {#results}
-
+## See the results `{#results}`
 1. <TolokaRequesterSourceLabelingProgress/>
 
     <Image width="700px" withBackground imageId="1675425845432" alt="See the results. Step 1" />
@@ -255,7 +249,7 @@ Before you begin:
 
     - **CONFIDENCE**: The response significance according to the [Dawid-Skene model](/docs/guide/result-aggregation#dawid-skene).
 
-## Troubleshooting {#troubleshooting}
+## Troubleshooting `{#troubleshooting}`
 
 <Cut title="How do I make an image expand to its maximum size on click?">
 
@@ -265,19 +259,18 @@ The `popup` property of the component [view.image](/docs/template-builder/refere
 
 <FaqNeedConvert/>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [Crowdsourcing concepts: Instructions](https://toloka.ai/knowledgebase/instruction/)
 - [Crowdsourcing concepts: Quality control](https://toloka.ai/knowledgebase/quality-control/)
 - [Crowdsourcing concepts: Pricing](https://toloka.ai/knowledgebase/pricing/)
 - [Template Builder: Image classification](/docs/template-builder/templates/image-classification)
 
-## For developers {#for-developers}
+## For developers `{#for-developers}`
 
 - [Toloka-Kit: Image classification](https://github.com/Toloka/toloka-kit/blob/main/examples/1.computer_vision/image_classification/image_classification.ipynb)
 
-## Datasets and reference {#datasets}
-
+## Datasets and reference `{#datasets}`
 - [Sample dataset file with tasks](https://tlk.s3.yandex.net/toloka-kit/knowledge-base/catsdogs.tsv)
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=tutorials-image-classification">Contact support</Button>

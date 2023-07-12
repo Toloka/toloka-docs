@@ -1,10 +1,7 @@
 ---
 title: "Read and write — Template Builder | Toloka documentation"
 date: "2023-02-10T09:15:36.547146"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -17,7 +14,7 @@ Read and write for interim data (`data.internal`) is similar.
 
 For more information on how to add a quotation mark `"`, backslash `\`, line break, or tab to the object in the input data, see [If you're not familiar with JSON](/docs/template-builder/quickstart). For more information about escaping in TSV files, see the [documentation](/docs/guide/pool_csv).
 
-## Basic example {#read-write-data}
+## Basic example `{#read-write-data}`
 
 Let's say you want to display the question text from the input data and write the response to the output data. Sample input data:
 
@@ -65,7 +62,7 @@ When you respond with yes and click **Send**, the result looks like this:
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/ZL2u06Rh3ttBRF">View example</Button>
 
-## Reading JSON input data {#read-json}
+## Reading JSON input data `{#read-json}`
 
 If you pass a JSON object in the input data and want to get a value for some nested key, specify the path to it using the dot as a separator.
 
@@ -93,13 +90,13 @@ To display the value from the city property in the interface, specify the path t
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/-SMvyQ2u3ttBUC">View example</Button>
 
-## Writing JSON data {#write-json}
+## Writing JSON data `{#write-json}`
 
 The output data is written similarly. If you enter the path separated by dots, the field with the output data will have the object type in the specification.
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/RvwlJq5B3ttBYv">View example</Button>
 
-## Reading data with the "array" type {#read-array}
+## Reading data with the "array" type `{#read-array}`
 
 To get a value from a specific element in an array, use the path to specify its sequence number, starting from zero.
 
@@ -132,7 +129,7 @@ For example, you can convert an array of image links to an array of [view.image]
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/V44snIfa3ttBb2">View example</Button>
 
-## Writing the array data {#write-array}
+## Writing the array data `{#write-array}`
 
 Similarly to reading elements from an array, you can also write the results to an array. For this, use the `path` property for the path to the array and the element number starting from zero. Example:
 

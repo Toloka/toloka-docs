@@ -1,10 +1,7 @@
 ---
 title: "Remove skill from Toloker — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:37.310542"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -22,7 +19,7 @@ _Remove the skill from the Toloker using the ID of the "skill-Toloker" pair._
 
 <Instantiate/>
 
-### 3. Remove Toloker skill {#step-three}
+### 3. Remove Toloker skill `{#step-three}`
 
 [Find out](/docs/toloka-kit/recipes/get-user-skills#step-three) the ID of the "skill-Toloker" pair. This ID is unique for each Toloker having a skill assigned to them. Use the `delete_user_skill()` method to remove the skill from the Toloker.
 
@@ -39,7 +36,7 @@ _Remove the skill from the Toloker using the ID of the "skill-Toloker" pair._
 
 If everything goes as expected, the request will return an empty response.
 
-## Complete code: Remove skill from Toloker {#complete-code}
+## Complete code: Remove skill from Toloker `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -56,7 +53,7 @@ toloka_client.delete_user_skill(user_skill_id='54116339')
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

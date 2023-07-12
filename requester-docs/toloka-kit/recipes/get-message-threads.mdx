@@ -1,10 +1,7 @@
 ---
 title: "Get list of message threads — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:36.807428"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -22,7 +19,7 @@ _Get the list of all the message threads present in a specific folder in your ac
 
 <Instantiate/>
 
-### 3. Print message thread IDs and topics {#step-three}
+### 3. Print message thread IDs and topics `{#step-three}`
 
 Iterate through all the message threads calling the `get_message_threads()` method.
 
@@ -48,7 +45,7 @@ You should get an output with the message thread IDs and topics which looks like
 63c1573b138adb3ab310b2af Thank you!
 ```
 
-## Complete code: Get list of message threads {#complete-code}
+## Complete code: Get list of message threads `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -67,7 +64,7 @@ for message_thread in toloka_client.get_message_threads(folder=['INBOX', 'UNREAD
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

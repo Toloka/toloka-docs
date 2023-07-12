@@ -1,10 +1,7 @@
 ---
 title: "field.text-annotation — Template Builder | Toloka documentation"
 date: "2023-05-26T15:52:00.268988"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -20,21 +17,21 @@ Use it to select multiple words, individual words, or letters in the text and la
 
 You can use [plugin.field.text-annotation.hotkeys](/docs/template-builder/reference/plugin.field.text-annotation.hotkeys) to assign keyboard shortcuts for selecting categories.
 
-## Component properties {#properties}
+## Component properties `{#properties}`
 
 **Name** | **Type** | **Description**
 ----- | ----- | -----
-`type`<span style="color: red">\*</span> | "field.text-annotation" | Set component type.
-`data`<span style="color: red">\*</span> | _writable_ | <TolokaTbSourceDataWithValues/>
+`type`<span style={{color: "red"}}>\*</span> | "field.text-annotation" | Set component type.
+`data`<span style={{color: "red"}}>\*</span> | _writable_ | <TolokaTbSourceDataWithValues/>
 `label` | _string_ | Label above the component.
 `adjust` | _string_ | If the property value is set to `words`, only words can be selected in the text. If you don't use this property, any part of a line can be selected.
-`content`<span style="color: red">\*</span> | _string_ | The text where a Toloker has to select part of a line.
+`content`<span style={{color: "red"}}>\*</span> | _string_ | The text where a Toloker has to select part of a line.
 `disabled` | _boolean_ | This property blocks the component. If `true`, the component is unavailable to a Toloker. The default value is `false`.
 `hint` | _string_ | Hint text.
-`labels`<span style="color: red">\*</span> | _array_ | An array of categories that a Toloker uses to label parts of the text.
+`labels`<span style={{color: "red"}}>\*</span> | _array_ | An array of categories that a Toloker uses to label parts of the text.
 `labels[]` | _object_ | A category.
-`labels[].label`<span style="color: red">\*</span> | _string_ | Specify the category name in the `label` property.
-`labels[].value`<span style="color: red">\*</span> | _string_ | Specify the category value in the `value` property.
+`labels[].label`<span style={{color: "red"}}>\*</span> | _string_ | Specify the category name in the `label` property.
+`labels[].value`<span style={{color: "red"}}>\*</span> | _string_ | Specify the category value in the `value` property.
 `validation` | _condition_ | Validation based on condition.
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=template-builder-reference-field-text-annotation">Contact support</Button>

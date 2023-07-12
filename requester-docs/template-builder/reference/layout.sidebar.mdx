@@ -1,10 +1,7 @@
 ---
 title: "layout.sidebar — Template Builder | Toloka documentation"
 date: "2023-03-29T11:05:04.067587"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -35,13 +32,14 @@ To add an extra panel with controls, use the `extraControls` property.
 
 </Cut>
 
-## Component properties {#properties}
+## Component properties `{#properties}`
+
 
 **Name** | **Type** | **Description**
 ----- | ----- | -----
-`type`<span style="color: red">\*</span> | "layout.sidebar" | Set component type.
-`content`<span style="color: red">\*</span> | _view_ | Content placed in the main area.
-`controls`<span style="color: red">\*</span> | _view_ | Content of the control panel.
+`type`<span style={{color: "red"}}>\*</span> | "layout.sidebar" | Set component type.
+`content`<span style={{color: "red"}}>\*</span> | _view_ | Content placed in the main area.
+`controls`<span style={{color: "red"}}>\*</span> | _view_ | Content of the control panel.
 `controlsWidth` | _number_ | The width of the control panel in widescreen mode. In compact mode, the panel takes up the entire available width. Default: 200 pixels.
 `extraControls` | _view_ | An additional panel with controls. Located below the main panel.
 `minWidth` | _number_ | The minimum width, in pixels, for widescreen mode. If the component width becomes less than the specified value, the interface switches to compact mode. Default: 400 pixels.

@@ -1,10 +1,7 @@
 ---
 title: "Aggregate responses in pool — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:36.756277"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -30,7 +27,7 @@ We recommend that you try our [crowd-kit library](/docs/crowd-kit/). It has vari
 
 <Instantiate/>
 
-### 3. Configure aggregation operation {#step-three}
+### 3. Configure aggregation operation `{#step-three}`
 
 Set up the parameters which you want to use for the aggregation: in this example we choose tasks from the pool with the `pool_id` value, set the aggregation type to `DAWID_SKENE`, and specify output fields to aggregate. The `aggregate_solutions_by_pool()` method starts the aggregation.
 
@@ -53,7 +50,7 @@ Set up the parameters which you want to use for the aggregation: in this example
 )`}
 />
 
-### 4. Start aggregation and wait for result {#step-four}
+### 4. Start aggregation and wait for result `{#step-four}`
 
 Aggregation takes some time depending on the number of tasks and responses from Tolokers. The `wait_operation()` method displays the progress of the aggregation operation and shows when it finishes.
 
@@ -74,7 +71,7 @@ The output from the code portion above will look like this.
 100%|████████████████████████████████████████████| 100/100 [00:52<00:00,  1.92it/s]
 ```
 
-### 5. Display aggregation results {#step-five}
+### 5. Display aggregation results `{#step-five}`
 
 After the aggregation operation 100% finished, get the results with the help of the `get_aggregated_solutions()` method and iterate through them.
 
@@ -106,7 +103,7 @@ You should get an output with the task IDs and the `result` output data values w
 00022cfa46--637cf3e86e13181a0164e4d0 dog
 ```
 
-## Complete code: Aggregate responses in pool {#complete-code}
+## Complete code: Aggregate responses in pool `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -135,7 +132,7 @@ for result in aggregation_results:
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

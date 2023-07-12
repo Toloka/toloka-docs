@@ -1,10 +1,7 @@
 ---
 title: "Video classification — Template Builder | Toloka documentation"
 date: "2023-02-10T09:15:30.100216"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -207,7 +204,7 @@ If you want to be sure that a Toloker watched the whole video, replace the [con
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/Djq9UxCi3ttDv2">View example</Button>
 
-## Add a description {#add-description}
+## Add a description `{#add-description}`
 
 To add a detailed description to the task, use the [view.text](/docs/template-builder/reference/view.text) component.
 
@@ -224,7 +221,7 @@ To add a detailed description to the task, use the [view.text](/docs/template-bu
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/GbUWi5Mo3ttDvz">View example</Button>
 
-## Add a response field {#add-text-area}
+## Add a response field `{#add-text-area}`
 
 To let Tolokers leave comments about the task or their response, add a text field using [field.textarea](/docs/template-builder/reference/field.textarea).
 
@@ -246,7 +243,7 @@ To let Tolokers leave comments about the task or their response, add a text fiel
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/Sgr_lsd73ttDwk">View example</Button>
 
-## Add a layout {#add-layout}
+## Add a layout `{#add-layout}`
 
 To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs/template-builder/reference/view.alert). You can place it in the [view.list](/docs/template-builder/reference/view.list) along with the other components.
 
@@ -299,7 +296,7 @@ In this example, the description is highlighted with a blue border, and the butt
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/nRY8qyZ93ttDxm">View example</Button>
 
-## Other options for buttons {#add-variants}
+## Other options for buttons `{#add-variants}`
 
 Decide whether a Toloker can select only one or multiple answer options.
 
@@ -308,7 +305,7 @@ Decide whether a Toloker can select only one or multiple answer options.
   { title: 'One option (a radio button)', value: <VideoModerationList2/> },
 ]}/>
 
-## Add clarifying questions to one of the options {#add-addition}
+## Add clarifying questions to one of the options `{#add-addition}`
 
 The [helper.if](/docs/template-builder/reference/helper.if) component displays an interface element after a specific response is selected. In this example, a Toloker can only select correct statements about the video if it is loaded.
 
@@ -360,8 +357,7 @@ The [helper.if](/docs/template-builder/reference/helper.if) component displays a
 
 If you need to check sequentially more than two conditions, use the [helper.switch](/docs/template-builder/reference/helper.switch) component.
 
-## Video and search query comparison {#search}
-
+## Video and search query comparison `{#search}`
 #### Does the video match the search query
 
 Add a button that opens the search results and generate a search query link using the [helper.search-query](/docs/template-builder/reference/helper.search-query) component. To make sure that a Toloker clicked on the link and checked its contents, configure validation, as in the example.
@@ -459,7 +455,7 @@ This is a more complex example that compares the video with the results of a sea
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/j-pKuRhl3ttE5y">View example</Button>
 
-## Compare the video with another type of data {#compare-video-and-other}
+## Compare the video with another type of data `{#compare-video-and-other}`
 
 - Add an image using the [view.image](/docs/template-builder/reference/view.image) component. Place the video next to the image using the [layout.columns](/docs/template-builder/reference/layout.columns) component.
 
@@ -498,7 +494,7 @@ This is a more complex example that compares the video with the results of a sea
     { title: 'Compare audio tracks', value: <VideoModerationList4/> },
   ]}/>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [Tutorials: Video classification](/docs/tutorials/video-moderation)
 

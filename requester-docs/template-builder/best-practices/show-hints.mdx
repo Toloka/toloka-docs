@@ -1,10 +1,7 @@
 ---
 title: "Show hints — Template Builder | Toloka documentation"
 date: "2023-02-10T09:15:29.441179"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -12,7 +9,7 @@ docsMenu: "defaultMenu"
 
 Use hints to convey [important information](#fixed-notifications) to Tolokers, help them [resolve issues](#errors) and [fill out fields](#hints) correctly, and [alert](#notifications) them when they attempt certain actions. Template Builder provides auxiliary components for different needs.
 
-## Add fixed alerts at the top of the screen {#fixed-notifications}
+## Add fixed alerts at the top of the screen `{#fixed-notifications}`
 
 To keep Tolokers aware of important information, add fixed alerts above the tasks: this is the text at the top of the screen that never disappears when Tolokers navigate between the task suites.
 
@@ -22,20 +19,18 @@ Use the [plugin.toloka](/docs/template-builder/reference/plugin.toloka) plugin t
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/5ywCvXMi3ttAhj">View example</Button>
 
-## Specify the causes for validation errors {#errors}
+## Specify the causes for validation errors `{#errors}`
 
 To help Tolokers resolve issues that cause errors, give more specific causes for validation errors. For this purpose, you can add the `hint` property to any [condition](/docs/template-builder/reference/conditions).
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/FGuFl3TF3ttEwU">View example</Button>
 
-## Add explanations to the fields with the help of hints {#hints}
-
+## Add explanations to the fields with the help of hints `{#hints}`
 To add small explanations to elements, use the `hint` property: it's added to every [data entry element](/docs/template-builder/reference/fields) and [display element](/docs/template-builder/reference/views). Hints are shown when Tolokers click <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425156663/1675425156663_original_svg.svg" alt="image" />.
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/5s11EWHA3ttAjy">View example</Button>
 
-## Show notifications {#notifications}
-
+## Show notifications `{#notifications}`
 You can use notifications to inform your Tolokers. Notifications are displayed in the lower-left corner of the screen. You can set the color and time parameters for notifications.
 
 To show notifications when Tolokers click a button, add the [view.action-button](/docs/template-builder/reference/view.action-button) element to the template and set the `action` property to [action.notify](/docs/template-builder/reference/action.notify).

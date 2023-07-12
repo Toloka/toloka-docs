@@ -1,10 +1,7 @@
 ---
 title: "Stream processing of task items — Apps API | Toloka documentation"
 date: "2023-07-05T14:36:44.677849"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "appsApiMenu"
 ---
 
@@ -14,9 +11,9 @@ For projects with a constant stream of new tasks that don't need to be grouped i
 
 This mode is suitable, for example, for moderation tasks.
 
-## Add a task item {#create-item}
+## Add a task item `{#create-item}`
 
-### Request {#create-item-request}
+### Request `{#create-item-request}`
 
 ```bash
 curl -X POST 'https://toloka.dev/api/app/v0/app-projects/{app_project_id}/items/bulk' \
@@ -32,23 +29,23 @@ curl -X POST 'https://toloka.dev/api/app/v0/app-projects/{app_project_id}/items/
          }'
 ```
 
-#### Path parameters {#create-item-path-params}
+#### Path parameters `{#create-item-path-params}`
 
 **Parameter**|**Overview**
 ----- | -----
 **app_project_id**|**string**<br/><br/>Project ID.
 
-#### Body parameters {#create-item-body}
+#### Body parameters `{#create-item-body}`
 
 **Key**|**Overview**
 ----- | -----
 **items**|**array of objects**<br/><br/>Array of task items according to the `input_spec` value of the solution.<br/><br/>You can upload an array from a single task item or from several task items within a single request.
 
-### Response {#create-item-response}
+### Response `{#create-item-response}`
 
 Contains an array of IDs assigned to created task items.
 
-## Check the status of task items {#get-result}
+## Check the status of task items `{#get-result}`
 
 <Note mode="note" title="Note">
 
@@ -60,21 +57,21 @@ To get the results, request the list of task items sorted by processing completi
 
 After the request is completed, find the last labeled item with the latest `finished_at` value. Use its ID as `last_saved_item_id` in the next request.
 
-### Request {#get-result-request}
+### Request `{#get-result-request}`
 
 ```bash
 curl -X POST 'https://toloka.dev/api/app/v0/app-projects/{app_project_id}/items?sort=finished&after_id={last_saved_item_id}' \
      -H 'Authorization: OAuth PlaceYourRealOAuthToken_Here' \
 ```
 
-#### Path parameters {#get-result-path-params}
+#### Path parameters `{#get-result-path-params}`
 
 **Parameter**|**Overview**
 ----- | -----
 **app_project_id**|**string**<br/><br/>Project ID.
 **last_saved_item_id**|**string**<br/><br/>ID of the item used to request more recent results.
 
-### Response {#get-result-response}
+### Response `{#get-result-response}`
 
 Contains already processed task items.
 

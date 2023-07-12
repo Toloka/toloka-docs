@@ -1,10 +1,7 @@
 ---
 title: "Change task overlap — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:38.478129"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -22,7 +19,7 @@ _Increase the overlap of a task when you need more Tolokers to complete it._
 
 <Instantiate/>
 
-### 3. Change task overlap {#step-three}
+### 3. Change task overlap `{#step-three}`
 
 [Find out](/docs/toloka-kit/recipes/get-tasks) the ID of the task which you want to modify. Then change the task overlap calling the `patch_task()` method.
 
@@ -37,7 +34,7 @@ _Increase the overlap of a task when you need more Tolokers to complete it._
   textToCopy={`task = toloka_client.patch_task('00022da5a7--6388b40547c84000494cdc5a', overlap=5)`}
 />
 
-### 4. Display resulting task overlap {#step-four}
+### 4. Display resulting task overlap `{#step-four}`
 
 The `patch_task()` request will return the [Task](/docs/toloka-kit/reference/toloka.client.task.Task) class object. You can use its attributes to print the information you need.
 
@@ -51,7 +48,7 @@ You should get an output with the task ID and modified overlap which looks like 
 00022da5a7--6388b40547c84000494cdc5a 5
 ```
 
-## Complete code: Change task overlap {#complete-code}
+## Complete code: Change task overlap `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -69,7 +66,7 @@ print(task.id, task.overlap)
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

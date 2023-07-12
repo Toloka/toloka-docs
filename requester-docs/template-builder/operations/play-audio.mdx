@@ -1,10 +1,7 @@
 ---
 title: "Playing back audio — Template Builder | Toloka documentation"
 date: "2023-02-10T09:15:36.260164"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -18,7 +15,7 @@ In this section, we'll show how you can [embed an audio player](#insert-to-inter
 
 <TolokaTbSourceAddMedia/>
 
-## Add an audio player to the interface {#insert-to-interface}
+## Add an audio player to the interface `{#insert-to-interface}`
 
 To insert an audio file into the task interface, add the [view.audio](/docs/template-builder/reference/view.audio) component to the template. In the `url` property, specify a direct link to the file (we recommend that you use the MP3 format):
 ```json
@@ -34,14 +31,14 @@ To loop audio playback automatically, put `true` in the `loop` property.
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/hn12lyBE3ttC7a">View example</Button>
 
-## Make sure that the Toloker listened to the audio {#validate-listened}
+## Make sure that the Toloker listened to the audio `{#validate-listened}`
 
 <Tabs tabs={[
   { title: 'Started listening', value: <PlayAudioList1/> },
   { title: 'Listened completely', value: <PlayAudioList2/> },
 ]}/>
 
-## Record audio {#record-audio}
+## Record audio `{#record-audio}`
 
 To allow Tolokers to upload their audio files, use the [field.audio](/docs/template-builder/reference/field.audio) component.
 
@@ -59,7 +56,7 @@ On the website, `field.audio` allows Tolokers to upload audio files, and in the 
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/uDWbPPCP3ttFAM">View example</Button>
 
-## Create a task to transcribe audio {#transform-to-text}
+## Create a task to transcribe audio `{#transform-to-text}`
 
 To create a template for audio transcription tasks, we used the following components:
 

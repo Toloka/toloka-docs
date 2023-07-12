@@ -1,10 +1,7 @@
 ---
 title: "Posting tasks — Toloka API | Toloka documentation"
 date: "2023-07-04T17:43:02.735127"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "apiMenu"
 ---
 
@@ -24,7 +21,7 @@ import QsPlacementList10 from './qs-placement/subcomponents/qs-placement-list-10
 
 <Announce/>
 
-## Before you start {#start}
+## Before you start `{#start}`
 
 Choose a platform to get an OAuth token:
 
@@ -33,9 +30,9 @@ Choose a platform to get an OAuth token:
   { title: 'Production version', value: <QsPlacementList2/> },
 ]}/>
 
-## Create a project {#project}
+## Create a project `{#project}`
 
-### Request {#project-request}
+### Request `{#project-request}`
 
 Use the `POST /api/v1/projects` [method](https://toloka.ai/docs/api/api-reference/#post-/projects):
 
@@ -46,7 +43,7 @@ Use the `POST /api/v1/projects` [method](https://toloka.ai/docs/api/api-referenc
 
 The example shows the basic parameters that are necessary to create a simple project. For a more detailed description of all request parameters, see [Create project](https://toloka.ai/docs/api/api-reference/#post-/projects).
 
-### Response {#project-response}
+### Response `{#project-response}`
 
 In response to the  request, you will receive a JSON object for the created project. This object contains the project `id`.
 
@@ -65,9 +62,9 @@ You'll need the `id` to create pools in the project: specify it in the [add pool
 
 </Note>
 
-## Add a pool {#pool}
+## Add a pool `{#pool}`
 
-### Request {#pool-post}
+### Request `{#pool-post}`
 
 In the given code example, substitute the parameter values:
 
@@ -83,7 +80,7 @@ Next, send a `POST` [request](https://toloka.ai/docs/api/api-reference/#post-/po
 
 The example shows the basic parameters that are necessary to create a simple pool. For a more detailed description of all request parameters, see [Create pool](https://toloka.ai/docs/api/api-reference/#post-/pools).
 
-### Response {#pool-response}
+### Response `{#pool-response}`
 
 In response to the  request, you will receive a JSON object for the created pool. This object contains the pool `id`.
 
@@ -102,9 +99,9 @@ You'll need the `id` to add tasks to the pool: specify it in the [upload tasks](
 
 </Note>
 
-## Upload tasks {#task}
+## Upload tasks `{#task}`
 
-### Request {#tasks-post}
+### Request `{#tasks-post}`
 
 In the given code example, substitute the parameter values:
 
@@ -120,13 +117,13 @@ Next, send a `POST` [request](https://toloka.ai/docs/api/api-reference/#post-/ta
 
 The example shows the basic parameters that are necessary to upload simple tasks. For a more detailed description of each task parameter, see [Create single/multiple tasks](https://toloka.ai/docs/api/api-reference/#post-/tasks).
 
-## Start the pool {#pool-run}
+## Start the pool `{#pool-run}`
 
-### Before starting the pool {#pool-run-before}
+### Before starting the pool `{#pool-run-before}`
 
 Before you start the pool, go to the [Toloka interface](https://platform.toloka.ai/), select the pool, click **Preview**, and check that the tasks are displayed properly.
 
-### Request {#pool-run-request}
+### Request `{#pool-run-request}`
 
 In the `{pool_id}` path parameter, insert the ID of the pool to start (the ID received in response to the [add pool request](#pool)) and use the `POST` [method](https://toloka.ai/docs/api/api-reference/#post-/pools/-id-/open):
 
@@ -135,15 +132,15 @@ In the `{pool_id}` path parameter, insert the ID of the pool to start (the ID re
   { title: 'Postman', value: <QsPlacementList10/> },
 ]}/>
 
-## Check the tasks {#check}
+## Check the tasks `{#check}`
 
 After starting the pool, make sure all the settings are correct and the tasks are displayed properly. To do this, log in to Toloka under the Toloker's username and open the card with the created tasks.
 
-## What's next {#what-next}
+## What's next `{#what-next}`
 
 Read the [instructions on how to get results](/docs/api/qs-results).
 
-## Learn more {#links-qs-placement}
+## Learn more `{#links-qs-placement}`
 
 - [HTTP methods for working with projects](https://toloka.ai/docs/api/api-reference/#tag--project)
 - [HTTP methods for working with pools](https://toloka.ai/docs/api/api-reference/#tag--pool)

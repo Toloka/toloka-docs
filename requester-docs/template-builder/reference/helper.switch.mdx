@@ -1,10 +1,7 @@
 ---
 title: "helper.switch — Template Builder | Toloka documentation"
 date: "2023-03-29T11:05:04.735176"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -25,15 +22,15 @@ How the helper works:
 3. If the condition is false (returns `false`), the helper checks the subsequent condition.
 4. If all conditions are false as a result of all checks, the helper returns the value specified in the `default` property (if it is not defined, the helper returns nothing).
 
-## Component properties {#properties}
+## Component properties `{#properties}`
 
 **Name** | **Type** | **Description**
 ----- | ----- | -----
-`type`<span style="color: red">\*</span> | "helper.switch" | Set component type.
-`cases`<span style="color: red">\*</span> | _array_ | An array of objects consisting of `condition` and `result` property pairs.
+`type`<span style={{color: "red"}}>\*</span> | "helper.switch" | Set component type.
+`cases`<span style={{color: "red"}}>\*</span> | _array_ | An array of objects consisting of `condition` and `result` property pairs.
 `cases[]` | _object_ | Object parameters.
-`cases[].condition`<span style="color: red">\*</span> | _condition_ | Condition to check.
-`cases[].result`<span style="color: red">\*</span> | _any_ | The element that is returned if the condition from the `condition` property is true (returns `true`).
+`cases[].condition`<span style={{color: "red"}}>\*</span> | _condition_ | Condition to check.
+`cases[].result`<span style={{color: "red"}}>\*</span> | _any_ | The element that is returned if the condition from the `condition` property is true (returns `true`).
 `default` | _any_ | Element that is returned if none of the checked conditions returned `true`.
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=template-builder-reference-helper-switch">Contact support</Button>

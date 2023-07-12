@@ -1,10 +1,7 @@
 ---
 title: "Plots — Toloka ML platform | Toloka documentation"
 date: "2023-02-20T16:24:21.788921"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "mlMenu"
 ---
 
@@ -12,7 +9,7 @@ docsMenu: "mlMenu"
 
 The Toloka ML platform library lets you plot charts and tables.
 
-# Before you start {#before-you-begin}
+# Before you start `{#before-you-begin}`
 
 Enable the modules:
 
@@ -27,8 +24,7 @@ from datetime import datetime as dt
 client = PulsarClient(token='your_token')
 ```
 
-## Creating a chart {#plot}
-
+## Creating a chart `{#plot}`
 To get a list of metric changes and check if a dataset is empty, use the `print()` and `list()` functions:
 
 ```py
@@ -89,8 +85,7 @@ client.plot_runs(
 )
 ```
 
-## Creating a table {#table}
-
+## Creating a table `{#table}`
 You can plot a table using the `PulsarClent.plot_table()` function: Let's say we have three models and three datasets and we want to get the maximum metric values over the entire time:
 
 ```py

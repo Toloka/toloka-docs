@@ -1,10 +1,7 @@
 ---
 title: "field.file — Template Builder | Toloka documentation"
 date: "2023-05-26T15:52:01.604816"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -23,12 +20,12 @@ In the task review mode, the uploaded images will appear automatically. You can 
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/W_WxIekd3tyzv6">View example</Button>
 
-## Component properties {#properties}
+## Component properties `{#properties}`
 
 **Name** | **Type** | **Description**
 ----- | ----- | -----
-`type`<span style="color: red">\*</span> | "field.file" | Set component type.
-`data`<span style="color: red">\*</span> | _writable_ | <TolokaTbSourceDataWithValues/>
+`type`<span style={{color: "red"}}>\*</span> | "field.file" | Set component type.
+`data`<span style={{color: "red"}}>\*</span> | _writable_ | <TolokaTbSourceDataWithValues/>
 `label` | _string_ | Label above the component.
 `accept` | _array_ | A list of file types that will be suggested to a Toloker when uploading. By default, you can upload any files.<br/><br/>Specify the types in the [MIME Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) format. For example, you can suggest uploading images by adding the `image/jpeg` and `image/png` types.
 `accept[]` | _string_ | File type in the [MIME Type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) format.

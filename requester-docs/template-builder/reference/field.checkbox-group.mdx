@@ -1,10 +1,7 @@
 ---
 title: "field.checkbox-group — Template Builder | Toloka documentation"
 date: "2023-05-26T15:52:00.088949"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -35,20 +32,20 @@ By default, if the component returns `false`, this result will not be added to t
 
 </Cut>
 
-## Component properties {#properties}
+## Component properties `{#properties}`
 
 **Name** | **Type** | **Description**
 ----- | ----- | -----
-`type`<span style="color: red">\*</span> | "field.checkbox-group" | Set component type.
-`data`<span style="color: red">\*</span> | _writable_ | <TolokaTbSourceDataWithValues/>
+`type`<span style={{color: "red"}}>\*</span> | "field.checkbox-group" | Set component type.
+`data`<span style={{color: "red"}}>\*</span> | _writable_ | <TolokaTbSourceDataWithValues/>
 `label` | _string_ | Label above the component.
 `disabled` | _boolean_ | If `true`, the options are inactive.
 `hint` | _string_ | Hint text.
-`options`<span style="color: red">\*</span> | _array_ | An array of checkboxes, where `value` is the value to change, and `label` is the text near the checkbox.
+`options`<span style={{color: "red"}}>\*</span> | _array_ | An array of checkboxes, where `value` is the value to change, and `label` is the text near the checkbox.
 `options[]` | _object_ | A checkbox.
 `options[].hint` | _string_ | Text with additional information about the option.
-`options[].label`<span style="color: red">\*</span> | _string_ | Text next to the option.
-`options[].value`<span style="color: red">\*</span> | _string_ | Returned value.
+`options[].label`<span style={{color: "red"}}>\*</span> | _string_ | Text next to the option.
+`options[].value`<span style={{color: "red"}}>\*</span> | _string_ | Returned value.
 `preserveFalse` | _boolean_ | Property that specifies whether to return `false` values in the results. By default, if the component returns `false`, this result will not be added to the output. To add `false` to the results, specify `"preserveFalse": true`.
 `validation` | _condition_ | Validation based on condition.
 

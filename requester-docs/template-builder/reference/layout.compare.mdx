@@ -1,10 +1,7 @@
 ---
 title: "layout.compare — Template Builder | Toloka documentation"
 date: "2023-03-29T11:05:09.220249"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -29,13 +26,13 @@ Differences from [layout.side-by-side](/docs/template-builder/reference/layout.s
 - No buttons for hiding items. These are useful if you need to compare 5 photos at once and it's difficult to choose between two of them.
 - You can add individual selection buttons for every item being compared.
 
-## Component properties {#properties}
+## Component properties `{#properties}`
 
 **Name** | **Type** | **Description**
 ----- | ----- | -----
-`type`<span style="color: red">\*</span> | "layout.compare" | Set component type.
+`type`<span style={{color: "red"}}>\*</span> | "layout.compare" | Set component type.
 `commonControls` | _view_ | The common fields of the component. Add information blocks that are common to all the elements being compared.
-`items`<span style="color: red">\*</span> | _array_ | An array with properties of the elements being compared. Set the appearance of the component blocks.
+`items`<span style={{color: "red"}}>\*</span> | _array_ | An array with properties of the elements being compared. Set the appearance of the component blocks.
 `items[]` | _object_ | The compared element.
 `items[].content` | _view_ | The content of the element that's being compared. Add images, audio recordings, videos, links, or other types of data.
 `items[].controls` | _view_ | Configure the input fields to make a Toloker select an item.

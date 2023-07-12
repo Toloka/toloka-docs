@@ -1,10 +1,7 @@
 ---
 title: "Close pool — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:39.283543"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -22,7 +19,7 @@ _Close an opened pool in Toloka._
 
 <Instantiate/>
 
-### 3. Close pool {#step-three}
+### 3. Close pool `{#step-three}`
 
 [Find out](/docs/toloka-kit/recipes/get-pools) the ID of the pool you want to close. Then call the `close_pool()` method.
 
@@ -37,7 +34,7 @@ _Close an opened pool in Toloka._
   textToCopy={`closed_pool = toloka_client.close_pool('1443858')`}
 />
 
-### 4. Print pool ID and status {#step-four}
+### 4. Print pool ID and status `{#step-four}`
 
 The `close_pool()` request will return the [Pool](/docs/toloka-kit/reference/toloka.client.pool.Pool) class object. You can use its attributes to print the information you need.
 
@@ -51,7 +48,7 @@ You should get an output with the pool ID and the updated status which looks lik
 1443858 Status.CLOSED
 ```
 
-## Complete code: Close pool {#complete-code}
+## Complete code: Close pool `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -69,7 +66,7 @@ print(closed_pool.id, closed_pool.status)
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

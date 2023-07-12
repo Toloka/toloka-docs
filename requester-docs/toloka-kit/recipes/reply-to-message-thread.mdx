@@ -1,10 +1,7 @@
 ---
 title: "Reply to message thread — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:38.784285"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -23,7 +20,7 @@ _Send a reply to a message thread in Toloka._
 
 <Instantiate/>
 
-### 3. Send reply to thread {#step-three}
+### 3. Send reply to thread `{#step-three}`
 
 [Find out](/docs/toloka-kit/recipes/get-message-threads) the ID of the message thread you want to reply to. Then compose a reply using the [MessageThreadReply](/docs/toloka-kit/reference/toloka.client.message_thread.MessageThreadReply) class object for that.
 
@@ -46,7 +43,7 @@ response_to_thread = toloka_client.reply_message_thread(
 )`}
 />
 
-### 4. Display sent reply info {#step-four}
+### 4. Display sent reply info `{#step-four}`
 
 The `reply_message_thread()` request will return the [MessageThread](/docs/toloka-kit/reference/toloka.client.message_thread.MessageThread) class object. You can use its attributes to print the information you need.
 
@@ -60,7 +57,7 @@ You should get an output with the message ID and creation time which looks like 
 63c15cfd757a4a1adad1d633 2023-01-13 13:36:13.894000+00:00
 ```
 
-## Complete code: Reply to message thread {#complete-code}
+## Complete code: Reply to message thread `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -83,7 +80,7 @@ print(response_to_thread.id, response_to_thread.created)
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

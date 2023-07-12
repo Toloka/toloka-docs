@@ -1,10 +1,7 @@
 ---
 title: "Get project details — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:39.048557"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -22,7 +19,7 @@ _Get the detailed information about the project with the ID specified in the req
 
 <Instantiate/>
 
-### 3. Get project information {#step-three}
+### 3. Get project information `{#step-three}`
 
 [Find out](/docs/toloka-kit/recipes/get-projects) the ID of the project for which you want to get the detailed information. Then get this info calling the `get_project()` method.
 
@@ -37,7 +34,7 @@ _Get the detailed information about the project with the ID specified in the req
   textToCopy={`project = toloka_client.get_project('83859')`}
 />
 
-### 4. Print project name and status {#step-four}
+### 4. Print project name and status `{#step-four}`
 
 The `get_project()` request will return the [Project](/docs/toloka-kit/reference/toloka.client.project.Project) class object. You can use its attributes to print the information you need.
 
@@ -51,7 +48,7 @@ You should get an output with the project name and status which looks like this.
 Image classification ProjectStatus.ACTIVE
 ```
 
-## Complete code: Get project details {#complete-code}
+## Complete code: Get project details `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -69,7 +66,7 @@ print(project.public_name, project.status)
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

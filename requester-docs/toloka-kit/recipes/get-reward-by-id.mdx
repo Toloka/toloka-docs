@@ -1,10 +1,7 @@
 ---
 title: "Get bonus details — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:37.250178"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -22,7 +19,7 @@ _Get the detailed information about the bonus with the ID specified in the reque
 
 <Instantiate/>
 
-### 3. Get bonus information {#step-three}
+### 3. Get bonus information `{#step-three}`
 
 [Find out](/docs/toloka-kit/recipes/get-rewards) the ID of the bonus for which you want to get the detailed information. Then get this info calling the `get_user_bonus()` method.
 
@@ -37,7 +34,7 @@ _Get the detailed information about the bonus with the ID specified in the reque
   textToCopy={`bonus = toloka_client.get_user_bonus('3139')`}
 />
 
-### 4. Print bonus title and amount {#step-four}
+### 4. Print bonus title and amount `{#step-four}`
 
 The `get_user_bonus()` request will return the [UserBonus](/docs/toloka-kit/reference/toloka.client.user_bonus.UserBonus) class object. You can use its attributes to print the information you need.
 
@@ -51,7 +48,7 @@ You should get an output with the bonus title and amount which looks like this.
 Perfect job! 0.500
 ```
 
-## Complete code: Get bonus details {#complete-code}
+## Complete code: Get bonus details `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -69,7 +66,7 @@ print(bonus.public_title['EN'], bonus.amount)
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

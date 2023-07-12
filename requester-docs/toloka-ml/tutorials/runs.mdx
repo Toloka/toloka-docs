@@ -1,10 +1,7 @@
 ---
 title: "Runs — Toloka ML platform | Toloka documentation"
 date: "2023-02-20T16:24:21.665567"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "mlMenu"
 ---
 
@@ -23,7 +20,7 @@ Run parameters:
 * `description`: Run description.
 * `model_output_url`: Link to object data.
 
-## Before you start {#before-you-begin}
+## Before you start `{#before-you-begin}`
 
 Enable the modules:
 
@@ -45,8 +42,7 @@ from datetime import datetime as dt
 client = PulsarClient(token='your_token')
 ```
 
-## Creating a run {#create}
-
+## Creating a run `{#create}`
 To create a run, set the `ModelInfo`, `Metrics`, `Metric`, and `DatasetInfo` objects:
 
 ```py
@@ -117,8 +113,7 @@ run = RunInfo(
 run_id = client.add(run)
 ```
 
-## Updating a run {#update}
-
+## Updating a run `{#update}`
 Update a run using the `update()` method:
 
 ```py
@@ -149,8 +144,7 @@ client.add_tags(run_id, ['test-tag', 'tag-from-tutorial'])
 client.remove_tags(run_id, ['test-tag', 'some-unknown-tag'])
 ```
 
-## Viewing runs {#view}
-
+## Viewing runs `{#view}`
 You can get a list of runs with their results using the `get_runs()` or `find()` method. You can use parameters such as `user_name`, `model_name`, `dataset_name`, `tags`, `date_from`, and `date_to`:
 
 ```py
@@ -178,8 +172,7 @@ print('{} on {}: {}'.format(
 print('dataset info: {}'.format(run.dataset.info))
 ```
 
-## Deleting a run {#delete}
-
+## Deleting a run `{#delete}`
 Delete a run using the `delete(`) method:
 
 ```py

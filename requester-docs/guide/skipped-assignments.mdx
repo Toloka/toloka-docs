@@ -1,10 +1,7 @@
 ---
 title: "Skipped assignments | Toloka documentation"
 date: "2023-03-02T19:39:11.813770"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -27,7 +24,7 @@ You can set up this rule to restrict Toloker access to a pool.
 
 Before you enable skipping tasks, we recommend that you read the section [Tips for designing tasks](/docs/guide/faq).
 
-## When to use {#when-use}
+## When to use `{#when-use}`
 
 Restrict access to [pool](/docs/glossary#pool) tasks for Tolokers who skip multiple task suites in a row if:
 
@@ -43,8 +40,7 @@ Don't use it if:
 
 - The task complexity can't be estimated, which means the Tolokers won't be willing to skip tasks in search of easier ones.
 
-## How to configure {#rule}
-
+## How to configure `{#rule}`
 <Note mode="restriction" title="Alert">
 
 All fields in this rule are required. If you don't fill in at least one of them, you won't be able to save the rule.
@@ -56,8 +52,7 @@ All fields in this rule are required. If you don't fill in at least one of them,
 **If** | <SkippedAssignmentsTable1/>
 **then** | <SkippedAssignmentsTable2/>
 
-## Examples {#examples}
-
+## Examples `{#examples}`
 Task: you're conducting an opinion poll. For the results to be accurate, the Toloker must answer most of the questions.
 
 <Tabs tabs={[
@@ -71,12 +66,12 @@ The assignments submitted by banned Tolokers will be taken into account if they 
 
 </Note>
 
-## For developers {#for-developers}
+## For developers `{#for-developers}`
 
 - [Toloka API: Skipped assignments](/docs/api/skipped)
 - [Toloka-Kit: SkippedInRowAssignments collector class](/docs/toloka-kit/reference/toloka.client.collectors.SkippedInRowAssignments)
 
-## Troubleshooting {#troubleshooting}
+## Troubleshooting `{#troubleshooting}`
 
 <FaqSkillForEveryPool/>
 

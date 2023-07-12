@@ -1,10 +1,7 @@
 ---
 title: "Accept responses from Tolokers — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:36.867406"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -22,7 +19,7 @@ _Accept Toloker responses with the IDs specified in the request._
 
 <Instantiate/>
 
-### 3. Accept Toloker response {#step-three}
+### 3. Accept Toloker response `{#step-three}`
 
 [Find out](/docs/toloka-kit/recipes/get-responses) the ID of the Toloker response that your want to accept and use the [accept_assignment()](/docs/toloka-kit/reference/toloka.client.TolokaClient.accept_assignment) method to accept the response and leave a comment.
 
@@ -39,7 +36,7 @@ _Accept Toloker responses with the IDs specified in the request._
 
 The Toloker response will be marked as accepted with the `OK` comment added to it.
 
-### 4. Print Toloker response status and public comment {#step-four}
+### 4. Print Toloker response status and public comment `{#step-four}`
 
 The `accept_assignment()` request will return the [Assignment](/docs/toloka-kit/reference/toloka.client.assignment.Assignment) class object. You can use its attributes to print the information you need.
 
@@ -53,7 +50,7 @@ You should get an output with the updated Toloker response status and public com
 Status.ACCEPTED OK
 ```
 
-## Complete code: Accept responses from Tolokers {#complete-code}
+## Complete code: Accept responses from Tolokers `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -71,7 +68,7 @@ print(accepted_assignment.status, accepted_assignment.public_comment)
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)

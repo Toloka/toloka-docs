@@ -1,10 +1,7 @@
 ---
 title: "Input and output data | Toloka documentation"
 date: "2023-02-15T15:15:24.664773"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -38,7 +35,7 @@ In the specification, add fields for the data used in the task or for the data y
 
 Don't repeat the input data in the output data. You will receive all data, including the input, in the results.
 
-## Editing the specification {#manual-setting}
+## Editing the specification `{#manual-setting}`
 
 <Note mode="note" title="Note">
 
@@ -74,7 +71,7 @@ Parameter  | Parameter in JSON | Overview
 
 </Cut>
 
-## Data types {#data-types}
+## Data types `{#data-types}`
 
 You can use different data types:
 
@@ -88,8 +85,7 @@ You can use different data types:
 - <Term term="file"><TolokaRequesterSourceFile/></Term>
 - <Term term="array"><TolokaRequesterSourceArray/></Term>
 
-## Recommendations {#recomendations}
-
+## Recommendations `{#recomendations}`
 - If you edit a required field, the changes apply only to new task [pools](/docs/glossary#pool). For example, if you need to fix an error in a project, [clone the pool](/docs/guide/pool-main) or [create a new one](/docs/guide/pool-main). Existing task pools will continue using the previous version of the project.
 
 - In the output, use value validation and don't forget to mark the field as required if the Toloker has to fill it in.
@@ -99,8 +95,7 @@ You can use different data types:
 
     To create a hidden field, add it to the specification yourself and then add the `"hidden": true` parameter to this field in JSON mode. You should do this in Toloka when configuring your project. The hidden field remains when the specification is re-generated using the Template Builder.
 
-## What's next {#what_next}
-
+## What's next `{#what_next}`
 - [Create a task pool in the project](/docs/guide/pool-main).
 - Learn more about how to set up a project:
 
@@ -109,11 +104,11 @@ You can use different data types:
     - [Adapt a task for mobile devices](/docs/guide/mobile).
     - [Setting up quality control](/docs/guide/project-qa).
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [Editing a project](/docs/guide/edit-project)
 
-## Troubleshooting {#troubleshooting}
+## Troubleshooting `{#troubleshooting}`
 
 <FaqInsertFunction/>
 

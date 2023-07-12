@@ -1,10 +1,7 @@
 ---
 title: "Object selection in an image — Template Builder | Toloka documentation"
 date: "2023-02-10T09:15:36.910591"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -19,7 +16,7 @@ import SelectAreasList6 from './select-areas/subcomponents/select-areas-list-6.m
 
 This section describes how to add the area selection editor to an image and speed up task completion with shortcuts. If you just need to insert a picture, read the [Inserting images](/docs/template-builder/operations/insert-images) section.
 
-## Add the area selection editor {#add-select}
+## Add the area selection editor `{#add-select}`
 
 To allow Tolokers to select areas in pictures, use the [field.image-annotation](/docs/template-builder/reference/field.image-annotation) component.
 
@@ -38,8 +35,7 @@ To allow Tolokers to select areas in pictures, use the [field.image-annotation](
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/HdPqNHC53ttFBy">View example</Button>
 
-## Configure labeling modes {#shapes}
-
+## Configure labeling modes `{#shapes}`
 The component offers three labeling modes: rectangle, polygon, and point markup. All three modes are available by default. You can choose to use just one or two of them.
 
 <Tabs tabs={[
@@ -48,8 +44,7 @@ The component offers three labeling modes: rectangle, polygon, and point markup.
   { title: 'Points', value: <SelectAreasList3/> },
 ]}/>
 
-## Classify areas {#labels}
-
+## Classify areas `{#labels}`
 You can allow Tolokers to select objects by type. For example, you may want all cars selected in the picture to be labeled as one type, and all road signs as another.
 
 ```json
@@ -70,8 +65,7 @@ You can allow Tolokers to select objects by type. For example, you may want all 
 
 For each new object of the `labels` property, a button is added to the editor that allows Tolokers to select the corresponding area type. Different values of the `value` property let Tolokers label areas with different colors.
 
-## Add keyboard shortcuts {#hotkeys}
-
+## Add keyboard shortcuts `{#hotkeys}`
 To help Tolokers work faster, you can add keyboard shortcuts using the [plugin.field.image-annotation.hotkeys](/docs/template-builder/reference/plugin.field.image-annotation.hotkeys) component. Shortcuts can be assigned to the up and down arrows (`up`,`down`), numbers, and Latin letters.
 
 If you install the shortcut plugin without assigning keys, they are assigned automatically.
@@ -86,7 +80,7 @@ You can change them as described below. If you don't need some of the shortcuts,
   { title: 'Confirm or cancel area creation', value: <SelectAreasList6/> },
 ]}/>
 
-## Create a task {#create-task}
+## Create a task `{#create-task}`
 
 To create a template for area selection tasks, use the following components:
 

@@ -1,10 +1,7 @@
 ---
 title: "How to use JavaScript extensions | Toloka documentation"
 date: "2023-02-15T15:15:25.206935"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "defaultMenu"
 ---
 
@@ -30,8 +27,7 @@ All aspects of the task's [lifecycle](#lifecycle) are controlled by three JavaSc
 
 You can use [services](/docs/guide/js/services) for more nuanced needs like subscribing to keypress events or getting the Toloker's GPS coordinates.
 
-## Lifecycle of a task {#lifecycle}
-
+## Lifecycle of a task `{#lifecycle}`
 When a Toloker starts a task, their workspace is initialized in an iframe. A messaging channel is created between the Toloka head page and the iframe. First, a list of tasks is requested and an [Assignment](/docs/guide/js/assignment) instance is created. Then the received list is passed to the [TaskSuite](/docs/guide/js/tasksuite) class. It creates an instance of the [Task](/docs/guide/js/task) class for each task.
 
 ### Rendering
@@ -50,8 +46,7 @@ Here you can make an additional review of the Toloker's responses.
 
 When the Toloker has finished all tasks on the page or [skipped it](/docs/guide/pool_statistic-pool#skipped-tasks), the [destroy()](/docs/guide/js/tasksuite#destroy) method of the `TaskSuite` class is called. It calls the [destroy()](/docs/guide/js/task#destroy) method of the `Task` class for each task. These methods free up resources and remove the services and event handlers associated with tasks.
 
-## Class inheritance {#inherit}
-
+## Class inheritance `{#inherit}`
 To keep the code from looking heavy, use the following function for class inheritance and redefinition:
 
 ```javascript
@@ -78,9 +73,9 @@ var ChildClass = extend(ParentClass, function() {
 })
 ```
 
-## Data types {#data-spec-adv}
+## Data types `{#data-spec-adv}`
 
-### Task {#obj-task}
+### Task `{#obj-task}`
 
 The `Task` object is the task to perform.
 
@@ -99,7 +94,7 @@ The `Task` object is the task to perform.
 `id` | Task ID.
 `input_values` | <SpecAdvancedTable1/>
 
-### Solution {#obj-solution}
+### Solution `{#obj-solution}`
 
 The `Solution` object is the Toloker's response in the task.
 
@@ -118,7 +113,7 @@ The `Solution` object is the Toloker's response in the task.
 `task_id` | Task ID.
 `output_values` | <SpecAdvancedTable2/>
 
-### SolutionValidationError {#obj-solutionvalidationerror}
+### SolutionValidationError `{#obj-solutionvalidationerror}`
 
 The `SolutionValidationError` object is a validation error for the Toloker's response.
 
@@ -140,7 +135,7 @@ The `SolutionValidationError` object is a validation error for the Toloker's res
 `task_id` | Task ID.
 `errors` | <SpecAdvancedTable3/>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [Task interface](/docs/guide/spec)
 

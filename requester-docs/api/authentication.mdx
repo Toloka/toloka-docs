@@ -1,10 +1,7 @@
 ---
 title: "Event authentication — Toloka API | Toloka documentation"
 date: "2023-05-02T13:35:54.792522"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "apiMenu"
 ---
 
@@ -14,11 +11,11 @@ The Toloka API sends event notifications that may contain sensitive data. It's i
 
 An additional header — **Toloka-Signature** — is used to confirm that the Toloka API is the source of notifications. The header is generated from request parameters. The **HMAC Sha256** hashing algorithm is used for creating the signature.
 
-## Creating a secure subscription {#secure-subscription}
+## Creating a secure subscription `{#secure-subscription}`
 
 When [creating a subscription](https://toloka.ai/docs/api/api-reference/#put-/webhook-subscriptions), add the **secret_key** parameter to the request body. It checks whether incoming requests were sent through the Toloka API. If the parameter was added, the additional **Toloka-Signature** header appears in the event notification.
 
-## Validating the notification sender {#validation}
+## Validating the notification sender `{#validation}`
 
 The **Toloka-Signature** header consists of three fields:
 
@@ -48,7 +45,7 @@ To verify that requests were sent via the Toloka API:
 
 1. Compare the generated signature and the signature from the **Toloka-Signature** header. If they match, the requests were sent using the Toloka API.
 
-## Validation example {#example-validation}
+## Validation example `{#example-validation}`
 
 Let's take a look at a sample event notification sent by the Toloka API:
 

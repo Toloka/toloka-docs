@@ -1,10 +1,7 @@
 ---
 title: "Task distribution intervals — Toloka API | Toloka documentation"
 date: "2023-07-05T16:32:01.377818"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "apiMenu"
 ---
 
@@ -47,7 +44,7 @@ You can change these settings with a `POST` request when you [create a pool](htt
 
 We provide samples for the `POST` request. `PUT` requests look similar, but you must send all the existing pool attributes in the request together with the ones you want to change.
 
-## Smart mixing distribution {#smart-mixing-distribution}
+## Smart mixing distribution `{#smart-mixing-distribution}`
 
 When you use [smart mixing](/docs/guide/distribute-tasks-by-pages#smart-mixing), you can set intervals for the control and training tasks in the pool and distribute these tasks unevenly throughout the pool.
 
@@ -56,7 +53,7 @@ When you use [smart mixing](/docs/guide/distribute-tasks-by-pages#smart-mixing),
   { title: 'Training task distribution intervals', value: <IntervalsList2/> },
 ]}/>
 
-## Selective majority vote check {#selective-mv}
+## Selective majority vote check `{#selective-mv}`
 
 The sample requests below contain the intervals for the general, control, and training tasks which will be [selected for majority vote check](/docs/guide/selective-mvote). The intervals are set according to the scheme above.
 
@@ -66,7 +63,7 @@ The sample requests below contain the intervals for the general, control, and tr
   { title: 'Training task check intervals', value: <IntervalsList5/> },
 ]}/>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [Selective majority vote check](/docs/guide/selective-mvote)
 - [Smart mixing](/docs/guide/distribute-tasks-by-pages#smart-mixing)

@@ -1,10 +1,7 @@
 ---
 title: "Overview — Toloka API | Toloka documentation"
 date: "2023-07-04T17:43:03.033352"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "apiMenu"
 ---
 
@@ -25,7 +22,7 @@ The JSON filter description must not exceed **10,000** characters.
 
 </Note>
 
-## Sample filter in JSON {#request-example}
+## Sample filter in JSON `{#request-example}`
 
 This example selects Tolokers from US or United Kingdom for completing tasks (it uses the region detected from the Toloker's IP address and the country specified in the profile). Users must have a minimum skill level of 60 for the control page results.
 
@@ -60,7 +57,7 @@ This example selects Tolokers from US or United Kingdom for completing tasks (it
 }
 ```
 
-## Parameters {#params}
+## Parameters `{#params}`
 
 <Note mode="note" title="Note">
 
@@ -75,7 +72,7 @@ Parameter | Overview
 `operator` | <FiltersTable2/>
 `value` | _boolean_, _string_, _list of strings_, _integer_ \| **required**<br/><br/>The value of the attribute from the `key` field. For example, the ID of the region specified in the profile, or the minimum skill value. To choose the correct value, see the descriptions of filters in the [Filter by profile data](/docs/api/filter-profile), [Filter by calculated data](/docs/api/filter-computed), [Filter by skills](/docs/api/filter-skill) sections.
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [Filters](/docs/guide/filters)
 - [Toloka-Kit recipe: Filter Tolokers](/docs/toloka-kit/recipes/filter-tolokers/)

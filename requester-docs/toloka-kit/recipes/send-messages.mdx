@@ -1,10 +1,7 @@
 ---
 title: "Send messages — Toloka-Kit | Toloka documentation"
 date: "2023-02-07T15:40:39.843879"
-author: ["Toloka Team"]
 coverId: F_bIcOYF9yjrxkPZrXc3
-tags: ["engineering"]
-ogDescription: ""
 docsMenu: "tkitMenu"
 ---
 
@@ -22,7 +19,7 @@ _Compose and send messages to single or multiple recipients in Toloka._
 
 <Instantiate/>
 
-### 3. Send message to Tolokers {#step-three}
+### 3. Send message to Tolokers `{#step-three}`
 
 Now compose a message for Tolokers. For this, you need the following information:
 
@@ -55,7 +52,7 @@ You also need to select the message recipients. If you choose to send the messag
 />
 
 
-### 4. Display sent message info {#step-four}
+### 4. Display sent message info `{#step-four}`
 
 The `compose_message_thread()` request will return the [MessageThread](/docs/toloka-kit/reference/toloka.client.message_thread.MessageThread) class object. You can use its attributes to print the information you need.
 
@@ -69,7 +66,7 @@ You should get an output with the message ID and topic which looks like this.
 63c15866757a4a1adad1d632 Thank you!
 ```
 
-## Complete code: Send messages {#complete-code}
+## Complete code: Send messages `{#complete-code}`
 
 ```python
 import toloka.client as toloka
@@ -93,7 +90,7 @@ print(message_thread.id, message_thread.topic.get('EN') or list(message_thread.t
 
 </Note>
 
-## See also {#see-also}
+## See also `{#see-also}`
 
 - [How does Toloka work?](/docs/guide/overview)
 - [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
