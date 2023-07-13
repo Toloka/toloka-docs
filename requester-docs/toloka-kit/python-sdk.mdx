@@ -8,52 +8,64 @@ docsMenu: "tkitMenu"
 import GlobalCommunity from '../subcomponents/global-community.mdx'
 import SocialMedia from '../subcomponents/social-media.mdx'
 
-# Toloka Python SDK
+# Toloka Python libraries
 
-Toloka provides access to its open source Python libraries: [Toloka-Kit](/docs/toloka-kit/index) and [Crowd-Kit](/docs/crowd-kit/).
+Toloka provides access to its open source Python libraries: [Toloka-Kit](/docs/toloka-kit/) and [Crowd-Kit](/docs/crowd-kit/).
 
 These powerful software development kits make your work with Toloka much easier and provide various methods for interaction with Toloka API and its integration into your own Python applications.
 
-## [Toloka-Kit](/docs/toloka-kit/)
+<DocsCards
+  cards={[
+    {
+      title: "Toloka-Kit",
+      description: "An open source Python library that allows you to access Toloka API with the help of classes and methods that seamlessly integrate with your Python application.",
+      href: "/docs/toloka-kit/",
+      links: [
+        { title: "Code recipes", href: "/docs/toloka-kit/recipes/" },
+        { title: "Source code on GitHub", href: "https://github.com/Toloka/toloka-kit" },
+        { title: "Integration examples", href: "https://github.com/Toloka/toloka-kit/tree/main/examples" },
+      ],
+    },
+    {
+      title: "Crowd-Kit",
+      description: "An open source Python library that implements commonly-used aggregation methods for crowdsourced annotation and offers relevant metrics and datasets.",
+      href: "/docs/crowd-kit/",
+      links: [
+        { title: "Source code on GitHub", href: "https://github.com/Toloka/crowd-kit" },
+        { title: "Integration examples", href: "https://github.com/Toloka/crowd-kit/tree/main/examples" },
+      ],
+    },
+  ]}
+/>
 
-An open source Python library that allows you to access [Toloka API](https://toloka.ai/docs/api/api-reference/) with the help of classes and methods that seamlessly integrate with your Python application.
-
-<img src="https://yastatic.net/s3/doc-binary/src/support/toloka/en/social/github.svg" alt="View source code on GitHub" />
-
-[Source code on GitHub](https://github.com/Toloka/toloka-kit)
-
-<img src="https://yastatic.net/s3/doc-binary/src/support/toloka/en/social/jupyter.svg" alt="View integration examples" />
-
-[Integration examples](https://github.com/Toloka/toloka-kit/tree/main/examples)
-
-## [Crowd-Kit](/docs/crowd-kit/)
-
-An open source Python library that implements commonly-used aggregation methods for crowdsourced annotation and offers relevant metrics and datasets.
-
-<img src="https://yastatic.net/s3/doc-binary/src/support/toloka/en/social/github.svg" alt="View source code on GitHub" />
-
-[Source code on GitHub](https://github.com/Toloka/crowd-kit)
-
-<img src="https://yastatic.net/s3/doc-binary/src/support/toloka/en/social/jupyter.svg" alt="View integration examples" />
-
-[Integration examples](https://github.com/Toloka/crowd-kit/tree/main/examples)
-
-## Related pages
-
-### Get started with Toloka
-
-- [How does Toloka work?](/docs/guide/overview)
-- [Registration](/docs/guide/access)
-- [Your first project](/docs/guide/first-project)
-
-### API reference
-
-- [Toloka API](https://toloka.ai/docs/api/api-reference/)
-
-### Support
-
-- [Toloka-Kit GitHub issues](https://github.com/Toloka/toloka-kit/issues)
-- [Crowd-Kit GitHub issues](https://github.com/Toloka/crowd-kit/issues)
+<DocsMainCards
+  cards={[
+    {
+      title: "Get started with Toloka",
+      links: [
+        { title: "How does Toloka work?", href: "/docs/guide/overview" },
+        { title: "What tasks can't be placed in Toloka?", href: "/docs/guide/unwanted" },
+        { title: "Registration", href: "/docs/guide/access" },
+        { title: "Your first project", href: "/docs/guide/first-project" },
+        { title: "Data security", href: "/docs/guide/data-security" },
+      ],
+    },
+    {
+      title: "API reference",
+      links: [
+        { title: "Toloka API", href: "https://toloka.ai/docs/api/api-reference/" },
+        { title: "Apps API", href: "https://toloka.ai/docs/api/apps-reference/" },
+      ],
+    },
+    {
+      title: "Support",
+      links: [
+        { title: "Toloka-Kit GitHub issues", href: "https://github.com/Toloka/toloka-kit/issues" },
+        { title: "Crowd-Kit GitHub issues", href: "https://github.com/Toloka/crowd-kit/issues" },
+      ],
+    },
+  ]}
+/>
 
 <GlobalCommunity/>
 
