@@ -1,0 +1,76 @@
+---
+title: "Get list of bans — Toloka-Kit | Toloka documentation"
+date: "2023-07-19T12:33:05.764946"
+coverId: F_bIcOYF9yjrxkPZrXc3
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import GetUserRestrictions from './subcomponents/get_user_restrictions.mdx'
+
+# Get list of bans
+
+_Get the list of all the Toloker bans._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Print ban IDs, Toloker IDs, and creation dates `{#step-three}`
+
+Iterate through all the bans calling the `get_user_restrictions()` method. Specify the scope which was used to restrict the Toloker access:
+
+- `ALL_PROJECTS` includes the Tolokers which have been banned from accessing all your projects.
+
+- `PROJECT` includes the Tolokers which have been banned from accessing a single project. Specify the project ID as an argument: `project_id='120798'`.
+
+- `POOL` includes the Tolokers which have been banned from accessing a single project. Specify the pool ID as an argument: `pool_id='38955320'`.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      for restriction in toloka_client.<Term term="get_user_restrictions"><GetUserRestrictions/></Term>(scope='PROJECT', project_id='120798'):
+      <br/>    print(restriction.id, restriction.user_id, restriction.created)
+    </HighlightChildren>
+  }
+  textToCopy={`for restriction in toloka_client.get_user_restrictions(scope='PROJECT', project_id='120798'):
+    print(restriction.id, restriction.user_id, restriction.created)`}
+/>
+
+You should get an output with the ban IDs, Toloker IDs, and ban creation dates which looks like this.
+
+```bash
+163294518 19025b33f844331a1c2c7ff57ec520b0 2023-07-18 15:31:28.459000+00:00
+163295269 240d5b7897f98c119cd892e34295587e 2023-07-18 15:41:02.992000+00:00
+```
+
+## Complete code: Get list of bans `{#complete-code}`
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('PlaceYourRealOAuthToken_Here', 'PRODUCTION')
+
+for restriction in toloka_client.get_user_restrictions(scope='PROJECT', project_id='120798'):
+    print(restriction.id, restriction.user_id, restriction.created)
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[get_user_restrictions()](/docs/toloka-kit/reference/toloka.client.TolokaClient.get_user_restrictions) method_
+
+</Note>
+
+## See also `{#see-also}`
+
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Ban](/docs/guide/ban)
+- [Toloka API: Get list of bans](https://toloka.ai/docs/api/api-reference/#get-/user-restrictions)
