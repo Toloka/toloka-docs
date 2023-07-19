@@ -1,0 +1,62 @@
+---
+title: "Remove ban from Toloker — Toloka-Kit | Toloka documentation"
+date: "2023-07-19T12:33:06.762479"
+coverId: F_bIcOYF9yjrxkPZrXc3
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import DeleteUserRestriction from './subcomponents/delete_user_restriction.mdx'
+
+# Remove ban from Toloker
+
+_Remove restriction from Tolokers and restore their access to tasks._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Remove ban from Toloker `{#step-three}`
+
+[Find out](/docs/toloka-kit/recipes/get-restrictions#step-three) the ID of the ban. This ID is unique for each Toloker whom you banned on your projects or pools. Use the `delete_user_restriction()` method to remove the skill from the Toloker.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      toloka_client.<Term term="delete_user_restriction"><DeleteUserRestriction/></Term>(user_restriction_id='163293423')
+    </HighlightChildren>
+  }
+  textToCopy={`toloka_client.delete_user_restriction(user_restriction_id='163293423')`}
+/>
+
+If everything goes as expected, the request will return an empty response.
+
+## Complete code: Remove ban from Toloker `{#complete-code}`
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('PlaceYourRealOAuthToken_Here', 'PRODUCTION')
+
+toloka_client.delete_user_restriction(user_restriction_id='163293423')
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[delete_user_restriction()](/docs/toloka-kit/reference/toloka.client.TolokaClient.delete_user_restriction) method_
+
+</Note>
+
+## See also `{#see-also}`
+
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Get list of bans](/docs/toloka-kit/recipes/get-restrictions)
+- [Toloka API: Unblock access](https://toloka.ai/docs/api/api-reference/#delete-/user-restrictions/-id-)

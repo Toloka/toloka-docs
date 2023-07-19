@@ -1,0 +1,181 @@
+---
+title: "Ban Tolokers — Toloka-Kit | Toloka documentation"
+date: "2023-07-19T12:35:55.860230"
+coverId: F_bIcOYF9yjrxkPZrXc3
+docsMenu: "tkitMenu"
+---
+
+import Import from './subcomponents/recipes/import.mdx'
+import Instantiate from './subcomponents/recipes/instantiate.mdx'
+import SetUserRestriction from './subcomponents/set_user_restriction.mdx'
+import PoolUserRestriction from './subcomponents/PoolUserRestriction.mdx'
+import ProjectUserRestriction from './subcomponents/ProjectUserRestriction.mdx'
+import AllProjectsUserRestriction from './subcomponents/AllProjectsUserRestriction.mdx'
+
+# Ban Tolokers
+
+_Restrict the access to tasks for Tolokers._
+
+## Steps to follow
+
+<Import/>
+
+<Instantiate/>
+
+### 3. Restrict access to Toloker `{#step-three}`
+
+#### Restrict access to specific pool
+
+[Find out](/docs/toloka-kit/recipes/get-pools) the ID of the pool to which you want to restrict access for a Toloker. Use the `set_user_restriction()` method with the pool ID as an argument to the `PoolUserRestriction` collector class to restrict access to it to the Toloker with the ID specified in the request.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      pool_restriction = toloka_client.<Term term="set_user_restriction"><SetUserRestriction/></Term>(
+      <br/>    toloka.user_restriction.<Term term="PoolUserRestriction"><PoolUserRestriction/></Term>(
+      <br/>        user_id='1a5d5299e5a1d0a47605f51191e09ffc',
+      <br/>        private_comment='Banning Toloker access to pool',
+      <br/>        pool_id='38955320'
+      <br/>    )
+      <br/>)
+    </HighlightChildren>
+  }
+  textToCopy={`pool_restriction = toloka_client.set_user_restriction(
+    toloka.user_restriction.PoolUserRestriction(
+        user_id='1a5d5299e5a1d0a47605f51191e09ffc',
+        private_comment='Banning Toloker access to pool',
+        pool_id='38955320'
+    )
+)`}
+/>
+
+#### Restrict access to specific project
+
+[Find out](/docs/toloka-kit/recipes/get-projects) the ID of the project to which you want to restrict access for a Toloker. Use the `set_user_restriction()` method with the project ID as an argument to the `ProjectUserRestriction` collector class to restrict access to it to the Toloker with the ID specified in the request.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      project_restriction = toloka_client.<Term term="set_user_restriction"><SetUserRestriction/></Term>(
+      <br/>    toloka.user_restriction.<Term term="ProjectUserRestriction"><ProjectUserRestriction/></Term>(
+      <br/>        user_id='1f66ac40c616b717bbffce2a70dfe1f2',
+      <br/>        private_comment='Banning Toloker access to project',
+      <br/>        project_id='120798'
+      <br/>    )
+      <br/>)
+    </HighlightChildren>
+  }
+  textToCopy={`project_restriction = toloka_client.set_user_restriction(
+    toloka.user_restriction.ProjectUserRestriction(
+        user_id='1f66ac40c616b717bbffce2a70dfe1f2',
+        private_comment='Banning Toloker access to project',
+        project_id='120798'
+    )
+)`}
+/>
+
+#### Restrict access to all projects
+
+Use the `set_user_restriction()` method with the `AllProjectsUserRestriction` collector class to restrict access to all your projects to the Toloker with the ID specified in the request.
+
+<CodeCopy
+  isSmall
+  theme="light"
+  code={
+    <HighlightChildren language="python">
+      all_projects_restriction = toloka_client.<Term term="set_user_restriction"><SetUserRestriction/></Term>(
+      <br/>    toloka.user_restriction.<Term term="AllProjectsUserRestriction"><AllProjectsUserRestriction/></Term>(
+      <br/>        user_id='240d5b7897f98c119cd892e34295587e',
+      <br/>        private_comment='Banning Toloker access to all projects'
+      <br/>    )
+      <br/>)
+    </HighlightChildren>
+  }
+  textToCopy={`all_projects_restriction = toloka_client.set_user_restriction(
+    toloka.user_restriction.AllProjectsUserRestriction(
+        user_id='240d5b7897f98c119cd892e34295587e',
+        private_comment='Banning Toloker access to all projects'
+    )
+)`}
+/>
+
+<Note mode="note" title="Note">
+
+You can specify the `will_expire` argument for all the collector classes above (`PoolUserRestriction`, `ProjectUserRestriction`, or `AllProjectsUserRestriction`). It defines the date when the ban will be removed from the Toloker. If you don't set it, the ban will be permanent.
+
+</Note>
+
+### 4. Print created ban information `{#step-four}`
+
+The `set_user_restriction()` request will return the [UserRestriction](/docs/toloka-kit/reference/toloka.client.user_restriction.UserRestriction) class object. You can use its attributes to print the information you need.
+
+```python
+print(pool_restriction.id, pool_restriction.created)
+print(project_restriction.id, project_restriction.created)
+print(all_projects_restriction.id, all_projects_restriction.created)
+```
+
+You should get an output with the IDs of the bans and the ban creation date and time which looks like this.
+
+```bash
+163294517 2023-07-18 15:31:27.945000+00:00
+163294518 2023-07-18 15:31:28.459000+00:00
+163294519 2023-07-18 15:31:29.992000+00:00
+```
+
+## Complete code: Ban Tolokers `{#complete-code}`
+
+```python
+import toloka.client as toloka
+
+toloka_client = toloka.TolokaClient('PlaceYourRealOAuthToken_Here', 'PRODUCTION')
+
+pool_restriction = toloka_client.set_user_restriction(
+    toloka.user_restriction.PoolUserRestriction(
+        user_id='1a5d5299e5a1d0a47605f51191e09ffc',
+        private_comment='Banning Toloker access to pool',
+        pool_id='38955320'
+    )
+)
+project_restriction = toloka_client.set_user_restriction(
+    toloka.user_restriction.ProjectUserRestriction(
+        user_id='1f66ac40c616b717bbffce2a70dfe1f2',
+        private_comment='Banning Toloker access to project',
+        project_id='120798'
+    )
+)
+all_projects_restriction = toloka_client.set_user_restriction(
+    toloka.user_restriction.AllProjectsUserRestriction(
+        user_id='240d5b7897f98c119cd892e34295587e',
+        private_comment='Banning Toloker access to all projects'
+    )
+)
+print(pool_restriction.id, pool_restriction.created)
+print(project_restriction.id, project_restriction.created)
+print(all_projects_restriction.id, all_projects_restriction.created)
+```
+
+<Note mode="tip" title="List of classes and methods used in this recipe">
+
+- _[TolokaClient](/docs/toloka-kit/reference/toloka.client.TolokaClient) class_
+- _[set_user_restriction()](/docs/toloka-kit/reference/toloka.client.TolokaClient.set_user_restriction) method_
+- _[PoolUserRestriction](/docs/toloka-kit/reference/toloka.client.user_restriction.PoolUserRestriction) class_
+- _[ProjectUserRestriction](/docs/toloka-kit/reference/toloka.client.user_restriction.ProjectUserRestriction) class_
+- _[AllProjectsUserRestriction](/docs/toloka-kit/reference/toloka.client.user_restriction.AllProjectsUserRestriction) class_
+
+</Note>
+
+## See also `{#see-also}`
+
+- [How does Toloka work?](/docs/guide/overview)
+- [Sample project recipe](/docs/toloka-kit/recipes/learn-basics)
+- [More usage examples](/docs/toloka-kit/recipes/use-cases)
+- [Ban](/docs/guide/ban)
+- [Get list of pools](/docs/toloka-kit/recipes/get-pools)
+- [Get list of projects](/docs/toloka-kit/recipes/get-projects)
+- [Toloka-Kit: UserRestriction class](/docs/toloka-kit/reference/toloka.client.user_restriction.UserRestriction)
+- [Toloka API: Block access to tasks](https://toloka.ai/docs/api/api-reference/#put-/user-restrictions)

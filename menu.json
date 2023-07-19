@@ -3152,6 +3152,23 @@
           ]
         },
         {
+          "title": "Banning Tolokers",
+          "subItems": [
+            {
+              "title": "Ban Tolokers",
+              "href": "/docs/toloka-kit/recipes/ban-tolokers"
+            },
+            {
+              "title": "Get list of bans",
+              "href": "/docs/toloka-kit/recipes/get-restrictions"
+            },
+            {
+              "title": "Remove ban from Toloker",
+              "href": "/docs/toloka-kit/recipes/delete-restriction"
+            }
+          ]
+        },
+        {
           "title": "Messages",
           "subItems": [
             {
