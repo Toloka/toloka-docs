@@ -3044,6 +3044,10 @@
                   "href": "/docs/toloka-kit/recipes/filter-tolokers"
                 },
                 {
+                  "title": "Filter Tolokers with confirmed language knowledge",
+                  "href": "/docs/toloka-kit/recipes/filter-tolokers-languages"
+                },
+                {
                   "title": "Use quality control rules",
                   "href": "/docs/toloka-kit/recipes/use-quality-control-rules"
                 }
