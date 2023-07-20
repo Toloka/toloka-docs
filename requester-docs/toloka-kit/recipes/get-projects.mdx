@@ -28,13 +28,15 @@ Iterate through all the projects with the `ACTIVE` status created after October 
   theme="light"
   code={
     <HighlightChildren language="python">
-      for project in toloka_client.<Term term="get_projects"><GetProjects/></Term>(
+      from datetime import datetime
+      <br/>for project in toloka_client.<Term term="get_projects"><GetProjects/></Term>(
       <br/>                  status='ACTIVE',
       <br/>                  created_gte=datetime(2022, 10, 1)):
       <br/>    print(project.id, project.public_name, project.created.date())
     </HighlightChildren>
   }
-  textToCopy={`for project in toloka_client.get_projects(
+  textToCopy={`from datetime import datetime
+for project in toloka_client.get_projects(
                   status='ACTIVE',
                   created_gte=datetime(2022, 10, 1)):
     print(project.id, project.public_name, project.created.date())`}
