@@ -1,6 +1,6 @@
 ---
-title: "Generating API tokens | Toloka documentation"
-date: "2023-06-22T18:26:53.773819"
+title: "Generating API keys | Toloka documentation"
+date: "2023-07-24T11:49:09.426029"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
@@ -9,59 +9,67 @@ import FaqTolokaKitNewToken from '../subcomponents/faq/api/toloka-kit-new-token.
 import FaqJavaSdkNewToken from '../subcomponents/faq/api/java-sdk-new-token.mdx'
 import FaqReissueToken from '../subcomponents/faq/api/reissue-token.mdx'
 
-# Generating API tokens
+# Generating API keys
 
-After you login to the platform using [social authorization](/docs/guide/access#social-auth) or [single sign-on](/docs/guide/sso/authentication) (SSO) authentication method, you can generate new tokens. You can use them for API requests or for the integration applications. The previously generated tokens will continue to work, but will be deprecated with time.
+After you login to the platform using [social authorization](/docs/guide/access#social-auth) or [single sign-on](/docs/guide/sso/authentication) (SSO) authentication method, you can generate new keys.
 
 <Note mode="note" title="Note">
 
-If your company uses SSO authentication method, each SSO user can generate their own tokens.
+We recommend that you generate new keys as the previously generated tokens will be deprecated with time.
 
 </Note>
 
-## Generating tokens
+You can use the generated keys for API requests or for the integration applications.
+
+<Note mode="note" title="Note">
+
+If your company uses SSO authentication method, each SSO user can generate their own keys.
+
+</Note>
+
+## Generating keys
 
 1. Go to [Profile → Integrations](https://platform.toloka.ai/requester/profile/integration). Click **<img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425166901/1675425166901_original_svg.svg" alt="Plus sign" /> Generate token**:
 
-    <Image width="700px" withBackground imageId="1607657d66218b0c6c251dcd523e3057" alt="Generate token" />
+    <Image width="700px" withBackground imageId="1607657d66218b0c6c251dcd523e3057" alt="Generate key" />
 
-1. Enter a unique name or description for the token. Uniqueness is not required, but it will allow you to distinguish this token in case you have several ones. Click **Generate**:
+1. Enter a unique name or description for the key. Uniqueness is not required, but it will allow you to distinguish this key in case you have several ones. Click **Generate**:
 
-    <Image width="700px" withBackground imageId="5ac72a4928a0d17cd416a55460a6522f" alt="Enter token name" />
+    <Image width="700px" withBackground imageId="5ac72a4928a0d17cd416a55460a6522f" alt="Enter key name" />
 
-1. A new token will be generated. Click **Copy and close** to copy the token into the clipboard and close the dialog window:
+1. A new key will be generated. Click **Copy and close** to copy the key into the clipboard and close the dialog window:
 
     <Image width="700px" withBackground imageId="c5e71330b80ad2f81ea629b43959826c" alt="Copy and close" />
 
     <Note mode="warning" title="Warning">
 
-    You will not be able to view or copy the token after you close this window. This is done for security reasons. If you lose it, you will need to delete it and generate a new one.
+    You will not be able to view or copy the key after you close this window. This is done for security reasons. If you lose it, you will need to delete it and generate a new one.
 
     </Note>
 
-1. Your newly generated token will be added to the list of the tokens associated with your account:
+1. Your newly generated key will be added to the list of the keys associated with your account:
 
-    <Image width="700px" withBackground imageId="e12badf3c4c7296d99750b5ba887635a" alt="List of tokens" />
+    <Image width="700px" withBackground imageId="e12badf3c4c7296d99750b5ba887635a" alt="List of keys" />
 
-    Here you can view the details about your generated tokens: their names, first characters, creation date, and usage information.
+    Here you can view the details about your generated keys: their names, first characters, creation date, and usage information.
 
-    Click <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1684947376784/1684947376784_original_svg.svg" alt="Delete button" /> in the token upper-right corner to delete it.
+    Click <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1684947376784/1684947376784_original_svg.svg" alt="Delete button" /> in the key upper-right corner to delete it.
 
 <Note mode="note" title="Note">
 
-You can generate up to **50** tokens.
+You can generate up to **50** keys.
 
 </Note>
 
-## Testing tokens
+## Testing keys
 
-To test the created token, use the following shell command:
+To test the created key, use the following shell command:
 
 ```bash
-curl -X GET 'https://toloka.dev/api/v1/requester' -H 'Authorization: ApiKey PlaceYourRealApiKeyToken_Here'
+curl -X GET 'https://toloka.dev/api/v1/requester' -H 'Authorization: ApiKey PlaceYourRealApiKey_Here'
 ```
 
-Replace the `PlaceYourRealApiKeyToken_Here` substring with the API token that you received and copied at the previous steps.
+Replace the `PlaceYourRealApiKey_Here` substring with the API key that you received and copied at the previous steps.
 
 If you entered a correct value, you will receive a response like this with the `200` status code and basic information about your account:
 
@@ -79,11 +87,11 @@ If you entered a correct value, you will receive a response like this with the `
 }
 ```
 
-Now you can use the created API token to send other API requests: get the list of the existing [projects](https://toloka.ai/docs/api/api-reference/#get-/projects), [pools](https://toloka.ai/docs/api/api-reference/#get-/pools), [upload tasks](https://toloka.ai/docs/api/api-reference/#post-/tasks), and other requests.
+Now you can use the created API key to send other API requests: get the list of the existing [projects](https://toloka.ai/docs/api/api-reference/#get-/projects), [pools](https://toloka.ai/docs/api/api-reference/#get-/pools), [upload tasks](https://toloka.ai/docs/api/api-reference/#post-/tasks), and other requests.
 
 <Note mode="note" title="Note">
 
-The new API tokens work when you send requests to the `toloka.dev` domain and require [Toloka Java SDK](https://github.com/Toloka/toloka-java-sdk/releases) version 0.0.6 or later and [Toloka-Kit](https://github.com/Toloka/toloka-kit/releases) version 1.2.0 or later.
+The new API keys work when you send requests to the `toloka.dev` domain and require [Toloka Java SDK](https://github.com/Toloka/toloka-java-sdk/releases) version 0.0.6 or later and [Toloka-Kit](https://github.com/Toloka/toloka-kit/releases) version 1.2.0 or later.
 
 </Note>
 

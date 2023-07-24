@@ -42,6 +42,10 @@
         {
           "title": "Sandbox",
           "href": "/docs/guide/sandbox"
+        },
+        {
+          "title": "Generating API keys",
+          "href": "/docs/guide/api-token"
         }
       ]
     },
@@ -472,6 +476,10 @@
             {
               "title": "Editing the profile",
               "href": "/docs/guide/edit-profile"
+            },
+            {
+              "title": "Authorization methods",
+              "href": "/docs/guide/authorization-methods"
             },
             {
               "title": "Notifications",
@@ -2958,7 +2966,7 @@
       "href": "/docs/toloka-kit/"
     },
     {
-      "title": "Getting OAuth token",
+      "title": "Getting API key",
       "href": "/docs/toloka-kit/registration"
     },
     {

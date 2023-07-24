@@ -2,15 +2,15 @@ import TolokaClient from '../toloka_client.mdx'
 
 ### 2. Instantiate TolokaClient `{#step-two}`
 
-Replace the sample OAuth token with [your own](/docs/toloka-kit/registration) one.
+Replace the sample API key with [your own](/docs/toloka-kit/registration) one.
 
 <CodeCopy
   isSmall
   theme="light"
   code={
     <HighlightChildren language="python">
-      toloka_client = toloka.<Term term="TolokaClient"><TolokaClient/></Term>('PlaceYourRealOAuthToken_Here', 'PRODUCTION');
+      toloka_client = toloka.<Term term="TolokaClient"><TolokaClient/></Term>('PlaceYourRealApiKey_Here', 'PRODUCTION');
     </HighlightChildren>
   }
-  textToCopy="toloka_client = toloka.TolokaClient('PlaceYourRealOAuthToken_Here', 'PRODUCTION')"
+  textToCopy="toloka_client = toloka.TolokaClient('PlaceYourRealApiKey_Here', 'PRODUCTION')"
 />
