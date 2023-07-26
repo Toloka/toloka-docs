@@ -1,0 +1,42 @@
+---
+title: "Migrating to new social authorization in Toloka sandbox | Toloka documentation"
+date: "2023-07-31T15:33:14.194201"
+coverId: F_bIcOYF9yjrxkPZrXc3
+docsMenu: "defaultMenu"
+---
+
+import ConnectSocialAccount from '../subcomponents/connect-social-account.mdx'
+import ConnectSocialAccountRu from '../subcomponents/connect-social-account-ru.mdx'
+import RegisterSocialAccountIssues from '../subcomponents/register/social-account-issues.mdx'
+import MigrateNewAuthSandboxList1 from './migrate-new-auth-sandbox/subcomponents/migrate-new-auth-sandbox-list-1.mdx'
+import MigrateNewAuthSandboxList2 from './migrate-new-auth-sandbox/subcomponents/migrate-new-auth-sandbox-list-2.mdx'
+import MigrateNewAuthSandboxList3 from './migrate-new-auth-sandbox/subcomponents/migrate-new-auth-sandbox-list-3.mdx'
+import MigrateNewAuthSandboxList4 from './migrate-new-auth-sandbox/subcomponents/migrate-new-auth-sandbox-list-4.mdx'
+
+# Migrating to new social authorization in Toloka sandbox
+
+If you have previously registered in the sandbox using an email address, you need to confirm it or connect another social account to continue using the sandbox. You can connect a single social account or choose to connect them all to your sandbox profile and use any of them to sign in to the sandbox.
+
+## Connecting social accounts `{#connect-account}`
+
+Log in to the sandbox using the [legacy login page](https://sandbox.toloka.yandex.com/). Then follow the steps below to connect a new social account to your sandbox profile.
+
+<Tabs tabs={[
+  { title: 'In the popup window', value: <MigrateNewAuthSandboxList1/> },
+  { title: 'In the settings', value: <MigrateNewAuthSandboxList2/> },
+]}/>
+
+<Cut title="For former Yandex ID clients">
+
+<Tabs tabs={[
+  { title: 'In the popup window', value: <MigrateNewAuthSandboxList3/> },
+  { title: 'In the settings', value: <MigrateNewAuthSandboxList4/> },
+]}/>
+
+</Cut>
+
+Next time you [log in](https://we.sandbox.toloka.ai/auth?role=TOLOKER), use the connected social account to do that.
+
+<RegisterSocialAccountIssues/>
+
+<Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=guide-migrate-new-auth-sandbox">Contact support</Button>

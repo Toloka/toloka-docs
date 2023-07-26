@@ -1,12 +1,13 @@
 ---
 title: "Migrating to new social authorization | Toloka documentation"
-date: "2023-07-24T11:49:12.215849"
+date: "2023-07-31T15:33:20.325088"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
 
 import ConnectSocialAccount from '../subcomponents/connect-social-account.mdx'
 import ConnectSocialAccountRu from '../subcomponents/connect-social-account-ru.mdx'
+import RegisterSocialAccountIssues from '../subcomponents/register/social-account-issues.mdx'
 import RemoveSocialAccount from '../subcomponents/remove-social-account.mdx'
 import MigrateNewAuthList1 from './migrate-new-auth/subcomponents/migrate-new-auth-list-1.mdx'
 import MigrateNewAuthList2 from './migrate-new-auth/subcomponents/migrate-new-auth-list-2.mdx'
@@ -35,13 +36,9 @@ Log in using the **[Use Toloka legacy account](https://passport.toloka.ai/auth?o
 
 </Cut>
 
-Next time you log in, use the connected social account to do that.
+Next time you [log in](https://platform.sandbox.toloka.ai/auth?role=REQUESTER), use the connected social account to do that.
 
-<Note mode="note" title="Note">
-
-Please [contact our support team](/docs/guide/troubleshooting/support?form-source=guide-migrate-new-auth) if you have any issues with social accounts connection.
-
-</Note>
+<RegisterSocialAccountIssues/>
 
 ## Logging in to existing account using social authorization `{#login-old-auth}`
 
@@ -61,7 +58,7 @@ You can switch to the old authorization page using the **Use legacy Toloka accou
 
 ## Updating API keys `{#update-token}`
 
-After you migrate to the new authorization scheme, the existing OAuth keys will continue to work until they expire. After that, you can issue new authentication keys.
+After you migrate to the new authorization scheme, the existing OAuth tokens will continue to work until they expire. After that, you can issue new authentication keys.
 
 New keys have no TTL and don't expire, you don't need to reissue them. One account can have up to 50 new API keys.
 
