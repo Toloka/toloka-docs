@@ -1,6 +1,6 @@
 ---
 title: "Fast responses | Toloka documentation"
-date: "2023-03-02T19:39:03.165095"
+date: "2023-07-26T19:02:04.050362"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
@@ -23,7 +23,7 @@ This rule is necessary to filter out cheating Tolokers who complete tasks too qu
 
 Restrict the pool access for Tolokers who respond too quickly to:
 
-- Restrict access for Tolokers who cheat in their responses. In this case, set the time required to complete a [task suite](/docs/glossary#task-suite) when giving random responses.
+- Restrict access for Tolokers who cheat in their responses. In this case, set the time required to complete a [task suite](/docs/glossary#task-suite) when giving random [task responses](/docs/glossary#task-response).
 
 - Provide anti-robot protection. In this case, set twice as little time for task suite completion.
 
@@ -34,14 +34,16 @@ To estimate the time required to complete a task suite:
 - Look up the **Average assignment submit time** in [pool statistics](/docs/guide/pool_statistic-pool) if the tasks are already running.
 
 ## How to configure `{#rule}`
+
 **Field** | **Overview**
 ----- | -----
 **Recent task suites to use** | The number of recent assignments submitted by the Toloker.<br/><br/>If this field is not filled in, the calculation includes only recent task suites from the pool to which the rule applies.<br/><br/>If the field is filled in, the corresponding number of task suites is used. The rule takes into account the task suites from both this pool and other pools where this field is filled in.<br/><br/>To learn more about how this field works, go to [Parameter "Remember values"](/docs/guide/remember-values).
-**Minimum time per task suite** | The task suite completion time (in seconds). Everything that is completed faster is considered a fast response.
+**Minimum time per task suite** | The task suite completion time (in seconds). Everything that is completed faster is considered a fast [task suite response](/docs/glossary#response).
 **If** | <QuickAnswersTable1/>
 **then** | <QuickAnswersTable2/>
 
 ## Examples `{#examples}`
+
 You noticed that the pool closed too quickly and the final result was unsatisfactory. To prevent this from happening again, you decided to filter out Tolokers who complete tasks too quickly.
 
 Examples are provided for simple [classification](/docs/tutorials/image-classification). There are 10 tasks per suite.
