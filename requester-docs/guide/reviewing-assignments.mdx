@@ -1,6 +1,6 @@
 ---
 title: "Results of manual review | Toloka documentation"
-date: "2023-04-24T09:47:23.306366"
+date: "2023-07-26T19:02:02.664740"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
@@ -29,6 +29,7 @@ If [manual review](/docs/guide/offline-accept) is set in the [pool](/docs/glossa
 To have rejected tasks redistributed to other Tolokers, set up the [Recompletion of rejected assignments](/docs/guide/reassessment-after-accepting) rule.
 
 ## How to configure `{#rule}`
+
 <Note mode="warning" title="Warning">
 
 The **If** and **then** fields in this rule are required. If you don't fill in at least one field, you won't be able to save the rule.
@@ -37,11 +38,12 @@ The **If** and **then** fields in this rule are required. If you don't fill in a
 
 **Field** | **Overview**
 ----- | -----
-**Recent tasks to use** | How many recent responses from the Toloker to use.<br/><br/>If this field is not filled in, the calculation includes only task responses from the pool to which the rule is applied.<br/><br/>If the field is filled in, the corresponding number of responses is used. The rule takes into account responses from both the current pool and other pools where this field is filled in.<br/><br/>[Learn more](/docs/guide/remember-values) about how this field works.
+**Recent tasks to use** | How many recent responses from the Toloker to use.<br/><br/>If this field is not filled in, the calculation includes only responses from the pool to which the rule is applied.<br/><br/>If the field is filled in, the corresponding number of responses is used. The rule takes into account responses from both the current pool and other pools where this field is filled in.<br/><br/>[Learn more](/docs/guide/remember-values) about how this field works.
 **If** | <ReviewingAssignmentsTable1/>
 **then** | <ReviewingAssignmentsTable2/>
 
 ## Examples `{#examples}`
+
 You understand that the Toloker didn't complete your tasks well enough. You can block this Toloker's access to tasks that you're going to do yourself.
 
 You can also assign a skill that you can use to either block access to tasks for Tolokers, or to encourage those who did tasks well.
