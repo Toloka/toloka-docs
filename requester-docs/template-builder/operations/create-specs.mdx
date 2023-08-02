@@ -1,6 +1,6 @@
 ---
 title: "Creating specifications — Template Builder | Toloka documentation"
-date: "2023-02-10T09:15:36.426111"
+date: "2023-08-02T12:06:48.287906"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
@@ -49,7 +49,7 @@ If automatic generation of specifications is enabled, the input data fields are 
 
 <Tabs tabs={[
   { title: 'String', value: <CreateSpecsList3/> },
-  { title: 'true/false', value: <CreateSpecsList4/> },
+  { title: 'Boolean', value: <CreateSpecsList4/> },
   { title: 'Number', value: <CreateSpecsList5/> },
   { title: 'JSON', value: <CreateSpecsList6/> },
   { title: 'Array', value: <CreateSpecsList7/> },
@@ -68,7 +68,7 @@ If automatic generation of specifications is enabled, the output data fields are
 **Examples:**
 
 <Tabs tabs={[
-  { title: 'true/false', value: <CreateSpecsList8/> },
+  { title: 'Boolean', value: <CreateSpecsList8/> },
   { title: 'String', value: <CreateSpecsList9/> },
   { title: 'Number', value: <CreateSpecsList10/> },
   { title: 'JSON', value: <CreateSpecsList11/> },
@@ -118,6 +118,7 @@ There are two ways to edit the specification in project settings: using either r
 </Cut>
 
 ## Recommendations `{#recomendations}`
+
 - If you edit a required field, the changes apply only to new task [pools](/docs/glossary#pool). For example, if you need to fix an error in a project, [clone the pool](/docs/guide/pool-main) or [create a new one](/docs/guide/pool-main). Existing task pools will continue using the previous version of the project.
 
 - In the output, use value validation and don't forget to mark the field as required if a Toloker has to fill it in.
