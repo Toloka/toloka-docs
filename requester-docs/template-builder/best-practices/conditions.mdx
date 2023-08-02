@@ -1,6 +1,6 @@
 ---
 title: "Reviewing assignments automatically — Template Builder | Toloka documentation"
-date: "2023-02-10T09:15:29.211993"
+date: "2023-08-02T12:06:33.706219"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
@@ -12,11 +12,14 @@ Define clear conditions for your task to ensure that you get the desired output.
 In [Toloka](https://toloka.ai/), you can use conditions to automate the manual review process. For example, a Toloker can't submit an assignment before they meet your required conditions.
 
 ## Review features `{#features}`
+
 - What can be reviewed:
+
     - Output data in [fields.*](/docs/template-builder/reference/fields);
     - Input data in [views.*](/docs/template-builder/reference/views) and [layouts.*](/docs/template-builder/reference/layouts).
 
 - Where to specify conditions:
+
     - In the `validation` property of the parent component.
     - In the `condition` property of [plugin.trigger](/docs/template-builder/reference/plugin.trigger).
 
@@ -76,6 +79,7 @@ In this example, a Toloker has to perform at least one of the two actions: to se
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/UGnbki-73xPDHm">View example</Button>
 
 ## Checking conditions for specific components `{#component}`
+
 Some conditions work only with certain [components](/docs/glossary#component). For example, [condition.link-opened](/docs/template-builder/reference/condition.link-opened) works only with `view.link`.
 
 In this example, a Toloker has to click the link in the interface, otherwise the “Submit” button won't work.
@@ -83,6 +87,7 @@ In this example, a Toloker has to click the link in the interface, otherwise the
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/DNok6Tun3ttEpZ">View example</Button>
 
 ## Can't find the desired component? `{#schema}`
+
 In the [list of conditions](/docs/template-builder/reference/conditions), you can see all the available components with the name `conditions.*`. If you can't find the desired component in the list or want to use a preset [configuration](/docs/glossary#configuration), define a review in the [JSON Schema](https://json-schema.org/learn/getting-started-step-by-step.html) format using [condition.schema](/docs/template-builder/reference/condition.schema).
 
 <Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=template-builder-best-practices-conditions">Contact support</Button>
