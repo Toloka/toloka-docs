@@ -7137,19 +7137,19 @@
       ]
     },
     {
-      "title": "Стать самозанятым",
+      "title": "Самозанятые",
       "subItems": [
         {
           "href": "/ru/docs/web/self-employed/about",
-          "title": "Как и зачем"
+          "title": "Как стать"
         },
         {
           "href": "/ru/docs/web/self-employed/send-request",
-          "title": "Подача анкеты"
+          "title": "Заполнение анкеты"
         },
         {
           "href": "/ru/docs/web/self-employed/accept-status",
-          "title": "После обработки анкеты"
+          "title": "Подтверждение статуса"
         },
         {
           "href": "/ru/docs/web/self-employed/pay-taxes",
@@ -7287,19 +7287,19 @@
       ]
     },
     {
-      "title": "Стать самозанятым",
+      "title": "Самозанятые",
       "subItems": [
         {
           "href": "/ru/docs/android/self-employed/about",
-          "title": "Как и зачем"
+          "title": "Как стать"
         },
         {
           "href": "/ru/docs/android/self-employed/send-request",
-          "title": "Подача анкеты"
+          "title": "Заполнение анкеты"
         },
         {
           "href": "/ru/docs/android/self-employed/accept-status",
-          "title": "После обработки анкеты"
+          "title": "Подтверждение статуса"
         },
         {
           "href": "/ru/docs/android/self-employed/pay-taxes",
@@ -7437,19 +7437,19 @@
       ]
     },
     {
-      "title": "Стать самозанятым",
+      "title": "Самозанятые",
       "subItems": [
         {
           "href": "/ru/docs/ios/self-employed/about",
-          "title": "Как и зачем"
+          "title": "Как стать"
         },
         {
           "href": "/ru/docs/ios/self-employed/send-request",
-          "title": "Подача анкеты"
+          "title": "Заполнение анкеты"
         },
         {
           "href": "/ru/docs/ios/self-employed/accept-status",
-          "title": "После обработки анкеты"
+          "title": "Подтверждение статуса"
         },
         {
           "href": "/ru/docs/ios/self-employed/pay-taxes",
