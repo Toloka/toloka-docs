@@ -1,0 +1,14 @@
+To assign a skill to a Toloker using Toloka API, send a `PUT` request with the specified skill values and the ID of the Toloker's skill, assigned to the "skill-Toloker" pair:
+
+```bash
+curl -X PUT 'https://toloka.dev/api/v1/user-skills' \
+     -H 'Authorization: ApiKey PlaceYourRealApiKey_Here' \
+     -H 'Content-Type: application/json' \
+     -d '{"skill_id":"11051","user_id":"1ad097faba0eff85a04fe30bc04d53db","value":50}'
+```
+
+<Note mode="tip" title="Visit Toloka API reference">
+
+Refer to the [Set skill](https://toloka.ai/docs/api/api-reference/#put-/user-skills) section of the Toloka API documentation for more details about the request, its parameters, and possible responses. You will find examples of the requests for [Toloka-Kit](/docs/toloka-kit/) and other code samples there.
+
+</Note>

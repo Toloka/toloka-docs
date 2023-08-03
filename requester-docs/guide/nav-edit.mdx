@@ -1,14 +1,15 @@
 ---
 title: "Editing a skill | Toloka documentation"
-date: "2023-02-15T15:15:21.749778"
+date: "2023-08-03T12:45:00.376412"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
 
-import SelectTolokers from '../subcomponents/select-tolokers.mdx'
 import FaqSkillForEveryPool from '../subcomponents/faq/pool-setup/skill-for-every-pool.mdx'
 import FaqSkillForDifferentProjects from '../subcomponents/faq/pool-setup/skill-for-different-projects.mdx'
 import TroubleshootingTraining from '../subcomponents/troubleshooting/users/training.mdx'
+import NavEditList1 from './nav-edit/subcomponents/nav-edit-list-1.mdx'
+import NavEditList2 from './nav-edit/subcomponents/nav-edit-list-2.mdx'
 
 # Editing a skill
 
@@ -16,17 +17,10 @@ You can both edit the skill itself and change the skill values for a specific To
 
 ## Changing the skill value for a Toloker `{#value-edit}`
 
-1. Go to the [Tolokers](https://platform.toloka.ai/requester/workers) page.
-
-1. Select the Tolokers to change the skill value for.
-
-   <SelectTolokers/>
-
-1. Hover over the skill line and click <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425172884/1675425172884_original_svg.svg" alt="" />.
-
-1. Enter the new skill value.
-
-1. Click **Save**.
+<Tabs tabs={[
+  { title: 'In the interface', value: <NavEditList1/> },
+  { title: 'Via Toloka API', value: <NavEditList2/> },
+]}/>
 
 ## Editing the skill parameters `{#reward-edit}`
 

@@ -1,6 +1,6 @@
 ---
 title: "Adding a training | Toloka documentation"
-date: "2023-02-15T15:15:17.885489"
+date: "2023-08-03T12:44:54.373946"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
@@ -28,6 +28,10 @@ import FaqExamMainPool from '../subcomponents/faq/adding-tasks-to-the-pool/exam-
 import FaqRetry from '../subcomponents/faq/adding-tasks-to-the-pool/retry.mdx'
 import FaqExamPreset from '../subcomponents/faq/adding-tasks-to-the-pool/exam-preset.mdx'
 import FaqTrainingWithExam from '../subcomponents/faq/adding-tasks-to-the-pool/training-with-exam.mdx'
+import TrainList1 from './train/subcomponents/train-list-1.mdx'
+import TrainList2 from './train/subcomponents/train-list-2.mdx'
+import TrainList3 from './train/subcomponents/train-list-3.mdx'
+import TrainList4 from './train/subcomponents/train-list-4.mdx'
 
 # Adding a training
 
@@ -73,17 +77,10 @@ If the training pool functionality doesn't meet your needs, create a main pool a
 
 ## How do I create a training pool? `{#create-train}`
 
-1. Open the [project](/docs/glossary#project) page.
-
-1. Go to the **Training** tab.
-
-1. Click the **Add training** button.
-
-1. Fill in the [training settings](/docs/guide/train) fields.
-
-    You can use the **Retry after** field to set up [repeated training](/docs/guide/train).
-
-1. Click **Save training**.
+<Tabs tabs={[
+  { title: 'In the interface', value: <TrainList1/> },
+  { title: 'Via Toloka API', value: <TrainList2/> },
+]}/>
 
 ## After you created a training pool `{#after-creating}`
 
@@ -104,6 +101,7 @@ If the training pool functionality doesn't meet your needs, create a main pool a
     - **Level required** — Percentage of correct responses in training tasks (from 5 to 100) required to be admitted to the main pool. The calculation is based on the first response the Toloker gave in each task.
 
 ## Training settings `{#parameters}`
+
 **Field** | **Overview**
 ----- | -----
 **Guidelines** | [Instructions](/docs/glossary#instructions) for the training tasks.<br/><br/>By default, the [project instructions](/docs/guide/instruction) are displayed. To write separate instructions for training, deselect the **Use project instructions** box.
@@ -198,11 +196,15 @@ By default, archived training pools are not visible in the list of project train
 
 The training pool is automatically archived if no action is performed in it for 30 days.
 
-To archive a training pool manually, click **<img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425165980/1675425165980_original_svg.svg" alt="Drop-down button" /> → Archive** at the top of the pool page or <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425183285/1675425183285_original_svg.svg" alt="" /> in the list of training options on the project page.
+To archive a training pool manually:
 
-If these buttons don't work, make sure that all the main pools that the training pool is linked to are [sent to the archive](/docs/guide/pool-archive).
+<Tabs tabs={[
+  { title: 'In the interface', value: <TrainList3/> },
+  { title: 'Via Toloka API', value: <TrainList4/> },
+]}/>
 
 ## What's next `{#what_next}`
+
 - [Top up your account](/docs/guide/refill).
 - [Start the pool](/docs/guide/pool-run-and-stop).
 - To view the training statistics, go to the [Skills](https://platform.toloka.ai/requester/quality) page and choose a skill named `<project name> - training`.

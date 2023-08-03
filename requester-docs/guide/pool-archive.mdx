@@ -1,6 +1,6 @@
 ---
 title: "Archiving a pool | Toloka documentation"
-date: "2023-03-24T16:16:28.062873"
+date: "2023-08-03T12:45:05.981507"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
@@ -10,6 +10,8 @@ import FaqPoolStorageTime from '../subcomponents/faq/pool-n-project-archive/pool
 import FaqWhereClosedPool from '../subcomponents/faq/pool-n-project-archive/where-closed-pool.mdx'
 import FaqPoolArchivingParameters from '../subcomponents/faq/pool-n-project-archive/pool-archiving-parameters.mdx'
 import FaqAcceptTasksFromArchivedPool from '../subcomponents/faq/pool-n-project-archive/accept-tasks-from-archived-pool.mdx'
+import PoolArchiveList1 from './pool-archive/subcomponents/pool-archive-list-1.mdx'
+import PoolArchiveList2 from './pool-archive/subcomponents/pool-archive-list-2.mdx'
 
 # Archiving a pool
 
@@ -23,13 +25,10 @@ By default, archived pools are not visible in the list of [project](/docs/glossa
 
 ## Manual archiving `{#manual-archiving}`
 
-To archive a pool, click **<img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425165980/1675425165980_original_svg.svg" alt="Drop-down button" /> → Archive** at the top of the pool page, or <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425183285/1675425183285_original_svg.svg" alt="" /> in the list of pools on the project page.
-
-<Note mode="note" title="Note">
-
-To [archive the training pool](/docs/guide/train), first archive all the main pools to which it is linked.
-
-</Note>
+<Tabs tabs={[
+  { title: 'In the interface', value: <PoolArchiveList1/> },
+  { title: 'Via Toloka API', value: <PoolArchiveList2/> },
+]}/>
 
 ## Automatic archiving `{#automatic-archiving}`
 

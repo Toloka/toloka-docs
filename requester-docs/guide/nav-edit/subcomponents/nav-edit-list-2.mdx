@@ -1,0 +1,14 @@
+To edit a skill using Toloka API, send a `PUT` request with all the skill parameters including the ones you want to modify:
+
+```bash
+curl -X PUT 'https://toloka.dev/api/v1/skills/11294' \
+     -H 'Authorization: ApiKey PlaceYourRealApiKey_Here' \
+     -H 'Content-Type: application/json' \
+     -d '{"name":"Programmer","public_name":{"EN":"Programmer"},"public_requester_description":{"EN":"You are an expert in programming languages"},"private_comment":"Got at least 5 right responses on control tasks with C++ or Python","hidden":true,"deprecated":false}'
+```
+
+<Note mode="tip" title="Visit Toloka API reference">
+
+Refer to the [Edit skill](https://toloka.ai/docs/api/api-reference/#put-/skills/-id-) section of the Toloka API documentation for more details about the request, its parameters, and possible responses. You will find examples of the requests for [Toloka-Kit](/docs/toloka-kit/) and other code samples there.
+
+</Note>

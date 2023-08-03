@@ -1,14 +1,23 @@
-To aggregate responses to all completed tasks in the pool using Toloka API, send a `POST` request with the parameters of aggregation:
+You can run aggregation by skill if the pool meets the following requirements:
 
-```bash
-curl -X POST 'https://toloka.dev/api/v1/aggregated-solutions/aggregate-by-pool' \
-     -H 'Authorization: ApiKey PlaceYourRealApiKey_Here' \
-     -H 'Content-Type: application/json' \
-     -d '{"pool_id":"1238218", "type":"WEIGHTED_DYNAMIC_OVERLAP", "answer_weight_skill_id":"91dbfd8f1bc3310fbbbd09f64b8ab6e5", "fields":[{"name":"result"}]}'
-```
+1. You set a skill that defines the level of confidence in the Toloker's responses. We recommend to use a skill calculated as the percentage of [correct responses in control tasks](/docs/guide/goldenset).
 
-<Note mode="tip" title="Visit Toloka API reference">
+1. The [output data fields](/docs/guide/incoming) have allowed values.
 
-Refer to the [Aggregate responses in pool](https://toloka.ai/docs/api/api-reference/#post-/aggregated-solutions/aggregate-by-pool) section of the Toloka API documentation for more details about the request, its parameters, and possible responses. You will find examples of the requests for [Toloka-Kit](/docs/toloka-kit/) and other code samples there.
+    <Cut title="Output data fields that can be aggregated:">
 
-</Note>
+    - Strings and numbers with allowed values.
+
+        The allowed value must match the `value` parameter in the corresponding interface element.
+
+    - Boolean.
+
+    - Integers with minimum and maximum values. The maximum difference between them is 32.
+
+    If there are too many possible responses in the output field, the dynamic overlap mechanism won't be able to aggregate the data.
+
+    The allowed value must match the `value` parameter in the corresponding interface element.
+
+    </Cut>
+
+1. The tasks were uploaded in the pool with [“smart mixing”](/docs/guide/distribute-tasks-by-pages#smart-mixing).

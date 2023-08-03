@@ -1,18 +1,33 @@
-1. Download the template and replace the sample data in it with [your own data](/docs/guide/pool_csv).
+import TaskUploadList3 from './task_upload-list-3.mdx'
+import MediaFiles from '../../../subcomponents/toloka-requester-source/id-toloka-requester-source/media-files.mdx'
 
-1. Click **Select prepared dataset** and choose your [file with tasks](/docs/glossary#tsv).
+To upload [file with tasks](/docs/glossary#tsv) to a [pool](/docs/guide/pool-main):
 
-<Cut title="Use sample data">
+1. Go to the **Prepare and upload data** step if you're creating a pool or click the **Upload** button on the pool page.
 
-If you want to see what your project will look like after the launch, but you don't have any labeling tasks yet, you can upload ready-made sample data to the pool. Sample data is available for the templates:
+1. Attach a prepared dataset or media files.
 
-- **Image classification**
-- **Product search relevance**
-- **Object recognition & detection**
-- **Clickbait or not?**
+    <TaskUploadList3/>
 
-Click **Use sample data** next to **Attach the prepared file with data**. This lets you avoid any additional actions with files.
 
-Once you've finished working with the sample data and everything looks good, prepare your data and upload it to the pool.
+    {/* <Tabs tabs={[
+      { title: 'A prepared dataset', value: <TaskUploadList3/> },
+      { title: 'Media files', value: <MediaFiles/> },
+    ]}/> */}
 
-</Cut>
+
+1. Click **Continue**.
+
+1. Choose a way to put tasks into suites and specify the number of tasks per suite. For more information, see [Ways to group tasks in suites](/docs/guide/distribute-tasks-by-pages).
+
+1. Click **Combine tasks into suites**.
+
+1. Wait for the result.
+
+To delete all the tasks in the pool, click **Delete**.
+
+<Note mode="restriction" title="Restriction">
+
+You can add up to one million tasks to the pool. To upload more tasks, create another pool.
+
+</Note>

@@ -1,23 +1,4 @@
-You can run aggregation by skill if the pool meets the following requirements:
-
-1. You set a skill that defines the level of confidence in the Toloker's responses. We recommend to use a skill calculated as the percentage of [correct responses in control tasks](/docs/guide/goldenset).
-
-1. The [output data fields](/docs/guide/incoming) have allowed values.
-
-<Cut title="Output data fields that can be aggregated:">
-
-- Strings and numbers with allowed values.
-
-    The allowed value must match the `value` parameter in the corresponding interface element.
-
-- Boolean.
-
-- Integers with minimum and maximum values. The maximum difference between them is 32.
-
-If there are too many possible responses in the output field, the dynamic overlap mechanism won't be able to aggregate the data.
-
-The allowed value must match the `value` parameter in the corresponding interface element.
-
-</Cut>
-
-1. The tasks were uploaded in the pool with [“smart mixing”](/docs/guide/distribute-tasks-by-pages#smart-mixing).
+- Array.
+- File.
+- Coordinates.
+- JSON object.
