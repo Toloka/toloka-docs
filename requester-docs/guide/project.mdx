@@ -1,6 +1,6 @@
 ---
 title: "Creating a project | Toloka documentation"
-date: "2023-07-05T11:19:23.811028"
+date: "2023-08-03T12:45:02.808299"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
@@ -99,9 +99,25 @@ To create a project in the interface:
 
 After creating the project, add a [task pool](/docs/guide/pool-main) to it. You can also set up [quality control](/docs/guide/control) in the project.
 
+<Note mode="tip" title="How to work via Toloka API">
+
+To create a project using Toloka API, send a `POST` request with the information about the project:
+
+```bash
+curl -X POST 'https://toloka.dev/api/v1/projects' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: ApiKey PlaceYourRealApiKey_Here' \
+     -d '{"public_name":"Elephant color","public_description":"What color is the elephant in the picture?","public_instructions":"<p>Look at the picture and decide what color the elephant is.</p> You can zoom in or out using the buttons:</p> <img src=\"disc/img1.png>\"","private_comment":"My first project","task_spec":{"input_spec":{"image":{"type":"URL","required":true,"hidden":false}},"output_spec":{"result":{"type":"string","required":true,"hidden":false}},"view_spec":{"assets":{"script_urls":["library1.js","library2.js"]},"markup":"<task interface code>","script":"<JavaScript code>","styles":"<CSS code>","settings":{"showSkip":true,"showTimer":true,"showTitle":true,"showSubmit":true,"showFullscreen":true,"showInstructions":true,"showFinish":true,"showMessage":true,"showReward":true}}},"assignments_issuing_type":"AUTOMATED","assignments_automerge_enabled":false,"max_active_assignments_count":15,"quality_control":{"configs":[{"collector_config":{"type":"SKIPPED_IN_ROW_ASSIGNMENTS"},"rules":[{"conditions":[{"key":"skipped_in_row_count","operator":"GTE","value":10}],"action":{"type":"REJECT_ALL_ASSIGNMENTS","parameters":{"public_comment":"Skipped more than 10 task suites in a row"}}}]}]},"localization_config":{"default_language":"EN"}}'
+```
+
+Refer to the [Create project](https://toloka.ai/docs/api/api-reference/#post-/projects) section of the Toloka API documentation for more details about the request, its parameters, and possible responses. You will find examples of the requests for [Toloka-Kit](/docs/toloka-kit/) and other code samples there.
+
+</Note>
+
 <ProjectModeration/>
 
 ## How to clone a project `{#clone}`
+
 You can view the list of created projects on the **Projects** page. Open the project page to view the list of pools, [project rating](/docs/guide/project_rating_stat), and [project statistics](/docs/guide/project-statistic).
 
 To clone a project, click <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425192399/1675425192399_original_svg.svg" alt="" /> in the list of projects or select **Project actions → Clone** on the project page.
@@ -119,6 +135,7 @@ If you need to change the project settings, [open edit mode](/docs/guide/edit-pr
 <TolokaRequesterSourcePinProject/>
 
 ## What's next `{#what_next}`
+
 - [Create a task pool](/docs/guide/pool-main) in the project.
 - Learn more about how to set up a project:
 

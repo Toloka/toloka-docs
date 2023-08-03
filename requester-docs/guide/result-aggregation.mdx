@@ -1,6 +1,6 @@
 ---
 title: "Aggregation of results | Toloka documentation"
-date: "2023-02-15T15:15:20.639981"
+date: "2023-08-03T12:44:58.969344"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
@@ -31,8 +31,8 @@ If you run the [pool](/docs/glossary#pool) with the manual review, make sure tha
 </Note>
 
 <Tabs tabs={[
-  { title: 'In the interface', value: <ResultAggregationList5/> },
-  { title: 'Via Toloka API', value: <ResultAggregationList6/> },
+  { title: 'In the interface', value: <ResultAggregationList1/> },
+  { title: 'Via Toloka API', value: <ResultAggregationList2/> },
 ]}/>
 
 ## Dawid-Skene aggregation model `{#dawid-skene}`
@@ -98,8 +98,8 @@ Aggregation only includes accepted tasks.
 The main requirement for this aggregation is the output data fields:
 
 <Tabs tabs={[
-  { title: 'Fields that can be aggregated', value: <ResultAggregationList1/> },
-  { title: 'Fields that can\'t be aggregated', value: <ResultAggregationList2/> },
+  { title: 'Fields that can be aggregated', value: <ResultAggregationList3/> },
+  { title: 'Fields that can\'t be aggregated', value: <ResultAggregationList4/> },
 ]}/>
 
 ### How do I check it?
@@ -143,41 +143,41 @@ Terms:
 - <Formula withoutContainer={true} content="$z[j]$"/>is the most popular response.
 - <Formula withoutContainer={true} content="$z[x] estimate,$"/>— the probability that the estimate is correct
 
-A Toloker's accuracy<Formula withoutContainer={true} content="$q[i]$"/>is calculated as follows:
+A Toloker's accuracy <Formula withoutContainer={true} content="$q[i]$"/> is calculated as follows:
 
 <Formula withoutContainer={true} content="$q[i] = \frac{K+correct.golden.sets[i]}{2×K+total.golden.sets[i]}$"/>,
 
 where:
 
-<Formula withoutContainer={true} content="$K$"/>is a smoothing constant (starting from 0.5) if there are not enough responses to control tasks.
+- <Formula withoutContainer={true} content="$K$"/> is a smoothing constant (starting from 0.5) if there are not enough responses to control tasks.
 
-If there are several estimates, the most popular response is determined by adding together<Formula withoutContainer={true} content="$q[i]$"/>of the Tolokers who selected each response option. The response with the largest total is considered more correct. Let's call this estimate<Formula withoutContainer={true} content="$z[j]$"/>.
+If there are several estimates, the most popular response is determined by adding together <Formula withoutContainer={true} content="$q[i]$"/> of the Tolokers who selected each response option. The response with the largest total is considered more correct. Let's call this estimate <Formula withoutContainer={true} content="$z[j]$"/>.
 
-[Using Bayes' theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem), we calculate the posterior probability that the estimate<Formula withoutContainer={true} content="$z[j]$"/>is correct.
+[Using Bayes' theorem](https://en.wikipedia.org/wiki/Bayes%27_theorem), we calculate the posterior probability that the estimate <Formula withoutContainer={true} content="$z[j]$"/> is correct.
 
-A uniform distribution of estimates is assumed a priori. For the<Formula withoutContainer={true} content="$z[x] estimate,$"/>the a priori probability is calculated as
+A uniform distribution of estimates is assumed a priori. For the <Formula withoutContainer={true} content="$z[x] estimate,$"/> the a priori probability is calculated as
 
 <Formula withoutContainer={true} content="$P(z[x]) = \frac{1}{Y}$"/>,
 
 where:
 
-<Formula withoutContainer={true} content="$Y$"/>is the number of response options.
+- <Formula withoutContainer={true} content="$Y$"/> is the number of response options.
 
-Next, we calculate the probability that the estimate<Formula withoutContainer={true} content="$z[j]$"/>is correct.
+Next, we calculate the probability that the estimate <Formula withoutContainer={true} content="$z[j]$"/> is correct.
 
-If the Toloker responded<Formula withoutContainer={true} content="$z[j]$"/>, then the probability of this is equal to the Toloker's accuracy<Formula withoutContainer={true} content="$q[i]$"/>. If they responded differently, then the probability of this is:
+If the Toloker responded <Formula withoutContainer={true} content="$z[j]$"/>, then the probability of this is equal to the Toloker's accuracy <Formula withoutContainer={true} content="$q[i]$"/>. If they responded differently, then the probability of this is:
 
 <Formula withoutContainer={true} content="$\frac{1-q[i]}{Y-1}$"/>,
 
 where:
 
-- <Formula withoutContainer={true} content="$(1 - q[i])$"/>is the remaining probability.
+- <Formula withoutContainer={true} content="$(1 - q[i])$"/> is the remaining probability.
 
-- <Formula withoutContainer={true} content="$(Y - 1)$"/>is the number of remaining responses.
+- <Formula withoutContainer={true} content="$(Y - 1)$"/> is the number of remaining responses.
 
 It ensures that the probability of an error is distributed evenly among the remaining estimates.
 
-We take all Tolokers' responses and, for example, option<Formula withoutContainer={true} content="$z[x] estimate,$"/>and calculate the probability that Tolokers will select this response, provided that the correct response is<Formula withoutContainer={true} content="$z[x] estimate,$"/>:
+We take all Tolokers' responses and, for example, option <Formula withoutContainer={true} content="$z[x] estimate,$"/> and calculate the probability that Tolokers will select this response, provided that the correct response is <Formula withoutContainer={true} content="$z[x] estimate,$"/>:
 
 ```javascript
 func z_prob(x int) : float {
@@ -191,7 +191,7 @@ func z_prob(x int) : float {
 }
 ```
 
-Next, using Bayes' theorem, we calculate the probability that the response<Formula withoutContainer={true} content="$z[j]$"/>is correct:
+Next, using Bayes' theorem, we calculate the probability that the response <Formula withoutContainer={true} content="$z[j]$"/> is correct:
 
 ```javascript
 r = 0
@@ -212,8 +212,8 @@ Aggregation only includes accepted tasks.
 ### Requirements
 
 <Tabs tabs={[
-  { title: 'Pool with dynamic overlap', value: <ResultAggregationList3/> },
-  { title: 'Pools without dynamic overlap', value: <ResultAggregationList4/> },
+  { title: 'Pool with dynamic overlap', value: <ResultAggregationList5/> },
+  { title: 'Pools without dynamic overlap', value: <ResultAggregationList6/> },
 ]}/>
 
 ## For developers `{#for-developers}`

@@ -1,11 +1,11 @@
 ---
 title: "How to upload tasks | Toloka documentation"
-date: "2023-02-15T15:15:21.679694"
+date: "2023-08-03T12:45:00.279332"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
 
-import MediaFiles from '../subcomponents/toloka-requester-source/id-toloka-requester-source/media-files.mdx'
+import TroubleshootingUploadingTasksErrors from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/uploading-tasks-errors.mdx'
 import TroubleshootingMarkedAsTraining from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/marked-as-training.mdx'
 import TroubleshootingPhotosSplitAcrossPages from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/photos-split-across-pages.mdx'
 import TroubleshootingUploadingTooLong from '../subcomponents/troubleshooting/adding-tasks-to-the-pool/uploading-too-long.mdx'
@@ -16,43 +16,19 @@ import FaqRightTimeLimit from '../subcomponents/faq/adding-tasks-to-the-pool/rig
 import FaqMaxNumberPerSuite from '../subcomponents/faq/adding-tasks-to-the-pool/max-number-per-suite.mdx'
 import FaqTaskSuiteDifference from '../subcomponents/faq/adding-tasks-to-the-pool/task-suite-difference.mdx'
 import TaskUploadList1 from './task_upload/subcomponents/task_upload-list-1.mdx'
+import TaskUploadList2 from './task_upload/subcomponents/task_upload-list-2.mdx'
 import TaskUploadTable1 from './task_upload/subcomponents/task_upload-table-1.mdx'
 import TaskUploadTable2 from './task_upload/subcomponents/task_upload-table-2.mdx'
 
 # How to upload tasks
 
-To upload [file with tasks](/docs/glossary#tsv) to a [pool](/docs/guide/pool-main):
-
-1. Go to the **Prepare and upload data** step if you're creating a pool or click the **Upload** button on the pool page.
-
-1. Attach a prepared dataset or media files.
-
-    <TaskUploadList1/>
-
-
-    {/* <Tabs tabs={[
-      { title: 'A prepared dataset', value: <TaskUploadList1/> },
-      { title: 'Media files', value: <MediaFiles/> },
-    ]}/> */}
-
-
-1. Click **Continue**.
-
-1. Choose a way to put tasks into suites and specify the number of tasks per suite. For more information, see [Ways to group tasks in suites](/docs/guide/distribute-tasks-by-pages).
-
-1. Click **Combine tasks into suites**.
-
-1. Wait for the result.
-
-To delete all the tasks in the pool, click **Delete**.
-
-<Note mode="restriction" title="Restriction">
-
-You can add up to one million tasks to the pool. To upload more tasks, create another pool.
-
-</Note>
+<Tabs tabs={[
+  { title: 'In the interface', value: <TaskUploadList1/> },
+  { title: 'Via Toloka API', value: <TaskUploadList2/> },
+]}/>
 
 ## Tips and recommendations `{#tips}`
+
 - Set the number of tasks per suite depending on the complexity and time allocated for a task.
 
     We recommend that you distribute them so that each task suite takes no more than five minutes to complete.
@@ -119,6 +95,7 @@ To work with a large log conveniently, copy it to the text editor.
 </Cut>
 
 ## What's next `{#what_next}`
+
 - Learn more about [ways to group tasks in suites](/docs/guide/distribute-tasks-by-pages).
 
 - Check the project settings and tasks with the help of [special labeling mode](/docs/guide/self-labeling) before you send them to real Tolokers.
@@ -139,6 +116,8 @@ To work with a large log conveniently, copy it to the text editor.
 - [Toloka-Kit recipe: Upload tasks](/docs/toloka-kit/recipes/upload-tasks)
 
 ## Troubleshooting `{#troubleshooting}`
+
+<TroubleshootingUploadingTasksErrors/>
 
 <TroubleshootingMarkedAsTraining/>
 

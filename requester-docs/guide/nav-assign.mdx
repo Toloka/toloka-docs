@@ -1,21 +1,23 @@
 ---
 title: "Assigning the skill | Toloka documentation"
-date: "2023-02-15T15:15:15.563921"
+date: "2023-08-03T12:44:49.925578"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
 
-import SelectTolokers from '../subcomponents/select-tolokers.mdx'
 import FaqSkillForEveryPool from '../subcomponents/faq/pool-setup/skill-for-every-pool.mdx'
 import FaqSkillForDifferentProjects from '../subcomponents/faq/pool-setup/skill-for-different-projects.mdx'
 import TroubleshootingTraining from '../subcomponents/troubleshooting/users/training.mdx'
 import NavAssignCut1 from './nav-assign/subcomponents/nav-assign-cut-1.mdx'
+import NavAssignList1 from './nav-assign/subcomponents/nav-assign-list-1.mdx'
+import NavAssignList2 from './nav-assign/subcomponents/nav-assign-list-2.mdx'
 
 # Assigning the skill
 
 You can assign a skill to Tolokers either manually or automatically: using quality control rules or after training.
 
 ## Using quality control rules `{#rules}`
+
 The quality control rules feature the following actions:
 
 - **Assign skill value** — Set a fixed skill value. This option is available in most [quality control rules](/docs/guide/control).
@@ -29,22 +31,17 @@ The quality control rules feature the following actions:
     <NavAssignCut1/>
 
 ## After passing the training `{#training}`
+
 After a Toloker passes a [training](/docs/glossary#training-pool) they are automatically assigned a [training skill](/docs/glossary#training-skill) with the percentage of correct answers.
 
 You don't need to create this skill, it is created when you add the first training pool. If a training has the **Retry after** setting on, the skill is also deleted automatically. [Learn more](/docs/guide/train).
 
 ## Manually `{#manual}`
-1. Go to the [Tolokers](https://platform.toloka.ai/requester/workers) page.
 
-1. Select the Tolokers to assign the skill to.
-
-   <SelectTolokers/>
-
-1. Click **+Skill**.
-
-1. Choose a skill and specify the skill value. If there is no skill, create it.
-
-1. Click **Save**.
+<Tabs tabs={[
+  { title: 'In the interface', value: <NavAssignList1/> },
+  { title: 'Via Toloka API', value: <NavAssignList2/> },
+]}/>
 
 ## What's next `{#what-next}`
 

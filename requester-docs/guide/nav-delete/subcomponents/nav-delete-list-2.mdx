@@ -1,0 +1,12 @@
+To remove a skill from a Toloker using Toloka API, send a `DELETE` request with the specified ID of the skill you want to remove that is assigned to the "skill-Toloker" pair:
+
+```bash
+curl -X DELETE 'https://toloka.dev/api/v1/user-skills/54116339' \
+     -H 'Authorization: ApiKey PlaceYourRealApiKey_Here'
+```
+
+<Note mode="tip" title="Visit Toloka API reference">
+
+Refer to the [Remove skill from Toloker](https://toloka.ai/docs/api/api-reference/#delete-/user-skills/-id-) section of the Toloka API documentation for more details about the request, its parameters, and possible responses. You will find examples of the requests for [Toloka-Kit](/docs/toloka-kit/) and other code samples there.
+
+</Note>

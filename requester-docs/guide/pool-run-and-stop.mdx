@@ -1,6 +1,6 @@
 ---
 title: "Starting and stopping a task pool | Toloka documentation"
-date: "2023-02-15T15:15:23.547186"
+date: "2023-08-03T12:45:03.204999"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
@@ -11,28 +11,18 @@ import TroubleshootingCantCompleteTasks from '../subcomponents/troubleshooting/p
 import FaqOverlap from '../subcomponents/faq/pool-setup/overlap.mdx'
 import FaqChangeOverlap from '../subcomponents/faq/pool-setup/change-overlap.mdx'
 import FaqDynamicOverlap from '../subcomponents/faq/pool-setup/dynamic-overlap.mdx'
+import PoolRunAndStopList1 from './pool-run-and-stop/subcomponents/pool-run-and-stop-list-1.mdx'
+import PoolRunAndStopList2 from './pool-run-and-stop/subcomponents/pool-run-and-stop-list-2.mdx'
 
 # Starting and stopping a task pool
 
-You can start a [pool](/docs/glossary#pool) if:
-
-1. You uploaded tasks into it.
-
-1. You have enough money in [your account](/docs/guide/budget) to pay for the pool tasks, including the [overlap](/docs/glossary#overlap).
-
-To start the pool, click <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425184616/1675425184616_original_svg.svg" alt="" /> on the pool page or <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425177251/1675425177251_original_svg.svg" alt="" /> in the list of pools on the [project](/docs/glossary#project) page.
-
-A started pool has the **Labeling** status. When all pool tasks are completed, the pool automatically switches to the **Labeled** status.
-
-To stop assigning the pool tasks before all of them are completed, click <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425182790/1675425182790_original_svg.svg" alt="" /> on the pool page or <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425176800/1675425176800_original_svg.svg" alt="" /> in the list of pools on the project page.
-
-<Note mode="tip" title="Tip">
-
-New tasks can be uploaded to an open or closed pool.
-
-</Note>
+<Tabs tabs={[
+  { title: 'In the interface', value: <PoolRunAndStopList1/> },
+  { title: 'Via Toloka API', value: <PoolRunAndStopList2/> },
+]}/>
 
 ## What's next `{#what_next}`
+
 - [Get and process the results](/docs/guide/result-of-eval).
 
 ## Troubleshooting `{#troubleshooting}`

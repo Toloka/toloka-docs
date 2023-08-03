@@ -1,6 +1,6 @@
 ---
 title: "What is overlap? | Toloka documentation"
-date: "2023-04-07T18:51:33.112201"
+date: "2023-08-03T12:44:53.160417"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
@@ -17,6 +17,21 @@ Overlap is the number of Tolokers who should complete each [task](/docs/glossary
 You can set overlap in the [pool settings](/docs/guide/pool-edit):
 
 <Image width="700px" withBackground imageId="51a862693a50ed5ab7a4cdb3f36dcf5e" alt="" />
+
+<Note mode="tip" title="How to work via Toloka API">
+
+To change overlap using Toloka API, send a `PATCH` request with the updated overlap value:
+
+```bash
+curl -X PATCH 'https://toloka.dev/api/v1/task-suites/000012e4ca--62eadb541b54e36b45b7a117?open_pool=true' \
+     -H 'Authorization: ApiKey PlaceYourRealApiKey_Here' \
+     -H 'Content-Type: application/json' \
+     -d '{"overlap":5,"infinite_overlap":false}'
+```
+
+Refer to the [Edit task suite overlap or priority](https://toloka.ai/docs/api/api-reference/#patch-/task-suites/-id-) section of the Toloka API documentation for more details about the request, its parameters, and possible responses. You will find examples of the requests for [Toloka-Kit](/docs/toloka-kit/) and other code samples there.
+
+</Note>
 
 ## Tips and recommendations
 

@@ -1,30 +1,22 @@
 ---
 title: "Remove a skill | Toloka documentation"
-date: "2023-02-15T15:15:20.994863"
+date: "2023-08-03T12:44:59.441833"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
 
-import SelectTolokers from '../subcomponents/select-tolokers.mdx'
 import FaqSkillForEveryPool from '../subcomponents/faq/pool-setup/skill-for-every-pool.mdx'
 import FaqSkillForDifferentProjects from '../subcomponents/faq/pool-setup/skill-for-different-projects.mdx'
 import TroubleshootingTraining from '../subcomponents/troubleshooting/users/training.mdx'
+import NavDeleteList1 from './nav-delete/subcomponents/nav-delete-list-1.mdx'
+import NavDeleteList2 from './nav-delete/subcomponents/nav-delete-list-2.mdx'
 
 # Remove a skill
 
-You can remove a skill only manually. It can't be done using quality control rules.
-
-1. Go to the [Tolokers](https://platform.toloka.ai/requester/workers) page.
-
-1. Select the Tolokers to remove the skill from.
-
-    <SelectTolokers/>
-
-1. Click **-Skill**.
-
-1. Select a skill.
-
-1. Click **Delete**.
+<Tabs tabs={[
+  { title: 'In the interface', value: <NavDeleteList1/> },
+  { title: 'Via Toloka API', value: <NavDeleteList2/> },
+]}/>
 
 ## See also `{#see-also}`
 

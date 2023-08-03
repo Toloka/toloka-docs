@@ -1,23 +1,23 @@
 ---
 title: "Editing a pool | Toloka documentation"
-date: "2023-06-26T17:55:35.346043"
+date: "2023-08-03T12:44:57.781103"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
 
-import TolokaRequesterPoolType from "../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx";
-import TolokaRequesterPoolName from "../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx";
-import TolokaRequesterPoolDescription from "../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx";
-import TolokaRequesterSourceFiltersDesc from "../subcomponents/toloka-requester-source/id-toloka-requester-source/filters-desc.mdx";
-import KeepTaskOrder from "../subcomponents/toloka-requester-source/id-toloka-requester-source/keep-task-order.mdx";
-import FaqRightTimeLimit from "../subcomponents/faq/adding-tasks-to-the-pool/right-time-limit.mdx";
-import FaqOverlap from "../subcomponents/faq/pool-setup/overlap.mdx";
-import FaqHowManyTasksInSuite from "../subcomponents/faq/adding-tasks-to-the-pool/how-many-tasks-in-suite.mdx";
-import TroubleshootingSpeedDropped from "../subcomponents/troubleshooting/pool-setup/speed-dropped.mdx";
-import FaqLabelingSpeed from "../subcomponents/faq/project-settings/labeling-speed.mdx";
-import FaqSpeedUpCompletion from "../subcomponents/faq/pool-setup/speed-up-completion.mdx";
-import FaqChangeTimeForTask from "../subcomponents/faq/adding-tasks-to-the-pool/change-time-for-task.mdx";
-import FaqEditUploadedTasks from "../subcomponents/faq/adding-tasks-to-the-pool/edit-uploaded-tasks.mdx";
+import TolokaRequesterPoolType from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-type.mdx'
+import TolokaRequesterPoolName from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-name.mdx'
+import TolokaRequesterPoolDescription from '../subcomponents/toloka-requester-source/id-toloka-requester-source/pool-description.mdx'
+import TolokaRequesterSourceFiltersDesc from '../subcomponents/toloka-requester-source/id-toloka-requester-source/filters-desc.mdx'
+import KeepTaskOrder from '../subcomponents/toloka-requester-source/id-toloka-requester-source/keep-task-order.mdx'
+import FaqRightTimeLimit from '../subcomponents/faq/adding-tasks-to-the-pool/right-time-limit.mdx'
+import FaqOverlap from '../subcomponents/faq/pool-setup/overlap.mdx'
+import FaqHowManyTasksInSuite from '../subcomponents/faq/adding-tasks-to-the-pool/how-many-tasks-in-suite.mdx'
+import TroubleshootingSpeedDropped from '../subcomponents/troubleshooting/pool-setup/speed-dropped.mdx'
+import FaqLabelingSpeed from '../subcomponents/faq/project-settings/labeling-speed.mdx'
+import FaqSpeedUpCompletion from '../subcomponents/faq/pool-setup/speed-up-completion.mdx'
+import FaqChangeTimeForTask from '../subcomponents/faq/adding-tasks-to-the-pool/change-time-for-task.mdx'
+import FaqEditUploadedTasks from '../subcomponents/faq/adding-tasks-to-the-pool/edit-uploaded-tasks.mdx'
 
 # Editing a pool
 
@@ -37,15 +37,15 @@ To edit the pool parameters, click <img src="https://tlkfrontprod.azureedge.net/
 
 ### Pool type
 
-<TolokaRequesterPoolType />
+<TolokaRequesterPoolType/>
 
 ### Pool name
 
-<TolokaRequesterPoolName />
+<TolokaRequesterPoolName/>
 
 ### Pool description
 
-<TolokaRequesterPoolDescription />
+<TolokaRequesterPoolDescription/>
 
 <Cut title="Alternative way to edit pool information">
 
@@ -53,11 +53,11 @@ To edit pool information:
 
 1. Click <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425178270/1675425178270_original_svg.svg" alt="" /> near the pool name.
 
-1. <TolokaRequesterPoolType />
+1. <TolokaRequesterPoolType/>
 
-1. <TolokaRequesterPoolName />
+1. <TolokaRequesterPoolName/>
 
-1. <TolokaRequesterPoolDescription />
+1. <TolokaRequesterPoolDescription/>
 
 1. Click **Save**.
 
@@ -101,7 +101,7 @@ If you aren't sure whether the tasks have such content, enable the **My tasks ma
 
 ### Filters and skills
 
-<TolokaRequesterSourceFiltersDesc />
+<TolokaRequesterSourceFiltersDesc/>
 
 ### Speed/quality balance
 
@@ -203,7 +203,7 @@ By default, the option is enabled.
 
 ### Keep task order from uploaded data
 
-<KeepTaskOrder />
+<KeepTaskOrder/>
 
 ## Dynamic pricing and overlap `{#pool-dynamic-price-info}`
 
@@ -261,18 +261,33 @@ If the price per task suite is zero, you must select the pool type.
 
 </Note>
 
+<Note mode="tip" title="How to work via Toloka API">
+
+To edit a pool using Toloka API, send a `PUT` request with all the pool parameters including the ones you want to modify:
+
+```bash
+curl -X PUT 'https://toloka.dev/api/v1/pools/32267581' \
+     -H 'Content-Type: application/json' \
+     -H 'Authorization: ApiKey PlaceYourRealApiKey_Here' \
+     -d '{"id":"32267581","project_id":"81776","private_name":"Transcript of audio recordings","may_contain_adult_content":true,"will_expire":"2023-03-09T00:00:00","auto_close_after_complete_delay_seconds":0,"reward_per_assignment":0.070,"metadata":{},"assignment_max_duration_seconds":600,"auto_accept_solutions":true,"auto_accept_period_day":21,"assignments_issuing_config":{"issue_task_suites_in_creation_order":false},"filter":{"and":[{"or":[{"category":"profile","key":"languages","operator":"IN","value":"EN"}]}]},"quality_control":{"configs":[{"collector_config":{"type":"ASSIGNMENT_SUBMIT_TIME","uuid":"38830d4b-930b-43ab-a98f-f52e992fd11a","parameters":{"fast_submit_threshold_seconds":15}},"rules":[{"conditions":[{"key":"fast_submitted_count","operator":"GTE","value":2}],"action":{"type":"RESTRICTION_V2","parameters":{"scope":"PROJECT","duration_unit":"PERMANENT"}}}]}]},"defaults":{"default_overlap_for_new_task_suites":3},"priority":0,"owner":{"id":"6c6e20dc86cca2ae787afcb2629de162","myself":true},"type":"REGULAR","status":"OPEN","created":"2022-03-10T07:41:53.626","speed_quality_balance":{"percent":100,"type":"TOP_PERCENTAGE_BY_QUALITY"}}'
+```
+
+Refer to the [Edit pool](https://toloka.ai/docs/api/api-reference/#put-/pools/-id-) section of the Toloka API documentation for more details about the request, its parameters, and possible responses. You will find examples of the requests for [Toloka-Kit](/docs/toloka-kit/) and other code samples there.
+
+</Note>
+
 ## What's next `{#what_next}`
 
 - [Add tasks to the pool](/docs/guide/pool)
 - Learn more about how to set up a pool:
 
-  - [Setting up pricing](/docs/guide/dynamic-pricing).
-  - [Dynamic overlap](/docs/guide/dynamic-overlap).
-  - Selective [majority vote](/docs/guide/selective-mvote) control.
-  - [Filters](/docs/guide/filters).
-  - [Speed/quality balance](/docs/guide/adjust).
-  - [Setting up quality control](/docs/guide/qa-pool-settings).
-  - [Reviewed assignments](/docs/guide/offline-accept).
+    - [Setting up pricing](/docs/guide/dynamic-pricing).
+    - [Dynamic overlap](/docs/guide/dynamic-overlap).
+    - Selective [majority vote](/docs/guide/selective-mvote) control.
+    - [Filters](/docs/guide/filters).
+    - [Speed/quality balance](/docs/guide/adjust).
+    - [Setting up quality control](/docs/guide/qa-pool-settings).
+    - [Reviewed assignments](/docs/guide/offline-accept).
 
 ## For developers `{#for-developers}`
 
@@ -284,9 +299,9 @@ If the price per task suite is zero, you must select the pool type.
 
 ## Troubleshooting `{#troubleshooting}`
 
-<FaqRightTimeLimit />
+<FaqRightTimeLimit/>
 
-<FaqOverlap />
+<FaqOverlap/>
 
 <Cut title="Can I change overlap after the pool is started?">
 
@@ -294,24 +309,16 @@ Yes. Open edit mode for the pool and set a new overlap value. You don't need to 
 
 </Cut>
 
-<FaqHowManyTasksInSuite />
+<FaqHowManyTasksInSuite/>
 
-<TroubleshootingSpeedDropped />
+<TroubleshootingSpeedDropped/>
 
-<FaqLabelingSpeed />
+<FaqLabelingSpeed/>
 
-<FaqSpeedUpCompletion />
+<FaqSpeedUpCompletion/>
 
-<FaqChangeTimeForTask />
+<FaqChangeTimeForTask/>
 
-<FaqEditUploadedTasks />
+<FaqEditUploadedTasks/>
 
-<Button
-  themeColor="light"
-  view="default"
-  size="l"
-  type="link"
-  url="/docs/guide/troubleshooting/support?form-source=guide-pool-edit"
->
-  Contact support
-</Button>
+<Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=guide-pool-edit">Contact support</Button>

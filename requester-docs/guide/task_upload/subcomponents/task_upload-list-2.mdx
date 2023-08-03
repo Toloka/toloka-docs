@@ -1,0 +1,14 @@
+To upload tasks using Toloka API, send a `POST` request with the information about the tasks:
+
+```bash
+curl -X POST 'https://toloka.dev/api/v1/tasks' \
+     -H 'Authorization: ApiKey PlaceYourRealApiKey_Here' \
+     -H 'Content-Type: application/json' \
+     -d '{"input_values":{"image":"https://example.com/image_example.png"},"known_solutions":[{"output_values":{"result":"pink"}}],"infinite_overlap":true,"pool_id":"1238218"}'
+```
+
+<Note mode="tip" title="Visit Toloka API reference">
+
+Refer to the [Create single/multiple tasks](https://toloka.ai/docs/api/api-reference/#post-/tasks) section of the Toloka API documentation for more details about the request, its parameters, and possible responses. You will find examples of the requests for [Toloka-Kit](/docs/toloka-kit/) and other code samples there.
+
+</Note>

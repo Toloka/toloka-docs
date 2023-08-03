@@ -1,11 +1,24 @@
-- Strings and numbers with allowed values.
+1. Open the [pool](/docs/guide/pool-main).
 
-The allowed value must match the `value` parameter in the corresponding interface element.
+1. Click <img src="https://tlkfrontprod.azureedge.net/portal-production/static/uploaded/images/1675425179291/1675425179291_original_svg.svg" alt="Drop-down button" /> next to the **Download results** button.
 
-- Boolean.
+1. Choose the aggregation method:
 
-- Integers with minimum and maximum values. The maximum difference between them is 32.
+    - [Dawid-Skene aggregation model](#dawid-skene)
+    - [Aggregation by skill](#aggr-by-skill)
 
-If there are too many possible responses in the output field, the dynamic overlap mechanism won't be able to aggregate the data.
+Aggregation takes from several minutes to several hours. Track the progress on the [Operations](https://platform.toloka.ai/requester/operations) page. When aggregation is complete, download the file with the results.
 
-The allowed value must match the `value` parameter in the corresponding interface element.
+To receive notifications and emails when results aggregation is completed, set up notifications:
+
+1. Log in to your account.
+
+1. Go to **Profile → Notifications → Pool or aggregation completed**
+
+1. Choose the notification method:
+
+    - Email: Messages will be sent to your email address.
+
+    - Messages: Notifications will be displayed under **Messages** in your account. Apart from you, those who set up [shared access](/docs/guide/multiple-access) to your account can see them.
+
+    - Browser: Notifications will be sent to the devices that you logged in to your account from.
