@@ -2070,11 +2070,11 @@
           "href": "https://toloka.ai/docs/api/api-reference/#get-/assignments"
         },
         {
-          "title": "Get response by ID",
+          "title": "Get task suite response by ID",
           "href": "https://toloka.ai/docs/api/api-reference/#get-/assignments/-id-"
         },
         {
-          "title": "Update response",
+          "title": "Update task suite response",
           "href": "https://toloka.ai/docs/api/api-reference/#patch-/assignments/-id-"
         }
       ]

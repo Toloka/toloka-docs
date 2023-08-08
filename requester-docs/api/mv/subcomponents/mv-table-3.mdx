@@ -1,5 +1,8 @@
-_string_ \| **required**<br/><br/>Values that are checked in the condition:
+_string_ \| **required**<br/><br/>Comparison operator (the `key` data is compared with the threshold value from `value`):
 
-- `total_answers_count` — The number of completed tasks that had a majority vote (specify the majority in `answer_threshold`).
-- `correct_answers_rate` — The percentage of correct responses, meaning responses that matched the majority vote (from 0 to 100).
-- `incorrect_answers_rate` — The percentage of incorrect responses, meaning responses that didn't match the majority vote (from 0 to 100).
+- `EQ` — Equal to.
+- `NE` — Not equal to.
+- `GT` — Greater than.
+- `LT` — Less than.
+- `GTE` — Greater than or equal to.
+- `LTE` — Less than or equal to.
