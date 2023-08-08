@@ -1,7 +1,10 @@
-_object_ \| **required if**<br/><br/>Required if `configs[].collector_config.type` is equal to one of the values:
+_string_ \| **required**<br/><br/>Values that are checked in the condition.
 
-- `GOLDEN_SET`
-- `MAJORITY_VOTE`
-- `ASSIGNMENT_SUBMIT_TIME`
+- `total_answers_count` — The number of completed control tasks.
+- `correct_answers_rate` — The percentage of correct responses in training and control tasks (from 0 to 100).
+- `incorrect_answers_rate` — The percentage of incorrect responses in training and control tasks (from 0 to 100).
+- `golden_set_answers_count` — The number of completed control tasks.
+- `golden_set_correct_answers_rate` — The percentage of correct responses in training and control tasks (from 0 to 100).
+- `golden_set_incorrect_answers_rate` — The percentage of incorrect responses in training and control tasks (from 0 to 100).
 
-Parameters for collecting data (depends on the quality control rule specified in the `type` key).
+Multiple conditions with the same `key` value are combined using the AND operator.

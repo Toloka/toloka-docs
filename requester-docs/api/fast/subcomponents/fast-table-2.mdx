@@ -1,7 +1,4 @@
-_object_ \| **required if**<br/><br/>Required if `configs[].collector_config.type` is equal to one of the values:
+_string_ \| **required**<br/><br/>Values that are checked in the condition:
 
-- `GOLDEN_SET`
-- `MAJORITY_VOTE`
-- `ASSIGNMENT_SUBMIT_TIME`
-
-Parameters for collecting data (depends on the quality control rule specified in the `type` key).
+- `total_submitted_count` — The number of the Toloker's recent responses (less than or equal to `history_size`).
+- `fast_submitted_count` — The number of fast responses (out of the recent ones).
