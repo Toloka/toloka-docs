@@ -7481,5 +7481,64 @@
       "title": "Выберите вашу версию",
       "href": "/ru/docs/mobile"
     }
+  ],
+  "llmMenu": [
+    {
+      "title": "Introduction"
+    },
+    {
+      "title": "Toloka LLM",
+      "href": "/docs/toloka-llm/"
+    },
+    {
+      "title": "Registering and signing in",
+      "href": "/docs/toloka-llm/register"
+    },
+    {
+      "title": "Terminology",
+      "href": "/docs/toloka-llm/terminology"
+    },
+    {
+      "title": "Creating project"
+    },
+    {
+      "title": "Toloka LLM workflow",
+      "href": "/docs/toloka-llm/project"
+    },
+    {
+      "title": "Uploading dataset",
+      "href": "/docs/toloka-llm/dataset"
+    },
+    {
+      "title": "Describing task",
+      "href": "/docs/toloka-llm/task-description"
+    },
+    {
+      "title": "Using classes",
+      "href": "/docs/toloka-llm/classes"
+    },
+    {
+      "title": "Generating and editing prompt",
+      "href": "/docs/toloka-llm/prompt"
+    },
+    {
+      "title": "Getting variants",
+      "href": "/docs/toloka-llm/variants"
+    },
+    {
+      "title": "Labeling data"
+    },
+    {
+      "title": "Deploying project",
+      "href": "/docs/toloka-llm/deploy"
+    },
+    {
+      "title": "Adding OpenAI API key or bank card",
+      "href": "/docs/toloka-llm/funds"
+    },
+    {
+      "title": "Getting results",
+      "href": "/docs/toloka-llm/results"
+    }
   ]
 }

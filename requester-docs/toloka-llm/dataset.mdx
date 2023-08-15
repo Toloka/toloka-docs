@@ -1,0 +1,62 @@
+---
+title: "Uploading dataset — Toloka LLM | Toloka documentation"
+date: "2023-08-16T17:54:16.525158"
+coverId: F_bIcOYF9yjrxkPZrXc3
+docsMenu: "llmMenu"
+---
+
+import DatasetList1 from './dataset/subcomponents/dataset-list-1.mdx'
+import DatasetList2 from './dataset/subcomponents/dataset-list-2.mdx'
+
+# Uploading dataset
+
+An effective model produces good resulting quality. You need a dataset with the texts you want to label. It's great if you can provide a labeled dataset, but it's also okay if you label your dataset in Toloka LLM.
+
+This dataset will serve as a reference to measure the quality of the labels a combination of a model and a prompt provides. You will use it to iterate through the variants to produce a variant of higher quality than you already have at hand. The platform provides you with a good default, but you can find the variant that will be even better.
+
+<Cut title="Dataset file sample">
+
+<Tabs tabs={[
+  { title: 'CSV', value: <DatasetList1/> },
+  { title: 'JSON', value: <DatasetList2/> },
+]}/>
+
+</Cut>
+
+To upload and label your dataset file:
+
+1. Click **<img src="https://toloka.ai/files/upload-dataset.svg" alt="Upload dataset" /> Upload dataset**.
+
+1. Choose and open the file in either CSV or JSON format that contains your dataset.
+
+    The dataset rows will be displayed in the **Match data columns to input texts and labels** area.
+
+1. Visually verify that it contains the data you want to use, then specify two columns:
+
+    - Input (the required column), contains texts to label and is displayed under **Text to label**.
+
+    - Label (the optional column), contains a class for each text and is displayed under **Label (ground truth)**.
+
+    <Note mode="note" title="Note">
+
+    If your dataset file doesn't contain labels, they will not be displayed (the **Label (ground truth)** drop-down menu will only contain the **None** option). In this case, you can [add the classes](/docs/toloka-llm/classes) together with their descriptions later and label your dataset using them.
+
+    </Note>
+
+    If your dataset file contains labels, check that the **Text to label** values match the **Label (ground truth)**, or correct them if not, using the drop-down menu.
+
+When done, click **Save dataset**.
+
+Toloka LLM will calculate all quality metrics by comparing the model's output to the labels you provide.
+
+## Trying unlabeled data `{#unlabeled-data}`
+
+You can run a model and see its output without labels. You can also [deploy a variant](/docs/toloka-llm/deploy) without quality measurements if you wish so.
+
+It's possible to use Toloka LLM without labeled data providing only texts for labeling. Note, that the tool provides the best value when there is a labeled dataset which serves as a ground truth in quality measurement.
+
+To run a resulting model without labels, [add a prompt](/docs/toloka-llm/prompt) and click **<img src="https://toloka.ai/files/deploy.svg" alt="Deploy" /> Deploy**.
+
+## Next steps `{#next-steps}`
+
+- [Describe your task](/docs/toloka-llm/task-description)
