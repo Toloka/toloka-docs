@@ -1,0 +1,37 @@
+---
+title: "Using classes — Toloka LLM | Toloka documentation"
+date: "2023-09-05"
+coverId: F_bIcOYF9yjrxkPZrXc3
+docsMenu: "llmMenu"
+---
+
+# Using classes
+
+The model uses the classes you provide for labeling the texts present in your [dataset file](/docs/toloka-llm/dataset).
+
+If you don't have the classes in your dataset file, [add them](#add-classes). You must specify **at least two classes**.
+
+## Adding classes and their descriptions `{#add-classes}`
+
+1. Click the **+ Add classes** button in the **Settings** area.
+
+1. The **Describe at least 2 classes for your task** popup will open. Enter the following data:
+
+    - **Name** is the class name that will be used for [prompt generation](/docs/toloka-llm/prompt) and for [labeling](/docs/toloka-llm/deploy). Names should be unique and it also helps if they are short (ideally — one token).
+
+    - **Description** is the class description that will be used for prompt generation. The description is an optional field, but it greatly helps the model better understand the context and the task and leads to better labeling results. We recommend that you to provide it for each class.
+
+1. Click **+ Add** to add more classes or <img src="https://toloka.ai/files/delete.svg" alt="Delete class" /> to remove the class from the list and discard it.
+
+1. Click **Save classes** to add the classes to your project.
+
+You will see the classes in the **Settings** area.
+
+## Editing existing classes `{#edit-classes}`
+
+To edit the classes present in the [dataset file](/docs/toloka-llm/dataset) or [added manually](#add-classes), click the <img src="https://toloka.ai/files/edit-blue.svg" alt="Edit classes" /> icon next to the **Classes** field in the **Settings** area. Then follow the steps in the [Adding classes and their descriptions](#add-classes) section to edit or delete classes and their descriptions.
+
+## Next steps `{#next-steps}`
+
+- [Label data with classes](/docs/toloka-llm/label)
+- [Describe your task](/docs/toloka-llm/task-description)

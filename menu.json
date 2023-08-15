@@ -7485,5 +7485,76 @@
       "title": "Выберите вашу версию",
       "href": "/ru/docs/mobile"
     }
+  ],
+  "llmMenu": [
+    {
+      "title": "Introduction"
+    },
+    {
+      "title": "Toloka LLM",
+      "href": "/docs/toloka-llm/"
+    },
+    {
+      "title": "Registering and signing in",
+      "href": "/docs/toloka-llm/register"
+    },
+    {
+      "title": "Adding OpenAI API key",
+      "href": "/docs/toloka-llm/api-key"
+    },
+    {
+      "title": "Terminology",
+      "href": "/docs/toloka-llm/terminology"
+    },
+    {
+      "title": "Working with Toloka LLM"
+    },
+    {
+      "title": "Workflow overview",
+      "href": "/docs/toloka-llm/project"
+    },
+    {
+      "title": "Working with datasets",
+      "subItems": [
+        {
+          "title": "Uploading dataset",
+          "href": "/docs/toloka-llm/dataset"
+        },
+        {
+          "title": "Labeling data manually",
+          "href": "/docs/toloka-llm/label"
+        }
+      ]
+    },
+    {
+      "title": "Problem definition",
+      "subItems": [
+        {
+          "title": "Using classes",
+          "href": "/docs/toloka-llm/classes"
+        },
+        {
+          "title": "Describing task",
+          "href": "/docs/toloka-llm/task-description"
+        }
+      ]
+    },
+    {
+      "title": "Iterating on quality",
+      "subItems": [
+        {
+          "title": "Generating and editing prompt",
+          "href": "/docs/toloka-llm/prompt"
+        },
+        {
+          "title": "Comparing variants",
+          "href": "/docs/toloka-llm/variants"
+        }
+      ]
+    },
+    {
+      "title": "Creating endpoint",
+      "href": "/docs/toloka-llm/deploy"
+    }
   ]
 }
