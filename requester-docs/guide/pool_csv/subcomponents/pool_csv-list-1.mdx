@@ -12,9 +12,11 @@ The first line of the file contains the column headers:
 
 - `INPUT:<name of the input data field>` — input data for tasks.
 
-- `GOLDEN:<name of the output data field>` — control tasks responses.
+- `GOLDEN:<name of the output data field>` — control task responses.
 
 - `HINT:text` — hints for [training tasks](/docs/glossary#training-task). The Toloker will see the hint text at the top of the task (on a red background) if their response to the control task is different from the correct one.
+
+- `TASK:overlap` — the optional parameter that is used to configure the task [overlap](/docs/guide/overlap-faq). It has a higher priority than the overlap value set in the [pool settings](/docs/guide/pool-main#pool-params). The parameter value must be a positive integer.
 
 - Point coordinates for [field tasks](/docs/tutorials/walk):
 
@@ -23,6 +25,7 @@ The first line of the file contains the column headers:
 - `Al:longitude` — longitude.
 
 ### Escaping in TSV/XLSX `{#string}`
+
 Escaping is the replacement of control characters in the text that are used for labeling with the corresponding text substitutions. It is used when you need to display a control character as a regular one.
 
 The type of input data determines how control characters are escaped. Determine the type of data and study the corresponding paragraph. Possible options:
@@ -151,7 +154,7 @@ Task type depends on which fields are filled in.
 
 To create a [general task](/docs/glossary#general-task), fill in the columns with the `INPUT` header.
 
-<Cut title="Example with a simple object ([string](/docs/guide/incoming#string), [link](/docs/guide/incoming#url), and so on)">
+<Cut title="Example with a simple object (string, link, and so on)">
 
 <Image width="381px" withBackground imageId="1675426678028" alt="" />
 
