@@ -1,6 +1,6 @@
 ---
 title: "Filter Tolokers — Toloka-Kit | Toloka documentation"
-date: "2023-02-07T15:40:36.620350"
+date: "2023-08-24T16:28:44.878585"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
@@ -11,7 +11,6 @@ import AdultAllowed from './subcomponents/AdultAllowed.mdx'
 import Citizenship from './subcomponents/Citizenship.mdx'
 import ClientType from './subcomponents/ClientType.mdx'
 import DeviceCategory from './subcomponents/DeviceCategory.mdx'
-import Education from './subcomponents/Education.mdx'
 import Gender from './subcomponents/Gender.mdx'
 import Languages from './subcomponents/Languages.mdx'
 import OSFamily from './subcomponents/OSFamily.mdx'
@@ -55,7 +54,6 @@ First, specify the parameters you want your pool to have. You can choose your ow
       <br/>        (toloka.filter.<Term term="Citizenship"><Citizenship/></Term>=='US') &
       <br/>        (toloka.filter.<Term term="ClientType"><ClientType/></Term>=='TOLOKA_APP') &
       <br/>        (toloka.filter.<Term term="DeviceCategory"><DeviceCategory/></Term>=='SMARTPHONE') &
-      <br/>        (toloka.filter.<Term term="Education"><Education/></Term>=='MIDDLE') &
       <br/>        (toloka.filter.<Term term="Gender"><Gender/></Term>=='MALE') &
       <br/>        (toloka.filter.<Term term="Languages"><Languages/></Term>.in_(['EN','DE','FR'])) &
       <br/>        (toloka.filter.<Term term="OSFamily"><OSFamily/></Term>=='IOS') &
@@ -81,7 +79,6 @@ First, specify the parameters you want your pool to have. You can choose your ow
         (toloka.filter.Citizenship=='US') &
         (toloka.filter.ClientType=='TOLOKA_APP') &
         (toloka.filter.DeviceCategory=='SMARTPHONE') &
-        (toloka.filter.Education=='MIDDLE') &
         (toloka.filter.Gender=='MALE') &
         (toloka.filter.Languages.in_(['EN','DE','FR'])) &
         (toloka.filter.OSFamily=='IOS') &
@@ -90,17 +87,16 @@ First, specify the parameters you want your pool to have. You can choose your ow
 )`}
 />
 
-<Cut title="Filters used for pool">
+<Cut title="Filters used for the pool">
 
 For this recipe, we use the following filters:
 
 - **Adult content** ([AdultAllowed](/docs/toloka-kit/reference/toloka.client.filter.AdultAllowed) filter class): The pool tasks with the adult content will only be shown to Tolokers who have agreed to see them.
-- **Citizenship** ([Citizenship](/docs/toloka-kit/reference/toloka.client.filter.Citizenship) filter class): The tasks will be shown only to the Tolokers from the countries specified in the filter.
+- **Location** ([Citizenship](/docs/toloka-kit/reference/toloka.client.filter.Citizenship) filter class): The tasks will be shown only to the Tolokers from the countries specified in the filter.
 - **Client** ([ClientType](/docs/toloka-kit/reference/toloka.client.filter.ClientType) filter class): The pool tasks will be available in the selected Toloka client, in our case, in the mobile app.
 - **Device type** ([DeviceCategory](/docs/toloka-kit/reference/toloka.client.filter.DeviceCategory) filter class): The pool tasks will be available to the Tolokers with the specified devices.
-- **Education** ([Education](/docs/toloka-kit/reference/toloka.client.filter.Education) filter class): The pool tasks will be available to the Tolokers with the specified education level.
 - **Gender** ([Gender](/docs/toloka-kit/reference/toloka.client.filter.Gender) filter class): The pool tasks will be available to the Tolokers with the specified gender.
-- **Languages** ([Languages](/docs/toloka-kit/reference/toloka.client.filter.Languages) filter class): The pool tasks will be available to the Tolokers with the specified languages.
+- **Languages** ([Languages](/docs/toloka-kit/reference/toloka.client.filter.Languages) filter class): The pool tasks will be available to the Tolokers with the specified languages. Read the [Filter Tolokers with confirmed language knowledge](/docs/toloka-kit/filter-tolokers-languages) recipe to learn how to filter Tolokers with various languages for which they passed the language test.
 - **Operating system** ([OSFamily](/docs/toloka-kit/reference/toloka.client.filter.OSFamily) filter class): The pool tasks will be available to the Tolokers who use devices with the specified operating systems.
 - **Skill** ([Skill](/docs/toloka-kit/reference/toloka.client.filter.Skill) filter class): The pool tasks will be available to the Tolokers with the specified skill having the selected value.
 
@@ -116,7 +112,7 @@ See the [Filters](/docs/toloka-kit/reference/toloka.client.filter.AdultAllowed) 
 
 The image below shows how the selected filters look in the pool interface.
 
-<Image width="700px" withBackground imageId="1675425503583" alt="Filters used for pool" />
+<Image width="700px" withBackground imageId="00eabe0739ed77181c8f90ed8490d1ba" alt="Filters used for pool" />
 
 </Cut>
 
@@ -167,7 +163,6 @@ new_pool = toloka.pool.Pool(
         (toloka.filter.Citizenship=='US') &
         (toloka.filter.ClientType=='TOLOKA_APP') &
         (toloka.filter.DeviceCategory=='SMARTPHONE') &
-        (toloka.filter.Education=='MIDDLE') &
         (toloka.filter.Gender=='MALE') &
         (toloka.filter.Languages.in_(['EN','DE','FR'])) &
         (toloka.filter.OSFamily=='IOS') &
@@ -186,7 +181,6 @@ print(new_pool.id)
 - _[Citizenship](/docs/toloka-kit/reference/toloka.client.filter.Citizenship) class_
 - _[ClientType](/docs/toloka-kit/reference/toloka.client.filter.ClientType) class_
 - _[DeviceCategory](/docs/toloka-kit/reference/toloka.client.filter.DeviceCategory) class_
-- _[Education](/docs/toloka-kit/reference/toloka.client.filter.Education) class_
 - _[Gender](/docs/toloka-kit/reference/toloka.client.filter.Gender) class_
 - _[Languages](/docs/toloka-kit/reference/toloka.client.filter.Languages) class_
 - _[OSFamily](/docs/toloka-kit/reference/toloka.client.filter.OSFamily) class_

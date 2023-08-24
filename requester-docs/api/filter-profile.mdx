@@ -1,6 +1,6 @@
 ---
 title: "Filter by profile data — Toloka API | Toloka documentation"
-date: "2023-07-04T17:43:01.539194"
+date: "2023-08-24T15:52:17.324377"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "apiMenu"
 ---
@@ -11,8 +11,6 @@ import FilterProfileTable3 from './filter-profile/subcomponents/filter-profile-t
 import FilterProfileTable4 from './filter-profile/subcomponents/filter-profile-table-4.mdx'
 import FilterProfileTable5 from './filter-profile/subcomponents/filter-profile-table-5.mdx'
 import FilterProfileTable6 from './filter-profile/subcomponents/filter-profile-table-6.mdx'
-import FilterProfileTable7 from './filter-profile/subcomponents/filter-profile-table-7.mdx'
-import FilterProfileTable8 from './filter-profile/subcomponents/filter-profile-table-8.mdx'
 
 # Filter by profile data
 
@@ -20,7 +18,7 @@ To select Tolokers based on profile data, define a `assignments_issuing_config.f
 
 ## Sample filter in JSON `{#request-example}`
 
-This example selects Tolokers who set their country as US and the city as Washington, D.C. in the profile.
+This example selects Tolokers who set their country as US in their profile and agreed to complete tasks which contain adult content.
 
 ```json
 {
@@ -40,9 +38,9 @@ This example selects Tolokers who set their country as US and the city as Washin
         "or": [
           {
             "category": "profile",
-            "key": "city",
-            "value": 87,
-            "operator": "IN"
+            "key": "adult_allowed",
+            "value": true,
+            "operator": "EQ"
           }
         ]
       }
@@ -58,11 +56,9 @@ Key parameter | Value description
 `gender` | <FilterProfileTable1/>
 `country` | <FilterProfileTable2/>
 `citizenship` | <FilterProfileTable3/>
-`education` | <FilterProfileTable4/>
-`adult_allowed` | <FilterProfileTable5/>
-`date_of_birth` | <FilterProfileTable6/>
-`city` | <FilterProfileTable7/>
-`languages` | <FilterProfileTable8/>
+`adult_allowed` | <FilterProfileTable4/>
+`date_of_birth` | <FilterProfileTable5/>
+`languages` | <FilterProfileTable6/>
 
 ## See also `{#see-also}`
 
