@@ -1,13 +1,13 @@
 ---
 title: "patch_task_overlap_or_min — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:46:29.251018"
+date: "2023-08-28T10:25:23.743099"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # patch_task_overlap_or_min
 
-`toloka.client.TolokaClient.patch_task_overlap_or_min` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L2531)
+`toloka.client.TolokaClient.patch_task_overlap_or_min` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/__init__.py#L2613)
 
 Stops assigning a task to Tolokers.
 
@@ -32,11 +32,7 @@ Stops assigning a task to Tolokers.
 Setting an infinite overlap for a training task.
 
 ```python
-toloka_client.patch_task_overlap_or_min(task_id='1', infinite_overlap=True)
+toloka_client.patch_task_overlap_or_min(task_id='00001092da--61ef01d5825234636bb088eb',
+    overlap=0, infinite_overlap=False
+)
 ```
-
-<Note mode="note" title="Note">
-
-You can't set infinite overlap in a regular pool.
-
-</Note>

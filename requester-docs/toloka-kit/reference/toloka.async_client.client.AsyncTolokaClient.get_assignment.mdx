@@ -1,13 +1,13 @@
 ---
 title: "get_assignment — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:47:03.626158"
+date: "2023-08-28T10:26:06.316314"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # get_assignment
 
-`toloka.async_client.client.AsyncTolokaClient.get_assignment` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/async_client/client.py#L0)
+`toloka.async_client.client.AsyncTolokaClient.get_assignment` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/async_client/client.py#L0)
 
 ```python
 async get_assignment(self, assignment_id: str)
@@ -32,5 +32,7 @@ Gets an assignment from Toloka.
 **Examples:**
 
 ```python
-toloka_client.get_assignment(assignment_id='1')
+assignment = toloka_client.get_assignment(
+    assignment_id='00001092da--61ef030400c684132d0da0de'
+)
 ```

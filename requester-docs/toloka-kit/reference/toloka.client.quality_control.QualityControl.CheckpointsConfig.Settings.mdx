@@ -1,13 +1,13 @@
 ---
 title: "Settings — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:46:35.476925"
+date: "2023-08-28T10:25:31.048777"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # Settings
 
-`toloka.client.quality_control.QualityControl.CheckpointsConfig.Settings` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/quality_control.py#L93)
+`toloka.client.quality_control.QualityControl.CheckpointsConfig.Settings` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/quality_control.py#L95)
 
 ```python
 Settings(
@@ -18,11 +18,11 @@ Settings(
 )
 ```
 
-Setting for checkpoints
+Selective majority vote check settings.
 
 ## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`target_overlap`|**Optional\[int\]**|<p>Overlap in tasks with majority opinion verification.</p>
-`task_distribution_function`|**Optional\[[TaskDistributionFunction](/docs/toloka-kit/reference/toloka.client.task_distribution_function.TaskDistributionFunction)\]**|<p>Distribution of tasks with majority opinion verification.</p>
+`target_overlap`|**Optional\[int\]**|<p>The overlap value used for selected tasks that are checked.</p>
+`task_distribution_function`|**Optional\[[TaskDistributionFunction](/docs/toloka-kit/reference/toloka.client.task_distribution_function.TaskDistributionFunction)\]**|<p>The configuration of selecting tasks.</p>

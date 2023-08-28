@@ -1,13 +1,13 @@
 ---
 title: "get_pools — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:47:33.236230"
+date: "2023-08-28T10:26:34.883365"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # get_pools
 
-`toloka.client.TolokaClient.get_pools` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L1671)
+`toloka.client.TolokaClient.get_pools` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/__init__.py#L1716)
 
 Finds all pools that match certain criteria.
 
@@ -33,7 +33,7 @@ If you need to sort pools use the [find_pools](/docs/toloka-kit/reference/toloka
 `last_started_lte`|**Optional\[datetime\]**|<p>Pools that were opened last time before or on the specified date.</p>
 `last_started_gt`|**Optional\[datetime\]**|<p>Pools that were opened last time after the specified date.</p>
 `last_started_gte`|**Optional\[datetime\]**|<p>Pools that were opened last time after or on the specified date.</p>
-`batch_size`|**Optional\[int\]**|<p>Returned pools limit for each request. The default batch_size is 20. The maximum allowed batch_size is 300.</p>
+`batch_size`|**Optional\[int\]**|<p>A limit of items returned by each request to Toloka. The maximum allowed value: 300. The default value: 20.</p>
 
 * **Yields:**
 
@@ -45,14 +45,8 @@ If you need to sort pools use the [find_pools](/docs/toloka-kit/reference/toloka
 
 **Examples:**
 
-How to get all open pools from a project.
+Getting all open pools from a project.
 
 ```python
-open_pools = toloka_client.get_pools(project_id='1', status='OPEN')
-```
-
-How to get all pools from a project.
-
-```python
-all_pools = toloka_client.get_pools(project_id='1')
+open_pools = toloka_client.get_pools(project_id='92694', status='OPEN')
 ```

@@ -1,13 +1,13 @@
 ---
 title: "TrainingOpenOperation — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:47:32.407043"
+date: "2023-08-28T10:26:34.071884"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # TrainingOpenOperation
 
-`toloka.client.operations.TrainingOpenOperation` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/operations.py#L239)
+`toloka.client.operations.TrainingOpenOperation` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/operations.py#L264)
 
 ```python
 TrainingOpenOperation(
@@ -24,18 +24,19 @@ TrainingOpenOperation(
 )
 ```
 
-Operation returned by an asynchronous opening training pool via TolokaClient.open_training_async()
+Training opening operation.
+
+The operation is returned by the [open_training_async](/docs/toloka-kit/reference/toloka.client.TolokaClient.open_training_async) method.
 
 ## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`id`|**Optional\[str\]**|<p>Operation ID.</p>
+`id`|**Optional\[str\]**|<p>The ID of the operation.</p>
 `status`|**Optional\[[Operation.Status](/docs/toloka-kit/reference/toloka.client.operations.Operation.Status)\]**|<p>The status of the operation.</p>
-`submitted`|**Optional\[datetime\]**|<p>The UTC date and time the request was sent.</p>
-`started`|**Optional\[datetime\]**|<p>The UTC date and time the operation started.</p>
-`finished`|**Optional\[datetime\]**|<p>The UTC date and time the operation finished.</p>
-`progress`|**Optional\[int\]**|<p>The percentage of the operation completed.</p>
+`submitted`|**Optional\[datetime\]**|<p>The UTC date and time when the operation was requested.</p>
+`started`|**Optional\[datetime\]**|<p>The UTC date and time when the operation started.</p>
+`finished`|**Optional\[datetime\]**|<p>The UTC date and time when the operation finished.</p>
+`progress`|**Optional\[int\]**|<p>The operation progress as a percentage.</p>
 `details`|**Optional\[Any\]**|<p>Details of the operation completion.</p>
-`parameters`|**Optional\[[TrainingOperation.Parameters](/docs/toloka-kit/reference/toloka.client.operations.TrainingOperation.Parameters)\]**|<p>Operation parameters (depending on the operation type).</p>
-`training_id`|**-**|<p>On which training pool operation is performed.</p>
+`parameters`|**Optional\[[TrainingOperation.Parameters](/docs/toloka-kit/reference/toloka.client.operations.TrainingOperation.Parameters)\]**|<p>Parameters containing the ID of the training.</p>

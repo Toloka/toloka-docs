@@ -1,13 +1,13 @@
 ---
 title: "Restriction — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:47:21.966162"
+date: "2023-08-28T10:26:24.080694"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # Restriction
 
-`toloka.client.actions.Restriction` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/actions.py#L38)
+`toloka.client.actions.Restriction` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/actions.py#L38)
 
 ```python
 Restriction(
@@ -30,3 +30,17 @@ To have better control over restriction period use [RestrictionV2](/docs/toloka-
 `scope`|**Union\[[UserRestriction.Scope](/docs/toloka-kit/reference/toloka.client.user_restriction.UserRestriction.Scope), str, None\]**|<ul> <li>`POOL` — A Toloker can't access the pool if the action is applied.</li> <li>`PROJECT` — A Toloker can't access the entire project containing the pool.</li> <li>`ALL_PROJECTS` — A Toloker can't access any requester's project.</li> </ul>
 `duration_days`|**Optional\[int\]**|<p>A blocking period in days. If the `duration_days` is omitted, then the block is permanent.</p>
 `private_comment`|**Optional\[str\]**|<p>A private comment. It is visible only to the requester.</p>
+
+**Examples:**
+
+```python
+new_pool = toloka.client.pool.Pool()    # pool creation is simplified
+new_pool.quality_control.add_action(
+    collector=toloka.client.collectors.AssignmentSubmitTime(history_size=5, fast_submit_threshold_seconds=20),
+    conditions=[toloka.client.conditions.FastSubmittedCount > 1],
+    action=toloka.client.actions.Restriction(
+        scope='PROJECT',
+        duration_days=10,
+    )
+)
+```

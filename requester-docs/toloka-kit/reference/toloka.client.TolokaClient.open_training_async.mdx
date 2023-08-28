@@ -1,13 +1,13 @@
 ---
 title: "open_training_async — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:47:22.740787"
+date: "2023-08-28T10:26:24.789324"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # open_training_async
 
-`toloka.client.TolokaClient.open_training_async` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L2096)
+`toloka.client.TolokaClient.open_training_async` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/__init__.py#L2143)
 
 ```python
 open_training_async(self, training_id: str)
@@ -37,6 +37,6 @@ If the training is already opened then `None` is returned.
 Opening a training.
 
 ```python
-open_op = toloka_client.open_training_async(training_id='1')
+open_op = toloka_client.open_training_async(training_id='1239110')
 toloka_client.wait_operation(open_op)
 ```

@@ -1,13 +1,13 @@
 ---
 title: "clone_training_async — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:47:19.454548"
+date: "2023-08-28T10:26:22.145715"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # clone_training_async
 
-`toloka.async_client.client.AsyncTolokaClient.clone_training_async` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/async_client/client.py#L0)
+`toloka.async_client.client.AsyncTolokaClient.clone_training_async` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/async_client/client.py#L0)
 
 ```python
 async clone_training_async(self, training_id: str)
@@ -35,6 +35,6 @@ The new training is attached to the same project.
 **Examples:**
 
 ```python
-clone_op = toloka_client.clone_training_async(training_id='1')
+clone_op = toloka_client.clone_training_async(training_id='1239110')
 toloka_client.wait_operation(clone_op)
 ```

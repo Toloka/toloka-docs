@@ -1,13 +1,13 @@
 ---
 title: "get_user_skills — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:46:55.785534"
+date: "2023-08-28T10:25:54.972577"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # get_user_skills
 
-`toloka.client.TolokaClient.get_user_skills` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L3413)
+`toloka.client.TolokaClient.get_user_skills` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/__init__.py#L3494)
 
 Finds all Toloker's skills that match certain criteria.
 
@@ -33,7 +33,7 @@ If you need to sort Toloker's skills use the [find_user_skills](/docs/toloka-kit
 `modified_lte`|**Optional\[datetime\]**|<p>Skills that changed before the specified date.</p>
 `modified_gt`|**Optional\[datetime\]**|<p>Skills changed after the specified date.</p>
 `modified_gte`|**Optional\[datetime\]**|<p>Skills created on or after the specified date.</p>
-`batch_size`|**Optional\[int\]**|<p>Returned skills limit for each request. The maximum allowed batch_size is 1000.</p>
+`batch_size`|**Optional\[int\]**|<p>A limit of items returned by each request to Toloka. The maximum allowed value: 1000.</p>
 
 * **Yields:**
 
@@ -46,5 +46,5 @@ If you need to sort Toloker's skills use the [find_user_skills](/docs/toloka-kit
 **Examples:**
 
 ```python
-results_list = list(toloka_client.get_user_skills())
+user_skills = list(toloka_client.get_user_skills(skill_id='11294'))
 ```

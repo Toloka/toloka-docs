@@ -1,6 +1,6 @@
 ---
 title: "OperationSortItems — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:47:00.701664"
+date: "2023-08-28T10:26:01.986961"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
@@ -23,9 +23,9 @@ Keys for sorting operations in search results.
 
 **Examples:**
 
-The example shows how to find operations sorted by finish date in descending order. Operations with equal finish dates are sorted by IDs in ascending order.
+The example shows how to find operations sorted by finish date in the descending order. Operations with equal finish dates are sorted by IDs in the ascending order.
 
 ```python
-sort = toloka.client.search_requests.OperationsSearchRequest(['-finished', 'id'])
-result = toloka_client.find_operations(type='POOL_OPEN', status='SUCCESS', sort=sort, limit=10)
+sort = toloka.client.search_requests.OperationSortItems(['-finished', 'id'])
+result = toloka_client.find_operations(type='POOL.OPEN', status='SUCCESS', sort=sort, limit=10)
 ```

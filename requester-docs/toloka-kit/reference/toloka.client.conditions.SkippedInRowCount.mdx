@@ -1,13 +1,13 @@
 ---
 title: "SkippedInRowCount — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:46:31.390253"
+date: "2023-08-28T10:25:26.308965"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # SkippedInRowCount
 
-`toloka.client.conditions.SkippedInRowCount` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/conditions.py#L309)
+`toloka.client.conditions.SkippedInRowCount` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/conditions.py#L491)
 
 ```python
 SkippedInRowCount(
@@ -21,3 +21,16 @@ The number of tasks skipped in a row by a Toloker.
 
 `SkippedInRowCount` is used with collectors:
 - [SkippedInRowAssignments](/docs/toloka-kit/reference/toloka.client.collectors.SkippedInRowAssignments)
+
+**Examples:**
+
+```python
+pool = toloka.client.pool.Pool()
+pool.quality_control.add_action(
+    collector=toloka.client.collectors.SkippedInRowAssignments(),
+    conditions=[toloka.client.conditions.SkippedInRowCount > 3],
+    action=toloka.client.actions.RestrictionV2(
+        scope='PROJECT', duration=15, duration_unit='DAYS'
+    )
+)
+```

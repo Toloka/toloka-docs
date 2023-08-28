@@ -1,13 +1,13 @@
 ---
 title: "get_skills — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:47:36.586896"
+date: "2023-08-28T10:26:38.202983"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # get_skills
 
-`toloka.client.TolokaClient.get_skills` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L2226)
+`toloka.client.TolokaClient.get_skills` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/__init__.py#L2273)
 
 Finds all skills that match certain criteria.
 
@@ -28,7 +28,7 @@ If you need to sort skills use the [find_skills](/docs/toloka-kit/reference/tolo
 `created_lte`|**Optional\[datetime\]**|<p>Skills created before or on the specified date.</p>
 `created_gt`|**Optional\[datetime\]**|<p>Skills created after the specified date.</p>
 `created_gte`|**Optional\[datetime\]**|<p>Skills created on or after the specified date.</p>
-`batch_size`|**Optional\[int\]**|<p>Returned skills limit for each request. The maximum allowed batch_size is 100.</p>
+`batch_size`|**Optional\[int\]**|<p>A limit of items returned by each request to Toloka. The maximum allowed value: 100.</p>
 
 * **Yields:**
 

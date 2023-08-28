@@ -1,6 +1,6 @@
 ---
 title: "TaskSuiteSortItems — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:47:24.131628"
+date: "2023-08-28T10:26:26.301146"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
@@ -23,9 +23,9 @@ Keys for sorting task suites in search results.
 
 **Examples:**
 
-The example shows how to find task suites sorted by the creation date in descending order. Task suites with equal creation dates are sorted by IDs in ascending order.
+The example shows how to find task suites sorted by the creation date in the descending order. Task suites with equal creation dates are sorted by IDs in the descending order.
 
 ```python
-sort = toloka.client.search_requests.TaskSuiteSortItems(['-created', 'id'])
-result = toloka_client.find_task_suites(pool_id=my_pool_id, sort=sort, limit=10)
+sort = toloka.client.search_requests.TaskSuiteSortItems(['-created', '-id'])
+result = toloka_client.find_task_suites(pool_id='1086170', sort=sort, limit=10)
 ```

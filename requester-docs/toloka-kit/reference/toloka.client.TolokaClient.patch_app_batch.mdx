@@ -1,13 +1,13 @@
 ---
 title: "patch_app_batch — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:47:26.888484"
+date: "2023-08-28T10:26:28.681661"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # patch_app_batch
 
-`toloka.client.TolokaClient.patch_app_batch` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L4220)
+`toloka.client.TolokaClient.patch_app_batch` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/__init__.py#L4367)
 
 Updates an App batch.
 
@@ -33,6 +33,8 @@ Changing the batch name.
 
 ```python
 batch = toloka_client.patch_app_batch(
-    app_project_id = 'Q2d15QBjpwWuDz8Z321g', batch_id = '4Va2BBWKL88S4QyAgVje',
-    name = 'Preliminary batch')
+    app_project_id='Q2d15QBjpwWuDz8Z321g',
+    batch_id='4Va2BBWKL88S4QyAgVje',
+    name = 'Preliminary batch'
+)
 ```

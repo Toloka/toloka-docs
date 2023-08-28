@@ -1,28 +1,28 @@
 ---
 title: "delete_user_restriction — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:47:00.278934"
+date: "2023-08-28T10:26:01.387147"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # delete_user_restriction
 
-`toloka.client.TolokaClient.delete_user_restriction` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L3323)
+`toloka.client.TolokaClient.delete_user_restriction` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/__init__.py#L3403)
 
 ```python
 delete_user_restriction(self, user_restriction_id: str)
 ```
 
-Unlocks existing restriction
+Removes existing restriction.
 
 ## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`user_restriction_id`|**str**|<p>Restriction that should be removed.</p>
+`user_restriction_id`|**str**|<p>The ID of the restriction you want to remove.</p>
 
 **Examples:**
 
 ```python
-toloka_client.delete_user_restriction(user_restriction_id='1')
+toloka_client.delete_user_restriction(user_restriction_id='20974')
 ```
