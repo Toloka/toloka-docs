@@ -1,6 +1,6 @@
 ---
 title: "UserBonusSortItems — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:46:58.475405"
+date: "2023-08-28T10:25:58.564757"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
@@ -23,9 +23,9 @@ Keys for sorting bonuses in search results.
 
 **Examples:**
 
-The example shows how to find bonuses sorted by granting date in descending order. Bonuses with equal granting dates are sorted by IDs in ascending order.
+The example shows how to find bonuses sorted by granting date in the descending order. Bonuses with equal granting dates are sorted by IDs in the ascending order.
 
 ```python
 sort = toloka.client.search_requests.UserBonusSortItems(['-created', 'id'])
-result = toloka_client.find_user_bonuses(user_id=best_toloker_id, sort=sort, limit=10)
+result = toloka_client.find_user_bonuses(user_id='fac97860c7929add8048ed2ef63b66fd', sort=sort, limit=10)
 ```

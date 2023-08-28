@@ -1,13 +1,13 @@
 ---
 title: "open_pool_async — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:47:35.574888"
+date: "2023-08-28T10:26:37.442445"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # open_pool_async
 
-`toloka.client.TolokaClient.open_pool_async` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L1730)
+`toloka.client.TolokaClient.open_pool_async` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/__init__.py#L1772)
 
 ```python
 open_pool_async(self, pool_id: str)
@@ -36,6 +36,6 @@ After opening the pool, tasks can be assigned to Tolokers.
 Opening a pool.
 
 ```python
-open_op = toloka_client.open_pool(pool_id='1')
+open_op = toloka_client.open_pool(pool_id='1080020')
 toloka_client.wait_operation(open_op)
 ```

@@ -1,13 +1,13 @@
 ---
 title: "get_app_items — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:47:26.359031"
+date: "2023-08-28T10:26:28.181098"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # get_app_items
 
-`toloka.client.TolokaClient.get_app_items` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L3983)
+`toloka.client.TolokaClient.get_app_items` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/__init__.py#L4100)
 
 Finds all App task items that match certain criteria in an App project.
 
@@ -35,7 +35,7 @@ If you need to sort items use the [find_app_items](/docs/toloka-kit/reference/to
 `finished_gte`|**Optional\[datetime\]**|<p>Items labeled after or on the specified date.</p>
 `finished_lt`|**Optional\[datetime\]**|<p>Items labeled before the specified date.</p>
 `finished_lte`|**Optional\[datetime\]**|<p>Items labeled before or on the specified date.</p>
-`batch_size`|**Optional\[int\]**|<p>Returned items limit for each request. The maximum allowed batch_size is 1000.</p>
+`batch_size`|**Optional\[int\]**|<p>A limit of items returned by each request to Toloka. The maximum allowed value: 1000.</p>
 
 * **Yields:**
 
@@ -48,7 +48,7 @@ If you need to sort items use the [find_app_items](/docs/toloka-kit/reference/to
 **Examples:**
 
 ```python
-items = toloka_client.get_app_items('Q2d15QBjpwWuDz8Z321g')
+items = toloka_client.get_app_items(app_project_id='Q2d15QBjpwWuDz8Z321g')
 for item in items:
     print(item.id, item.status, item.finished_at)
 ```

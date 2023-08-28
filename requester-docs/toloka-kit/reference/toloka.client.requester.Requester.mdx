@@ -1,13 +1,13 @@
 ---
 title: "Requester — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:47:21.461969"
+date: "2023-08-28T10:26:23.660558"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # Requester
 
-`toloka.client.requester.Requester` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/requester.py#L9)
+`toloka.client.requester.Requester` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/requester.py#L9)
 
 ```python
 Requester(
@@ -20,13 +20,13 @@ Requester(
 )
 ```
 
-Contains information about the customer and the account balance
+Information about a requester.
 
 ## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`id`|**Optional\[str\]**|<p>Requester ID.</p>
+`id`|**Optional\[str\]**|<p>The requester's ID.</p>
 `balance`|**Optional\[Decimal\]**|<p>Account balance in dollars.</p>
 `public_name`|**Optional\[Dict\[str, str\]\]**|<p>The requester's name in Toloka.</p>
-`company`|**Optional\[[Company](/docs/toloka-kit/reference/toloka.client.requester.Requester.Company)\]**|
+`company`|**Optional\[[Company](/docs/toloka-kit/reference/toloka.client.requester.Requester.Company)\]**|<p>Information about a requester's company.</p>

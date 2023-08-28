@@ -1,25 +1,25 @@
 ---
 title: "get_task_suite — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:46:25.491152"
+date: "2023-08-28T10:25:20.163561"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # get_task_suite
 
-`toloka.async_client.client.AsyncTolokaClient.get_task_suite` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/async_client/client.py#L0)
+`toloka.async_client.client.AsyncTolokaClient.get_task_suite` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/async_client/client.py#L0)
 
 ```python
 async get_task_suite(self, task_suite_id: str)
 ```
 
-Reads one task suite.
+Gets task suite data from Toloka.
 
 ## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`task_suite_id`|**str**|<p>ID of the task suite.</p>
+`task_suite_id`|**str**|<p>The ID of the task suite.</p>
 
 * **Returns:**
 
@@ -32,5 +32,6 @@ Reads one task suite.
 **Examples:**
 
 ```python
-toloka_client.get_task_suite(task_suite_id='1')
+task_suite = toloka_client.get_task_suite(task_suite_id='00001092da--61ef030400c684132d0da0dc')
+print(len(task_suite.tasks))
 ```

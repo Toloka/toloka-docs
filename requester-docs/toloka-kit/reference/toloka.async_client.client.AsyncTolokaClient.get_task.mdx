@@ -1,13 +1,13 @@
 ---
 title: "get_task — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:46:27.516336"
+date: "2023-08-28T10:25:21.935086"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # get_task
 
-`toloka.async_client.client.AsyncTolokaClient.get_task` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/async_client/client.py#L0)
+`toloka.async_client.client.AsyncTolokaClient.get_task` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/async_client/client.py#L0)
 
 ```python
 async get_task(self, task_id: str)
@@ -32,5 +32,6 @@ Gets a task with specified ID from Toloka.
 **Examples:**
 
 ```python
-toloka_client.get_task(task_id='1')
+task = toloka_client.get_task(task_id='00001092da--61ef01d5825234636bb088eb')
+print(task.input_values)
 ```

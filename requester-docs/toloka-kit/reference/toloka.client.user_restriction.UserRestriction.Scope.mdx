@@ -1,25 +1,21 @@
 ---
 title: "Scope — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:46:31.520569"
+date: "2023-08-28T10:25:26.468291"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # Scope
 
-`toloka.client.user_restriction.UserRestriction.Scope` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/user_restriction.py#L56)
+`toloka.client.user_restriction.UserRestriction.Scope` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/user_restriction.py#L56)
 
-Restriction scope
-
-* ALL_PROJECTS - All the requester's projects.
-* PROJECT - A single project (specify the project_id).
-* POOL - A pool (specify the pool_id).
+A restriction scope.
 
 ## Attributes Description
 
 | Name | Value | Description |
 | :------| :-----------| :----------| 
-`SYSTEM`|'SYSTEM'|
-`ALL_PROJECTS`|'ALL_PROJECTS'|
-`PROJECT`|'PROJECT'|
-`POOL`|'POOL'|
+`SYSTEM`|'SYSTEM'|<p>A system-wide [ban](/docs/guide/ban/?form-source=api-ban#ban-platform).</p>
+`ALL_PROJECTS`|'ALL_PROJECTS'|<p>Access to all requester's projects is blocked.</p>
+`PROJECT`|'PROJECT'|<p>A single project is blocked.</p>
+`POOL`|'POOL'|<p>A pool is blocked.</p>

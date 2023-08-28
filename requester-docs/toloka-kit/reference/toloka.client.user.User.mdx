@@ -1,13 +1,13 @@
 ---
 title: "User — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:47:02.390666"
+date: "2023-08-28T10:26:05.007936"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # User
 
-`toloka.client.user.User` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/user.py#L9)
+`toloka.client.user.User` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/user.py#L9)
 
 ```python
 User(
@@ -21,14 +21,18 @@ User(
 )
 ```
 
-Toloker metadata.
+Information about a Toloker.
+
+Some information is got from the Toloker's profile, other is obtained from the Toloker's device.
+
+Country and language are returned as [country codes](/docs/api/regions/).
 
 ## Parameters description
 
 | Parameters | Type | Description |
 | :----------| :----| :-----------|
-`id`|**Optional\[str\]**|<p>Toloker ID.</p>
-`country`|**Optional\[str\]**|<p>Toloker country code.</p>
-`languages`|**Optional\[List\[str\]\]**|<p>list of languages that Toloker know represented with language codes.</p>
-`adult_allowed`|**Optional\[bool\]**|<p>shows whether Toloker agreed to complete tasks with adult content.</p>
-`attributes`|**Optional\[[Attributes](/docs/toloka-kit/reference/toloka.client.user.User.Attributes)\]**|<p>Toloker attributes.</p>
+`id`|**Optional\[str\]**|<p>The Toloker's ID.</p>
+`country`|**Optional\[str\]**|<p>The country set in the profile.</p>
+`languages`|**Optional\[List\[str\]\]**|<p>A list of languages specified in the profile.</p>
+`adult_allowed`|**Optional\[bool\]**|<p>Whether or not the Toloker agreed to complete tasks which contain adult content.</p>
+`attributes`|**Optional\[[Attributes](/docs/toloka-kit/reference/toloka.client.user.User.Attributes)\]**|<p>Information obtained from the device.</p>

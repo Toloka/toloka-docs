@@ -1,13 +1,13 @@
 ---
 title: "find_user_bonuses — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:47:14.826666"
+date: "2023-08-28T10:26:17.809614"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # find_user_bonuses
 
-`toloka.async_client.client.AsyncTolokaClient.find_user_bonuses` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L0)
+`toloka.async_client.client.AsyncTolokaClient.find_user_bonuses` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/__init__.py#L0)
 
 Finds Tolokers' bonuses that match certain criteria.
 
@@ -31,7 +31,7 @@ To iterate over all matching Tolokers' bonuses you may use the [get_user_bonuses
 `created_gt`|**Optional\[datetime\]**|<p>Bonuses given after the specified date.</p>
 `created_gte`|**Optional\[datetime\]**|<p>Bonuses given after or on the specified date.</p>
 `sort`|**Union\[List\[str\], [UserBonusSortItems](/docs/toloka-kit/reference/toloka.client.search_requests.UserBonusSortItems), None\]**|<p>Sorting options. Default: `None`.</p>
-`limit`|**Optional\[int\]**|<p>Returned Tolokers' bonuses limit. The maximum allowed limit is 300.</p>
+`limit`|**Optional\[int\]**|<p>Returned Tolokers' bonuses limit. The maximum allowed value: 300.</p>
 
 * **Returns:**
 
@@ -44,5 +44,8 @@ To iterate over all matching Tolokers' bonuses you may use the [get_user_bonuses
 **Examples:**
 
 ```python
-toloka_client.find_user_bonuses(user_id='1', sort=['-created', '-id'], limit=3)
+find_result = toloka_client.find_user_bonuses(
+    user_id='fac97860c7929add8048ed2ef63b66fd', sort=['-created', '-id'], limit=3
+)
+bonuses = find_result.items
 ```

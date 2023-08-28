@@ -1,13 +1,13 @@
 ---
 title: "FastSubmittedCount — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:46:56.264084"
+date: "2023-08-28T10:25:55.468797"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # FastSubmittedCount
 
-`toloka.client.conditions.FastSubmittedCount` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/conditions.py#L177)
+`toloka.client.conditions.FastSubmittedCount` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/conditions.py#L234)
 
 ```python
 FastSubmittedCount(
@@ -21,3 +21,16 @@ The number of assignments completed by a Toloker too fast.
 
 `FastSubmittedCount` is used with collectors:
 - [AssignmentSubmitTime](/docs/toloka-kit/reference/toloka.client.collectors.AssignmentSubmitTime)
+
+**Examples:**
+
+```python
+pool = toloka.client.pool.Pool()
+pool.quality_control.add_action(
+    collector=toloka.client.collectors.AssignmentSubmitTime(
+        history_size=5, fast_submit_threshold_seconds=20
+    ),
+    conditions=[toloka.client.conditions.FastSubmittedCount > 3],
+    action=toloka.client.actions.RejectAllAssignments(public_comment='Too fast responses.')
+)
+```

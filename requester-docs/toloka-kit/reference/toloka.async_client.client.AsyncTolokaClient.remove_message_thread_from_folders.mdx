@@ -1,13 +1,13 @@
 ---
 title: "remove_message_thread_from_folders — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:46:42.992794"
+date: "2023-08-28T10:25:38.395623"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # remove_message_thread_from_folders
 
-`toloka.async_client.client.AsyncTolokaClient.remove_message_thread_from_folders` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/async_client/client.py#L0)
+`toloka.async_client.client.AsyncTolokaClient.remove_message_thread_from_folders` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/async_client/client.py#L0)
 
 ```python
 async remove_message_thread_from_folders(
@@ -37,5 +37,8 @@ Removes a message thread from folders.
 **Examples:**
 
 ```python
-toloka_client.remove_message_thread_from_folders(message_thread_id='1', folders=['IMPORTANT'])
+toloka_client.remove_message_thread_from_folders(
+    message_thread_id='62e2e2d68664736ed5df8488',
+    folders=['IMPORTANT']
+)
 ```

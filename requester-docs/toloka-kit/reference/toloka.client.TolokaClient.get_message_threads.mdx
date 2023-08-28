@@ -1,13 +1,13 @@
 ---
 title: "get_message_threads — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:46:47.056873"
+date: "2023-08-28T10:25:43.547714"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
 
 # get_message_threads
 
-`toloka.client.TolokaClient.get_message_threads` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.0/src/client/__init__.py#L1067)
+`toloka.client.TolokaClient.get_message_threads` | [Source code](https://github.com/Toloka/toloka-kit/blob/v1.2.1/src/client/__init__.py#L1092)
 
 Finds all message threads that match certain criteria.
 
@@ -29,7 +29,7 @@ If you need to sort message threads use the [find_message_threads](/docs/toloka-
 `created_lte`|**Optional\[datetime\]**|<p>Threads created before or on the specified date.</p>
 `created_gt`|**Optional\[datetime\]**|<p>Threads created after the specified date.</p>
 `created_gte`|**Optional\[datetime\]**|<p>Threads created after or on the specified date.</p>
-`batch_size`|**Optional\[int\]**|<p>Returned message threads limit for each request. The default batch_size is 50. The maximum allowed batch_size is 300.</p>
+`batch_size`|**Optional\[int\]**|<p>A limit of items returned by each request to Toloka. The maximum allowed value: 300. The default value: 50.</p>
 
 * **Yields:**
 

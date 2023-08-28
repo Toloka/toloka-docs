@@ -1,6 +1,6 @@
 ---
 title: "UserSkillSortItems — Toloka-Kit | Toloka documentation"
-date: "2023-06-20T13:47:28.814647"
+date: "2023-08-28T10:26:30.767535"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "tkitMenu"
 ---
@@ -23,9 +23,9 @@ Keys for sorting skills in search results.
 
 **Examples:**
 
-The example shows how to find Tolokers' skills sorted by creation date in descending order. Skills with equal creation dates are sorted by IDs in ascending order.
+The example shows how to find Tolokers' skills sorted by creation date in the descending order. Skills with equal creation dates are sorted by IDs in the ascending order.
 
 ```python
 sort = toloka.client.search_requests.UserSkillSortItems(['-created', 'id'])
-result = toloka_client.find_user_skills(skill_id=my_useful_skill_id, sort=sort, limit=10)
+result = toloka_client.find_user_skills(skill_id='11294', sort=sort, limit=10)
 ```
