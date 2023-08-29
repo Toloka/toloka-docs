@@ -1,6 +1,6 @@
 ---
 title: "plugin.trigger — Template Builder | Toloka documentation"
-date: "2023-03-29T11:05:08.351376"
+date: "2023-08-29T10:08:16.261820"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
@@ -15,8 +15,22 @@ The event can be triggered immediately when the task is loaded (`"fireImmediatel
 
 You can also set conditions in the `conditions` property that must be met in order for the trigger to fire.
 
-## Component properties `{#properties}`
+In the following example, the `plugin.trigger` component is used to modify the original search query: the word "cats" is added to the word "bobtail". This happens immediately after the task is loaded.
 
+<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/lxI6fdnn4PTHN4">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [view.link](/docs/template-builder/reference/view.link): Displays a link.
+- [helper.search-query](/docs/template-builder/reference/helper.search-query): Creates a string with a search query reference.
+- [data.output](/docs/template-builder/operations/work-with-data): The output data. This is what you get when a Toloker clicks the **Submit** button.
+- [action.set](/docs/template-builder/reference/action.set): Sets the value from `payload` in the data in the `data` property.
+- [helper.join](/docs/template-builder/reference/helper.join): Joins multiple strings into one string, separating them with spaces or commas.
+- [data.input](/docs/template-builder/operations/work-with-data): The input data. For example, links to images that will be shown to Tolokers.
+
+</Cut>
+
+## Component properties `{#properties}`
 
 **Name** | **Type** | **Description**
 ----- | ----- | -----
