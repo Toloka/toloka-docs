@@ -1,6 +1,6 @@
 ---
 title: "field.list — Template Builder | Toloka documentation"
-date: "2023-05-26T15:51:57.626206"
+date: "2023-08-29T16:39:07.333736"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
@@ -16,13 +16,37 @@ This way you can allow a Toloker to give multiple answers to a question.
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/IB5Q2ef53twbTw">View example</Button>
 
+<Cut title="Components used in the example">
+
+- [field.text](/docs/template-builder/reference/field.text): Adds a field for entering a short text.
+- [data.output](/docs/template-builder/operations/work-with-data): The output data. This is what you get when a Toloker clicks the **Submit** button.
+- [data.relative](/docs/template-builder/operations/work-with-data): A special component for saving data.
+- [condition.not](/docs/template-builder/reference/condition.not): Returns the inverse of the specified condition.
+- [condition.empty](/docs/template-builder/reference/condition.empty): Checks that the data didn't get a value.
+
+</Cut>
+
 The list items can contain any component, including a list of other components. For example, this allows you to create a table where you can add and delete rows.
 
 <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/d5nCDUia3twbqB">View example</Button>
 
+<Cut title="Components used in the example">
+
+- [view.list](/docs/template-builder/reference/view.list): Displays data in a list.
+- [view.text](/docs/template-builder/reference/view.text): Displays a text.
+- [layout.columns](/docs/template-builder/reference/layout.columns): Places content in columns.
+- [field.date](/docs/template-builder/reference/field.date): Adds a field for entering the date.
+- [field.text](/docs/template-builder/reference/field.text): Adds a field for entering a short text.
+- [field.number](/docs/template-builder/reference/field.number): Adds a field for entering a number.
+- [data.output](/docs/template-builder/operations/work-with-data): The output data. This is what you get when a Toloker clicks the **Submit** button.
+- [data.relative](/docs/template-builder/operations/work-with-data): A special component for saving data.
+- [condition.required](/docs/template-builder/reference/condition.required): Checks that the data is filled in.
+
+</Cut>
+
 ## Managing components
 
-To add a new list item, Tolokers click the button. To remove an item, they click the `x` icon. The icon appears when hovering over the list item.
+To add a new list item, Tolokers click the appropriate button. To remove an item, they click the `x` icon. The icon appears when hovering over the list item.
 
 To prevent a Toloker from adding too many list items, set the maximum list length. You can also use the `editable` property to block Tolokers from changing a component, like when a certain event occurs.
 
