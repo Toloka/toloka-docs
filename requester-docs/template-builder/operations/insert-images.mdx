@@ -19,13 +19,13 @@ To display an image, you need a direct link to the image and the [view.image](/d
 
 To insert an image passed in the input data, use the `data.input` component in the `url` property.
 
-<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/zDwELDM23ttBiT">View example</Button>
+<Button view="defaultInverse" size="l" type="link" url="https://ya.cc/t/zDwELDM23ttBiT">View example</Button>
 
 ## Two images side-by-side `{#side-by-side}`
 
 To place two images side-by-side, use the [layout.side-by-side](/docs/template-builder/reference/layout.side-by-side) component.
 
-<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/ZdGClef13ttEz8">View example</Button>
+<Button view="defaultInverse" size="l" type="link" url="https://ya.cc/t/ZdGClef13ttEz8">View example</Button>
 
  For a detailed analysis of the example, see [Quick start](/docs/template-builder/quickstart).
 
@@ -53,7 +53,7 @@ You can reference a specific array element like this:
 }
 ```
 
-<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/V44snIfa3ttBb2">View example</Button>
+<Button view="defaultInverse" size="l" type="link" url="https://ya.cc/t/V44snIfa3ttBb2">View example</Button>
 
 ### Components for displaying a group of images `{#additional-components}`
 
@@ -61,15 +61,15 @@ To display multiple images, you need a component that you can add your images to
 
 - [view.list](/docs/template-builder/reference/view.list): Lets you create a list of any elements, including images. It's good for making vertical lists.
 
-    <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/V44snIfa3ttBb2">View example</Button>
+    <Button view="defaultInverse" size="l" type="link" url="https://ya.cc/t/V44snIfa3ttBb2">View example</Button>
 
     In horizontal mode (to do this you need to add `"direction": true`), the images are small because they have a restricted height and width. You can increase the image width by setting the minimum width in the `minWidth` property .
 
-    <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/VBzpJKCp3ttBpt">View example</Button>
+    <Button view="defaultInverse" size="l" type="link" url="https://ya.cc/t/VBzpJKCp3ttBpt">View example</Button>
 
 - [layout.columns](/docs/template-builder/reference/layout.columns): This component is good for displaying a small number of images in the horizontal mode. It lets you align the content vertically, like if you want to position images in the center.
 
-    <Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/zZHgwLrX3ttBrK">View example</Button>
+    <Button view="defaultInverse" size="l" type="link" url="https://ya.cc/t/zZHgwLrX3ttBrK">View example</Button>
 
 <Note mode="note" title="Note">
 
@@ -81,14 +81,14 @@ This is relevant for creating an interface in Toloka for one task that uses mult
 
 If you don't know the size of your array with images in advance or you have so many images that the code is too large, use one of the components described above and add the [helper.transform](/docs/template-builder/reference/helper.transform) component into the `items` property. This component lets you convert an array of links to an array of [view.image](/docs/template-builder/reference/view.image) components to display them in the interface.
 
-<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/IqTqGpfg3ttBtA">View example</Button>
+<Button view="defaultInverse" size="l" type="link" url="https://ya.cc/t/IqTqGpfg3ttBtA">View example</Button>
 
 ## Zooming in on an image `{#zoom-image}`
 
 To zoom in on an image by pressing a shortcut key, use the [plugin.hotkeys](/docs/template-builder/reference/plugin.hotkeys) component. Specify which key triggers [action.open-close](/docs/template-builder/reference/action.open-close). The image is specified in the `view` property using the [$ref](/docs/template-builder/best-practices/reuse) structure. The action is performed when a Toloker presses the selected key.
 
-<Button themeColor="light" view="default" size="l" type="link" url="https://ya.cc/t/xdavUyAN3ttEzb">View example</Button>
+<Button view="defaultInverse" size="l" type="link" url="https://ya.cc/t/xdavUyAN3ttEzb">View example</Button>
 
 <p></p>
 
-<Button themeColor="light" view="default" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=template-builder-operations-insert-images">Contact support</Button>
+<Button view="defaultInverse" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=template-builder-operations-insert-images">Contact support</Button>
