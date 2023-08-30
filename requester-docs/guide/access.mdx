@@ -1,10 +1,13 @@
 ---
 title: "Registration | Toloka documentation"
-date: "2023-07-24T11:49:19.439664"
+date: "2023-07-26T13:21:30.754449"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
 
+import RegisterSocialList from '../subcomponents/register/social-list.mdx'
+import RegisterSocialListNote from '../subcomponents/register/social-list-note.mdx'
+import RegisterSocialAuth from '../subcomponents/register/social-auth.mdx'
 import FaqTaskSuitable from '../subcomponents/faq/register-and-start/task-suitable.mdx'
 import FaqChangeAccountType from '../subcomponents/faq/register-and-start/change-account-type.mdx'
 import FaqEmailAuthorization from '../subcomponents/faq/register-and-start/email-authorization.mdx'
@@ -12,8 +15,6 @@ import FaqSameEmailRegistration from '../subcomponents/faq/register-and-start/sa
 import TroubleshootingMicrosoftSso from '../subcomponents/troubleshooting/register-and-start/microsoft-sso.mdx'
 import TroubleshootingFacebookProblem from '../subcomponents/troubleshooting/register-and-start/facebook-problem.mdx'
 import FaqStartNewProject from '../subcomponents/faq/register-and-start/start-new-project.mdx'
-import AccessList1 from './access/subcomponents/access-list-1.mdx'
-import AccessList2 from './access/subcomponents/access-list-2.mdx'
 
 # Registration
 
@@ -21,16 +22,9 @@ Toloka clients register and access Toloka using social authorization. If you reg
 
 To register in Toloka as a client and post tasks for Tolokers, you need to have one of the following supported social accounts:
 
-- Google
-- Facebook
-- GitHub
-- Microsoft
+<RegisterSocialList/>
 
-<Note mode="note" title="Note">
-
-Depending on your current location the list of the available social accounts might differ and include or exclude some of the social services.
-
-</Note>
+<RegisterSocialListNote/>
 
 Some of the clients can also authorize in Toloka using SSO authentication. Read the [Toloka SSO authentication](/docs/guide/sso/authentication) section which contains the detailed description of this method and its restrictions.
 
@@ -42,7 +36,7 @@ Toloka has two versions: production and sandbox. You need to register in each on
 
     This is your usual workspace in Toloka. Here you [create projects](/docs/guide/project), [upload tasks](/docs/guide/task_upload) for Tolokers, and [get results](/docs/guide/result-of-eval).
 
-- **[Sandbox](https://sandbox.toloka.yandex.com/for-requesters)**
+- **[Sandbox](https://platform.sandbox.toloka.ai/auth?role=REQUESTER)**
 
     This is a place to test your projects and tasks. It can be useful to test complex projects before launching them. Learn more about [working in the sandbox](/docs/guide/sandbox).
 
@@ -54,10 +48,7 @@ Toloka uses social authorization both for the **registration** and **signing in*
 
 To authorize in Toloka production version using one of the social accounts, go to the [sign-in page](https://platform.toloka.ai/auth?role=REQUESTER).
 
-<Tabs tabs={[
-  { title: 'Registering', value: <AccessList1/> },
-  { title: 'Signing in', value: <AccessList2/> },
-]}/>
+<RegisterSocialAuth/>
 
 ## Recommendations `{#concept_pkf_nks_vlb}`
 
