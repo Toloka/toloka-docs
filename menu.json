@@ -615,12 +615,20 @@
                 {
                   "title": "Product category classification",
                   "href": "/docs/template-builder/templates/product-category-classification"
+                },
+                {
+                  "title": "Searching for products in an online store",
+                  "href": "/docs/template-builder/templates/online-store-products"
                 }
               ]
             },
             {
               "title": "Audio",
               "subItems": [
+                {
+                  "title": "Audio classification",
+                  "href": "/docs/template-builder/templates/audio-classification"
+                },
                 {
                   "title": "Audio transcription",
                   "href": "/docs/template-builder/templates/audio-transcript"
