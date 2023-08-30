@@ -1,0 +1,324 @@
+---
+title: "Audio classification — Template Builder | Toloka documentation"
+date: "2023-08-30T11:59:30.902786"
+coverId: F_bIcOYF9yjrxkPZrXc3
+docsMenu: "defaultMenu"
+---
+
+import TolokaTbSourceAddMedia from '../subcomponents/toloka-tb-source/id-toloka-tb-source/add-media.mdx'
+
+# Audio classification
+
+For this type of project, you can use the **Audio classification** preset. Note that validation, keyboard shortcuts, and task layout are already configured in this example.
+
+<Button view="defaultInverse" size="l" type="link" url="https://ya.cc/t/cqAV0dK_4RD4T4">View example</Button>
+
+<Cut title="Components used in the example">
+
+- [view.list](/docs/template-builder/reference/view.list): Displays data in a list.
+
+- [view.image](/docs/template-builder/reference/view.image): Adds an audio player.
+
+    The [condition.played-fully](/docs/template-builder/reference/condition.played-fully) component inside the `validation` property checks for the end of playback.
+
+    <Cut title="Show code">
+
+    ```json
+    {
+      "type": "view.audio",
+      "url": {
+        "type": "data.input",
+        "path": "audio"
+      },
+      "validation": {
+        "type": "condition.played-fully",
+        "hint": "Listen to the audio recording to the end"
+      }
+    }
+    ```
+
+    </Cut>
+
+- [field.button-radio-group](/docs/template-builder/reference/field.button-radio-group): Adds buttons for selecting an answer option.
+
+    <Cut title="Show code">
+
+    ```json
+    {
+      "type": "field.button-radio-group",
+      "label": "How clear is the speech in this recording?",
+      "data": {
+        "type": "data.output",
+        "path": "result"
+      },
+      "options": [
+        {
+          "label": "Clear",
+          "value": "clear"
+        },
+        {
+          "label": "Not clear",
+          "value": "not_clear"
+        },
+        {
+          "label": "No speech",
+          "value": "no_speech"
+        },
+        {
+          "label": "Audio isn't playing",
+          "value": "error"
+        }
+      ],
+      "validation": {
+        "type": "condition.required",
+        "hint": "Answer the question"
+      }
+    }
+    ```
+
+    </Cut>
+
+- [condition.required](/docs/template-builder/reference/condition.required): Checks if at least one option is selected.
+
+    <Cut title="Show code">
+
+    ```json
+    {
+      "type": "condition.required",
+      "hint": "Answer the question"
+    }
+    ```
+
+    </Cut>
+
+  - [plugin.toloka](/docs/template-builder/reference/plugin.toloka): Customizes the task layout.
+
+    <Cut title="Show code">
+
+    ```json
+    {
+      "type": "plugin.toloka",
+      "layout": {
+        "kind": "scroll",
+        "taskWidth": 500
+      }
+    }
+    ```
+
+    </Cut>
+
+- [plugin.hotkeys](/docs/template-builder/reference/plugin.hotkeys): [Keyboard shortcuts](/docs/template-builder/best-practices/hotkeys).
+
+    <Cut title="Show code">
+
+    ```json
+    {
+      "1": {
+        "type": "action.set",
+        "data": {
+          "type": "data.output",
+          "path": "result"
+        },
+        "payload": "clear"
+      },
+      "2": {
+        "type": "action.set",
+        "data": {
+          "type": "data.output",
+          "path": "result"
+        },
+        "payload": "not_clear"
+      },
+      "3": {
+        "type": "action.set",
+        "data": {
+          "type": "data.output",
+          "path": "result"
+        },
+        "payload": "no_speech"
+      },
+      "4": {
+        "type": "action.set",
+        "data": {
+          "type": "data.output",
+          "path": "result"
+        },
+        "payload": "error"
+      },
+      "type": "plugin.hotkeys"
+    }
+    ```
+
+    </Cut>
+
+</Cut>
+
+<TolokaTbSourceAddMedia/>
+
+## Add a description `{#add-description}`
+
+To add a detailed description to the task, use the `label` property of the [view.audio](/docs/template-builder/reference/view.audio) component.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "view.audio",
+  "label": "Listen to the audio recording and answer the question.",
+  "url": {
+    "type": "data.input",
+    "path": "audio"
+  },
+  "validation": {
+    "type": "condition.played-fully",
+    "hint": "Listen to the audio recording to the end"
+  }
+}
+```
+
+</Cut>
+
+<Button view="defaultInverse" size="l" type="link" url="https://ya.cc/t/44Uh7Dnv4RD4cX">View example</Button>
+
+## Add a layout `{#add-layout}`
+
+To enhance Toloker's experience, you can highlight different types of data with colors using [view.alert](/docs/template-builder/reference/view.alert). You can place it in the [view.list](/docs/template-builder/reference/view.list) along with the other components.
+
+In this example, the description is highlighted with a blue border, and the buttons are highlighted with a yellow one.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "view.alert",
+  "theme": "info",
+  "content": {
+    "type": "view.text",
+    "content": "Listen to the audio recording and answer the question."
+  }
+},
+{
+  "type": "view.alert",
+  "theme": "warning",
+  "content": {
+    "type": "field.button-radio-group",
+    "label": "How clear is the speech in this recording?",
+    "data": {
+      "type": "data.output",
+      "path": "result"
+    },
+    "options": [
+      {
+        "label": "Clear",
+        "value": "clear"
+      },
+      {
+        "label": "Not clear",
+        "value": "not_clear"
+      },
+      {
+        "label": "No speech",
+        "value": "no_speech"
+      },
+      {
+        "label": "Audio isn't playing",
+        "value": "error"
+      }
+    ],
+    "validation": {
+      "type": "condition.required",
+      "hint": "Answer the question"
+    }
+  }
+}
+  ```
+
+</Cut>
+
+<Button view="defaultInverse" size="l" type="link" url="https://ya.cc/t/rHcaXdHQ4RD4b5">View example</Button>
+
+## Add a response field `{#add-text-area}`
+
+To let Tolokers leave comments about the task or their response, add a text field using [field.textarea](/docs/template-builder/reference/field.textarea).
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "field.textarea",
+  "label": "Leave a comment:",
+  "placeholder": "Enter text",
+  "data": {
+    "type": "data.output",
+    "path": "comment"
+  }
+}
+```
+
+</Cut>
+
+<Button view="defaultInverse" size="l" type="link" url="https://ya.cc/t/xgwllwj04RD4iE">View example</Button>
+
+## Add conditions `{#dependencies}`
+
+The [helper.if](/docs/template-builder/reference/helper.if) component displays an interface element after a specific response is selected. For example, it lets a Toloker select correct statements about an audio only if the audio is loaded.
+
+<Cut title="Show code">
+
+```json
+{
+  "type": "helper.if",
+  "condition": {
+    "type": "condition.equals",
+    "data": {
+      "type": "data.output",
+      "path": "first-q"
+    },
+    "to": "yes"
+  },
+  "then": {
+    "type": "field.button-radio-group",
+    "label": "How clear is the speech in this recording?",
+    "data": {
+      "type": "data.output",
+      "path": "result"
+    },
+    "options": [
+      {
+        "label": "Clear",
+        "value": "clear"
+      },
+      {
+        "label": "Not clear",
+        "value": "not_clear"
+      },
+      {
+        "label": "No speech",
+        "value": "no_speech"
+      },
+      {
+        "label": "Audio isn't playing",
+        "value": "error"
+      }
+    ],
+    "validation": {
+      "type": "condition.required",
+      "hint": "Answer the question"
+    }
+  }
+}
+```
+
+</Cut>
+
+<Button view="defaultInverse" size="l" type="link" url="https://ya.cc/t/_XbZPWwx4RD4mA">View example</Button>
+
+## Audio and text comparison `{#text}`
+
+You can add text from input data to audio classification tasks. For example, this is useful if an audio recording was recognized automatically, and now you need Tolokers to correct errors in the text. To do this, use the [view.text](/docs/template-builder/reference/view.text) component and refer to the number of the element in the input data array in the `content` property.
+
+<Button view="defaultInverse" size="l" type="link" url="https://ya.cc/t/OwTrclyz4GQEri">View example</Button>
+
+<p></p>
+
+<Button view="defaultInverse" size="l" type="link" url="/docs/guide/troubleshooting/support?form-source=template-builder-templates-audio-classification">Contact support</Button>
