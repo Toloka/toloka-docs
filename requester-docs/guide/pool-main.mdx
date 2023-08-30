@@ -1,6 +1,6 @@
 ---
 title: "Creating a pool | Toloka documentation"
-date: "2023-08-03T12:44:52.839682"
+date: "2023-08-30T18:57:33.356105"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
@@ -85,9 +85,9 @@ Refer to the [Create pool](https://toloka.ai/docs/api/api-reference/#post-/pools
 
 ## How Tolokers see pools `{#pool-appear}`
 
-Tolokers can't see pools inside the project and select specific tasks (except for field tasks, where they can select points on the map). They also can't see pool settings, the number of tasks, or completion progress.
+Tolokers can't see pools inside the project. They select specific projects (except for field tasks, where they can select points on the map). They also can't see pool settings, the number of tasks, or completion progress.
 
-If at least one pool from the project is available to the Toloker, then this project is displayed on the main page as a card with the name, description, and price for the task. After selecting a project, the Toloker is issued a task from the pool. When they complete it, another one is issued, and so on.
+If at least one pool from the project is available to the Toloker, then this project is displayed on the main page as a card with the name, description, and price for the task set. After selecting a project, the Toloker is issued one or several tasks from the pool. When they complete it, another one is issued, and so on.
 
 A single project card is displayed if the pools in it differ only by name, quality control, or [filters](/docs/glossary#filters). In the latter case, the project card only includes tasks from the pools that the Toloker has access to.
 
@@ -109,7 +109,9 @@ This is useful if you want to combine tasks in pools by subject, duration of aud
 
 <Cut title="Tolokers see several project cards">
 
-In this example, the Toloker has access to two pools with different prices and descriptions, so there are two project cards on the main page. The Toloker can choose any of them — for example, the one with the higher price. <Image width="700px" withBackground imageId="1675426573887" alt="" />
+In this example, the Toloker has access to two pools with different prices and descriptions, so there are two project cards on the main page. The Toloker can choose any of them — for example, the one with the higher price.
+
+<Image width="700px" withBackground imageId="1675426573887" alt="" />
 
 </Cut>
 
