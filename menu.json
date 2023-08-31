@@ -7043,7 +7043,7 @@
     },
     {
       "href": "/ru/docs/web/task-select",
-      "title": "Список заданий"
+      "title": "Список проектов"
     },
     {
       "href": "/ru/docs/web/captcha",
@@ -7055,7 +7055,7 @@
     },
     {
       "href": "/ru/docs/web/priemka",
-      "title": "Задания на проверке"
+      "title": "Сеты заданий на проверке"
     },
     {
       "href": "/ru/docs/web/profile",
@@ -7193,7 +7193,7 @@
     },
     {
       "href": "/ru/docs/android/task-select",
-      "title": "Выбор задания"
+      "title": "Выбор проекта"
     },
     {
       "href": "/ru/docs/android/tasks",
@@ -7201,7 +7201,7 @@
     },
     {
       "href": "/ru/docs/android/priemka",
-      "title": "Задания на проверке"
+      "title": "Сеты заданий на проверке"
     },
     {
       "href": "/ru/docs/android/profile",
@@ -7343,7 +7343,7 @@
     },
     {
       "href": "/ru/docs/ios/task-select",
-      "title": "Выбор задания"
+      "title": "Выбор проекта"
     },
     {
       "href": "/ru/docs/ios/tasks",
@@ -7351,7 +7351,7 @@
     },
     {
       "href": "/ru/docs/ios/priemka",
-      "title": "Задания на проверке"
+      "title": "Сеты заданий на проверке"
     },
     {
       "href": "/ru/docs/ios/profile",
