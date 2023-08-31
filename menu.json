@@ -6679,7 +6679,7 @@
       "href": "/en/docs/web/register"
     },
     {
-      "title": "Task list",
+      "title": "Project feed",
       "href": "/en/docs/web/task-select"
     },
     {
@@ -6691,7 +6691,7 @@
       "href": "/en/docs/web/tasks"
     },
     {
-      "title": "Tasks under review",
+      "title": "Task sets under review",
       "href": "/en/docs/web/priemka"
     },
     {
@@ -6804,7 +6804,7 @@
       "href": "/en/docs/android/captcha"
     },
     {
-      "title": "Choosing a task",
+      "title": "Selecting a project",
       "href": "/en/docs/android/task-select"
     },
     {
@@ -6812,7 +6812,7 @@
       "href": "/en/docs/android/tasks"
     },
     {
-      "title": "Tasks under review",
+      "title": "Task sets under review",
       "href": "/en/docs/android/priemka"
     },
     {
@@ -6929,7 +6929,7 @@
       "href": "/en/docs/ios/captcha"
     },
     {
-      "title": "Choosing a task",
+      "title": "Selecting a project",
       "href": "/en/docs/ios/task-select"
     },
     {
@@ -6937,7 +6937,7 @@
       "href": "/en/docs/ios/tasks"
     },
     {
-      "title": "Tasks under review",
+      "title": "Task sets under review",
       "href": "/en/docs/ios/priemka"
     },
     {
