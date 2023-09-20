@@ -4,4 +4,4 @@ Welcome to the Toloka [docs](https://toloka.ai/en/docs/).
 
 ## Licenses
 
-© YANDEX LLC, 2017-2023. Licensed under the Apache License, Version 2.0. See LICENSE file for more details.
+© Toloka AI AG, 2017-2023. Licensed under the Apache License, Version 2.0. See LICENSE file for more details.
