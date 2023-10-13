@@ -6780,6 +6780,10 @@
     {
       "title": "UHRS - Public FAQ",
       "href": "/en/docs/web/uhrs-faq"
+    },
+    {
+      "title": "UHRS - Mobile APP",
+      "href": "/en/docs/web/uhrs-mobile-app"
     }
   ],
   "androidTolokersMenu": [
@@ -6908,7 +6912,7 @@
     },
     {
       "title": "UHRS - Mobile APP",
-      "href": "/en/docs/android/uhrs-faq"
+      "href": "/en/docs/android/uhrs-mobile-app"
     }
   ],
   "iosTolokersMenu": [
@@ -7034,6 +7038,10 @@
     {
       "title": "UHRS - Public FAQ",
       "href": "/en/docs/ios/uhrs-faq"
+    },
+    {
+      "title": "UHRS - Mobile APP",
+      "href": "/en/docs/ios/uhrs-mobile-app"
     }
   ],
   "webTolokersRuMenu": [
