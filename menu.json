@@ -6735,10 +6735,6 @@
           "href": "/en/docs/web/pay/about"
         },
         {
-          "title": "PayPal",
-          "href": "/en/docs/web/pay/paypal"
-        },
-        {
           "title": "Payoneer",
           "href": "/en/docs/web/pay/payoneer"
         },
@@ -6862,10 +6858,6 @@
         {
           "title": "Withdrawal methods",
           "href": "/en/docs/android/pay/about"
-        },
-        {
-          "title": "PayPal",
-          "href": "/en/docs/android/pay/paypal"
         },
         {
           "title": "Payoneer",
@@ -6993,10 +6985,6 @@
           "href": "/en/docs/ios/pay/about"
         },
         {
-          "title": "PayPal",
-          "href": "/en/docs/ios/pay/paypal"
-        },
-        {
           "title": "Payoneer",
           "href": "/en/docs/ios/pay/payoneer"
         },
@@ -7108,10 +7096,6 @@
         {
           "href": "/ru/docs/web/pay/about",
           "title": "Способы вывода средств"
-        },
-        {
-          "href": "/ru/docs/web/pay/paypal",
-          "title": "PayPal"
         },
         {
           "href": "/ru/docs/web/pay/payoneer",
@@ -7264,10 +7248,6 @@
           "title": "Способы вывода средств"
         },
         {
-          "href": "/ru/docs/android/pay/paypal",
-          "title": "PayPal"
-        },
-        {
           "href": "/ru/docs/android/pay/payoneer",
           "title": "Payoneer"
         },
@@ -7416,10 +7396,6 @@
         {
           "href": "/ru/docs/ios/pay/about",
           "title": "Способы вывода средств"
-        },
-        {
-          "href": "/ru/docs/ios/pay/paypal",
-          "title": "PayPal"
         },
         {
           "href": "/ru/docs/ios/pay/payoneer",
