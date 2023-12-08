@@ -1,6 +1,6 @@
 ---
 title: "Payment documents | Toloka documentation"
-date: "2023-02-15T15:15:14.953094"
+date: "2023-12-08T15:15:14.953094"
 coverId: F_bIcOYF9yjrxkPZrXc3
 docsMenu: "defaultMenu"
 ---
@@ -10,29 +10,17 @@ import DocumentsList2 from './documents/subcomponents/documents-list-2.mdx'
 
 # Payment documents
 
-Payment documents are handled in your [**Yandex.Balance**](https://balance.yandex.ru/index.xml?LANG=en) account.
+Payment documents are handled in your [Profile](https://platform.toloka.ai/requester/profile).
 
-You can access it from your Toloka account. To do this:
+1. Open your Profile.
 
-1. On the [Profile](https://platform.toloka.ai/requester/profile) page, click **Transfer funds**.
-
-1. Enter a top-up amount in USD. The minimum amount is $1.
-
-1. Click **Transfer**.
-
-    You will be redirected to Yandex.Balance. Payment documents are located in the **Acts** section.
-
-<Note mode="warning" title="Warning">
-
-If you don't want to top up your account, don't click **Create a billing invoice**.
-
-</Note>
+1. Click [Payments](https://platform.toloka.ai/requester/profile/payments).
 
 ## List of payment documents
 
 <Tabs tabs={[
-  { title: 'For non-residents of Russia', value: <DocumentsList2/> },
-  { title: 'For residents of Russia', value: <DocumentsList1/> },
+  { title: 'Prepayment', value: <DocumentsList1/> },
+  { title: 'Contracts', value: <DocumentsList2/> },
 ]}/>
 
 ## Edit your payment information `{#section_obr_lvl_m3b}`
@@ -41,17 +29,6 @@ If you don't want to top up your account, don't click **Create a billing invoice
 You can't edit the dates and amounts of closing documents.
 
 </Note>
-
-## Edit document delivery addresses and payment details
-
-You can edit your email address, the actual address for the correspondence delivery, and some payment details. To do this:
-
-1. Go to the [**Payers**](https://balance.yandex.ru/invoices.xml?LANG=en) page.
-1. Click the **edit** link in the block with the desired payer.
-1. Edit the information.
-1. Click the **Save** button.
-
-You can also send a request to change payment details to the document workflow group at: `docs-project@support.yandex.com`. In the request, specify a list of new and old payment details, the email you used to register in Toloka, and attach a copy of the document that confirms the changes (signed by the head of organization and with the organization's seal).
 
 <Cut title="Fill out the form for receiving closing documents and acts">
 
