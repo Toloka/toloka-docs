@@ -7102,8 +7102,12 @@
           "title": "Payoneer"
         },
         {
-          "title": "Papara",
-          "href": "/ru/docs/web/pay/papara"
+          "href": "/ru/docs/web/pay/papara",
+          "title": "Papara"
+        }
+        {
+          "title": "Flutterwave",
+          "href": "/ru/docs/web/pay/flutterwave"
         },
         {
           "href": "/ru/docs/web/pay/qiwi-wallet",
