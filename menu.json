@@ -6711,23 +6711,6 @@
       "href": "/en/docs/web/achievements"
     },
     {
-      "title": "Bonuses for friends",
-      "subItems": [
-        {
-          "title": "How to invite people",
-          "href": "/en/docs/web/referal"
-        },
-        {
-          "title": "Current bonus rules",
-          "href": "/en/docs/web/referal-rules"
-        },
-        {
-          "title": "Previous bonus rules",
-          "href": "/en/docs/web/referal-archive"
-        }
-      ]
-    },
-    {
       "title": "Withdrawing money",
       "subItems": [
         {
@@ -7072,23 +7055,6 @@
     {
       "href": "/ru/docs/web/achievements",
       "title": "Награды"
-    },
-    {
-      "title": "Бонусы за друзей",
-      "subItems": [
-        {
-          "href": "/ru/docs/web/referal",
-          "title": "Как пригласить"
-        },
-        {
-          "href": "/ru/docs/web/referal-rules",
-          "title": "Действующие правила начисления бонусов"
-        },
-        {
-          "href": "/ru/docs/web/referal-archive",
-          "title": "Устаревшие правила начисления бонусов"
-        }
-      ]
     },
     {
       "title": "Вывод средств",
