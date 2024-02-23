@@ -70,10 +70,6 @@
             {
               "title": "Google Cloud Storage",
               "href": "/docs/guide/google-cloud-storage"
-            },
-            {
-              "title": "Yandex Object Storage",
-              "href": "/docs/guide/use-object-storage"
             }
           ]
         },
