@@ -2819,7 +2819,7 @@
   ],
   "appsApiMenu": [
     {
-      "title": "Apps API"
+      "title": "Bespoke API"
     },
     {
       "title": "Accessing the API",
@@ -2845,15 +2845,11 @@
       "href": "https://toloka.ai/docs/api/apps-reference/"
     },
     {
-      "title": "App",
+      "title": "Bespoke",
       "subItems": [
         {
           "title": "Overview",
           "href": "https://toloka.ai/docs/api/apps-reference/#tag--app"
-        },
-        {
-          "href": "https://toloka.ai/docs/api/apps-reference/#get-/apps",
-          "title": "Get project templates"
         },
         {
           "href": "https://toloka.ai/docs/api/apps-reference/#get-/apps/-app_id-",
@@ -2862,7 +2858,7 @@
       ]
     },
     {
-      "title": "App-project",
+      "title": "Bespoke-project",
       "subItems": [
         {
           "title": "Overview",
