@@ -24,7 +24,7 @@ You can archive only batches which are currently in statuses other than **Proces
 <Tabs tabs={[
   { title: 'From a project', value: <ArchiveBatchList1/> },
   { title: 'From a batch', value: <ArchiveBatchList2/> },
-  { title: 'Using the apps API', value: <ArchiveBatchList3/> },
+  { title: 'Using the Bespoke API', value: <ArchiveBatchList3/> },
 ]}/>
 
 After this, both the uploaded items and the batch itself get the **Archived** status.
@@ -33,7 +33,7 @@ The only action available for the archived batches in the interface is to [downl
 
 ## Unarchiving batches `{#unarchive-batch}`
 
-You can't restore archived data using the platform interface. Use the apps API instead.
+You can't restore archived data using the platform interface. Use the Bespoke API instead.
 
 Send the following `POST` request:
 
@@ -44,9 +44,9 @@ curl -X POST 'https://toloka.dev/api/app/v0/app-projects/{project_id}/batches/{b
 
 Where `{project_id}` is the ID of the project with which the batch is associated, and `{batch_id}` is the ID of the batch you want to unarchive.
 
-<Note mode="tip" title="Visit apps API reference">
+<Note mode="tip" title="Visit Bespoke API reference">
 
-Refer to the [Unarchive batch](https://toloka.ai/docs/api/apps-reference/#post-/app-projects/-app_project_id-/batches/-batch_id-/unarchive) section of the apps API documentation for more details about the request, its parameters, and possible responses. You will find examples of the requests for [Toloka-Kit](/docs/toloka-kit/) and other code samples there.
+Refer to the [Unarchive batch](https://toloka.ai/docs/api/apps-reference/#post-/app-projects/-app_project_id-/batches/-batch_id-/unarchive) section of the Bespoke API documentation for more details about the request, its parameters, and possible responses. You will find examples of the requests for [Toloka-Kit](/docs/toloka-kit/) and other code samples there.
 
 </Note>
 
