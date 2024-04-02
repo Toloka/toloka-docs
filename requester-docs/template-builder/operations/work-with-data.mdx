@@ -38,18 +38,6 @@ The list of properties is the same for all core components.
 `path`|<Term term="string"><StringType/></Term>|Path to the property containing data. Dots are used as separators: `path.to.some.element`<br/><br/>To specify the path to the array element, specify its sequence number starting from zero, for example: `items.0`
 `default`|<Term term="any"><AnyType/></Term>|The value to use as the default data.<br/><br/>This value will be shown in the interface, so it might hide some placeholders, for example, in the [field.text](/docs/template-builder/reference/field.text) component.
 
-## Special data components
-
-Special data components send or return some data which is specific to Toloka and can be used, for example, to track some of the Toloker activities or the labeling progress.
-
-The special data components include:
-
-- [data.assignment-id](/docs/template-builder/reference/data.assignment-id): This component returns the assignment ID.
-
-- [data.location](/docs/template-builder/reference/data.location): This component sends the device coordinates.
-
-Refer to each component page for more details on component properties and usage examples.
-
 ### Component properties `{#properties-special}`
 
 Special data components have only `type` property.

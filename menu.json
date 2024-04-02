@@ -883,10 +883,6 @@
                   "href": "/docs/template-builder/reference/view.list"
                 },
                 {
-                  "title": "view.map",
-                  "href": "/docs/template-builder/reference/view.map"
-                },
-                {
                   "title": "view.markdown",
                   "href": "/docs/template-builder/reference/view.markdown"
                 },
@@ -946,10 +942,6 @@
                 {
                   "title": "field.list",
                   "href": "/docs/template-builder/reference/field.list"
-                },
-                {
-                  "title": "field.map",
-                  "href": "/docs/template-builder/reference/field.map"
                 },
                 {
                   "title": "field.media-file",
@@ -1043,10 +1035,6 @@
                 {
                   "title": "condition.sub-array",
                   "href": "/docs/template-builder/reference/condition.sub-array"
-                },
-                {
-                  "title": "condition.distance",
-                  "href": "/docs/template-builder/reference/condition.distance"
                 }
               ]
             },
@@ -1100,10 +1088,6 @@
                 {
                   "title": "helper.translate",
                   "href": "/docs/template-builder/reference/helper.translate"
-                },
-                {
-                  "title": "helper.proxy",
-                  "href": "/docs/template-builder/reference/helper.proxy"
                 }
               ]
             },
@@ -1133,23 +1117,6 @@
                 {
                   "title": "plugin.trigger",
                   "href": "/docs/template-builder/reference/plugin.trigger"
-                }
-              ]
-            },
-            {
-              "title": "Data sources",
-              "subItems": [
-                {
-                  "title": "List of data sources",
-                  "href": "/docs/template-builder/reference/datas"
-                },
-                {
-                  "title": "data.assignment-id",
-                  "href": "/docs/template-builder/reference/data.assignment-id"
-                },
-                {
-                  "title": "data.location",
-                  "href": "/docs/template-builder/reference/data.location"
                 }
               ]
             },
