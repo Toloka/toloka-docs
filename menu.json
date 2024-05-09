@@ -7046,27 +7046,6 @@
       ]
     },
     {
-      "title": "Самозанятые",
-      "subItems": [
-        {
-          "href": "/ru/docs/web/self-employed/about",
-          "title": "Как стать"
-        },
-        {
-          "href": "/ru/docs/web/self-employed/send-request",
-          "title": "Заполнение анкеты"
-        },
-        {
-          "href": "/ru/docs/web/self-employed/accept-status",
-          "title": "Подтверждение статуса"
-        },
-        {
-          "href": "/ru/docs/web/self-employed/pay-taxes",
-          "title": "Оплата налогов"
-        }
-      ]
-    },
-    {
       "href": "/ru/docs/web/troubleshooting/troubleshooting",
       "title": "Решение проблем"
     },
@@ -7188,27 +7167,6 @@
       ]
     },
     {
-      "title": "Самозанятые",
-      "subItems": [
-        {
-          "href": "/ru/docs/android/self-employed/about",
-          "title": "Как стать"
-        },
-        {
-          "href": "/ru/docs/android/self-employed/send-request",
-          "title": "Заполнение анкеты"
-        },
-        {
-          "href": "/ru/docs/android/self-employed/accept-status",
-          "title": "Подтверждение статуса"
-        },
-        {
-          "href": "/ru/docs/android/self-employed/pay-taxes",
-          "title": "Оплата налогов"
-        }
-      ]
-    },
-    {
       "href": "/ru/docs/android/troubleshooting/troubleshooting",
       "title": "Решение проблем"
     },
@@ -7326,27 +7284,6 @@
         {
           "title": "Как настроить прием файлов cookie",
           "href": "/ru/docs/ios/usefull-tips/cookie"
-        }
-      ]
-    },
-    {
-      "title": "Самозанятые",
-      "subItems": [
-        {
-          "href": "/ru/docs/ios/self-employed/about",
-          "title": "Как стать"
-        },
-        {
-          "href": "/ru/docs/ios/self-employed/send-request",
-          "title": "Заполнение анкеты"
-        },
-        {
-          "href": "/ru/docs/ios/self-employed/accept-status",
-          "title": "Подтверждение статуса"
-        },
-        {
-          "href": "/ru/docs/ios/self-employed/pay-taxes",
-          "title": "Оплата налогов"
         }
       ]
     },
