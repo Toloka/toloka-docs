@@ -6683,10 +6683,6 @@
         {
           "title": "Papara",
           "href": "/en/docs/web/pay/papara"
-        },
-        {
-          "title": "QIWI",
-          "href": "/en/docs/web/pay/qiwi-wallet"
         }
       ]
     },
@@ -6808,10 +6804,6 @@
         {
           "title": "Papara",
           "href": "/en/docs/android/pay/papara"
-        },
-        {
-          "title": "QIWI",
-          "href": "/en/docs/android/pay/qiwi-wallet"
         }
       ]
     },
@@ -6933,10 +6925,6 @@
         {
           "title": "Papara",
           "href": "/en/docs/ios/pay/papara"
-        },
-        {
-          "title": "QIWI",
-          "href": "/en/docs/ios/pay/qiwi-wallet"
         }
       ]
     },
