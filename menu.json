@@ -7031,10 +7031,6 @@
           "title": "Papara"
         },
         {
-          "href": "/ru/docs/web/pay/qiwi-wallet",
-          "title": "QIWI"
-        },
-        {
           "href": "/ru/docs/web/pay/yoomoney",
           "title": "ЮMoney"
         },
@@ -7177,10 +7173,6 @@
           "href": "/ru/docs/android/pay/papara"
         },
         {
-          "href": "/ru/docs/android/pay/qiwi-wallet",
-          "title": "QIWI"
-        },
-        {
           "href": "/ru/docs/android/pay/yoomoney",
           "title": "ЮMoney"
         },
@@ -7321,10 +7313,6 @@
         {
           "title": "Papara",
           "href": "/ru/docs/ios/pay/papara"
-        },
-        {
-          "href": "/ru/docs/ios/pay/qiwi-wallet",
-          "title": "QIWI"
         },
         {
           "href": "/ru/docs/ios/pay/yoomoney",
