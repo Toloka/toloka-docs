@@ -7017,14 +7017,6 @@
         {
           "href": "/ru/docs/web/pay/papara",
           "title": "Papara"
-        },
-        {
-          "href": "/ru/docs/web/pay/yoomoney",
-          "title": "ЮMoney"
-        },
-        {
-          "href": "/ru/docs/web/pay/sbp",
-          "title": "Система быстрых платежей"
         }
       ]
     },
@@ -7138,14 +7130,6 @@
         {
           "title": "Papara",
           "href": "/ru/docs/android/pay/papara"
-        },
-        {
-          "href": "/ru/docs/android/pay/yoomoney",
-          "title": "ЮMoney"
-        },
-        {
-          "href": "/ru/docs/android/pay/sbp",
-          "title": "Система быстрых платежей"
         }
       ]
     },
@@ -7259,14 +7243,6 @@
         {
           "title": "Papara",
           "href": "/ru/docs/ios/pay/papara"
-        },
-        {
-          "href": "/ru/docs/ios/pay/yoomoney",
-          "title": "ЮMoney"
-        },
-        {
-          "href": "/ru/docs/ios/pay/sbp",
-          "title": "Система быстрых платежей"
         }
       ]
     },
