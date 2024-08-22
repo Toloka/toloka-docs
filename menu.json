@@ -40,10 +40,6 @@
           "href": "/docs/guide/save-money"
         },
         {
-          "title": "Sandbox",
-          "href": "/docs/guide/sandbox"
-        },
-        {
           "title": "Generating API keys",
           "href": "/docs/guide/api-token"
         }
