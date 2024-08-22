@@ -1725,6 +1725,10 @@
         }
       ]
     },
+      {
+          "title": "3d-party platform integration",
+          "href": "/docs/api/3d_party_integration"
+      },
     {
       "title": "Reference"
     },
