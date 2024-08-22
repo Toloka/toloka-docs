@@ -1,0 +1,135 @@
+---
+title: "Toloka and 3d-party platform integration: best practices and tech specification — Toloka API | Toloka documentation"
+date: "2024-08-22T12:08:41.077246"
+coverId: F_bIcOYF9yjrxkPZrXc3
+docsMenu: "apiMenu"
+---
+
+# Toloka and 3d-party platform integration: best practices and tech specification
+
+There are various approaches to integration, ranging from publishing and performing tasks directly in Toloka’s UI to using a separate registration on a third-party platform. If tasks need to be completed on the third-party platform, we recommend a “combined” approach: publish the task descriptions on Toloka and perform the tasks on the third-party platform. This approach is more familiar to our performers.
+
+## How the labeling process would work
+
+Here’s how you can set up a special type of project in Toloka that integrates with a third-party platform:
+
+1. **Project Creation**:
+
+    - Create a special type of project in Toloka, specifying the country, language requirements, and other necessary criteria for performers. This project can be created via API.
+
+2. **Labeling Process on Third-Party Platform**:
+
+    - The labeling process begins on the third-party platform. The platform enables this special project type in Toloka via API, allowing it to be listed in Toloka’s task list.
+
+3. **Task Visibility and Information**:
+
+    - Toloka performers will see tasks from the third-party platform in their list of available tasks on Toloka, along with all the usual details: task name, description, and payment information.
+
+4. **Task Execution**:
+
+    - When a performer clicks "Start," they will be redirected to the third-party platform to begin the task. At this stage, account synchronization between Toloka and the third-party platform can be provided.
+
+5. **Data Transfer**:
+
+    - After a task is completed, the third-party platform sends the relevant data back to Toloka, indicating the task's completion. Once all tasks are finished, the performer returns to Toloka’s interface.
+
+6. **Payment and Withdrawal**:
+
+    - The performer will see the funds for each completed task in their Toloka account and can withdraw the money directly through Toloka’s interface.
+
+7. **Project Completion**:
+
+    - Once all tasks in a specific project have been completed, the third-party platform may disable the project in Toloka via API.
+
+
+<Note mode="note" title="Note">
+
+On the Toloka side we can create preliminary training and qualification tests to allow only performers that have read instruction and understand task specific. For each task separately or unify for all tasks from the platform.
+
+</Note>
+
+<Image width="250px" imageId="f4638608906a438ae09d3846d18fffd9" alt="" />
+
+## Tech specification
+
+### Start labeling process
+
+To start the labeling process, you can create a project using the common API endpoint `/api/v1/projects` with the following parameters:
+
+1. **Issuing type**:
+
+    - Set `"assignments_issuing_type": "EXTERNAL"` to specify that the task assignments will be managed outside of Toloka.
+    - Use the field `"assignments_issuing_view_config.redirect_url": <url>` to provide the URL where performers will be redirected to the third-party platform to complete tasks.
+
+2. **Metadata**:
+
+    - To make the project more attractive to raters, it's recommended to include approximate prices in the project metadata:
+        - `ptmik_bonus_price_max`: Maximum estimated bonus price.
+        - `ptmik_bonus_price_min`: Minimum estimated bonus price.
+
+    - Additionally, fill out the following fields:
+        - `ptmik_partner_name`: Name of the partner platform.
+        - `ptmik_partner_url`: URL of the partner platform.
+
+3. **URL Registration**:
+    - Before specifying the `redirect_url`, it must be registered within Toloka as a valid URL for this scenario. Please contact Toloka support to get this set up.
+
+### Toloker registration
+
+The registration process for Tolokers on third-party platforms can be handled in two ways, depending on the integration approach:
+
+1. **Custom Integration Protocol**:
+
+    - The third-party platform and Toloka can implement a custom integration protocol to manage Toloker registration when they access the platform via the Toloka task link.
+
+2. **Using `user_id` from Toloka**:
+
+    - Alternatively, the platform can retrieve the `user_id` from Toloka when a Toloker clicks the link to the platform.
+
+#### Using user_id from Toloka: 
+
+    - When a Toloker opens the link to the platform from the Toloka task, the platform initiates the registration process using the `user_id` associated with the Toloker.
+    - The `user_id` can be obtained using the `assignment_id`, which is passed along with the task.
+    - The platform can make a request to the Toloka API to fetch the `user_id`:
+        - **API Request**:
+            - Endpoint: `/api/v1/assignments/{id}`
+            - Method: `GET`
+            - Authentication: An OAuth token from the specific platform's project owner is required.
+    - This request retrieves the `user_id` associated with the `assignment_id`, allowing the platform to complete the registration process for the Toloker.
+
+By using this method, the platform ensures that each Toloker is properly registered and associated with their tasks in a secure and streamlined manner.
+
+### Submitting tasks by a rater
+
+When a performer (referred to as a "rater" or "Toloker") submits a task on a third-party platform, the platform sends information about the task to Toloka using the following API call:
+
+### API Endpoint:
+
+    - **POST** `/api/v1/tasks/external/submit`
+    - **Authorization**: `OAuth <OAuth token>`
+
+#### Request body
+
+Parameter | Overview
+----- | -----
+`pool_id` | _long_ \| **required**<br/><br/>ID of the pool the task belongs to.<br/><br/>Example: `123`
+`user_id` | _string_ \| **required**<br/><br/>The Toloker's unique ID.<br/><br/>Example: `"1a2b3c4d56781a2b3c4d5678"`
+`retry_id` | _string_ \| Optional but recommended to track task retries.<br/><br/>Example: `"1a2b3c4d56781a2b3c4d5678"`
+`reward` | _big decimal_ \| **required**<br/><br/>The amount of money Toloka should pay for this task.<br/><br/>Example: `10.52`   
+`quality` | _big decimal_ \| The quality of the completed task (value between 0 and 1).<br/><br/>Example: `0.21`
+`close_session` | _boolean_ \| Indicates if this was the last task for this performer on the platform.<br/><br/>Example: `true`
+`custom_log` | _string_ \| A JSON string for antifraud purposes.<br/><br/>Example: `"{}"`
+`start_time` | _string_ \| The time when the task started.<br/><br/>Example: `"2024-08-22T14:00:00Z"`
+`end_time` | _string_ \| The time when the task ended.<br/><br/>Example: `"2024-08-22T14:15:00Z"`
+`skipped` | _boolean_ \| Indicates if the Toloker skipped the task (i.e., did not complete it).<br/><br/>Example: `false`
+`golden_tasks_count` | _int_ \| The number of exam (golden) tasks included.<br/><br/>Example: `2`
+`training_tasks_count` | _int_ \| The number of training tasks included.<br/><br/>Example: `3`
+`real_tasks_count` | _int_ \| The number of regular, paid tasks completed.<br/><br/>Example: `4`
+
+#### Response body
+
+Property | Overview
+----- | -----
+`speed_quality_balance_match` | _boolean_ \| Indicates if the Toloker is in the top N percent of performers based on speed and quality (where N is configured in the pool settings).<br/><br/>Example: `false`
+`restriction_match` | _boolean_ \| Indicates if the Toloker is banned or has any restrictions.<br/><br/>Example: `true`
+`filter_match` | _boolean_ \| Indicates if the Toloker meets all the filters set for the task.<br/><br/>Example: `true`
